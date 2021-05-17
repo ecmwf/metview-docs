@@ -38,10 +38,10 @@
 - wind_unprojected:
     default: 'off'
     desc: |-
-      This option has only have any effect when it is "on" and all ``wind_parallel``, 
+      This option only has any effect when it is "on" and all ``wind_parallel``, 
       ``wind_perpendicular`` and ``wind_intensity`` are "off". In this case the 2D (horizontal) wind is sampled along the
       cross section plane and plotted as vector data. 
-      
+
       *New in Metview version 5.12.0*.
     ptype: str
     values: on/off    
