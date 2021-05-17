@@ -12,7 +12,7 @@
 - wind_parallel:
     default: 'on'
     desc: When this option is "on", the wind components are projected onto the cross
-      section plane. For 2D wind the result is a signed scalar data (a contour plot).
+      section plane. For 2D (horizontal) wind the result is a signed scalar data (a contour plot).
       When 3D wind data are available a vector plot is produced with the vertical
       component scaled/computed as specified in parameter ``w_wind_scaling_factor_mode``.
     ptype: str
@@ -35,6 +35,16 @@
       * When ``wind_perpendicular`` is "on", the result is the absolute value of the wind projected onto the normal vector of the cross section plane.
     ptype: str
     values: on/off
+- wind_unprojected:
+    default: 'off'
+    desc: |-
+      This option has only have any effect when it is "on" and all ``wind_parallel``, 
+      ``wind_perpendicular`` and ``wind_intensity`` are "off". In this case the 2D (horizontal) wind is sampled along the
+      cross section plane and plotted as vector data. 
+      
+      *New in Metview version 5.12.0*.
+    ptype: str
+    values: on/off    
 - lnsp_param:
     default: '152'
     desc: Specifies the ecCodes paramId used to identify the Logarithm of Surface Pressure (LNSP) in the input data.
