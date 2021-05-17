@@ -1,0 +1,112 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# deepcode
+.dccache
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+
+# Sphinx documentation
+docs/_build/
+docs/make.bat
+docs/auto_examples/*.zip
+docs/auto_examples/searchindex.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+
+# PyCharm
+.idea/
+
+# Docker
+.docker-tox
+.docker-current
+.eggs
+
+.pytest_cache
+tests/*.idx
+
+*~
+.cproject
+.project
+*.sublime-project
+*.sublime-workspace
+._mv_*
+.gitignore.orig
+.idea
+.vscode
+
+# docs
+docs/api/build_functions.py
+docs/api/get_icon.py
+docs/api/functions_mv.yaml
+docs/api/depot
+docs/api/depot_2
+docs/api/icon_base
+docs/api/_*.py
+docs/api/_utils
+docs/gen_files
+docs/_test
+
+# gallery
+docs/gallery/*.grib
+docs/gallery/*.grb
+docs/gallery/*.bufr
+docs/gallery/*.gpt
+docs/gallery/*.geo
+docs/gallery/*.nc
+docs/gallery/*.odb
+docs/gallery/*.pdf
+docs/gallery/*.txt
+docs/gallery/*.csv
+docs/gallery/*.png
+docs/gallery/*.tar
+docs/gallery/*.tar.gz
+docs/gallery/*.zip
+docs/gallery/*.gz
+docs/gallery/_*.py
+docs/gallery/*.shp
+docs/gallery/*.shx
+docs/gallery/*.xml
+docs/gallery/*.dbf
+docs/gallery/*.prj
+docs/gallery/*.sbn
+docs/gallery/*.sbx

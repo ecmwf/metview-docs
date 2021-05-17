@@ -1,0 +1,41 @@
+return: :class:`Request`
+summary: Defines a layout item holding a view for plotting.
+oneliner: Defines a layout item holding a view for plotting.
+params:
+- top:
+    default: '0'
+    desc: ''
+    ptype: number
+    values: ''
+- bottom:
+    default: '100'
+    desc: ''
+    ptype: number
+    values: ''
+- left:
+    default: '0'
+    desc: ''
+    ptype: number
+    values: ''
+- right:
+    default: '100'
+    desc: ''
+    ptype: number
+    values: ''
+- page_x_gap:
+    default: '0'
+    desc: ''
+    ptype: number
+    values: ''
+- page_y_gap:
+    default: '0'
+    desc: ''
+    ptype: number
+    values: ''
+- view:
+    default: ''
+    desc: |-
+        Specifies the view the plot page contains. 
+    ptype: plot view object
+    values: ''
+

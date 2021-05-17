@@ -1,0 +1,5 @@
+Filters data from a BUFR file and produces output either a :class:`Bufr`, :class:`Geopoints` or :class:`Table` object. A tutorial about the use of :func:`obsfilter` can be found `here <https://confluence.ecmwf.int/display/METV/Observation+Filter?preview=/14158627/18482215/mv_bufr_tutorial.pdf>`_. 
+
+**Filtering Efficiency**
+
+You may filter observations according to a wide variety of parameters or combinations thereof: you may filter on date and time, on location (meteorological station, WMO block, user defined area, proximity to user defined line) and range of values. Regarding the structure of the input BUFR file, note that some of the filtering parameters such as observation type, subtype, date and time are located in the header part of the BUFR message, whilst others are located in the data part of the BUFR message itself. This implies that the filtering of BUFR data according to parameters located in the header does not require decoding of the remaining information and thus is considerably (about 10 times) faster. Internally, filtering is always done first on the header parameters (if specified).

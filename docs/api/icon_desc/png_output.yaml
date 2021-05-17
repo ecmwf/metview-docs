@@ -1,0 +1,25 @@
+return: :class:`Request`
+summary: Defines a PNG plot output driver.
+oneliner: Defines a PNG plot output driver.
+params:
+- _include: !include include/output.yaml
+- output_width:
+    default: '800'
+    desc: Defines the width of the image in pixels.
+    ptype: number
+    values: ''
+- output_cairo_transparent_background:
+    default: 'off'
+    desc: Defines the background to be transparent.
+    ptype: str
+    values: on/off
+- output_cairo_antialias:
+    default: 'on'
+    desc: Defines if lines are antialiased.
+    ptype: str
+    values: on/off
+# - output_cairo_palette:
+#     default: 'off'
+#     desc: Defines if PNG uses palettes to reduce file size.
+#     ptype: str
+#     values: on/off

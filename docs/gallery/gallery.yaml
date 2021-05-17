@@ -1,0 +1,172 @@
+projection:
+  title: Map projections
+  anchor: _gallery_group_map_projections
+  desc: These examples feature various map projections.
+  examples:
+    - predefined_area
+    - cylindrical
+    - cylindrical_subarea
+    - cylindrical_across_dateline
+    - polar_north
+    - polar_south
+    - mercator
+    - lambert_subarea
+    - geos
+    - tilted_perspective
+    - goode
+    - mollweide
+    - robinson
+    - bonne
+    - bonne_subarea
+    - collignon
+coastlines:
+  title: Coastlines
+  anchor: _gallery_group_coastlines
+  desc: These examples feature coastlines settings.
+  examples:
+    - map_grid
+    - boundaries
+    - admin_boundaries
+    - rivers
+    - capitals
+    - coastlines2
+    - shape_file_layer
+    - coastlines_resolution
+map-scalar:
+  title: Gridded scalar data on map
+  anchor: _gallery_group_map_scalar
+  desc: These examples feature map plots with gridded scalar data.
+  examples:
+  - contour9
+  - contour5
+  - plot_t2m
+  - field_anomalies
+  - layoutx3
+  - gradient_shading
+  - shading_only_over_land
+  - model_orography
+  - advection
+  - departure_from_zonal_mean
+  - deaccumulate_precip_fc
+  - potential_temperature
+  - equivalent_potential_temperature
+  - ens_prob
+  - ens_percentile
+  - ens_stamp
+  - ens_spag
+  - simulated_sat_img
+  - sst_extended_latlon
+  - sst_era5_elnino_map
+  - legend3
+  - legend2
+  - contour3
+  - contour10
+  - rainbow_contour_diffs
+  - split_contour
+  - nc_era5_t2
+  - nc_era5_ozone
+map-vector:
+  title: Vector data on map
+  anchor: _gallery_group_map_vector
+  desc: These examples feature map plots with vector data.
+  examples:
+  - wind4
+  - wind_coloured_by_t
+  - gradient_vector
+  - coloured_wind
+  - wave_direction_and_height
+  - wind_overlay_and_legend_box
+  - wind_from_spectral_div_and_vor
+  - divergent_and_rotational_wind
+  - storm_joachim
+  - streamline
+  - nc_era5_wind
+  - nc_seacurrent_fixed_vector
+  - odb_temp_wind
+  - geowind
+map-point:
+  title: Point data on map
+  anchor: _gallery_group_map_point
+  desc: These examples feature map plots with point data.
+  examples:
+  - nc_maritime_obs
+  - model_obs_diff_plot
+  - synop_map
+  - bufr_synop_station_id
+  - temp_map
+  - coloured_obs_values
+  - coloured_obs_values_in_circles
+  - odb_radiance
+  - air_report
+  - text_at_geopoints_locations
+map-curves:
+  title: Tracks and curves on map
+  anchor: _gallery_group_map_curve
+  desc: These examples feature map plots with tracks, curves and shapes.
+  examples:
+  - storm_track
+  - storm_quadrants
+  - flextra_forward
+  - geoline_on_map
+  - geopolyline_on_map
+  - geocircle_on_map
+sections:
+  title: Vertical and temporal sections
+  anchor: _gallery_group_sections
+  desc: These examples feature vertical cross sections, average
+    cross sections and Hovmoeller diagrams.
+  examples:
+  - cross_section_pl_data
+  - cross_section_orog
+  - cross_section_orog_and_blh
+  - cross_section_height_ml_orog
+  - cross_section_via_pole
+  - cross_section_wind_normal
+  - cross_section_wind_parallel
+  - cross_section_wind_unprojected
+  - cross_section_wind_3d
+  - time_height_xs
+  - time_height_xs_wind
+  - hovmoeller_area
+  - ozone_era5_lat_hovmoeller
+  - qbo_era5_vertical_hovmoeller
+  - zonal_average
+  - v_era5_temporal_zonal_average
+  - zonal_average_difference
+  - meridional_average
+vertical-profiles:
+  title: Vertical profiles
+  anchor: _gallery_group_map_vertical_profile
+  desc: These examples feature vertical profiles.
+  examples:
+    - ozone_era5_profile
+thermo:
+  title: Thermodynamic diagrams
+  anchor: _gallery_group_map_thermo
+  desc: These examples feature thermodynamic 
+    diagrams (tephigram and skew-t) and hodographs.
+  examples:
+  - tephigram
+  - tephigram_bufr
+  - tephigram_odb
+  - parcel_path_skewt_grib
+  - ens_tephigram
+  - hodograph 
+xy:
+  title: XY plots
+  anchor: _gallery_group_xy
+  desc: >-
+    These examples feature various xy plots: time-series, profiles, scatterplots and Taylor diagrams.
+  examples:
+  - time_series
+  - fill_between_curves
+  - cartesian_log_y_axis
+  - cdf_curve
+  - grib_scatterplot
+  - odb_scatterplot_binning
+  - odb_wind_profiler
+  - graph4
+  - double_axis_1
+  - double_axis_2
+  - spectra
+  - taylor

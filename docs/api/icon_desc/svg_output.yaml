@@ -1,0 +1,35 @@
+return: :class:`Request`
+summary: Defines an SVG plot output driver.
+oneliner: Defines an SVG plot output driver.
+params:
+- _include: !include include/output.yaml 
+- output_width:
+    default: '800'
+    desc: Defines the width of the image in pixels.
+    ptype: number
+- output_svg_desc:
+    default: ''
+    desc: Defines a text describing the content of the SVG output.
+    ptype: str
+    values: ''
+- output_svg_meta:
+    default: ''
+    desc: Defining meta data in RDF to be added to the SVG output.
+    ptype: str
+    values: ''
+- output_svg_use_external_files:
+    default: 'on'
+    desc: Can the SVG driver use external files for cell and image plotting. External
+      files will reduce the SVG file size but add an external dependency!
+    ptype: str
+    values: on/off
+- output_svg_fix_size:
+    default: 'off'
+    desc: Decides if the size is fixed in the SVG document.
+    ptype: str
+    values: on/off
+- output_svg_logo_location:
+    default: inline
+    desc: Sets where the (ECMWF) logo can be found.
+    ptype: str
+    values: 'inline/share/local'

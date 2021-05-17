@@ -1,0 +1,15 @@
+return: :class:`NetCDF`
+summary: rst
+oneliner: Generates a Thermodynamic diagram data unit from BUFR data.
+params:
+- data:
+    default:
+    desc: Specifies the input BUFR data, which should contain upper air soundings.
+      Please note that PILOT observations cannot be used here since they only 
+      contain wind data. 
+    values:
+- station:
+    default: ''
+    desc: Specifies the location as a :func:`stations` object for which the data is to be extracted. 
+    ptype: :func:`stations`
+    values: ''

@@ -1,0 +1,36 @@
+return: :class:`Fieldset`
+summary: Interpolates gridded data in GRIB format into a lat-lon grid. In the past it was
+    used to visualise data on certain geometries. At present, all these data can be directly
+    visualised, so :func:`reprojection` is need not be used.
+oneliner: Interpolates gridded data in GRIB format into a lat-lon grid.
+params:
+- source:
+    default: 'off'
+    desc: ''
+    ptype: str
+    values: ''
+- data:
+    default: ''
+    desc: ''
+    ptype: :class:`Fieldset`
+    values: ''
+- area:
+    default: '-90/-180/90/180'
+    desc: ''
+    ptype: list[number]
+    values: ''
+- resolution:
+    default: '1/1'
+    desc: ''
+    ptype: list[number]
+    values: ''
+- projection:
+    default: latlong
+    desc: ''
+    ptype: str
+    values: latlong
+- interpolation:
+    default: nearest_neighbour
+    desc: ''
+    ptype: str
+    values: nearest_neighbour

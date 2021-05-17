@@ -1,0 +1,21 @@
+return: :class:`Request`
+summary: Defines an Encapsulated Postscript (EPS) plot output driver.
+oneliner: Defines an Encapsulated Postscript (EPS) plot output driver.
+params:
+- _include: !include include/output.yaml 
+- output_ps_colour_model:
+    default: rgb
+    desc: Defines the PostScript colour model.
+    ptype: str
+    values: rgb/cmyk/monochrome/gray/cmyk_monochrome/cmyk_gray
+- output_ps_scale:
+    default: '1.0'
+    desc: Defines the PostScript scale between 0.1 and 1.0 (1.0 being the full page size).
+    ptype: number
+    values: ''
+- output_ps_split:
+    default: 'off'
+    desc: Enables the output to be split into different (single page) PostScript
+         files.
+    ptype: str
+    values: on/off

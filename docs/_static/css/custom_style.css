@@ -1,0 +1,18 @@
+div.leftside {
+    width: 54px;
+    padding: 5px 5px 0px 0px;
+    float: left;
+  }
+  
+div.rightside {
+    margin-left: 20px;
+    margin-bottom: 40px;
+    padding-left: 40px;
+    /*float: right;*/
+  }
+
+.mval {
+  background-color: rgb(236,240,233);
+  font-family: monospace;
+}
+
