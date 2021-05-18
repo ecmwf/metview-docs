@@ -1938,6 +1938,7 @@
     category: {}
     desc: Regridding and derivatives
     group:
+    - calculus
     - geo
     - grib
     type: icon
