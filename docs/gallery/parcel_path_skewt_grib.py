@@ -50,7 +50,7 @@ info = mv.thermo_data_info(prof)
 
 # define title
 title_txt = "Run: {} {} UTC Step: {} h Lat: {:.2f} Lon: {:.2f}".format(
-    info["date"], info["time"], info["step"], info["lat"], info["lon"]
+    int(info["date"]), int(info["time"]), int(info["step"]), info["lat"], info["lon"]
 )
 
 title = mv.mtext(text_lines=title_txt, text_font_size=0.5, text_colour="charcoal")
