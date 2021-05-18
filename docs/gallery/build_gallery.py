@@ -171,7 +171,7 @@ BACKREF = BackReference()
 
 
 class GalleryItem:
-    def __init__(self, script, do_png=False):
+    def __init__(self, script, do_png=False, check_pdf=False):
         self.status = True
         self.script = script
         self.script_name = os.path.basename(self.script)
@@ -186,7 +186,7 @@ class GalleryItem:
         self.f_thumbnail = os.path.join(PNG_DIR, self.name + "_thumb.png")
 
         if do_png:
-            self.generate_png()
+            self.generate_png(check_pdf)
             if self.status:
                 log_generated(self.f_png)
                 log_generated(self.f_thumbnail)
@@ -199,13 +199,15 @@ class GalleryItem:
 
         self.build_page()
 
-    def generate_png(self):
+    def generate_png(self, check_pdf):
         do_png = True
         if os.path.isfile(self.f_png):
             src_mod_time = os.path.getmtime(self.script)
             target_mod_time = os.path.getmtime(self.f_png)
             if src_mod_time <= target_mod_time:
                 do_png = False
+                if check_pdf and not os.path.exists(self.f_pdf):
+                    do_png = True
 
         # generate png
         if do_png:
@@ -316,10 +318,11 @@ Gallery
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--png", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--check-pdf", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
     do_png = args.png
-
+    check_pdf = args.check_pdf
     r = []
 
     # generate the individual example pages
@@ -339,7 +342,7 @@ def main():
         for name in item["examples"]:
             LOG.info(f"[{cnt}/{total}] {name}")
             script = os.path.join(GALLERY_DIR, name + ".py")
-            item = GalleryItem(script, do_png=do_png)
+            item = GalleryItem(script, do_png=do_png, check_pdf=check_pdf)
             gr_item["items"].append(item)
             cnt += 1
             if not item.status:
