@@ -50,6 +50,7 @@ map-scalar:
   - deaccumulate_precip_fc
   - potential_temperature
   - equivalent_potential_temperature
+  - ens_mean_and_spread
   - ens_prob
   - ens_percentile
   - ens_stamp

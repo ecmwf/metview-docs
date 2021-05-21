@@ -1,5 +1,5 @@
 """
-GRIB - ENS Windgust Percentile
+GRIB - ENS Mean and Spread
 """
 
 # (C) Copyright 2017- ECMWF.
@@ -45,17 +45,25 @@ else:
     else:
         g = mv.gallery.load_dataset(filename)
 
-# filter out a timestep
+# filter out a given timestep
 wg = mv.read(data=g, step=78)
 
-# compute percentiles
-percentiles = [25, 50, 75, 90]
-pc = mv.percentile(data=wg, percentiles=percentiles)
+# compute ENS mean
+f_mean = mv.mean(wg)
+
+# compute ENS spread (=standard deviation)
+f_spread = mv.stdev(wg)
 
 # define contour shading
-cont = mv.mcont(
+cont_mean = mv.mcont(
     contour_automatic_setting="style_name",
     contour_style_name="sh_all_f03t70_beauf",
+    legend="on",
+)
+
+cont_spread = mv.mcont(
+    contour_automatic_setting="style_name",
+    contour_style_name="sh_blu_f02t30",
     legend="on",
 )
 
@@ -64,22 +72,44 @@ coast = mv.mcoast(map_grid_colour="charcoal", map_grid_longitude_increment=10)
 
 # define map view
 view = mv.geoview(
-    map_area_definition="corners", area=[43, -20, 60, 10], coastlines=coast
+    map_area_definition="corners", area=[40, -20, 60, 10], coastlines=coast
 )
 
-# create a 2x2 plot layout with the defined geoview
-dw = mv.plot_superpage(pages=mv.mvl_regular_layout(view, 2, 2, 1, 1, [5, 100, 15, 100]))
+# create a 1x2 plot layout with the defined geoview
+page_0 = mv.plot_page(top=20, bottom=80, right=50, view=view)
+page_1 = mv.plot_page(top=20, bottom=80, left=50, right=100, view=view)
+dw = mv.plot_superpage(page=[page_0, page_1])
+
+# define tite
+title_mean = mv.mtext(
+    text_lines="ENS Mean <grib_info key='shortName'/> step: <grib_info key='stepRange'/> h",
+    text_font_size=0.4,
+)
+
+title_spread = mv.mtext(
+    text_lines="ENS Spread <grib_info key='shortName'/> step: <grib_info key='stepRange'/> h",
+    text_font_size=0.4,
+)
+
+# define legend
+legend = mv.mlegend(legend_text_font_size=0.35)
 
 # define the output plot file
-mv.setoutput(mv.pdf_output(output_name="ens_percentile"))
+mv.setoutput(mv.pdf_output(output_name="ens_mean_and_spread"))
 
 # build plot definition
-p_def = []
-for i in range(4):
-    title = mv.mtext(
-        text_lines=[f"Wind gust - {percentiles[i]}% percentile"], text_font_size=0.5
-    )
-    p_def.extend([dw[i], pc[i], cont, title])
+p_def = [
+    dw[0],
+    f_mean,
+    cont_mean,
+    title_mean,
+    legend,
+    dw[1],
+    f_spread,
+    cont_spread,
+    title_spread,
+    legend
+]
 
 # generate plot
 mv.plot(p_def)
