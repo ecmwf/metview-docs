@@ -19,7 +19,7 @@ nearest_gridpoint
    :param gpt: input geopoints
    :type gpt: :class:`Geopoints`
    :param str mode: specifies the way missing values are handled. The only allowed value is "valid".
-   :rtype: number or ndarray or :class:`Geopoints`
+   :rtype: number or list or ndarray or :class:`Geopoints`
   
    ``fs`` must be a gridded field. 
 
