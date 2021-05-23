@@ -15,7 +15,7 @@ mvl_regular_layout
    :type subpage_columns: number
    :param subpage_rows: number of rows within a :func:`plot_page`
    :type subpage_rows: number
-   :param plot_area: the plot area the layout occupies in the parent :func:`plot_superpage`
+   :param plot_area: the plot area the layout occupies in the parent :func:`plot_superpage` in [top, bottom, left, right] format. The full plot area is defined as [0, 100, 0, 100].
    :type plot_area: list
    :rtype: list
    
