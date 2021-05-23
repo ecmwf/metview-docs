@@ -45,7 +45,7 @@ else:
     else:
         g = mv.gallery.load_dataset(filename)
 
-# filter out a given timestep
+# extract a given timestep
 wg = mv.read(data=g, step=78)
 
 # compute ENS mean
@@ -76,8 +76,8 @@ view = mv.geoview(
 )
 
 # create a 1x2 plot layout with the defined geoview
-page_0 = mv.plot_page(top=20, bottom=80, right=50, view=view)
-page_1 = mv.plot_page(top=20, bottom=80, left=50, right=100, view=view)
+page_0 = mv.plot_page(top=5, bottom=50, left=20, right=80, view=view)
+page_1 = mv.plot_page(top=55, bottom=100, left=20, right=80, view=view)
 dw = mv.plot_superpage(page=[page_0, page_1])
 
 # define tite

@@ -45,7 +45,7 @@ else:
     else:
         g = mv.gallery.load_dataset(filename)
 
-# filter out a timestep
+# extract a given timestep
 wg = mv.read(data=g, step=78)
 
 # compute percentiles
