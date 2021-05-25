@@ -2,8 +2,9 @@
 nbsphinx
 sphinx_rtd_theme
 pyyaml-include
+pyyaml
+Pygments>=2.6.1
 Sphinx>=3.3.1
 setuptools>=51.0.0
 alabaster>=0.7.12
 sphinx-rtd-theme>=0.5.0
-
