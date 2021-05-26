@@ -1,52 +1,57 @@
 return: :class:`Request`
-summary: Defines the visualisation of NetCDF data allowing to 
+summary: Defines the visualisation of :class:`NetCDF` data allowing to 
     specify which variables in the file should be used, and how
-    to interpret themThe generated object can directly be used in :func:`plot`.
-oneliner: Defines the visualisation of NetCDF data.
+    to interpret them. The generated object can directly be used in :func:`plot`.
+oneliner: Defines the visualisation of :class:`NetCDF` data.
 params:
 - netcdf_plot_type:
     default: geo_points
-    desc: ''
+    desc: |-
+      Specifies the type of plot to be generated. The available modes are as follows:
+      
+      * "geo_points"
+      * "geo_vectors"
+      * "geo_matrix"
+      * "geo_matrix_vectors"
+      * "xy_points"
+      * "xy_vectors"
+      * "xy_matrix"
+      * "xy_matrix_vectors"
     ptype: str
     values: geo_points/geo_vectors/geo_matrix/geo_matrix_vectors/xy_points/xy_vectors/xy_matrix/xy_matrix_vectors
 - netcdf_filename:
     default: 'off'
-    desc: ''
+    desc: Specifies the path to the NetCDF file to be used. Alternatively, use the
+      ``netcdf_data`` field, which overrides ``netcdf_filename``.
     ptype: str
     values: ''
 - netcdf_data:
     default: ''
-    desc: ''
-    ptype: str
+    desc: Specifies the input data as a :class:`NetCDF` object.
+    ptype: :class:`NetCDF`
     values: ''
 - netcdf_latitude_variable:
     default: ''
-    desc: ''
+    desc: Specifies which variable to use for the latitude co-ordinates. Only 
+        available when ``netcdf_plot_type`` is 'geo_*'.'
     ptype: str
     values: ''
 - netcdf_longitude_variable:
     default: ''
-    desc: ''
+    desc: Specifies which variable to use for the longitude co-ordinates. Only
+         available when ``netcdf_plot_type`` is 'geo_*'.
     ptype: str
     values: ''
 - netcdf_x_variable:
     default: ''
-    desc: ''
+    desc: Specifies which variable to use for the x co-ordinates.
+      Only available when ``netcdf_plot_type`` is 'xy_*'.
     ptype: str
     values: ''
 - netcdf_y_variable:
     default: ''
-    desc: ''
-    ptype: str
-    values: ''
-- netcdf_x_position_variable:
-    default: ''
-    desc: ''
-    ptype: str
-    values: ''
-- netcdf_y_position_variable:
-    default: ''
-    desc: ''
+    desc: Specifies which variable to use for the y co-ordinates.
+      Only available when ``netcdf_plot_type`` is 'xy_*'.
     ptype: str
     values: ''
 - netcdf_x2_variable:
@@ -61,28 +66,57 @@ params:
     values: ''
 - netcdf_value_variable:
     default: ''
-    desc: ''
+    desc: Specifies which variable supplies the values.
     ptype: str
     values: ''
 - netcdf_x_component_variable:
     default: ''
-    desc: ''
+    desc: When ``netcdf_plot_type`` is '*_vectors', this parameter specifies which variable
+      defines the vector component in X or longitude direction (e.g. U-component
+      of wind).
     ptype: str
     values: ''
 - netcdf_y_component_variable:
     default: ''
-    desc: ''
+    desc: When ``netcdf_plot_type`` is '*_vectors', this parameter specifies which variable
+      defines the vector component in Y or latitude direction (e.g. V-component
+      of wind).
     ptype: str
     values: ''
 - netcdf_dimension_setting_method:
     default: value
-    desc: ''
+    desc: Method used to specify how to interpret the extraction of a subset, the 
+        range can by specified by value or by index. 
     ptype: str
     values: index/value
 - netcdf_dimension_setting:
     default: ''
-    desc: ''
-    ptype: str or list[str]
+    desc: |-
+        Extracts only of a subset of the data. Each dimension is specified as a str in "dim_name:start[:end]" format where the "end" is optional. The value for "start" and "end" have to be specified according to the settings in ``netcdf_dimension_setting_method``. Some examples: 
+        
+
+        In this example the subset is specified by the dimension called "level" and the subset is extracted for all "level" values between 100 and 500:
+
+        .. code-block:: python
+
+            netcdf_dimension_setting_method="value"
+            netcdf_dimension_setting=["level:100:500"]
+
+        In this example multiple dimensions are used:
+
+        .. code-block:: python
+
+            netcdf_dimension_setting_method="value"
+            netcdf_dimension_setting=["level:100:500", "number:1:2"]
+
+        In this example the subset is specified by the dimension called "time" and the subset is restricted to index=2:
+        
+        .. code-block:: python
+
+            netcdf_dimension_setting_method="index"
+            netcdf_dimension_setting=["time:2"]
+            
+    ptype: list[str]
     values: ''
 - netcdf_matrix_primary_index:
     default: longitude
@@ -91,11 +125,11 @@ params:
     values: latitude/longitude
 - netcdf_position_type:
     default: array
-    desc: ''
+    desc: Specifies how to interpret the data.
     ptype: str
     values: array/matrix
 - netcdf_missing_attribute:
     default: _fillvalue
-    desc: ''
+    desc: Specifies the NetCDF attribute that defines the missing value in the data. 
     ptype: str
     values: ''
