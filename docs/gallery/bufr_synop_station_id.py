@@ -37,16 +37,25 @@ gpt = mv.obsfilter(
 # read station ids into a list
 id_lst = mv.stnids(gpt)
 
-# define station id text plotting
+
+# since station ids can be non-numeric, we will need to use the 'text' mode
+# of msymb(). This requires associating each point with its text label, so we will
+# generate values of 1,2,3,4,...,N for the geopoints and create an msymb() that
+# maps each value to a station id.
+
+vals = list(range(len(gpt)+1))
+gpt = gpt.set_values(vals)
 sym_txt = mv.msymb(
     legend="off",
-    symbol_type="text",
-    symbol_colour="black",
-    symbol_text_list=id_lst,
-    symbol_text_position="top",
-    symbol_text_font_size=0.5,
-    symbol_text_blanking="on",
-)
+    symbol_type                          = "text",
+    symbol_table_mode                    = "advanced",
+    symbol_advanced_table_selection_type = "list",
+    symbol_advanced_table_level_list     = vals,
+    symbol_advanced_table_text_list      = id_lst,
+    symbol_advanced_table_text_font_size = 0.5,
+    symbol_advanced_table_text_display_type = "top",
+    symbol_text_blanking                 = "on", #  requires Magics >=4.8.1
+    )
 
 #  define station location plotting
 sym_loc = mv.msymb(
