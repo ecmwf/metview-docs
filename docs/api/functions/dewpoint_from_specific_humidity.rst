@@ -24,8 +24,8 @@ dewpoint_from_specific_humidity
         e(q, p) = e_{wsat}(td)
 
     where:
-        * e is the vapour pressure
-        * e\ :sub:`wsat` is the saturation vapour pressure over water
+        * e is the vapour pressure (see :func:`vapour_pressure`)
+        * e\ :sub:`wsat` is the saturation vapour pressure over water (see :func:`saturation_vapour_pressure`)
         * td is the dewpoint temperature
 
 

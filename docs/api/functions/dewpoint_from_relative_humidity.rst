@@ -20,7 +20,7 @@ dewpoint_from_relative_humidity
 
     where
 
-        * e\ :sub:`wsat` is the saturation vapour pressure over water
+        * e\ :sub:`wsat` is the saturation vapour pressure over water (see :func:`saturation_vapour_pressure`).
         * td is the dewpoint temperature
 
 

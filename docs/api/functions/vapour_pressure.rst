@@ -21,7 +21,7 @@ vapour_pressure
 
     .. math:: 
 
-        \frac{p\;q}{\epsilon\; (1 + q(\frac{1}{\epsilon} -1 )}
+        \frac{p\;q}{\epsilon\; (1 + q(\frac{1}{\epsilon} -1 ))}
 
     with
 
