@@ -22,7 +22,7 @@ params:
     values: xy_points/geo_points/xy_vectors/geo_vectors/xy_binning/geo_binning
 - table_filename:
     default: 'off'
-    desc: Specifies the path to the ASCII table file to be used. Alternatively, use
+    desc: Specifies the path to the ASCII table file to be used. Alternatively, use the
       ``table_data`` field, which overrides ``table_filename``.
     ptype: str
     values: ''
