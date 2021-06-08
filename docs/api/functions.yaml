@@ -2286,6 +2286,14 @@
     desc: Sorts a vector according to an operator '<' (default) or '>'
     exclude: true
     type: script
+- specific_humidity_from_dewpoint:
+    category:
+      fieldset: Computes the specific humidity for a given dewpoint and pressure
+    desc: Computes the specific humidity for a given dewpoint and pressure
+    group:
+    - thermo
+    - grib
+    type: script
 - spec_contour:
     category: {}
     desc: null
