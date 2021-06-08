@@ -2793,6 +2793,13 @@
     group:
     - view
     type: icon
+- virtual_temperature:
+    category:
+      thermo: computes the virtual temperature for a given temperature and specific humidity
+    desc: computes the virtual temperature for a given temperature and specific humidity
+    group:
+    - thermo
+    type: script
 - vorticity:
     category:
       fieldset: Compute relative vorticity of vector fields
