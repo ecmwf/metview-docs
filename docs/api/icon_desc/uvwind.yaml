@@ -11,4 +11,14 @@ params:
       and 138 for the vorticity fields.
     ptype: :class:`Fieldset`
     values:
+- divergence_param:
+    default: 155
+    desc: Specifies the ecCodes paramId that identifies the divergence in ``data``.
+    ptype: number
+    values:
+- vorticity_param:
+    default: 138
+    desc: Specifies the ecCodes paramId that identifies the vorticity in ``data``.
+    ptype: number
+    values:
 - _include: !include include/spectral_filter.yaml 

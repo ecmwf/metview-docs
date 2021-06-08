@@ -10,4 +10,9 @@ params:
       (spherical harmonics) data. 
     ptype: :class:`Fieldset`
     values:
+- vorticity_param:
+    default: 138
+    desc: Specifies the ecCodes paramId that identifies the vorticity in ``data``.
+    ptype: number
+    values:
 - _include: !include include/spectral_filter.yaml
