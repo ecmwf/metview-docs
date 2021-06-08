@@ -80,6 +80,7 @@ map-vector:
   - wind_overlay_and_legend_box
   - wind_from_spectral_div_and_vor
   - divergent_and_rotational_wind
+  - geostrophic_wind_overlay
   - storm_joachim
   - streamline
   - nc_era5_wind
