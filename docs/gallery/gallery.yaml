@@ -46,6 +46,7 @@ map-scalar:
   - shading_only_over_land
   - model_orography
   - advection
+  - thermal_front_parameter
   - departure_from_zonal_mean
   - deaccumulate_precip_fc
   - potential_temperature
