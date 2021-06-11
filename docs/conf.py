@@ -27,8 +27,11 @@ sys.path.append(os.path.abspath("./_ext"))
 # -- Project information -----------------------------------------------------
 
 project = u"metview"
-copyright = u"2017-, European Centre for Medium-Range Weather Forecasts (ECMWF)."
 author = "ECMWF"
+
+year = datetime.datetime.now().year
+years = "2017-%s" % (year,)
+copyright = "%s, European Centre for Medium-Range Weather Forecasts (ECMWF)" % (years,)
 
 
 # -- General configuration ---------------------------------------------------
