@@ -1134,6 +1134,14 @@
     desc: Sets to unique case of letters
     exclude: true
     type: script
+- ls:
+    category:
+      fieldset: Dumps metadata from a fieldset
+    desc: Dumps metadata from a fieldset
+    group:
+    - grib_access
+    - grib_object 
+    type: script
 - magml:
     category: {}
     desc: ''
