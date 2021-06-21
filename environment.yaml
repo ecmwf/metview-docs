@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+dependencies:
+  - metview-batch
+  - pip
+  - pip:
+    - metview >=1.4.0
+    - scipy
+    - matplotlib
+    - cdsapi
+    - xarray
+    - pandas

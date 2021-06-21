@@ -21,7 +21,7 @@ vertint
 
    .. math::
       
-      \int_{bottom}^{top} f \frac{dp}{g}
+      \int_{p_{top}}^{p_{bottom}} f \frac{dp}{g}
 
    where:
 

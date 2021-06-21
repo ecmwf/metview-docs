@@ -82,6 +82,7 @@ map-vector:
   - divergent_and_rotational_wind
   - geostrophic_wind_overlay
   - ageostrophic_wind
+  - thermal_wind
   - storm_joachim
   - streamline
   - nc_era5_wind
