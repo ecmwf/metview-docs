@@ -348,8 +348,12 @@
     type: icon
 - describe:
     category:
+      fieldset: Prints summary of the contents of a fieldset
       info: Describes available function
-    desc: Describes available function
+    desc: Prints summary of the contents of a fieldset
+    group:
+    - grib_object
+    - grib_access
     type: script
 - dewpoint_from_relative_humidity:
     category:
@@ -1136,8 +1140,8 @@
     type: script
 - ls:
     category:
-      fieldset: Dumps metadata from a fieldset
-    desc: Dumps metadata from a fieldset
+      fieldset: Dumps metadata for each message in a fieldset
+    desc: Dumps metadata for each message in a fieldset
     group:
     - grib_access
     - grib_object 
