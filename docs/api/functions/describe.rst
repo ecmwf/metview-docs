@@ -9,7 +9,7 @@ describe
     :type param: str
     :rtype: HTML formatted output in a Jupyter notebook, otherwise the summary is printed to the standard output
     
-    ``describe`` scans the :class:`Fieldset` and for each message (i.e. field) extracts a fixed set of metadata values, which are then grouped by parameter and presented in a tabular format. The parameters are identified by their ecCodes shortNames. ``describe`` does not try to form a hypercube(s) but simply lists the unique metadata values for each parameter.
+    :func:`describe` scans the :class:`Fieldset` and for each message (i.e. field) extracts a fixed set of metadata values, which are then grouped by parameter and presented in a tabular format. The parameters are identified by their ecCodes shortNames. :func:`describe` does not try to form a hypercube(s) but simply lists the unique metadata values for each parameter.
 
     The following example shows how the output looks in a notebook for a fieldset containing 432 surface and pressure level fields:
 

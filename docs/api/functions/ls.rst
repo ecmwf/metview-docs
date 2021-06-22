@@ -9,7 +9,7 @@ ls
     :type extra_keys: list of str
     :rtype: Pandas dataframe in a Jupyter notebook, otherwise the dataframe is printed to the standard output
     
-    ``ls`` scans the :class:`Fieldset` and for each message extracts values for a **default set of ecCodes keys** and a set of user defined ``extra_keys``. 
+    :func:`ls` scans the :class:`Fieldset` and for each message extracts values for a **default set of ecCodes keys** and a set of user defined ``extra_keys``. 
 
     The following example shows how the output looks in a notebook using the default set of ecCodes keys:
 

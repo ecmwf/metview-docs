@@ -2125,6 +2125,14 @@
     group:
     - calculus
     - grib_object
+    type: script 
+- select:
+    category: 
+      fieldset: Filters fieldset data
+    desc: Filters fieldset data
+    group:
+    - grib
+    - grib_object
     type: script
 - seqpott_m:
     category: {}
