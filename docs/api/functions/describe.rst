@@ -1,10 +1,14 @@
 describe
 ===========
 
+.. py:function:: describe(fs, param=None)
 .. py:function:: Fieldset.describe(param=None)
+   :noindex:
 
-    Summarises the content of a :class:`Fieldset` in a compact way. The output is optimised for Jupyter notebooks.
+    Summarizes the content of a :class:`Fieldset` in a compact way. The output is optimised for Jupyter notebooks.
 
+    :param fs: input fieldset
+    :type fs: :class:`Fieldset` 
     :param param: only prints the summary for the specified ecCodes shortName
     :type param: str
     :rtype: HTML formatted output in a Jupyter notebook, otherwise the summary is printed to the standard output

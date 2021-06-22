@@ -346,12 +346,13 @@
     group:
     - widget
     type: icon
-- Fieldset.describe:
+- describe:
     category:
       fieldset: Prints summary of the contents of a fieldset
       info: Describes available function
     desc: Prints summary of the contents of a fieldset
     group:
+    - grib
     - grib_object
     - grib_access
     type: script
@@ -1138,11 +1139,12 @@
     desc: Sets to unique case of letters
     exclude: true
     type: script
-- Fieldset.ls:
+- ls:
     category:
       fieldset: Dumps metadata for each message in a fieldset
     desc: Dumps metadata for each message in a fieldset
     group:
+    - grib
     - grib_access
     - grib_object 
     type: script
@@ -2132,7 +2134,7 @@
     - calculus
     - grib_object
     type: script 
-- Fieldset.select:
+- select:
     category: 
       fieldset: Filters fieldset data
     desc: Filters fieldset data

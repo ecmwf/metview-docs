@@ -1,10 +1,14 @@
 ls
 ===========
 
+.. py:function:: ls(fs, extra_keys=[])
 .. py:function:: Fieldset.ls(extra_keys=[])
+   :noindex:
 
     Lists the messages of a :class:`Fieldset` by printing values of some ecCodes keys. 
 
+    :param fs: input fieldset
+    :type fs: :class:`Fieldset` 
     :param extra_keys: list of additional ecCodes keys. Type qualifiers (s=string, l=long, d=double) can be appended to each key name following the ":" character. E.g. to get "centre" as long use "centre:l".
     :type extra_keys: list of str
     :rtype: Pandas dataframe in a Jupyter notebook, otherwise the dataframe is printed to the standard output

@@ -1,11 +1,15 @@
 select
 =============
 
+.. py:function:: select(fs, [d], **kwargs)
 .. py:function:: Fieldset.select([d], **kwargs)
+   :noindex:
 
-   Extracts a subset of fields matching the conditions expressed with set ecCodes keys from a :class:`Fieldset`. 
+   Extracts a subset of fields matching the conditions defined by a set of ecCodes keys from a :class:`Fieldset`. 
 
-   :param dict d: filter expressed as a dict
+   :param fs: input fieldset
+   :type fs: :class:`Fieldset` 
+   :param d: filter expressed as a dict
    :type d: dict 
    :rtype: :class:`Fieldset`
    
