@@ -346,7 +346,7 @@
     group:
     - widget
     type: icon
-- describe:
+- Fieldset.describe:
     category:
       fieldset: Prints summary of the contents of a fieldset
       info: Describes available function
@@ -1138,7 +1138,7 @@
     desc: Sets to unique case of letters
     exclude: true
     type: script
-- ls:
+- Fieldset.ls:
     category:
       fieldset: Dumps metadata for each message in a fieldset
     desc: Dumps metadata for each message in a fieldset
@@ -1772,6 +1772,12 @@
     group:
     - plot
     type: script
+- plot_maps:
+    category: {}
+    desc: Generates map-based plots
+    group:
+    - plot
+    type: script
 - plot_page:
     category: {}
     desc: Creates a page in a plot layout
@@ -2126,11 +2132,12 @@
     - calculus
     - grib_object
     type: script 
-- select:
+- Fieldset.select:
     category: 
       fieldset: Filters fieldset data
     desc: Filters fieldset data
     group:
+    - filter
     - grib
     - grib_object
     type: script

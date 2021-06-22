@@ -85,6 +85,7 @@ class DocFunction:
         self.desc = item.get("desc", "???")
         self.pix = item.get("pix", "")
         self.groups = []
+        self.object = item.get("object", "")
 
         self.format_desc()
 
