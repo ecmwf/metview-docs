@@ -1,9 +1,9 @@
 describe
 ===========
 
-.. py:function:: describe(fs, param=None)
-.. py:function:: Fieldset.describe(param=None)
-   :noindex:
+..  py:function:: describe(fs, param=None)
+..  py:function:: Fieldset.describe(param=None)
+    :noindex:
 
     Summarizes the content of a :class:`Fieldset` in a compact way. The output is optimised for Jupyter notebooks.
 
@@ -26,4 +26,4 @@ describe
             :width: 400px
 
 
-.. mv-minigallery:: ls
+..  mv-minigallery:: ls

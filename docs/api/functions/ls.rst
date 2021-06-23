@@ -1,9 +1,9 @@
 ls
 ===========
 
-.. py:function:: ls(fs, extra_keys=[])
-.. py:function:: Fieldset.ls(extra_keys=[])
-   :noindex:
+..  py:function:: ls(fs, extra_keys=[])
+..  py:function:: Fieldset.ls(extra_keys=[])
+    :noindex:
 
     Lists the messages of a :class:`Fieldset` by printing values of some ecCodes keys. 
 
@@ -26,4 +26,4 @@ ls
             :width: 700px
 
 
-.. mv-minigallery:: ls
+..  mv-minigallery:: ls
