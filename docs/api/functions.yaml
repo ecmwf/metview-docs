@@ -1158,6 +1158,20 @@
     desc: ''
     exclude: true
     type: icon
+- map_area_gallery:
+    category: {}
+    desc: Generates map area gallery in Jupyter notebooks
+    group:
+    - view
+    - jupyter
+    type: script
+- map_style_gallery:
+    category: {}
+    desc: Generates map style gallery in Jupyter notebooks
+    group:
+    - view
+    - jupyter
+    type: script
 - mask:
     category:
       fieldset: Generates masks for fieldsets
