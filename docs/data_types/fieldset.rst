@@ -69,6 +69,12 @@ Iteration
    `len(fs)` and `fs.count()` both return the number of fields in the Fieldset.
 
 
+Inspection
+############
+
+   The contents of a Fieldset can be easily inspected using the :py:meth:`ls` and :py:meth:`describe` methods.
+
+
 Functions vs methods
 ####################
 
