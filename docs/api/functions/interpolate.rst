@@ -2,26 +2,33 @@ interpolate
 =============
 
 
-.. py:function:: interpolate(fs, lat, lon)
-.. py:function:: interpolate(fs, locations)
+.. py:function:: interpolate(fs, lats, lons)
+.. py:function:: interpolate(fs, location)
+.. py:function:: interpolate(fs, gpt)
    :noindex:
 
    Interpolate the values of ``fs`` to a given location(s) using **bilinear** interpolation. 
      
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
-   :param lat: latitude of target location
-   :type lat: number
-   :param lon: longitude of target location
-   :type lon: number
-   :param locations: multiple target locations
-   :type locations: list or :class:`Geopoints`
+   :param lats: target latitude(s)
+   :type lats: number or ndarray
+   :param lons: target longitudes(s)
+   :type lons: number or ndarray
+   :param location: single target location defined as a list of [lat, lon]
+   :type location: list
+   :param gpt: input geopoints
+   :type gpt: :class:`Geopoints`
    :rtype: number or ndarray or :class:`Geopoints` or None
 
-   A **single target location** can be defined with ``lat`` and ``lon`` or by specifying a list of [lat, lon] as ``locations``. If ``fs`` has only one field, a number is returned; otherwise a 1D-ndarray is returned. Where it is not possible to generate a sensible value due to lack of valid data in ``fs``, None is returned.
+   The interpolated point extraction depends on the arguments:
+  
+   * ``location`` defines a single location. The return value is a number when ``fs`` only contains one field, and a list otherwise. Where it is not possible to generate a sensible value due to lack of valid data in ``fs``, None is returned.
 
-   For multiple target locations ``locations`` must be a :class:`Geopoints` and in this case the first field in ``fs`` is interpolated for each position of the :class:`Geopoints`. The output is then another :class:`Geopoints` taking the date, time and level from ``fs``. Where it is not possible to generate a sensible value due to lack of valid data in the fieldset NaN is used (this can be removed from the output with :func:`remove_missing_values`). 
-   
+   * ``lats`` and ``lons`` can define either a single location (as number) or multiple locations (as ndarray). If a single location is specified the return value is the same as for ``location``. For multiple locations an ndarray is returned (or a list of ndarrays if there are multiple fields).
+   * when ``gpt`` is specified only the first field of ``fs`` is used. The result is a :class:`Geopoints` containing the the nearest gridpoint values for all the locations in ``gpt`` and taking the date, time and level from ``fs``.  Where it is not possible to generate a sensible value due to lack of valid data in ``fs``, NaN is used (this value can be removed from the output with the function :func:`remove_missing_values`).
+
+
    .. note::
       A similar function, :func:`nearest_gridpoint`, also exists.
 
