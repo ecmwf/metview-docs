@@ -47,6 +47,7 @@ map-scalar:
   - model_orography
   - advection
   - thermal_front_parameter
+  - vertical_integral
   - departure_from_zonal_mean
   - deaccumulate_precip_fc
   - potential_temperature
