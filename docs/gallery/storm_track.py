@@ -74,9 +74,9 @@ track_text = mv.msymb(
 # create a visualiser for the track
 track_vis = mv.input_visualiser(
     input_plot_type="geo_points",
-    input_longitude_values=list(val_lon),
-    input_latitude_values=list(val_lat),
-    input_values=list(val_idx)
+    input_longitude_values=val_lon,
+    input_latitude_values=val_lat,
+    input_values=val_idx
 )
 
 # read mslp forecast from grib file
