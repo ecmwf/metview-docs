@@ -17,7 +17,8 @@ Construction
 
       f1 = mv.Fieldset() # empty Fieldset
       f2 = mv.Fieldset(path="test.grib") # create from GRIB file
-      f3 = mv.read("my.grib") # create from GRIB file
+      f3 = mv.Fieldset(path="test_*.grib") # create from a set of GRIB files using globbing
+      f4 = mv.read("my.grib") # create from GRIB file
 
 Concatenation
 #############
