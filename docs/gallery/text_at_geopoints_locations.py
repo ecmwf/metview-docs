@@ -22,18 +22,22 @@ else:
     gpt = mv.gallery.load_dataset(filename)
 
 # define text labels
+# - the geopoints have values of 1, 2, 3 and 4
 txt_lst = ["London", "New York", "Rio de Janeiro", "Tokyo"]
 
 # define text plotting
+# the first interval is 1(inclusive)->2(exclusive), etc
 sym_txt = mv.msymb(
     legend="off",
-    symbol_type="text",
-    symbol_colour="black",
-    symbol_text_list=txt_lst,
-    symbol_text_position="top",
-    symbol_text_font_size=1,
-    symbol_text_blanking="on",
-)
+    symbol_type                          = "text",
+    symbol_table_mode                    = "advanced",
+    symbol_advanced_table_selection_type = "list",
+    symbol_advanced_table_level_list     = [1, 2, 3, 4, 5],
+    symbol_advanced_table_text_list      = txt_lst,
+    symbol_advanced_table_text_font_size = 1,
+    symbol_advanced_table_text_display_type = "top",
+    symbol_text_blanking                 = "on", #  requires Magics >=4.8.1
+    )
 
 # define location plotting
 sym_loc = mv.msymb(
