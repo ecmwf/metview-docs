@@ -38,7 +38,37 @@ select
         .. code-block:: python
 
             g = f.select({"centre:l": 98}) 
-            
+       
+   We can use multiple value formats for the following **date** and **time** related ecCodes keys:
+   
+    * date, time
+    * dataDate, dataTime
+    * validityDate, validityTime
+    * marsDate, marsTime
+   
+   E.g. the **date** of 2021-02-04 can be written as:
+
+     * 20210204
+     * "20210204"
+     * "2021-02-04"
+     * datetime.datetime(2021, 2, 4)
+
+   and we have these options for the **time** of 12 hours:
+
+    * 12
+    * "12"
+    * "1200"
+    * "12:00"
+    * datetime.time(12)
+
+   For example:
+
+        .. code-block:: python
+
+            g = f.select(date=20210204, time=12, step=9) 
+            g = f.select(validityDate="2021-02-04", validityTime=21) 
+
+   
    .. note::
         
         If :func:`select` is called on the same :class:`Fieldset` multiple times it provides a better performance than :func:`read`.
