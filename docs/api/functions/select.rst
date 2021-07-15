@@ -5,18 +5,22 @@ select
 .. py:function:: Fieldset.select([d], **kwargs)
    :noindex:
 
-   Extracts a subset of fields matching the conditions defined by a set of ecCodes keys from ``fs``. 
+   Extracts a subset of fields matching the conditions defined by a set of ecCodes keys from ``fs``. If called multiple times on the same :class:`Fieldset` it will result in a much better performance than :func:`read`.
 
    :param fs: input fieldset
    :type fs: :class:`Fieldset` 
    :param d: filter expressed as a dict
    :type d: dict 
+   :param kwargs: filter expressed as a set of keyword arguments
    :rtype: :class:`Fieldset`
    
+   .. warning::
+
+        The result is always sorted in ascending order by the following keys: shortName, paramId, date, time, step, typeOfLevel, level, number, experimentVersionNumber, marsClass, marsStream and marsType. 
 
    We can call :func:`select` either with a set of keyword arguments or with a dictionary as a single positional argument. 
 
-   When **keyword arguments** are used each must be an ecCodes key specifying a value or list of values. These individual conditions are combined together with a logical AND to form the filter. For example, extracting temperature fields on 850 and 500 hPa levels can be done like this:
+   When **keyword arguments** are used each must be an ecCodes key specifying a value or list of values. These individual conditions are combined together with the logical AND operator to form the filter. For example, extracting temperature fields on 850 and 500 hPa levels can be done like this:
 
        .. code-block:: python
 
@@ -122,9 +126,6 @@ Datetime keys
             # compute the fc-an difference (the fields are correctly paired up!)
             diff = f_fc - f_an
 
-   .. note::
-        
-        If :func:`select` is called on the same :class:`Fieldset` multiple times it provides a better performance than :func:`read`.
 
 
 .. mv-minigallery:: select
