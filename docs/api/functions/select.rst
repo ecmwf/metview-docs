@@ -117,7 +117,7 @@ Datetime keys
             d = mv.valid_date(base="2021-02-04 12:00", step=[0, 12, 18])
             # extract data from forecast
             f_fc = fc.select(validityDateTime=d)
-            # extract data from the analyis
+            # extract data from analyis
             f_an = an.select(dateTime=d) 
             # compute the fc-an difference (the fields are correctly paired up!)
             diff = f_fc - f_an
