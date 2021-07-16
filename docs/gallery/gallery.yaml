@@ -105,6 +105,7 @@ map-point:
   - coloured_obs_values_in_circles
   - odb_radiance
   - air_report
+  - gpts_with_missing_vals
   - text_at_geopoints_locations
 map-curves:
   title: Tracks and curves on map
