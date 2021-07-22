@@ -32,6 +32,12 @@ val_time = mv.values(tbl, 1)
 val_lon = mv.values(tbl, 2)
 val_lat = mv.values(tbl, 3)
 
+# to plot text labels at each point, we will need to use the 'text' mode
+# of msymb(). This requires associating each point with its text label, so we will
+# generate values of 0,1,2,3,...,N-1 for the points and create an msymb() that
+# maps each value to a generated date/time label.
+val_idx = list(range(len(val_lat)+1)) # indexes: 0->N
+
 # define date and time labels for track points
 val_label = []
 for i in range(len(val_date)):
@@ -53,18 +59,24 @@ track_graph = mv.mgraph(
 
 # define label properties
 track_text = mv.msymb(
+    legend="off",
     symbol_type="text",
-    symbol_text_font_colour="black",
-    symbol_text_font_size="0.3",
-    symbol_text_font_style="bold",
-    symbol_text_list=val_label,
-)
+    symbol_table_mode="advanced",
+    symbol_advanced_table_selection_type="list",
+    symbol_advanced_table_level_list=val_idx,
+    symbol_advanced_table_text_list=val_label,
+    symbol_advanced_table_text_font_size=0.5,
+    symbol_advanced_table_text_font_style="bold",
+    symbol_advanced_table_text_font_colour="black",
+    symbol_advanced_table_text_display_type="right",
+    )
 
 # create a visualiser for the track
 track_vis = mv.input_visualiser(
     input_plot_type="geo_points",
-    input_longitude_values=list(val_lon),
-    input_latitude_values=list(val_lat),
+    input_longitude_values=val_lon,
+    input_latitude_values=val_lat,
+    input_values=val_idx
 )
 
 # read mslp forecast from grib file
@@ -111,4 +123,4 @@ view = mv.geoview(
 mv.setoutput(mv.pdf_output(output_name="storm_track"))
 
 # Plot the track and the mslp
-mv.plot(view, track_vis, track_graph, track_text, g_mslp, cont_mslp)
+mv.plot(view, g_mslp, cont_mslp, track_vis, track_text, track_graph)
