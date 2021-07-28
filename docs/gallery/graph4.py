@@ -13,7 +13,7 @@ Bar Chart Plotting
 #
 
 # ------------------------------------------------------------------
-# Demonstrates how to plot time serie vectors using linebars
+# Demonstrates how to plot time series vectors using linebars
 # and bars in a Cartesian view.
 # ------------------------------------------------------------------
 
