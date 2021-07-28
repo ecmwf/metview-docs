@@ -22,8 +22,8 @@ else:
     bf = mv.gallery.load_dataset(filename)
 
 # extract station ids. The problem with SYNOP station id is that it is the
-# combination of two bufr parameters= blockNumber abd stationNumber.
-# We use NCOLS geopoints as an output beacuse the combined station id is automatically
+# combination of two bufr parameters= blockNumber and stationNumber.
+# We use NCOLS geopoints as an output because the combined station id is automatically
 # extracted as a column. So the actual parameter set for the filter is not relevant
 # at all (it just has to exist for the messages).
 gpt = mv.obsfilter(
