@@ -11,7 +11,7 @@ vorticity
    :type fy: :class:`Fieldset`
    :rtype: :class:`Fieldset`  
    
-   For wind fields (i.e. when the input fieldsets are u and v wind components) this computes the relative vorticity (:math:`\zeta`). The computations for a vector field f=(fx ,fy ) are based on the following formula:
+   For wind fields (i.e. when the input fieldsets are u and v wind components) this computes the relative vorticity (:math:`\zeta`). The computations for a vector field f=(fx,fy) are based on the following formula:
 
    .. math::
       
@@ -27,5 +27,8 @@ vorticity
 
    .. warning::
       :func:`vorticity` is only implemented for regular latitude-longitude grids. 
+
+   .. note::
+      See also :func:`divergence`, :func:`shear_deformation` and :func:`stretch_deformation`.
 
 .. mv-minigallery:: vorticity

@@ -11,7 +11,7 @@ divergence
    :type fy: :class:`Fieldset`
    :rtype: :class:`Fieldset`  
    
-   The computations for a vector field f=(fx , fy) are based on the following formula:
+   The computations for a vector field f=(fx,fy) are based on the following formula:
 
    .. math:: 
       
@@ -28,6 +28,8 @@ divergence
    .. warning::
       :func:`divergence` is only implemented for regular latitude-longitude grids.
 
+   .. note::
+      See also :func:`vorticity`, :func:`shear_deformation` and :func:`stretch_deformation`.
 
 
 .. mv-minigallery:: divergence

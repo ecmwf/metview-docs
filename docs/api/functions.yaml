@@ -2227,6 +2227,14 @@
     - grib_object
     - netcdf_object
     type: script
+- shear_deformation:
+    category:
+      fieldset: Compute the shear deformation of vector fields
+    desc: Compute the shear deformation of a vector fieldset
+    group:
+    - calculus
+    - grib_object
+    type: script
 - shell:
     category:
       unix: Execute a shell command
@@ -2393,6 +2401,14 @@
     pix: VELSTR
     title: Velocity Potential or Stream Function
     type: icon
+- stretch_deformation:
+    category:
+      fieldset: Compute the stretch deformation of vector fields
+    desc: Compute the stretch deformation of a vector fieldset
+    group:
+    - calculus
+    - grib_object
+    type: script
 - subsample:
     category:
       geopoints: Filters from the first geopoints variable points that exist in the
