@@ -1153,6 +1153,13 @@
     desc: ''
     exclude: true
     type: icon
+- make_geoview:
+    category: {}
+    desc: Generates a geoview with predefined settings
+    group:
+    - view
+    - jupyter
+    type: script
 - mapview:
     category: {}
     desc: ''
@@ -1790,7 +1797,7 @@
     type: script
 - plot_maps:
     category: {}
-    desc: Generates map-based plots
+    desc: High-level function to generates map-based plots
     group:
     - plot
     type: script
