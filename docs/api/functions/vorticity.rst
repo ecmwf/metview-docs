@@ -1,17 +1,37 @@
 vorticity
 ============
 
-.. py:function:: vorticity(fx, fy)
+.. py:function:: vorticity(fx, fy, mode="fdiff",  poles_missing_values=False)
 
-   Computes the vertical component of the curl differential operator for 2-dimensional vector fields.
+   Computes the vertical component of the curl differential operator for 2-dimensional vector fields. For wind fields (i.e. when the input fieldsets are u and v wind components) it computes the relative vorticity (:math:`\zeta`).
    
    :param fx: zonal (west-east) vector component fieldset
    :type fx: :class:`Fieldset`
    :param fy: meridional (south-north) vector component fieldset
    :type fy: :class:`Fieldset`
+   :param mode: specifies the computation mode (see below)
+   :type mode: {"fdiff", "felem"}, default: "fdiff"
+   :param poles_missing_values: puts missing values at the poles when ``mode`` is "felem".
+   :type poles_missing_values: bool, default: False
    :rtype: :class:`Fieldset`  
+
+   The numerical method to compute the vorticity is based on the value of ``mode``.
+
+   When ``mode`` is "fdiff":
+
+   * a second order **finite-difference** approximation is used 
+   * the output fields contain missing values at the poles
+   * only works for regular latitude-longitude grids
+
+   When ``mode`` is "felem":
    
-   For wind fields (i.e. when the input fieldsets are u and v wind components) this computes the relative vorticity (:math:`\zeta`). The computations for a vector field f=(fx,fy) are based on the following formula:
+   * a **finite-element** technique is used
+   * works with (regular and reduced) latitude-longitude and Gaussian grids
+   * no missing values are allowed in ``fs``!
+   * please note that in this mode the computations are performed by :func:`regrid` using the nabla="uv_vorticity" option. 
+
+
+   The computations for a vector field f=(fx,fy) are based on the following formula:
 
    .. math::
       
@@ -23,10 +43,7 @@ vorticity
    * :math:`\phi` is the latitude
    * :math:`\lambda` is the longitude
 
-   The derivatives are computed with a second order finite-difference approximation. The resulting fields contain missing values on the poles. If the input fields are horizontal wind components the ecCodes paramId of the resulting field is set to 138 (relative vorticity).
-
-   .. warning::
-      :func:`vorticity` is only implemented for regular latitude-longitude grids. 
+   If the input fields are horizontal wind components the ecCodes paramId of the resulting field is set to 138 (relative vorticity).
 
    .. note::
       See also :func:`divergence`, :func:`shear_deformation` and :func:`stretch_deformation`.

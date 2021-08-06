@@ -16,8 +16,8 @@ gradient
    :rtype: :class:`Fieldset`  
    
 
-   The computation are based on the value of ``mode``.
-
+   The numerical method to compute the gradient is based on the value of ``mode``. 
+   
    When ``mode`` is "fdiff":
 
    * a second order **finite-difference** approximation is used 
@@ -29,7 +29,7 @@ gradient
    * a **finite-element** technique is used
    * works with (regular and reduced) latitude-longitude and Gaussian grids
    * no missing values are allowed in ``fs``!
-   * please note that in this mode the computations are performed by :func:`regid` using the nabla option. If ``vector`` is False :func:`regid` is invoked with nabla="scalar_gradient" otherwise  nabla="uv_gradient" is used.
+   * please note that in this mode the computations are performed by :func:`regrid` using the nabla option. If ``vector`` is False :func:`regrid` is invoked with nabla="scalar_gradient" otherwise  nabla="uv_gradient" is used.
   
    The resulting fieldset contains two fields for each input field: the zonal derivative followed by the meridional derivative.
 
