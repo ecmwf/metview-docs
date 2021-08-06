@@ -1,28 +1,45 @@
 second_derivative_y
 =====================
 
-.. py:function:: second_derivative_y(fs)
+.. py:function:: second_derivative_y(fs,  mode="fdiff",  poles_missing_values=False)
 
-   Computes the second meridional (from South to North) partial derivative of each field in ``fs``. 
+   Computes the second meridional (from South to North) partial derivative of each field in ``fs`` in */m\ :sup:`2` units. 
    
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
+   :param mode: specifies the computation mode (see below)
+   :type mode: {"fdiff", "felem"}, default: "fdiff"
+   :param poles_missing_values: puts missing values at the poles when ``mode`` is "felem".
+   :type poles_missing_values: bool, default: False
    :rtype: :class:`Fieldset`
+  
    
-   The computations for a field f are based on the following formula:
+   The numerical method to compute the derivative is based on the value of ``mode``. 
+   
+   When ``mode`` is "fdiff":
 
-   .. math::
+   * a second order **finite-difference** approximation is used 
+   * the output fields contain missing values at the poles
+   * only works for regular latitude-longitude grids
+   * the computations for a field f are based on the following formula:
    
-      \frac {\partial^2 f}{\partial y^2} = \frac{1}{R^2}\frac{\partial^2 f}{\partial \phi^2} 
+      .. math::
+   
+      \frac {\partial^2 f}{\partial y^2} = \frac{1}{R^2}\frac{\partial^2 f}{\partial \phi^2} } 
 
-   where:
-   
-   * R is the radius of the Earth in m
-   * :math:`\phi` is the latitude
+      where:
 
-   The derivatives are computed with a second order finite-difference approximation. The resulting fields contain missing values on the poles. 
+      * R is the radius of the Earth in m
+      * :math:`\phi` is the latitude
+
+   When ``mode`` is "felem":
    
-   .. warning::
-      :func:`second_derivative_y` is only implemented for regular latitude-longitude grids.
+   * a **finite-element** technique is used, and the the first derivative operator is invoked twice
+   * works with (regular and reduced) latitude-longitude and Gaussian grids
+   * no missing values are allowed in ``fs``!
+   * please note that in this mode the computations are performed by calling :func:`regrid` using the nabla="scalar_gradient" twice
+
+   .. note::
+      See also :func:`second_derivative_x`, :func:`first_derivative_x`, :func:`first_derivative_y` and :func:`gradient`.
 
 .. mv-minigallery:: second_derivative_y

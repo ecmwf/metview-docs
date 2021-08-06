@@ -3,7 +3,7 @@ gradient
 
 .. py:function:: gradient(fs, mode="fdiff",  poles_missing_values=False, vector=False)
 
-   Computes the horizontal gradient of each field in a :class:`Fieldset`. 
+   Computes the horizontal gradient of each field in a :class:`Fieldset` in */m units.
    
    :param fs: input fieldset
    :type fs: :class:`Fieldset`

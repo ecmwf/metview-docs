@@ -11,7 +11,7 @@ pressure_derivative
    :type p: number, ndarray or :class:`Fieldset`
    :rtype: same type as ``f`` or None
 
-   The result is the vertical pressure derivative in units-of-``f``)/Pa units. The following rules are applied when ``f`` is a :class:`Fieldset`:
+   The result is the vertical pressure derivative in */Pa units. The following rules are applied when ``f`` is a :class:`Fieldset`:
 
    * if ``f`` is a pressure level :class:`Fieldset` no ``p`` is needed
    * if ``f`` is defined on ECMWF model levels (hybrid/eta) ``p`` must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a :class:`Fieldset` defining the pressure on the same levels as ``f`` (see :func:`pressure`)
