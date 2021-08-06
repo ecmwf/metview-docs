@@ -3,7 +3,7 @@ divergence
 
 .. py:function:: divergence(fx, fy, mode="fdiff",  poles_missing_values=False)
 
-   Computes the horizontal divergence of 2-dimensional vector fields. 
+   Computes the divergence of 2-dimensional vector fields. 
    
    :param fx: zonal (west-east) vector component fieldset
    :type fx: :class:`Fieldset`
