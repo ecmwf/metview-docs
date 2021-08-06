@@ -26,7 +26,7 @@ first_derivative_y
    * a **finite-element** technique is used
    * works with (regular and reduced) latitude-longitude and Gaussian grids
    * no missing values are allowed in ``fs``!
-   * please note that in this mode the computations are performed by :func:`regrid` using the nabla="scalar_gradient" option.
+   * the computations are performed by using :func:`regrid` with the nabla="scalar_gradient" option to compute the gradient and taking the meridional component of it
 
    The computations for a field f are based on the following formula:
 

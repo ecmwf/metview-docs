@@ -38,7 +38,7 @@ second_derivative_x
    * a **finite-element** technique is used, and the the first derivative operator is invoked twice
    * works with (regular and reduced) latitude-longitude and Gaussian grids
    * no missing values are allowed in ``fs``!
-   * please note that in this mode the computations are performed by calling :func:`regrid` using the nabla="scalar_gradient" twice
+   * the computations are performed by using :func:`regrid` with the nabla="scalar_gradient" option twice in a row
   
    .. note::
       See also :func:`second_derivative_y`, :func:`first_derivative_x`, :func:`first_derivative_y` and :func:`gradient`.

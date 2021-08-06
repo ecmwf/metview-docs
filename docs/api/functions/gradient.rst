@@ -29,7 +29,7 @@ gradient
    * a **finite-element** technique is used
    * works with (regular and reduced) latitude-longitude and Gaussian grids
    * no missing values are allowed in ``fs``!
-   * please note that in this mode the computations are performed by :func:`regrid` using the nabla option. If ``vector`` is False :func:`regrid` is invoked with nabla="scalar_gradient" otherwise  nabla="uv_gradient" is used.
+   * the computations are performed by using :func:`regrid` with the nabla option. If ``vector`` is False :func:`regrid` is invoked with nabla="scalar_gradient" otherwise  nabla="uv_gradient" is used.
   
    The resulting fieldset contains two fields for each input field: the zonal derivative followed by the meridional derivative.
 
@@ -45,5 +45,8 @@ gradient
    * :math:`\phi` is the latitude
    * :math:`\lambda` is the longitude.
 
+
+   .. note::
+      See also :func:`first_derivative_x`, :func:`first_derivative_y`, :func:`second_derivative_x` and :func:`second_derivative_y`.
 
 .. mv-minigallery:: gradient

@@ -28,7 +28,7 @@ divergence
    * a **finite-element** technique is used
    * works with (regular and reduced) latitude-longitude and Gaussian grids
    * no missing values are allowed in ``fs``!
-   * please note that in this mode the computations are performed by :func:`regrid` using the nabla="uv_divergence" option
+   * the computations are performed by using :func:`regrid` with the nabla="uv_divergence" option
 
    The computations for a vector field f=(fx,fy) are based on the following formula:
 
