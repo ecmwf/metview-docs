@@ -1839,6 +1839,14 @@
     - vertical
     - grib_object
     type: script
+- pressure_derivative:
+    category:
+      fieldset: Computes the vertical pressure derivative
+    desc: Computes the verical pressure derivative
+    group:
+    - vertical
+    - grib_object
+    type: script
 - print:
     category:
       io: Prints all its arguments
