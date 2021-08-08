@@ -44,9 +44,11 @@ map-scalar:
   - layoutx3
   - gradient_shading
   - shading_only_over_land
+  - efi_marker_shading
   - model_orography
   - advection
   - thermal_front_parameter
+  - moisture_flux
   - vertical_integral
   - map_and_zonal_mean_curve
   - departure_from_zonal_mean
