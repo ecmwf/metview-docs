@@ -34,7 +34,7 @@ second_derivative_y
 
    When ``mode`` is "felem":
    
-   * a **finite-element** technique is used, and the the first derivative operator is invoked twice
+   * a **finite-element** technique is used, and the first derivative operator is invoked twice
    * works with (regular and reduced) latitude-longitude and Gaussian grids
    * no missing values are allowed in ``fs``!
    * the computations are performed by using :func:`regrid` with the nabla="scalar_gradient" option twice in a row
