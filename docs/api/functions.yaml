@@ -1095,6 +1095,11 @@
     desc: Builds a list from its arguments
     exclude: true
     type: script
+- load_dataset:
+    desc: Load a dataset
+    group:
+    - jupyter
+    type: script    
 - log:
     category:
       fieldset: Natural logarithm
@@ -1792,6 +1797,12 @@
 - plot:
     category: {}
     desc: Generates a plot
+    group:
+    - plot
+    type: script
+- plot_diff_maps:
+    category: {}
+    desc: High-level function to generates map-based difference plots
     group:
     - plot
     type: script

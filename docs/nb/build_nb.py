@@ -48,7 +48,7 @@ LINK_BACKREF = """
 Most/all of the :ref:`gallery_index` examples demonstrate the use of this function.
 """
 
-OBJ_METHODS = ["to_dataset", "to_dataframe"]
+OBJ_METHODS = ["to_dataset", "to_dataframe", "describe", "ls", "select"]
 
 
 def format_red(t):
