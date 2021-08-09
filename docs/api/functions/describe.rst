@@ -1,8 +1,8 @@
 describe
 ===========
 
-..  py:function:: describe(fs, param=None)
-..  py:function:: Fieldset.describe(param=None)
+..  py:function:: describe(fs, [param])
+..  py:function:: Fieldset.describe([param])
     :noindex:
 
     Summarizes the content of a :class:`Fieldset` in a compact way. The output is optimised for Jupyter notebooks.
@@ -25,11 +25,11 @@ describe
         .. image:: /_static/api/describe_1.png
             :width: 600px
 
-    By specifying param="q" we can get the detailed summary for specific humidity:
+    By specifying "q" as an **argument** we can get the detailed summary for specific humidity:
 
         .. code-block:: python
 
-            f.describe(param="q") 
+            f.describe("q") 
         
         .. image:: /_static/api/describe_2.png
             :width: 400px
@@ -38,7 +38,7 @@ describe
 
         .. code-block:: python
 
-                f.describe(param=133) 
+            f.describe(133) 
 
     
 
