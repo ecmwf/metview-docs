@@ -49,7 +49,6 @@ map-scalar:
   - advection
   - thermal_front_parameter
   - deformation
-  - moisture_flux
   - vertical_integral
   - map_and_zonal_mean_curve
   - departure_from_zonal_mean
@@ -88,6 +87,7 @@ map-vector:
   - geostrophic_wind_overlay
   - ageostrophic_wind
   - thermal_wind
+  - moisture_flux
   - storm_joachim
   - streamline
   - nc_era5_wind
@@ -161,6 +161,7 @@ thermo:
   - tephigram_bufr
   - tephigram_odb
   - parcel_path_skewt_grib
+  - parcel_path_max_cape
   - ens_tephigram
   - hodograph 
 xy:

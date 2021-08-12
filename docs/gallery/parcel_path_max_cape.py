@@ -1,5 +1,5 @@
 """
-GRIB - Parcel Method on Skew-T
+GRIB - Parcel with Maximum CAPE on Skew-T
 """
 
 # (C) Copyright 2017- ECMWF.
@@ -14,18 +14,36 @@ GRIB - Parcel Method on Skew-T
 
 import metview as mv
 
-# read GRIB data
-filename = "thermo_profile.grib"
-if mv.exist(filename):
-    g = mv.read(filename)
+# getting data
+use_mars = False
+
+# getting forecast data from MARS
+if use_mars:
+    # a single timestep
+    g = mv.retrieve(
+        type="fc",
+        levtype="ml",
+        levelist=[1, "to", 137],
+        param=["t", "q", "u", "v", "lnsp"],
+        date=20170810,
+        step=52,
+        area=[52, 22, 58, 26],
+        grid=[0.1, 0.1],
+    )
+# read data from file
 else:
-    g = mv.gallery.load_dataset(filename)
+    filename = "max_cape_prof.grib"
+    if mv.exist(filename):
+        g = mv.read(filename)
+    else:
+        g = mv.gallery.load_dataset(filename)
 
 # extract thermo profile
-prof = mv.thermo_grib(coordinates=[5, 0], data=g)
+location = [56.5, 24.7]  # lat, lon
+prof = mv.thermo_grib(coordinates=location, data=g)
 
-# compute parcel path - start from surface
-parcel = mv.thermo_parcel_path(prof)
+# compute parcel path - maximum cape up to 700 hPa
+parcel = mv.thermo_parcel_path(prof, {"mode": "most_unstable", "top_p": 700})
 
 # create plot object for parcel areas
 parcel_area = mv.thermo_parcel_area(parcel)
@@ -43,16 +61,24 @@ view = mv.thermoview(
     type="skewt",
     minimum_temperature=-140,
     maximum_temperature=40,
-    top_pressure=50,
-    subpage_clipping="ON",
+    top_pressure=100,
+    subpage_clipping="on",
 )
 
 # get profile info for title
 info = mv.thermo_data_info(prof)
 
+# get base and valid date from the first field
+b_dt = mv.base_date(g[0])
+v_dt = mv.valid_date(g[0])
+
 # define title
-title_txt = "Run: {} {} UTC Step: {} h Lat: {:.2f} Lon: {:.2f}".format(
-    int(info["date"]), int(info["time"]), int(info["step"]), info["lat"], info["lon"]
+title_txt = "Run: {} UTC +{}h Valid: {} UTC Lat: {:.2f} Lon: {:.2f}".format(
+    b_dt.strftime("%Y-%m-%d %H"),
+    int(info["step"]),
+    v_dt.strftime("%Y-%m-%d %H"),
+    info["lat"],
+    info["lon"],
 )
 
 title = mv.mtext(text_lines=title_txt, text_font_size=0.5, text_colour="charcoal")
@@ -90,9 +116,9 @@ info_box = mv.mtext(
     text_colour="charcoal",
     text_justification="left",
     text_mode="positional",
-    text_box_x_position=14.8,
+    text_box_x_position=4,
     text_box_y_position=11.4,
-    text_box_x_length=5.4,
+    text_box_x_length=5.8,
     text_box_y_length=len(txt) * 0.45 + 0.4,
     text_box_blanking="on",
     text_border="on",
@@ -100,7 +126,7 @@ info_box = mv.mtext(
 )
 
 # define the output plot file
-mv.setoutput(mv.pdf_output(output_name="parcel_path_skewt_grib"))
+mv.setoutput(mv.pdf_output(output_name="parcel_path_max_cape"))
 
 # plot the profile, parcel areas, parcel path and info box together
 mv.plot(view, parcel_area, prof, prof_vis, parcel_vis, title, info_box)
