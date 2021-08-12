@@ -33,8 +33,10 @@ parcel_area = mv.thermo_parcel_area(parcel)
 # create plot object for parcel path
 parcel_vis = mv.xy_curve(parcel["t"], parcel["p"], "charcoal", "dash", 6)
 
-# use default visual definition for t and td profile
-prof_vis = mv.mthermo()
+# define t and td profile style
+prof_vis = mv.mthermo(
+    thermo_temperature_line_thickness=5, thermo_dewpoint_line_thickness=5
+)
 
 # define the thermodynamic view
 view = mv.thermoview(
@@ -84,14 +86,14 @@ if parcel.top != None:
 info_box = mv.mtext(
     text_lines=txt,
     text_font="courier",
-    text_font_size=0.3,
+    text_font_size=0.4,
     text_colour="charcoal",
     text_justification="left",
     text_mode="positional",
     text_box_x_position=14.8,
-    text_box_y_position=13.4,
-    text_box_x_length=5.2,
-    text_box_y_length=len(txt) * 0.35 + 0.4,
+    text_box_y_position=11.4,
+    text_box_x_length=5.4,
+    text_box_y_length=len(txt) * 0.45 + 0.4,
     text_box_blanking="on",
     text_border="on",
     text_border_colour="charcoal",
