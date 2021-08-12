@@ -48,7 +48,6 @@ map-scalar:
   - model_orography
   - advection
   - thermal_front_parameter
-  - moisture_flux
   - vertical_integral
   - map_and_zonal_mean_curve
   - departure_from_zonal_mean
@@ -87,6 +86,7 @@ map-vector:
   - geostrophic_wind_overlay
   - ageostrophic_wind
   - thermal_wind
+  - moisture_flux
   - storm_joachim
   - streamline
   - nc_era5_wind

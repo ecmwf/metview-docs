@@ -36,7 +36,7 @@ val_lat = mv.values(tbl, 3)
 # of msymb(). This requires associating each point with its text label, so we will
 # generate values of 0,1,2,3,...,N-1 for the points and create an msymb() that
 # maps each value to a generated date/time label.
-val_idx = list(range(len(val_lat)+1)) # indexes: 0->N
+val_idx = list(range(len(val_lat))) # indexes: 0->N-1
 
 # define date and time labels for track points
 val_label = []
