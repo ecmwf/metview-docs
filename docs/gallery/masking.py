@@ -28,7 +28,16 @@ else:
 
 # define the masking areas
 mask_area = [35, 5, 63, 30] # S,W,N,E
-rmask_area = [50, 20, 1500000] # lat,lon,radius-in-m
+rmask_area = [50, 20, 1500*1000] # lat,lon,radius-in-m
+
+# create four masks
+#  - using lat/lon area bounds and using radius in metres
+#  - generating 1s and 0s, and generating real values and missing values 
+masked_bounds_1_0s = mv.mask(data, mask_area)
+masked_bounds_miss = mv.mask(data, mask_area, missing=True)
+masked_radius_1_0s = mv.rmask(data, rmask_area)
+masked_radius_miss = mv.rmask(data, rmask_area, missing=True)
+
 
 # contouring for temperature values
 t_contouring = mv.mcont(
@@ -79,8 +88,8 @@ dw = mv.plot_superpage(pages=mv.mvl_regular_layout(gview, 2, 2, 1, 1))
 mv.setoutput(mv.pdf_output(output_name="masking"))
 
 # plot an example of mask and rmask, with and without the 'missing' flag
-mv.plot(dw[0], data.mask(mask_area), mask_1_and_0_contouring, t("mask, missing not supplied"),
-        dw[1], data.mask(mask_area, missing=True), t_contouring, t("mask, missing=True"),
-        dw[2], data.rmask(rmask_area), mask_1_and_0_contouring, t("rmask, missing not supplied"),
-        dw[3], data.rmask(rmask_area, missing=True), t_contouring, t("rmask, missing=True"))
+mv.plot(dw[0], masked_bounds_1_0s, mask_1_and_0_contouring, t("mask, missing not supplied"),
+        dw[1], masked_bounds_miss, t_contouring, t("mask, missing=True"),
+        dw[2], masked_radius_1_0s, mask_1_and_0_contouring, t("rmask, missing not supplied"),
+        dw[3], masked_radius_miss, t_contouring, t("rmask, missing=True"))
 
