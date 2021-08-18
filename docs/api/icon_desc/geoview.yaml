@@ -6,37 +6,37 @@ oneliner: Defines a geographical view.
 params:
 - coastlines:
     default: ''
-    desc: ''
+    desc: Defines the map plotting style as a :func:`mcoast` object.
     ptype: :func:`mcoast`
     values: ''
 - area_mode:
     default: user
-    desc: ''
+    desc: Selects the area definition mode. When it is "name" a named area can be specified. Otherwise, when it is "user", the projection parameters can be manually set.
     ptype: str
     values: name/user
 - area_name:
     default: europe
-    desc: ''
+    desc: Specifies the area (and projection) by name. Enabled when ``area_mode`` is "name". See :func:`map_area_gallery` for the available named areas.
     ptype: str
     values: antarctic/arctic/australasia/central_america/central_europe/east_tropic/eastern_asia/equatorial_pacific/eurasia/europe/global/middle_east_and_india/north_america/north_atlantic/north_east_europe/north_pole/north_west_europe/northern_africa/pacific/south_america/south_atlantic_and_indian_ocean/south_east_asia_and_indonesia/south_east_europe/south_pole/south_west_europe/southern_africa/southern_asia/west_tropic/western_asia
 - map_projection:
     default: cylindrical
-    desc: ''
+    desc: Defines the map projection when ``area_mode`` is "user".
     ptype: str
     values: cylindrical/bonne/collignon/epsg:4326/epsg:3857/geos/goode/lambert/lambert_north_atlantic/mercator/mollweide/polar_north/polar_south/polar_stereographic/robinson/tpers
 - map_area_definition:
     default: full
-    desc: ''
+    desc: Specifies how the map projection is defined when ``area_mode`` is "user". 
     ptype: str
     values: corners/centre/full
 - area:
     default: '-90/-180/90/180'
-    desc: ''
+    desc: The default corner points of the projection when ``map_area_definition`` is "corner". The format is [S,W,N,E].
     ptype: list[number]
     values: ''
 - map_hemisphere:
     default: north
-    desc: ''
+    desc: Defines the map hemisphere when ``map_projection`` is "polar_stereographic".
     ptype: str
     values: north/south
 - map_vertical_longitude:
@@ -45,19 +45,19 @@ params:
     ptype: number
     values: ''
 - map_centre_latitude:
-    default: '45.0'
-    desc: ''
-    ptype: str
+    default: '90.0'
+    desc: Defines the map centre latitude. Enabled when ``map_area_definition`` is "centre" and ``map_projection`` is "polar_stereographic".
+    ptype: number
     values: ''
 - map_centre_longitude:
     default: '0.0'
-    desc: ''
-    ptype: str
+    desc: Defines the map centre longitude. Enabled when ``map_area_definition`` is "centre" and ``map_projection`` is "polar_stereographic".
+    ptype: number
     values: ''
 - map_scale:
-    default: 130.0e4
-    desc: ''
-    ptype: str
+    default: 50e6
+    desc: Defines the map scale. Enabled when ``map_area_definition`` is "centre" and ``map_projection`` is "polar_stereographic".
+    ptype: number
     values: ''
 - map_projection_height:
     default: '42164000'
