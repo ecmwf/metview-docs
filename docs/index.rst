@@ -36,6 +36,7 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    jupyter
    api/ref_guide 
    dataset/index
+   macro/index
 
 .. toctree::
    :maxdepth: 1
