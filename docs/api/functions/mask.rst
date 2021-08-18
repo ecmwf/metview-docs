@@ -11,7 +11,7 @@ mask
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
    :param list area: area as [N, W, S, E]
-   :param missing: set to ``True`` to change the behaviour as described above
+   :param missing: set to ``True`` to change the behaviour as described above. *New in Metview version 5.13.0*.
    :type missing: bool
    :rtype: :class:`Fieldset`
    

@@ -3,6 +3,8 @@ make_geoview
 
 .. py:function:: make_geoview(area=None, style=None)
 
+    *New in MPY version 1.8.0*.
+
     High level function to generate a :func:`geoview` with predefined settings. 
 
     :param area: specifies the map area. It can be either a named built-in area or a list in the format of [S, W, N, E]. When ``area`` is a list a cylindrical map projection is used. For the available named areas see :func:`map_area_gallery`.

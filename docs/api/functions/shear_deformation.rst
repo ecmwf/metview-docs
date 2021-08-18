@@ -3,7 +3,9 @@ shear_deformation
 
 .. py:function:: shear_deformation(fx, fy)
 
-   Computes the shear deformation of 2-dimensional vector fields. 
+   *New in Metview version 5.13.0*.
+
+   Computes the shear deformation of 2-dimensional vector fields.  *New in Metview version 5.13.0*.
    
    :param fx: zonal (west-east) vector component fieldset
    :type fx: :class:`Fieldset`

@@ -3,6 +3,8 @@ pressure_derivative
 
 .. py:function:: pressure_derivative(f, [p])
 
+   *New in Metview version 5.13.0*.
+
    Computes the vertical pressure derivative.
    
    :param f: input data defined on a given set of pressure values

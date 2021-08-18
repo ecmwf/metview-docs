@@ -5,6 +5,8 @@ ls
 ..  py:function:: Fieldset.ls(extra_keys=[], filter={})
     :noindex:
 
+    *New in MPY version 1.8.0*.
+    
     Lists the messages of a :class:`Fieldset` by printing the values of some ecCodes keys. 
 
     :param fs: input fieldset

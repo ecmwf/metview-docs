@@ -3,6 +3,8 @@ specific_humidity_from_dewpoint
 
 ..  py:function:: specific_humidity_from_dewpoint(td, [p])
 
+    *New in Metview version 5.13.0*.
+
     Computes the specific humidity from the given dewpoint (``td``) and pressure (``p``). 
 
     :param td: dewpoint temperature K)

@@ -5,6 +5,8 @@ describe
 ..  py:function:: Fieldset.describe([param])
     :noindex:
 
+    *New in MPY version 1.8.0*.
+    
     Summarizes the content of a :class:`Fieldset` in a compact way. The output is optimised for Jupyter notebooks.
 
     :param fs: input fieldset

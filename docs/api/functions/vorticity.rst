@@ -9,9 +9,9 @@ vorticity
    :type fx: :class:`Fieldset`
    :param fy: meridional (south-north) vector component fieldset
    :type fy: :class:`Fieldset`
-   :param mode: specifies the computation mode (see below)
+   :param mode: specifies the computation mode (see below). *New in Metview version 1.5.3*.
    :type mode: {"fdiff", "felem"}, default: "fdiff"
-   :param poles_missing_values: puts missing values at the poles when ``mode`` is "felem".
+   :param poles_missing_values: puts missing values at the poles when ``mode`` is "felem". *New in Metview version 1.5.3*.
    :type poles_missing_values: bool, default: False
    :rtype: :class:`Fieldset`  
 

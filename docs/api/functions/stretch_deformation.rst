@@ -3,8 +3,10 @@ stretch_deformation
 
 .. py:function:: stretch_deformation(fx, fy)
 
+   *New in Metview version 5.13.0*.
+
    Computes the stretch deformation of 2-dimensional vector fields. 
-   
+  
    :param fx: zonal (west-east) vector component fieldset
    :type fx: :class:`Fieldset`
    :param fy: meridional (south-north) vector component fieldset

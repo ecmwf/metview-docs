@@ -3,6 +3,8 @@ load_dataset
 
 .. py:function:: load_dataset(name, path="")
 
+   *New in MPY version 1.8.0*.
+
    Loads a dataset. 
    
    :param name: name of the dataset

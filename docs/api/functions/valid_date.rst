@@ -2,7 +2,9 @@ valid_date
 =================
 
 .. py:function:: valid_date(base=None, step=[], step_units=datetime.timedelta(hours=1))
-
+   
+   *New in MPY version 1.8.0*.
+   
    Adds a list of steps specified in ``step_units`` to the ``base`` date.
       
    :param base: the base date

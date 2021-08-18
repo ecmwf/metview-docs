@@ -4,6 +4,8 @@ virtual_temperature
 
 ..  py:function:: virtual_temperature(t, q)
 
+    *New in Metview version 1.5.3*.
+
     Computes the virtual temperature from the given temperature (``t``) and specific humidity (``q``).
 
     :param t: temperature (K)

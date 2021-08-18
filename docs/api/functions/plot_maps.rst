@@ -3,6 +3,8 @@ plot_maps
 
 .. py:function:: plot_maps(*args, layout=None, view=None, area=None, title_font_size=0.4, legend_font_size=0.35, frame=-1, animate="auto")
 
+    *New in MPY version 1.8.0*.
+
     High level function to generate map-based plots.
 
     :param layout: specifies the grid layout as "RxC" where R is the number of rows while C is the number of columns. E.g. "2x1" means 2 rows and 1 column. If it is not set the layout is automatically guessed from the input arguments.
