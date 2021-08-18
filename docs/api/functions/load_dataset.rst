@@ -3,7 +3,7 @@ load_dataset
 
 .. py:function:: load_dataset(name, path="")
 
-   *New in MPY version 1.8.0*.
+   *New in metview-python version 1.8.0*.
 
    Loads a dataset. 
    

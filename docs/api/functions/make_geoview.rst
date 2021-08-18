@@ -3,7 +3,7 @@ make_geoview
 
 .. py:function:: make_geoview(area=None, style=None)
 
-    *New in MPY version 1.8.0*.
+    *New in metview-python version 1.8.0*.
 
     High level function to generate a :func:`geoview` with predefined settings. 
 

@@ -3,7 +3,7 @@ plot_maps
 
 .. py:function:: plot_maps(*args, layout=None, view=None, area=None, title_font_size=0.4, legend_font_size=0.35, frame=-1, animate="auto")
 
-    *New in MPY version 1.8.0*.
+    *New in metview-python version 1.8.0*.
 
     High level function to generate map-based plots.
 

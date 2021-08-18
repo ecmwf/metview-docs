@@ -2177,7 +2177,7 @@
 - select:
     category: 
       fieldset: Filters fieldset data
-    desc: Filters fieldset data
+    desc: Filters fieldset data by ecCodes keys with metadata indexing
     group:
     - filter
     - grib

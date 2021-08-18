@@ -5,6 +5,9 @@ select
 .. py:function:: Fieldset.select([d], **kwargs)
    :noindex:
 
+
+   *New in metview-python version 1.8.0*.
+
    Extracts a subset of fields matching the conditions defined by a set of ecCodes keys from ``fs``. If called multiple times on the same :class:`Fieldset` it will result in a much better performance than :func:`read`.
 
    :param fs: input fieldset
