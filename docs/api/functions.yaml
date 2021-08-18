@@ -1803,7 +1803,7 @@
 - potential_temperature:
     category:
       thermo: computes the potential temperature for a given temperature and pressure
-    desc: computes the potential temperature for a given temperature and pressure
+    desc: Computes the potential temperature for a given temperature and pressure
     group:
     - thermo
     type: script
@@ -2509,14 +2509,14 @@
 - thermo_data_info:
     category:
       thermo: extracts information from a thermo data object
-    desc: extracts information from a thermo data object
+    desc: Extracts information from a thermo data object
     group:
     - thermo
     type: script
 - thermo_data_values:
     category:
       fieldset: extracts data and metadata from a thermo data object
-    desc: extracts data and metadata from a thermo data object
+    desc: Extracts data and metadata from a thermo data object
     group:
     - thermo
     type: script
@@ -2537,7 +2537,7 @@
 - thermo_parcel_area:
     category:
       plot: Returns a set of coloured areas from a thermo parcel path
-    desc: returns a set of coloured areas from a thermo parcel path
+    desc: Returns a set of coloured areas from a thermo parcel path
     group:
     - thermo
     - plot
@@ -2820,7 +2820,7 @@
 - virtual_temperature:
     category:
       thermo: computes the virtual temperature for a given temperature and specific humidity
-    desc: computes the virtual temperature for a given temperature and specific humidity
+    desc: Computes the virtual temperature for a given temperature and specific humidity
     group:
     - thermo
     type: script
