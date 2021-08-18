@@ -16,9 +16,10 @@ Construction
       import metview as mv
 
       f1 = mv.Fieldset() # empty Fieldset
-      f2 = mv.Fieldset(path="test.grib") # create from GRIB file
-      f3 = mv.Fieldset(path="test_*.grib") # create from a set of GRIB files using globbing
-      f4 = mv.read("my.grib") # create from GRIB file
+      f2 = mv.read("test.grib") # create from GRIB file
+      f3 = mv.Fieldset(path="test.grib") # create from GRIB file
+      f4 = mv.Fieldset(path="test_*.grib") # create from a set of GRIB files using globbing
+      f5 = mv.Fieldset(path=["a.grib", "b.grib", "/a/b/c.grib"]) # create from multiple GRIB files
 
 Concatenation
 #############
@@ -31,6 +32,8 @@ Concatenation
       f4.append(f2) # append f2 onto the end of f4
       f5 = mv.merge(f2, f3)
 
+   The 'list of files' method of constructing a Fieldset shown in the previous
+   section effectively creates a concatenation of those files into a Fieldset.
 
 Indexing
 ############

@@ -7,8 +7,19 @@ params:
 - data:
     default: 
     desc: Specifies the divergence and vorticity GRIB fields. Must be spectral 
-      (spherical harmonics) data. The ecCodes paramId must be 155 for the divergence fields 
-      and 138 for the vorticity fields.
+      (spherical harmonics) data.
     ptype: :class:`Fieldset`
+    values:
+- divergence_param:
+    default: 155
+    desc: Specifies the ecCodes paramId that identifies the divergence 
+      in ``data``. *New in Metview version 5.13.0.*
+    ptype: number
+    values:
+- vorticity_param:
+    default: 138
+    desc: Specifies the ecCodes paramId that identifies the vorticity 
+      in ``data``.  *New in Metview version 5.13.0.*
+    ptype: number
     values:
 - _include: !include include/spectral_filter.yaml 

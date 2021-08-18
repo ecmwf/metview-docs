@@ -1855,7 +1855,7 @@
 - potential_temperature:
     category:
       thermo: computes the potential temperature for a given temperature and pressure
-    desc: computes the potential temperature for a given temperature and pressure
+    desc: Computes the potential temperature for a given temperature and pressure
     group:
     - thermo
     type: script
@@ -1887,6 +1887,14 @@
     category:
       fieldset: Computes the pressure of a model level fieldset
     desc: Computes the pressure on model levels in a fieldset (deprecated)
+    group:
+    - vertical
+    - grib_object
+    type: script
+- pressure_derivative:
+    category:
+      fieldset: Computes the vertical pressure derivative
+    desc: Computes the verical pressure derivative
     group:
     - vertical
     - grib_object
@@ -2288,6 +2296,14 @@
     - grib_object
     - netcdf_object
     type: script
+- shear_deformation:
+    category:
+      fieldset: Compute the shear deformation of vector fields
+    desc: Compute the shear deformation of a vector fieldset
+    group:
+    - calculus
+    - grib_object
+    type: script
 - shell:
     category:
       unix: Execute a shell command
@@ -2346,6 +2362,14 @@
       vector: Sorts a vector according to an operator '<' (default) or '>'
     desc: Sorts a vector according to an operator '<' (default) or '>'
     exclude: true
+    type: script
+- specific_humidity_from_dewpoint:
+    category:
+      fieldset: Computes the specific humidity for a given dewpoint and pressure
+    desc: Computes the specific humidity for a given dewpoint and pressure
+    group:
+    - thermo
+    - grib
     type: script
 - spec_contour:
     category: {}
@@ -2446,6 +2470,14 @@
     pix: VELSTR
     title: Velocity Potential or Stream Function
     type: icon
+- stretch_deformation:
+    category:
+      fieldset: Compute the stretch deformation of vector fields
+    desc: Compute the stretch deformation of a vector fieldset
+    group:
+    - calculus
+    - grib_object
+    type: script
 - subsample:
     category:
       geopoints: Filters from the first geopoints variable points that exist in the
@@ -2538,14 +2570,14 @@
 - thermo_data_info:
     category:
       thermo: extracts information from a thermo data object
-    desc: extracts information from a thermo data object
+    desc: Extracts information from a thermo data object
     group:
     - thermo
     type: script
 - thermo_data_values:
     category:
       fieldset: extracts data and metadata from a thermo data object
-    desc: extracts data and metadata from a thermo data object
+    desc: Extracts data and metadata from a thermo data object
     group:
     - thermo
     type: script
@@ -2566,7 +2598,7 @@
 - thermo_parcel_area:
     category:
       plot: Returns a set of coloured areas from a thermo parcel path
-    desc: returns a set of coloured areas from a thermo parcel path
+    desc: Returns a set of coloured areas from a thermo parcel path
     group:
     - thermo
     - plot
@@ -2846,6 +2878,13 @@
     group:
     - view
     type: icon
+- virtual_temperature:
+    category:
+      thermo: computes the virtual temperature for a given temperature and specific humidity
+    desc: Computes the virtual temperature for a given temperature and specific humidity
+    group:
+    - thermo
+    type: script
 - vorticity:
     category:
       fieldset: Compute relative vorticity of vector fields

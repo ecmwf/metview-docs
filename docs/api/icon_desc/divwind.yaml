@@ -10,4 +10,10 @@ params:
       (spherical harmonics) data. 
     ptype: :class:`Fieldset`
     values:
+- divergence_param:
+    default: 155
+    desc: Specifies the ecCodes paramId that identifies the divergence
+      in ``data``. *New in Metview version 5.13.0.*
+    ptype: number
+    values:
 - _include: !include include/spectral_filter.yaml

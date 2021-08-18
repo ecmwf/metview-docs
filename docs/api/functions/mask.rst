@@ -1,13 +1,18 @@
 mask
 =========
 
-.. py:function:: mask(fs, area)
+.. py:function:: mask(fs, area, missing=False)
 
-   For each field in ``fs`` creates a field containing 0 or 1 values according to whether a grid point is inside (1) or outside (0) the ``area``.
+   For each field in ``fs`` creates a field containing 0 or 1 values according to whether a grid point
+   is inside (1) or outside (0) the ``area``. An additional named argument, ``missing`` set to ``True``
+   will change the behaviour so that points outside the area will become missing values and points
+   inside the area retain their original value.
 
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
    :param list area: area as [N, W, S, E]
+   :param missing: set to ``True`` to change the behaviour as described above
+   :type missing: bool
    :rtype: :class:`Fieldset`
    
    :Example:
