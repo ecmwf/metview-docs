@@ -83,7 +83,9 @@ docs/api/depot_2
 docs/api/icon_base
 docs/api/_*.py
 docs/api/_utils
+docs/api/prep/convert_macro.py
 docs/gen_files
+docs/macro/input.txt
 docs/_test
 
 # gallery

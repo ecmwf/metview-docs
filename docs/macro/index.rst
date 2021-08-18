@@ -9,4 +9,7 @@ Macro
    :maxdepth: 1
    :caption: Documentation
    
+   
+   numbers
    vector
+   geopoints
