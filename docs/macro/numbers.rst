@@ -147,9 +147,9 @@ Number Functions
 
    Rounds off spurious decimals in a value. The first number is the value to be rounded, the second is the number of decimal places to leave. Examples of values returned by round(v,n) for v = 1234.56789: ::
 
-   round( v, 1 ) gives 1234.6
-   round( v, 3 ) gives 1234.568
-   round( v, -2 ) gives 1200
+      round( v, 1 ) gives 1234.6
+      round( v, 3 ) gives 1234.568
+      round( v, -2 ) gives 1200
 
 
 .. describe:: number sgn ( number )
