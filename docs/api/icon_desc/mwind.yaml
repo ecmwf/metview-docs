@@ -11,11 +11,24 @@ params:
     desc: Method of wind plotting.
     ptype: str
     values: flags/arrows/streamlines
+- wind_thinning_mode:
+    default: 'thinning'
+    desc: |-
+        Controls the actual number of wind arrows/flags plotted.
+
+        *New in Metview version 5.13.0.*
+    ptype: str
+    values: 'density/thinning' 
+- wind_density:
+    default: '5.0'
+    desc: |-
+        Defines the wind plotting density in flags/arrows per cm units when ``wind_thinning_mode`` is "density".
+         
+        *New in Metview version 5.13.0.*
+    ptype: number   
 - wind_thinning_factor:
     default: '2.0'
-    desc: Controls the actual number of wind arrows/flags plotted. If it is 1
-        all the wind arrows/flags will be plotted. Otherwise a spatial thinning will be applied.
-        Values have to be greater than or equal to 1.
+    desc: Controls the spatial thinning of the wind arrow/flag plotting when ``wind_thinning_mode`` is "thinning". If it is 1 the all the arrows/flags will be plotted. For values greater than 1 a spatial thinning will be applied; the higher the value the higher the thinning will be.
     ptype: number
     values: ''
 - legend:
