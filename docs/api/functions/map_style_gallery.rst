@@ -3,8 +3,11 @@ map_style_gallery
 
 .. py:function:: map_style_gallery()
 
-    *New in metview-python version 1.8.0*.
+    .. warning::
+    
+        This is an experimental feature. New in metview-python version 1.8.0.
 
+        
     Generates a gallery of the built-in map styles in a Jupyter notebook.
 
     Technically, each map style is defined by an :func:`mcoast` object. The list of available map styles depends on the actual style configuration. By default, when no custom style configuration is loaded, the style list comprises of:

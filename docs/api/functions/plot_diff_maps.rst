@@ -3,8 +3,11 @@ plot_diff_maps
 
 .. py:function:: plot_diff_maps(fs1, fs2, view=None, area=None, overlay=None, diff_style=[], pos_values=[], title_font_size=0.4, legend_font_size=0.35, frame=-1, animate="auto")
 
-    *New in metview-python version 1.8.0*.
-
+    .. warning::
+        
+        This is an experimental feature. New in metview-python version 1.8.0
+    
+        
     High level function to generate difference plots between ``fs1`` and ``fs2``.
 
     :param fs1: specifies the first input :class:`Fieldset`. Has to contain the same number of fields on the same grid as ``fs2``.

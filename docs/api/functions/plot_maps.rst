@@ -3,7 +3,10 @@ plot_maps
 
 .. py:function:: plot_maps(*args, layout=None, view=None, area=None, title_font_size=0.4, legend_font_size=0.35, frame=-1, animate="auto")
 
-    *New in metview-python version 1.8.0*.
+    .. warning::
+        
+        This is an experimental feature. New in metview-python version 1.8.0
+
 
     High level function to generate map-based plots.
 
@@ -24,28 +27,28 @@ plot_maps
 
     :func:`plot_maps` is a convenience function allowing plotting data in a simple way using predefined settings. While the data and map view styles can be fully customised, the title and legend are automatically built and no control is offered over them. 
 
-Customising the map
-++++++++++++++++++++++
+.. Customising the map
+.. ++++++++++++++++++++++
 
-    If we call :func:`plot_maps` without any arguments the result is a map with the default projection, area and style.
+..     If we call :func:`plot_maps` without any arguments the result is a map with the default projection, area and style.
 
-        .. code-block:: python
+..         .. code-block:: python
 
-            mv.plot_maps()
+..             mv.plot_maps()
 
-        .. image:: /_static/api/plot_maps_1.png
-            :width: 300px
+..         .. image:: /_static/api/plot_maps_1.png
+..             :width: 300px
 
-    The input data has to be specified via the positional arguments. For example if we plot a 500 hPa geopotential :class:`Fieldset`
+..     The input data has to be specified via the positional arguments. For example if we plot a 500 hPa geopotential :class:`Fieldset`
 
-        .. code-block:: python
+..         .. code-block:: python
 
-            import metview as mv
-            f = mv.read("my.grib")
-            g = f["z500"]
-            mv.plot_maps(f)
+..             import metview as mv
+..             f = mv.read("my.grib")
+..             g = f["z500"]
+..             mv.plot_maps(f)
 
-    To overlay two fields
+..     To overlay two fields
 
-    specify the input data the plotting style applied to them. :func:`plot_maps` At locations where the interpolation is not possible a missing value is returned.
+..     specify the input data the plotting style applied to them. :func:`plot_maps` At locations where the interpolation is not possible a missing value is returned.
     
