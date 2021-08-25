@@ -103,7 +103,7 @@ Filtering
 
    .. note::
 
-      :func:`select` and its [] operator are only available form metview-python version 1.8.0.
+      :func:`select` and its [] operator are only available from metview-python version 1.8.0.
 
 
 Functions vs methods
