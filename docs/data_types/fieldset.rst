@@ -76,7 +76,34 @@ Iteration
 Inspection
 ############
 
-   The contents of a Fieldset can be easily inspected using the :py:meth:`ls` and :py:meth:`describe` methods.
+   The contents of a Fieldset can be easily inspected using the :py:meth:`ls` and :py:meth:`describe` methods. See the :ref:`/examples/inspecting_grib_data.ipynb` notebook for some examples.
+
+
+Filtering
+############
+   
+   A set of fields from a Fieldset can be extracted using the :func:`read` and :func:`select` functions. See the :ref:`/examples/filtering_grib_data.ipynb` notebook for the comparison of these two methods. 
+
+   For simple data extractions with :func:`select` a shorthand notation with the [] operator is also available. E.g. instead of
+
+
+      .. code-block:: python
+
+            g = fs.select(shortName="t", level=500, typeOfLevel="isobaricInhPa")
+   
+   
+   we can say:
+   
+      .. code-block:: python
+
+         g = fs["t500hPa"]
+      
+
+   See more examples :ref:`here <select_slice_operator>`.
+
+   .. note::
+
+      :func:`select` and its [] operator are only available form metview-python version 1.8.0.
 
 
 Functions vs methods

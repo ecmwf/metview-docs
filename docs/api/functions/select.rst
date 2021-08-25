@@ -130,5 +130,94 @@ Datetime keys
             diff = f_fc - f_an
 
 
+  .. _select_slice_operator:
+
+Slicing with the [] operator
+++++++++++++++++++++++++++++++
+
+    For simple data extractions with :func:`select` a shorthand notation with the [] operator is also available. E.g. instead of
+
+         .. code-block:: python
+
+            g = fs.select(shortName="msl")
+      
+    we can write:
+
+         .. code-block:: python
+
+            g = fs["msl"]
+      
+
+    The following code snippet shows further examples for **scalar** data:
+
+         .. code-block:: python
+
+            fs = mv.Fieldset(path="test.grib")
+
+            # each select/[] pair below is equivalent
+
+            # single level data - we only need to use the ecCodes shortName
+            g = fs.select(shortName="msl")
+            g = fs["msl"]
+
+            # upper level data without specifying the level
+            g = fs.select(shortName="t")
+            g = fs["t"]
+
+            # pressure level data - the level units specifier can be omitted in [],  
+            # since by default typeOfLevel is assumed to be "isobaricInhPa".
+            g = fs.select(shortName="t", level=500, typeOfLevel="isobaricInhPa")
+            g = fs["t500"]
+
+            # pressure level data - with level units specifier
+            g = fs.select(shortName="t", level=500, typeOfLevel="isobaricInhPa" )
+            g = fs["t500hPa"]
+
+            # ECMWF model level data - the level units specifier ("ml") must be used
+            g = fs.select(shortName="t", level=32, typeOfLevel="hybrid" )
+            g = fs["t32ml"]
+            
+            # potential temperature level data - the level units specifier (K) must be used
+            g = fs.select(shortName="pv", level=320, typeOfLevel="theta" )
+            g = fs["pv320K"]
+
+
+    For **wind** data the [] operator not only extracts the wind components but pair them up properly so that they could be directly plotted. For plotting wind fields a u wind field must always be followed by a v wind field in the given :class:`Fieldset`.
+
+      .. note::
+      
+        This wind extraction method only works for "10u"/"10v" and "u"/"v" ecCodes shortNames.
+            
+    The following code snippet shows some examples:
+      
+        .. code-block:: python
+
+           fs = mv.Fieldset(path="wind.grib")
+
+           # 10m wind - extract "10u","10v" and pair them up
+           g = fs["wind10m"]
+           
+           # pressure level wind data - extract "u","v" on 500 hPa and pair them up.
+           # The level units specifier can be omitted in [], since by default 
+           # typeOfLevel is assumed to be "isobaricInhPa".        
+           g = fs["wind500"]
+
+           # pressure level wind data -  with level units specifier.
+           # Extract "u"/"v" on 500 hPa and pair them up.
+           g = fs["wind500hPa"]
+
+           # model level wind data -  the level units specifier ("ml") must be used.
+           # Extract "u"/"v" on model level 32 and pair them up.
+           g = fs["wind32ml"]
+                     
+    There is a special notation for the extraction and alignment of 3D wind components. It works with the "u", "v" and "w" ecCodes shortNames. The following code shows how to extract the 3D wind for all the levels present in a :class:`Fieldset`: 
+
+         .. code-block:: python
+
+           fs = mv.Fieldset(path="wind3d.grib")
+
+           # extract "u","v", "w" and align them  in that order
+           g = fs["wind3d"]
+           
 
 .. mv-minigallery:: select

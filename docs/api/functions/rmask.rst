@@ -18,7 +18,7 @@ rmask
    :param number lat: latitude coordinate of the centre of the circle
    :param number lon: longitude coordinate of the centre of the circle
    :param number radius: radius of the circle in m
-   :param missing: set to ``True`` to change the behaviour as described above
+   :param missing: set to ``True`` to change the behaviour as described above. *New in Metview version 5.13.0*.
    :type missing: bool
    :rtype: :class:`Fieldset`
 
