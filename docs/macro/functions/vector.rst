@@ -1,3 +1,5 @@
+.. _macro_vector_fn:
+
 Vector functions
 ========================
 

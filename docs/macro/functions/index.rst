@@ -1,4 +1,4 @@
-Macro data types
+Macro functions and operators
 ====================================
 
 .. toctree::

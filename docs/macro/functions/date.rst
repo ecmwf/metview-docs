@@ -1,3 +1,5 @@
+.. _macro_date_fn:
+
 Date Functions
 ======================
 

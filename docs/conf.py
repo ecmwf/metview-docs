@@ -81,6 +81,8 @@ html_css_files = ["css/custom_style.css", "css/gallery.css"]
 
 html_logo = "_static/metview.png"
 
+highlight_language = "none"
+
 rst_prolog = """
 .. role:: mval
 """

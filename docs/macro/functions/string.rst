@@ -1,4 +1,6 @@
-String Functions
+.. _macro_string_fn:
+
+String functions
 ======================
 
 .. describe:: string ( string op string )
