@@ -9,6 +9,7 @@ Macro
    :maxdepth: 1
    :caption: Documentation
    
+   data_types/index
    information
    numbers
    string
@@ -17,3 +18,14 @@ Macro
    vector
    geopoints
    geopointset
+   odb
+   table
+   bufr
+   definition
+   file
+   timing
+   unix
+   system
+   thermo
+   plot
+   flexpart
