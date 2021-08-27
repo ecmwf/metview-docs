@@ -1,7 +1,11 @@
-Geopointset Functions
+.. _macro_geopointset_fn:
+
+Geopointset functions
 ========================
-   
-For an overview, please see Geopointset.
+  
+.. note::
+
+   For an overview, please see :ref:`Geopointset <macro_geopointset>`.
 
 .. describe:: geopoints et ( geopointset  op geopointset )
 

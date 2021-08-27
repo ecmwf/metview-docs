@@ -1,8 +1,11 @@
-Geopoints Functions
+.. _macro_geopoints_fn:
+
+Geopoints functions
 ======================
 
+.. note::
 
-   For an overview, please see Geopoints.
+   For an overview, please see :ref:`Geopoints <macro_geopoints>`.
 
 .. describe:: geopoints ( geopoints op geopoints )
 

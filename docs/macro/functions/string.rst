@@ -3,6 +3,10 @@
 String functions
 ======================
 
+.. note::
+
+   For an overview, please see :ref:`Strings <macro_string>`.
+
 .. describe:: string ( string op string )
 
    Comparison between two strings, returning either 0 (false) or 1 (true); op is one of the boolean operators below:

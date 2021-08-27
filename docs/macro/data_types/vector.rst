@@ -1,3 +1,5 @@
+.. _macro_vector:
+
 Vectors
 ==================
 

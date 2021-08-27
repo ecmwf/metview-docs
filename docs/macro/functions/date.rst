@@ -1,7 +1,12 @@
 .. _macro_date_fn:
 
-Date Functions
+Date functions
 ======================
+
+.. note::
+
+   For an overview, please see :ref:`Dates <macro_date>`.
+
 
 .. describe:: number ( date - date )
 

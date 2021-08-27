@@ -3,8 +3,9 @@
 Vector functions
 ========================
 
+.. note::
 
-For an overview, please see Vectors.
+    For an overview, please see :ref:`Vectors <macro_vector>`.
 
 .. describe:: vector ( vector op vector )
 
