@@ -1,9 +1,9 @@
-System and Utility Macro functions
+Utility Macro functions
 ======================================
 
 .. note::
-    
-    This a collection of various system and utility functions:
+
+    This is a collection of various system and utility functions:
 
     * to convey information about expressions and other macro functions
     * to allow some profiling of Macro's run times
