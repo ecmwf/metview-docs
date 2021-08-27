@@ -94,8 +94,8 @@ Areas defined here can be used like this:
 
 
 conf/map_styles.yaml
--------------------
--------------------
+------------------------
+------------------------
 
 This file contains the definition of the map plotting styles (:func:`mcoast`). E.g.:
 

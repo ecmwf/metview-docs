@@ -31,4 +31,4 @@ virtual_temperature
         * :math:`\epsilon = \frac{R_{dry}}{R_{vapour}} = 0.621981`
 
 
-.. mv-minigallery:: virtual temperature
+.. mv-minigallery:: virtual_temperature
