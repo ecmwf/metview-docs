@@ -1,5 +1,10 @@
-Definition functions
-======================
+.. _macro_definition_fn:
+
+Definition Macro functions
+=============================
+
+.. note::
+
    A definition is a list of named items (which may be numbers, strings, lists,...).
 
 

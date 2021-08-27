@@ -1,6 +1,6 @@
 .. _macro_table:
 
-ASCII Tables
+ASCII Tables in Macro
 =========================
 
 .. note::

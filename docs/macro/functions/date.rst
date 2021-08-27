@@ -1,6 +1,6 @@
 .. _macro_date_fn:
 
-Date functions
+Date Macro functions
 ======================
 
 .. note::

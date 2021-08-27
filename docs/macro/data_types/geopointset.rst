@@ -1,7 +1,7 @@
 .. _macro_geopointset:
 
-Geopointset
-================
+Geopointsets in Macro
+===========================
 
 .. note::
     

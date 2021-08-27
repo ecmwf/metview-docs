@@ -1,5 +1,5 @@
-FLEXPART Functions
-======================
+FLEXPART Macro functions
+============================
 
 .. describe:: fieldset flexpart_filter(...)
 

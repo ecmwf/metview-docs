@@ -1,7 +1,7 @@
 .. _macro_date:
 
-Dates
-=============
+Dates in Macro
+=================
 
 .. note::
 

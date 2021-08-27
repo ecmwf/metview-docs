@@ -1,6 +1,6 @@
 .. _macro_string:
 
-Strings
+Strings in Macro
 ==================
 
 .. note::

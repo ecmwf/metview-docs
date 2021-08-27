@@ -1,6 +1,6 @@
 .. _macro_netcdf:
 
-NetCDF
+NetCDF in Macro
 ====================
 
 .. note::

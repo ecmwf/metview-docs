@@ -1,6 +1,6 @@
 .. _macro_table_fn:
 
-Table functions
+Table Macro functions
 ======================
 
 .. note::

@@ -1,6 +1,5 @@
-ODB Functions
+ODB Macro functions
 ======================
-
 
    For an overview, please see the ODB tutorial here. There is also a shorter tutorial available on this page.
 

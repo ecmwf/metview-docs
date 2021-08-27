@@ -1,7 +1,7 @@
 .. _macro_number_fn:
 
-Number functions
-======================
+Number Macro functions
+===========================
 
    No distinction is made between integer or real numbers. All numbers are internally coded as double precision floating point reals.
 

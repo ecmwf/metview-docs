@@ -1,6 +1,6 @@
 .. _macro_vector:
 
-Vectors
+Vectors in Macro
 ==================
 
 .. note::

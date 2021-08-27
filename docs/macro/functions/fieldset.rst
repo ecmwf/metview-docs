@@ -1,10 +1,20 @@
-Fieldset functions
-======================
+.. _macro_fieldset_fn:
+
+Fieldset Macro functions
+=============================
+
+.. note::
+
+   For an overview, please see :ref:`Fieldsets <macro_fieldset>`.
+
+.. note::
+
+   The fieldset functions related to **thermodynamics** are documented in the :ref:`Thermodynamic functions <macro_thermo_fn>` page.
 
 
 .. describe:: fieldset ( fieldset op fieldset )
 
-   Operation between two fieldsets. op is one of the operators below :
+   Operation between two fieldsets. op is one of the operators below:
 
    * \+ Addition
    * \- Subtraction
@@ -40,7 +50,7 @@ Fieldset functions
 .. describe:: fieldset ( fieldset or fieldset )
 .. describe:: fieldset ( not fieldset )
 
-   Conjunction, Disjunction and Negation. Boolean operators consider all null values to be false and all non null values to be true. The fieldsets created by boolean operators are binary fieldsets (containing only 1 where result is true, 0 where it is false). For example :
+   Conjunction, Disjunction and Negation. Boolean operators consider all null values to be false and all non null values to be true. The fieldsets created by boolean operators are binary fieldsets (containing only 1 where result is true, 0 where it is false). For example:
 
    .. code-block:: python
 
@@ -153,7 +163,7 @@ Fieldset functions
 
 .. describe:: fieldset sgn ( fieldset )
 
-   Returns the fieldset of the sign of the values of the input fieldset at each grid point or spectral coefficient : -1 for negative values, 1 for positive and 0 for null values. Missing values are retained, unaltered by the calculation.
+   Returns the fieldset of the sign of the values of the input fieldset at each grid point or spectral coefficient: -1 for negative values, 1 for positive and 0 for null values. Missing values are retained, unaltered by the calculation.
 
 
 .. describe:: fieldset sin ( fieldset )
@@ -486,8 +496,6 @@ Fieldset functions
       [[1,1,1,1,1,1],[98,98,98,98,98,98],[1000,500,100,1000,500,100],[0,0,0,48,48,48]]
 
 
- 
-
 .. describe:: number or list grib_get_long ( fieldset, string )
 .. describe:: number or list grib_get_double ( fieldset, string )
 .. describe:: number or list grib_get_string ( fieldset, string )
@@ -604,7 +612,7 @@ Fieldset functions
    If the input fieldset contains only one field, a number is returned. If there is more than one field, a list of numbers is returned. Missing values in the input fieldset are bypassed in this calculation. For each field for which there are no valid values, nil is returned.
 
    * If the fieldset is the only argument, the integration is done on all grid points.
-   * If a list is the second argument, it must contain four numbers which are respectively the north, west, south and east boundaries of an area. The integration is done on the grid points contained inside this area :
+   * If a list is the second argument, it must contain four numbers which are respectively the north, west, south and east boundaries of an area. The integration is done on the grid points contained inside this area:
 
         .. code-block:: python
 
@@ -702,7 +710,7 @@ Fieldset functions
 .. describe:: fieldset lookup ( fieldset,fieldset )
 .. describe:: fieldset lookup ( fieldset,list )
 
-   These two functions build an output fieldset using the values in the first input fieldset as indices in a look-up action on a second input fieldset or input list :
+   These two functions build an output fieldset using the values in the first input fieldset as indices in a look-up action on a second input fieldset or input list:
 
    * Takes the grid values in the first fieldset and uses them as index in the second fieldset. E.g. a grid value of n in the first fieldset, retrieves the corresponding grid point value of the (n-1)th field of the second fieldset (indexing is 0 based). The output fieldset is built from these values and has as many fields as the first fieldset.
    * Takes the grid values in the first fieldset and uses them as index in the list - real numbers are truncated, not rounded. E.g. a grid value of n in the first fieldset, retrieves the (n-1)th list element (indexing is 0 based). The output fieldset is built from these values and has as many fields as the first fieldset.
@@ -808,16 +816,15 @@ Fieldset functions
 
    Interpolates a fieldset on model levels (i.e. on hybrid or eta levels used by the IFS) onto height levels (in m) above sea or ground level. At gridpoints where interpolation is not possible missing value is returned. This function has the following positional arguments:
 
-   #. mfld: the fieldset to be interpolated
-   #. z: the geopotential fieldset on model levels  (it must contain the same levels as mfld but the order of the levels can be different)
-   #. zs: the surface geopotential field (if the reflev argument is set to "sea" it should be set to nil).
-   #.  hlist: the list of target height levels (they can came in any given order)
-   #. reflev: specifies the reference level for the target heights. The possible values are "sea" and "ground"
-   #. method: specifies the interpolation method. The possible values are "linear" and "log".
+   * mfld: the fieldset to be interpolated
+   * z: the geopotential fieldset on model levels  (it must contain the same levels as mfld but the order of the levels can be different)
+   * zs: the surface geopotential field (if the reflev argument is set to "sea" it should be set to nil).
+   * hlist: the list of target height levels (they can came in any given order)
+   * reflev: specifies the reference level for the target heights. The possible values are "sea" and "ground"
+   * method: specifies the interpolation method. The possible values are "linear" and "log".
 
-   Please note that geopotential is not archived operationally on model levels in MARS at ECMWF.  To compute geopotential on model levels use Metview's mvl_geopotential_on_ml() function. The following example shows how to use function ml_to_hl() together with mvl_geopotential_on_ml() :
-   # retrieve the data on model levels - surface geopotential (zs) is only available in the first forecast step!
- 
+   Please note that geopotential is not archived operationally on model levels in MARS at ECMWF.  To compute geopotential on model levels use Metview's mvl_geopotential_on_ml() function. The following example shows how to use function ml_to_hl() together with mvl_geopotential_on_ml():
+   
    .. code-block:: python
 
       # retrieve the data on model levels - 
@@ -946,7 +953,7 @@ Fieldset functions
 
    Similar to mask , except that a round mask is computed with a given radius around a geographical centre point. These can be given by either:
 
-   * three numbers : latitude, longitude (in degrees), radius (in meters)
+   * three numbers: latitude, longitude (in degrees), radius (in meters)
    * a list containing the above three numbers
 
    The name of this function is derived from the fact that it creates a "round mask" or a "radius mask".
@@ -963,7 +970,7 @@ Fieldset functions
          r_{i} = \sqrt {\frac {1}{N} \sum_{k}^{N} (x_{i}^{k})^{2}}
 
 
-   Note that the following lines are equivalent :
+   Note that the following lines are equivalent:
 
    .. code-block:: python
 
@@ -1014,7 +1021,7 @@ Fieldset functions
 
 .. describe:: fieldset sinlat ( fieldset )
 
-   For each field in the input fieldset, this function creates a field where each grid point has the value of the sine of its latitude. For example, the following macro adds the coriolis parameter to each grid point of a field :
+   For each field in the input fieldset, this function creates a field where each grid point has the value of the sine of its latitude. For example, the following macro adds the coriolis parameter to each grid point of a field:
 
    .. code-block:: python
 
@@ -1042,13 +1049,13 @@ Fieldset functions
 
 .. describe:: fieldset stdev ( fieldset )
 
-   Computes the standard deviation of a fieldset. A missing value in any field will result in a missing value in the corresponding place in the output fieldset. With N fields in the input fieldset by denoting the i-th value in the k-th field by :math:`x_{i}^{k}` the output values can be written as:
+   Computes the standard deviation of a fieldset. A missing value in any field will result in a missing value in the corresponding place in the output fieldset. With N fields in the input fieldset by denoting the i-th value in the k-th field by:math:`x_{i}^{k}` the output values can be written as:
 
    .. math:: 
       
          z_{i} = \sqrt {\frac {1}{N} \sum_{k}^{N} (x_{i}^{k})^{2} - (\frac {1}{N} \sum_{k}^{N} x_{i}^{k} )^2}
 
-   Note that the following lines are equivalent :
+   Note that the following lines are equivalent:
 
    .. code-block:: python
 
@@ -1191,7 +1198,7 @@ Fieldset functions
          v_{i} = \frac {1}{n} \sum_{k}^{n} (x_{i}^{k})^2 - \frac {1}{n} (\sum_{k}^{n} x_{i}^{k})^2
 
 
-   Note that the following lines are equivalent :
+   Note that the following lines are equivalent:
 
    .. code-block:: python
 
@@ -1274,9 +1281,9 @@ Fieldset functions
 
    Computes the hydrostatic vertical velocity from  pressure velocity (omega) for a given temperature and pressure, where
 
-   #. omega: pressure velocity (Pa/s)
-   #. t: temperature (K)
-   #. p: pressure (Pa)
+   * omega: pressure velocity (Pa/s)
+   * t: temperature (K)
+   * p: pressure (Pa)
 
    The result is the vertical velocity in m/s units. On error  nil is returned. The following rules are applied when omega is a fieldset:
 

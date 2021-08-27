@@ -1,7 +1,7 @@
 .. _macro_thermo_fn:
 
-Thermodynamic Functions
-===========================
+Thermodynamic Macro functions
+================================
 
 .. describe:: fieldset eqpott_m(...)
 

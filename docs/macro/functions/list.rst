@@ -1,4 +1,4 @@
-List Functions
+List Macro functions
 ======================
    
 .. note::

@@ -1,5 +1,5 @@
-Plotting Functions
-======================
+Plotting Macro functions
+===========================
 
 .. describe:: definition mvl_flexpart_title(...)
 

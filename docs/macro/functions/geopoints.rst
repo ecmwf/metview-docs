@@ -1,7 +1,7 @@
 .. _macro_geopoints_fn:
 
-Geopoints functions
-======================
+Geopoints Macro functions
+=============================
 
 .. note::
 

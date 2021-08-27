@@ -1,7 +1,7 @@
 .. _macro_geopoints:
 
-Geopoints
-================
+Geopoints in Macro
+======================
 
 .. note::
     

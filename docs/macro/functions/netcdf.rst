@@ -1,7 +1,7 @@
 .. _macro_netcdf_fn:
 
-NetCDF functions
-======================
+NetCDF Macro functions
+=========================
 
 .. note::
    

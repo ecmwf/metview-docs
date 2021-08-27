@@ -1,6 +1,6 @@
 .. _macro_vector_fn:
 
-Vector functions
+Vector Macro functions
 ========================
 
 .. note::

@@ -1,7 +1,7 @@
 
 .. _macro_number:
 
-Number
+Numbers in Macro
 ==================
 
 .. note::

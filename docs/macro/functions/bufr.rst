@@ -1,4 +1,6 @@
-BUFR Functions
+.. _macro_bufr_fn:
+
+BUFR Macro functions
 ======================
 
 

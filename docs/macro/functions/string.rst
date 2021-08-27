@@ -1,7 +1,7 @@
 .. _macro_string_fn:
 
-String functions
-======================
+String Macro functions
+==========================
 
 .. note::
 

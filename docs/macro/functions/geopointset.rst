@@ -1,7 +1,7 @@
 .. _macro_geopointset_fn:
 
-Geopointset functions
-========================
+Geopointset Macro functions
+===============================
   
 .. note::
 
