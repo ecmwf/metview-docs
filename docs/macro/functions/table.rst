@@ -1,8 +1,11 @@
-Table Functions
+.. _macro_table_fn:
+
+Table functions
 ======================
 
+.. note::
 
-   For an overview, please see ASCII Tables.
+   For an overview, please see :ref:`ASCII tables <macro_table>`.
 
 
 .. describe:: number count( table )
