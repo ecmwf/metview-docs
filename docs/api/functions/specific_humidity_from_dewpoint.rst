@@ -7,7 +7,7 @@ specific_humidity_from_dewpoint
 
     Computes the specific humidity from the given dewpoint (``td``) and pressure (``p``). 
 
-    :param td: dewpoint temperature K)
+    :param td: dewpoint temperature (K)
     :type td: number, ndarray or :class:`Fieldset`
     :param p: pressure (Pa)
     :type p: number, ndarray or :class:`Fieldset`
@@ -17,9 +17,9 @@ specific_humidity_from_dewpoint
 
     * if ``td`` is a pressure level :class:`Fieldset` no ``p`` is needed
     * if ``td`` is defined on ECMWF model levels (hybrid/eta) ``p`` must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a :class:`Fieldset` defining the pressure on the same levels as ``td``
-    * for other level types ``p`` must be a :class:`Fieldset` defining the pressure on the same levels as ``td``.
+    * for other level types ``p`` must be a :class:`Fieldset` defining the pressure on the same levels as ``td``
 
-    When the result is a :class:`Fieldset`: the ecCodes **paramId** in the output is set to 133 (=specific humidity).
+    When the result is a :class:`Fieldset` the ecCodes **paramId** in the output is set to 133 (=specific humidity).
 
     The computation is based on the following equation:
     
