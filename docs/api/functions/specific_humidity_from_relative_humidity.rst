@@ -13,7 +13,7 @@ specific_humidity_from_relative_humidity
     :type r: number, ndarray or :class:`Fieldset`
     :param p: pressure (Pa)
     :type p: number, ndarray or :class:`Fieldset`
-    :rtype: same type as ``td`` or None
+    :rtype: same type as ``t`` or None
 
     The result is the specific humidity in kg/kg units. On error None is returned. The following rules are applied when ``t`` and ``r`` are :class:`Fieldset` objects:
 
@@ -27,7 +27,7 @@ specific_humidity_from_relative_humidity
     
     .. math:: 
     
-        e(q, p) = e_{msat}(t)  r
+        e(q, p) = e_{msat}(t) r
 
     where:
         * e is the vapour pressure (see :func:`vapour_pressure`)
