@@ -640,7 +640,7 @@
 - flexpart_filter:
     category:
       flexpart: Extract fields from FLEXPART output GRIB files
-    desc: Extract fields from FLEXPART output GRIB files
+    desc: Extracts fields from FLEXPART output GRIB files
     group:
     - flex
     type: script

@@ -19,7 +19,7 @@ average_ew
       
       .. code-block:: python
 
-         ave = average_ew(fs, [60,-180,-60,180], 2.5)
+         ave = mv.average_ew(fs, [60,-180,-60,180], 2.5)
 
       Here we compute the averages over full latitude circles starting from 60N, stepping by 2.5 degrees until 60S. If ``fs`` contains only one field the output will be a 1d-ndarray of 49 E-W average values, from North to South. If ``fs`` contains n fields then the output will be an array of n 1d-arrays each containing 49 values. Each value in the result represents the average at latitude Lat based on those grid points whose latitude coordinate is between Lat-1.25 and Lat+1.25 (1.25 is 2.5/2), i.e. within a latitude belt with width of 2.5 degrees, centered around Lat.
 
