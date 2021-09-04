@@ -2371,6 +2371,14 @@
     - thermo
     - grib
     type: script
+- specific_humidity_from_relative_humidity:
+    category:
+      fieldset: Computes the specific humidity for the relative humidity 
+    desc: Computes the specific humidity for the relative humidity 
+    group:
+    - thermo
+    - grib
+    type: script
 - spec_contour:
     category: {}
     desc: null
