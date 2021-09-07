@@ -8,9 +8,9 @@ Thermodynamic Macro functions
    Computes the equivalent potential temperature from fieldsets on (hybrid) model levels. This is a Metview icon function, for detailed documentation please see :func:`eqpott_m`.
 
 
-.. describe:: fieldset eqpott_pl(...)
+.. describe:: fieldset eqpott_p(...)
 
-   Computes the equivalent potential temperature from fieldsets on pressure levels. This is a Metview icon function, for detailed documentation please see Potential Temperature.
+   Computes the equivalent potential temperature from fieldsets on pressure levels. This is a Metview icon function, for detailed documentation please see :func:`eqpott_p`.
 
 
 .. describe:: number dewpoint_from_relative_humidity(t: number, r: number)
@@ -61,8 +61,8 @@ Thermodynamic Macro functions
         e(q, p) = e_{wsat}(td)
 
     where:
-        * e is the vapour pressure (see :func:`vapour_pressure`)
-        * e\ :sub:`wsat` is the saturation vapour pressure over water (see :func:`saturation_vapour_pressure`)
+        * e is the vapour pressure
+        * e\ :sub:`wsat` is the saturation vapour pressure over water
         * td is the dewpoint temperature
 
 
@@ -88,7 +88,7 @@ Thermodynamic Macro functions
 
    * q: specific humidity (kg/kg)
 
-   The result is the mixing ratio in kg/kg units. On error nil is returned. The computation is based on the following well known formula:
+   The result is the mixing ratio in kg/kg units. On error nil is returned. The computation is based on the following formula:
 
    .. math:: 
       
@@ -107,17 +107,17 @@ Thermodynamic Macro functions
 
 .. describe:: fieldset pott_m(...)
 
-   Computes the potential temperature from fieldsets on (hybrid) model levels. This is a Metview icon function, for detailed documentation please see Potential Temperature.
+   Computes the potential temperature from fieldsets on (hybrid) model levels. This is a Metview icon function, for detailed documentation please see :func:`pott_m`.
 
 
-.. describe:: fieldset pott_pl(...)
+.. describe:: fieldset pott_p(...)
 
-   Computes the potential temperature from fieldsets on pressure levels. This is a Metview icon function, for detailed documentation please see Potential Temperature.
+   Computes the potential temperature from fieldsets on pressure levels. This is a Metview icon function, for detailed documentation please see :func:`pott_p`.
 
 
 .. describe:: fieldset relhum(...)
 
-   Computes the relative humidity from specific humidity fieldsets. This is a Metview icon function, for detailed documentation please see Relative Humidity.
+   Computes the relative humidity from specific humidity fieldsets. This is a Metview icon function, for detailed documentation please see :func:`relhum`.
 
 
 .. describe:: number relative_humidity_from_dewpoint(t: number, td: number)
@@ -135,12 +135,12 @@ Thermodynamic Macro functions
       
       r = \frac {e_{wsat}(Td)}{e_{wsat}(T)}
 
-   where e w\ :sub:`sat` is the saturation vapour pressure over water (see ``saturation_vapour_pressure``).
+   where e w\ :sub:`sat` is the saturation vapour pressure over water (see saturation_vapour_pressure).
 
 
 .. describe:: number saturation_mixing_ratio(t: number, p: number)
 .. describe:: number saturation_mixing_ratio(t: number, p: number, phase)
-.. describe:: vector saturation_vmixing_ratio(t: vector, p: vector)
+.. describe:: vector saturation_mixing_ratio(t: vector, p: vector)
 .. describe:: vector saturation_mixing_ratio(t: vector, p: vector, phase)
 
    Computes the saturation mixing ratio for a given temperature, pressure and phase where
@@ -184,12 +184,44 @@ Thermodynamic Macro functions
 
 .. describe:: fieldset seqpott_m(...)
 
-   Computes the saturation equivalent potential temperature from fieldsets on (hybrid) model levels. This is a Metview icon function, for detailed documentation please see Potential Temperature.
+   Computes the saturation equivalent potential temperature from fieldsets on (hybrid) model levels. This is a Metview icon function, for detailed documentation please see :func:`seqpott_m`.
 
 
-.. describe:: fieldset seqpott_pl(...)
+.. describe:: fieldset seqpott_p(...)
 
-   Computes the saturation equivalent potential temperature from fieldsets on pressure levels. This is a Metview icon function, for detailed documentation please see Potential Temperature.
+   Computes the saturation equivalent potential temperature from fieldsets on pressure levels. This is a Metview icon function, for detailed documentation please see :func:`seqpott_p`.
+
+
+.. describe:: number specific_humidity_from_dewpoint(td: number, p: number)
+.. describe:: vector specific_humidity_from_dewpoint(td: vector, p: vector)
+.. describe:: fieldset specific_humidity_from_dewpoint(td: fieldset, p: fieldset)
+.. describe:: fieldset specific_humidity_from_dewpoint(td: fieldset)
+
+    *New in Metview version 5.13.0*.
+
+    Computes the specific humidity from the given dewpoint and pressure, where 
+
+    * td: dewpoint temperature (K)
+    * p: pressure (Pa)
+
+    The result is the specific humidity in kg/kg units. On error nil is returned. The following rules are applied when td is a fieldset:
+
+    * if td is a pressure level fieldsets no p is needed
+    * if td is defined on ECMWF model levels (hybrid/eta) p must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a fieldset defining the pressure on the same levels as td
+    * for other level types p must be a fieldset defining the pressure on the same levels as td
+
+    When the result is a fieldset the ecCodes **paramId** in the output is set to 133 (=specific humidity).
+
+    The computation is based on the following equation:
+    
+    .. math:: 
+    
+        e(q, p) = e_{wsat}(td)
+
+    where:
+        * e is the vapour pressure
+        * e\ :sub:`wsat` is the saturation vapour pressure over water
+        * td is the dewpoint temperature
 
 
 .. describe:: number temperature_from_potential_temperature(th: number, p: number)
@@ -204,7 +236,7 @@ Thermodynamic Macro functions
 
 .. describe:: netcdf thermo_bufr(...)
 
-   Extracts vertical profiles from BUFR data in a suitable format suitable for thermodynamic diagrams (defined by Thermo View). This is a Metview icon function, for detailed documentation please see Thermo Data.
+   Extracts vertical profiles from BUFR data in a suitable format suitable for thermodynamic diagrams (defined by Thermo View). This is a Metview icon function, for detailed documentation please see :func:`thermo_bufr`.
 
 
 .. describe:: definition thermo_data_info(data: thermo_data)
@@ -221,7 +253,7 @@ Thermodynamic Macro functions
 
 .. describe:: netcdf thermo_grib(...)
 
-   Extracts vertical profiles from GRIB data in a suitable format for thermodynamic diagrams (defined by Thermo View). This is a Metview icon function, for detailed documentation please see Thermo Data.
+   Extracts vertical profiles from GRIB data in a suitable format for thermodynamic diagrams (defined by Thermo View). This is a Metview icon function, for detailed documentation please see :func:`thermo_grib`.
 
 
 .. describe:: definition thermo_parcel_path(t: vector, td: vector, p: vector, options: definition)
@@ -326,3 +358,32 @@ Thermodynamic Macro functions
     .. math:: 
 
         \epsilon = \frac{R_{dry}}{R_{vapour}} = 0.621981
+
+..  describe:: number virtual_temperature(t: number, q: number)
+..  describe:: vector virtual_temperature(t: vector, q: vector)
+..  describe:: fieldset virtual_temperature(t: fieldset, q: fieldset)
+
+    *New in Metview version 5.13.0*.
+
+    Computes the virtual temperature from the given temperature and specific humidity:
+
+    * temperature (K)
+    * q: specific humidity (kg/kg)
+  
+
+    The result is the virtual temperature in K units. On error nil is returned. 
+    
+    When the result is a fieldset the ecCodes **paramId** in the output is set to 300012 (=virtual temperature).
+    
+    The computation is based on the following formula:
+
+    .. math:: 
+
+        T_{v} = T (1 + \frac{1 - \epsilon}{\epsilon} q)
+
+    where
+
+        * T is the temperature
+        * q is the specific humidity
+        * :math:`\epsilon = \frac{R_{dry}}{R_{vapour}} = 0.621981`
+
