@@ -1,11 +1,26 @@
 return: :class:`Fieldset`
-summary: Computes the relative humidity from temperature, specific humidity
+summary: |-
+  Computes the relative humidity from temperature, specific humidity
   and logarithm of surface pressure (LNSP) GRIB data. LNSP is only required
-  if the input data is specified on ECMWF model levels. The computations are
-  based on a mixed-phase Tetens formula used by IFS for diagnostic purposes
-  (see `here <https://www.ecmwf.int/en/elibrary/18714-part-iv-physical-processes>`_ 
-  on p116 for details from the latest model cycle (CY45R1, at the
-  time of the writing of this documentation).
+  if the input data is specified on ECMWF model levels.
+  
+  When the result is a :class:`Fieldset` the ecCodes **paramId** in the output is set to 157 (=relative humidity).
+    
+  The computation is based on the following formula:
+
+  .. math:: 
+      
+        r = 100 \frac {e(q, p)}{e_{msat}(t)}
+
+  where:
+
+  * e is the vapour pressure (see :func:`vapour_pressure`)
+  * e\ :sub:`msat` is the saturation vapour pressure based on the "mixed" phase (see :func:`saturation_vapour_pressure`)
+  * q is the specific humidity
+  * p is the pressure
+  * t is the temperature
+
+
 oneliner: Computes the relative humidity from temperature and specific humidity GRIB data.
 params:
 - data:

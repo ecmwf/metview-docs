@@ -358,16 +358,16 @@
     type: script
 - dewpoint_from_relative_humidity:
     category:
-      fieldset: Computes the dewpoint for a given temperature and relative humidity
-    desc: Computes the dewpoint for a given temperature and relative humidity
+      fieldset: Computes the dewpoint from relative humidity
+    desc: Computes the dewpoint from relative humidity
     group:
     - thermo
     - grib
     type: script
 - dewpoint_from_specific_humidity:
     category:
-      fieldset: Computes the dewpoint for a given specific humidity and pressure
-    desc: Computes the dewpoint for a given specific humidity and pressure
+      fieldset: Computes the dewpoint from specific humidity
+    desc: Computes the dewpoint from specific humidity
     group:
     - thermo
     - grib
@@ -2004,8 +2004,16 @@
     type: icon
 - relative_humidity_from_dewpoint:
     category:
-      thermo: Computes the relative humidity for a given temperature and dewpoint
-    desc: Computes the relative humidity for a given temperature and dewpoint
+      thermo: Computes the relative humidity from dewpoint
+    desc: Computes the relative humidity from dewpoint
+    group:
+    - thermo
+    - grib
+    type: script
+- relative_humidity_from_specific_humidity:
+    category:
+      thermo: Computes the relative humidity from specific humidity
+    desc: Computes the relative humidity from specific humidity
     group:
     - thermo
     - grib
@@ -2013,7 +2021,7 @@
 - relhum:
     category: {}
     data: null
-    desc: Computes relative humidity from specific humidity
+    desc: Computes relative humidity from specific humidity fieldset
     group:
     - thermo
     - grib
@@ -2365,16 +2373,16 @@
     type: script
 - specific_humidity_from_dewpoint:
     category:
-      fieldset: Computes the specific humidity for a given dewpoint and pressure
-    desc: Computes the specific humidity for a given dewpoint and pressure
+      fieldset: Computes the specific humidity from dewpoint
+    desc: Computes the specific humidity from dewpoint
     group:
     - thermo
     - grib
     type: script
 - specific_humidity_from_relative_humidity:
     category:
-      fieldset: Computes the specific humidity for the relative humidity 
-    desc: Computes the specific humidity for the relative humidity 
+      fieldset: Computes the specific humidity from relative humidity 
+    desc: Computes the specific humidity from relative humidity 
     group:
     - thermo
     - grib

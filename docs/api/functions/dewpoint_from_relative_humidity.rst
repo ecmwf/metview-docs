@@ -8,7 +8,7 @@ dewpoint_from_relative_humidity
 
     :param t: temperature (K)
     :type t: number, ndarray or :class:`Fieldset`
-    :param r: relative humidity ([0-1])
+    :param r: relative humidity (%)
     :type r: number, ndarray or :class:`Fieldset`
     :rtype: same type as ``t`` or None
 

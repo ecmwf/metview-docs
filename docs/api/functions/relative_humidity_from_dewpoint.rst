@@ -11,12 +11,14 @@ relative_humidity_from_dewpoint
     :type td: number, ndarray or :class:`Fieldset`
     :rtype: same type as ``t`` or None
 
-    The result is the relative humidity in the range of [0, 1]. On error None is returned. The computation is based on the following formula:
+    The result is the relative humidity in % units. On error None is returned. The computation is based on the following formula:
 
     .. math:: 
       
-        r = \frac {e_{wsat}(Td)}{e_{wsat}(T)}
+        r = 100 \frac {e_{wsat}(Td)}{e_{wsat}(T)}
 
     where e w\ :sub:`sat` is the saturation vapour pressure over water (see :func:`saturation_vapour_pressure`).
+
+    When the result is a :class:`Fieldset` the ecCodes **paramId** in the output is set to 157 (=relative humidity).
 
 .. mv-minigallery:: relative_humidity_from_dewpoint

@@ -9,7 +9,7 @@ specific_humidity_from_relative_humidity
 
     :param t: temperature (K)
     :type t: number, ndarray or :class:`Fieldset`
-    :param r: relative_humidity (0-1)
+    :param r: relative_humidity (%)
     :type r: number, ndarray or :class:`Fieldset`
     :param p: pressure (Pa)
     :type p: number, ndarray or :class:`Fieldset`
@@ -27,14 +27,18 @@ specific_humidity_from_relative_humidity
     
     .. math:: 
     
-        e(q, p) = e_{msat}(t) r
+        r = 100 \frac {e(q, p)}{e_{msat}(t)}
 
     where:
         * e is the vapour pressure (see :func:`vapour_pressure`)
-        * e\ :sub:`msat` is the saturation vapour pressure based on a "mixed" phase (see :func:`saturation_vapour_pressure`)
+        * e\ :sub:`msat` is the saturation vapour pressure based on the "mixed" phase (see :func:`saturation_vapour_pressure`)
         * t is the temperature
         * r is the relative humidity
 
+
+    .. note::
+
+        See also :func:`relhum` and :func:`relative_humidity_from_specific_humidity`.
 
 
 .. mv-minigallery:: specific_humidity_from_relative_humidity
