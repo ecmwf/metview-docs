@@ -606,6 +606,21 @@ params:
     desc: ''
     ptype: str
     values: high/medium/low
+- contour_grid_value_position:
+    default: 'top'
+    desc: Specifies the position of the values. Only works when ``contour_grid_value_plot_type`` is "both".
+    ptype: str
+    values: 'top/bottom/left/right'
+- contour_grid_value_justification:
+    default: 'centre'
+    desc: Specifies the horizontal position of the grid values. Only works when ``contour_grid_value_plot_type`` is "value".
+    ptype: str
+    values: 'centre/left/right'
+- contour_grid_value_vertical_align:
+    default: 'base'
+    desc: Specifies the vertical position of the grid values. Only works when ``contour_grid_value_plot_type`` is "value".
+    ptype: str
+    values: 'normal/top/cap/half/base/bottom'
 - contour_grid_value_marker_height:
     default: '0.25'
     desc: Height of the grid point markers.
