@@ -73,6 +73,7 @@ tests/*.idx
 .gitignore.orig
 .idea
 .vscode
+.env
 
 # docs
 docs/api/build_functions.py
