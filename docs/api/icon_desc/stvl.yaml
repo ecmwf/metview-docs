@@ -1,0 +1,75 @@
+return: :class:`Geopoints` or :class:`Geopointset`
+summary: rst
+oneliner: Retrieves point data from the STVL database in :class:`Geopoints` or :class:`Geopointset` formats.
+params:
+- parameter:
+    default: 
+    desc: Specifies the parameter name as an ecCodes shortName.
+    ptype: str
+    values: 
+- period:
+    default: 
+    desc: Observation period in hours (0-24), only valid for certain parameters.
+    ptype: str
+    values: 
+- dates:
+    default: 
+    desc: Observation or forecast start dates. It can be one or more YYYYMMDD values or a MARS-style interval YYYYMMDD/to/YYYYMMDD/by/H (e.g. 20160102/to/20160229/by/3).
+    ptype: list or str or number
+    values: 
+- times:
+    default: 
+    desc: Observation or forecast start times.
+    ptype: list or str or number
+    values: 
+- steps:
+    default: 
+    desc: The list of forecast steps. It can be one or more steps in hours separated or a MARS-
+          like interval, e.g. 24/to/120/by/12. Only available when ``table`` is "model".
+    ptype: list or str or number
+    values:
+- table:
+    default: observation
+    desc: Database table to retrieve data from.
+    ptype: str
+    values: observation/model
+- mclass:
+    default: od
+    desc: The MARS class of model data. Only available when ``table`` is "model".
+    ptype: str
+    values:   
+- stream:
+    default: oper
+    desc: The MARS stream of model data. Only available when ``table`` is "model".
+    ptype: str
+    values: 
+- expver:
+    default: "0001"
+    desc: The MARS experiment version of model data. Only available when ``table`` is "model".
+    ptype: str
+    values: 
+- mtype:
+    default: fc
+    desc: The MARS type of model data. Only available when ``table`` is "model".
+    ptype: str
+    values: 
+- origin:
+    default: 
+    desc: The MARS origin of model data. Only available when ``table`` is "model".
+    ptype: str
+    values: 
+- anoffset:
+    default: 0
+    desc: The MARS analysis offset of model data. Only available when ``table`` is "model".
+    ptype: number
+    values: 
+- columns:
+    default: []
+    desc: Optional list of value columns in the output file. If not set all the columns will be stored.
+    ptype: list
+    values: 
+- sources:
+    default: []
+    desc: List of original sources of observations.
+    ptype: list
+    values: 

@@ -84,6 +84,32 @@ ICON_HEADER_STANDARD = """
 
 """
 
+ICON_HEADER_STANDARD_ECMWF = """
+{}
+=========================
+
+.. container::
+    
+    .. container:: leftside
+
+        .. image:: /_static/{}
+           :width: 48px
+
+    .. container:: rightside
+
+{}
+
+\t\t.. warning:: This function is only available at ECWMF.
+
+\t\t.. note:: This function performs the same task as the {} icon in Metview’s user interface. It accepts its parameters as keyword arguments, described below.
+
+
+.. py:function:: {}(**kwargs)
+  
+    {}
+
+"""
+
 ICON_HEADER_SIMPLE = """
 {}
 =========================
@@ -212,6 +238,7 @@ class DocFunction:
         self.pix = item.get("pix", "")
         self.title = item.get("title", "")
         self.standard = item.get("standard", True)
+        self.ecmwf = item.get("ecmwf", False)
 
         if self.title == "":
             self.title = self.name.replace("_", " ")
@@ -320,16 +347,29 @@ class IconDocBuilder:
 
             # generates rst
             if fn.standard:
-                txt += ICON_HEADER_STANDARD.format(
-                    name,
-                    fn.pix,
-                    self.indent_summary(summary),
-                    "`{} <https://confluence.ecmwf.int/display/METV/{}>`_".format(
-                        fn.conf_label, fn.title.replace(" ", "+")
-                    ),
-                    fn.name,
-                    one_liner,
-                )
+                if not fn.ecmwf: 
+                    txt += ICON_HEADER_STANDARD.format(
+                        name,
+                        fn.pix,
+                        self.indent_summary(summary),
+                        "`{} <https://confluence.ecmwf.int/display/METV/{}>`_".format(
+                            fn.conf_label, fn.title.replace(" ", "+")
+                        ),
+                        fn.name,
+                        one_liner,
+                    )
+                else:
+                   txt += ICON_HEADER_STANDARD_ECMWF.format(
+                        name,
+                        fn.pix,
+                        self.indent_summary(summary),
+                        "`{} <https://confluence.ecmwf.int/display/METV/{}>`_".format(
+                            fn.conf_label, fn.title.replace(" ", "+")
+                        ),
+                        fn.name,
+                        one_liner,
+                    )  
+
             else:
                 txt += ICON_HEADER_SIMPLE.format(
                     name,

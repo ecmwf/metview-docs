@@ -2494,6 +2494,14 @@
     - calculus
     - grib_object
     type: script
+- stvl:
+    category:
+      geopoints: Retrieves point data from the STVL database in geopoints format
+    desc: Retrieves point data from the STVL database in geopoints format 
+    group:
+    - geopoints_access
+    type: icon   
+    ecmwf: true 
 - subsample:
     category:
       geopoints: Filters from the first geopoints variable points that exist in the
