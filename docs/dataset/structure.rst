@@ -1,10 +1,5 @@
-Dataset
-**********************
-
-A dataset is a collection of data and a set of predefined styles to visualise the data. It was created for studying openifs use cases.
-
 Dataset structure
-+++++++++++++++++++++
+****************************
 
 A dataset is a directory with the following structure:
 
@@ -58,17 +53,17 @@ It contains the paths to the data files. The  __ROOTDIR__ placeholder is resolve
 data
 --------------------
 
-This is the directory containing the data files. There is one sub-directory in it for each experiment.
+This is the directory containing the data files. There is ideally one sub-directory in it for each experiment.
 
 index
 ---------------
 
-The is the directory containing the data indexing information. It contains one directory for each experiment. The contents is typically pre-generated and if it is missing or incomplete automatically re-generated.
+This is the directory containing the data indexing information. It contains one directory for each experiment. The contents is typically pre-generated and if it is missing or incomplete automatically re-generated.
 
 conf
 ---------------
 
-The is the directory containing the map and style configurations. It can be empty, however if we place files in it they will extend the system based default configurations.
+This is the directory containing the map and style configurations. It can be empty, however if we place files in it they will extend the built-in default configurations.
 
 conf/areas.yaml
 -------------------
