@@ -1802,13 +1802,13 @@
     type: script
 - plot_diff_maps:
     category: {}
-    desc: High-level function to generates map-based difference plots
+    desc: High-level function to generate map-based difference plots
     group:
     - plot
     type: script
 - plot_maps:
     category: {}
-    desc: High-level function to generates map-based plots
+    desc: High-level function to generate map-based plots
     group:
     - plot
     type: script
@@ -1836,6 +1836,12 @@
     pix: DISPLAYWINDOW
     title: Display Window
     type: icon
+- plot_xs:
+    category: {}
+    desc: High-level function to generate cross section plots
+    group:
+    - plot
+    type: script
 - png_output:
     category: {}
     desc: Defines the PNG output format
