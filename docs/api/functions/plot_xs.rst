@@ -14,7 +14,7 @@ plot_xs
     :type line: list
     :param map_data: specifies the GRIB data (and the corresponding styles) that will be displayed in the side map. If ``map_data`` is None and ``map_line`` is False no side-map is displayed.
     :type map_data: :class:`Fieldset` or tuple/list of :class:`Fieldset` and visual definition objects
-    :param map_line: controls wether the cross section line is rendered onto the side map. The line is rendered with a hard-coded style (thick red line). 
+    :param map_line: controls wether the cross section line is rendered onto the side map. The line style is hard-coded (thick red line). 
     :type map_line: bool
     :param view: specifies the map view as a :func:`geoview` for the side map.
     :type view:  :func:`geoview`
@@ -48,7 +48,7 @@ Limitations
 
     .. note::
 
-        If would like to create a fully customised cross section plot see the :ref:`cross section gallery <gallery_group_sections>` examples.
+        If you would like to create a fully customised cross section plot see the :ref:`cross section gallery <gallery_group_sections>` examples.
 
 Examples
 ++++++++++++
