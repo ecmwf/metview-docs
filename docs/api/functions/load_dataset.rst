@@ -3,12 +3,7 @@ load_dataset
 
 .. py:function:: load_dataset(name, path="")
 
-    .. warning::
-    
-        This is an experimental feature.  New in metview-python version 1.8.0.
-
-        
-    Loads a dataset. 
+    Loads a dataset (see :ref:`Datasets <dataset_overview>`.) 
    
     :param name: name of the dataset
     :type name: str
@@ -26,7 +21,7 @@ Dataset lookup order
         
         ds = mv.load_dataset("oifs_2021")
 
-    first the $MPY_DATASET_ROOT/oifs_2021 folder is checked then if this folder does not exist "oifs_2021" is regarded as a **built-in dataset**, and if available it will be automatically downloaded from the dedicated download server.
+    first the $MPY_DATASET_ROOT/oifs_2021 folder is checked. If this folder does not exist "oifs_2021" is regarded as a **built-in dataset**, and Metview will automatically try to download it from the dedicated download server.
 
 Using a path to a dataset
 ++++++++++++++++++++++++++++ 
@@ -43,3 +38,5 @@ Using a path to a dataset
         
         Datasets can be very large so you need to carefully select the location where you want to store them.
 
+
+.. mv-minigallery:: load_dataset

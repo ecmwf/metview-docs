@@ -16,7 +16,7 @@ plot_xs
     :type map_data: :class:`Fieldset` or tuple/list of :class:`Fieldset` and visual definition objects
     :param map_line: controls wether the cross section line is rendered onto the side map. The line style is hard-coded (thick red line). 
     :type map_line: bool
-    :param view: specifies the map view as a :func:`geoview` for the side map.
+    :param view: specifies the map view as a :func:`geoview` for the side map. If ``area`` is also specified the projection in the view is changed to cylindrical (but the map style is kept). See :func:`make_geoview` on how to build a view with predefined areas and map styles.
     :type view:  :func:`geoview`
     :param area: specifies the map area for the side map. It can be either a named built-in area or a list in the format of [S, W, N, E]. When ``area`` is a list a cylindrical map projection is used.
     :type area: str or list
@@ -25,7 +25,7 @@ plot_xs
     :param legend_font_size: specifies the font size in cm for the plot legend
     :type legend_font_size: number
     
-    :func:`plot_xs` is a convenience function allowing to plot data in a simple way using predefined settings. The layout is always fixed containing two views: an optional **side map** and the **cross section** itself.
+:func:`plot_xs` is a convenience function allowing to plot data in a simple way using predefined settings. The layout is always fixed containing two views: an optional **side map** and the **cross section** itself.
     
 Side map
 +++++++++
@@ -35,14 +35,14 @@ Side map
 Cross section
 ++++++++++++++++
     
-    The data and the styles used to generate the cross section are defined by the positional arguments. In the argument list a :class:`Fieldset` can be followed by any number of visual definitions (:func:`mcont` and :func:`mwind`), which define the plotting style for the given data. If no style is specified for a data object the style will be automatically generated using the currently loaded style configuration. 
+    The data and the styles used to generate the cross section are defined by the positional arguments (``*args``). In the argument list a :class:`Fieldset` can be followed by any number of visual definitions (:func:`mcont` and :func:`mwind`), which define the plotting style for the given data. If no style is specified for a data object the style will be automatically generated using the currently loaded style configuration. 
 
 Limitations
 ++++++++++++++++ 
 
     :func:`plot_xs` is a high-level function using pre-defined settings, therefore it comes with certain limitations: 
 
-    * each :class:`Fieldset` must be defined on pressure levels and can only contain a single time instance
+    * each :class:`Fieldset` must be defined on pressure levels and can only contain a single time instance (same sate, time step etc.)
     * the cross section view properties (e.g. level range, axes etc.) cannot be controlled
     * while the data and map view styles can be fully customised, the title and legend are automatically built and no control is offered over them
 

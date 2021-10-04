@@ -1,9 +1,17 @@
+.. _dataset_overview:
+
 Dataset overview
 **********************
 
-The :ref:`/examples/working_with_datasets.ipynb` notebook gives a nice overview of how to work with a dataset. 
+What is a dataset?
+---------------------
 
-Generally speaking a dataset offers easy **data access** and high-level **visualisation** based on predefined styles.
+A dataset is simply a **set of data files** (GRIB and CSV) packed together with **customised styles** for the ease of visualisation. The GRIB data in a dataset is typically indexed providing fast access to the individual fields. Datasets are best suited for case studies and training courses where participants mainly want to focus on the scientific contents and not on the details of data access and plot customisation. 
+
+.. note::
+
+    The :ref:`/examples/working_with_datasets.ipynb` notebook gives an overview of how to work with a dataset. 
+
 
 Data access
 -----------------
