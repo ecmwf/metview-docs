@@ -19,9 +19,12 @@ grib_get
    * l=long
    * d=double
    * la=long array
-   * da=double array. 
+   * da=double array
+   * n=native type *New in Metview version 5.14.0*. 
    
-   For example, the key 'centre' can be retrieved as a str with 'centre' or 'centre:s', or as a number with 'centre:l'. 
+   For example, the key 'centre' can be retrieved as a str with 'centre' or 'centre:s', or as a number with 'centre:l'.
+   Each GRIB key has a 'native type', e.g. long or string. If the type is specified as "n" then the type that is returned.
+   The native type for the key 'centre' is str, so 'centre:n' will return a str.
    
    The result is always a list of lists:
    
