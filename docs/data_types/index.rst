@@ -11,3 +11,4 @@ Data types
    netcdf
    odb
    table
+   track
