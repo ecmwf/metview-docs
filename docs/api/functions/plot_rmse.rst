@@ -18,7 +18,7 @@ plot_rmse
     
     :func:`plot_rmse` is a convenience function allowing to generate RMSE curve plots in a simple way using predefined settings.
     
-    The RMSE value for a given field *f* with respect to the corresponding field from ``ref`` can be written as (N is the number of gridpoints in the field): 
+    The RMSE value for a given field *f* with respect to the corresponding field from ``ref`` can be written as follows (N is the number of gridpoints in the field): 
 
         .. math:: 
             
