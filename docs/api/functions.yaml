@@ -1827,6 +1827,12 @@
     - layout
     pix: DISPLAYWINDOW
     type: icon
+- plot_rmse:
+    category: {}
+    desc: High-level function to generate RMSE curve plots from GRIB
+    group:
+    - plot
+    type: script
 - plot_subpage:
     category: {}
     desc: Creates a subpage in a plot layout
