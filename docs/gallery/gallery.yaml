@@ -175,6 +175,7 @@ xy:
   - time_series
   - fill_between_curves
   - cartesian_log_y_axis
+  - rmse_curve
   - ens_plume
   - cdf_curve
   - grib_scatterplot
