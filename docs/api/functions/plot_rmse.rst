@@ -62,22 +62,49 @@ Example with deterministic forecast
 
             import metview as mv
 
-            an = mv.gallery.load_dataset("an_z_rmse.grib", check_local=True)
-            fc = mv.gallery.load_dataset("fc_z_rmse.grib", check_local=True)
-
-            # filter 500 hPa z
-            f_an = an["z500"]
-            f_fc = fc["z500"]
+            # get data with 500 hPa geopotential
+            f = mv.gallery.load_dataset("z_rmse.grib", check_local=True)
+            an = f.select(type="an")
+            fc = f.select(type="fc")
 
             # assign a label
-            f_an.label = "AN"
-            f_fc.label = "OPER"
+            an.label = "AN"
+            fc.label = "OPER"
 
             # generate plot
-            mv.plot_rmse(f_fc, ref=f_an)
+            mv.plot_rmse(fc, ref=an)
 
 
     .. image:: /_static/api/plot_rmse_1.png
+        :width: 400px
+
+
+.. mv-minigallery:: plot_rmse
+
+Example with ensemble forecast
++++++++++++++++++++++++++++++++++++++++++++
+
+    The following example shows how to create an RMSE curve plot with ENS forecast data (geopotential on 500 hPa): 
+
+        .. code-block:: python
+
+            import metview as mv
+
+            # get data with 500 hPa geopotential
+            f = mv.gallery.load_dataset("ens_z_rmse.grib", check_local=True)
+            an = f.select(type="an")
+            fc = f.select(type="fc")
+            en = f.select(type=["cf","pf"])
+
+            # assign a label
+            an.label = "AN"
+            fc.label = "OPER"
+
+            # generate plot
+            mv.plot_rmse(en, fc, ref=an)
+
+
+    .. image:: /_static/api/plot_rmse_2.png
         :width: 400px
 
 
