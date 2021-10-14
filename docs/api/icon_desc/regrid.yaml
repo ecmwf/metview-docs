@@ -28,13 +28,14 @@ params:
     values: grid/lambert_azimuthal_equal_area/lambert_conformal/template/filter
 - template_source:
     default: ''
-    desc: ''
+    desc: Specifies the path to the template data. When it is defined it takes precedence
+         over ``template_data``. Enabled when ``grid_definition_mode`` is "template".
     ptype: str
     values: ''
 - template_data:
     default: ''
-    desc: ''
-    ptype: str
+    desc: Specifies the template data object. Enabled when ``grid_definition_mode`` is "template".
+    ptype: :class:`Fieldset`
     values: ''
 - grid:
     default: ''
