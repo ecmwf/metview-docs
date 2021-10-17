@@ -2368,6 +2368,14 @@
     group:
     - widget
     type: icon
+- solar_zenith_angle:
+    category:
+      fieldset: Computes the solar zenith angle for a fieldset
+    desc: Computes the solar zenith angle for a fieldset
+    group: 
+    - geo
+    - grib
+    type: script
 - sort:
     category:
       fieldset: Sorts a fieldset
