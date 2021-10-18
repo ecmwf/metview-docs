@@ -15,7 +15,7 @@ solar_zenith_angle
 
     .. math:: 
 
-        cos\theta_{s} = sin\phi sin\delta + cos\phi cos\delta cosh
+        cos\theta_{s} = sin\phi\,  sin\delta + cos\phi\,  cos\delta\, cosh
     
     where:
 
@@ -28,11 +28,11 @@ solar_zenith_angle
 
      .. math:: 
 
-         \delta = - arcsin\left(sin(-23.44\unicode{xB0}) cos(\frac{360\unicode{xB0}}{365.24\unicode{xB0}} (N+10) + \frac{360\unicode{xB0}}{\pi} 0.0167 sin(\frac{360\unicode{xB0}}{365.24\unicode{xB0}} (N-2))\right)
+        \delta = - arcsin\left(0.39779 cos(0.98565\unicode{xB0} (N+10) + 1.914\unicode{xB0} sin(0.98565\unicode{xB0} (N-2))\right)
 
     where:
 
-    * N is the day of the year beginning with N=0 at midnight Universal Time (UT) as January 1
+    * N is the day of the year beginning with N=0 at midnight Universal Time (UT) as January 1. It is a floating point number allowing for fractional days.
 
     A missing value in any field in ``fs`` will result in a missing value in the corresponding grid point in the output fieldset. 
 
