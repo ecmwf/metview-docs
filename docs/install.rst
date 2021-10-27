@@ -93,6 +93,12 @@ To activate extra debugging information, set this before starting Python:
 
     export METVIEW_PYTHON_DEBUG=1
 
+For more output from MARS requests, set this before starting Python:
+
+.. code-block:: bash
+
+    export METVIEW_MARS_LOG=1
+
 When you import metview, the Metview startup script is run in order to set up the working
 environment. Usually this is pretty much instant, but on very heavily loaded machines, it may
 take a few seconds. There is a default timeout of 8 seconds, but this can be increased if needed,
