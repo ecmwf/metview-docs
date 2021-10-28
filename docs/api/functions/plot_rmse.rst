@@ -24,6 +24,8 @@ plot_rmse
             
                 rmse = \sqrt {\frac {1}{N} \sum_{i}^{N} (f_{i}-ref_{i})^{2}}
 
+    The averaging in the formula above is carried out with :func:`integrate`. 
+
     
 Data
 ++++++++++++++++++++++++

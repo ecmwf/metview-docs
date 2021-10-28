@@ -30,6 +30,7 @@ Visualisation
     * :func:`plot_maps`: generic map-based plots. Can be used for both the GRIB and track data from a dataset.
     * :func:`plot_diff_maps`: generates difference plots for GRIB data. Ideal to compare experiments or forecast and analysis.
     * :func:`plot_xs`: generates vertical cross sections with a side map showing the transect line.
+    * :func:`plot_rmse`: generates RMSE curve plots for GRIB data.
 
 * Custom, user defined styles (visual definitions in the Metview terminology) can also be used with all the above plotting routines. 
 
