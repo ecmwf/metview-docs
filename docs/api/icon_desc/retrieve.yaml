@@ -7,7 +7,7 @@ params:
     desc: ''
     ptype: str
     values: ''
-- class:
+- class\_:
     default: od
     desc: ''
     ptype: str
