@@ -126,4 +126,5 @@ pages:
     - plot
     - layout
     - output
+    - widget
     title: Visualisation functions

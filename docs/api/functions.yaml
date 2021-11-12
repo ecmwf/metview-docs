@@ -48,16 +48,16 @@
     - view
     title: Annotation View
     type: icon
-- any:
+- ui_any:
     category: {}
-    desc: ''
+    desc: Defines a value input widget to be used in dialog()
     group:
     - widget
-    type: icon
+    type: script
 - append:
     category:
       io: 'Appends the given data to file'
-    desc: Aappends the given data to file
+    desc: Appends the given data to file
     group:
     - grib
     - geopoints
@@ -174,14 +174,6 @@
     desc: Converts numbers to missing values in a fieldset
     group:
     - mask
-    - grib_object
-    type: script
-- bounding_box:
-    category:
-      fieldset: Returns the bounding box for each field in a fieldset
-    desc: Returns the bounding box for each field in a fieldset
-    group:
-    - geo
     - grib_object
     type: script
 - bufr_picker:
@@ -366,19 +358,25 @@
     type: script
 - dewpoint_from_relative_humidity:
     category:
-      fieldset: Computes the dewpoint from relative humidity
-    desc: Computes the dewpoint from relative humidity
+      fieldset: Computes the dewpoint for a given temperature and relative humidity
+    desc: Computes the dewpoint for a given temperature and relative humidity
     group:
     - thermo
     - grib
     type: script
 - dewpoint_from_specific_humidity:
     category:
-      fieldset: Computes the dewpoint from specific humidity
-    desc: Computes the dewpoint from specific humidity
+      fieldset: Computes the dewpoint for a given specific humidity and pressure
+    desc: Computes the dewpoint for a given specific humidity and pressure
     group:
     - thermo
     - grib
+    type: script
+- dialog:
+    category: {}
+    desc: Builds a popup editor and reads back user input
+    group:
+    - widget
     type: script
 - dictionary:
     category:
@@ -1810,13 +1808,13 @@
     type: script
 - plot_diff_maps:
     category: {}
-    desc: High-level function to generate map-based difference plots
+    desc: High-level function to generates map-based difference plots
     group:
     - plot
     type: script
 - plot_maps:
     category: {}
-    desc: High-level function to generate map-based plots
+    desc: High-level function to generates map-based plots
     group:
     - plot
     type: script
@@ -1827,12 +1825,6 @@
     - layout
     pix: DISPLAYWINDOW
     type: icon
-- plot_rmse:
-    category: {}
-    desc: High-level function to generate RMSE curve plots from GRIB
-    group:
-    - plot
-    type: script
 - plot_subpage:
     category: {}
     desc: Creates a subpage in a plot layout
@@ -1850,12 +1842,6 @@
     pix: DISPLAYWINDOW
     title: Display Window
     type: icon
-- plot_xs:
-    category: {}
-    desc: High-level function to generate cross section plots
-    group:
-    - plot
-    type: script
 - png_output:
     category: {}
     desc: Defines the PNG output format
@@ -2024,16 +2010,8 @@
     type: icon
 - relative_humidity_from_dewpoint:
     category:
-      thermo: Computes the relative humidity from dewpoint
-    desc: Computes the relative humidity from dewpoint
-    group:
-    - thermo
-    - grib
-    type: script
-- relative_humidity_from_specific_humidity:
-    category:
-      thermo: Computes the relative humidity from specific humidity
-    desc: Computes the relative humidity from specific humidity
+      thermo: Computes the relative humidity for a given temperature and dewpoint
+    desc: Computes the relative humidity for a given temperature and dewpoint
     group:
     - thermo
     - grib
@@ -2041,7 +2019,7 @@
 - relhum:
     category: {}
     data: null
-    desc: Computes relative humidity from specific humidity fieldset
+    desc: Computes relative humidity from specific humidity
     group:
     - thermo
     - grib
@@ -2368,14 +2346,6 @@
     group:
     - widget
     type: icon
-- solar_zenith_angle:
-    category:
-      fieldset: Computes the solar zenith angle for a fieldset
-    desc: Computes the solar zenith angle for a fieldset
-    group: 
-    - geo
-    - grib
-    type: script
 - sort:
     category:
       fieldset: Sorts a fieldset
@@ -2401,16 +2371,8 @@
     type: script
 - specific_humidity_from_dewpoint:
     category:
-      fieldset: Computes the specific humidity from dewpoint
-    desc: Computes the specific humidity from dewpoint
-    group:
-    - thermo
-    - grib
-    type: script
-- specific_humidity_from_relative_humidity:
-    category:
-      fieldset: Computes the specific humidity from relative humidity 
-    desc: Computes the specific humidity from relative humidity 
+      fieldset: Computes the specific humidity for a given dewpoint and pressure
+    desc: Computes the specific humidity for a given dewpoint and pressure
     group:
     - thermo
     - grib
@@ -2522,14 +2484,6 @@
     - calculus
     - grib_object
     type: script
-- stvl:
-    category:
-      geopoints: Retrieves point data from the STVL database in geopoints format
-    desc: Retrieves point data from the STVL database in geopoints format 
-    group:
-    - geopoints_access
-    type: icon   
-    ecmwf: true 
 - subsample:
     category:
       geopoints: Filters from the first geopoints variable points that exist in the

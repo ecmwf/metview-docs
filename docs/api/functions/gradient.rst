@@ -47,6 +47,7 @@ gradient
 
 
    .. note::
+      
       See also :func:`first_derivative_x`, :func:`first_derivative_y`, :func:`second_derivative_x` and :func:`second_derivative_y`.
 
 .. mv-minigallery:: gradient
