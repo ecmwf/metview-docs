@@ -48,8 +48,18 @@ dialog
                 default=[30,-25,50,65] # S, W, N, E
             )
 
+            f = mv.ui_colour(
+                name="isoline_colour",
+                default="green"
+            )
+
+            g = mv.ui_toggle(
+                name="show_title",
+                default="on"
+            )  
+
             # retrieve the user input values
-            x = mv.dialog([a, b, c, d, e])
+            x = mv.dialog([a, b, c, d, e, f, g])
 
             print("area=", x["area"])
 
@@ -65,42 +75,23 @@ dialog
         :widths: 20 80
         :header-rows: 0
 
-        * - :func:`ui_checkbox`
-          - 
-
         * - :func:`ui_colour`
-          - 
-
-        * - :func:`ui_definition`
-          - 
+          - colour selector widget
 
         * - :func:`ui_icon`
-          - 
-
-        * - :func:`ui_menu`
-          - 
+          - icon drop area widget
 
         * - :func:`ui_option_menu`
-          - 
-
-        * - :func:`ui_output`
-          - 
+          - option menu (combobox) widget
 
         * - :func:`ui_slider`
-          - 
+          - slider widget
 
         * - :func:`ui_toggle`
-          - 
+          - on/off toggle button widgets
 
         * - :func:`ui_any`
           - value input widget
-
-        * - :func:`ui_float`
-          - 
-
-        * - :func:`ui_integer`
-          - 
-
 
 
 .. mv-minigallery:: dialog

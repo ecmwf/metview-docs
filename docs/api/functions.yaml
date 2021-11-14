@@ -194,9 +194,10 @@
 - checkbox:
     category: {}
     desc: ''
+    exclude: true
     group:
     - widget
-    type: icon
+    type: script
 - cleanfile:
     category: {}
     desc: Removes unwanted header padding from GRIB and bufr files
@@ -206,12 +207,12 @@
     - bufr
     title: Clean File
     type: icon
-- colour:
+- ui_colour:
     category: {}
-    desc: ''
+    desc: Defines a colour selector widget to be used in dialog()
     group:
     - widget
-    type: icon
+    type: script
 - columns:
     category:
       geopoints: Returns a list of column names for a geopoints variable
@@ -343,9 +344,10 @@
 - definition:
     category: {}
     desc: ''
+    exclude: true
     group:
     - widget
-    type: icon
+    type: script
 - describe:
     category:
       fieldset: Prints summary of the contents of a fieldset
@@ -950,12 +952,12 @@
     group:
     - view
     type: icon
-- icon:
+- ui_icon:
     category: {}
-    desc: ''
+    desc: Defines an icon drop area widget to be used in dialog()
     group:
     - widget
-    type: icon
+    type: script
 - in:
     category:
       list: Test if a value is in a list
@@ -1291,9 +1293,10 @@
 - menu:
     category: {}
     desc: ''
+    exclude: true
     group:
     - widget
-    type: icon
+    type: script
 - merge:
     category:
       fieldset: Merge several fieldsets
@@ -1743,18 +1746,19 @@
     - geo
     - geopoints_object
     type: script
-- option_menu:
+- ui_option_menu:
     category: {}
-    desc: ''
+    desc: Defines an combobox widget to be used in dialog()
     group:
     - widget
-    type: icon
+    type: script
 - output:
     category: {}
     desc: ''
+    exclude: true
     group:
     - widget
-    type: icon
+    type: script
 - overlay_control:
     category: {}
     desc: ''
@@ -2340,12 +2344,12 @@
     desc: Sleep (number of seconds)
     exclude: true
     type: script
-- slider:
+- ui_slider:
     category: {}
-    desc: ''
+    desc: Defines a slider widget to be used in dialog()
     group:
     - widget
-    type: icon
+    type: script
 - sort:
     category:
       fieldset: Sorts a fieldset
@@ -2656,12 +2660,12 @@
     group:
     - grib_object
     type: script
-- toggle:
+- ui_toggle:
     category: {}
-    desc: ''
+    desc:  Defines on/off toggle buttons to be used in dialog()
     group:
     - widget
-    type: icon
+    type: script
 - togrib:
     category: {}
     desc: ''
@@ -2681,15 +2685,17 @@
 - ui_float:
     category: {}
     desc: ''
+    exclude: true
     group:
     - widget
-    type: icon
+    type: script
 - ui_integer:
     category: {}
     desc: ''
+    exclude: true
     group:
     - widget
-    type: icon
+    type: script
 - unipressure:
     category:
       fieldset: Creates fields of pressure or thickness (accepts several grid types)

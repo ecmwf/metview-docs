@@ -1,20 +1,22 @@
-ui_any
+ui_option_menu
 =================
 
-.. py:function:: ui_any(**kwargs)
+.. py:function:: ui_option_menu(**kwargs)
    
    *New in metview-python version 1.9.0*.
    
-   Defines a value input widget to be used in :func:`dialog`.
+   Defines an option menu (combobox) widget to be used in :func:`dialog`.
       
    :param name: parameter name
    :type name: str
-   :param values: value or list of values 
+   :param values: list of values
+   :type values: list, default: ["a", "b", "c"] 
    :param default: default value
+   :type default: default: "a"
+   :param beautify: beautifies values appearing in the widget
+   :type beautify: bool, default: True
    :param help: creates a helper button with a given helper action in the widget.
-   :type help: {"help_input", "help_script", "help_multiple_selection"}, default: None
-   :param input_type: define the input type popup editor when ``help`` is "help_input". 
-   :type input_type: {point, line, area}, default "line"
+   :type help: {"help_script"}, default: None
    :param help_script_command: defines the shell command to be executed when ``help`` is "help_script"
    :type help_script_command: str
 
@@ -22,4 +24,4 @@ ui_any
       
       See also :func:`dialog`
 
-.. mv-minigallery:: ui_any
+.. mv-minigallery:: ui_option_menu
