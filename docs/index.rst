@@ -38,6 +38,7 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    dataset/index
    macro/index
    metview/index
+   confluence/index
 
 .. toctree::
    :maxdepth: 1
