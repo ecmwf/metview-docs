@@ -1,7 +1,7 @@
 ml_to_hl
 ============
 
-.. py:function:: ml_to_hl(fs, z, zs, h, ref_level, method)
+.. py:function:: ml_to_hl(fs, z, zs, h, ref_level, method, [fs_surf])
 
    Interpolates ``fs`` on model levels (i.e. on hybrid or eta levels used by the IFS) onto height levels (in m) above sea or ground level. 
    
@@ -11,13 +11,18 @@ ml_to_hl
    :type z: :class:`Fieldset`
    :param zs: surface geopotential field (if ``ref_level`` is set to "sea" it should be set to None).
    :type zs: :class:`Fieldset` or None
-   :param h: list of target height levels (they can came in any given order)
+   :param h: list of target height levels in metres (they can came in any given order). Values must be non-negative.
    :type h: list or :class:`Fieldset`
-   :param str ref_level: specifies the reference level for the target heights. The possible values are "sea" and "ground"
-   :param str method: specifies the interpolation method. The possible values are "linear" and "log". 
+   :param str ref_level: specifies the reference level for the target heights. The possible values are "sea" and "ground". If it is "ground" a valid ``zs`` must be provided.
+   :param str method: specifies the interpolation method. The possible values are "linear" and "log". For target height levels very close to 0 always a "linear" interpolation is used.
+   :param fs_surf: (optional) specifies the field values on the surface. With this it is possible to interpolate to target heights between the surface and the bottom-most model level. If ``fs_surf`` is a number it defines a constant :class:`Fieldset`. Only available when ``ref_level`` is "ground".
+   :type fs_surf: number or :class:`Fieldset`
+
    :rtype: :class:`Fieldset`
       
-   At gridpoints where the interpolation is not possible a missing value is returned.  
+   The input data (``fs``) must contain one field per model level only.
+
+   At gridpoints where the interpolation is not possible a missing value is returned. It can happen when the target height level is below the bottom-most model level or the surface (when ``fs_surf`` is used). Please note that model levels we are dealing with in :func:`ml_to_hl` are "full-levels" and the bottom-most model level does match the surface but it is above it. If you need to interpolate to height levels close to the surface use ``fs_surf``.   
 
    .. note::
       Geopotential is not archived operationally on model levels in MARS at ECMWF. To compute it use :func:`mvl_geopotential_on_ml`. 
