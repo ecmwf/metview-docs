@@ -15,7 +15,7 @@ ml_to_hl
    :type h: list or :class:`Fieldset`
    :param str ref_level: specifies the reference level for the target heights. The possible values are "sea" and "ground". If it is "ground" a valid ``zs`` must be provided.
    :param str method: specifies the interpolation method. The possible values are "linear" and "log". For target height levels very close to 0 always a "linear" interpolation is used.
-   :param fs_surf: (optional) specifies the field values on the surface. With this it is possible to interpolate to target heights between the surface and the bottom-most model level. If ``fs_surf`` is a number it defines a constant :class:`Fieldset`. Only available when ``ref_level`` is "ground".
+   :param fs_surf: (optional) specifies the field values on the surface. With this it is possible to interpolate to target heights between the surface and the bottom-most model level. If ``fs_surf`` is a number it defines a constant :class:`Fieldset`. Only available when ``ref_level`` is "ground". *New in Metview version 5.14.0*.
    :type fs_surf: number or :class:`Fieldset`
 
    :rtype: :class:`Fieldset`
