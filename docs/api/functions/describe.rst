@@ -13,7 +13,7 @@ describe
     :type fs: :class:`Fieldset` 
     :param param:  prints a more detailed summary for the specified ecCodes shortName (str) or paramId (number)
     :type param: str or number
-    :rtype: HTML formatted output in a Jupyter notebook, otherwise the summary is printed to the standard output
+    :rtype: HTML formatted output in a Jupyter notebook, otherwise a Pandas dataframe is returned (from metview-python version 1.9.0) and the summary is printed to the standard output
     
     :func:`describe` scans the :class:`Fieldset` and for each message (i.e. field) extracts a fixed set of metadata values, which are then grouped by parameter and presented in a tabular format. The parameters are identified by their ecCodes shortNames or paramIds. :func:`describe` does not try to form a hypercube(s) but simply lists the unique metadata values for each parameter.
 
