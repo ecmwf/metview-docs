@@ -1,11 +1,11 @@
-ui_any
+ui.any
 =================
 
-.. py:function:: ui_any(**kwargs)
+.. py:function:: ui.any(**kwargs)
    
    *New in metview-python version 1.9.0*.
    
-   Defines a value input widget to be used in :func:`dialog`.
+   Defines a value input widget to be used in :func:`ui.dialog`.
       
    :param name: parameter name
    :type name: str
@@ -17,9 +17,10 @@ ui_any
    :type input_type: {point, line, area}, default "line"
    :param help_script_command: defines the shell command to be executed when ``help`` is "help_script"
    :type help_script_command: str
+   :rtype: object to be used in :func:`ui.dialog`
 
    .. note::
       
-      See also :func:`dialog`
+      See also :func:`ui.dialog`
 
-.. mv-minigallery:: ui_any
+.. mv-minigallery:: ui.any

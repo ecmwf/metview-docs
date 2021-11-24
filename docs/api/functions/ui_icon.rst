@@ -1,11 +1,11 @@
-ui_icon
+ui.icon
 =================
 
-.. py:function:: ui_icon(**kwargs)
+.. py:function:: ui.icon(**kwargs)
    
    *New in metview-python version 1.9.0*.
    
-   Defines an Metview icon drop area widget to be used in :func:`dialog`.
+   Defines an Metview icon drop area widget to be used in :func:`ui.dialog`.
       
    :param name: parameter name
    :type name: str
@@ -17,9 +17,10 @@ ui_icon
    :type help: {"help_script"}, default: None
    :param help_script_command: defines the shell command to be executed when ``help`` is "help_script"
    :type help_script_command: str
+   :rtype: object to be used in :func:`ui.dialog`
 
    .. note::
       
-      See also :func:`dialog`
+      See also :func:`ui.dialog`
 
-.. mv-minigallery:: ui_icon
+.. mv-minigallery:: ui.icon

@@ -1,11 +1,11 @@
-ui_toggle
+ui_.oggle
 =================
 
-.. py:function:: ui_toggle(**kwargs)
+.. py:function:: ui.toggle(**kwargs)
    
    *New in metview-python version 1.9.0*.
    
-   Defines a widget with two exclusive toggle buttons labelled as "on" and "off". To be used in :func:`dialog`.
+   Defines a widget with two exclusive toggle buttons labelled as "on" and "off". To be used in :func:`ui.dialog`.
       
    :param name: parameter name
    :type name: str
@@ -15,10 +15,10 @@ ui_toggle
    :type help: {"help_script"}, default: None
    :param help_script_command: defines the shell command to be executed when ``help`` is "help_script"
    :type help_script_command: str
-   :rtype: object to be used in :func:`dialog`
+   :rtype: object to be used in :func:`ui.dialog`
 
    .. note::
       
-      See also :func:`dialog`
+      See also :func:`ui.dialog`
 
-.. mv-minigallery:: ui_toggle
+.. mv-minigallery:: ui.toggle

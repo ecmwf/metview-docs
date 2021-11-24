@@ -1,7 +1,7 @@
-ui_colour
+ui.colour
 =================
 
-.. py:function:: ui_colour(**kwargs)
+.. py:function:: ui.colour(**kwargs)
    
    *New in metview-python version 1.9.0*.
    
@@ -11,9 +11,10 @@ ui_colour
    :type name: str
    :param default: default value
    :type default: str, default: "red"
+   :rtype: object to be used in :func:`dialog`
 
    .. note::
       
       See also :func:`dialog`
 
-.. mv-minigallery:: ui_colour
+.. mv-minigallery:: ui.colour

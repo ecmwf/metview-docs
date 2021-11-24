@@ -48,12 +48,6 @@
     - view
     title: Annotation View
     type: icon
-- ui_any:
-    category: {}
-    desc: Defines a value input widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - append:
     category:
       io: 'Appends the given data to file'
@@ -207,12 +201,6 @@
     - bufr
     title: Clean File
     type: icon
-- ui_colour:
-    category: {}
-    desc: Defines a colour selector widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - columns:
     category:
       geopoints: Returns a list of column names for a geopoints variable
@@ -373,12 +361,6 @@
     group:
     - thermo
     - grib
-    type: script
-- dialog:
-    category: {}
-    desc: Builds a popup editor and reads back user input
-    group:
-    - widget
     type: script
 - dictionary:
     category:
@@ -952,12 +934,6 @@
     group:
     - view
     type: icon
-- ui_icon:
-    category: {}
-    desc: Defines an icon drop area widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - in:
     category:
       list: Test if a value is in a list
@@ -1746,12 +1722,6 @@
     - geo
     - geopoints_object
     type: script
-- ui_option_menu:
-    category: {}
-    desc: Defines an combobox widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - output:
     category: {}
     desc: ''
@@ -2344,12 +2314,6 @@
     desc: Sleep (number of seconds)
     exclude: true
     type: script
-- ui_slider:
-    category: {}
-    desc: Defines a slider widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - sort:
     category:
       fieldset: Sorts a fieldset
@@ -2660,12 +2624,6 @@
     group:
     - grib_object
     type: script
-- ui_toggle:
-    category: {}
-    desc:  Defines on/off toggle buttons to be used in dialog()
-    group:
-    - widget
-    type: script
 - togrib:
     category: {}
     desc: ''
@@ -2681,6 +2639,48 @@
     category:
       info: Returns the type of an expression
     desc: Returns the type of an expression
+    type: script
+- ui.any:
+    category: {}
+    desc: Defines a value input widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.colour:
+    category: {}
+    desc: Defines a colour selector widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.dialog:
+    category: {}
+    desc: Builds a popup editor and reads back user input
+    group:
+    - widget
+    type: script
+- ui.icon:
+    category: {}
+    desc: Defines an icon drop area widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.option_menu:
+    category: {}
+    desc: Defines an combobox widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.slider:
+    category: {}
+    desc: Defines a slider widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.toggle:
+    category: {}
+    desc:  Defines on/off toggle buttons to be used in dialog()
+    group:
+    - widget
     type: script
 - ui_float:
     category: {}
