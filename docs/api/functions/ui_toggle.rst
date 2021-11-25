@@ -1,4 +1,4 @@
-ui_.oggle
+ui.toggle
 =================
 
 .. py:function:: ui.toggle(**kwargs)

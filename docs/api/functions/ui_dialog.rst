@@ -16,19 +16,19 @@ ui.dialog
 
             import metview as mv
 
-            a = mv.ui_icon(
+            a = mv.ui.icon(
                 name="input data",
                 class_="GRIB"
             )
 
-            b = mv.ui_any(
+            b = mv.ui.any(
                 name="verif date (yyyy-mm-dd)",
                 default="2012-03-01",
                 help="help_script",
                 help_script_command="echo Dates must be in YYYY-MM-DD format"
             )
 
-            c = mv.ui_slider(
+            c = mv.ui.slider(
                 name="days",
                 min=1,
                 max=10,
@@ -41,19 +41,19 @@ ui.dialog
                 default="t"
             )
         
-            e = mv.ui_any(
+            e = mv.ui.any(
                 name="area",
                 help="help_input",
                 input_type="area",
                 default=[30,-25,50,65] # S, W, N, E
             )
 
-            f = mv.ui_colour(
+            f = mv.ui.colour(
                 name="isoline_colour",
                 default="green"
             )
 
-            g = mv.ui_toggle(
+            g = mv.ui.toggle(
                 name="show_title",
                 default="on"
             )  
