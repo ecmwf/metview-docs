@@ -22,13 +22,13 @@ mvl_geopotential_on_ml
    The required levels and their ordering in ``t`` and ``q`` depend on the Metview version used:
    
    * from Metview version **5.14.0**: ``t`` and ``q`` must contain the same levels in the same order but there is no restriction on the actual level ordering. The model level range must be contiguous and must include the bottom-most level. E.g. if the current vertical coordinate system has 137 model levels using only a subset of levels between e.g. 137-96 is allowed.
-   * in **previous** Metview versions: ``t`` and ``q`` must contain the full model level range in ascending numeric order. E.g. if the current vertical coordinate system has 137 model levels ``t`` and ``q`` must contain all the levels ordered as 1,,.., 137.
+   * in **previous** Metview versions: ``t`` and ``q`` must contain the full model level range in ascending numeric order. E.g. if the current vertical coordinate system has 137 model levels ``t`` and ``q`` must contain all the levels ordered as 1,..., 137.
 
    .. note::
-      The actual ECMWF model level definition is stored in the **"pv" array** in the GRIB message metadata. You can figure out the total number of model levels in the given vertical coordinate system by using the **len(pv)/2-1** formula. The typical values are 137 and 91. This can be then used to look up details about actual the model level definitions (e.g. approximate pressure and height values) on this `page <https://confluence.ecmwf.int/display/UDOC/Model+level+definitions>`_.  
+      The actual ECMWF model level definition is stored in the **"pv" array** in the GRIB message metadata. You can figure out the total number of model levels in the given vertical coordinate system by using the **len(pv)/2-1** formula. The typical values are 137 and 91. This can then be used to look up details about actual the model level definitions (e.g. approximate pressure and height values) on this `page <https://confluence.ecmwf.int/display/UDOC/Model+level+definitions>`_.  
 
    .. note::
-      **Surface geopotential** is defined on model level 1 in MARS at ECMWF! For most recent dates it is available for the 0 forecats step. However, generally it is only available as an **analysis** field!  
+      **Surface geopotential** is defined on model level 1 in MARS at ECMWF. For most recent dates it is available for the 0 forecast step. However, generally it is only available as an **analysis** field.  
       
    .. note::
       See also :func:`ml_to_hl`. 
