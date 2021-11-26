@@ -35,7 +35,7 @@ How to use a Track?
         20121029 00 -70.87 33.66
         ...
 
-    So this data contains no header and the separator is a whitespace. Using :class:`Track` we can plot this data in a few lines:
+    So this data contains no header and the separator is a whitespace. Using :class:`Track` we can make plot in a few lines:
 
         .. code-block:: python
 

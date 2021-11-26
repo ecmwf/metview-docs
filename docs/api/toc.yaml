@@ -31,7 +31,7 @@ groups:
   stats: Statistics
   table: Table data
   thermo: Thermodynamics
-  ui: Examiners
+  ui: Custom user interface
   vapor: Vapor
   vertical: Vertical
   view: Views
@@ -126,5 +126,8 @@ pages:
     - plot
     - layout
     - output
-    - widget
     title: Visualisation functions
+  ui:
+    gr:
+    - widget
+    title: Custom user interface functions

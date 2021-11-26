@@ -11,6 +11,7 @@ Functions
 * :doc:`/gen_files/toc/comp`
 * :doc:`/gen_files/toc/data`
 * :doc:`/gen_files/toc/plot`
+* :doc:`/gen_files/toc/ui`
 * :doc:`/gen_files/toc/apps`
 
 .. toctree::
@@ -21,6 +22,7 @@ Functions
    /gen_files/toc/comp
    /gen_files/toc/data
    /gen_files/toc/plot
+   /gen_files/toc/ui
    /gen_files/toc/apps
 
 **Functions associated with data types**
