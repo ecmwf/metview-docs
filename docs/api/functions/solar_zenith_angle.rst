@@ -3,7 +3,7 @@ solar_zenith_angle
 
 ..  py:function::  solar_zenith_angle(fs, to_cosine=False)
 
-    *New in metview-python version 1.9.0.*
+    *New in Metview version 5.14.0.*
     
     Computes the solar zenith angle for each gridpoint in ``fs``.
     
@@ -13,7 +13,7 @@ solar_zenith_angle
     :type to_cosine: bool
     :rtype: :class:`Fieldset`
 
-    The result is the solar zenith angle in degrees, unless ``to_cosine`` is set True when the cosine of the solar zenith angle is returned. The computations are based on the following formula:
+    The result is the solar zenith angle in degrees. However, if ``to_cosine`` is set True the cosine of the solar zenith angle is returned. The computations are based on the following formula:
 
     .. math:: 
 
