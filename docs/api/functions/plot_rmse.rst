@@ -3,6 +3,8 @@ plot_rmse
 
 .. py:function:: plot_rmse(*args, ref=None, title_font_size=0.4, legend_font_size=0.35, y_max=None)
 
+    *New in metview-python version 1.9.0*
+    
     High level function with automatic styling to generate RMSE (root mean square error) curve plots from GRIB data.
 
     .. :param area: specifies the geographical area for the RMSE computations as [S, W, N, E]. If it is not not specified all the gridpoints from the input data is used.

@@ -3,10 +3,7 @@ map_area_gallery
 
 .. py:function:: map_area_gallery()
     
-    .. warning::
-
-        This is an experimental feature. New in metview-python version 1.8.0.
-
+    *New in metview-python version 1.8.0*
 
     Generates a gallery of the built-in map areas in a Jupyter notebook.
 

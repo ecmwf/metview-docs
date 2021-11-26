@@ -3,6 +3,8 @@ solar_zenith_angle
 
 ..  py:function::  solar_zenith_angle(fs, to_cosine=False)
 
+    *New in metview-python version 1.9.0.*
+    
     Computes the solar zenith angle for each gridpoint in ``fs``.
     
     :param fs: input fieldset
