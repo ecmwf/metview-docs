@@ -29,6 +29,10 @@ univertint
          
    A missing value in any field will result in a missing value in the corresponding place in the output fieldset.
 
+
+Computations
+++++++++++++++++
+
    The computations are based on the following formula:
 
    .. math::
@@ -41,7 +45,28 @@ univertint
    * p: pressure
    * g: acceleration of gravity (9.80665 m/s2).
 
-:Example: 
+   The actual algorithm is slightly different on pressure and model levels.
+
+   For **pressure levels** the data is first sorted by pressure in ascending numerical order resulting in :math:`f_{i}` fields on levels :math:`p_{i}` i=0,...,N (with :math:`p_{i+1} > p_{i}`). Then, to estimate the pressure differential we form N layers by using the pressures halfway between two levels. If we denote the halfway pressure between level i and i+1 by :math:`p^{*}_{i}` we can write the layer sizes as follows:
+
+   .. math::
+
+      \Delta p_{0} = p^{*}_{0} - p_{0}
+
+      \Delta p_{i} = p{*}_{i+1} - p^{*}_{i}  
+
+      \Delta p_{N} = p_{N} - p^{*}_{N-1}
+
+   and estimate the integral like this:
+
+   .. math::
+      
+      \sum_{i=0}^{N} f_{i} \frac{\Delta p_{i}}{g}
+   
+   For **model level** data the vertical coordinate system definition is stored in the **"pv" array** in the GRIB header. A model level is defined on a "full level", which lies in the layer between the two neighbouring "half levels". Using ``lnsp`` and the "pv" array we can determine the  :math:`\Delta p_{i}` layer size for each level individually. The integral is then estimated in the same way as was shown above for pressure levels. Please note that you can use :func:`unithickness` to compute the layer sizes (the "thickness" in the function name actually means "layer size"). For more details about the model level definitions please visit this `page <https://confluence.ecmwf.int/display/UDOC/Model+level+definitions>`_.
+
+
+   :Example: 
 
       .. code-block:: python
 
@@ -67,7 +92,6 @@ univertint
 
          # Compute total amount of liquid water
          r = mv.univertint(lnsp,clwc)
-
 
 
 .. mv-minigallery:: univertint
