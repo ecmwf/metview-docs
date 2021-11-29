@@ -30,7 +30,7 @@ Download the icons for this session from the link below. Create a sub-directory 
 
 To get started, copy a GRIB data file into your Metview directory (``~/metview``); if you are attending the training course at ECMWF, then you should carefully type the following command in a terminal window:
 
-.. code-block
+.. code-block::
 
   cp ~trx/mv_data/t1000.grb $HOME/metview/training/day_1
 
