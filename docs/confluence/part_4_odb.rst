@@ -93,19 +93,19 @@ Inspecting the Data Values in the Plot
 The data values can  be inspected with the **Cursor Data Tool** (you can combine it with the **Magnifier** to see the fine details).
 Enable the sidebar of the Display Window with the 
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12%2011%3A41%3A10.png
+.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-41-10.png
 
 button and select the **Data** tab (and select the 'vis_temp' layer at the top if it is not yet selected). 
 Now select the **Metadata** panel inside the tab. 
 Here you will find some statistics about the data plotted and a histogram as well.
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12%2011%3A44%3A33.png
+.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-44-33.png
 
 Now switch to the **Values** panel. 
 This features a list showing all the plotted data.  
 In the bottom-left corner click on the
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12%2011%3A52%3A23.png
+.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-52-23.png
 
 button to activate the **Data probe** (this will appear in the plot). 
 The probe is synchronised with the list. 
