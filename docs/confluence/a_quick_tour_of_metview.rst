@@ -6,7 +6,8 @@ A Simple Data Visualisation
 ***************************
 When you first start Metview, you will see something like this:
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/metview-startup-folder.png
+.. image:: ../_static/a_quick_tour_of_metview/metview-startup-folder.png
+
 
 This sort of window is called a *Metview desktop*.
 
@@ -14,17 +15,20 @@ Download
 ********
 
 Download the icons for this session from the link below. Create a sub-directory called training inside your Metview home directory, $HOME/metview, and save the .tar.gz file there. Then, from Metview, navigate to this folder and right-click on the tar.gz icon; choose Extract to uncompress the files into their folder. Work from there. The main instructions are written for participants of the `Data analysis and visualisation using Metview <https://confluence.ecmwf.int/display/METV/Data+analysis+and+visualisation+using+Metview>`_ training course at ECMWF. Any files to be copied from the file system will also be downloadable from this page.
-File
-Modified
 
-File `a quick tour.tar.gz <https://confluence.ecmwf.int/download/attachments/45751374/a quick tour.tar.gz?api=v2>`_
-Mar 13, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
+.. list-table::
 
-File `t1000.grb <https://confluence.ecmwf.int/download/attachments/45751374/t1000.grb?api=v2>`_
-Mar 16, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
+  * - **File**
+    - **Modified**
 
-File `z500.grb <https://confluence.ecmwf.int/download/attachments/45751374/z500.grb?api=v2>`_
-Mar 16, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
+  * - File `a quick tour.tar.gz <https://confluence.ecmwf.int/download/attachments/45751374/a quick tour.tar.gz?api=v2>`_
+    - Mar 13, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
+
+  * - File `t1000.grb <https://confluence.ecmwf.int/download/attachments/45751374/t1000.grb?api=v2>`_
+    - Mar 16, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
+
+  * - File `z500.grb <https://confluence.ecmwf.int/download/attachments/45751374/z500.grb?api=v2>`_
+    - Mar 16, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 
 To get started, copy a GRIB data file into your Metview directory (``~/metview``); if you are attending the training course at ECMWF, then you should carefully type the following command in a terminal window:
@@ -35,7 +39,7 @@ To get started, copy a GRIB data file into your Metview directory (``~/metview``
 
 If you navigate Metview to the ``training/day_1`` you should now see a new GRIB icon in your Metview window:
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/t1000-icon.png
+.. image:: ../_static/a_quick_tour_of_metview/t1000-icon.png
 
 If it does not appear immediately, press **F5** (or **View** | **Reload**).
 
@@ -44,30 +48,30 @@ Enter the folder and do this exercise there.
 
 When you right-click on an icon, a context-sensitive menu appears.
 
-.. image:: https://confluence.ecmwf.int/download/thumbnails/45751374/grib-context-menu.png
+.. image:: ../_static/a_quick_tour_of_metview/grib-context-menu.png
 
 Choose **examine** to quickly see the structure of the GRIB file.
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/grib-examiner-t1000.png
+.. image:: ../_static/a_quick_tour_of_metview/grib-examiner-t1000.png
 
 It contains multiple fields, each listed in the left-hand panel of the GRIB Examiner. We will look more closely at this tool later, but for now close it.
 
 To visualise this data, right-click on its icon and select **visualise**.
 You will now see the **Display Window**. Its toolbars can all be moved, docked, undocked and hidden to suit your preferences.
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/display-window-t1000.png
+.. image:: ../_static/a_quick_tour_of_metview/display-window-t1000.png
 
 Antialiasing
 ============
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/antialias.png
+.. image:: ../_static/a_quick_tour_of_metview/antialias.png
 
 To the right of the zoom buttons should be the **Antialias** button. When active, a smoothing is applied to the lines in the plot \u2013 it is worth doing although it comes at the cost of a small amount of plotting speed. This setting will be remembered the next time you visualise data. Note that the antialiasing is not carried through to the various export image formats (see later) \u2013 it is active only in the interactive window.
 
 Zooming in a Plot
 =================
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/display_window_zoom_toolbar_diagram.png
+.. image:: ../_static/a_quick_tour_of_metview/display_window_zoom_toolbar_diagram.png
 
 The diagram to the left shows the **Zoom** toolbar at the top of the **Display Window**. 
 Click the **Zoom** button to enter 'zoom mode'. Now you can select an area by dragging with the left mouse button. 
@@ -77,19 +81,19 @@ The **Zoom stack** provides quick visual access to the current zoom history. Not
 Using the Magnifier
 ===================
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/display_window_magnifier_button.png
+.. image:: ../_static/a_quick_tour_of_metview/display_window_magnifier_button.png
 
 The **Magnifier** button in the toolbar toggles the magnifier tool on and off. 
 Unlike **Zoom**, this is a purely graphical enlargement of the plot. 
 It is used mainly to inspect small text such as contour labels. 
 The magnifying glass can be moved and resized using the mouse, and the magnification scale on its left-hand side can also be adjusted.
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/display-window-with-magnifier.png
+.. image:: ../_static/a_quick_tour_of_metview/display-window-with-magnifier.png
 
 Animation Steps
 ===============
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/display-window-frames.png
+.. image:: ../_static/a_quick_tour_of_metview/display-window-frames.png
 
 The **Frames** tab to the right of the plot shows the set of fields contained in the GRIB file. 
 You can move between fields by clicking within this tab, by using the animation control buttons or by using the cursor keys. 
@@ -107,20 +111,20 @@ This reveals a page of meta-data for the current layer, including a histogram.
 
 We will investigate these features in more detail later, but for now close the **Display Window**.
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/display-window-metadata.png
+.. image:: ../_static/a_quick_tour_of_metview/display-window-metadata.png
 
 Creating and Editing an Icon
 ****************************
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/t1000-with-shaded-coastines.png
+.. image:: ../_static/a_quick_tour_of_metview/t1000-with-shaded-coastines.png
 
 Let's customise the coastline plotting attributes.
 
 First, create a new `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon. 
 You can right-click within the **Metview desktop** to obtain a context menu from where the option **Create new icon** is available (shortcut: CTRL-N).
 
-.. image:: https://confluence.ecmwf.int/download/thumbnails/45751374/desktop_context_menu_new_icon.png
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/new_icon_dialog.png
+.. image:: ../_static/a_quick_tour_of_metview/desktop_context_menu_new_icon.png
+.. image:: ../_static/a_quick_tour_of_metview/new_icon_dialog.png
 
 This brings up a dialogue from where you can find the `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon; either double-click the icon, or drag it onto the desktop to create a new instance. 
 Close the dialogue.
@@ -145,7 +149,7 @@ Set the following parameters:
 
 For colour-based parameters, there are two small arrows - the one on the right reveals a drop-down list of predefined colours (use this one); then one on the left reveals an advanced colour selection tool.
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/coastline_editor_compact.png
+.. image:: ../_static/a_quick_tour_of_metview/coastline_editor_compact.png
 
 After making these changes, click the **Ok** button to save and exit the editor.
 
@@ -182,18 +186,18 @@ Now we want to set the area used in the view.
 Although we can interactively zoom into smaller areas in the **Display Window**, we now want to store a particular area so that we can use exactly the same one again and again. 
 Set the **Map Area Definition** to Corners and click on the **Geography Tool** button next to the **Area** parameter (shown in the picture below).
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/geography_help_tool_button.png
+.. image:: ../_static/a_quick_tour_of_metview/geography_help_tool_button.png
 
 This tool helps you define a region.
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/geography_help_tool.png
+.. image:: ../_static/a_quick_tour_of_metview/geography_help_tool.png
 
 Use the **Zoom** tools to enlarge the European area and use the **Area** tool to select a region over Europe. 
 Click **Ok** to save your selection - your choices will now be updated in the *Geographical View* editor. 
 Click **Apply** in the *Geographical View* editor to save everything. 
 Plot your data in this view to confirm that the area and projection are as desired.
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/t1000-on-polar-projection.png
+.. image:: ../_static/a_quick_tour_of_metview/t1000-on-polar-projection.png
 
 Linking the Coastlines icon with the Geographical View Icon
 ===========================================================
@@ -202,7 +206,7 @@ Although they can be used separately, the `Coastlines <https://confluence.ecmwf.
 
 Notice that a *Geographical View* icon editor contains a place for an embedded `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon. If you drop a `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon here and apply the changes, then the *Geographical View* icon will use your chosen coastlines.
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/embedded-coastlines-icon.png
+.. image:: ../_static/a_quick_tour_of_metview/embedded-coastlines-icon.png
 
 Try it with your *land_shade* and *polar_europe* icons, and test the result by visualising *polar_europe*. 
 Note that your two icons are now *linked* - if you modify *land_shade*, the changes will be picked up the next time you visualise *polar_europe*. 
@@ -275,13 +279,13 @@ You can close the **Display Window** again.
 Modifying the Contouring
 ========================
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/t1000-with-shading.png
+.. image:: ../_static/a_quick_tour_of_metview/t1000-with-shading.png
 
 Metview provides many ways to style the contours when plotting data. These are controlled via the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
 This is another *visdef* icon. Create a new instance of this icon and rename it to *shade*. 
 Edit it, setting the following parameters:
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/mcont_icon.png
+.. image:: ../_static/a_quick_tour_of_metview/mcont_icon.png
 
 .. list-table:: 
 
@@ -305,7 +309,7 @@ Apply the changes, visualise the data icon again (*t1000.grb*) and drag the shad
 Our palette is automatically generated from a colour wheel. 
 Try setting **Contour Shade Colour Direction** to Anti Clockwise to see the difference in the generated palette.
 
-.. image:: https://confluence.ecmwf.int/download/thumbnails/45751374/hsl-colour-wheel.png
+.. image:: ../_static/a_quick_tour_of_metview/hsl-colour-wheel.png
 
 Creating a Legend
 -----------------
@@ -361,7 +365,7 @@ We will still see the coastlines, but Metview will use the default coastline def
 Overlaying Another Field
 ========================
 
-.. image:: https://confluence.ecmwf.int/download/attachments/45751374/t1000-and-z500.png
+.. image:: ../_static/a_quick_tour_of_metview/t1000-and-z500.png
 
 We will now overlay our plot with fields of geopotential.
 
@@ -399,7 +403,6 @@ You might want to remove the temperature isolines by setting Contour to Off in t
 Extra Work
 **********
 
-
 Contouring
 ==========
 Spend some time exploring the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. Here are some suggestions:
@@ -421,7 +424,7 @@ Spend some time exploring the `Coastlines <https://confluence.ecmwf.int/display/
 Histogram sidebar
 =================
 
-.. image:: https://confluence.ecmwf.int/download/thumbnails/45751374/histogram-coloured.png
+.. image:: ../_static/a_quick_tour_of_metview/histogram-coloured.png
 
 
 Visualise the temperature data ith one of the coloured `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icons and view the histogram in the **Data** tab of the sidebar. 
