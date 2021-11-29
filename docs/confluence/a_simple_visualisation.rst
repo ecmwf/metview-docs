@@ -104,6 +104,7 @@ Layer Meta-data
 There are three tabs in this panel - **Frames**, **Layers**, and **Data**. 
 We will look at Layers soon, but for now select the **Data** tab.
 This reveals a page of meta-data for the current layer, including a histogram.
+
 We will investigate these features in more detail later, but for now close the **Display Window**.
 
 .. image:: ../_static/a_simple_visualisation/display-window-metadata.png
