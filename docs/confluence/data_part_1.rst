@@ -143,12 +143,12 @@ Right-click and **Examine** the *Mars Retrieval* icon (if for some reason the re
 GRIB file. In this case we have 6 fields (messages) in the file, each represented by a row in the message list on the left-hand side. 
 The right-hand side shows detailed meta-information for the selected message, presented in a number of different ways (try changing between **Tree view** and **Plain text**; try different **Dump modes**). 
 You can sort the fields by clicking on the different column headers. 
-The GRIB Examiner can be customised \u2013 see the extra tasks for this chapter, as this is an advanced topic.
+The GRIB Examiner can be customised - see the extra tasks for this chapter, as this is an advanced topic.
 
 Filtering GRIB Data
 ===================
 
-Metview provides powerful data filtering capabilities. Let\u2019s take our ztuv.grb file and extract the forecast and analysis data separately from it.
+Metview provides powerful data filtering capabilities. Let's take our ztuv.grb file and extract the forecast and analysis data separately from it.
 
 .. image:: ../_static/data_part_1/grib-filter-icon-editor.png
 
