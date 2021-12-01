@@ -225,70 +225,19 @@ Format overview
 
 This example shows a geopoints file containing dry bulb temperature at 2m (PARAMETER = 12004).
 
-.. list-table::
+.. code-block::
 
-  * - #GEO
-  * - PARAMETER = 12004
-
-.. list-table::
-
-  * - lat        
-    - long     
-    - level    
-    - date     
-    - time
-    - value
-
-  * - #DATA
-    - 
-    - 
-    - 
-    - 
-    - 
-
-  * - 36.15
-    - -5.35
-    - 0
-    - 19970810
-    - 1200
-    - 300.9
-
-  * - 34.58
-    - 32.98
-    - 0
-    - 19970810
-    - 1200
-    - 301.60
-
-  * - 41.97
-    - 21.65
-    - 0
-    - 19970810
-    - 1200
-    - 299.4
-
-  * - 45.03
-    - 7.73
-    - 0
-    - 19970810
-    - 1200
-    - 294
-
-  * - 5.67
-    - 9.7
-    - 0
-    - 19970810
-    - 1200
-    - 302.2   
-    
-  * - 444.43
-    - 9.93
-    - 0
-    - 19970810
-    - 1200
-    - 293.4
-
-
+  #GEO
+  PARAMETER = 12004
+  lat        long    level  date       time    value
+  #DATA
+  36.15      -5.35     0   19970810    1200    300.9
+  34.58      32.98     0   19970810    1200    301.6
+  41.97      21.65     0   19970810    1200    299.4
+  45.03       7.73     0   19970810    1200    294
+  45.67       9.7      0   19970810    1200    302.2
+  44.43       9.93     0   19970810    1200    293.4
+  
 
 If you have observation data which you wish to import into Metview, Geopoints is probably the best format because:
 
