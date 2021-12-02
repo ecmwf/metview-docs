@@ -41,7 +41,7 @@ To get the vorticity data into the right units, we need to multiply it by 100000
 
 Devise your own colour scale with a new `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon, or else use the pre-prepared one in the *Solutions* folder.
 
-Make the title a little larger with a `Text Plotting  <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_icon.
+Make the title a little larger with a `Text Plotting  <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon.
 
 Use a `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ icon to move the legend to the right-hand side of the plot as shown. 
 We may need to move this a little bit once we have the complete layout.
