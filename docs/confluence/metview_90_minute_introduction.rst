@@ -15,6 +15,7 @@ Download the files here:
 Tutorial Exercises
 ******************
 
+* part_1_intro_
 
 * `Part 1 - Intro <>`_
 
