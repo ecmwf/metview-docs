@@ -2359,6 +2359,14 @@
     pix: SPECTRA
     title: Spectra
     type: icon
+- speed:
+    category:
+      fieldset: Computes the wind speed from u and v component
+    desc: Computes the wind speed from a u and v component fieldset
+    group:
+    - wind
+    - grib
+    type: script
 - sqrt:
     category:
       fieldset: Square root
