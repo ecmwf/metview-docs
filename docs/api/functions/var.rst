@@ -15,7 +15,7 @@ var
 
    .. math:: 
       
-         v_{i} = \frac {1}{n} \sum_{k}^{n} (x_{i}^{k})^2 - \frac {1}{n} (\sum_{k}^{n} x_{i}^{k})^2
+         v_{i} = \frac {1}{n} \sum_{k}^{n} (x_{i}^{k})^2 - (\frac {1}{n} \sum_{k}^{n} x_{i}^{k})^2
 
    .. note:: 
       The following lines are equivalent:
