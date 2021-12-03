@@ -289,7 +289,7 @@ Having finished the body of the loop the last step in our Macro is to define an 
     input_y_values      : trVal
   )  
  
-return vis
+  return vis
 
 .. note::
 
