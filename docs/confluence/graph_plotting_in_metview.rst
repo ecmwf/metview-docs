@@ -13,7 +13,6 @@ Graph Plotting in Metview
   * - ZIP Archive `graph.tar.gz <https://confluence.ecmwf.int/download/attachments/46596114/graph.tar.gz?api=v2>`_
     - Sep 16, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
-
 Overview
 ********
 
