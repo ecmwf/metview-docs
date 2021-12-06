@@ -717,14 +717,13 @@ Fieldset Macro functions
 
    Any missing values in the first fieldset will cause the function to fail with a `value out of range' error message.
 
-.. describe:: fieldset mask ( fieldset, list)
-.. describe:: fieldset mask ( fieldset, list, number )
+.. describe:: fieldset mask ( fieldset, list, [string])
 
    For each field of the input fieldset, this function creates a field containing grid point values of 0 or 1 according to whether they are outside or inside a defined geographical area.
 
    The list parameter must contain exactly four numbers representing a geographical area. These numbers should be in the order north, west, south and east (negative values for western and southern coordinates). 
    
-   If a third argument is provided and it is 1 it will change the behaviour so that points outside the area will become missing values and points inside the area retain their original value. *New in Metview version 5.13.0*.
+   If "missing" is specified as the third argument it will change the behaviour so that points outside the area will become missing values and points inside the area retain their original value. *New in Metview version 5.13.0*.
    
    Non-rectangular masks, and even convex masks can be created by using the operators and , or and not . To create the following mask:
 
