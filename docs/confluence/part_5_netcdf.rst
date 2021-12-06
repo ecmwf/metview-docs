@@ -1,3 +1,5 @@
+.. _part_5_netcdf:
+
 Part 5 - NetCDF
 ###############
 
