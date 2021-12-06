@@ -1,3 +1,5 @@
+.. _processing_data:
+
 Processing Data
 ###############
 
