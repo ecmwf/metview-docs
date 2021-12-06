@@ -17,7 +17,7 @@ Remember to give your icons useful names!
 
 **Download**
 
-.. list-table
+.. list-table::
 
   * - **File**
     - **Modified**
