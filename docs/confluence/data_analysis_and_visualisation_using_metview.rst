@@ -1,7 +1,8 @@
+.. _data_analysis_and_visualisation_using_metview:
+
 Data analysis and visualisation using Metview
 #############################################
 This is a modular course on the use of Metview for data analysis and visualisation. It encompasses much of Metview's functionality in a series of self-contained tutorials.
-
 
 Download
 ********
