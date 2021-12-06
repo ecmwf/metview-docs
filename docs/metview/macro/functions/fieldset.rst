@@ -556,13 +556,14 @@ Fieldset Macro functions
    These functions set information in the given fieldset's GRIB header, and are type-specific. The list provided as the second argument should be a set of key/value pairs, for example:
 
    .. code-block:: python
+
       data = grib_set_long (data,
                ["centre", 99,
                "level", 200])
 
    This function does not modify the input fieldset, but returns a new fieldset with the modifications applied.
 
-   Available keys can be inspected by Examining the GRIB file (right-click, Examine). Alternatively, use the ecCodes command grib_dump to see the available key names. See GRIB Keys - ecCodes GRIB FAQ for more details on key names.
+   Available keys can be inspected by Examining the GRIB file icon in Metview's user interface (right-click, Examine). Alternatively, use the ecCodes command grib_dump to see the available key names. See GRIB Keys - ecCodes GRIB FAQ for more details on key names.
 
    If applied to a multi-field fieldset, then all fields are modified.
 
@@ -815,7 +816,7 @@ Fieldset Macro functions
    Merge several fieldsets. The same as the operator &. The output is a fieldset with as many fields as the total number of fields in all merged fieldsets. Merging with the value nil does nothing, and is used to initialise when building a fieldset from nothing.
 
 
-.. describe:: fieldset ml_to_hl(mfld: fieldset, z: fieldset, zs: fieldset, hlist: list, reflev: string, method: string, [fs_surf: fieldset])
+.. describe:: fieldset ml_to_hl (mfld: fieldset, z: fieldset, zs: fieldset, hlist: list, reflev: string, method: string, [fs_surf: fieldset])
 
    Interpolates a fieldset on model levels (i.e. on hybrid or eta levels used by the IFS) onto height levels (in m) above sea or ground level. At gridpoints where interpolation is not possible missing value is returned. This function has the following positional arguments:
 
@@ -1083,6 +1084,47 @@ Fieldset Macro functions
       absvort = vort + coriolis
 
 
+.. describe:: fieldset solar_zenith_angle(fs: fieldset, [to_cosine: string])
+
+   *New in Metview version 5.14.0.*
+    
+   Computes the solar zenith angle for each gridpoint by using the following positional arguments:
+
+   * fs: input fieldset
+   * to_cosine: (optional) when this argument is specified as set to "to_cosine" the cosine of the solar zenith angle is returned
+
+   The result is the solar zenith angle in degrees (unless "to_cosine" is specified when the cosine of the solar zenith angle is returned). The computations are based on the following formula:
+
+   .. math:: 
+
+      cos\theta_{s} = sin\phi\,  sin\delta + cos\phi\,  cos\delta\, cosh
+
+   where:
+
+   * :math:`\theta_{s}` is the solar zenith angle
+   * :math:`\phi` is the latitude
+   * :math:`\delta` is the declination of the Sun
+   * h is the hour angle in local solar time
+
+   The declination of the Sun is computed as:
+
+   .. math:: 
+
+      \delta = - arcsin\left(0.39779 cos(0.98565\unicode{xB0} (N+10) + 1.914\unicode{xB0} sin(0.98565\unicode{xB0} (N-2))\right)
+
+   where:
+
+   * N is the day of the year beginning with N=0 at midnight Universal Time (UT) as January 1. It is a floating point number allowing for fractional days.
+
+   A missing value in any field in ``fs`` will result in a missing value in the corresponding grid point in the output fieldset. 
+
+   The dates and times used in the computations are based on the "validityDate" and "validityTime" ecCodes keys. If these are not available for a given field the result will contain missing values for all the gridpoints for that field. 
+
+   When "to_cosine" is not specified and the GRIB edition of the input field is 2 the ecCodes **paramId** in the output field is set to 260225 (shortName="solza"). For GRIB edition 1 this parameter is not defined.
+
+   When "to_cosine" is specified the ecCodes **paramId** in the output is set to 214001  (shortName="uvcossza").
+
+
 .. describe:: fieldset sort ( fieldset )
 .. describe:: fieldset sort ( fieldset,string )
 .. describe:: fieldset sort ( fieldset,list )
@@ -1099,7 +1141,7 @@ Fieldset Macro functions
    The third argument specifies a sorting direction. This can be a string (">" or "<") or a list ([">", "<", ">",...]). If it is a string, the sorting direction it specifies applies to all sorting keys specified in the second argument. If it is a list, then the second argument must also be a list with the same number of elements - the sorting directions apply to each sorting key specified.
 
 
-.. describe:: fieldset speed(u: fieldset, v: fieldset)
+.. describe:: fieldset speed (u: fieldset, v: fieldset)
 
    Computes the wind speed from the ``u`` and ``v`` wind components.
 
