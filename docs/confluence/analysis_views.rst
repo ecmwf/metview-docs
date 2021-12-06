@@ -1,3 +1,5 @@
+.. _analysis_views:
+
 Analysis Views
 ##############
 
@@ -262,7 +264,7 @@ View / Data Modules
 *******************
 
 Metview uses a netCDF format internally for the results of some computations (this format will be covered in the session `Data Part 2 <https://confluence.ecmwf.int/display/METV/Data+Part+2>`_). 
-Most of the Views described in this session (i.e. Cross Section, Vertical Profile, Average, Hovmøller and Thermo) do this, but the resulting data file is not available to the user. 
+Most of the Views described in this session (i.e. Cross Section, Vertical Profile, Average, HovmÃ¸ller and Thermo) do this, but the resulting data file is not available to the user. 
 Therefore, each of these *Views* has a corresponding *Data Module* icon. 
 If the intention is to simply plot the result, then the *View* icons are more useful. 
 But to store the result data, the corresponding *Data Module* icon is required.
