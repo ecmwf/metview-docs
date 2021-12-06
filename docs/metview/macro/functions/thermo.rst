@@ -22,7 +22,7 @@ Thermodynamic Macro functions
    Computes the dewpoint temperature from the given temperature and relative humidity, where
 
    * t: temperature (K)
-   * r: relative humidity ([0-1])
+   * r: relative humidity (%)
 
    The result is the dewpoint temperature in K units. On error nil is returned. The computation is based on the following formula:
 
@@ -38,8 +38,7 @@ Thermodynamic Macro functions
 
 .. describe:: number dewpoint_from_specific_humidity(q: number, p: number)
 .. describe:: vector dewpoint_from_specific_humidity(q: vector, p: vector)
-.. describe:: fieldset dewpoint_from_specific_humidity(q: fieldset)
-.. describe:: fieldset dewpoint_from_specific_humidity(q: fieldset, p: fieldset)
+.. describe:: fieldset dewpoint_from_specific_humidity(q: fieldset, [p: fieldset])
 
    *New in Metview version 5.10.0*. 
 
@@ -129,7 +128,7 @@ Thermodynamic Macro functions
    * t: temperature (K)
    * td: dewpoint temperature (K)
 
-   The result is the relative humidity in the range of [0, 1]. On error  nil is returned. The computation is based on the following formula:
+   The result is the relative humidity in % units. On error nil is returned. The computation is based on the following formula:
 
    .. math:: 
       
@@ -138,10 +137,42 @@ Thermodynamic Macro functions
    where e w\ :sub:`sat` is the saturation vapour pressure over water (see saturation_vapour_pressure).
 
 
-.. describe:: number saturation_mixing_ratio(t: number, p: number)
-.. describe:: number saturation_mixing_ratio(t: number, p: number, phase)
-.. describe:: vector saturation_mixing_ratio(t: vector, p: vector)
-.. describe:: vector saturation_mixing_ratio(t: vector, p: vector, phase)
+.. describe:: number relative_humidity_from_specific_humidity(t: number, q: number, p: number)
+.. describe:: vector relative_humidity_from_specific_humidity(t: vector, q: vector, p: vector)
+.. describe:: fieldset relative_humidity_from_specific_humidity(t: fieldset, q: fieldset, [p: fieldset])
+
+   *New in Metview version 5.14.0*.
+
+   Computes the relative humidity from the given temperature and specific humidity and pressure where
+
+   * t: temperature (K)
+   * q: specific humidity (kg/kg)
+   * p: pressure (Pa)
+
+   The result is the relative humidity in % units. On error nil is returned. The following rules are applied when ``t`` and ``q`` are fieldset objects:
+
+   * if ``t`` is a pressure level fieldset no ``p`` is needed
+   * if ``t`` is defined on ECMWF model levels (hybrid/eta) ``p`` must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a fieldset defining the pressure on the same levels as ``t``
+   * for other level types ``p`` must be a fieldset defining the pressure on the same levels as ``t``
+
+   When the result is a fieldse tthe ecCodes **paramId** in the output is set to 157 (=relative humidity).
+
+   The computation is based on the following formula:
+
+    .. math:: 
+      
+        r = 100 \frac {e(q, p)}{e_{msat}(t)}
+
+    where:
+        * e is the vapour pressure (see ``vapour_pressure()``)
+        * e\ :sub:`msat` is the saturation vapour pressure based on the "mixed" phase (see ``saturation_vapour_pressure``)
+        * q is the specific humidity
+        * p is the pressure
+        * t is the temperature
+
+
+.. describe:: number saturation_mixing_ratio(t: number, p: number, [phase])
+.. describe:: vector saturation_mixing_ratio(t: vector, p: vector, [phase])
 
    Computes the saturation mixing ratio for a given temperature, pressure and phase where
 
@@ -156,12 +187,9 @@ Thermodynamic Macro functions
       ws = mixing_ratio(p, saturation_vapour_pressure(t, phase))
 
 
-.. describe:: number saturation_vapour_pressure(t: number)
-.. describe:: number saturation_vapour_pressure(t: number, phase)
-.. describe:: vector saturation_vapour_pressure(t: vector)
-.. describe:: vector saturation_vapour_pressure(t: vector, phase)
-.. describe:: fieldset saturation_vapour_pressure(t: fieldset)
-.. describe:: fieldset saturation_vapour_pressure(t: fieldset, phase)
+.. describe:: number saturation_vapour_pressure(t: number, [phase])
+.. describe:: vector saturation_vapour_pressure(t: vector, [phase])
+.. describe:: fieldset saturation_vapour_pressure(t: fieldset, [phase])
 
    Computes the saturation vapour pressure for a given temperature and phase, where
 
@@ -194,8 +222,7 @@ Thermodynamic Macro functions
 
 .. describe:: number specific_humidity_from_dewpoint(td: number, p: number)
 .. describe:: vector specific_humidity_from_dewpoint(td: vector, p: vector)
-.. describe:: fieldset specific_humidity_from_dewpoint(td: fieldset, p: fieldset)
-.. describe:: fieldset specific_humidity_from_dewpoint(td: fieldset)
+.. describe:: fieldset specific_humidity_from_dewpoint(td: fieldset, [p: fieldset])
 
     *New in Metview version 5.13.0*.
 
@@ -222,6 +249,40 @@ Thermodynamic Macro functions
         * e is the vapour pressure
         * e\ :sub:`wsat` is the saturation vapour pressure over water
         * td is the dewpoint temperature
+
+
+
+.. describe:: number specific_humidity_from_relative_humidity(t: number, r: number, p:number)
+.. describe:: vector specific_humidity_from_relative_humidity(t: vector, r: vector, p:vector)
+.. describe:: fieldset specific_humidity_from_relative_humidity(t: fieldset, r: fieldset, p:fieldset)
+
+   *New in Metview version 5.14.0*.
+
+   Computes the specific humidity from the given temperature, relative_humidity and pressure, where:
+
+   * t: temperature (K)
+   * r: relative humidity (%)
+   * p: pressure (Pa)
+
+   The result is the specific humidity in kg/kg units. On error nil is returned. The following rules are applied when ``t`` and ``r`` are fieldset objects:
+
+   * if ``t`` is a pressure level fieldset no ``p`` is needed
+   * if ``t`` is defined on ECMWF model levels (hybrid/eta) ``p`` must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a fieldset  defining the pressure on the same levels as ``t``
+   * for other level types ``p`` must be a fieldset defining the pressure on the same levels as ``t``
+
+   When the result is a fieldet the ecCodes **paramId** in the output is set to 133 (=specific humidity).
+
+   The computation is based on the following equation:
+
+   .. math:: 
+
+      r = 100 \frac {e(q, p)}{e_{msat}(t)}
+
+   where:
+      * e is the vapour pressure (see ``vapour_pressure``)
+      * e\ :sub:`msat` is the saturation vapour pressure based on the "mixed" phase (see ``saturation_vapour_pressure``)
+      * t is the temperature
+      * r is the relative humidity
 
 
 .. describe:: number temperature_from_potential_temperature(th: number, p: number)
@@ -333,8 +394,7 @@ Thermodynamic Macro functions
 
 .. describe:: number vapour_pressure(q: number, p: number)
 .. describe:: vector vapour_pressure(q: vector, p: vector)
-.. describe:: fieldset vapour_pressure(q: fieldset)
-.. describe:: fieldset vapour_pressure(q: fieldset, p: fieldset)
+.. describe:: fieldset vapour_pressure(q: fieldset, [p: fieldset])
 
    Computes the vapour pressure for a given specific humidity and pressure, where
 

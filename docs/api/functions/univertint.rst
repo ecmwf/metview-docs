@@ -74,20 +74,20 @@ Computations
 
          # Retrieve cloud liquid water content 
          clwc = mv.retrieve(
-            levtype : "ml",
-            levelist : [1,"to",137],
-            param : "clwc",
-            date : -1,
-            grid : [2,2]
+            levtype="ml",
+            levelist=[1,"to",137],
+            param="clwc",
+            date=-1,
+            grid=[2,2]
          )
 
          # Retrieve lnsp
          lnsp = mv.retrieve(
-            levtype : "ml",
-            levelist : 1,
-            param : "lnsp",
-            date : -1,
-            grid : [2,2]
+            levtype="ml",
+            levelist=1,
+            param="lnsp",
+            date=-1,
+            grid=[2,2]
          )
 
          # Compute total amount of liquid water
