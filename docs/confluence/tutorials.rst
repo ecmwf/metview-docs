@@ -1,6 +1,7 @@
+.. _tutorials:
+
 Tutorials
 #########
-
 
 Introduction to Metview
 ***********************
