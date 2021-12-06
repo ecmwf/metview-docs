@@ -86,6 +86,7 @@ You can write out the uncompressed KML if you want to debug the output.
 
 .. image:: ../_static/working_with_graphical_output/2015-Metview-KML-GoogleMaps.png
 
+
 Metadata
 ========
 
