@@ -80,6 +80,7 @@ You can write out the uncompressed KML if you want to debug the output.
    
   The KML output is still **experimental** and we look for feedback on it. 
   KML can **only** be generated if the *Cylindrical* projection is used!
+  
 
 .. image:: ../_static/working_with_graphical_output/2015-Metview-KML-GoogleEarth.png
 
