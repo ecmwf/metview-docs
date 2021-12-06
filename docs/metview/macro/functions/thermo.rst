@@ -155,7 +155,7 @@ Thermodynamic Macro functions
    * if ``t`` is defined on ECMWF model levels (hybrid/eta) ``p`` must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a fieldset defining the pressure on the same levels as ``t``
    * for other level types ``p`` must be a fieldset defining the pressure on the same levels as ``t``
 
-   When the result is a fieldse tthe ecCodes **paramId** in the output is set to 157 (=relative humidity).
+   When the result is a fieldset the ecCodes **paramId** in the output is set to 157 (=relative humidity).
 
    The computation is based on the following formula:
 
@@ -165,7 +165,7 @@ Thermodynamic Macro functions
 
     where:
         * e is the vapour pressure (see ``vapour_pressure()``)
-        * e\ :sub:`msat` is the saturation vapour pressure based on the "mixed" phase (see ``saturation_vapour_pressure``)
+        * e\ :sub:`msat` is the saturation vapour pressure based on the "mixed" phase (see ``saturation_vapour_pressure()``)
         * q is the specific humidity
         * p is the pressure
         * t is the temperature
@@ -270,7 +270,7 @@ Thermodynamic Macro functions
    * if ``t`` is defined on ECMWF model levels (hybrid/eta) ``p`` must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a fieldset  defining the pressure on the same levels as ``t``
    * for other level types ``p`` must be a fieldset defining the pressure on the same levels as ``t``
 
-   When the result is a fieldet the ecCodes **paramId** in the output is set to 133 (=specific humidity).
+   When the result is a fieldset the ecCodes **paramId** in the output is set to 133 (=specific humidity).
 
    The computation is based on the following equation:
 
