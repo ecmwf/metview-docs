@@ -1,3 +1,5 @@
+.. _case_study_cross_section_of_sandy:
+
 Case Study: Cross Section of Sandy
 ##################################
 
