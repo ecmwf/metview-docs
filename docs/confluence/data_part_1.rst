@@ -1,3 +1,5 @@
+.. _data_part_1:
+
 Data Part 1
 ###########
 
@@ -347,7 +349,8 @@ The ``filter()`` function, from the documentation:
   The variable ``freeze`` will contain a subset of temperature where the value is below 
   ``273.15``.
 
-Use this in combination with what you have already done to produce a geopoints variable consisting only of the points within 100km of your chosen location. Plot the result to confirm it.
+Use this in combination with what you have already done to produce a geopoints variable consisting only of the points within 100km of your chosen location.
+Plot the result to confirm it.
 
 Saving geopoints data
 =====================

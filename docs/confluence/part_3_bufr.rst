@@ -1,3 +1,5 @@
+.. _part_3_bufr:
+
 Part 3 - BUFR
 #############
 

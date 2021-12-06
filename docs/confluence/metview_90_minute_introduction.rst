@@ -1,3 +1,5 @@
+.. _metview_90_minute_introduction:
+
 Metview 90 minute introduction
 ##############################
 The following sub-pages form an introduction to Metview, covering the major data types one by one. They only give a taste of what's possible, and should be achievable in 90 minutes or so.

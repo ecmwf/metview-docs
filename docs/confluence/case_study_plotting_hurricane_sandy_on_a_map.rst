@@ -1,3 +1,5 @@
+.. _case_study_plotting_hurricane_sandy_on_a_map:
+
 Case Study: Plotting Hurricane Sandy on a Map
 #############################################
 

@@ -1,3 +1,5 @@
+.. _customising_your_plot:
+
 Customising Your Plot
 #####################
 

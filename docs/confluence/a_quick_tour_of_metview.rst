@@ -1,13 +1,13 @@
+.. _a_quick_tour_of_metview:
+
 A Quick Tour of Metview
 #######################
-
 
 A Simple Data Visualisation
 ***************************
 When you first start Metview, you will see something like this:
 
 .. image:: ../_static/a_quick_tour_of_metview/metview-startup-folder.png
-
 
 This sort of window is called a *Metview desktop*.
 

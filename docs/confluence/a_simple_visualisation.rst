@@ -1,3 +1,5 @@
+.. _a_simple_visualisation:
+
 A Simple Visualisation
 ######################
 
