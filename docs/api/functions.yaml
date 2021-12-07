@@ -170,6 +170,15 @@
     - mask
     - grib_object
     type: script
+- bounding_box:
+    category:
+      fieldset: Returns the geographical bounding box for a fieldset
+    desc: Returns the geographical bounding box for a fieldset
+    group:
+    - geo
+    - grib_object
+    type: script
+    exclude: true
 - bufr_picker:
     category: {}
     desc: Filters bufr data with complex structure

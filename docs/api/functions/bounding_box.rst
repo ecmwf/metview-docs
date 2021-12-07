@@ -1,7 +1,10 @@
+:nosearch:
+
 bounding_box
 =======================
 
 .. py:function:: bounding_box(fs)
+   :noindex:
 
     Returns the geographical bounding box for each field in ``fs``.
    
