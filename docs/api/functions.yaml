@@ -495,6 +495,7 @@
     group:
     - retrieve
     type: icon
+    ecmwf: true
 - eps_output:
     category: {}
     desc: Defines the EPS (Encapsulated PostScript) output format
@@ -1338,6 +1339,7 @@
     - plot
     pix: MET_PLUS
     type: icon
+    ecmwf: true
 - mgraph:
     category: {}
     desc: Defines the graph plotting style
@@ -2485,6 +2487,15 @@
     - calculus
     - grib_object
     type: script
+- stvl:
+    category:
+      geopoints: Retrieves point data from the STVL database (ECMWF only)
+    desc: Retrieves point data from the STVL database (ECMWF only)
+    group:
+    - retrieve
+    type: icon   
+    ecmwf: true
+    skip_icon_link: true 
 - subsample:
     category:
       geopoints: Filters from the first geopoints variable points that exist in the
