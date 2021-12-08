@@ -12,6 +12,7 @@ Fieldset Macro functions
    The fieldset functions related to **thermodynamics** are documented in the :ref:`Thermodynamic functions <macro_thermo_fn>` page.
 
 
+
 .. describe:: fieldset ( fieldset op fieldset )
 
    Operation between two fieldsets. op is one of the operators below:
@@ -480,10 +481,20 @@ Fieldset Macro functions
    The derivatives are computed with a second order finite-difference approximation. The resulting fieldset contains two fields for each input field: the zonal derivative followed by the meridional derivative. The output fields are bitmapped on the poles (they contain missing values there). Please note that this function is only implemented for regular latitude-longitude grids.
 
 
-.. describe:: list grib_get (fieldset, list)
-.. describe:: list grib_get (fieldset, list, string)
+.. describe:: list grib_get (fieldset, list, [string])
 
-   For the efficient retrieval of multiple GRIB keys from a fieldset. A single call to grib_get can replace multiple calls to the other grib_get_* functions and is hence more efficient. The keys are provided as a list for the second argument; by default they will be retrieved as strings, but their type can be specified by adding a modifier to their names, following the convention used by grib_ls where the key name is followed by a colon and then one or two characters which specify the type (s=string, l=long, d=double, la=long array, da=double array). For example, the key 'centre' can be retrieved as a string with 'centre' or 'centre:s', or as a number with 'centre:l'. The result is always a list of lists; by default, or if the optional third argument is 'field', the result will be grouped by field, containing one list per field, each of these lists containing one element per key; if the optional third parameter is 'key', the result will be grouped by key, containing one list per key, each of these lists containing one element per field. Example - the following lines of Macro code on a particular 6-field fieldset:
+   For the efficient retrieval of multiple GRIB keys from a fieldset. A single call to grib_get can replace multiple calls to the other grib_get_* functions and is hence more efficient. The keys are provided as a list for the second argument; by default they will be retrieved as strings, but their type can be specified by adding a modifier to their names, following the convention used by grib_ls where the key name is followed by a colon and then one or two characters which specify the type:
+
+   * s=string
+   * l=long 
+   * d=double
+   * la=long array,
+   * da=double array
+   * n=native type *New in Metview version 5.14.0*
+   
+   For example, the key 'centre' can be retrieved as a string with 'centre' or 'centre:s', or as a number with 'centre:l'. Each GRIB key has a ‘native type’, e.g. long or string. If the type is specified as “n” then the type that is returned. The native type for the key ‘centre’ is str, so ‘centre:n’ will return a str.
+   
+   The result is always a list of lists; by default, or if the optional third argument is 'field', the result will be grouped by field, containing one list per field, each of these lists containing one element per key; if the optional third parameter is 'key', the result will be grouped by key, containing one list per key, each of these lists containing one element per field. Example - the following lines of Macro code on a particular 6-field fieldset:
 
    .. code-block:: python
    
