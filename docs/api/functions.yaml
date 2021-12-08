@@ -1999,10 +1999,18 @@
     - thermo
     - grib
     type: script
+- relative_humidity_from_specific_humidity:
+    category:
+      thermo: Computes the relative humidity from specific humidity
+    desc: Computes the relative humidity from specific humidity
+    group:
+    - thermo
+    - grib
+    type: script
 - relhum:
     category: {}
     data: null
-    desc: Computes relative humidity from specific humidity
+    desc: Computes the relative humidity from specific humidity
     group:
     - thermo
     - grib
