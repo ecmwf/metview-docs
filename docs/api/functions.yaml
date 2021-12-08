@@ -2323,6 +2323,14 @@
     desc: Sleep (number of seconds)
     exclude: true
     type: script
+- solar_zenith_angle:
+    category:
+      fieldset: Computes the solar zenith angle for a fieldset
+    desc: Computes the solar zenith angle for a fieldset
+    group:
+    - geo
+    - grib_object
+    type: script
 - sort:
     category:
       fieldset: Sorts a fieldset
