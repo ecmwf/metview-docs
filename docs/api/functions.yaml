@@ -2103,6 +2103,7 @@
     group:
     - rttov
     type: icon
+    ecmwf: true
 - rttov_visualiser:
     category: {}
     desc: Defines visualisation for RTTOV model output
@@ -2110,6 +2111,7 @@
     - plot
     - rttov
     type: icon
+    ecmwf: true
 - runmode:
     category:
       system: Returns a string describing the current run mode
@@ -2137,6 +2139,7 @@
     group:
     - scm
     type: icon
+    ecmwf: true
 - scm_visualiser:
     category: {}
     desc: Defines visualisation for SCM output
@@ -2145,6 +2148,7 @@
     - plot
     pix: SCM_VIS
     type: icon
+    ecmwf: true
 - search:
     category:
       string: Search for a given substring.

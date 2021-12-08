@@ -1,5 +1,5 @@
 return: :class:`Request`
-summary: rst
+summary: Runs the RTTOV (Radiative Transfer for TOVS) model.
 oneliner: Runs the RTTOV (Radiative Transfer for TOVS) model.
 params:
 - rttov_exe_path:
