@@ -494,7 +494,7 @@ Rename it 'colour_wind' then edit it, by setting the following parameters:
     - On
 
   * - **Wind Arrow Unit Velocity**
-    - 50.
+    - 50
 
   * - **Wind Thinning Factor**
     - 1.0
@@ -696,13 +696,13 @@ Rename it 'bin_grid_shade' then edit it, by setting the following parameters:
     - Count
 
   * - **Contour Reference Leve**
-    - l0.
+    - l0
 
   * - **Contour Min Level**
-    - 1.
+    - 1
 
   * - **Contour Shade Min Level**
-    - 1.
+    - 1
 
   * - **Contour Level Count**
     - 20
