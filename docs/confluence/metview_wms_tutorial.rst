@@ -297,7 +297,7 @@ Please note that for the sake of better readability the dimensions (in our case 
 Visualising the Results
 =======================
 
-Save your settings (if you have not done so) then right-click on the icon and select** **visualise. 
+Save your settings (if you have not done so) then right-click on the icon and select **visualise**. 
 This will execute all the *GetMap* requests and visualise the resulting images in a Metview **Display Window**.
 
 The plot looks like much the same as in *Part 2* but since we have more than one image we can navigate through them by using the animation buttons in the toolbar or the in Frames tab (on the right hand side of the window).
