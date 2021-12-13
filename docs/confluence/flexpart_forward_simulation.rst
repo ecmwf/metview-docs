@@ -1,0 +1,137 @@
+.. _flexpart_forward_simulation:
+
+FLEXPART - Forward simulation
+#############################
+ 
+This tutorial demonstrates how to run a forward simulation with FLEXPART and how to visualise the results in various ways.
+
+Using FLEXPART with Metview
+***************************
+
+.. note::
+
+  **Requirements**
+  
+  Please note that this tutorial requires Metview version **5.0** or later.
+  
+Preparations
+************
+
+First start Metview; at ECMWF, the command to use is metview (see `Metview at ECMWF <https://confluence.ecmwf.int/display/METV/Metview+at+ECMWF>`_ for details of Metview versions). 
+You should see the main Metview desktop popping up.
+
+The icons you will work with are already prepared for you - please download the following file:
+
+**Download**
+
+.. list-table::
+
+  * - `flexpart_tutorial.tar.gz <http://download.ecmwf.org/test-data/metview/tutorial/flexpart_tutorial.tar.gz>`_
+and save it in your ``$HOME/metview`` directory. 
+You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.
+
+Alternatively, if **at ECMWF** then you can copy it like this from the command line:
+
+  ``cp -R /home/graphics/cgx/tutorials/flexpart_tutorial ~/metview``
+  
+You should now (after a few seconds) see a *flexpart*_*tutorial* folder. 
+Please open it up.
+
+The input data
+**************
+
+The input data is already prepared for you and is located in folder 'Data'. 
+You will find a `FLEXPART Prepare -old <https://confluence.ecmwf.int/display/METV/FLEXPART+Prepare+-old>`_ icon that was used to generate the data in folder 'Prepare'. 
+The corresponding macro code can also be found there.
+
+You do not need to run the data preparation. 
+However, if you wish to do so please note that it requires MARS access and you must set the **Output Path** parameter accordingly.
+
+.. note::
+
+  Please enter folder 'forward' to start working.
+
+.. note::
+
+  In this tutorial we will run a forward simulation by releasing some SO2 from the Icelandic volcano Eyjafjallajokull.
+  
+The simulation itself is defined by the 'fwd_conc' `FLEXPART Run <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Run>`_ icon and the 'rel_volcano' `FLEXPART Release <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Release>`_ icon, respectively. 
+Both these are encompassed in a single macro called 'fwd_conc.mv'. 
+For simplicity will use this macro to examine the settings in detail. 
+
+The macro starts with defining the release like this:
+  
+.. code-block:: python
+  
+  rel_volcano = flexpart_release(
+      name            :   "VOLCANO", 
+      starting_date   :   0,
+      starting_time   :   15,
+      ending_date     :   2,
+      ending_time     :   12,
+      area            :   [63.63,-19.6,63.63,-19.6],
+      top_level       :   9000,
+      bottom_level    :   1651,
+      particle_count  :   10000,
+      masses          :   1000000
+      )
+  
+This says that the release will happen over a 45 h period between heights 1651 and 10000 m at the location of the volcano and we will release 1000 tons of material in total.
+
+.. note::
+
+  Please note that
+  
+  * the species is not defined here (will be defined in ``flexpart_run()``)
+  
+  * we used dates relative to the starting date of the simulation (see also in ``flexpart_run()``)
+  
+The actual simulation is carried out by calling ``flexpart_run()``:
+  
+.. code-block:: python
+  
+  #Run flexpart (asynchronous call!)
+  
+  r = flexpart_run(
+      output_path         :   "result_fwd",
+    input_path          :   "../data",
+      starting_date       :   20120517,
+      starting_time       :   12,
+      ending_date         :   20120519,
+      ending_time         :   12,
+      output_field_type   :   "conc",
+      output_flux         :   "on",
+      output_area         :   [40,-25,66,10],
+      output_grid         :   [0.25,0.25],
+      output_levels       :   [500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000],
+      release_species     :   8,
+      releases            :   rel_volcano,
+      release_units       :   "mass",
+      receptor_units      :   "mass"
+   )
+  
+  print(r)
+  
+Here we defined both the input and output paths and specified the simulation period, the output grid and levels as well. 
+We also told FLEXPART to generate gridded mass concentration and flux fields on output.
+
+.. note::
+
+  The actual species to release are defined as an integer number (for details about using the species see `here <https://software.ecmwf.int/wiki/display/METV/FLEXPART+species>`_). 
+  With the default species settings number 8 stands for SO2.
+
+If we run this macro (or alternatively right-click execute the `FLEXPART Run <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Run>`_ icon) the results (after a minute or so) will be available in folder 'result_fwd'. 
+The computations actually took place in a temporary folder then Metview copied the results to the output folder. 
+If we open folder 'result_fwd' we will see three files:
+
+* conc_s001.grib is a GRIB file containing the gridded concentration fields
+
+* flux_s001.grib is a GRIB file containing the gridded flux fields
+
+* log.txt is the log file generated by FLEXPART
+
+.. note::
+
+  Please note that these are not the original outputs form FLEXPART but were converted to more suitable ones for Metview. For details about the FLEXPART outputs click `here <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_.
+
+To process and visualise the results please see these pages:
