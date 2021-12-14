@@ -23,7 +23,7 @@ You will create some icons yourself, but some are supplied for you - please down
 
 .. list-table::
 
-  * `flextra_tutorial.tar.gz <http://download.ecmwf.org/test-data/metview/tutorial/flextra_tutorial.tar.gz>`_
+  * - `flextra_tutorial.tar.gz <http://download.ecmwf.org/test-data/metview/tutorial/flextra_tutorial.tar.gz>`_
 
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.
