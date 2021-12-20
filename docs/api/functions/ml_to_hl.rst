@@ -20,9 +20,9 @@ ml_to_hl
 
    :rtype: :class:`Fieldset`
       
-   The input data (``fs``) must contain one field per model level only.
+   The input data (``fs``) must contain one field per model level only. It means that e.g. data containing multiple timesteps cannot be used as an input.
 
-   At gridpoints where the interpolation is not possible a missing value is returned. It can happen when the target height level is below the bottom-most model level or the surface (when ``fs_surf`` is used) or above the top-most level. Please note that model levels we are dealing with in :func:`ml_to_hl` are "full-levels" and the bottom-most model level does match the surface but it is above it. If you need to interpolate to height levels close to the surface use ``fs_surf``. 
+   At gridpoints where the interpolation is not possible a missing value is returned. It happens where the target height level is below the bottom-most model level in ``fs`` or the surface when ``fs_surf`` is used. It also happens where the target height is above the top-most model level in ``fs``. Please note that the model levels we are dealing with in :func:`ml_to_hl` are "full-levels" and the lowest possible model level does match the surface but it is above it. If you need to interpolate to height levels close to the surface use ``fs_surf``. 
 
    .. note::
       The actual ECMWF model level definition is stored in the **"pv" array** in the GRIB message metadata. You can figure out the total number of model levels in the given vertical coordinate system by using the **len(pv)/2-1** formula. The typical values are 137 and 91. This can be then used to look up details about actual the model level definitions (e.g. approximate pressure and height values) on this `page <https://confluence.ecmwf.int/display/UDOC/Model+level+definitions>`_.  
