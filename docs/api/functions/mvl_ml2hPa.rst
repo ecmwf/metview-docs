@@ -12,6 +12,8 @@ mvl_ml2hPa
    :param list pressures: list of target pressure levels in hPa. Does not have to be sorted.
    :rtype: :class:`Fieldset`
   
+   The input data (``fs``) must contain one field per model level only.
+   
    At locations where the interpolation is not possible a missing value is returned.
     
    :Example:
