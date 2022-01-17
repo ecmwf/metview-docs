@@ -12,8 +12,13 @@ mvl_ml2hPa
    :param list pressures: list of target pressure levels in hPa. Does not have to be sorted.
    :rtype: :class:`Fieldset`
   
-   At locations where the interpolation is not possible a missing value is returned.
+   The input data (``fs``) must contain one field per model level only. It means that e.g. data containing multiple timesteps cannot be used as an input.
+   
+   At gridpoints where the interpolation is not possible a missing value is returned. It happens where the target pressure is larger than the pressure on the bottom-most model level or less than the pressure at the top-most model level in ``fs``. 
     
+   .. note::
+      The actual ECMWF model level definition is stored in the **"pv" array** in the GRIB message metadata. You can figure out the total number of model levels in the given vertical coordinate system by using the **len(pv)/2-1** formula. The typical values are 137 and 91. This can be then used to look up details about actual the model level definitions (e.g. approximate pressure and height values) on this `page <https://confluence.ecmwf.int/display/UDOC/Model+level+definitions>`_.  
+
    :Example:
    
       This code illustrates how to use :func:`mvl_ml2hPa` with data retrieved from MARS:

@@ -48,12 +48,6 @@
     - view
     title: Annotation View
     type: icon
-- ui_any:
-    category: {}
-    desc: Defines a value input widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - append:
     category:
       io: 'Appends the given data to file'
@@ -176,6 +170,15 @@
     - mask
     - grib_object
     type: script
+- bounding_box:
+    category:
+      fieldset: Returns the geographical bounding box for a fieldset
+    desc: Returns the geographical bounding box for a fieldset
+    group:
+    - geo
+    - grib_object
+    type: script
+    exclude: true
 - bufr_picker:
     category: {}
     desc: Filters bufr data with complex structure
@@ -207,12 +210,6 @@
     - bufr
     title: Clean File
     type: icon
-- ui_colour:
-    category: {}
-    desc: Defines a colour selector widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - columns:
     category:
       geopoints: Returns a list of column names for a geopoints variable
@@ -374,12 +371,6 @@
     - thermo
     - grib
     type: script
-- dialog:
-    category: {}
-    desc: Builds a popup editor and reads back user input
-    group:
-    - widget
-    type: script
 - dictionary:
     category:
       info: Returns the list of all the documented functions
@@ -504,6 +495,7 @@
     group:
     - retrieve
     type: icon
+    ecmwf: true
 - eps_output:
     category: {}
     desc: Defines the EPS (Encapsulated PostScript) output format
@@ -952,12 +944,6 @@
     group:
     - view
     type: icon
-- ui_icon:
-    category: {}
-    desc: Defines an icon drop area widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - in:
     category:
       list: Test if a value is in a list
@@ -1353,6 +1339,7 @@
     - plot
     pix: MET_PLUS
     type: icon
+    ecmwf: true
 - mgraph:
     category: {}
     desc: Defines the graph plotting style
@@ -1746,12 +1733,6 @@
     - geo
     - geopoints_object
     type: script
-- ui_option_menu:
-    category: {}
-    desc: Defines an combobox widget to be used in dialog()
-    group:
-    - widget
-    type: script
 - output:
     category: {}
     desc: ''
@@ -2020,10 +2001,18 @@
     - thermo
     - grib
     type: script
+- relative_humidity_from_specific_humidity:
+    category:
+      thermo: Computes the relative humidity from specific humidity
+    desc: Computes the relative humidity from specific humidity
+    group:
+    - thermo
+    - grib
+    type: script
 - relhum:
     category: {}
     data: null
-    desc: Computes relative humidity from specific humidity
+    desc: Computes the relative humidity from specific humidity
     group:
     - thermo
     - grib
@@ -2114,6 +2103,7 @@
     group:
     - rttov
     type: icon
+    ecmwf: true
 - rttov_visualiser:
     category: {}
     desc: Defines visualisation for RTTOV model output
@@ -2121,6 +2111,7 @@
     - plot
     - rttov
     type: icon
+    ecmwf: true
 - runmode:
     category:
       system: Returns a string describing the current run mode
@@ -2148,6 +2139,7 @@
     group:
     - scm
     type: icon
+    ecmwf: true
 - scm_visualiser:
     category: {}
     desc: Defines visualisation for SCM output
@@ -2156,6 +2148,7 @@
     - plot
     pix: SCM_VIS
     type: icon
+    ecmwf: true
 - search:
     category:
       string: Search for a given substring.
@@ -2344,11 +2337,13 @@
     desc: Sleep (number of seconds)
     exclude: true
     type: script
-- ui_slider:
-    category: {}
-    desc: Defines a slider widget to be used in dialog()
+- solar_zenith_angle:
+    category:
+      fieldset: Computes the solar zenith angle for a fieldset
+    desc: Computes the solar zenith angle for a fieldset
     group:
-    - widget
+    - geo
+    - grib_object
     type: script
 - sort:
     category:
@@ -2395,6 +2390,14 @@
     pix: SPECTRA
     title: Spectra
     type: icon
+- speed:
+    category:
+      fieldset: Computes the wind speed from u and v component
+    desc: Computes the wind speed from a u and v component fieldset
+    group:
+    - wind
+    - grib
+    type: script
 - sqrt:
     category:
       fieldset: Square root
@@ -2488,6 +2491,15 @@
     - calculus
     - grib_object
     type: script
+- stvl:
+    category:
+      geopoints: Retrieves point data from the STVL database (ECMWF only)
+    desc: Retrieves point data from the STVL database (ECMWF only)
+    group:
+    - retrieve
+    type: icon   
+    ecmwf: true
+    skip_icon_link: true 
 - subsample:
     category:
       geopoints: Filters from the first geopoints variable points that exist in the
@@ -2660,12 +2672,6 @@
     group:
     - grib_object
     type: script
-- ui_toggle:
-    category: {}
-    desc:  Defines on/off toggle buttons to be used in dialog()
-    group:
-    - widget
-    type: script
 - togrib:
     category: {}
     desc: ''
@@ -2681,6 +2687,48 @@
     category:
       info: Returns the type of an expression
     desc: Returns the type of an expression
+    type: script
+- ui.any:
+    category: {}
+    desc: Defines a value input widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.colour:
+    category: {}
+    desc: Defines a colour selector widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.dialog:
+    category: {}
+    desc: Builds a popup editor and reads back user input
+    group:
+    - widget
+    type: script
+- ui.icon:
+    category: {}
+    desc: Defines an icon drop area widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.option_menu:
+    category: {}
+    desc: Defines an combobox widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.slider:
+    category: {}
+    desc: Defines a slider widget to be used in dialog()
+    group:
+    - widget
+    type: script
+- ui.toggle:
+    category: {}
+    desc:  Defines on/off toggle buttons to be used in dialog()
+    group:
+    - widget
     type: script
 - ui_float:
     category: {}

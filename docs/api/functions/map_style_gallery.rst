@@ -3,14 +3,11 @@ map_style_gallery
 
 .. py:function:: map_style_gallery()
 
-    .. warning::
-    
-        This is an experimental feature. New in metview-python version 1.8.0.
-
+    *New in metview-python version 1.8.0*
         
     Generates a gallery of the built-in map styles in a Jupyter notebook.
 
-    Technically, each map style is defined by an :func:`mcoast` object. The list of available map styles depends on the actual style configuration. By default, when no custom style configuration is loaded, the style list comprises of:
+    Technically, each map style is defined by an :func:`mcoast` object. The list of available map styles depends on the actual style configuration. By default, when no custom style configuration is loaded, the style list comprises:
 
     * the style called "base", which is the default map style used by :func:`plot` and :func:`plot_maps`
     * the style called "base_diff", which is the default style used by :func:`plot_diff_maps`

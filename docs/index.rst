@@ -35,8 +35,6 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    data_types/index
    jupyter
    api/ref_guide 
-   dataset/index
-   macro/index
    metview/index
    confluence/index
 

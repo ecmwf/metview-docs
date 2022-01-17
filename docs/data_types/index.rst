@@ -12,3 +12,4 @@ Data types
    odb
    table
    track
+   dataset/index

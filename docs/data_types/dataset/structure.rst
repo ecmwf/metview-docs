@@ -1,3 +1,5 @@
+.. _dataset_structure:
+
 Dataset structure
 ****************************
 

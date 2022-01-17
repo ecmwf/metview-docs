@@ -99,7 +99,7 @@ ICON_HEADER_STANDARD_ECMWF = """
 
 {}
 
-\t\t.. warning:: This function is only available at ECWMF.
+\t\t.. warning:: This function is only available for internal ECMWF use.
 
 \t\t.. note:: This function performs the same task as the {} icon in Metview’s user interface. It accepts its parameters as keyword arguments, described below.
 
@@ -107,6 +107,8 @@ ICON_HEADER_STANDARD_ECMWF = """
 .. py:function:: {}(**kwargs)
   
     {}
+    
+    .. warning:: This function is only available for internal ECMWF use.
 
 """
 
@@ -239,6 +241,7 @@ class DocFunction:
         self.title = item.get("title", "")
         self.standard = item.get("standard", True)
         self.ecmwf = item.get("ecmwf", False)
+        self.skip_icon_link = item.get("skip_icon_link", False)
 
         if self.title == "":
             self.title = self.name.replace("_", " ")
@@ -347,14 +350,19 @@ class IconDocBuilder:
 
             # generates rst
             if fn.standard:
+                if not fn.skip_icon_link:
+                     icon_link =  "`{} <https://confluence.ecmwf.int/display/METV/{}>`_".format(
+                            fn.conf_label, fn.title.replace(" ", "+")
+                        )
+                else:
+                    icon_link = fn.conf_label  
+
                 if not fn.ecmwf: 
                     txt += ICON_HEADER_STANDARD.format(
                         name,
                         fn.pix,
                         self.indent_summary(summary),
-                        "`{} <https://confluence.ecmwf.int/display/METV/{}>`_".format(
-                            fn.conf_label, fn.title.replace(" ", "+")
-                        ),
+                        icon_link,
                         fn.name,
                         one_liner,
                     )
@@ -363,9 +371,7 @@ class IconDocBuilder:
                         name,
                         fn.pix,
                         self.indent_summary(summary),
-                        "`{} <https://confluence.ecmwf.int/display/METV/{}>`_".format(
-                            fn.conf_label, fn.title.replace(" ", "+")
-                        ),
+                        icon_link,
                         fn.name,
                         one_liner,
                     )  

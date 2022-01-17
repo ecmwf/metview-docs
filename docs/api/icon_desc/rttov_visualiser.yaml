@@ -1,5 +1,5 @@
 return: :class:`Request`
-summary: rst
+summary: Visualises the results of the RTTOV (Radiative Transfer for TOVS).
 oneliner: Visualises the results of the RTTOV (Radiative Transfer for TOVS) model.
 params:
 - rttov_plot_type:

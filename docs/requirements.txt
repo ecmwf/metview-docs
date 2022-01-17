@@ -4,6 +4,7 @@ nbsphinx
 sphinx_rtd_theme
 pyyaml-include
 pyyaml
+docutils<=0.16.0
 Pygments>=2.6.1
 Sphinx>=3.3.1
 setuptools>=51.0.0

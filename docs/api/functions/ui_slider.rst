@@ -1,11 +1,11 @@
-ui_slider
+ui.slider
 =================
 
-.. py:function:: ui_slider(**kwargs)
+.. py:function:: ui.slider(**kwargs)
    
    *New in metview-python version 1.9.0*.
    
-   Defines a slider widget to be used in :func:`dialog`.
+   Defines a slider widget to be used in :func:`ui.dialog`.
       
    :param name: parameter name
    :type name: str
@@ -23,9 +23,10 @@ ui_slider
    :type help: {"help_script"}, default: None
    :param help_script_command: defines the shell command to be executed when ``help`` is "help_script"
    :type help_script_command: str
+   :rtype: object to be used in :func:`ui.dialog`
 
    .. note::
       
-      See also :func:`dialog`
+      See also :func:`ui.dialog`
 
-.. mv-minigallery:: ui_slider
+.. mv-minigallery:: ui.slider

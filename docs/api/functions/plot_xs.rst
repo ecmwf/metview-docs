@@ -3,10 +3,7 @@ plot_xs
 
 .. py:function:: plot_xs(*args, line=None, map_data=None, map_line=True, view=None, area=None, title_font_size=0.4, legend_font_size=0.35)
 
-    .. warning::
-        
-        This is an experimental feature. New in metview-python version 1.8.0
-
+    *New in metview-python version 1.8.0*
 
     High level function with automatic styling to generate cross section plots with a fixed layout.
 

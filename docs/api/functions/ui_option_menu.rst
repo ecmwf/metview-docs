@@ -1,11 +1,11 @@
-ui_option_menu
+ui.option_menu
 =================
 
-.. py:function:: ui_option_menu(**kwargs)
+.. py:function:: ui.option_menu(**kwargs)
    
    *New in metview-python version 1.9.0*.
    
-   Defines an option menu (combobox) widget to be used in :func:`dialog`.
+   Defines an option menu (combobox) widget to be used in :func:`ui.dialog`.
       
    :param name: parameter name
    :type name: str
@@ -19,9 +19,10 @@ ui_option_menu
    :type help: {"help_script"}, default: None
    :param help_script_command: defines the shell command to be executed when ``help`` is "help_script"
    :type help_script_command: str
+   :rtype: object to be used in :func:`ui.dialog`
 
    .. note::
       
-      See also :func:`dialog`
+      See also :func:`ui.dialog`
 
-.. mv-minigallery:: ui_option_menu
+.. mv-minigallery:: ui.option_menu

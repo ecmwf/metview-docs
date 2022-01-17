@@ -12,6 +12,7 @@ Fieldset Macro functions
    The fieldset functions related to **thermodynamics** are documented in the :ref:`Thermodynamic functions <macro_thermo_fn>` page.
 
 
+
 .. describe:: fieldset ( fieldset op fieldset )
 
    Operation between two fieldsets. op is one of the operators below:
@@ -480,10 +481,20 @@ Fieldset Macro functions
    The derivatives are computed with a second order finite-difference approximation. The resulting fieldset contains two fields for each input field: the zonal derivative followed by the meridional derivative. The output fields are bitmapped on the poles (they contain missing values there). Please note that this function is only implemented for regular latitude-longitude grids.
 
 
-.. describe:: list grib_get (fieldset, list)
-.. describe:: list grib_get (fieldset, list, string)
+.. describe:: list grib_get (fieldset, list, [string])
 
-   For the efficient retrieval of multiple GRIB keys from a fieldset. A single call to grib_get can replace multiple calls to the other grib_get_* functions and is hence more efficient. The keys are provided as a list for the second argument; by default they will be retrieved as strings, but their type can be specified by adding a modifier to their names, following the convention used by grib_ls where the key name is followed by a colon and then one or two characters which specify the type (s=string, l=long, d=double, la=long array, da=double array). For example, the key 'centre' can be retrieved as a string with 'centre' or 'centre:s', or as a number with 'centre:l'. The result is always a list of lists; by default, or if the optional third argument is 'field', the result will be grouped by field, containing one list per field, each of these lists containing one element per key; if the optional third parameter is 'key', the result will be grouped by key, containing one list per key, each of these lists containing one element per field. Example - the following lines of Macro code on a particular 6-field fieldset:
+   For the efficient retrieval of multiple GRIB keys from a fieldset. A single call to grib_get can replace multiple calls to the other grib_get_* functions and is hence more efficient. The keys are provided as a list for the second argument; by default they will be retrieved as strings, but their type can be specified by adding a modifier to their names, following the convention used by grib_ls where the key name is followed by a colon and then one or two characters which specify the type:
+
+   * s=string
+   * l=long 
+   * d=double
+   * la=long array,
+   * da=double array
+   * n=native type *New in Metview version 5.14.0*
+   
+   For example, the key 'centre' can be retrieved as a string with 'centre' or 'centre:s', or as a number with 'centre:l'. Each GRIB key has a ‘native type’, e.g. long or string. If the type is specified as “n” then the type that is returned. The native type for the key ‘centre’ is str, so ‘centre:n’ will return a str.
+   
+   The result is always a list of lists; by default, or if the optional third argument is 'field', the result will be grouped by field, containing one list per field, each of these lists containing one element per key; if the optional third parameter is 'key', the result will be grouped by key, containing one list per key, each of these lists containing one element per field. Example - the following lines of Macro code on a particular 6-field fieldset:
 
    .. code-block:: python
    
@@ -556,13 +567,14 @@ Fieldset Macro functions
    These functions set information in the given fieldset's GRIB header, and are type-specific. The list provided as the second argument should be a set of key/value pairs, for example:
 
    .. code-block:: python
+
       data = grib_set_long (data,
                ["centre", 99,
                "level", 200])
 
    This function does not modify the input fieldset, but returns a new fieldset with the modifications applied.
 
-   Available keys can be inspected by Examining the GRIB file (right-click, Examine). Alternatively, use the ecCodes command grib_dump to see the available key names. See GRIB Keys - ecCodes GRIB FAQ for more details on key names.
+   Available keys can be inspected by Examining the GRIB file icon in Metview's user interface (right-click, Examine). Alternatively, use the ecCodes command grib_dump to see the available key names. See GRIB Keys - ecCodes GRIB FAQ for more details on key names.
 
    If applied to a multi-field fieldset, then all fields are modified.
 
@@ -717,12 +729,15 @@ Fieldset Macro functions
 
    Any missing values in the first fieldset will cause the function to fail with a `value out of range' error message.
 
-
-.. describe:: fieldset mask ( fieldset,list )
+.. describe:: fieldset mask ( fieldset, list, [string])
 
    For each field of the input fieldset, this function creates a field containing grid point values of 0 or 1 according to whether they are outside or inside a defined geographical area.
 
-   The list parameter must contain exactly four numbers representing a geographical area. These numbers should be in the order north, west, south and east (negative values for western and southern coordinates). Non-rectangular masks, and even convex masks can be created by using the operators and , or and not . To create the following mask:
+   The list parameter must contain exactly four numbers representing a geographical area. These numbers should be in the order north, west, south and east (negative values for western and southern coordinates). 
+   
+   If "missing" is specified as the third argument it will change the behaviour so that points outside the area will become missing values and points inside the area retain their original value. *New in Metview version 5.13.0*.
+   
+   Non-rectangular masks, and even convex masks can be created by using the operators and , or and not . To create the following mask:
 
    .. image:: /_static/mask_1.png
       :width: 300px
@@ -812,7 +827,7 @@ Fieldset Macro functions
    Merge several fieldsets. The same as the operator &. The output is a fieldset with as many fields as the total number of fields in all merged fieldsets. Merging with the value nil does nothing, and is used to initialise when building a fieldset from nothing.
 
 
-.. describe:: fieldset ml_to_hl(mfld: fieldset, z: fieldset, zs: fieldset, hlist: list, reflev: string, method: string)
+.. describe:: fieldset ml_to_hl (mfld: fieldset, z: fieldset, zs: fieldset, hlist: list, reflev: string, method: string, [fs_surf: fieldset])
 
    Interpolates a fieldset on model levels (i.e. on hybrid or eta levels used by the IFS) onto height levels (in m) above sea or ground level. At gridpoints where interpolation is not possible missing value is returned. This function has the following positional arguments:
 
@@ -822,8 +837,17 @@ Fieldset Macro functions
    * hlist: the list of target height levels (they can came in any given order)
    * reflev: specifies the reference level for the target heights. The possible values are "sea" and "ground"
    * method: specifies the interpolation method. The possible values are "linear" and "log".
+   * fs_surf: (optional) specifies the field values on the surface. With this it is possible to interpolate to target heights between the surface and the bottom-most model level. If ``fs_surf`` is a number it defines a constant fieldset. Only available when ``ref_level`` is "ground". *New in Metview version 5.14.0*.
 
-   Please note that geopotential is not archived operationally on model levels in MARS at ECMWF.  To compute geopotential on model levels use Metview's mvl_geopotential_on_ml() function. The following example shows how to use function ml_to_hl() together with mvl_geopotential_on_ml():
+   At gridpoints where the interpolation is not possible a missing value is returned. It can happen when the target height level is below the bottom-most model level or the surface (when ``fs_surf`` is used) or above the top-most level. Please note that model levels we are dealing with in ml_to_hl are "full-levels" and the bottom-most model level does match the surface but it is above it. If you need to interpolate to height levels close to the surface use ``fs_surf``. 
+
+   .. note::
+      The actual ECMWF model level definition is stored in the **"pv" array** in the GRIB message metadata. You can figure out the total number of model levels in the given vertical coordinate system by using the **len(pv)/2-1** formula. The typical values are 137 and 91. This can be then used to look up details about actual the model level definitions (e.g. approximate pressure and height values) on this `page <https://confluence.ecmwf.int/display/UDOC/Model+level+definitions>`_.  
+
+   .. note::
+      Geopotential is not archived operationally on model levels in MARS at ECMWF. To compute it use ``mvl_geopotential_on_ml()``. 
+      
+   The following example shows how to use function ``ml_to_hl()`` together with ``mvl_geopotential_on_ml()``:
    
    .. code-block:: python
 
@@ -852,7 +876,20 @@ Fieldset Macro functions
 
    Computes geopotential on model levels.
 
-   Parameter t should be a fieldset of temperature on model levels in ascending numeric order (e.g. 1-137), q a fieldset of specific humidity on model levels in ascending numeric order, lnsp a field of log of surface pressure on model level 1, zs a field of geopotential on model level 1 (available from MARS). All fields must be GRIDDED data - no spherical harmonics, and they must all be on the same grid, with the same number of points. The function assumes that there are no other dimensions contained in the data, e.g. all fields should have the same date and time. The return value is a fieldset of geopotential on model levels.
+   All fields must be **gridpoint** data - no spherical harmonics, and they must all be on the same grid, with the same number of points. ``mvl_geopotential_on_ml`` assumes that there are no other dimensions contained in the data, e.g. all fields should have the same date and time. 
+   
+   The return value is a fieldset of geopotential defined on the model levels present in the input data sorted by ascending numeric level order.
+
+   The required levels and their ordering in ``t`` and ``q`` depend on the Metview version used:
+   
+   * from Metview version **5.14.0**: ``t`` and ``q`` must contain the same levels in the same order but there is no restriction on the actual level ordering. The model level range must be contiguous and must include the bottom-most level. E.g. if the current vertical coordinate system has 137 model levels using only a subset of levels between e.g. 137-96 is allowed.
+   * in **previous** Metview versions: ``t`` and ``q`` must contain the full model level range in ascending numeric order. E.g. if the current vertical coordinate system has 137 model levels ``t`` and ``q`` must contain all the levels ordered as 1,..., 137.
+
+   .. note::
+      The actual ECMWF model level definition is stored in the **"pv" array** in the GRIB message metadata. You can figure out the total number of model levels in the given vertical coordinate system by using the **len(pv)/2-1** formula. The typical values are 137 and 91. This can then be used to look up details about actual the model level definitions (e.g. approximate pressure and height values) on this `page <https://confluence.ecmwf.int/display/UDOC/Model+level+definitions>`_.  
+
+   .. note::
+      **Surface geopotential** is defined on model level 1 in MARS at ECMWF. For most recent dates it is available for the 0 forecast step. However, generally it is only available as an **analysis** field.  
 
    The code below illustrates how to use this function:
 
@@ -940,12 +977,15 @@ Fieldset Macro functions
 .. describe:: fieldset pressure ( fieldset,list )
 .. describe:: fieldset pressure ( fieldset,fieldset )
 
-   This function creates fields of pressure from the logarithm of the surface pressure (lnsp) and a list of model levels. Note that this function only works with gridded fields and assumes that the parameter for lnsp is 152. A newer, more flexible version of this function exists - see unipressure () .
+   This function creates fields of pressure from the logarithm of the surface pressure (lnsp) and a list of model levels. Note that this function only works with gridded fields and assumes that the parameter for lnsp is 152. 
 
    * The first argument is always a fieldset containing an lnsp field. If no other parameter is given, the list of levels will range from 1 to (number of vertical coordinates/2)-1 as coded in the GRIB header of the lnsp parameter.
    * The second argument specifies the levels at which the output fields must be generated. To generate a single level, pass a number. For more than one level, either pass a list of levels or a fieldset. If a fieldset is passed as the second parameter, the level information is extracted from each field of the fieldset.
 
    Missing values in the lnsp field are retained in the output fieldset.
+
+   .. warning::
+      This function is obsolete, use ``pressure`` instead.
 
 
 .. describe:: fieldset rmask ( fieldset,number,number,number )
@@ -1019,6 +1059,30 @@ Fieldset Macro functions
    Creates a new fieldset with all the fields' values replaced by those supplied. If supplied as a single vector, the values are set in all fields; if a list of vectors is supplied then there must be the same number of vectors as there are fields in the fieldset. The default behaviour is to produce an error if the input fieldset and vector have different numbers of values. If, however, a third parameter (set to the string 'resize') is passed to the function, the resulting fieldset will instead be resized to have the same number of values as the input vector - this can be useful when creating a new fieldset from a template. Missing values in the vector(s) are retained as missing values in the fieldset.
 
 
+.. describe:: fieldset shear_deformation(fx: fieldset, fy: fieldset)
+
+   *New in Metview version 5.13.0*.
+
+   Computes the shear deformation of 2-dimensional vector fields. 
+  
+   The computations for a vector field f=(fx,fy) are based on the following formula:
+
+   .. math:: 
+      
+      d(f) = \frac{1}{R \ cos\phi}\frac{\partial f_y}{\partial \lambda} + \frac{1}{R}\frac{\partial f_x}{\partial \phi} + \frac{f_x}{R}tan\phi
+
+   where:
+   
+   * R is the radius of the Earth (in m)
+   * :math:`\phi` is the latitude
+   * :math:`\lambda` is the longitude.
+
+   The derivatives are computed with a second order finite-difference approximation. The resulting fields contain missing values on the poles.  
+   
+   .. warning::
+      ``shear_deformation`` is only implemented for regular latitude-longitude grids.
+
+
 .. describe:: fieldset sinlat ( fieldset )
 
    For each field in the input fieldset, this function creates a field where each grid point has the value of the sine of its latitude. For example, the following macro adds the coriolis parameter to each grid point of a field:
@@ -1029,6 +1093,47 @@ Fieldset Macro functions
       omega = 2 * pi / 86400
       coriolis = 2 * omega * sinlat(vort)
       absvort = vort + coriolis
+
+
+.. describe:: fieldset solar_zenith_angle(fs: fieldset, [to_cosine: string])
+
+   *New in Metview version 5.14.0.*
+    
+   Computes the solar zenith angle for each gridpoint by using the following positional arguments:
+
+   * fs: input fieldset
+   * to_cosine: (optional) when this argument is specified as set to "to_cosine" the cosine of the solar zenith angle is returned
+
+   The result is the solar zenith angle in degrees (unless "to_cosine" is specified when the cosine of the solar zenith angle is returned). The computations are based on the following formula:
+
+   .. math:: 
+
+      cos\theta_{s} = sin\phi\,  sin\delta + cos\phi\,  cos\delta\, cosh
+
+   where:
+
+   * :math:`\theta_{s}` is the solar zenith angle
+   * :math:`\phi` is the latitude
+   * :math:`\delta` is the declination of the Sun
+   * h is the hour angle in local solar time
+
+   The declination of the Sun is computed as:
+
+   .. math:: 
+
+      \delta = - arcsin\left(0.39779 cos(0.98565\unicode{xB0} (N+10) + 1.914\unicode{xB0} sin(0.98565\unicode{xB0} (N-2))\right)
+
+   where:
+
+   * N is the day of the year beginning with N=0 at midnight Universal Time (UT) as January 1. It is a floating point number allowing for fractional days.
+
+   A missing value in any field in ``fs`` will result in a missing value in the corresponding grid point in the output fieldset. 
+
+   The dates and times used in the computations are based on the "validityDate" and "validityTime" ecCodes keys. If these are not available for a given field the result will contain missing values for all the gridpoints for that field. 
+
+   When "to_cosine" is not specified and the GRIB edition of the input field is 2 the ecCodes **paramId** in the output field is set to 260225 (shortName="solza"). For GRIB edition 1 this parameter is not defined.
+
+   When "to_cosine" is specified the ecCodes **paramId** in the output is set to 214001  (shortName="uvcossza").
 
 
 .. describe:: fieldset sort ( fieldset )
@@ -1045,6 +1150,22 @@ Fieldset Macro functions
    The second argument allows you to modify the precedence of the sorting keys - e.g. if the second argument is a string "param", then the sorting is done according to the param key. If the second argument is a list you specify a list of sorting keys - e.g. ["param", "date"] sorts on parameter and then date.
 
    The third argument specifies a sorting direction. This can be a string (">" or "<") or a list ([">", "<", ">",...]). If it is a string, the sorting direction it specifies applies to all sorting keys specified in the second argument. If it is a list, then the second argument must also be a list with the same number of elements - the sorting directions apply to each sorting key specified.
+
+
+.. describe:: fieldset speed (u: fieldset, v: fieldset)
+
+   Computes the wind speed from the ``u`` and ``v`` wind components.
+
+   The resulting values are speed values in the same units as the input fields. A missing value in either ``u`` or ``v``  will result in a missing value in the corresponding place in the output fieldset.
+
+   The ecCodes **paramId** in the output is set as follows:
+   
+   * 10 (atmospheric wind speed)
+   * 207 (10m wind speed)
+   * 228249 (100m wind speed)
+   * 228241 (200m wind speed)
+
+   In any  other cases the ecCodes **paramId** is set to 10.
 
 
 .. describe:: fieldset stdev ( fieldset )
@@ -1068,6 +1189,30 @@ Fieldset Macro functions
 .. describe:: number or list stdev_a ( fieldset,list )
 
    Computes the standard deviation over a weighted area. The area, if specified, is a list of numbers representing North, West, South, East. If the area is not specified, the whole field will be used in the calculation. The result is a number for a single field, or a list for a multi-field fieldset.
+
+
+.. describe:: fieldset stretch_deformation(fx: fieldset, fy: fieldset)
+
+   *New in Metview version 5.13.0*.
+
+   Computes the stretch deformation of 2-dimensional vector fields. 
+  
+   The computations for a vector field f=(fx,fy) are based on the following formula:
+
+   .. math:: 
+      
+      d(f) = \frac{1}{R \ cos\phi}\frac{\partial f_x}{\partial \lambda} - \frac{1}{R}\frac{\partial f_y}{\partial \phi} - \frac{f_y}{R}tan\phi
+
+   where:
+   
+   * R is the radius of the Earth (in m)
+   * :math:`\phi` is the latitude
+   * :math:`\lambda` is the longitude.
+
+   The derivatives are computed with a second order finite-difference approximation. The resulting fields contain missing values on the poles.
+   
+   .. warning::
+      ``stretch_deformation`` is only implemented for regular latitude-longitude grids.
 
 
 .. describe:: fieldset sum ( fieldset )
@@ -1101,12 +1246,15 @@ Fieldset Macro functions
 .. describe:: fieldset thickness ( fieldset,list )
 .. describe:: fieldset thickness ( fieldset,fieldset )
 
-   This function creates fields of thickness from the logarithm of the surface pressure (lnsp ) and a list of model levels. Note that this function only works with lat/long grids and assumes that the parameter for lnsp is 152. A newer, more flexible version of this function exists - see unithickness () .
+   This function creates fields of thickness from the logarithm of the surface pressure (lnsp ) and a list of model levels. Note that this function only works with lat/long grids and assumes that the parameter for lnsp is 152. 
 
    * The first argument is always a fieldset containing an lnsp field. If no other parameter is given, the list of levels will range from 1 to (number of vertical coordinates/2)-1 as coded in the GRIB header of the lnsp .
    * The second argument specifies the levels at which the output fields must be generated. To generate a single level, pass a number. For more than one level, either pass a list of levels or a fieldset. If a fieldset is passed as the second parameter, the level information is extracted from each field of the fieldset.
 
    Missing values in the lnsp field are retained in the output fieldset.
+
+   .. warning::
+      This function is obsolete, use ``unithickness`` instead.
 
 
 .. describe:: fieldset unipressure ( fieldset )
@@ -1143,18 +1291,28 @@ Fieldset Macro functions
    Missing values in the lnsp field are retained in the output fieldset.
 
 
-.. describe:: fieldset univertint ( fieldset)
-.. describe:: fieldset univertint ( fieldset, fieldset )
-.. describe:: fieldset univertint ( fieldset, number )
-.. describe:: fieldset univertint ( fieldset, fieldset, number )
-.. describe:: fieldset univertint ( fieldset, fieldset, list)
+.. py:function:: univertint(fs: fieldset, [lnsp_code: number])
+.. py:function:: univertint(lnsp: fieldset, fs: fieldset, [levels: list])
 
-   This function performs a vertical integration for data on pressure levels or ECMWF (hybrid) model levels. This function is similar to vertint() , except that univertint() also works with sparse levels whereas vertint() is restricted to continuous levels.
+   Performs a vertical integration for pressure levels or ECMWF (hybrid) model levels using the following positional arguments: 
 
-   * Pressure levels: the function has to be called with one argument only (the input fieldset).
-   * Model levels: If just one fieldset is given, it must also contain the logarithm of the surface pressure (lnsp). If the function is called with two fieldsets, the first one is a fieldset containing an lnsp field, the second one is the multi-level fieldset. A number may optionally be given as the last parameter in order to specify the lnsp code used in the fieldset that contains the lnsp data; its default value is 152. If a list with two elements [top, bottom] is given as the third parameter, then the integration is performed between (and including) these layers.
+   * fs: input fieldset
+   * lnsp: lnsp fieldset defined on model level 1
+   * lnsp_code: ecCodes paramId for lnsp
+   * levels: level range as a list of [top, bottom]
+   
+   The function has to be called in a different way depending on the type of vertical levels in ``fs``:
 
+   * Pressure levels: the function has to be called with the ``fs`` argument only.
+   * Model levels: 
+
+      * when no ``lnsp`` is specified ``fs`` must also contain an lnsp field. In this case the optional ``lnsp_code`` can specify the ecCodes **paramId** used to identify the **lnsp** field (by default the value of 152 is used.
+      * when ``lnsp`` is specified it defines the **lnsp** field.
+      * the optional ``levels`` parameter is a **list** with two numbers [top, bottom] to specify the level range for the integration. If ``levels`` is not specified the vertical integration is performed for all the model levels in ``fs``.
+         
    A missing value in any field will result in a missing value in the corresponding place in the output fieldset.
+
+   **Computations**
 
    The computations are based on the following formula:
 
@@ -1167,6 +1325,52 @@ Fieldset Macro functions
    * f: input fieldset
    * p: pressure
    * g: acceleration of gravity (9.80665 m/s2).
+
+   The actual algorithm is slightly different on pressure and model levels.
+
+   For **pressure levels** the data is first sorted by pressure in ascending numerical order resulting in :math:`f_{i}` fields on levels :math:`p_{i}` i=0,...,N (with :math:`p_{i+1} > p_{i}`). Then, to estimate the pressure differential we form N layers by using the pressures halfway between two levels. If we denote the halfway pressure between level i and i+1 by :math:`p^{*}_{i}` we can write the layer sizes as follows:
+
+   .. math::
+
+      \Delta p_{0} = p^{*}_{0} - p_{0}
+
+      \Delta p_{i} = p{*}_{i+1} - p^{*}_{i}  
+
+      \Delta p_{N} = p_{N} - p^{*}_{N-1}
+
+   and estimate the integral like this:
+
+   .. math::
+      
+      \sum_{i=0}^{N} f_{i} \frac{\Delta p_{i}}{g}
+   
+   For **model level** data the vertical coordinate system definition is stored in the **"pv" array** in the GRIB header. A model level is defined on a "full level", which lies in the layer between the two neighbouring "half levels". Using ``lnsp`` and the "pv" array we can determine the  :math:`\Delta p_{i}` layer size for each level individually. The integral is then estimated in the same way as was shown above for pressure levels. Please note that you can use ``unithickness`` to compute the layer sizes (the "thickness" in the function name actually means "layer size"). For more details about the model level definitions please visit this `page <https://confluence.ecmwf.int/display/UDOC/Model+level+definitions>`_.
+
+
+   :Example: 
+
+      .. code-block:: python
+
+         # Retrieve cloud liquid water content 
+         clwc = retrieve(
+            levtype : "ml",
+            levelist : [1,"to",137],
+            param : "clwc",
+            date : -1,
+            grid : [2,2]
+         )
+
+         # Retrieve lnsp
+         lnsp = retrieve(
+            levtype : "ml",
+            levelist : 1,
+            param : "lnsp",
+            date : -1,
+            grid : [2,2]
+         )
+
+         # Compute total amount of liquid water
+         r = univertint(lnsp,clwc)
 
 
 .. describe:: date or list valid_date ( fieldset )
@@ -1228,35 +1432,12 @@ Fieldset Macro functions
    * f: input fieldset
    * p: pressure
    * g: acceleration of gravity (9.80665 m/s2).
-   
-   The following example computes the total amount of liquid water in the atmosphere by integrating the cloud liquid water content (clwc ) over all levels of the model
-
-   .. code-block:: python
-
-      # Retrieve clwc
-      clwc = retrieve(
-         levtype : "ml",
-         levelist : [1,"to",31],
-         param : "clwc",
-         date : -1,
-         grid : [2.5,2.5]
-      )
-
-      # Retrieve lnsp
-         lnsp = retrieve(
-         levtype : "ml",
-         levelist : 1,
-         param : "lnsp",
-         date : -1,
-         grid : [2.5,2.5]
-      )  
-
-      # Integrate the field
-      x = vertint(lnsp,clwc)
-      plot(x)
+  
+   .. warning::
+      This function is obsolete, use ``univertint`` instead.
 
 
-.. describe:: fieldset vorticity (fx fieldset, fy: fieldset)
+.. describe:: fieldset vorticity (fx: fieldset, fy: fieldset)
 
    Computes the vertical component of the curl differential operator for 2-dimensional vector fields. For wind fields (i.e. when the input fieldsets are u and v wind components) this computes the relative vorticity (ζ). The computations for a vector field f=(fx,fy) are based on the following formula:
 
