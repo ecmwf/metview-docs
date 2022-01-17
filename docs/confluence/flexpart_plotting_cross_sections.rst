@@ -56,7 +56,7 @@ Next, we define the contouring:
   
 Then, we define the cross section view along this line:
 
-.. image:: ../_static/flexpart_plotting_cross_sections/image2017-10-25_14-58-40.png
+.. image:: /_static/flexpart_plotting_cross_sections/image2017-10-25_14-58-40.png
   
 .. code-block:: python
   
@@ -74,4 +74,4 @@ and finally generate the plot:
   
 Having run the macro we will get a plot like this:
 
-.. image:: ../_static/flexpart_plotting_cross_sections/image2017-10-25_10-22-43.png
+.. image:: /_static/flexpart_plotting_cross_sections/image2017-10-25_10-22-43.png

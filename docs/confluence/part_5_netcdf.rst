@@ -15,7 +15,7 @@ Examine and visualise a geomatrix style netCDF file
 
 Right-click on the file *era5_2000_aug.nc* and choose **examine** to see the structure of the file:
 
-.. image:: ../_static/metview_90_minute_introduction_part_5_netcdf/netcdf-examiner-3.png
+.. image:: /_static/metview_90_minute_introduction_part_5_netcdf/netcdf-examiner-3.png
 
 For more complete information, click on the **NcDump** tab.
 
@@ -44,7 +44,7 @@ Create a new `NetCDF Visualiser <https://confluence.ecmwf.int/display/METV/NetCD
 
 Save the icon and visualise it. For fun, drop the supplied icons `contour_t2m <https://confluence.ecmwf.int/display/METV/Contouring>`_ and `mollweide <https://confluence.ecmwf.int/display/METV/Geographical+View>`_ into the plot window to obtain the following:
 
-.. image:: ../_static/metview_90_minute_introduction_part_5_netcdf/netcdf-plotted-1.png
+.. image:: /_static/metview_90_minute_introduction_part_5_netcdf/netcdf-plotted-1.png
 
 Examine and visualise a geopoints style netCDF file
 ***************************************************
@@ -76,7 +76,7 @@ As you can see, there are 1-dimensional variables for **temperature**, **latitud
 Visualise it to get a default plot. 
 In the solutions folder is a script called *gallery_example_nc_maritime_obs.py*, which converts from Kelvin to Celcius and adds some stying to the plot (generated as PDF - simply remove the ``mv.setoutput()`` command to get an on-screen visualisation).
 
-.. image:: ../_static/metview_90_minute_introduction_part_5_netcdf/netcdf-plotted-2.png
+.. image:: /_static/metview_90_minute_introduction_part_5_netcdf/netcdf-plotted-2.png
 
 Extract data and convert to pandas
 **********************************

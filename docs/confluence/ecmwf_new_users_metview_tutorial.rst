@@ -34,7 +34,7 @@ You should work in this folder, not the embedded *solutions* folder.
 
 **Figure 1 - the Metview desktop**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/default-desktop.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/default-desktop.png
 
 Exercise 1: forecast - analysis difference
 ******************************************
@@ -206,27 +206,27 @@ By default, the macro is written so that it will produce an interactive plot win
 
 **Figure 2 - the Mars Retrieval icon editor**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/mars-editor.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/mars-editor.png
 
 **Figure 3 - the GRIB Examiner**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-35-56.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-35-56.png
 
 **Figure 4 - a default map plot**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-36-59.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-36-59.png
 
 **Figure 5 - map plot with shaded contours**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-45-44.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-45-44.png
 
 **Figure 6 - cross section plot of data**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-27-57.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-27-57.png
 
 **Figure 7 - difference plot with two contour icons**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-26_17-3-10.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-26_17-3-10.png
 
 Exercise 2: forecast - observation difference
 *********************************************
@@ -331,19 +331,19 @@ The observation differences don't stand out well against the strongly coloured f
 
 **Figure 8 - the BUFR Examiner**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-47-38.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-47-38.png
 
 **Figure 9 - synoptic observation plotting**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-53-3.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-53-3.png
 
 **Figure 10 - 2m temperature observations**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-27_10-0-50.jpg
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_10-0-50.jpg
 
 **Figure 11 - temperature forecast field with obs-forecast differences overlaid**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/image2013-2-27_13-7-29.jpg
+.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_13-7-29.jpg
 
 Exercise 3: ODB data
 ********************
@@ -427,16 +427,16 @@ The results can be seen in **Figure 14**.
 
 **Figure 12 - ODB and ODB Visualiser icons**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/odb-icons.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-icons.png
 
 **Figure 13 - ODB and GRIB data overlaid**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/odb-t-overlay.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-t-overlay.png
 
 **Figure 14 - further ODB plots**
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/odb-diff.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-diff.png
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/odb-wind.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-wind.png
 
-.. image:: ../_static/ecmwf_new_users_metview_tutorial/odb-tephi.png
+.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-tephi.png

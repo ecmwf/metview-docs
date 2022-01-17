@@ -38,7 +38,7 @@ So we have a single-line title which uses the default content defined by Magics,
 
 For GRIB data, the automatic title is constructed using the meta-data from each field in the plot.
 
-.. image:: ../_static/customising_your_plot_title/automatic-grib-title.png
+.. image:: /_static/customising_your_plot_title/automatic-grib-title.png
 
 For netCDF data, an automatic title consists of the value of the file's *title* global attribute if it exists.
 
@@ -49,7 +49,7 @@ There is no automatic title for BUFR, geopoints or ASCII table data.
 Customising an automatic title
 ------------------------------
 
-.. image:: ../_static/customising_your_plot_title/automatic-grib-title-large-bold.png
+.. image:: /_static/customising_your_plot_title/automatic-grib-title-large-bold.png
 
 Visualise the supplied GRIB file *relative_humidity.grib* to see its automatic title.
 
@@ -59,7 +59,7 @@ You should play with the parameters **Text Colour**, **Text Font**, **Text Font 
 Positioning a title
 -------------------
 
-.. image:: ../_static/customising_your_plot_title/automatic-grib-title-positional.png
+.. image:: /_static/customising_your_plot_title/automatic-grib-title-positional.png
 
 Make a duplicate of your *Text Plotting* icon. 
 We will move the title to another location in the plot using the new icon. 
@@ -102,7 +102,7 @@ All of this means that if we want to remove the title at the top, we must create
 User Defined Titles
 *******************
 
-.. image:: ../_static/customising_your_plot_title/user-formatted-grib-title.png
+.. image:: /_static/customising_your_plot_title/user-formatted-grib-title.png
 
 If you know (or can figure out from some Macro code) exactly what your plot is going to show, then you can construct a title with no automatically computed elements. 
 Or you can combine the two.
@@ -168,7 +168,7 @@ We could extend this to construct complex titles showing various information.
 Dealing with multiple overlaid fields
 -------------------------------------
 
-.. image:: ../_static/customising_your_plot_title/grib-title-multiple-fields.png
+.. image:: /_static/customising_your_plot_title/grib-title-multiple-fields.png
 
 Adapt your macro to also read and overlay the geopotential data. 
 Use the supplied *rh_shade* icon to colour the relative humidity field:

@@ -37,7 +37,7 @@ You can create links to individual files or complete folders. This facility can 
 Retrieving data from MARS
 =========================
 
-.. image:: ../_static/data_part_1/icon-mars.png
+.. image:: /_static/data_part_1/icon-mars.png
 
 Metview has the ability to retrieve data directly from the ECMWF MARS archive (or indeed any other MARS archive installed outside ECMWF). 
 Metview can also retrieve data from certain data sets without much special setup using the `MARS Web API <https://confluence.ecmwf.int/display/METV/Using+the+MARS+Web+API+from+Metview>`_.
@@ -107,7 +107,7 @@ For an even more detailed output, you can start Metview on the command line with
 Downloading files from URLs
 ===========================
 
-.. image:: ../_static/data_part_1/icon-download.png
+.. image:: /_static/data_part_1/icon-download.png
 
 Metview's *Download* module provides the means to download a file from an arbitrary URL.
 
@@ -138,7 +138,7 @@ The following sections will introduce some of the data inspection facilities ava
 Examining GRIB Meta-data
 ========================
 
-.. image:: ../_static/data_part_1/grib-examiner.png
+.. image:: /_static/data_part_1/grib-examiner.png
 
 Right-click and **Examine** the *Mars Retrieval* icon (if for some reason the retrieval did not work, or you do not have access to MARS, then use *ztuv.grb* instead).
 
@@ -152,7 +152,7 @@ Filtering GRIB Data
 
 Metview provides powerful data filtering capabilities. Let's take our ztuv.grb file and extract the forecast and analysis data separately from it.
 
-.. image:: ../_static/data_part_1/grib-filter-icon-editor.png
+.. image:: /_static/data_part_1/grib-filter-icon-editor.png
 
 Create a new *GRIB Filter* icon. 
 This time we'll rename it from within the icon editor (just to show an alternative way to rename an icon). 
@@ -189,7 +189,7 @@ It is quite often the case that GRIB data comes as several fields in the same fi
 Plotting Grid Values
 --------------------
 
-.. image:: ../_static/data_part_1/grid-values-plotting.png
+.. image:: /_static/data_part_1/grid-values-plotting.png
 
 We will now plot the actual grid values. 
 Create a new *Contour* icon and rename it *grid_10x10*. 
@@ -208,9 +208,9 @@ This button does two things: it indicates that a parameter has been altered from
 Cursor Data
 -----------
 
-.. image:: ../_static/data_part_1/display_window_cursor_data_button.png
+.. image:: /_static/data_part_1/display_window_cursor_data_button.png
 
-.. image:: ../_static/data_part_1/cursor-data-in-plot.png
+.. image:: /_static/data_part_1/cursor-data-in-plot.png
 
 As already seen in `A Simple Visualisation <https://confluence.ecmwf.int/display/METV/A+Simple+Visualisation>`_, the Cursor Data can also be used to inspect grid point values. 
 Activate it and check it against the plotted values!
@@ -218,7 +218,7 @@ Activate it and check it against the plotted values!
 Scattered Data in Geopoints files
 *********************************
 
-.. image:: ../_static/data_part_1/geopoints-plot.png
+.. image:: /_static/data_part_1/geopoints-plot.png
 
 Format overview
 ===============
@@ -373,14 +373,14 @@ We will have a brief overview of Metview's BUFR-handling capabilities here; for 
 Examining BUFR Meta-data
 ========================
 
-.. image:: ../_static/data_part_1/bufr-examiner.png
+.. image:: /_static/data_part_1/bufr-examiner.png
 
 Right-click on the supplied synop.bufr BUFR icon and select examine from the icon menu. This will start the BUFR examiner application. The right-hand panel displays data for the message selected in the left-hand panel. This can be an easy way to find the correct descriptor for a given parameter such as Relative Humidity.
 
 Plotting BUFR Data
 ==================
 
-.. image:: ../_static/data_part_1/bufr-synop-plot.png
+.. image:: /_static/data_part_1/bufr-synop-plot.png
 
 Metview is able to plot certain BUFR data directly, mainly some WMO conventional observation types including SYNOP and TEMP.
 
@@ -392,9 +392,9 @@ If you zoom into a smaller area you will see more observations but the thinning 
 Filtering Observation Data
 ==========================
 
-.. image:: ../_static/data_part_1/icon-obsfilter.png
+.. image:: /_static/data_part_1/icon-obsfilter.png
 
-.. image:: ../_static/data_part_1/obs-filter-wind-speed-plot.png
+.. image:: /_static/data_part_1/obs-filter-wind-speed-plot.png
 
 BUFR files can contain a lot of information, but we often want to extract just one or two parameters.
 
@@ -439,7 +439,7 @@ Try the supplied icon *symb_wind_speed_fixed*, which has a fixed value/colour ma
 Extracting vector values from BUFR
 ----------------------------------
 
-.. image:: ../_static/data_part_1/obs-filter-wind-speed-and-direction-plot.png
+.. image:: /_static/data_part_1/obs-filter-wind-speed-and-direction-plot.png
 
 We can extract the wind direction too, and plot the wind as arrows (or flags).
 
@@ -476,7 +476,7 @@ Investigate different grids
 GRIB fields are often not as simple as regular lat/lon! ECMWF also produces data in "reduced Gaussian grids", two of which are included in your folder. Visualise them with your *grid_1x1* icon to see how the points are spaced around the globe. 
 Use both a cylindrical and a polar stereographic projection to look at them (*Geographic View* icon).
 
-.. image:: ../_static/data_part_1/grib-grids.png
+.. image:: /_static/data_part_1/grib-grids.png
 
 Try the search facilities in the data examiners
 ===============================================

@@ -35,44 +35,44 @@ For instance, when you visualise a GRIB icon, a default *Geographical View* cont
 
 The following customised *Geographical View* shows some of these concepts including plot position and coloured frames.
 
-.. image:: ../_static/analysis_views/geo-view-params.png
+.. image:: /_static/analysis_views/geo-view-params.png
 
 The Geographical View 
 =====================
 
-.. image:: ../_static/analysis_views/GEOVIEW.png 
+.. image:: /_static/analysis_views/GEOVIEW.png 
 
 This is the default View for plotting geographic-based data. This View was discussed previously in `Customising Your Plot <https://confluence.ecmwf.int/display/METV/Customising+Your+Plot>`_.
 
 The Cartesian View     
 ==================
 
-.. image:: ../_static/analysis_views/CARTESIANVIEW.png
+.. image:: /_static/analysis_views/CARTESIANVIEW.png
 
 This view is for plots that are not on a map, and will be covered in another session: `Graph Plotting in Metview <https://confluence.ecmwf.int/display/METV/Graph+Plotting+in+Metview>`_.
 
 The Annotation View    
 ===================
 
-.. image:: ../_static/analysis_views/ANNOTATIONVIEW.png
+.. image:: /_static/analysis_views/ANNOTATIONVIEW.png
 
 This will be covered in another session: `Layout in Metview <https://confluence.ecmwf.int/display/METV/Layout+in+Metview>`_.
 
 The Cross Section View    
 ======================
 
-.. image:: ../_static/analysis_views/MXSECTIONVIEW.png
+.. image:: /_static/analysis_views/MXSECTIONVIEW.png
 
 The `Cross Section View <https://confluence.ecmwf.int/display/METV/Cross+Section+View>`_ icon is a plotting specification for cross section plots along a given transect line.
 
-.. image:: ../_static/analysis_views/cross-section-plot.png
+.. image:: /_static/analysis_views/cross-section-plot.png
 
 Create a new *Cross Section View* icon, **Visualise** it and drop the *t_fc24.grib* icon into the resulting **Display Window**. 
 A default cross section along the Equator is generated.
 
 To customise the transect line (coordinates along which the cross-section is calculated), **Edit** the *Cross Section View* icon and either click on the **Geography Tool** button to bring up an editor (or type the coordinates by hand).
 
-.. image:: ../_static/analysis_views/image2015-2-19_14-52-15.png
+.. image:: /_static/analysis_views/image2015-2-19_14-52-15.png
 
 **Save/OK** the changes and re-visualise the data with this new cross section.
 
@@ -85,11 +85,11 @@ This view accepts data stored in either pressure levels or model levels (optiona
 The Vertical Profile View    
 =========================
 
-.. image:: ../_static/analysis_views/MVPROFILEVIEW.png
+.. image:: /_static/analysis_views/MVPROFILEVIEW.png
 
 The `Vertical Profile View <https://confluence.ecmwf.int/display/METV/Vertical+Profile+View>`_ icon is a computation/plotting specification for vertical profiles.
 
-.. image:: ../_static/analysis_views/vertical-profile-plot.png
+.. image:: /_static/analysis_views/vertical-profile-plot.png
 
 Create a new *Vertical Profile View* icon, **Visualise** it and drop the *t_fc24.grib* icon into the **Display Window**. 
 The result shows a vertical profile at a point (or averaged over an area). 
@@ -97,7 +97,7 @@ Experiment with this icon in a similar way to how you did with the *Cross Sectio
 
 The `Graph Plotting <https://confluence.ecmwf.int/display/METV/Graph+Plotting>`_ icon is the visual definition used for the plotting of graphs (e.g. lines, curves and bar charts).
 
-.. image:: ../_static/analysis_views/MGRAPH.png
+.. image:: /_static/analysis_views/MGRAPH.png
 
 To customise the line displayed in this plot, create a new instance of *Graph Plotting* and rename it to *vdline*. 
 Edit it, setting the following parameters:
@@ -118,11 +118,11 @@ Edit it, setting the following parameters:
 The Average View    
 ================
 
-.. image:: ../_static/analysis_views/MAVERAGEVIEW.png
+.. image:: /_static/analysis_views/MAVERAGEVIEW.png
 
 The `Average View <https://confluence.ecmwf.int/display/METV/Average+View>`_ icon is a plotting specification for average (zonal or meridional) cross-section plots over an area.
 
-.. image:: ../_static/analysis_views/average-view-plot.png
+.. image:: /_static/analysis_views/average-view-plot.png
 
 Create a new *Average View* icon, **Visualise** it and drop the *t_fc24.grib* icon into the **Display Window**. 
 A default meridional average over the global area is generated. 
@@ -135,11 +135,11 @@ You can use a *Contouring* icon, e.g. the *shade* icon, to style the contours of
 The Hovmoeller View    
 ======================
 
-.. image:: ../_static/analysis_views/MHOVMOELLERVIEW.png
+.. image:: /_static/analysis_views/MHOVMOELLERVIEW.png
 
 The `Hovmoeller View <https://confluence.ecmwf.int/display/METV/Hovmoeller+View>`_ icon is a computation/plotting specification for Hovmoeller diagrams along a specified arbitrary transect line or a rectangular area. The diagram displays a two-dimensional graph with latitude or height as one axis, and time as the other.
 
-.. image:: ../_static/analysis_views/hovmoeller-plot.png
+.. image:: /_static/analysis_views/hovmoeller-plot.png
 
 Create a new *Hovmoeller View* icon, **Visualise** it and drop the *t_ts.grib* icon into the **Display Window**. 
 A default diagram derived from a transect line along the Equator is generated. 
@@ -161,11 +161,11 @@ This view requires data at different time steps.
 The Thermo View   
 ===============
 
-.. image:: ../_static/analysis_views/THERMOVIEW.png
+.. image:: /_static/analysis_views/THERMOVIEW.png
 
 The `Thermo View <https://confluence.ecmwf.int/display/METV/Thermo+View>`_ icon is a plotting specification for Thermodynamic diagram plots from a suitable `GRIB <https://software.ecmwf.int/wiki/display/METV/Thermo+Data>`_ or `BUFR <https://software.ecmwf.int/wiki/display/METV/Thermo+Data>`_ data source. In such a diagram, temperature, humidity (represented by the dew point) and wind values are displayed with respect to pressure. Note that only the Tephigram diagram is currently available, although there exist other types of thermodynamic diagrams, such as Skew-T, Emagram and Stuve.
 
-.. image:: ../_static/analysis_views/tephi-view.png
+.. image:: /_static/analysis_views/tephi-view.png
 
 Create a new *Thermo View* icon, **Visualise** it and drop the *tquv_pl.grib* icon into the **Display Window**.
 A default diagram related to a geographical location [0,0] is generated.
@@ -182,7 +182,7 @@ The ability to customise each line individually (temperature and dew point) is a
 The `Wind Plotting <https://confluence.ecmwf.int/display/METV/Wind+Plotting>`_ icon is the visual definition responsible for specifying how wind vector data is displayed. 
 It controls the plotting of features such as wind arrows and wind flags.
 
-.. image:: ../_static/analysis_views/MWIND.png
+.. image:: /_static/analysis_views/MWIND.png
 
 To customise the wind flags displayed in the plot, create a new instance of this icon and rename it to *vdwind*. 
 **Edit** it, setting the following parameters:
@@ -318,7 +318,7 @@ Examine this data to see that it contains fields from different vertical levels.
 Axis Customisation
 ==================
 
-.. image:: ../_static/analysis_views/xs-axis-defs.png
+.. image:: /_static/analysis_views/xs-axis-defs.png
 
 All of these views allow the ability to customise the rendering of the axes. 
 While the view itself defines the limits and projection parameters for the plot, the axis lines themselves can be customised, for example in terms of colour and title.

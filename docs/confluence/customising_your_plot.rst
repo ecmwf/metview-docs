@@ -24,13 +24,13 @@ This session uses the same *t1000.grib* data file as `A Simple Visualisation <ht
 
 Metview uses icons to control the various aspects of a plot's appearance. We will look at some of these now, starting with the coastline plotting.
 
-.. image:: ../_static/customising_your_plot/t1000-with-shaded-coastines.png
+.. image:: /_static/customising_your_plot/t1000-with-shaded-coastines.png
 
 First, create a new `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon. 
 You can right-click within the **Metview desktop** to obtain a context menu from where the option **Create new icon** is available (shortcut: CTRL-N).
 
-.. image:: ../_static/customising_your_plot/desktop_context_menu_new_icon.png
-.. image:: ../_static/customising_your_plot/new_icon_dialog.png
+.. image:: /_static/customising_your_plot/desktop_context_menu_new_icon.png
+.. image:: /_static/customising_your_plot/new_icon_dialog.png
 
 
 This brings up a dialogue from where you can find the `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon; either double-click the icon, or drag it onto the desktop to create a new instance. 
@@ -55,7 +55,7 @@ All user-selectable parameters for plotting coastlines are here. Set the followi
 
 For colour-based parameters, there are two small arrows - the one on the right reveals a drop-down list of predefined colours (use this one); then one on the left reveals an advanced colour selection tool.
 
-.. image:: ../_static/customising_your_plot/coastline_editor_compact.png
+.. image:: /_static/customising_your_plot/coastline_editor_compact.png
 
 After making these changes, click the **Ok** button to save and exit the editor.
 
@@ -71,7 +71,7 @@ The purpose of these icons is to modify the plotting attributes of various data.
 Changing the Map Projection and Storing the Area
 ************************************************
 
-.. image:: ../_static/customising_your_plot/t1000-on-polar-projection.png
+.. image:: /_static/customising_your_plot/t1000-on-polar-projection.png
 
 Metview's default map projection is Cylindrical. However, meteorologists often use other projections when plotting data.
 
@@ -89,11 +89,11 @@ It is also possible to visualise the GRIB icon and then drop the *Geographical V
 Now we want to set the area used in the view. 
 Although we can interactively zoom into smaller areas in the **Display Window**, we now want to store a particular area so that we can use exactly the same one again and again. Set the **Map Area Definition** to Corners and click on the **Geography Tool** button next to the **Area** parameter (shown in the picture below).
 
-.. image:: ../_static/customising_your_plot/geography_help_tool_button.png
+.. image:: /_static/customising_your_plot/geography_help_tool_button.png
 
 This tool helps you define a region.
 
-.. image:: ../_static/customising_your_plot/geography_help_tool.png
+.. image:: /_static/customising_your_plot/geography_help_tool.png
 
 Use the **Zoom** tools to enlarge the European area and use the **Area tool** to select a region over Europe. 
 Click **Ok** to save your selection - your choices will now be updated in the *Geographical View* editor. 
@@ -107,7 +107,7 @@ Although they can be used separately, the `Coastlines <https://confluence.ecmwf.
 
 Notice that a *Geographical View* icon editor contains a place for an embedded `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon. If you drop a `Coastline <https://confluence.ecmwf.int/display/METV/Coastlines>`_ 's icon here and apply the changes, then the *Geographical View* icon will use your chosen coastlines.
 
-.. image:: ../_static/customising_your_plot/embedded-coastlines-icon.png
+.. image:: /_static/customising_your_plot/embedded-coastlines-icon.png
 
 Try it with your *land_shade* and *polar_europe* icons, and test the result by visualising *polar_europe*. 
 Note that your two icons are now *linked* - if you modify *land_shade*, the changes will be picked up the next time you visualise *polar_europe*. 
@@ -116,7 +116,7 @@ Another type of embedded icon is discussed in `Analysis Views <https://confluenc
 Creating a Simple Macro
 ***********************
 
-Metview incorporates a powerful `Macro <https://confluence.ecmwf.int/display/METV/The+Macro+Language>`_ language, which can be used for tasks ranging from simple automation of tasks to complex post-processing of data. We will now create a simple macro which reads the GRIB file and plots it in our chosen projection.
+Metview incorporates a powerful :ref:`Macro <macro_lang>` language, which can be used for tasks ranging from simple automation of tasks to complex post-processing of data. We will now create a simple macro which reads the GRIB file and plots it in our chosen projection.
 
 Create a new *Macro* icon and edit it. 
 This time we see a code editor, custom-built for the Macro language. The editor can automatically translate Metview icons into Macro code, so do the following:
@@ -176,13 +176,13 @@ You can close the **Display Window** again.
 Modifying the Contouring
 ************************
 
-.. image:: ../_static/customising_your_plot/t1000-with-shading.png
+.. image:: /_static/customising_your_plot/t1000-with-shading.png
 
 Metview provides many ways to style the contours when plotting data. 
 These are controlled via the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
 This is another visdef icon. Create a new instance of this icon and rename it to shade. Edit it, setting the following parameters:
 
-.. image:: ../_static/customising_your_plot/mcont_icon.png
+.. image:: /_static/customising_your_plot/mcont_icon.png
 
 .. list-table::
 
@@ -206,7 +206,7 @@ Apply the changes, visualise *t1000.grb* again and drag the shade icon into the 
 Our palette is automatically generated from a colour wheel. 
 Try setting **Contour Shade Colour Direction** to Anti Clockwise to see the difference in the generated palette.
 
-.. image:: ../_static/customising_your_plot/hsl-colour-wheel.png
+.. image:: /_static/customising_your_plot/hsl-colour-wheel.png
 
 Creating a Legend
 =================
@@ -260,7 +260,7 @@ We will still see the coastlines, but Metview will use the default coastline def
 Overlaying Another Field
 ************************
 
-.. image:: ../_static/customising_your_plot/t1000-and-z500.png
+.. image:: /_static/customising_your_plot/t1000-and-z500.png
 
 We will now overlay our plot with fields of geopotential.
 
@@ -312,14 +312,14 @@ Here are some suggestions:
 
 * shade only the values which are below freezing point
 
-.. image:: ../_static/customising_your_plot/conotur-shading-styles.png
+.. image:: /_static/customising_your_plot/conotur-shading-styles.png
 
 Map projections
 ===============
 
 Create a new *Geographical View* icon (or make a copy of an existing one) and try out some of the different map projections.
 
-.. image:: ../_static/customising_your_plot/projections-montage.png
+.. image:: /_static/customising_your_plot/projections-montage.png
 
 Coastlines
 ==========
@@ -331,11 +331,11 @@ Spend some time exploring the `Coastlines <https://confluence.ecmwf.int/display/
 * plot rivers
 * add sea shading
 
-.. image:: ../_static/customising_your_plot/boundaries-and-rivers.png
+.. image:: /_static/customising_your_plot/boundaries-and-rivers.png
 
 Histogram sidebar
 =================
 
-.. image:: ../_static/customising_your_plot/histogram-coloured.png
+.. image:: /_static/customising_your_plot/histogram-coloured.png
 
 Visualise the temperature data with one of the coloured `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icons and view the histogram in the **Data** tab of the sidebar (ensure the sidebar is visible if you previously hid it!). At the bottom, there is a control with which you can select to use your `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon colours and levels to compute and display the histogram - try it!

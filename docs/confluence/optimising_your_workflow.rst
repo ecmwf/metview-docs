@@ -8,7 +8,7 @@ In this session we will look at the various ways in which you can streamline how
 Icon Drawers
 ************
 
-.. image:: ../_static/optimising_your_workflow/icon-drawers.png
+.. image:: /_static/optimising_your_workflow/icon-drawers.png
 
 At the bottom of the Metview user interface is an area known as the *icon drawers*. 
 This is a tabbed area where you can store icons which you will use often. 
@@ -44,7 +44,7 @@ Once you have some icons there, try plotting some data and using some of the ico
 Templates
 *********
 
-.. image:: ../_static/optimising_your_workflow/icon-editor-templates.png
+.. image:: /_static/optimising_your_workflow/icon-editor-templates.png
 
 Templates are similar to the icon drawers, but work a little differently. 
 Create a new *Contouring* icon and edit it. 

@@ -18,7 +18,7 @@ Case description
 
 In this exercise we will use Metview to explore the various ways ensemble forecasts can be processed and visualised. The case we will investigate is related to a low pressure system crossing the UK on 10 August 2014: it caused high winds and heavy rain especially in the South-Western part of the country.
 
-.. image:: ../_static/case_study_ensemble_forecast/_76856039_76856038.jpg
+.. image:: /_static/case_study_ensemble_forecast/_76856039_76856038.jpg
 
 .. note::
 
@@ -37,7 +37,7 @@ Evaluating the forecasts
 
 In this part of the exercise we will create the plot shown below:
 
-.. image:: ../_static/case_study_ensemble_forecast/image2015-3-2_8-57-8.png
+.. image:: /_static/case_study_ensemble_forecast/image2015-3-2_8-57-8.png
 
 In this plot each map contains various forecasts for the maximum 10 m wind gust in a 6-hour period:
 
@@ -165,7 +165,7 @@ Checking the probabilities
 
 In this part we will estimate the risk of the wind gust being higher than a certain threshold. We will compute the probability of the wind gust exceeding 22 m/s (about 80 km/h) and generate the plot shown below:
 
-.. image:: ../_static/case_study_ensemble_forecast/image2015-3-2_9-9-34.png
+.. image:: /_static/case_study_ensemble_forecast/image2015-3-2_9-9-34.png
 
 We will compute the probabilities with a Macro in a very similar way as we did for the ensemble mean (and standard deviation). 
 The difference is that this time we need to compute a probability for each time step.
@@ -197,7 +197,7 @@ Creating a stamp plot
 
 In this part we will investigate the individual ENS members and create a plot showing them all for a given time step on the same page like this:
 
-.. image:: ../_static/case_study_ensemble_forecast/image2015-3-2_9-12-18.png
+.. image:: /_static/case_study_ensemble_forecast/image2015-3-2_9-12-18.png
 
 This plot, for an obvious reason, is called a stamp plot. 
 This is a complex plot so we will write a Macro to generate it.
@@ -265,7 +265,7 @@ Creating a spaghetti plot
 
 We finish the case study by looking into the predictability of the large scale flow pattern by generating spaghetti plots from the same ENS run as we investigated before. In a spaghetti plot each ENS member is rendered into the same map using a single isoline value. The plot we want to generate is shown below (it contains the spaghetti plot for 500 hPa geopotential using the 560 gpm isoline value):
 
-.. image:: ../_static/case_study_ensemble_forecast/image2015-3-3_11-24-45.png
+.. image:: /_static/case_study_ensemble_forecast/image2015-3-3_11-24-45.png
 
 This is a fairly complex plot and we will write a Macro to produce it.
 

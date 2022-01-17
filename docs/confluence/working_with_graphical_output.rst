@@ -82,9 +82,9 @@ You can write out the uncompressed KML if you want to debug the output.
   KML can **only** be generated if the *Cylindrical* projection is used!
   
 
-.. image:: ../_static/working_with_graphical_output/2015-Metview-KML-GoogleEarth.png
+.. image:: /_static/working_with_graphical_output/2015-Metview-KML-GoogleEarth.png
 
-.. image:: ../_static/working_with_graphical_output/2015-Metview-KML-GoogleMaps.png
+.. image:: /_static/working_with_graphical_output/2015-Metview-KML-GoogleMaps.png
 
 
 Metadata
@@ -108,23 +108,23 @@ Whenever you have a plot window open, you are able to **export** the plot into o
 You can select the export option, either from the toolbar button (it looks like a floppy disk with a pen), or from the **File** menu. 
 The keyboard shortcut is **Ctrl+s**.
 
-.. image:: ../_static/working_with_graphical_output/2015-Metview-Export-Icon.png
+.. image:: /_static/working_with_graphical_output/2015-Metview-Export-Icon.png
 
-.. image:: ../_static/working_with_graphical_output/2015-Metview-Export-Menu.png
+.. image:: /_static/working_with_graphical_output/2015-Metview-Export-Menu.png
 
 
 You will be presented with a dialogue (shown below) similar to what is used by other programs to choose a location and filename for the saved output.
 You can select which pages you want to save (if you have a series of them), which format and if you want to edit any format-specific options.
 
-.. image:: ../_static/working_with_graphical_output/2015-Metview-ExportDialoge_edited.png
+.. image:: /_static/working_with_graphical_output/2015-Metview-ExportDialoge_edited.png
 
 If you select the "spanner" icon
 
-.. image:: ../_static/working_with_graphical_output/Screenshot_2015-03-11_21-07-05.png
+.. image:: /_static/working_with_graphical_output/Screenshot_2015-03-11_21-07-05.png
 
 , you are offered an editor to choose format specific options. The example below shows the options for the KML format.
 
-.. image:: ../_static/working_with_graphical_output/2015-Metview-ExportDialogeOptions.png
+.. image:: /_static/working_with_graphical_output/2015-Metview-ExportDialogeOptions.png
 
 Tasks
 -----
@@ -322,7 +322,7 @@ The page `Generating animated GIFs from Metview plots <https://software.ecmwf.in
 Metview/Magics also supports special tags in SVG for the `Inkscape <https://inkscape.org/>`_ graphical editor. 
 This open source editor is great for when you need to further annotate your maps.
 
-.. image:: ../_static/working_with_graphical_output/figure3.png
+.. image:: /_static/working_with_graphical_output/figure3.png
 
 If you have extra time
 ======================

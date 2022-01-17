@@ -6,7 +6,7 @@ Case Study: Plotting Hurricane Sandy on a Map
 Case description
 ****************
 
-.. image:: ../_static/case_study_plotting_hurricane_sandy_on_a_map/sandy-on-map-final.png
+.. image:: /_static/case_study_plotting_hurricane_sandy_on_a_map/sandy-on-map-final.png
 
 In this exercise we will apply the basic Metview techniques to produce the plot shown above: a map showing part of North America with precipitation and mean sea level pressure fields plotted during the time of Hurricane Sandy. 
 We will also attach a marker to show a specific location on the map (New York City) and customise the legend and title.

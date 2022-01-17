@@ -16,9 +16,9 @@ Examine the BUFR file
 
 Right-click and **examine** the supplied BUFR file obs.bufr, bringing up the BUFR Examiner tool.
 
-.. image:: ../_static/metview_90_minute_introduction_part_3_bufr/mv-bufr-examiner2.png
+.. image:: /_static/metview_90_minute_introduction_part_3_bufr/mv-bufr-examiner2.png
 
-.. image:: ../_static/metview_90_minute_introduction_part_3_bufr/mv-bufr-examiner3.png
+.. image:: /_static/metview_90_minute_introduction_part_3_bufr/mv-bufr-examiner3.png
 
 Have a look around to see what's in the file, then find the key *airTemperatureAt2M* in the **Data Tree** tab. 
 Right-click and **Copy item** to get this key name into the clipboard.
@@ -48,7 +48,7 @@ We will now extract the 2m temperature values from the file. Create a new `Obser
 
 The editor should look like this:
 
-.. image:: ../_static/metview_90_minute_introduction_part_3_bufr/obsfilter-editor.png
+.. image:: /_static/metview_90_minute_introduction_part_3_bufr/obsfilter-editor.png
 
 Click OK, then **examine** the Obervation Filter icon. 
 The filtering step will be executed automatically and the resulting `geopoints <https://confluence.ecmwf.int/display/METV/Geopoints+Overview>`_ data will appear in the examiner. 
@@ -56,12 +56,12 @@ You could also right-click on the icon and save the data, or drop the icon into 
 
 There are various possible output formats, but the standard geopoints output is a text file that looks like this:
 
-.. image:: ../_static/metview_90_minute_introduction_part_3_bufr/geopoints-text.png
+.. image:: /_static/metview_90_minute_introduction_part_3_bufr/geopoints-text.png
 
 Now **visualise** the result of the Observation Filter and drop the supplied icons `symbol_plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ and coast_dark into the plot window.
 Now visualise the result of the Observation Filter and drop the supplied icons `symbol_plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ and `coast_dark <https://confluence.ecmwf.int/display/METV/Coastlines>`_ into the plot window.
 
-.. image:: ../_static/metview_90_minute_introduction_part_3_bufr/geopoints-plotted.png
+.. image:: /_static/metview_90_minute_introduction_part_3_bufr/geopoints-plotted.png
 
 Scriptify it
 ************

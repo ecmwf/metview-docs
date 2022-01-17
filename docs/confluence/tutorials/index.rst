@@ -12,7 +12,7 @@ A Quick Tour of Metview
 ***********************
 This standalone module is a good first introduction to Metview and should take 20-30 minutes.
 
-* `A Quick Tour of Metview <https://confluence.ecmwf.int/display/METV/A+Quick+Tour+of+Metview>`_
+* :ref:`A Quick Tour of Metview <a_quick_tour_of_metview>`
 
 90-Minute Metview Introduction
 ******************************

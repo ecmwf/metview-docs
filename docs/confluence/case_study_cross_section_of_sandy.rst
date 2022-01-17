@@ -16,7 +16,7 @@ Case Study: Cross Section of Sandy
 Case Description
 ****************
 
-.. image:: ../_static/case_study_cross_section_of_sandy/sandy-xs-with-map.png
+.. image:: /_static/case_study_cross_section_of_sandy/sandy-xs-with-map.png
 
 In this exercise we will produce a cross section plot of relative vorticity through Hurricane Sandy. 
 We will also create a more interesting layout which will include a geographic map showing the path of the cross section line.

@@ -214,7 +214,7 @@ and finally generate the plot:
   
 Having run the macro we will get a plot like this:
 
-.. image:: ../_static/flexpart_plume_trajectories/image2017-10-31_10-22-40.png
+.. image:: /_static/flexpart_plume_trajectories/image2017-10-31_10-22-40.png
 
 Step 2 - Plotting the dates along the mean track
 ************************************************
@@ -324,7 +324,7 @@ Finally we define the title and mapview in the same way as in **Step 1** and gen
   
 Having run the macro we will get a plot like this:
 
-.. image:: ../_static/flexpart_plume_trajectories/image2017-10-31_11-18-31.png
+.. image:: /_static/flexpart_plume_trajectories/image2017-10-31_11-18-31.png
 
 Step 3 - Plotting the cluster centres
 *************************************
@@ -375,7 +375,7 @@ Please note that we use `mvl_geocircle() <https://confluence.ecmwf.int/display/M
   
 Having run the macro you will get a plot like this:
 
-.. image:: ../_static/flexpart_plume_trajectories/image2017-11-9_9-37-47.png
+.. image:: /_static/flexpart_plume_trajectories/image2017-11-9_9-37-47.png
 
 Step 4 - Plotting the cluster centres
 *************************************
@@ -395,4 +395,4 @@ This is a fairly long and advanced macro so we will not examine it here but try 
 
 Having run the macro you will get a plot like this:
 
-.. image:: ../_static/flexpart_plume_trajectories/image2017-11-9_11-0-19.png
+.. image:: /_static/flexpart_plume_trajectories/image2017-11-9_11-0-19.png

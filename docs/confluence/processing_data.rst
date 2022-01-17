@@ -42,7 +42,7 @@ The meta-data in a resulting field is taken from the first field in the computat
 Computing a Forecast - Analysis Difference
 ******************************************
 
-.. image:: ../_static/processing_data/fc-an-diff-plot.png
+.. image:: /_static/processing_data/fc-an-diff-plot.png
 
 As a simple example, let's compute the difference between a set of forecast fields and the corresponding set of analysis fields for the same time step.
 
@@ -99,7 +99,7 @@ Metview Macro has a large set of `functions and operators on fieldsets <https://
 Computing a Forecast - Observation Difference
 *********************************************
 
-.. image:: ../_static/processing_data/fc-obs-diff-plot.png
+.. image:: /_static/processing_data/fc-obs-diff-plot.png
 
 This time we'll compare two very different data types: gridded forecast data in a GRIB file, with scattered observation data described in a BUFR file. 
 We will use the *t2m_forecast.grib* icon (the gridded forecast data), and the observation data is in a BUFR file represented by the *obs.bufr* icon and contains observations over Europe, valid at the same time as the GRIB data. Examine and visualise both icons to confirm what they contain.
@@ -145,7 +145,7 @@ As with the previous exercise, create a macro which will run all of these steps 
 Computing Wind Speed from U/V
 *****************************
 
-.. image:: ../_static/processing_data/computed-wind-speed-plot.png
+.. image:: /_static/processing_data/computed-wind-speed-plot.png
 
 The GRIB file *uv850.grib* contains forecast data for U and V wind components at 850hPa at various forecast steps (visualise it to confirm). 
 The task is to compute the wind speed from this using a macro, so create a new *Macro* icon, rename it *compute_wind_speed* and edit it.
@@ -207,7 +207,7 @@ This can be useful if you wish to compare two fields which are currently at diff
 Field Interpolation
 ===================
 
-.. image:: ../_static/processing_data/interpolated-grids.png
+.. image:: /_static/processing_data/interpolated-grids.png
 
 Visualise the U wind field (via the *GRIB Filter* icon you created earlier) and apply the supplied *gridpoints* icon to display the locations of the grid points - they are on a regular 1.5 degree grid.
 
@@ -231,7 +231,7 @@ Visualise the two fields side-by-side with coloured contour shading to also conf
 Sub-area Extraction from a Fieldset
 ===================================
 
-.. image:: ../_static/processing_data/wind-subarea.png
+.. image:: /_static/processing_data/wind-subarea.png
 
 The *GRIB Filter* icon also allows the extraction of a sub-area from a fieldset. 
 Create a new one and, using the **Area** parameter, extract just the data over a region for any of the supplied GRIB files. 
@@ -240,7 +240,7 @@ The area is defined as a list of 4 numbers, forward slash-delimited, representin
 Conversion Between Fields and Points
 ************************************
 
-.. image:: ../_static/processing_data/grib-to-geopoints.png
+.. image:: /_static/processing_data/grib-to-geopoints.png
 
 Metview provides two icons, `Geopoints To Grib <https://confluence.ecmwf.int/display/METV/Geopoints+To+Grib>`_ and `Grib To Geopoints <https://confluence.ecmwf.int/display/METV/Grib+To+Geopoints>`_ for the purpose of converting between GRIB (gridded) and geopoints (scattered) formats.
 

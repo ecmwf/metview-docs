@@ -22,7 +22,7 @@ Here we will explore how Metview handles this dimension.
 Overlaying Time Steps
 =====================
 
-.. image:: ../_static/handling_time_in_metview/overlay-geop-fields.png
+.. image:: /_static/handling_time_in_metview/overlay-geop-fields.png
 
 Inspect the supplied GRIB files: *z500_fc.grib* contains geopotential forecasts made in one run, but for six different forecast steps; *z500_an.grib* contains analysis fields for two times. 
 Visualise the supplied *Geographical View* icon and drop the forecast GRIB icon **together** with its corresponding *Contouring* icon (*cont_fc*) into the **Display Window**, and then drop the analysis GRIB icon **together** with its corresponding *Contouring* icon (*cont_an*) too. 
@@ -66,7 +66,7 @@ Then we are subject to Rule 2:
 Precipitation
 *************
 
-.. image:: ../_static/handling_time_in_metview/computed-precip.png
+.. image:: /_static/handling_time_in_metview/computed-precip.png
 
 Precipitation data provides an interesting challenge. 
 Precipitation fields in MARS are stored as *accumulated* fields. 
@@ -320,7 +320,7 @@ Print the result - it will be a list of numbers, one for each time period.
 Computing a climatology
 =======================
 
-.. image:: ../_static/handling_time_in_metview/era-jan-mean.png
+.. image:: /_static/handling_time_in_metview/era-jan-mean.png
 
 The supplied GRIB file *era_t2m_jan_2009_2013.grib* contains 2 metre temperature fields from the ERA Interim data set, interpolated onto a low-resolution 5x5 degree grid. The data are from years 2009 to 2013 and only include the month of January. The data are also from two times: 00:00 and 12:00. Check that all of this is true!
 
@@ -369,7 +369,7 @@ If you have time, try the following.
 Computing monthly anomalies
 ===========================
 
-.. image:: ../_static/handling_time_in_metview/era-jan-anoms.png
+.. image:: /_static/handling_time_in_metview/era-jan-anoms.png
 
 Continuing from the section "Computing a climatology", we will now take some data from 2014 and compute its difference from the climatology data we produced.
 
@@ -390,7 +390,7 @@ Your result shows the monthly anomalies for January 2014 compared with the previ
 Finding points with large anomalies
 ===================================
 
-.. image:: ../_static/handling_time_in_metview/jan-larg-anoms.png
+.. image:: /_static/handling_time_in_metview/jan-larg-anoms.png
 
 See if you can find the points which have anomalies over a certain threshold (e.g. 4 degrees). 
 Create a geopoints variable with the result.

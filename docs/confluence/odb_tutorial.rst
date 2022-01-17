@@ -39,7 +39,7 @@ You should now (after a few seconds) see an *odb_tutorial* folder which contains
 You will work in the *odb_tutorial* folder so open it up. 
 You should see the following contents:
 
-.. image:: ../_static/odb_tutorial/image2017-1-6_13-44-5.png
+.. image:: /_static/odb_tutorial/image2017-1-6_13-44-5.png
 
 The ODB Database Icon
 *********************
@@ -52,7 +52,7 @@ The ODB Database Icon
 Open folder 'database' inside your 'odb_tutorial' folder (double-click or right-click, **edit)**. 
 Here you will find all the *ODB Database* icons used in the tutorial.
 
-.. image:: ../_static/odb_tutorial/worddava90ad13e11698b6f39de6fcb1ed1a11d.png
+.. image:: /_static/odb_tutorial/worddava90ad13e11698b6f39de6fcb1ed1a11d.png
 
 These icons represent ODB databases residing on our file system. 
 More precisely, in our case, these are only symbolic links to the databases to save disk space. 
@@ -88,13 +88,13 @@ By clicking on a table name the columns belonging to the selected table are disp
 There are two more tabs in the interface: the **Columns** tab showing the list of all the available columns and the **SET Variables** tab providing the users with the list of pre-defined ODB variables. 
 Explore these tabs and then close the **ODB Examiner**
 
-.. image:: ../_static/odb_tutorial/worddavb61b5f37f2e3a378fb04290548a73a1b.png
+.. image:: /_static/odb_tutorial/worddavb61b5f37f2e3a378fb04290548a73a1b.png
 
 Now right click and **examine** icon 'AMSUA.odb'. 
 It points to an ODB database (just like icon 'AIREP.odb'). 
 Since there is no table hierarchy to be shown the list of all the available columns is displayed by default (**Columns** tab)
 
-.. image:: ../_static/odb_tutorial/worddavb4e78e128f1292573e960f47993bab4d.png
+.. image:: /_static/odb_tutorial/worddavb4e78e128f1292573e960f47993bab4d.png
 
 The data values stored in the ODB can be also inspected in the **ODB Examiner** (this feature does not work for ODB-1). 
 Just click on the **Data** tab to see the data values. 
@@ -102,7 +102,7 @@ If there are too many values to be shown the **ODB Examiner** displays the data 
 The actual size of the data blocks (in terms of rows) can be seen at the bottom of the interface next to the data block navigation buttons. 
 Data blocks were introduced to reduce memory usage since the **ODB Examiner** has to keep in memory all the values shown in the **Data** tab.
 
-.. image:: ../_static/odb_tutorial/worddavb424abdcea5edb122f9fa3ace280495f.png
+.. image:: /_static/odb_tutorial/worddavb424abdcea5edb122f9fa3ace280495f.png
 
 .. note::
 
@@ -110,7 +110,7 @@ Data blocks were introduced to reduce memory usage since the **ODB Examiner** ha
   However, please note that sorting is enabled only if all the available data values can be displayed at once, i.e. no data blocks are to be used. 
   By default the **ODB Examiner** starts splitting the data into data blocks if more than 60 MB is needed to store the data values in memory. You can override this default value in the **Configure** dialog available from the **Settings** menu in the menu bar.
 
-  .. image:: ../_static/odb_tutorial/worddav4c406e650016202ce715dd77ee4e4925.png
+  .. image:: /_static/odb_tutorial/worddav4c406e650016202ce715dd77ee4e4925.png
 
 Symbol Plotting on Maps
 ***********************
@@ -122,7 +122,7 @@ The ODB Visualiser Icon
 
 The simplest way to plot ODB data in Metview is to use the *ODB Visualiser* icon.
 
-.. image:: ../_static/odb_tutorial/worddavee54f3454b0670abfc6ea3f64d88bce4.png
+.. image:: /_static/odb_tutorial/worddavee54f3454b0670abfc6ea3f64d88bce4.png
 
 It performs the query, defines which ODB columns should be interpreted as latitude, longitude and value(s) and specifies the plot type (symbol or wind plotting), as well.
 
@@ -178,7 +178,7 @@ So, to correctly interpret our co-ordinate values **Odb Coordinates Unit** shoul
 
 Having finished the modifications your icon editor should look like this:
 
-.. image:: ../_static/odb_tutorial/worddavf51503c7ba4f0215042b67be4abcdade.png
+.. image:: /_static/odb_tutorial/worddavf51503c7ba4f0215042b67be4abcdade.png
 
 .. note::
 
@@ -204,19 +204,19 @@ Right-click **examine** to look at its content.
 You can see that the resulting ODB contains only three columns: lat@hdr, lon@hdr, obsvalue@body. 
 By clicking on the **Data** tab you can even see the data values.
 
-.. image:: ../_static/odb_tutorial/worddav8fb0ad2155093488a49b2caf6e9b0d40.png
+.. image:: /_static/odb_tutorial/worddav8fb0ad2155093488a49b2caf6e9b0d40.png
 
 Visualising the Output
 ======================
 
 Right-click and **visualise** the icon to plot the retrieved data (please note that you can directly visualise the icon by skipping the **execute** step). This will bring up the Metview **Display Window** using the default visualisation assigned to symbol plotting. By default the data values are plotted to the map. Unfortunately, it is not the desired visualisation in our case (we cannot even see the satellite tracks) so we will further customise the plot.
 
-.. image:: ../_static/odb_tutorial/worddav489ec607202e702bb79ccee848d4c442.png
+.. image:: /_static/odb_tutorial/worddav489ec607202e702bb79ccee848d4c442.png
 
 We will change the plot by using markers instead of numbers and change the colour, as well. 
 Let's create a new `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon (right-click in the desktop when no icons are selected and use the **New icon...** menu):
 
-.. image:: ../_static/odb_tutorial/worddav3869ba3607f9441f19c3700450e24b99.png
+.. image:: /_static/odb_tutorial/worddav3869ba3607f9441f19c3700450e24b99.png
 
 Rename it 'symbol' then edit it, by setting the following parameters:
 
@@ -248,19 +248,19 @@ Rename it 'symbol' then edit it, by setting the following parameters:
 
 Now drop this icon into the plot to see the effect of the changes.
 
-.. image:: ../_static/odb_tutorial/worddavbcc893dfe3d7e00f85183ffbf8e86fcf.png
+.. image:: /_static/odb_tutorial/worddavbcc893dfe3d7e00f85183ffbf8e86fcf.png
 
 We used the **Symbol Table Mode** in our icon and set it to 'Advanced' which enabled us to automatically define intervals with a separate maker type, colour and size. 
 These settings work in a similar way as in the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon.
 
 Our palette was automatically generated from a colour wheel
 
-.. image:: ../_static/odb_tutorial/worddav0180d1fd7e7f3de24ed26661d9efd6c4.png
+.. image:: /_static/odb_tutorial/worddav0180d1fd7e7f3de24ed26661d9efd6c4.png
 
 by interpolating in clockwise direction between **Symbol Advanced Table Min Level Colour** and **Symbol Advanced Table Max Level Colour**. 
 The identifiers of the available symbol markers are summarised in the table below.
 
-.. image:: ../_static/odb_tutorial/worddavf2144940b26d0eba5ac11c4ced8e3963.png
+.. image:: /_static/odb_tutorial/worddavf2144940b26d0eba5ac11c4ced8e3963.png
 
 .. note::
 
@@ -274,7 +274,7 @@ Since the visual change is so useful (and the rendering process is much faster, 
 
 * Open your main Metview folder (select item 'Main Folder' from the **Folders** menu in the menu bar of the **Metview Desktop**)
 
-  .. image:: ../_static/odb_tutorial/worddave3e007e14a2b4aa504fe9b551bdcf860.png
+  .. image:: /_static/odb_tutorial/worddave3e007e14a2b4aa504fe9b551bdcf860.png
 
 * Open the subfolder called 'System' and then subfolder 'Defaults'.
 
@@ -294,7 +294,7 @@ Now we will change our legend so that it could display a histogram showing the d
 
 Let's create a new `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ icon:
 
-.. image:: ../_static/odb_tutorial/worddave53549f70a24bc40b702ae64a28be088.png
+.. image:: /_static/odb_tutorial/worddave53549f70a24bc40b702ae64a28be088.png
 
 Edit it, by setting the following parameter:
 
@@ -305,7 +305,7 @@ Edit it, by setting the following parameter:
 
 Now drop the icon into the plot to see how the legend has been changed: it now contains an additional area holding the histogram.
 
-.. image:: ../_static/odb_tutorial/worddav0ec12f95cb4d3416e80c712ba635279b.png
+.. image:: /_static/odb_tutorial/worddav0ec12f95cb4d3416e80c712ba635279b.png
 
 Fixing the Symbol Plotting Intervals
 ====================================
@@ -349,16 +349,16 @@ Inspecting the Data Values
 Data values at the cursor position can be inspected with the **Cursor Data Tool,** which can be activated by pressing on the gun-sight icon in the toolbar of the **Display Window**. 
 The **Cursor Data Tool** displays the co-ordinates of the current cursor position and the information for the nearest data point to this position.
 
-.. image:: ../_static/odb_tutorial/worddavea696a2c870b675be66b6781284062d7.png
+.. image:: /_static/odb_tutorial/worddavea696a2c870b675be66b6781284062d7.png
 
 You may find hard to use the **Cursor Data Tool** for ODB since it is complicated to properly position the cursor in data dense regions in the plot. 
 To overcome this difficulty you need to launch the **Magnifier** by pressing on the magnifier icon in the toolbar and navigate it to your area of interest in the plot.
 
-.. image:: ../_static/odb_tutorial/worddavea696a2c870b675be66b6781284062d7.png
+.. image:: /_static/odb_tutorial/worddavea696a2c870b675be66b6781284062d7.png
 
 Now if you move the cursor inside the magnifying glass it is significantly easier to distinguish the individual data points since you navigate the cursor inside a closed-up region.
 
-.. image:: ../_static/odb_tutorial/worddav8b0bf0693283f23097eae80886e1569c.png
+.. image:: /_static/odb_tutorial/worddav8b0bf0693283f23097eae80886e1569c.png
 
 Wind Plotting on Maps
 *********************
@@ -406,7 +406,7 @@ Then, change the icon to perform the query specified above for the 'CCMA.obs' ic
 This can be done in a similar fashion to our `symbol plotting <https://confluence.ecmwf.int/display/METV/ODB+Tutorial#ODBTutorial-symbol_plotting>`_ example. 
 The main difference is that this time we plot wind data, so we need to work with the u and v wind components instead of scalar data values.
 
-.. image:: ../_static/odb_tutorial/worddav6922589a22109bb3914c939037f43d09.png
+.. image:: /_static/odb_tutorial/worddav6922589a22109bb3914c939037f43d09.png
 
 First, drop your 'CCMA.obs' *ODB Database* icon into the **Odb Data** field. 
 This defines the database for which the query will be performed.
@@ -475,13 +475,13 @@ Visualising the Output
 Right-click and **visualise** the icon to plot the retrieved data (please note that you can directly visualise this icon by skipping the **execute** step). 
 This will bring up the Metview **Display Window** using the default visualisation assigned to wind plotting (your default settings might be different to the one used to generate this plot).
 
-.. image:: ../_static/odb_tutorial/worddav72170745a373b242279d1374a9b0b0f7.png
+.. image:: /_static/odb_tutorial/worddav72170745a373b242279d1374a9b0b0f7.png
 
 We will change the plot by applying a colour palette according to the wind speed and change the wind arrow size and thinning, as well.
 
 Let's create a new `Wind Plotting <https://confluence.ecmwf.int/display/METV/Wind+Plotting>`_ icon:
 
-.. image:: ../_static/odb_tutorial/worddavd7987ea6c02449ef553170297c02ed9d.png
+.. image:: /_static/odb_tutorial/worddavd7987ea6c02449ef553170297c02ed9d.png
 
 Rename it 'colour_wind' then edit it, by setting the following parameters:
 
@@ -510,7 +510,7 @@ Rename it 'colour_wind' then edit it, by setting the following parameters:
 
 Now drop this icon into the plot to see the effect of the changes.
 
-.. image:: ../_static/odb_tutorial/worddav5ba9875ca3cea3da2cc480819dcabc34.png
+.. image:: /_static/odb_tutorial/worddav5ba9875ca3cea3da2cc480819dcabc34.png
 
 We used the **Wind Advanced Method** in our icon that enabled us to automatically define wind speed intervals and assign a nice palette to them. These settings work in a similar way to the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
 Please note that our palette was automatically generated from a colour wheel by interpolating in clockwise direction between **Wind Advanced Colour Min Level Colour** and **Wind Advanced Colour Max Level Colour**.
@@ -609,7 +609,7 @@ In the *ODB Visualiser* interface this query cannot be typed in directly but has
 
 Having finished the modifications your icon editor should look like this:
 
-.. image:: ../_static/odb_tutorial/worddav28aaa8a2ab823c91d2cceb37579c023e.png
+.. image:: /_static/odb_tutorial/worddav28aaa8a2ab823c91d2cceb37579c023e.png
 
 Running the Query
 =================
@@ -625,12 +625,12 @@ Visualising the Output
 Right-click and **visualise** the icon to plot the data (please note that you can directly visualise this icon by skipping the **execute** step). 
 This will bring up the Metview **Display Window** using the default visualisation (black circles) assigned to this kind of plots.
 
-.. image:: ../_static/odb_tutorial/worddav09b8e7f27837626e5b738f1eda5f5f26.png
+.. image:: /_static/odb_tutorial/worddav09b8e7f27837626e5b738f1eda5f5f26.png
 
 We can change the symbol (its type, colour and size) used for the plot with a `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon. 
 This time you do not need to create a new icon since there is one called 'scatter_symbol' already prepared for you. Edit this icon to see its settings then simply drag it into the **Display Window** and see how your plot has been changed.
 
-.. image:: ../_static/odb_tutorial/worddavef1a8cd79762dc7b0d104a8af6dac333.png
+.. image:: /_static/odb_tutorial/worddavef1a8cd79762dc7b0d104a8af6dac333.png
 
 Defining Binning
 ================
@@ -643,7 +643,7 @@ Then for each cell we assign the number of points it contains as a grid value.
 
 We will define the properties of the binning via the `Binning <https://confluence.ecmwf.int/display/METV/Binning>`_ icon.
 
-.. image:: ../_static/odb_tutorial/worddav0b263434a9f59de25637ca4988ef97ed.png
+.. image:: /_static/odb_tutorial/worddav0b263434a9f59de25637ca4988ef97ed.png
 
 Let's create a new *Binning* icon (it can be found in the **Visual Definitions** icon drawer, you may need to scroll the drawers to the right). 
 Rename it 'bin_100' then edit it, by setting the following parameters:
@@ -665,14 +665,14 @@ Edit the icon and make the following changes:
 Set **ODB Plot Type** to 'Xy_Binning' to indicate that we want to generate a new dataset with binning and want to plot it in a Cartesian view.
 Then, drop your 'bin_100' `Binning <https://confluence.ecmwf.int/display/METV/Binning>`_ icon into the **Odb Binning** field as the picture below illustrates it.
 
-.. image:: ../_static/odb_tutorial/worddav38e33883a9a1693eee9fba30715744a9.png
+.. image:: /_static/odb_tutorial/worddav38e33883a9a1693eee9fba30715744a9.png
 
 Visualising the Binned Dataset
 ==============================
 
 Right-click and **visualise** icon 'bin_plot' to retrieve the data, perform the binning and plot the resulting dataset. This will bring up the Metview **Display Window** using the default contouring visualisation assigned to gridded datasets (your default contouring settings might be different to the one used to generate this plot).
 
-.. image:: ../_static/odb_tutorial/worddave94228b12174076870c00ede3faa346c.png
+.. image:: /_static/odb_tutorial/worddave94228b12174076870c00ede3faa346c.png
 
 Since isolines is not the desired visualisation type in our case (our data is not smooth enough) we will to further customise the contouring settings. 
 The best choice for us is to use **grid shading** since it applies shading for the grid cells themselves and we get the correct representation of our grid in the plot. 
@@ -680,7 +680,7 @@ The best choice for us is to use **grid shading** since it applies shading for t
 
 Let's create a new `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon (it can be found in the **Visual Definitions** icon drawer, you may need to scroll the drawers to the right).
 
-.. image:: ../_static/odb_tutorial/worddavc710d0dc706b5208928aab1f10546930.png
+.. image:: /_static/odb_tutorial/worddavc710d0dc706b5208928aab1f10546930.png
 
 Rename it 'bin_grid_shade' then edit it, by setting the following parameters:
 
@@ -727,7 +727,7 @@ Rename it 'bin_grid_shade' then edit it, by setting the following parameters:
 
 Now drop this icon into the plot to see the effect of the changes.
 
-.. image:: ../_static/odb_tutorial/worddav48581a42aa40558dcba65caa763fa9b3.png
+.. image:: /_static/odb_tutorial/worddav48581a42aa40558dcba65caa763fa9b3.png
 
 In our `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon we set the minimum value to '1.' to exclude grid cells containing no points at all and used 20 intervals between the minimum and the maximum to define the colour palette. 
 Please note that our palette was automatically generated from a colour wheel by interpolating in clockwise direction between Contour Shade **Min Level Colour** and **Contour Shade Max Level Colour**.
@@ -737,12 +737,12 @@ Changing the View
 
 We will further customise the plot by changing the axis value ranges and adding axis labels and grid-lines to it. To change these properties we need a `Cartesian View <https://confluence.ecmwf.int/display/METV/Cartesian+View>`_ icon (it can be found in the **Visual Definitions** icon drawer).
 
-.. image:: ../_static/odb_tutorial/worddava8baede834f465f2cfcfda0f95a4ed26.png
+.. image:: /_static/odb_tutorial/worddava8baede834f465f2cfcfda0f95a4ed26.png
 
 This time you do not need to create a new icon since there is one called 'scatter_view' already prepared for you. Edit this icon to see how the view is constructed (please note that the axis properties are defined via the embedded *Horizontal Axis* and *Vertical Axis* icons). 
 Then simply drag it into the **Display Window** and see how your plot has been changed.
 
-.. image:: ../_static/odb_tutorial/worddaved08bb74c7fcd444e2545bd8979f5ff5.png
+.. image:: /_static/odb_tutorial/worddaved08bb74c7fcd444e2545bd8979f5ff5.png
 
 Changing the Title
 ==================
@@ -772,7 +772,7 @@ Automatic macro generation
 
 The quickest way to generate a macro is to simply save a visualisation on screen as a *Macro* icon. Visualise your ODB data again, drop the symbol plotting and title icons into the plot and click on the macro icon in the tool bar of the **Display Window**.
 
-.. image:: ../_static/odb_tutorial/worddav259d4953ba61662d7b32cc081feedb5c.png
+.. image:: /_static/odb_tutorial/worddav259d4953ba61662d7b32cc081feedb5c.png
 
 Now a new *Macro* icon called 'MacroFrameworkN' is generated in your folder. 
 Right-click **visualise** this icon. 
@@ -838,7 +838,7 @@ The ODB Filter Icon
 
 In this exercise we will learn about the *ODB Filter* icon.
 
-.. image:: ../_static/odb_tutorial/worddav8997db344ad37b37c602ee089f4a83f1.png
+.. image:: /_static/odb_tutorial/worddav8997db344ad37b37c602ee089f4a83f1.png
 
 In the previous exercises we saw how to visualise ODB data with the *ODB Visualiser* icon. 
 This icon is working well for visualisation, however, it is not suitable for performing general retrievals (with more than four columns) and does not allow direct access to the retrieved values (for data processing in macro). 
@@ -874,7 +874,7 @@ Type in the following ODB/SQL query in the **Odb Query** multi-line text input f
   
 Now your icon editor should look like this:
 
-.. image:: ../_static/odb_tutorial/worddavc44d91be045b34ed3a6d5c47e7867d01.png
+.. image:: /_static/odb_tutorial/worddavc44d91be045b34ed3a6d5c47e7867d01.png
 
 .. note::
 
@@ -897,7 +897,7 @@ Save your *ODB Filter* icon (**Apply**) then right-click and **execute** to run 
 Within a few seconds the icon should turn green indicating that the retrieval was successful and has been cached. 
 Now your icon behaves exactly like an *ODB Database* icon. Right-click **examine** to look at its content.
 
-.. image:: ../_static/odb_tutorial/worddav9fbab3bc75d865853a493b1ec997a55e.png
+.. image:: /_static/odb_tutorial/worddav9fbab3bc75d865853a493b1ec997a55e.png
 
 Now you can see that as we defined it in the query the resulting ODB contains only four columns: lat, lon, fg_dep and an_dep.
 
@@ -966,7 +966,7 @@ The simplest way is to build a geopoints object out of the needed vectors (these
   
 Now, if you execute this macro (right-click **execute** or click on the **Play** button in the **Macro editor**) you should see a **Display Window** popping up with this result (your plot might look different depending on your default symbol plotting settings):
 
-.. image:: ../_static/odb_tutorial/worddavae94c271078e447f5d2a9ea57d0a8609.png
+.. image:: /_static/odb_tutorial/worddavae94c271078e447f5d2a9ea57d0a8609.png
 
 Improving the Plot
 ==================
@@ -989,7 +989,7 @@ In the last step drag the 'title' *Text Plotting* icon into the plot, as well.
 
 You will see an enhanced plot as shown below:
 
-.. image:: ../_static/odb_tutorial/worddav5603718b0e52839f0e354151366d6e01.png
+.. image:: /_static/odb_tutorial/worddav5603718b0e52839f0e354151366d6e01.png
 
 Modifying the Macro
 ===================
@@ -1021,7 +1021,7 @@ You will find here the 'AIREP.odb' *ODB Database* icon and a macro called 'plot_
 If you right click and **visualise** the macro it will retrieve and plot the wind data from the database. 
 You should see a **Display Window** popping up with the result (your plot might look different depending on your default wind plotting settings):
 
-.. image:: ../_static/odb_tutorial/worddavc838bee415c67e478910d1150fb1b590.png
+.. image:: /_static/odb_tutorial/worddavc838bee415c67e478910d1150fb1b590.png
 
 This result was achieved by executing the following steps in the macro:
 
@@ -1128,7 +1128,7 @@ The MARS Retrieval Icon
 In Metview we can access ODB from MARS by using the standard *MARS Retrieval* icon. 
 This icon is located in the **Data Access** icon drawer.
 
-.. image:: ../_static/odb_tutorial/worddave23668175d4eca5b989af88f3b446aa8.png
+.. image:: /_static/odb_tutorial/worddave23668175d4eca5b989af88f3b446aa8.png
 
 Now create a new *MARS Retrieval* icon by dragging it into your folder and rename it 'mars_hirs'. 
 We will edit this icon in order to retrieve HIRS data available for yesterday at 00 UT and also use the filter option to select only a subset of the archived columns. Our retrieval can be written as follows: 

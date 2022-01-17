@@ -12,17 +12,17 @@ Plot Layout
 
 Sophisticated layouts are possible in Metview, with multiple plots on a single page as shown below:
 
-.. image:: ../_static/layout_in_metview/Picture8.png
+.. image:: /_static/layout_in_metview/Picture8.png
 
 To demonstrate the layout facility in Metview, let's re-create the above plot. 
 The Display Window icon allows us to design a layout, and also to choose the size of the page (e.g. A4).
  
-.. image:: ../_static/layout_in_metview/SUPERPAGE.png
+.. image:: /_static/layout_in_metview/SUPERPAGE.png
 
 Instantiate a new Display Window icon and edit it. 
 This is what you will produce over the next few steps:
 
-.. image:: ../_static/layout_in_metview/image2015-3-6_11-27-12.png
+.. image:: /_static/layout_in_metview/image2015-3-6_11-27-12.png
 
 Click on the **Add new frame** button to create the first frame. 
 By default, this contains just a single plot scene which uses a *Geographic View*. 
@@ -61,7 +61,7 @@ To run it on a day-to-day basis, probably only the data file reading step would 
 Legend    
 ******
 
-.. image:: ../_static/layout_in_metview/MLEGEND.png
+.. image:: /_static/layout_in_metview/MLEGEND.png
 
 Legends are an important part of any scientific and operational plot. 
 If enabled, an automatic legend will be built from the data provided.
@@ -108,9 +108,9 @@ We can also manually set the position of the legend by setting the following par
 
 .. list-table::
 
-  * - .. image:: ../_static/layout_in_metview/Picture9.png
-    - .. image:: ../_static/layout_in_metview/legend-right.png
-    - .. image:: ../_static/layout_in_metview/legend-pos.png
+  * - .. image:: /_static/layout_in_metview/Picture9.png
+    - .. image:: /_static/layout_in_metview/legend-right.png
+    - .. image:: /_static/layout_in_metview/legend-pos.png
   
   * - **Automatic legend, top**
     - **Automatic legend, right**
@@ -121,16 +121,16 @@ Note that the direction of the legend, by default, is computed automatically dep
 Annotation View    
 ***************
 
-.. image:: ../_static/layout_in_metview/ANNOTATIONVIEW.png
+.. image:: /_static/layout_in_metview/ANNOTATIONVIEW.png
 
 The `Annotation View <https://confluence.ecmwf.int/display/METV/Annotation+View>`_ icon provides a container for user-defined text boxes. 
 This view can also be used for layout purposes - if no user text is defined then an empty box will be created in the Display Window / paper sheet.
 
-.. image:: ../_static/layout_in_metview/annotation-view-plot.png
+.. image:: /_static/layout_in_metview/annotation-view-plot.png
 
 The user-defined text is provided by means of a `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_  icon.
 
-.. image:: ../_static/layout_in_metview/MTEXT.png
+.. image:: /_static/layout_in_metview/MTEXT.png
 
 Create a new *Annotation View* icon and visualise it - the **Display Window** will be empty. 
 
@@ -203,7 +203,7 @@ Geographic and annotation view, side-by-side
 
 Try and reproduce the following plot:
 
-.. image:: ../_static/layout_in_metview/layout-2.png
+.. image:: /_static/layout_in_metview/layout-2.png
 
 Five Profiles
 =============

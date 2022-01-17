@@ -90,4 +90,4 @@ and generate the plot:
   
 Having run the macro we will get a plot like this (after navigating to step 39h):
 
-.. image:: ../_static/flexpart_plotting_total_column_mass/image2017-10-25_16-46-40.png
+.. image:: /_static/flexpart_plotting_total_column_mass/image2017-10-25_16-46-40.png

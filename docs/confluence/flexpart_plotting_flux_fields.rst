@@ -17,7 +17,7 @@ Double-click on the 'flux_s001.grib' GRIB icon' in folder 'result_fwd' to start 
 We can see that our GRIB file contains various flux fields. 
 We can find out further details about the parameters by setting the **Dump mode** to *Namespace* and **Namespace** to *Parameter* in the examiner:
 
-.. image:: ../_static/flexpart_plotting_flux_fields/image2017-10-25_13-34-50.png
+.. image:: /_static/flexpart_plotting_flux_fields/image2017-10-25_13-34-50.png
 
 Generating the plot
 *******************
@@ -110,4 +110,4 @@ and generate the plot:
   
 Having run the macro we will get a plot like this (after navigating to step 39h):
 
-.. image:: ../_static/flexpart_plotting_flux_fields/image2017-10-25_13-25-40.png
+.. image:: /_static/flexpart_plotting_flux_fields/image2017-10-25_13-25-40.png

@@ -8,7 +8,7 @@ Working with folders
 
 Folders are represented by this icon in the user interface:
 
-.. image:: ../_static/working_with_folders_and_icons/doc36.png
+.. image:: /_static/working_with_folders_and_icons/doc36.png
 
 To enter a folder double-click, hit enter or right-click **Open** on the icon. 
 Folders can also be opened in a **new tab or window** by using the context menu of the *Folder* icon.
@@ -18,7 +18,7 @@ The central part of Desktop can contain **multiple tabs**, each showing a differ
 
 New tabs can be added by the blue button at the right edge of the tab bar or by using the **Ctrl+T** keyboard shourtcut.
 
-.. image:: ../_static/working_with_folders_and_icons/desktop_conf.png
+.. image:: /_static/working_with_folders_and_icons/desktop_conf.png
 
 There is a drop-down menu available at the right edge of the tab bar showing the actual list of open tabs. 
 This menu can significantly ease the tab navigation if there is a large number of tabs open in a given Desktop window.
@@ -32,7 +32,7 @@ Do this by right-clicking on an empty part of the Metview desktop and select **C
 The link will appear with italicised text. 
 When the mouse cursor hovers over the link icon, the status bar shows the path to the real file or folder.
 
-.. image:: ../_static/working_with_folders_and_icons/metview-symlink-to-folder.png
+.. image:: /_static/working_with_folders_and_icons/metview-symlink-to-folder.png
 
 Folder navigation
 =================
@@ -40,7 +40,7 @@ Folder navigation
 Folder navigation is based on the **Back**, **Forward** and **Up** arrows and on the **breadcrumbs**, which are all located in the toolbar. 
 The **breadcrumbs** consist of the Home icon and the folder hierarchy to the right of it, including the arrows in-between them.
 
-.. image:: ../_static/working_with_folders_and_icons/image2014-4-29_13-16-55.png
+.. image:: /_static/working_with_folders_and_icons/image2014-4-29_13-16-55.png
 
 Each visited folder is added to the folder history, which can be accessed via the **History** menu.
 Both breadcrumbs and history items have a context menu, which allows opening the folders in a **new tab or window**.
@@ -61,14 +61,14 @@ There are three folder view modes available:
 
 The view modes can be set for each tab separately through the **View** menu or by using these toolbar icons:
 
-.. image:: ../_static/working_with_folders_and_icons/image2014-4-29_13-35-2.png
+.. image:: /_static/working_with_folders_and_icons/image2014-4-29_13-35-2.png
 
 Changing icon sizes
 -------------------
 
 The status bar features an icon size slider to change the icon sizes in the current folder (sizes between 16 and 96 pixels are available).
 
-.. image:: ../_static/working_with_folders_and_icons/image2014-5-2_16-51-48.png
+.. image:: /_static/working_with_folders_and_icons/image2014-5-2_16-51-48.png
 
 Bookmarks
 =========
@@ -76,7 +76,7 @@ Bookmarks
 Both folders and tab-sets can be bookmarked. 
 Bookmarks can be accessed either via the **bookmarks menu** or the **bookmarks sidebar**.
 
-.. image:: ../_static/working_with_folders_and_icons/desktop_conf5.png
+.. image:: /_static/working_with_folders_and_icons/desktop_conf5.png
 
 There are various ways to bookmark a folder. It can be done with:
 
@@ -99,7 +99,7 @@ Fortunately, Metview provides some ways to find the icon you're looking for.
 Icon filtering
 ==============
 
-.. image:: ../_static/working_with_folders_and_icons/desktop69.png
+.. image:: /_static/working_with_folders_and_icons/desktop69.png
 
 Metview features a filtering facility for finding icons in cluttered desktops. 
 Just press **Crtl+F** in any of the folder views to bring up the icon filter bar at the bottom of the folder view.  
@@ -108,7 +108,7 @@ By typing in a filter term for **name** or/and **type** the icons not matching t
 Icon search
 ===========
 
-.. image:: ../_static/working_with_folders_and_icons/icon-search.png
+.. image:: /_static/working_with_folders_and_icons/icon-search.png
 
 The **Search icon** dialogue can be started up from the **Tools** menu on the menu bar.
 

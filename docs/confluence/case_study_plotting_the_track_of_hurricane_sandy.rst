@@ -16,7 +16,7 @@ Case study: Plotting the Track of Hurricane Sandy
 Case description
 ****************
 
-.. image:: ../_static/case_study_plotting_the_track_of_hurricane_sandy/image2015-2-20_12-9-57.png
+.. image:: /_static/case_study_plotting_the_track_of_hurricane_sandy/image2015-2-20_12-9-57.png
 
 In this exercise we will use Metview to produce the plots shown above:
 

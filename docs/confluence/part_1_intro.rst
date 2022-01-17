@@ -18,7 +18,7 @@ Log onto a machine and start a new terminal. If at ECMWF, start Metview by simpl
 
 You will see something like this:
 
-.. image:: ../_static/metview_90_minute_introduction_part_1_intro/metview-startup-folder.png
+.. image:: /_static/metview_90_minute_introduction_part_1_intro/metview-startup-folder.png
 
 Right-click on some empty space and select **Create New Folder** - call it **intro**.
 
@@ -49,32 +49,32 @@ The plot uses a simple default styling. Try the following features from the tool
 .. list-table::
    
   * - **Zoom**
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/display_window_zoom_toolbar_diagram.png
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/display_window_zoom_toolbar_diagram.png
     - 
     
   * - **Magnifier**
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/display_window_magnifier_button.png
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/display_window_magnifier_button.png
     - See '**Magnifier**' note below
     
   * - **Cursor data**
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/gunsight.png    
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/gunsight.png    
       
     - See '**Cursor data**' note below 
     
   * - 
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/metview-cursor-data-in-action.png
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/metview-cursor-data-in-action.png
     -    
     
   * - **Animation**
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/mv-animation-steps.png
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/mv-animation-steps.png
     - See '**Animation**' note below
     
   * - 
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/metview-display-window-animation-controls.png
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/metview-display-window-animation-controls.png
     -
     
   * - **Layer metadata**
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/display-window-metadata.png
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/display-window-metadata.png
     - See '**Layer metadata**' note below
     
     
@@ -119,9 +119,9 @@ The icon's title should change colour like this:
 
 .. list-table::
    
-  * - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/mv-mars-state-1.png
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/mv-mars-state-2.png
-    - .. image:: ../_static/metview_90_minute_introduction_part_1_intro/mv-mars-state-3.png 
+  * - .. image:: /_static/metview_90_minute_introduction_part_1_intro/mv-mars-state-1.png
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/mv-mars-state-2.png
+    - .. image:: /_static/metview_90_minute_introduction_part_1_intro/mv-mars-state-3.png 
 
   * - Black - not started
     - Orange - retrieving / processing
@@ -146,7 +146,7 @@ You may have to re-arrange your windows slightly, but drop the *get_t* icon into
 The Python equivalent code is generated, and the result is stored in a variable with the same name as the icon (*get_t*). 
 Use the ``mv.write()`` command as shown in the screenshot, then run the script using the Run button in the editor. Your new GRIB file should appear! You should also be able to run this from the command line the same as any Python script.
   
-.. image:: ../_static/metview_90_minute_introduction_part_1_intro/mv-first-python-1.png
+.. image:: /_static/metview_90_minute_introduction_part_1_intro/mv-first-python-1.png
 
 If you have extra time...
 *************************
@@ -154,7 +154,7 @@ If you have extra time...
 Look at the North pole
 ======================
 
-.. image:: ../_static/metview_90_minute_introduction_part_1_intro/mv-polar-north.png
+.. image:: /_static/metview_90_minute_introduction_part_1_intro/mv-polar-north.png
 
 Right-click somewhere on the Metview desktop and select **Create New Icon**. 
 From the list, select `Geographical View <https://confluence.ecmwf.int/display/METV/Geographical+View>`_ and click OK.

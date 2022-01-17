@@ -35,7 +35,7 @@ NetCDF
 Examining netCDF
 ================
 
-.. image:: ../_static/data_part_2/netcdf-examiner.png
+.. image:: /_static/data_part_2/netcdf-examiner.png
 
 Right-click on the supplied *fc_12.nc* icon and choose **examine** to see its structure. 
 It consists of multi-dimensional variables, each of which has its own set of attributes; the file also has a set of global attributes. 
@@ -44,7 +44,7 @@ The actual fields are t2m and d2m - find their ``long_name`` attributes to see w
 Visualising netCDF
 ==================
 
-.. image:: ../_static/data_part_2/netcdf-visualiser-plot.png
+.. image:: /_static/data_part_2/netcdf-visualiser-plot.png
 
 Create a new *NetCDF Visualiser* icon. 
 Edit it and drop the *netcdf.nc* icon into the **NetCDF Data** field. 
@@ -99,7 +99,7 @@ Most of the netCDF functions work on the *current* variable, set in the ``setcur
 The ``attributes()`` function returns a *definition* - a set of named members, similar to a Python dictionary, relevant to the current variable. 
 A definition's elements can be accessed either using the 'dot' operator, e.g. ``atts.units``,  or using indexing notation, e.g. ``atts["units"]``.
 
-.. image:: ../_static/data_part_2/netcdf-title-from-attrs.png
+.. image:: /_static/data_part_2/netcdf-title-from-attrs.png
 
 Adapt this macro so that it plots the t2m field and gives it a title based on its ``long_name`` attribute. 
 Here are some hints:
@@ -135,7 +135,7 @@ Adapt some of the code from the previous exercise to plot the difference field (
 Note that in these netCDF files, the data values are *scaled* in the netCDF file. 
 The actual values for the ``t2m`` variable are encoded as 16-bit integers, but they have ``scale_factor`` and ``add_offset`` attributes which Metview applies by default.
 
-.. image:: ../_static/data_part_2/netcdf-examiner2.png
+.. image:: /_static/data_part_2/netcdf-examiner2.png
 
 We can see this by extracting the values. 
 Try the following macro, which will print the 'real world' values from ``t2m``:
@@ -324,7 +324,7 @@ Here are some hints:
 ODB
 ***
 
-.. image:: ../_static/data_part_2/odb-plot.png
+.. image:: /_static/data_part_2/odb-plot.png
 
 *ODB* stands for **Observational DataBase** and is developed at ECMWF to manage very large observational data volumes through the ECMWF IFS/4DVAR-system. 
 The data structure of an ODB database can be seen as a table of variables called columns. 

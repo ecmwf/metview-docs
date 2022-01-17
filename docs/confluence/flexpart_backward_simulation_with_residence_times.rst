@@ -141,7 +141,7 @@ Double-click on the 'time_s001.grib' GRIB icon' in folder 'result_bwd' to start 
 We can see that this file contains the "fprt" (=Residence time) fields we want to visualise. 
 We can find out further details about this parameter by setting the **Dump mode** to *Namespace* and **Namespace** to *Parameter*:
 
-.. image:: ../_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_11-36-44.png
+.. image:: /_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_11-36-44.png
 
 Generating the plot
 -------------------
@@ -241,7 +241,7 @@ and generate the plot:
   
 Having run the macro we will get a plot like this (after navigating to step -27h):
 
-.. image:: ../_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_13-55-59.png
+.. image:: /_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_13-55-59.png
 
 Step 2 - Total residence time in a layer
 ========================================
@@ -294,7 +294,7 @@ We also need to customise the title:
   
 Having run the macro we will get a plot like this (after navigating to step -27h):
 
-.. image:: ../_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_13-56-45.png
+.. image:: /_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_13-56-45.png
 
 Step 3 - Total residence time in the whole atmospheric column
 =============================================================
@@ -319,7 +319,7 @@ and we need to adjust the title as wel:
   
 Having run the macro we will get a plot like this (after navigating to step -27h):
 
-.. image:: ../_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_15-9-20.png
+.. image:: /_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_15-9-20.png
 
 Step 4 - Total residence time in a layer for the whole period
 =============================================================
@@ -343,7 +343,7 @@ This macro is basically the same as the one in **Step 2**, but after calling `fl
   
 Having run the macro we will get a plot like this:
 
-.. image:: ../_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_14-11-4.png
+.. image:: /_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_14-11-4.png
 
 Step 5 - Total residence time in the whole atmospheric column for the whole period
 ==================================================================================
@@ -362,4 +362,4 @@ The macro to use is 'plot_time_step5.mv'. This macro is basically the same as th
   
 Having run the macro we will get a plot like this:
 
-.. image:: ../_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_15-28-23.png
+.. image:: /_static/flexpart_backward_simulation_with_residence_times/image2017-10-27_15-28-23.png

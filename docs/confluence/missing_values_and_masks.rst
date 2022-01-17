@@ -16,16 +16,16 @@ Missing Values and Masks
 Overview
 ********
 
-.. image:: ../_static/missing_values_and_masks/missing-values.png
+.. image:: /_static/missing_values_and_masks/missing-values.png
 
 Fields and observations can often contain missing values - it can be important to understand the implications of these, and also how to use them to remove unwanted data points. Using a mask of missing values can enable Metview to perform computations on a specific subset of points.
 
 Computing the mean surface temperature over land
 ************************************************
 
-.. image:: ../_static/missing_values_and_masks/lsm-raw.png
+.. image:: /_static/missing_values_and_masks/lsm-raw.png
 
-.. image:: ../_static/missing_values_and_masks/lsm-clean.png
+.. image:: /_static/missing_values_and_masks/lsm-clean.png
 
 As an example, we will use a land-sea mask field as the basis of performing a computation on only the land points, excluding all sea points.
 
@@ -99,7 +99,7 @@ Try the following steps:
 The code should in fact only be a few lines. 
 All of Metview's functions will respect missing values and treat them properly.
 
-.. image:: ../_static/missing_values_and_masks/t2m-masked.png
+.. image:: /_static/missing_values_and_masks/t2m-masked.png
 
 As an experiment, try setting *all* the values to missing values (just change the threshold in the expression "(``lsm >= 0.5)`` ") to something silly. 
 The integrate() function should now return nil as its result. 

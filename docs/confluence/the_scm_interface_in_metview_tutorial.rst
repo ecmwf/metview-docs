@@ -50,19 +50,19 @@ From a command line, type
 From your main Metview desktop, you should now see a number of folders including one called *SCM_tutorial* - double-click to open it. 
 It should contain two icons, and a folder with solutions like this:
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/scm-desktop.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/scm-desktop.png
 
 The SCM Input Data icon
 ***********************
 
 Your input SCM data file (scm_in.nc) is recognised as a distinct filetype in Metview and this icon is assigned to it:
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/scm-netcdf-icon.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/scm-netcdf-icon.png
 
 Right-click this icon and select **examine** from the context menu. 
 Metview's own **netCDF examiner** is started up showing the metadata content of the file.
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/image2012-12-3_13-49-47.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image2012-12-3_13-49-47.png
 
 Now close the netCDF examiner.
 
@@ -71,7 +71,7 @@ Right-click the icon and select **duplicate** from the menu. Rename the copy *sc
 Right-click this new icon and select **edit** from the menu. 
 The **Metview profile data editor** pops up.
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/image2014-3-31_14-43-46.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image2014-3-31_14-43-46.png
 
 This bespoke editor allows examining and modifying the data stored in the file.
 
@@ -133,7 +133,7 @@ Try both the table-based and graphical editing.
 The **redo/undo** functionality works for all individual editing steps. 
 You can access it via these toolbar buttons
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/image2014-3-31_14-46-21.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image2014-3-31_14-46-21.png
 
 or by the Ctrl+Z (undo) Ctrl+Shift+Z (redo) keyboard shortcuts.
 
@@ -183,7 +183,7 @@ Namelists
 
 Your namelist file is recognised as a distinct filetype in Metview and this icon is assigned to it:
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/image2012-12-3_14-15-29.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image2012-12-3_14-15-29.png
 
 Double-click or right-click **edit** the namelist to see or change its content using Metview's own text editor. 
 We will not make any changes to the namelist in this tutorial, so close the editor.
@@ -193,7 +193,7 @@ The SCM Run Icon
 
 You can run the SCM in Metview by using the *SCM Run* icon:
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/image2013-1-22_12-18-14.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image2013-1-22_12-18-14.png
 
 To create a new *SCM run* icon, right-click in the Metview desktop and select 'Create new icon'. 
 This will bring up the Create new icon dialogue.  
@@ -209,7 +209,7 @@ The  most important parameters you might need to edit in the *SCM run* icon are 
   The output is always a netCDF. 
   By default this is cached in a temporary directory, but it can be saved to a given path.
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/scm-run-editor2.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/scm-run-editor2.png
 
 Now double-click or right-click **edit** your *SCM Run* icon to open up its editor.
 
@@ -225,7 +225,7 @@ Having finished the integration the icon label turns **green** showing that no e
 If any errors or warning were generated these will be available in the icon's output log, available through the **Log** entry in the icon's context menu. 
 This window always shows the location of the **STDOUT** and the **fort.20** file generated during the SCM run.
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/scm-log.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/scm-log.png
 
 Now duplicate your *Scm Run* icon and rename the copy *Scm Run 2*. 
 Edit the new icon, right-click **remove** the **Scm Input Data**, then drop your modified input data icon (*scm_in_modified.nc*) into the **Scm Input Data** box in the editor. 
@@ -237,21 +237,21 @@ Visualising the SCM data
 
 The output of an SCM run can be visualised using the *SCM Visualiser* icon, available from the right-click 'Create new icon' desktop menu:
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/image2013-1-22_12-18-50.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image2013-1-22_12-18-50.png
 
 This icon allows the generation of the following plot types (specified in the **Scm Plot Type** parameter) :
 
 **Time Height Matrix**
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/scm-vis-th-matrix-overlay.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/scm-vis-th-matrix-overlay.png
 
 **Time Value Curve**
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/scm-vis-tv-curve-overlay.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/scm-vis-tv-curve-overlay.png
 
 **Profile**
 
-.. image:: ../_static/the_scm_interface_in_metview_tutorial/scm-vis-profile-overlay.png
+.. image:: /_static/the_scm_interface_in_metview_tutorial/scm-vis-profile-overlay.png
 
 Visualising a parameter as a time/value curve
 =============================================

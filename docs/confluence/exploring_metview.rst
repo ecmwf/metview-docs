@@ -27,7 +27,7 @@ Go through `this <https://confluence.ecmwf.int/display/METV/Working+with+Folders
 Monitoring Metview's Processes
 ==============================
 
-.. image:: ../_static/exploring_metview/process-monitor.png
+.. image:: /_static/exploring_metview/process-monitor.png
 
 Metview has a built-in task monitor, available from the **Tools** menu on the menu bar (**Process Monitor...**). 
 This tool allows you to see which processes Metview is currently running. 
@@ -45,7 +45,7 @@ Have a look at the available icons in the **New Icon** dialogue - investigate so
 Plot Coloured Wind Fields
 =========================
 
-.. image:: ../_static/exploring_metview/wind-arrows-coloured.png
+.. image:: /_static/exploring_metview/wind-arrows-coloured.png
 
 Create a new *Wind Plotting* icon and set the following parameters in order to colour the arrows according to the wind speed:
 
@@ -79,7 +79,7 @@ This plot is clearer if dark grey land/sea shading is used.
 Meteograms
 ==========
 
-.. image:: ../_static/exploring_metview/meteograms.png
+.. image:: /_static/exploring_metview/meteograms.png
 
 Also available is the *Meteogram* icon (only available at ECMWF). 
 This icon uses an embedded *Stations* icon; use it, but edit it before using it. 
@@ -126,7 +126,7 @@ We have a `separate tutorial <https://confluence.ecmwf.int/display/METV/Metview+
 Trajectories (FLEXTRA)
 ======================
 
-.. image:: ../_static/exploring_metview/trajectories_plot.png
+.. image:: /_static/exploring_metview/trajectories_plot.png
 
 FLEXTRA is an established trajectory model used by growing scientific community. 
 Metview has a set of icons for interacting with FLEXTRA at all stages: preparing the data, running the model and visualising the output.

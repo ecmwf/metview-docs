@@ -39,7 +39,7 @@ You should now see a *wms_tutorial* folder which contains the solutions and also
 You will work in the *wms_tutorial* folder so open it up. 
 You should see the following contents:
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_10-55-5.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_10-55-5.png
 
 Please note that because the WMS client requires internet access you might need to configure your **network proxy settings** in Metview. 
 This can be done by selecting 'Preferences' from the File menu in the toolbar of the **Metview Desktop**.
@@ -68,7 +68,7 @@ The WMS standard defines several request types, two of which have to be supporte
 
 * **GetMap**: based on the specified parameters in the request (e.g. bounding box, geographic coordinate reference system, image size and format etc.), the server returns a map image for a selected layer that can be now visualised by the client.
 
-.. image:: ../_static/metview_wms_tutorial/wms_interactions.png
+.. image:: /_static/metview_wms_tutorial/wms_interactions.png
 
 The **Metview WMS client** can perform both of these request types enabling users to perform the following actions:
        
@@ -92,13 +92,13 @@ The WMS Client Icon
 WMS requests in Metview can be defined and executed by the *WMS Client* icon. 
 You can find this icon in the **Data Access** icon drawer.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-10-42.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-10-42.png
 
 Create a new *WMS Client* icon in your 'wms_tutorial' folder (by dragging it into the folder). 
 Rename it 'NASA' and open its editor (double-click or right-click, **edit**). 
 You should see the interface below: 
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-11-15.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-11-15.png
 
 Loading GetCapabilities
 =======================
@@ -109,21 +109,21 @@ Type in the following web address into the URL bar at the top of the interface:
 
 Now we will send the *GetCapabilities* request to this server by clicking on the **Load GetCapabilities** button in the toolbar (hitting enter in the URL bar results in the same action).
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-12-13.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-12-13.png
 
 This operation can take a while depending on the network traffic and the server load. If the server does not seem to reply the request can be interrupted any time by clicking on the **Stop Load Process** button in the toolbar.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-12-46.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-12-46.png
 
 Please note that there is a log panel at the bottom of the editor displaying detailed information about the request sent to the server and indicates its status, as well. 
 This panel can be hidden or shown by the **View Log** toggle button in the toolbar. 
 The statusbar, at the bottom of the interface, briefly indicates the status of the current operation.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-13-15.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-13-15.png
 
 If the *GetCapabilities* request was successful the editor is populated with the replied data.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-13-32.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-13-32.png
 
 The WMS client analyses the returned *GetCapabilities* document and displays the layers (Layer tree tab) and supported file formats (**Format** combo box in the toolbar) on the left hand side. 
 Formats that cannot be visualised in Metview are greyed out in the list.
@@ -160,27 +160,27 @@ On top of the meta-data various user-configurable map image generation parameter
 * **CRS/SRS**: It stands for **Coordinate Reference System** (for WMS version 1.3.0 or later) or **Spatial Reference System** (older WMS versions). 
   Each layer can offer an arbitrary number of reference systems. 
   Metview currently supports the **CRS:84** and **EPSG:4326 **reference systems. 
-  Both stand for the lat-lon or plate-carrée projection. 
+  Both stand for the lat-lon or plate-carrï¿½e projection. 
   Please note that a bounding box is associated for each CRS/SRS in a given layer. 
   However, this bounding box is not editable in the WMS Client editor, instead Metview will adjust it automatically for the needs of visualisation.
 
 * **Style**: It specifies the visual style for the map image generation. 
   Each layer can contain an arbitrary number of styles (even none).
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-15-55.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-15-55.png
 
 Setting the Layer Properties
 ============================
 
 Now we will specify the date and time for our Sea Surface Temperature layer. Click on the Layer settings tab on left hand side of the editor. This shows the user-settable layer properties. We already know CRS and Style from the previous step. On top of these we can see **Time** here. If we click on the extension button next to the label the available values will be listed.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-16-58.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-16-58.png
 
 **Time** is a predefined **dimension** in the WMS standards. 
 Dimensions are optional layer properties and we will see how to work with them in *Part 3* of this tutorial. 
 At present it is enough to select the default value by clicking on item Default in the list.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-17-22.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-17-22.png
 
 Generating a Preview
 ====================
@@ -189,7 +189,7 @@ Having specified the time we can generate a preview for the selected layer.
 Click on the Generate preview button in the layer tab. 
 Now Metview builds and sends a *GetMap *request to the server to acquire a map image for the layer using the specified CRS, style and time.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-17-45.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-17-45.png
 
 At the same time another request is sent to the server to generate a legend image for the given style (if it is available). 
 Just like in the case of the *GetCapabilities* request, the requests sent to the server can be seen in the log panel area. 
@@ -204,7 +204,7 @@ One of the main purposes of the WMS client editor is to automatically generate a
 This *GetMap* request is kept continuously updated as we change our layer settings in the interface. 
 To see this request just click on the GetMap request tab in the right hand side of the editor.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-18-41.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-18-41.png
 
 Saving the GetMap Request
 =========================
@@ -222,7 +222,7 @@ This will execute the *GetMap* request and visualise the resulting image in a Me
 You can see here a similar image to the preview but this time it is overlaid with the Metview coastlines. 
 By clicking on the 'NASA' layer in the Layers tab (on the right hand side of the plot window) you will see the meta-data associated with the visualised WMS layer and the legend, as well.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-19-47.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-19-47.png
 
 **Remarks**:
 
@@ -239,7 +239,7 @@ To overlay a WMS map image with any other data just drag the icons representing 
 There are two icons prepared for you in the folder to try this out: the 'coastlines_grey' Coastlines icon and the 'mslp' GRIB icon. 
 Simply drag them into the **Display Window** and see how the plot has been changed.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-20-53.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-20-53.png
 
 Generating a Series of Map Images
 *********************************
@@ -284,12 +284,12 @@ First we need to clear the current selection (by clicking on the clear button to
   
 Having done this the interface should look like as follows:
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-21-53.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-21-53.png
 
 As mentioned above, by specifying twelve dates we generated twelve individual *GetMap* requests. 
 To inspect these requests click on the GetMap request tab in the right hand side of the editor.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-22-28.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-22-28.png
 
 We can see here that the requests are almost identical and the only difference is that **Time** is varying from one request to the other. 
 Please note that for the sake of better readability the dimensions (in our case it is only **Time**) are always highlighted in a different colour (orange) to the other parameters in this list.
@@ -313,7 +313,7 @@ Frame keys can be grouped into 'key profiles'.
 At the bottom of the Frames tab there is a combo box to switch between the existing key profiles. 
 To manage the key profiles (e.g. to add your own profiles) please try the **Key profile manager** dialog that can be launched by the button with a spanner icon next to the key profile selector combo box.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-23-42.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-23-42.png
 
 **Remarks**:
 
@@ -361,12 +361,12 @@ However, occasionally there might be a need for changing some request parameters
 In folder 'wms_tutorial' duplicate your 'NASA' WMS Client icon and rename the duplicate 'NASA plain'. 
 Edit it and find the Mode combo box in the bottom left corner of the user interface.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-26-5.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-26-5.png
 
 Now select option "Plain" from the combo box to enter the plain editing mode. 
 You should see the following user interface:
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-26-24.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-26-24.png
 
 The editable WMS request parameters are listed on the left hand side of the interface. 
 Whenever you edit a parameter the WMS request displayed on the right hand side of the interface is immediately updated.
@@ -390,7 +390,7 @@ Save your settings then right-click on the icon and select visualise to see if y
 * When you switch from the plain mode to the interactive mode the WMS client always loads the *GetCapabilities* request and checks each parameter value against the allowed values. 
   It might result in overriding some of your settings defined in the plain editing mode.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-6-14.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-6-14.png
 
 Importing WMS Requests
 **********************
@@ -406,7 +406,7 @@ Create a new *WMS Client* icon. Rename it 'NASA topography' and open its editor.
 Select 'Import' from the File menu in the menu bar to start up the **Import** dialog. 
 Now open your 'NASA topography request' icon's editor (if you have not done so) then copy and paste the request into the **Import** dialog.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-4-53.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-4-53.png
 
 Having finished it just press the Import button to populate the WMS client user interface with the request parameters. 
 Now preview the selected layer and visualise it (after saving the settings) then close the editor.
@@ -433,7 +433,7 @@ Automatic Macro Generation
 The quickest way to generate a macro is to simply save a visualisation on screen as a Macro icon. 
 Visualise your 'NASA' WMS Client icon, drop the 'coaslines_grey' and 'mslp\' icons into the plot and click on the macro icon in the tool bar of the **Display Window**.
 
-.. image:: ../_static/metview_wms_tutorial/image2015-3-11_11-3-37.png
+.. image:: /_static/metview_wms_tutorial/image2015-3-11_11-3-37.png
 
 Now a new Macro icon called 'MacroFrameworkN' is generated in your folder. 
 Right-click visualise this icon. 

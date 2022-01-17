@@ -22,7 +22,7 @@ This will copy all the examples into your Metview home folder.
 Soon you will see a folder called 'odb_seminar_2017' appear on your main **Metview desktop**. 
 Double-click to enter it. You should see the following contents:
 
-.. image:: ../_static/using_odb_with_metview/image2017-1-12_14-7-17.png
+.. image:: /_static/using_odb_with_metview/image2017-1-12_14-7-17.png
 
 ODB Exercise
 ************
@@ -109,7 +109,7 @@ Inspecting the Data Values in the Plot
 
 Data values at the cursor position can be inspected with the **Cursor Data Tool,** which can be activated by pressing on the
 
-.. image:: ../_static/using_odb_with_metview/image2017-1-12_11-37-9.png
+.. image:: /_static/using_odb_with_metview/image2017-1-12_11-37-9.png
 
 icon in the toolbar of the **Display Window**. 
 The **Cursor Data Tool** displays the co-ordinates of the current cursor position and the information for the nearest data point to this position.
@@ -117,31 +117,31 @@ The **Cursor Data Tool** displays the co-ordinates of the current cursor positio
 You may find it hard to use the **Cursor Data Tool** in data dense regions. 
 To overcome this launch the **Magnifier** with the 
 
-.. image:: ../_static/using_odb_with_metview/image2017-1-12_11-37-49.png/ 
+.. image:: /_static/using_odb_with_metview/image2017-1-12_11-37-49.png/ 
 
 icon in the toolbar and move it to your area of interest in the plot. 
 The magnifying glass can be moved and resized using the mouse, and the magnification scale on its left-hand side can also be adjusted. 
 You can also zoom into areas of the map using the **Zoom** controls 
 
-.. image:: ../_static/using_odb_with_metview/metview-zoom-controls.png/ 
+.. image:: /_static/using_odb_with_metview/metview-zoom-controls.png/ 
 
 in the toolbar.
 
 Enable the sidebar of the **Display Window** with the 
 
-.. image:: ../_static/using_odb_with_metview/image2017-1-12_11-41-10.png
+.. image:: /_static/using_odb_with_metview/image2017-1-12_11-41-10.png
 
 button and select the **Data** tab (and select the 'vis_temp' layer at the top if it is not yet selected). 
 Now select the **Metadata** panel inside the tab. 
 Here you will find some statistics about the data plotted and a histogram as well.
 
-.. image:: ../_static/using_odb_with_metview/image2017-1-12_11-44-33.png
+.. image:: /_static/using_odb_with_metview/image2017-1-12_11-44-33.png
 
 Now switch to the **Values** panel. 
 This features a list showing all the plotted data.  
 In the bottom-left corner click on the
 
-.. image:: ../_static/using_odb_with_metview/image2017-1-12_11-52-23.png
+.. image:: /_static/using_odb_with_metview/image2017-1-12_11-52-23.png
 
 button to activate the **Data probe** (this will appear in the plot). 
 The probe is synchronised with the list. 
@@ -162,7 +162,7 @@ Next, drag your 'symbol' `Symbol Plotting <https://confluence.ecmwf.int/display/
   
 Now click on the play button
 
-.. image:: ../_static/using_odb_with_metview/image2017-1-12_12-11-32.png
+.. image:: /_static/using_odb_with_metview/image2017-1-12_12-11-32.png
 
 in the **Macro editor** to run the Macro. 
 You should see a nice plot popping up. 

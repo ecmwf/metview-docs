@@ -52,7 +52,7 @@ Examine the ODB file
 To see what was retrieved, right-click **examine** the icon. 
 This brings up Metview's **ODB Examiner** tool.
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-6-50.png
+.. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-6-50.png
 
 Here you can see the metadata (**Columns** tab) and the actual data values themselves as well (**Data** tab).
 Close the ODB Examiner.
@@ -87,7 +87,7 @@ Now edit the 'vis_temp' icon and set the following parameters:
 
 Save the icon and visualise it. Then drag the the provided `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_, `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot for further customisation (either one at a time, or all together). Keep the plot window open.
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-9-46.png
+.. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-9-46.png
 
 Inspecting the Data Values in the Plot
 ======================================
@@ -95,26 +95,26 @@ Inspecting the Data Values in the Plot
 The data values can  be inspected with the **Cursor Data Tool** (you can combine it with the **Magnifier** to see the fine details).
 Enable the sidebar of the Display Window with the 
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-41-10.png
+.. image:: /_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-41-10.png
 
 button and select the **Data** tab (and select the 'vis_temp' layer at the top if it is not yet selected). 
 Now select the **Metadata** panel inside the tab. 
 Here you will find some statistics about the data plotted and a histogram as well.
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-44-33.png
+.. image:: /_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-44-33.png
 
 Now switch to the **Values** panel. 
 This features a list showing all the plotted data.  
 In the bottom-left corner click on the
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-52-23.png
+.. image:: /_static/metview_90_minute_introduction_part_4_odb/image2017-1-12_11-52-23.png
 
 button to activate the **Data probe** (this will appear in the plot). 
 The probe is synchronised with the list. 
 Try to drag it around in the plot, or change its position through the list. 
 The **Magnifier** might help you position the **Data probe** more accurately.
 
-.. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-12-17.png
+.. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-12-17.png
 
 Python Examples
 ***************
@@ -125,7 +125,7 @@ Open and run these scripts.
 .. list-table::
 
   * - plot_map.py
-    - .. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-18-22.png
+    - .. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-18-22.png
   
   * -
     - This is the Python code to generate the same plot as we did interactively
@@ -143,7 +143,7 @@ Open and run these scripts.
       * used the **values()** function to access a given ODB column as a **numpy** array.
 	
   * - plot_diff.py
-    - .. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-14-9.png
+    - .. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-14-9.png
     
   * - 
     - This script computes the difference between the forecast fields stored in 
@@ -160,14 +160,14 @@ Open and run these scripts.
       3. the difference is computed between forecast and observation	
 	
   * - to_pandas.py
-    - .. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-15-52.png
+    - .. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-15-52.png
 	
   * - 
     - This script shows how to convert an ODB into a **Pandas dataframe** with the 
       **to_dataframe()** function.
 
   * - plot_wind.py
-    - .. image:: ../_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-14-46.png
+    - .. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-14-46.png
 
   * - 
     - This script shows how to plot wind data from ODB.

@@ -32,7 +32,7 @@ The coordinate system is defined by the `Cartesian View <https://confluence.ecmw
 A Simple Graph
 **************
 
-.. image:: ../_static/graph_plotting_in_metview/simple-graph.png
+.. image:: /_static/graph_plotting_in_metview/simple-graph.png
 
 Create a new *Input Visualiser* icon. 
 Set **Input Plot Type** to XYPoints and type a list of values (forward slash-delimited) for both **Input X Values** and **Input Y Values** (they should have the same number of elements). 
@@ -51,7 +51,7 @@ Notice that the automatically-generated view fits your data so that the 'edge po
 Customising the view
 ====================
 
-.. image:: ../_static/graph_plotting_in_metview/simple-graph-with-cview.png
+.. image:: /_static/graph_plotting_in_metview/simple-graph-with-cview.png
 
 Now that we have a simple plot, we can make it more professional.
 
@@ -62,7 +62,7 @@ Visualise the icon and drop your *Input Visualiser* into the **Display Window** 
 Customising the axes
 ====================
 
-.. image:: ../_static/graph_plotting_in_metview/simple-graph-with-axes.png
+.. image:: /_static/graph_plotting_in_metview/simple-graph-with-axes.png
 
 Create a new *Axis Plotting* icon and rename it *h_axis*. 
 Try modifying it to produce a horizontal axis similar to the one shown (change the title, the font sizes and the line thickness). Just drop it into the **Display Window** to test it.
@@ -82,7 +82,7 @@ Now when you visualise this view icon, it will have your customised axes.
 Add a title
 ===========
 
-.. image:: ../_static/graph_plotting_in_metview/simple-graph-with-title-and-bars.png
+.. image:: /_static/graph_plotting_in_metview/simple-graph-with-title-and-bars.png
 
 We will look in more detail at plot titles, but for now just create a new *Text Plotting* icon and set **Text Line 1** to a suitable title for your plot; drop it into the **Display Window** to apply it. 
 The above plot also shows the data plotted as a bar chart via the *Graph Plotting* icon.
@@ -112,7 +112,7 @@ You should now be able to change the data values at the top of the macro, and th
 Plotting a Time Series
 **********************
 
-.. image:: ../_static/graph_plotting_in_metview/time-series-chart.png
+.. image:: /_static/graph_plotting_in_metview/time-series-chart.png
 
 We will now extract data values from a particular location for different times and plot as a time series graph. 
 It will be a Macro-based exercise, so create a new *Macro* icon, rename it *time_series* and go through the steps below.
@@ -158,7 +158,7 @@ The plotting part can be done either with an additional ``plot()`` command, or e
 Plotting onto a Map
 *******************
 
-.. image:: ../_static/graph_plotting_in_metview/geolines.png
+.. image:: /_static/graph_plotting_in_metview/geolines.png
 
 All of the icons (and their Macro equivalent functions) which plot graph data to an X/Y (Cartesian) axis can also plot graph data onto a map using lat/lon coordinates. As an example, we will plot a box which bounds a simple geographical region.
 
@@ -230,7 +230,7 @@ Extra Work
 Customise the time series plot:
 ===============================
 
-.. image:: ../_static/graph_plotting_in_metview/time-series-extra.png
+.. image:: /_static/graph_plotting_in_metview/time-series-extra.png
 
 * put some extra space around the data points - add a day to each end of the x axis using a custom *Cartesian View*
 
@@ -239,7 +239,7 @@ Customise the time series plot:
 Logarithmic scales
 ==================
 
-.. image:: ../_static/graph_plotting_in_metview/simple-graph-with-log-y-cview.png
+.. image:: /_static/graph_plotting_in_metview/simple-graph-with-log-y-cview.png
 
 Create an X/Y plot similar to the first one from this session. 
 Make sure there are some large y-values (e.g. 100, 1000). 
@@ -249,7 +249,7 @@ Logarithmic Y axes are often used when representing the atmospheric levels.
 Scatterplot
 ===========
 
-.. image:: ../_static/graph_plotting_in_metview/fc-vs-an-graph-plot.png
+.. image:: /_static/graph_plotting_in_metview/fc-vs-an-graph-plot.png
 
 Plot the analysis values on the x-axis and the forecast values on the y-axis. 
 Add a diagonal line.

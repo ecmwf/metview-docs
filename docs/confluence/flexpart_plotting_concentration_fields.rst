@@ -18,7 +18,7 @@ Double-click on the 'conc_s001.grib' GRIB icon' in folder 'result_fwd' to start 
 We can see that our file contains the "mdc" (=Mass density concentration) fields we want to visualise. 
 We can find out further details about this parameter by setting the **Dump mode** to *Namespace* and **Namespace** to *Parameter* in the examiner:
 
-.. image:: ../_static/flexpart_plotting_concentration_fields/image2017-10-25_14-54-26.png
+.. image:: /_static/flexpart_plotting_concentration_fields/image2017-10-25_14-54-26.png
 
 Generating the plot
 *******************
@@ -110,4 +110,4 @@ and generate the plot:
   
 Having run the macro we will get a plot like this (after navigating to step 39h):
 
-.. image:: ../_static/flexpart_plotting_concentration_fields/image2017-10-24_14-42-1.png
+.. image:: /_static/flexpart_plotting_concentration_fields/image2017-10-24_14-42-1.png
