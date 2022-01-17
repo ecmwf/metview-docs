@@ -335,7 +335,7 @@ class IconDocBuilder:
 
         # read yaml definition
         with open(path_desc, "r") as f_in:
-            txt = ""
+            txt = f".. _{name}_icon:\n\n"
             conf = yaml.load(f_in, Loader=yaml.FullLoader)
             conf = self.parse_conf(conf)
 

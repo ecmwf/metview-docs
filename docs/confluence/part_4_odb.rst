@@ -85,7 +85,7 @@ Now edit the 'vis_temp' icon and set the following parameters:
   * - **Odb Where**
     - varno = 2 and vertco_reference_1=50000
 
-Save the icon and visualise it. Then drag the the provided `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_, `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot for further customisation (either one at a time, or all together). Keep the plot window open.
+Save the icon and visualise it. Then drag the the provided `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_, :ref:`Coastlines <mcoast_icon>`, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot for further customisation (either one at a time, or all together). Keep the plot window open.
 
 .. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-9-46.png
 
@@ -201,7 +201,7 @@ Enter folder 'scatterplot'.
 Visualise 'scatter_plot' and customise it with the provided `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon. 
 The plot you see is a scatterplot for the first guess departures (x axis) and analysis departures (y axis) for a given channel.
 
-Visualise 'bin_plot' to get the binned version of the same data (as a heat map). Drop the provided  `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_, `Cartesian View <https://confluence.ecmwf.int/display/METV/Cartesian+View>`_ and  `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot to fully customise it.
+Visualise 'bin_plot' to get the binned version of the same data (as a heat map). Drop the provided  :ref:`Contouring <mcont_icon>`, `Cartesian View <https://confluence.ecmwf.int/display/METV/Cartesian+View>`_ and  `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot to fully customise it.
 
 Wind profiler
 =============

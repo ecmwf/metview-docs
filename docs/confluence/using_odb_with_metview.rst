@@ -101,7 +101,7 @@ Next, specify the where statement of the query in the **ODB Where** parameter as
 Save these settings by clicking the **Save** button at the bottom-right of the icon editor (or click **Ok** to save and close the editor).
 
 Right-click visualise the 'vis_temp' icon to generate the plot. 
-Then drag the the provided `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_, `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot for further customisation. 
+Then drag the the provided `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_, :ref:`Coastlines <mcoast_icon>`, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot for further customisation. 
 Keep the plot window open.
 
 Inspecting the Data Values in the Plot
@@ -175,10 +175,10 @@ Overlaying with GRIB data
 
 The 'fc.grib' GRIB icon contains a 12 h global forecast valid for the date and time of our TEMP ODB data. Double-click the icon to inspect its fields with the GRIB Examiner.
 
-Re-visualise the 500 hPa temperature ODB data with vis_temp' and drag the `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_, `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot again. 
+Re-visualise the 500 hPa temperature ODB data with vis_temp' and drag the `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_, :ref:`Coastlines <mcoast_icon>`, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot again. 
 To overlay the 500 hPa temperature forecast we need to filter the matching field from the GRIB file. 
 The 't500_fc' GRIB Filter icon is already already set up to perform this task. 
-Just drag it into the plot, then drag the 't_cont' `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon into the plot as well to customise the contour lines.
+Just drag it into the plot, then drag the 't_cont' :ref:`Contouring <mcont_icon>` icon into the plot as well to customise the contour lines.
 
 Forecast-observation difference
 ===============================

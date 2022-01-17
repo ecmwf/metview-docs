@@ -35,7 +35,7 @@ Setting the View
 
 With a new *Geographical View* icon, set up a cylindrical projection with its area defined by its lower-left corner [20oN, 110oW] and its upper-right corner [70oN, 30oW].
 
-Set up a new `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon with the following:
+Set up a new :ref:`Coastlines <mcoast_icon>` icon with the following:
 
 * the land coloured in *cream*
 * the coastlines in *grey*
@@ -44,7 +44,7 @@ Set up a new `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`
 Plotting the Mean Sea Level Pressure field
 ==========================================
 
-Plot the GRIB file *msl.grib* into this view using a new `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. Plot black isolines with an interval of 5 hPa between them. 
+Plot the GRIB file *msl.grib* into this view using a new :ref:`Contouring <mcont_icon>` icon. Plot black isolines with an interval of 5 hPa between them. 
 Since this will be plotted on top of another field, it would also be a good idea to increase the thickness of the isolines. 
 Activate the legend in the *Contouring* icon and set the legend text for this icon to "MSLP".
 

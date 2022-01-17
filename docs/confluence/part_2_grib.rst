@@ -13,7 +13,7 @@ Navigate into the *2_grib* folder within Metview.
 Customising the plot to bring out information
 *********************************************
 
-Right-click on the Metview desktop, **Create new icon** and select `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_. Rename the newly created icon to 'shade' and edit it, setting these parameters:
+Right-click on the Metview desktop, **Create new icon** and select :ref:`Contouring <mcont_icon>`. Rename the newly created icon to 'shade' and edit it, setting these parameters:
 
 .. list-table::
 

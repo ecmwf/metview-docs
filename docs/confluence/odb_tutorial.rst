@@ -251,7 +251,7 @@ Now drop this icon into the plot to see the effect of the changes.
 .. image:: /_static/odb_tutorial/worddavbcc893dfe3d7e00f85183ffbf8e86fcf.png
 
 We used the **Symbol Table Mode** in our icon and set it to 'Advanced' which enabled us to automatically define intervals with a separate maker type, colour and size. 
-These settings work in a similar way as in the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon.
+These settings work in a similar way as in the :ref:`Contouring <mcont_icon>` icon.
 
 Our palette was automatically generated from a colour wheel
 
@@ -512,7 +512,7 @@ Now drop this icon into the plot to see the effect of the changes.
 
 .. image:: /_static/odb_tutorial/worddav5ba9875ca3cea3da2cc480819dcabc34.png
 
-We used the **Wind Advanced Method** in our icon that enabled us to automatically define wind speed intervals and assign a nice palette to them. These settings work in a similar way to the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
+We used the **Wind Advanced Method** in our icon that enabled us to automatically define wind speed intervals and assign a nice palette to them. These settings work in a similar way to the :ref:`Contouring <mcont_icon>` icon. 
 Please note that our palette was automatically generated from a colour wheel by interpolating in clockwise direction between **Wind Advanced Colour Min Level Colour** and **Wind Advanced Colour Max Level Colour**.
 
 Fixing the Wind Speed Intervals
@@ -678,7 +678,7 @@ Since isolines is not the desired visualisation type in our case (our data is no
 The best choice for us is to use **grid shading** since it applies shading for the grid cells themselves and we get the correct representation of our grid in the plot. 
 (Please note that grid shading is different to cell shading, since the latter always involves an interpolation to define a new set of grid cells that the shading is applied for.)
 
-Let's create a new `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon (it can be found in the **Visual Definitions** icon drawer, you may need to scroll the drawers to the right).
+Let's create a new :ref:`Contouring <mcont_icon>` icon (it can be found in the **Visual Definitions** icon drawer, you may need to scroll the drawers to the right).
 
 .. image:: /_static/odb_tutorial/worddavc710d0dc706b5208928aab1f10546930.png
 
@@ -729,7 +729,7 @@ Now drop this icon into the plot to see the effect of the changes.
 
 .. image:: /_static/odb_tutorial/worddav48581a42aa40558dcba65caa763fa9b3.png
 
-In our `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon we set the minimum value to '1.' to exclude grid cells containing no points at all and used 20 intervals between the minimum and the maximum to define the colour palette. 
+In our :ref:`Contouring <mcont_icon>` icon we set the minimum value to '1.' to exclude grid cells containing no points at all and used 20 intervals between the minimum and the maximum to define the colour palette. 
 Please note that our palette was automatically generated from a colour wheel by interpolating in clockwise direction between Contour Shade **Min Level Colour** and **Contour Shade Max Level Colour**.
 
 Changing the View

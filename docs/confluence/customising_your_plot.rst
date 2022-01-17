@@ -26,14 +26,14 @@ Metview uses icons to control the various aspects of a plot's appearance. We wil
 
 .. image:: /_static/customising_your_plot/t1000-with-shaded-coastines.png
 
-First, create a new `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon. 
+First, create a new :ref:`Coastlines <mcoast_icon>` icon. 
 You can right-click within the **Metview desktop** to obtain a context menu from where the option **Create new icon** is available (shortcut: CTRL-N).
 
 .. image:: /_static/customising_your_plot/desktop_context_menu_new_icon.png
 .. image:: /_static/customising_your_plot/new_icon_dialog.png
 
 
-This brings up a dialogue from where you can find the `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon; either double-click the icon, or drag it onto the desktop to create a new instance. 
+This brings up a dialogue from where you can find the :ref:`Coastlines <mcoast_icon>` icon; either double-click the icon, or drag it onto the desktop to create a new instance. 
 Close the dialogue.
 
 Edit the newly-created icon by either double-clicking on it or else right-click, **edit** (double-clicking an icon performs the edit action for most icon types). 
@@ -59,9 +59,9 @@ For colour-based parameters, there are two small arrows - the one on the right r
 
 After making these changes, click the **Ok** button to save and exit the editor.
 
-Visualise the data again, and drag your new `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon into the **Display Window**.
+Visualise the data again, and drag your new :ref:`Coastlines <mcoast_icon>` icon into the **Display Window**.
 
-Your `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon can be dragged into any plot, and `later <https://confluence.ecmwf.int/display/METV/Optimising+Your+Workflow>`_ we'll see how to store useful icons so that they can be easily accessed from anywhere.
+Your :ref:`Coastlines <mcoast_icon>` icon can be dragged into any plot, and `later <https://confluence.ecmwf.int/display/METV/Optimising+Your+Workflow>`_ we'll see how to store useful icons so that they can be easily accessed from anywhere.
 
 So you know what it does, rename the icon to *land_shade* by clicking on its name and editing the text.
 
@@ -103,9 +103,9 @@ Plot your data in this view to confirm that the area and projection are as desir
 Linking the Coastlines icon with the Geographical View Icon
 ***********************************************************
 
-Although they can be used separately, the `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon can be linked into the *Geographical View* icon through the concept of *embedded* icons.
+Although they can be used separately, the :ref:`Coastlines <mcoast_icon>` icon can be linked into the *Geographical View* icon through the concept of *embedded* icons.
 
-Notice that a *Geographical View* icon editor contains a place for an embedded `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon. If you drop a `Coastline <https://confluence.ecmwf.int/display/METV/Coastlines>`_ 's icon here and apply the changes, then the *Geographical View* icon will use your chosen coastlines.
+Notice that a *Geographical View* icon editor contains a place for an embedded :ref:`Coastlines <mcoast_icon>` icon. If you drop a `Coastline <https://confluence.ecmwf.int/display/METV/Coastlines>`_ 's icon here and apply the changes, then the *Geographical View* icon will use your chosen coastlines.
 
 .. image:: /_static/customising_your_plot/embedded-coastlines-icon.png
 
@@ -179,7 +179,7 @@ Modifying the Contouring
 .. image:: /_static/customising_your_plot/t1000-with-shading.png
 
 Metview provides many ways to style the contours when plotting data. 
-These are controlled via the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
+These are controlled via the :ref:`Contouring <mcont_icon>` icon. 
 This is another visdef icon. Create a new instance of this icon and rename it to shade. Edit it, setting the following parameters:
 
 .. image:: /_static/customising_your_plot/mcont_icon.png
@@ -277,7 +277,7 @@ Plot your temperature data by running your macro again, then drop *z500.grb* int
 The geopotential field appears as blue isolines (the default contouring style) over the shaded temperature field.
 
 We will now change these isolines to black. 
-Create a new `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon and rename it to black_contour. 
+Create a new :ref:`Contouring <mcont_icon>` icon and rename it to black_contour. 
 Edit it and set the following:
 
 .. list-table::
@@ -292,7 +292,7 @@ Edit it and set the following:
     - Off
 
 Drop this into the **Display Window** - the result is not as intended! 
-The new `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ definition was applied to both fields, not just the geopotential. 
+The new :ref:`Contouring <mcont_icon>` definition was applied to both fields, not just the geopotential. 
 Close the **Display Window** and re-run the macro to get us back to the point before we added the geopotential. 
 This time, select both the *z500.grb* and *black_contour* icons and drop them together into the **Display Window**. 
 This forces the association between the data and the visual definition. 
@@ -304,7 +304,7 @@ Extra Work
 Contouring
 ==========
 
-Spend some time exploring the `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
+Spend some time exploring the :ref:`Contouring <mcont_icon>` icon. 
 Here are some suggestions:
 
 * try different types of shading by setting **Contour Shade Method** and **Contour Shade Technique**. 
@@ -324,7 +324,7 @@ Create a new *Geographical View* icon (or make a copy of an existing one) and tr
 Coastlines
 ==========
 
-Spend some time exploring the `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon. Here are some suggestions:
+Spend some time exploring the :ref:`Coastlines <mcoast_icon>` icon. Here are some suggestions:
 
 * adjust the grid lines
 * plot country boundaries
@@ -338,4 +338,4 @@ Histogram sidebar
 
 .. image:: /_static/customising_your_plot/histogram-coloured.png
 
-Visualise the temperature data with one of the coloured `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icons and view the histogram in the **Data** tab of the sidebar (ensure the sidebar is visible if you previously hid it!). At the bottom, there is a control with which you can select to use your `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon colours and levels to compute and display the histogram - try it!
+Visualise the temperature data with one of the coloured :ref:`Contouring <mcont_icon>` icons and view the histogram in the **Data** tab of the sidebar (ensure the sidebar is visible if you previously hid it!). At the bottom, there is a control with which you can select to use your :ref:`Contouring <mcont_icon>` icon colours and levels to compute and display the histogram - try it!

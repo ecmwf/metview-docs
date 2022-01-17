@@ -75,7 +75,7 @@ Visualising the latest forecast
 ===============================
 
 The GRIB file *fc_latest_oper.grib *contains the latest forecast run preceding the event. 
-Drag it into the top left map and customise it with the wgust_shade `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon and the title_oper `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon. 
+Drag it into the top left map and customise it with the wgust_shade :ref:`Contouring <mcont_icon>` icon and the title_oper `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon. 
 Animate through the fields to see the location of the areas heavily hit by the storm.
 
 Visualising the operational forecast
@@ -145,7 +145,7 @@ By doing so the loop's body is completed. We finish the macro by returning the r
 
   By using the return statement our Macro behaves as if it were a fieldset (GRIB file).
 
-Drag your Macro into the bottom left map and customise it with the *wgust_shade* `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
+Drag your Macro into the bottom left map and customise it with the *wgust_shade* :ref:`Contouring <mcont_icon>` icon. 
 You would also need a custom `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon for the title. 
 Take a copy of the one used for the previous plots (called *title_oper*) and tailor it to your needs. 
 When you analyse the plot you will notice that the ensemble mean hints for higher wind gusts in our area of interest.
@@ -157,7 +157,7 @@ The ensemble spread is the standard deviation of the ENS members.
 We can compute it in a very similar way to the ensemble mean. 
 The only difference is that this time we need to use the ``stdev()`` function instead of ``mean()``. 
 Now it is your task to write a Macro for it. 
-Once you finished your Macro drag it into the bottom right map and customise it with the *wgust_spread_shade* `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon and with a custom `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon. 
+Once you finished your Macro drag it into the bottom right map and customise it with the *wgust_spread_shade* :ref:`Contouring <mcont_icon>` icon and with a custom `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon. 
 You will see that the ensemble spread is fairly high in the investigated area.
 
 Checking the probabilities
@@ -189,7 +189,7 @@ The second line simply derives the probability as the mean of these fields.
 We multiply the result by 100 to scale it into the 0-100 range for an easier interpretation.
 
 Once you finished your Macro, visualise your *Geographical View* icon and drag the Macro into the  plot. 
-Customise it with the *prob_shade* `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
+Customise it with the *prob_shade* :ref:`Contouring <mcont_icon>` icon. 
 Also use a custom `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon to define the title. As for the probabilities, you should see that there is some probability of high wind speeds.
 
 Creating a stamp plot
@@ -210,7 +210,7 @@ Once you've tidied up the code, define a 6x9 layout so that each plot should con
   
   dw=plot_superpage(pages: mxn_layout(my_view,9,6))
 
-Next, drop your *wgust_shade* `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon into the Macro editor and tidy up the generated code. 
+Next, drop your *wgust_shade* :ref:`Contouring <mcont_icon>` icon into the Macro editor and tidy up the generated code. 
 We will apply this icon to all the fields in the stamp plot.
 Continue with reading in the GRIB file of the ENS forecasts:
 
@@ -278,7 +278,7 @@ Drop your *Geographical View* and the `Coastlines <https://software.ecmwf.int/wi
 
 so that our map could show a larger (North Atlantic) area.
 
-Next, define the contouring used for the "spaghetti" by dropping the *cont_spag* `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon into the Macro. A code like this should be generated for you:
+Next, define the contouring used for the "spaghetti" by dropping the *cont_spag* :ref:`Contouring <mcont_icon>` icon into the Macro. A code like this should be generated for you:
 
 .. code-block:: python
   

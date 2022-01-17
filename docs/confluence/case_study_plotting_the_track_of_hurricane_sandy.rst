@@ -53,7 +53,7 @@ With a new *Geographical View* icon, set up a cylindrical projection with its ar
 
   South/West/North/East: 17/-97/51/-45
 
-Set up a new `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`_ icon with the following:
+Set up a new :ref:`Coastlines <mcoast_icon>` icon with the following:
 
 * the land coloured in *grey*
 
@@ -62,7 +62,7 @@ Set up a new `Coastlines <https://confluence.ecmwf.int/display/METV/Coastlines>`
 Plotting the Mean Sea Level Pressure field
 ==========================================
 
-Plot the GRIB file *sandy_msl.grib* into your view using a new `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon. 
+Plot the GRIB file *sandy_msl.grib* into your view using a new :ref:`Contouring <mcont_icon>` icon. 
 Plot black isolines with an interval of 5 hPa between them. Animate through the fields to see how the forecast is evolving.
 
 .. code-block:: python
