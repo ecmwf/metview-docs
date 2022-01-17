@@ -33,7 +33,7 @@ First, we will create the two plots independently then align them together in th
 
   * reading and visualising GRIB and CSV data
 
-  * plotting text labels with `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_
+  * plotting text labels with :ref:`Symbol Plotting <msymb_icon>`
 
   * plotting curves on maps and xy-views
 
@@ -104,7 +104,7 @@ Plotting date/time labels onto the track
 ========================================
 
 To finalise the track plot we will add the date/time labels to the track points. 
-This could be done with a `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon by specifying the list of labels we want to plot into the map. 
+This could be done with a :ref:`Symbol Plotting <msymb_icon>` icon by specifying the list of labels we want to plot into the map. 
 However, to make it reusable for other datasets as well, we will do it programmatically by using Metview *Macro*.
 
 Create a new *Macro* and edit it. First, read the CSV file in with the `Table Reader <https://confluence.ecmwf.int/display/METV/Table+Reader>`_:
@@ -144,11 +144,11 @@ Next, we build the list of labels. Each label is made up from a day and an hour 
     labels = labels & [label]
   end for
 
-Next, define a `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ visual definition using the text mode.
+Next, define a :ref:`Symbol Plotting <msymb_icon>` visual definition using the text mode.
 
 .. note::
 
-  `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ in text mode is used to plot string values to the positions of the dataset it is applied to. 
+  :ref:`Symbol Plotting <msymb_icon>` in text mode is used to plot string values to the positions of the dataset it is applied to. 
   The rule is that the first string in the list defined by symbol_text_list goes to the first data position, the second one to the second position and so on.
 
 The code we need to add is like this:
@@ -181,7 +181,7 @@ Creating the graph plot
 Setting the View
 ================
 
-With a new `Cartesian View <https://confluence.ecmwf.int/display/METV/Cartesian+View>`_ icon, set up a view to cater for the graph showing the mean sea level pressure values in hPa units by setting
+With a new :ref:`Cartesian View <cartesianview_icon>` icon, set up a view to cater for the graph showing the mean sea level pressure values in hPa units by setting
 
 * the x-axis type to *date*
 
@@ -295,7 +295,7 @@ Having finished the body of the loop the last step in our Macro is to define an 
 
   By returning the visualiser our Macro behaves as if it were an `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ icon.
 
-Now visualise your `Cartesian View <https://confluence.ecmwf.int/display/METV/Cartesian+View>`_ icon and drag your Macro into it.
+Now visualise your :ref:`Cartesian View <cartesianview_icon>` icon and drag your Macro into it.
 
 Customising the graph
 =====================

@@ -23,7 +23,7 @@ During the exercises, remember to give your icons useful names!
 Automatic Titles
 ================
 
-The `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon controls the content and appearance of the title. 
+The :ref:`Text Plotting <mtext_icon>` icon controls the content and appearance of the title. 
 By default, it contains this:
 
 .. list-table::

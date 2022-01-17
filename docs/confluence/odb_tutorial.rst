@@ -214,7 +214,7 @@ Right-click and **visualise** the icon to plot the retrieved data (please note t
 .. image:: /_static/odb_tutorial/worddav489ec607202e702bb79ccee848d4c442.png
 
 We will change the plot by using markers instead of numbers and change the colour, as well. 
-Let's create a new `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon (right-click in the desktop when no icons are selected and use the **New icon...** menu):
+Let's create a new :ref:`Symbol Plotting <msymb_icon>` icon (right-click in the desktop when no icons are selected and use the **New icon...** menu):
 
 .. image:: /_static/odb_tutorial/worddav3869ba3607f9441f19c3700450e24b99.png
 
@@ -278,7 +278,7 @@ Since the visual change is so useful (and the rendering process is much faster, 
 
 * Open the subfolder called 'System' and then subfolder 'Defaults'.
 
-* Do one of the following: edit the `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon in the 'Defaults' folder to specify your new settings or else delete it and copy your 'symbol' icon into this folder then rename it 'Symbol Plotting'
+* Do one of the following: edit the :ref:`Symbol Plotting <msymb_icon>` icon in the 'Defaults' folder to specify your new settings or else delete it and copy your 'symbol' icon into this folder then rename it 'Symbol Plotting'
 
 For information: To delete an icon, right-click, **delete**; to move an icon between folders, drag it with the left mouse button; to copy an icon between folders, drag it with the middle mouse button.
 
@@ -292,7 +292,7 @@ Having a Histogram in the Legend
 So far we have used the default legend settings, which resulted in a continuous legend. 
 Now we will change our legend so that it could display a histogram showing the data distribution across the data intervals used in the symbol plotting.
 
-Let's create a new `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ icon:
+Let's create a new :ref:`Legend <mlegend_icon>` icon:
 
 .. image:: /_static/odb_tutorial/worddave53549f70a24bc40b702ae64a28be088.png
 
@@ -338,7 +338,7 @@ Changing the Title
 
 The title of the ODB plot was automatically generated. 
 It contains the database name (in this case it is a temporary file, the result of the query) and some statistics. 
-To use a custom title we need a `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon. 
+To use a custom title we need a :ref:`Text Plotting <mtext_icon>` icon. 
 This time you do not need to create a new icon since there is one called 'title' already prepared for you. 
 Edit this icon to see how the title is constructed. 
 Then simply drag it into the **Display Window** and see how your title has been changed.
@@ -545,7 +545,7 @@ Now when you apply this icon you will see that the palette is fixed wherever you
 Changing the Title
 ==================
 
-To change the automatically generated ODB title you need to simply drag an already prepared `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon called 'title' into the **Display Window**.
+To change the automatically generated ODB title you need to simply drag an already prepared :ref:`Text Plotting <mtext_icon>` icon called 'title' into the **Display Window**.
 
 Scatter Plots
 *************
@@ -627,7 +627,7 @@ This will bring up the Metview **Display Window** using the default visualisatio
 
 .. image:: /_static/odb_tutorial/worddav09b8e7f27837626e5b738f1eda5f5f26.png
 
-We can change the symbol (its type, colour and size) used for the plot with a `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon. 
+We can change the symbol (its type, colour and size) used for the plot with a :ref:`Symbol Plotting <msymb_icon>` icon. 
 This time you do not need to create a new icon since there is one called 'scatter_symbol' already prepared for you. Edit this icon to see its settings then simply drag it into the **Display Window** and see how your plot has been changed.
 
 .. image:: /_static/odb_tutorial/worddavef1a8cd79762dc7b0d104a8af6dac333.png
@@ -735,7 +735,7 @@ Please note that our palette was automatically generated from a colour wheel by 
 Changing the View
 =================
 
-We will further customise the plot by changing the axis value ranges and adding axis labels and grid-lines to it. To change these properties we need a `Cartesian View <https://confluence.ecmwf.int/display/METV/Cartesian+View>`_ icon (it can be found in the **Visual Definitions** icon drawer).
+We will further customise the plot by changing the axis value ranges and adding axis labels and grid-lines to it. To change these properties we need a :ref:`Cartesian View <cartesianview_icon>` icon (it can be found in the **Visual Definitions** icon drawer).
 
 .. image:: /_static/odb_tutorial/worddava8baede834f465f2cfcfda0f95a4ed26.png
 
@@ -747,7 +747,7 @@ Then simply drag it into the **Display Window** and see how your plot has been c
 Changing the Title
 ==================
 
-To change the automatically generated ODB title you need to simply drag an already prepared `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon called 'title' into the **Display Window**.
+To change the automatically generated ODB title you need to simply drag an already prepared :ref:`Text Plotting <mtext_icon>` icon called 'title' into the **Display Window**.
 
 Plotting With Macro
 *******************
@@ -980,7 +980,7 @@ To enhance the plot we would like to apply another colour palette by using:
 
 * red-to-yellow palette for the positive values above 0.1
 
-It is complicated to create such a colour palette with one `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon but we can overcome this difficulty by using three `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icons instead. 
+It is complicated to create such a colour palette with one :ref:`Symbol Plotting <msymb_icon>` icon but we can overcome this difficulty by using three :ref:`Symbol Plotting <msymb_icon>` icons instead. 
 This time you do not have to create these icons since they are already prepared for you.
 
 Now visualise your plot again. Find the 'sym_small, 'sym_neg' and 'sym_pos' *Symbol Plotting* icons in the folder and select them together - either drag a rectangle around them, or click on each whilst holding down SHIFT. Then drag them together into the plot.

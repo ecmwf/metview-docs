@@ -3,8 +3,9 @@
 Part 3 - BUFR
 #############
 
-Full documentation on BUFR functionality in Metview is `here <https://confluence.ecmwf.int/display/METV/BUFR+Overview>`_; geopoints are documented here.
-Full documentation on BUFR functionality in Metview is `here <https://confluence.ecmwf.int/display/METV/BUFR+Overview>`_; geopoints are documented `here <https://confluence.ecmwf.int/display/METV/Geopoints+Overview>`_.
+.. note::
+
+  BUFR and Geopoints data are represented as :class:`Bufr` and :class:`Geopoints` objects in Metview.
 
 Setup
 *****
@@ -26,7 +27,7 @@ Right-click and **Copy item** to get this key name into the clipboard.
 Filtering the BUFR file
 ***********************
 
-We will now extract the 2m temperature values from the file. Create a new `Observation Filter <https://confluence.ecmwf.int/display/METV/Observation+Filter>`_ icon and edit it, setting the following parameters:
+We will now extract the 2m temperature values from the file. Create a new :ref:`Observation Filter <obsfilter_icon>` icon and edit it, setting the following parameters:
 
 .. list-table::
 
@@ -51,15 +52,14 @@ The editor should look like this:
 .. image:: /_static/metview_90_minute_introduction_part_3_bufr/obsfilter-editor.png
 
 Click OK, then **examine** the Obervation Filter icon. 
-The filtering step will be executed automatically and the resulting `geopoints <https://confluence.ecmwf.int/display/METV/Geopoints+Overview>`_ data will appear in the examiner. 
-You could also right-click on the icon and save the data, or drop the icon into a Python script file and add a ``write()`` command to write it to disk.
+The filtering step will be executed automatically and the resulting :class:`Geopoints` data will appear in the examiner. 
+You could also right-click on the icon and save the data, or drop the icon into a Python script file and add a :func:`write` command to write it to disk.
 
 There are various possible output formats, but the standard geopoints output is a text file that looks like this:
 
 .. image:: /_static/metview_90_minute_introduction_part_3_bufr/geopoints-text.png
 
-Now **visualise** the result of the Observation Filter and drop the supplied icons `symbol_plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ and coast_dark into the plot window.
-Now visualise the result of the Observation Filter and drop the supplied icons `symbol_plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ and `coast_dark <https://confluence.ecmwf.int/display/METV/Coastlines>`_ into the plot window.
+Now visualise the result of the Observation Filter and drop the supplied icons :ref:`symbol_plotting <msymb_icon>` and :ref:`coast_dark <mcoast_icon>` into the plot window.
 
 .. image:: /_static/metview_90_minute_introduction_part_3_bufr/geopoints-plotted.png
 
@@ -72,7 +72,7 @@ Filter, write and plot
 Create a new **Python Script** icon, edit it and drop the *Observation Filter* (and rename the variable to ``t2m``; also, absolute paths can be shortened to relative paths), *coast_dark* and *symbol_plotting* icons into the editor. 
 Add the following commands to the end of the script and run it:
 
-.. code-block::
+.. code-block:: python
 
   mv.plot(coast_dark, t2m, symbol_plotting)
   mv.write('obs_t2m.gpt', t2m)
@@ -83,7 +83,7 @@ Extract values and compute statistics
 Create a copy of the script, remove the plotting commands and add the following lines. 
 The first two return numpy arrays, the third line returns a pandas dataframe.
 
-.. code-block::
+.. code-block:: python
 
   print(mv.latitudes(t2m))
   print(mv.values(t2m))

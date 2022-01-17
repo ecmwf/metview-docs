@@ -3,7 +3,9 @@
 Part 2 - GRIB
 #############
 
-Full documentation on GRIB functionality in Metview is `here <https://confluence.ecmwf.int/display/METV/GRIB+Overview>`_.
+.. note::
+
+  In Metview GRIB data is represented as a :class:`Fieldset`.
 
 Setup
 *****
@@ -107,15 +109,15 @@ The script plots a time series for each level for a given grid point.
 Convert a GRIB field into text format
 =====================================
 
-Create a new `Grib to Geopoints <https://confluence.ecmwf.int/display/METV/Grib+To+Geopoints>`_ icon. Edit it and drop one of the GRIB files into the **Data** box as shown.
+Create a new :ref:`Grib to Geopoints <grib_to_geo_icon>` icon. Edit it and drop one of the GRIB files into the **Data** box as shown.
 
 .. image:: /_static/metview_90_minute_introduction_part_2_grib/grib-to-gpts.png
 
-Executing this icon will convert the first GRIB field into `Geopoints <https://confluence.ecmwf.int/display/METV/Geopoints+Overview>`_ format. 
+Executing this icon will convert the first GRIB field into :class:`Geopoints` format. 
 The result can be directly visualised, examined or saved to disk.
 
 Get a Python xarray from a GRIB file
 ====================================
 
 The script *grib_xarray.py* shows how to get an xarray from a GRIB file. 
-This `Jupyter notebook <https://confluence.ecmwf.int/display/METV/Using+xarray+for+computing+mean+and+spread>`_ gives a more detailed example using ensemble data.
+See the :ref:`/examples/ens_mean_spread_xarray.ipynb` Jupyter notebook for a more detailed example using ensemble data.

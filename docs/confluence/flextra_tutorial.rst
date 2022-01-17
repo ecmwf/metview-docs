@@ -371,7 +371,7 @@ In this way we assign the value of 1 to all the points in the first trajectory.
 We assign the value of 2 to the points if the second trajectory and so on for the rest of the trajectories. 
 Then in the visualisation Metview uses symbol plotting to assign different graphical attributes to different values i.e. for different trajectories.
 
-To see how it is working in detail let's create a `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon. Rename it 'symbol' then edit it.
+To see how it is working in detail let's create a :ref:`Symbol Plotting <msymb_icon>` icon. Rename it 'symbol' then edit it.
 
 .. image:: /_static/flextra_tutorial/worddav3869ba3607f9441f19c3700450e24b99.png
 

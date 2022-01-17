@@ -23,11 +23,11 @@ The possible ways to provide data for graph plotting are:
 
 * `Table Visualiser <https://confluence.ecmwf.int/display/METV/Table+Visualiser>`_
 
-* `NetCDF Visualiser <https://confluence.ecmwf.int/display/METV/NetCDF+Visualiser>`_
+* :ref:`NetCDF Visualiser <netcdf_visualiser_icon>`
 
 * ODB Visualiser
 
-The coordinate system is defined by the `Cartesian View <https://confluence.ecmwf.int/display/METV/Cartesian+View>`_ icon, the visual appearance of the axes by the `Axis Plotting <https://confluence.ecmwf.int/display/METV/Axis+Plotting>`_ icons and the title by the `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon. The data points themselves can be modified with the `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ (for points) and `Graph Plotting <https://confluence.ecmwf.int/display/METV/Graph+Plotting>`_ (for lines) icons.
+The coordinate system is defined by the :ref:`Cartesian View <cartesianview_icon>` icon, the visual appearance of the axes by the `Axis Plotting <https://confluence.ecmwf.int/display/METV/Axis+Plotting>`_ icons and the title by the :ref:`Text Plotting <mtext_icon>` icon. The data points themselves can be modified with the :ref:`Symbol Plotting <msymb_icon>` (for points) and `Graph Plotting <https://confluence.ecmwf.int/display/METV/Graph+Plotting>`_ (for lines) icons.
 
 A Simple Graph
 **************

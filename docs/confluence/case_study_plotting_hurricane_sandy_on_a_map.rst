@@ -93,7 +93,7 @@ Drop it into the **Display Window** to see the results.
 Adding the Position of New York City
 ====================================
 
-One easy way to add a place-mark is to use the `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ icon and combine it with a `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon.
+One easy way to add a place-mark is to use the `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ icon and combine it with a :ref:`Symbol Plotting <msymb_icon>` icon.
 
 Edit a new Input Visualiser icon and set the following:
 

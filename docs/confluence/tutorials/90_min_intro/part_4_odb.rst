@@ -3,7 +3,9 @@
 Part 4 - ODB
 ############
 
-Full documentation on ODB functionality in Metview is `here <https://confluence.ecmwf.int/display/METV/ODB+Overview>`_.
+.. note::
+  
+  ODB data is represented by an :class:`Odb` object in Metview. 
 
 Setup
 *****
@@ -13,7 +15,7 @@ Navigate into the *4_odb/main* folder within Metview.
 Retrieving ODB data from MARS
 *****************************
 
-Use  the 'ret_temp' `MARS Retrieval <https://confluence.ecmwf.int/display/METV/MARS+Retrieval>`_  icon to fetch Land TEMP ODB data from MARS for a given date. 
+Use  the 'ret_temp' :ref:`Mars Retrieval <retrieve_icon>`  icon to fetch Land TEMP ODB data from MARS for a given date. 
 Edit the icon (right-click & **edit**) to see what parameters are set. 
 The most important ones are as follows:
 
@@ -38,9 +40,11 @@ The most important ones are as follows:
 Close the icon editor and perform the data retrieval by choosing **execute** from the icon's context menu. 
 The icon name should turn orange whilst the retrieval takes place, then green to indicate success.
 
-If 'ret_temp' does not turn green after half a minute probably there is a problem with MARS. 
-In this case find the 'backup.temp.odb' *ODB Database* icon at the top-right of the folder and rename it 'temp.odb' (**right-click** and **rename**). 
-This icon contains the very same data that we wanted to retrieve from MARS.
+.. note::
+
+  If 'ret_temp' does not turn green after half a minute probably there is a problem with MARS. 
+  In this case find the 'backup.temp.odb' *ODB Database* icon at the top-right of the folder and rename it 'temp.odb' (**right-click** and **rename**). 
+  This icon contains the very same data that we wanted to retrieve from MARS.
 
 If the MARS retrieval was successful the data is now cached locally. 
 To save the ODB data from the cache to disk, right-click **Save result** on the *Mars Retrieval* icon and save as 'temp.odb'. 
@@ -63,10 +67,10 @@ Interactive Visualisation
 Using the ODB Visualiser
 ========================
 
-We will visualise the 500 hPa temperature values from our ODB by editing the supplied 'vis_temp' `ODB Visualiser <https://confluence.ecmwf.int/display/METV/ODB+Visualiser>`_ icon. 
+We will visualise the 500 hPa temperature values from our ODB by editing the supplied 'vis_temp' :ref:`ODB Visualiser <odb_visualiser_icon>` icon. 
 The ODB/SQL query we need to perform is as follows:
 
-.. code-block::
+.. code-block:: SQL
 
   select
     lat@hdr,
@@ -85,7 +89,7 @@ Now edit the 'vis_temp' icon and set the following parameters:
   * - **Odb Where**
     - varno = 2 and vertco_reference_1=50000
 
-Save the icon and visualise it. Then drag the the provided `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_, :ref:`Coastlines <mcoast_icon>`, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot for further customisation (either one at a time, or all together). Keep the plot window open.
+Save the icon and visualise it. Then drag the the provided :ref:`Symbol Plotting <msymb_icon>`, :ref:`Coastlines <mcoast_icon>`, :ref:`Legend <mlegend_icon>` and :ref:`Text Plotting <mtext_icon>` icons into the plot for further customisation (either one at a time, or all together). Keep the plot window open.
 
 .. image:: /_static/metview_90_minute_introduction_part_4_odb/image2019-9-18_10-9-46.png
 
@@ -136,8 +140,7 @@ Open and run these scripts.
       
       * used **odb_visualiser()** to generate the plot
 
-      * called **odb_filter()** (see `ODB Filter   
-        <https://confluence.ecmwf.int/display/METV/ODB+Filter>`_) to extract additional
+      * called **odb_filter()** (see :func:`odb_filter`) to extract additional
 	data for the title
     
       * used the **values()** function to access a given ODB column as a **numpy** array.
@@ -198,10 +201,10 @@ Enter folder 'scatterplot'.
 
 "ASMUA.odb" stores AMSU-A brightness temperature observations.
 
-Visualise 'scatter_plot' and customise it with the provided `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon. 
+Visualise 'scatter_plot' and customise it with the provided :ref:`Symbol Plotting <msymb_icon>` icon. 
 The plot you see is a scatterplot for the first guess departures (x axis) and analysis departures (y axis) for a given channel.
 
-Visualise 'bin_plot' to get the binned version of the same data (as a heat map). Drop the provided  :ref:`Contouring <mcont_icon>`, `Cartesian View <https://confluence.ecmwf.int/display/METV/Cartesian+View>`_ and  `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot to fully customise it.
+Visualise 'bin_plot' to get the binned version of the same data (as a heat map). Drop the provided  :ref:`Contouring <mcont_icon>`, :ref:`Cartesian View <cartesianview_icon>` and  :ref:`Text Plotting <mtext_icon>` icons into the plot to fully customise it.
 
 Wind profiler
 =============

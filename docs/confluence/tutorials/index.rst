@@ -18,7 +18,7 @@ This standalone module is a good first introduction to Metview and should take 2
 ******************************
 This short course gives a taste of much of Metview's functionality, with links to resources for further exploration. The emphasis here is on visual, interactive and scripted data analysis.
 
-* `Metview 90 minute introduction <https://confluence.ecmwf.int/display/METV/Metview+90+minute+introduction>`_
+* :ref:`Metview 90 minute introduction <metview_90_minute_introduction>`
 
 Data Analysis and Visualisation Using Metview
 *********************************************

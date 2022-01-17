@@ -101,7 +101,7 @@ This reveals a page of meta-data for the visible data in the current layer, incl
 Retrieve data from MARS
 ***********************
 
-Create a new icon - select `Mars Retrieval <https://confluence.ecmwf.int/display/METV/MARS+Retrieval>`_ from the list. Edit the icon and set the following parameters to retrieve relative humidity on a 1x1 degree grid on the standard MARS pressure levels:
+Create a new icon - select :ref:`Mars Retrieval <retrieve_icon>` from the list. Edit the icon and set the following parameters to retrieve relative humidity on a 1x1 degree grid on the standard MARS pressure levels:
 
 .. list-table::
    
@@ -144,7 +144,7 @@ Right-click somewhere on the Metview desktop and select **Create New Python Scri
 Edit the new icon to bring up Metview's code editor. 
 You may have to re-arrange your windows slightly, but drop the *get_t* icon into the code editor. 
 The Python equivalent code is generated, and the result is stored in a variable with the same name as the icon (*get_t*). 
-Use the ``mv.write()`` command as shown in the screenshot, then run the script using the Run button in the editor. Your new GRIB file should appear! You should also be able to run this from the command line the same as any Python script.
+Use the :func:`write` command as shown in the screenshot, then run the script using the Run button in the editor. Your new GRIB file should appear! You should also be able to run this from the command line the same as any Python script.
   
 .. image:: /_static/metview_90_minute_introduction_part_1_intro/mv-first-python-1.png
 
@@ -157,7 +157,7 @@ Look at the North pole
 .. image:: /_static/metview_90_minute_introduction_part_1_intro/mv-polar-north.png
 
 Right-click somewhere on the Metview desktop and select **Create New Icon**. 
-From the list, select `Geographical View <https://confluence.ecmwf.int/display/METV/Geographical+View>`_ and click OK.
+From the list, select :ref:`Geographical View <geoview_icon>` and click OK.
 Right-click the new icon and choose **Edit**. 
 Set the following parameter:
 

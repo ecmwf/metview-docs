@@ -413,7 +413,7 @@ Drop the BUFR icon into the **Data** field and set the following to extract the 
   * - **Parameter**
     - 11012
 
-Visualise the icon - the filtering will take place, then the result is plotted using the default `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ definition, which is to plot the data as numbers. 
+Visualise the icon - the filtering will take place, then the result is plotted using the default :ref:`Symbol Plotting <msymb_icon>` definition, which is to plot the data as numbers. 
 Drop your *symb_auto* icon into the **Display Window** for a nicer plot.
 
 Notice that there is a point which claims a wind speed of 80m/s! Reliability can be a big issue with observational data, and this point claims winds of 288km/h! We can filter out data that we consider unrealistic - add the following parameters to your *wind_speed* icon:

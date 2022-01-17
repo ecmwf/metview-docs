@@ -45,7 +45,7 @@ Devise your own colour scale with a new :ref:`Contouring <mcont_icon>` icon, or 
 
 Make the title a little larger with a `Text Plotting  <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon.
 
-Use a `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ icon to move the legend to the right-hand side of the plot as shown. 
+Use a :ref:`Legend <mlegend_icon>` icon to move the legend to the right-hand side of the plot as shown. 
 We may need to move this a little bit once we have the complete layout.
 
 Plotting the Map
@@ -53,7 +53,7 @@ Plotting the Map
 
 Use a *Geographical View* icon to define the map. 
 The map area should be defined as being from [20oN, 110oW] to [70oN, 30oW] and should show the line of the cross section - use an `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ icon coupled with a `Graph Plotting <https://confluence.ecmwf.int/display/METV/Graph+Plotting>`_ icon to achieve this. 
-The location of New York City (40.71oN, 74oW) can also be added with another *Input Visualiser* icon coupled with a `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon. 
+The location of New York City (40.71oN, 74oW) can also be added with another *Input Visualiser* icon coupled with a :ref:`Symbol Plotting <msymb_icon>` icon. 
 The legend will look better if customised to use the **Disjoint** type.
 
 A feature which will make the map overlay better with the cross section plot is to remove the labels from its left and bottom axes (via a :ref:`Coastlines <mcoast_icon>` icon).

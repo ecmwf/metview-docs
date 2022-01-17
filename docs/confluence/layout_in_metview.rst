@@ -69,7 +69,7 @@ If enabled, an automatic legend will be built from the data provided.
 To enable a legend, parameter **Legend** needs to be set to **On**. 
 This parameter is available in some of the *Visual Definition* icons (e.g. *Contouring*, *Graph Plotting* and *Wind Plotting*).
 
-To specify how a plot's legend is displayed, Metview provides a specific icon, named `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_. 
+To specify how a plot's legend is displayed, Metview provides a specific icon, named :ref:`Legend <mlegend_icon>`. 
 This controls features such as the legend's position, style and fonts. To demonstrate the *Legend's* concept, do the following:
 
 * **Visualise** icon *t_fc24.grib*.
@@ -128,7 +128,7 @@ This view can also be used for layout purposes - if no user text is defined then
 
 .. image:: /_static/layout_in_metview/annotation-view-plot.png
 
-The user-defined text is provided by means of a `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_  icon.
+The user-defined text is provided by means of a :ref:`Text Plotting <mtext_icon>`  icon.
 
 .. image:: /_static/layout_in_metview/MTEXT.png
 

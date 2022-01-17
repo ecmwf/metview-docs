@@ -3,7 +3,9 @@
 Part 5 - NetCDF
 ###############
 
-Full documentation on NetCDF functionality in Metview is `here <https://confluence.ecmwf.int/display/METV/NetCDF+Overview>`_.
+.. note::
+  
+  NetCDF data is represented by the :class:`NetCDF` object in Metview.
 
 Setup
 *****
@@ -20,7 +22,7 @@ Right-click on the file *era5_2000_aug.nc* and choose **examine** to see the str
 For more complete information, click on the **NcDump** tab.
 
 You will need to tell Metview how to visualise this data, as there are multiple variables. 
-Create a new `NetCDF Visualiser <https://confluence.ecmwf.int/display/METV/NetCDF+Visualiser>`_ icon, edit it and set the following parameters:
+Create a new :ref:`NetCDF Visualiser <netcdf_visualiser_icon>` icon, edit it and set the following parameters:
 
 .. list-table::
 
@@ -42,7 +44,7 @@ Create a new `NetCDF Visualiser <https://confluence.ecmwf.int/display/METV/NetCD
   * - **Netcdf Value Variable**
     - t2m
 
-Save the icon and visualise it. For fun, drop the supplied icons `contour_t2m <https://confluence.ecmwf.int/display/METV/Contouring>`_ and `mollweide <https://confluence.ecmwf.int/display/METV/Geographical+View>`_ into the plot window to obtain the following:
+Save the icon and visualise it. For fun, drop the supplied icons :ref:`contour_t2m <mcont_icon>` and :ref:`mollweide <geoview_icon>` into the plot window to obtain the following:
 
 .. image:: /_static/metview_90_minute_introduction_part_5_netcdf/netcdf-plotted-1.png
 
@@ -74,7 +76,7 @@ As you can see, there are 1-dimensional variables for **temperature**, **latitud
     - temperature
 
 Visualise it to get a default plot. 
-In the solutions folder is a script called *gallery_example_nc_maritime_obs.py*, which converts from Kelvin to Celcius and adds some stying to the plot (generated as PDF - simply remove the ``mv.setoutput()`` command to get an on-screen visualisation).
+In the solutions folder is a script called *gallery_example_nc_maritime_obs.py*, which converts from Kelvin to Celcius and adds some stying to the plot (generated as PDF - simply remove the :func:`setoutput` command to get an on-screen visualisation).
 
 .. image:: /_static/metview_90_minute_introduction_part_5_netcdf/netcdf-plotted-2.png
 
@@ -85,7 +87,7 @@ Have a look in the solutions folder and edit and run the script *netcdf_to_panda
 This shows how to extract some metadata from the previous netCDF file, and also some value arrays and convert into a pandas dataframe. 
 The code is also here:
 
-.. code-block::
+.. code-block:: python
 
   import metview as mv
   import pandas as pd

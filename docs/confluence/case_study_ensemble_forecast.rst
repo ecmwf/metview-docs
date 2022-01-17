@@ -75,7 +75,7 @@ Visualising the latest forecast
 ===============================
 
 The GRIB file *fc_latest_oper.grib *contains the latest forecast run preceding the event. 
-Drag it into the top left map and customise it with the wgust_shade :ref:`Contouring <mcont_icon>` icon and the title_oper `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon. 
+Drag it into the top left map and customise it with the wgust_shade :ref:`Contouring <mcont_icon>` icon and the title_oper :ref:`Text Plotting <mtext_icon>` icon. 
 Animate through the fields to see the location of the areas heavily hit by the storm.
 
 Visualising the operational forecast
@@ -146,7 +146,7 @@ By doing so the loop's body is completed. We finish the macro by returning the r
   By using the return statement our Macro behaves as if it were a fieldset (GRIB file).
 
 Drag your Macro into the bottom left map and customise it with the *wgust_shade* :ref:`Contouring <mcont_icon>` icon. 
-You would also need a custom `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon for the title. 
+You would also need a custom :ref:`Text Plotting <mtext_icon>` icon for the title. 
 Take a copy of the one used for the previous plots (called *title_oper*) and tailor it to your needs. 
 When you analyse the plot you will notice that the ensemble mean hints for higher wind gusts in our area of interest.
 
@@ -157,7 +157,7 @@ The ensemble spread is the standard deviation of the ENS members.
 We can compute it in a very similar way to the ensemble mean. 
 The only difference is that this time we need to use the ``stdev()`` function instead of ``mean()``. 
 Now it is your task to write a Macro for it. 
-Once you finished your Macro drag it into the bottom right map and customise it with the *wgust_spread_shade* :ref:`Contouring <mcont_icon>` icon and with a custom `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon. 
+Once you finished your Macro drag it into the bottom right map and customise it with the *wgust_spread_shade* :ref:`Contouring <mcont_icon>` icon and with a custom :ref:`Text Plotting <mtext_icon>` icon. 
 You will see that the ensemble spread is fairly high in the investigated area.
 
 Checking the probabilities
@@ -190,7 +190,7 @@ We multiply the result by 100 to scale it into the 0-100 range for an easier int
 
 Once you finished your Macro, visualise your *Geographical View* icon and drag the Macro into the  plot. 
 Customise it with the *prob_shade* :ref:`Contouring <mcont_icon>` icon. 
-Also use a custom `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon to define the title. As for the probabilities, you should see that there is some probability of high wind speeds.
+Also use a custom :ref:`Text Plotting <mtext_icon>` icon to define the title. As for the probabilities, you should see that there is some probability of high wind speeds.
 
 Creating a stamp plot
 *********************
@@ -319,7 +319,7 @@ Within the loop, read all the perturbed forecast members for the all the time st
 
 By default, if no title definition is specified, Metview adds a title line for each field in the plot. 
 Since we are about to plot 50 fields into the same map this would result in 50 titles in the plot! 
-To avoid having too many titles we use a custom `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon:
+To avoid having too many titles we use a custom :ref:`Text Plotting <mtext_icon>` icon:
 
 .. code-block:: python
   

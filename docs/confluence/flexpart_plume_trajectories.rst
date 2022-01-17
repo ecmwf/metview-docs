@@ -276,7 +276,7 @@ The plotting of the track is the same as in **Step1**:
            graph_symbol_outline: "on"
           ) 
   
-Then we need to add a new plotting layer for the date labels. Here we use a loop to construct and plot the date labels one by one with `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ and `Symbol Plotting <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_:
+Then we need to add a new plotting layer for the date labels. Here we use a loop to construct and plot the date labels one by one with `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ and :ref:`Symbol Plotting <msymb_icon>`:
   
 .. code-block:: python
   
