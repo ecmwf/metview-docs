@@ -293,7 +293,7 @@ Having finished the body of the loop the last step in our Macro is to define an 
 
 .. note::
 
-  By returning the visualiser our Macro behaves as if it were an `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ icon.
+  By returning the visualiser our Macro behaves as if it were an :ref:`Input Visualiser  <input_visualiser_icon>` icon.
 
 Now visualise your :ref:`Cartesian View <cartesianview_icon>` icon and drag your Macro into it.
 

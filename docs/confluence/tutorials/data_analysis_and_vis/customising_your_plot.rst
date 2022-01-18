@@ -3,24 +3,24 @@
 Customising Your Plot
 #####################
 
-**Download**
+.. note:: 
 
-Download the icons for this session from the link below. 
-Create a sub-directory called ``training`` inside your Metview home directory, ``$HOME/metview``, and save the .tar.gz file there. 
-Then, from Metview, navigate to this folder and right-click on the tar.gz icon; choose **Extract** to uncompress the files into their folder. Work from there. The main instructions are written for participants of the `Data analysis and visualisation using Metview <https://confluence.ecmwf.int/display/METV/Data+analysis+and+visualisation+using+Metview>`_ training course at ECMWF. Any files to be copied from the file system will also be downloadable from this page.
- 
- .. list-table::
- 
-  * - **File**
-    - **Modified**
+  Download the icons for this session from the link below. 
+  Create a sub-directory called ``training`` inside your Metview home directory, ``$HOME/metview``, and save the .tar.gz file there. 
+  Then, from Metview, navigate to this folder and right-click on the tar.gz icon; choose **Extract** to uncompress the files into their folder. Work from there. The main instructions are written for participants of the :ref:`Data analysis and visualisation using Metview <data_analysis_and_visualisation_using_metview>` training course at ECMWF. Any files to be copied from the file system will also be downloadable from this page.
+  
+  .. list-table::
+  
+    * - **File**
+      - **Modified**
 
-  * - ZIP Archive `customising your plot.tar.gz <https://confluence.ecmwf.int/download/attachments/59791892/customising your plot.tar.gz?api=v2>`_
-    - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
+    * - ZIP Archive `customising your plot.tar.gz <https://confluence.ecmwf.int/download/attachments/59791892/customising your plot.tar.gz?api=v2>`_
+      - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Creating and Editing an Icon
 ****************************
 
-This session uses the same *t1000.grib* data file as `A Simple Visualisation <https://confluence.ecmwf.int/display/METV/A+Simple+Visualisation>`_; a copy of that file already exists in the folder for this session.
+This session uses the same *t1000.grib* data file as :ref:`A Simple Visualisation <a_simple_visualisation>`; a copy of that file already exists in the folder for this session.
 
 Metview uses icons to control the various aspects of a plot's appearance. We will look at some of these now, starting with the coastline plotting.
 
@@ -61,7 +61,7 @@ After making these changes, click the **Ok** button to save and exit the editor.
 
 Visualise the data again, and drag your new :ref:`Coastlines <mcoast_icon>` icon into the **Display Window**.
 
-Your :ref:`Coastlines <mcoast_icon>` icon can be dragged into any plot, and `later <https://confluence.ecmwf.int/display/METV/Optimising+Your+Workflow>`_ we'll see how to store useful icons so that they can be easily accessed from anywhere.
+Your :ref:`Coastlines <mcoast_icon>` icon can be dragged into any plot, and :ref:`later <optimising_your_workflow>` we'll see how to store useful icons so that they can be easily accessed from anywhere.
 
 So you know what it does, rename the icon to *land_shade* by clicking on its name and editing the text.
 
@@ -101,17 +101,17 @@ Click **Apply** in the *Geographical View* editor to save everything.
 Plot your data in this view to confirm that the area and projection are as desired.
 
 Linking the Coastlines icon with the Geographical View Icon
-***********************************************************
+************************************************************
 
 Although they can be used separately, the :ref:`Coastlines <mcoast_icon>` icon can be linked into the *Geographical View* icon through the concept of *embedded* icons.
 
-Notice that a *Geographical View* icon editor contains a place for an embedded :ref:`Coastlines <mcoast_icon>` icon. If you drop a `Coastline <https://confluence.ecmwf.int/display/METV/Coastlines>`_ 's icon here and apply the changes, then the *Geographical View* icon will use your chosen coastlines.
+Notice that a *Geographical View* icon editor contains a place for an embedded :ref:`Coastlines <mcoast_icon>` icon. If you drop a :ref:`Coastlines <mcoast_icon>` icon here and apply the changes, then the *Geographical View* icon will use your chosen coastlines.
 
 .. image:: /_static/customising_your_plot/embedded-coastlines-icon.png
 
 Try it with your *land_shade* and *polar_europe* icons, and test the result by visualising *polar_europe*. 
 Note that your two icons are now *linked* - if you modify *land_shade*, the changes will be picked up the next time you visualise *polar_europe*. 
-Another type of embedded icon is discussed in `Analysis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+Another type of embedded icon is discussed in :ref:`Analysis Views <analysis_views>`.
 
 Creating a Simple Macro
 ***********************
@@ -121,7 +121,7 @@ Metview incorporates a powerful :ref:`Macro <macro_lang>` language, which can be
 Create a new *Macro* icon and edit it. 
 This time we see a code editor, custom-built for the Macro language. The editor can automatically translate Metview icons into Macro code, so do the following:
 
-* drop the *t1000.grb* icon into the Macro Editor; a variable called ``t1000_2e_grb`` is assigned to the value of the ``read()`` command, which reads the GRIB data. Such variable names are based on the names of the icons used to generate them, but with non-permitted characters replaced by their hexadecimal code (in this case, the dot in the filename is replaced with 2e).
+* drop the *t1000.grb* icon into the Macro Editor; a variable called ``t1000_2e_grb`` is assigned to the value of the :func:`read` command, which reads the GRIB data. Such variable names are based on the names of the icons used to generate them, but with non-permitted characters replaced by their hexadecimal code (in this case, the dot in the filename is replaced with 2e).
 
 * rename the variable to simply be ``t1000``
 
@@ -129,13 +129,13 @@ This time we see a code editor, custom-built for the Macro language. The editor 
 
 * underneath the generated code, type the following line:
 
-.. code-block::
+.. code-block:: python
 
   plot(polar_europe, t1000)
 
 This says, "In the polar_europe view, plot data t1000". Your complete macro should look like this:
 
-.. code-block::
+.. code-block::  python
 
   # Metview Macro
  
@@ -158,7 +158,7 @@ This says, "In the polar_europe view, plot data t1000". Your complete macro shou
 
 Now run the macro to generate the plot - either directly from the Macro Editor, or by right-clicking on the *Macro* icon and selecting **execute**.
 
-Note that we can put a relative path into the ``read()`` command:
+Note that we can put a relative path into the :func:`read` command:
 
 Modifying Layers
 ****************
@@ -246,11 +246,11 @@ Change the list of contour levels so that the whole plot will be covered - you o
 Updating the Macro
 ==================
 
-Edit your macro icon again and drop the *fixed_t* icon into the editor, aiming the drop so that the code is generated above the ``plot()`` command. 
+Edit your macro icon again and drop the *fixed_t* icon into the editor, aiming the drop so that the code is generated above the :func:`plot` command. 
 The code to generate the contouring specification will appear, assigned to the variable ``fixed_t`` (the variable is always named after the icon that was dropped). 
 Add this to the end of the plot command:
 
-.. code-block::
+.. code-block:: python
 
   plot(polar_europe, t1000, fixed_t)
 

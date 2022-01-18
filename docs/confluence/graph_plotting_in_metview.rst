@@ -19,7 +19,7 @@ Overview
 In addition to geographic map plots, Metview can also generate XY plots including time series.
 The possible ways to provide data for graph plotting are:
 
-* `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_
+* :ref:`Input Visualiser  <input_visualiser_icon>`
 
 * `Table Visualiser <https://confluence.ecmwf.int/display/METV/Table+Visualiser>`_
 

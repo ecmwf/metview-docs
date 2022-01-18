@@ -17,7 +17,7 @@ Download
 
 Click here for files to download...
 
-Download the icons for this session from the link below. Create a sub-directory called training inside your Metview home directory, $HOME/metview, and save the .tar.gz file there. Then, from Metview, navigate to this folder and right-click on the tar.gz icon; choose **Extract** to uncompress the files into their folder. Work from there. The main instructions are written for participants of the `Data analysis and visualisation using Metview <https://confluence.ecmwf.int/display/METV/Data+analysis+and+visualisation+using+Metview>`_ training course at ECMWF. Any files to be copied from the file system will also be downloadable from this page.
+Download the icons for this session from the link below. Create a sub-directory called training inside your Metview home directory, $HOME/metview, and save the .tar.gz file there. Then, from Metview, navigate to this folder and right-click on the tar.gz icon; choose **Extract** to uncompress the files into their folder. Work from there. The main instructions are written for participants of the :ref:`Data analysis and visualisation using Metview <data_analysis_and_visualisation_using_metview>` training course at ECMWF. Any files to be copied from the file system will also be downloadable from this page.
 
 .. list-table::
 

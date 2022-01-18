@@ -401,7 +401,7 @@ Next, specify the where statement of the query in the **ODB Where** parameter as
   varno = 2 and vertco_reference_1=50000
   
 Save these settings, then right-click **visualise** the '*vis_temp*' icon to generate the plot. 
-Then drag the the provided `Symbol Plotting <https://software.ecmwf.int/wiki/display/METV/Symbol+Plotting>`_, `Coastlines <https://software.ecmwf.int/wiki/display/METV/Coastlines>`_, `Legend <https://software.ecmwf.int/wiki/display/METV/Legend>`_ and `Text Plotting <https://software.ecmwf.int/wiki/display/METV/Text+Plotting>`_ icons into the plot for further customisation. Metview's plot window has many tools for inspecting data values, described in detail in the standalone tutorial "`Using ODB with Metview <https://confluence.ecmwf.int/display/METV/Using+ODB+with+Metview>`_". Do not close the plot window yet.
+Then drag the the provided :ref:`Symbol Plotting <msymb_icon>`, `Coastlines <https://software.ecmwf.int/wiki/display/METV/Coastlines>`_, `Legend <https://software.ecmwf.int/wiki/display/METV/Legend>`_ and `Text Plotting <https://software.ecmwf.int/wiki/display/METV/Text+Plotting>`_ icons into the plot for further customisation. Metview's plot window has many tools for inspecting data values, described in detail in the standalone tutorial "`Using ODB with Metview <https://confluence.ecmwf.int/display/METV/Using+ODB+with+Metview>`_". Do not close the plot window yet.
 
 Overlaying with GRIB data
 =========================

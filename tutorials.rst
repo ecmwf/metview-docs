@@ -24,7 +24,7 @@ Data Analysis and Visualisation Using Metview
 *********************************************
 This set of self-learn modules gives a comprehensive introduction to Metview's capabilities.
 
-* `Data analysis and visualisation using Metview <https://confluence.ecmwf.int/display/METV/Data+analysis+and+visualisation+using+Metview>`_
+* :ref:`Data analysis and visualisation using Metview <data_analysis_and_visualisation_using_metview>`
 
 Metview Tutorial for the Introduction for New Users Course
 **********************************************************

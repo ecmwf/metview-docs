@@ -164,7 +164,7 @@ You may wish to apply the following enhancements to the plot:
 
 1. apply some shading to the data with a :ref:`Contouring <mcont_icon>` icon, only contouring wind speeds above 20m/s
 
-   a. note that we use `Wind Plotting <https://confluence.ecmwf.int/display/METV/Wind+Plotting>`_ icons to modify the plotting of vector fields, but this is now a scalar field, so we use the *Contouring* icon
+   a. note that we use :ref:`Wind Plotting <mwind_icon>` icons to modify the plotting of vector fields, but this is now a scalar field, so we use the *Contouring* icon
 
 2. overlay the original wind field and change the colour of the arrows to 'charcoal' with a *Wind Plotting* icon
 

@@ -479,7 +479,7 @@ This will bring up the Metview **Display Window** using the default visualisatio
 
 We will change the plot by applying a colour palette according to the wind speed and change the wind arrow size and thinning, as well.
 
-Let's create a new `Wind Plotting <https://confluence.ecmwf.int/display/METV/Wind+Plotting>`_ icon:
+Let's create a new :ref:`Wind Plotting <mwind_icon>` icon:
 
 .. image:: /_static/odb_tutorial/worddavd7987ea6c02449ef553170297c02ed9d.png
 
@@ -523,7 +523,7 @@ The default behaviour is to create 10 interval levels *within the range of data 
 As the area changes, so does the range of values being plotted.
 
 Now we will create a palette which will not be altered when we change the area. 
-Copy the `Wind Plotting <https://confluence.ecmwf.int/display/METV/Wind+Plotting>`_ icon (either right-click **+ duplicate**, or drag with the middle mouse button), and rename the copy 'fixed_wind' by clicking on its title. 
+Copy the :ref:`Wind Plotting <mwind_icon>` icon (either right-click **+ duplicate**, or drag with the middle mouse button), and rename the copy 'fixed_wind' by clicking on its title. 
 Edit the icon and make the following changes:
 
 .. list-table::

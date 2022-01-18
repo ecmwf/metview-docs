@@ -93,7 +93,7 @@ Drop it into the **Display Window** to see the results.
 Adding the Position of New York City
 ====================================
 
-One easy way to add a place-mark is to use the `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ icon and combine it with a :ref:`Symbol Plotting <msymb_icon>` icon.
+One easy way to add a place-mark is to use the :ref:`Input Visualiser  <input_visualiser_icon>` icon and combine it with a :ref:`Symbol Plotting <msymb_icon>` icon.
 
 Edit a new Input Visualiser icon and set the following:
 
@@ -119,11 +119,11 @@ Generating a Macro to Reproduce the Plot
 ========================================
 
 Generate a macro which will reproduce your plot with a single click. 
-This can be done either by clicking the **Generate Macro** button from the **Display Window** or by editing a new *Macro* icon, dropping your data and visdef icons into it and adding a ``plot()`` command. 
+This can be done either by clicking the **Generate Macro** button from the **Display Window** or by editing a new *Macro* icon, dropping your data and visdef icons into it and adding a :func:`plot` command. 
 Do it using the **Generate Macro** button and we will gain a little extra functionality for free. 
 The generated macro will be called *MacroFramework1*; Metview rescans its folders every few seconds, so it might not appear immediately. 
 Right-click and choose **visualise** to obtain our normal on-screen plot, or choose **execute** to generate a PDF file of the plot. 
-Look at the generated Macro code to see how this is done! Different output formats will be studied in more depth in `Working with graphical output <https://confluence.ecmwf.int/display/METV/Working+with+graphical+output>`_.
+Look at the generated Macro code to see how this is done! Different output formats will be studied in more depth in :ref:`Working with graphical output <working_with_graphical_output>`.
 
 Overlaying Both Fields
 
@@ -161,7 +161,7 @@ The precipitation could of course be shaded differently - try some different col
 
 By setting **Contour Min Level** to 5, you can choose to quickly show only those areas with 5mm or more precipitation (look at a global map to see all of these areas).
 
-Metview has a built-in facility for using the same contouring styles for certain fields as `ecCharts <http://eccharts.ecmwf.int/forecaster/>`_ does. 
+Metview has a built-in facility for using the same contouring styles for certain fields as `ecCharts <https://www.ecmwf.int/en/forecasts/eccharts>`_ does. 
 Create a new *Contouring* icon and set **Contour Automatic Setting** to Ecchart and **Grib Scaling of Derived Fields** to On. 
 With this setting, various parameters from the GRIB data are used to choose a contouring style (if it exists in the ecCharts style library). 
 In fact, this same icon can be used for both fields!
@@ -175,7 +175,7 @@ Construct the second line of the title by extracting the date and time from the 
 
 Hints:
 
-* this procedure will be covered in `Customising Your Plot Title <https://confluence.ecmwf.int/display/METV/Customising+Your+Plot+Title>`_
+* this procedure will be covered in :ref:`Customising Your Plot Title  <customising_your_plot_title>`
 
 * if you have a fieldset variable called ``msl_grib``, the following line will extract the date at which the field is valid:
 
@@ -183,9 +183,9 @@ Hints:
   
 * use the ``string()`` function to construct a date string similar to the one used in the current title
 
-  * see `String Functions <https://confluence.ecmwf.int/display/METV/String+Functions>`_ for details of how to use it
+  * see :ref:`String Functions <macro_string_fn>` for details of how to use it
   
-* insert this into the ``mtext()`` function instead of the current title  (ensure that we read the msl data and extract its date *before* defining the title)
+* insert this into the :func:`mtext` function instead of the current title  (ensure that we read the msl data and extract its date *before* defining the title)
 
 * it is now more robust - if you use data from a different date or time, the title will still be correct
 

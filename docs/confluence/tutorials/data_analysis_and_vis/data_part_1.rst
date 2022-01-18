@@ -56,7 +56,7 @@ If you look at the other parameters in the icon editor, you will see that by def
 Save the icon, then **visualise** it. 
 The data should be retrieved, then visualised. From the titles of the different fields in the plot you can confirm that it is the correct data.
 
-We will see in `Processing Data <https://confluence.ecmwf.int/display/METV/Processing+Data>`_ how we can manipulate the data returned from MARS.
+We will see in :ref:`Processing Data <processing_data>` how we can manipulate the data returned from MARS.
 
 Icon Feedback
 =============
@@ -184,7 +184,7 @@ Now create a new *GRIB Filter* icon, rename it *t_an* and use it to extract only
   * - **Param**
     - T or Temperature
 
-It is quite often the case that GRIB data comes as several fields in the same file, and using the GRIB Filter icon is an easy way to extract just the fields you want without making copies of the file. This icon also has some parameters to perform some post-processing on the data, which we will cover in `Processing Data <https://confluence.ecmwf.int/display/METV/Processing+Data>`_.
+It is quite often the case that GRIB data comes as several fields in the same file, and using the GRIB Filter icon is an easy way to extract just the fields you want without making copies of the file. This icon also has some parameters to perform some post-processing on the data, which we will cover in :ref:`Processing Data <processing_data>`.
 
 Plotting Grid Values
 --------------------
@@ -212,7 +212,7 @@ Cursor Data
 
 .. image:: /_static/data_part_1/cursor-data-in-plot.png
 
-As already seen in `A Simple Visualisation <https://confluence.ecmwf.int/display/METV/A+Simple+Visualisation>`_, the Cursor Data can also be used to inspect grid point values. 
+As already seen in :ref:`A Simple Visualisation <a_simple_visualisation>`, the Cursor Data can also be used to inspect grid point values. 
 Activate it and check it against the plotted values!
 
 Scattered Data in Geopoints files
@@ -223,11 +223,11 @@ Scattered Data in Geopoints files
 Format overview
 ===============
 
-`Geopoints <https://software.ecmwf.int/wiki/display/METV/Geopoints>`_ is the ASCII format used by Metview to handle spatially irregular data (e.g. observations). There are a number of variations on the format, but the default one is a 6-column layout. The columns do not have to be aligned, but there must be at least one whitespace character between each entry.
+:class:`Geopoints` is the ASCII format used by Metview to handle spatially irregular data (e.g. observations). There are a number of variations on the format, but the default one is a 6-column layout. The columns do not have to be aligned, but there must be at least one whitespace character between each entry.
 
 This example shows a geopoints file containing dry bulb temperature at 2m (PARAMETER = 12004).
 
-.. code-block::
+.. code-block:: bash
 
   #GEO
   PARAMETER = 12004
@@ -244,7 +244,7 @@ This example shows a geopoints file containing dry bulb temperature at 2m (PARAM
 If you have observation data which you wish to import into Metview, Geopoints is probably the best format because:
 
 1. it is easy to write data into this format
-2. Metview has lots of `functions <https://software.ecmwf.int/wiki/display/METV/Geopoints+Functions>`_ to manipulate data in this format
+2. Metview has lots of :ref:`functions <geopoints_fn_toc>` to manipulate data in this format
 
 Variants of the format allow 2-dimensional variables to be stored (e.g. U/V or speed/direction wind components), and another variant stores only lat, lon and value for a more compact file.
 
@@ -258,7 +258,7 @@ Visualising geopoints
 =====================
 
 Visualise the icon. 
-The visdef used for geopoints is `Symbol Plotting <https://software.ecmwf.int/wiki/display/METV/Symbol+Plotting>`_, and its default behaviour is to plot the actual numbers on the map. 
+The visdef used for geopoints is :ref:`Symbol Plotting <msymb_icon>`, and its default behaviour is to plot the actual numbers on the map. 
 This can become cluttered, and text rendering can be slow. 
 Create a new *Symbol Plotting* icon and set the following parameters:
 
@@ -290,7 +290,7 @@ Computing some statistics in Macro
 First, we will print some information about our geopoints data. 
 Create a new *Macro* icon, type this code and run it:
 
-.. code-block::
+.. code-block:: python
 
   gp = read('geopoints.gpt')
   print('Num points: ', count(gp))
@@ -299,12 +299,12 @@ Create a new *Macro* icon, type this code and run it:
 
 Perform a simple data manipulation and return the result to Metview's user interface:
 
-.. code-block::
+.. code-block:: python
 
   return gp*100
 
 Save the macro and see its result by right-clicking on its icon and choosing **examine** or **visualise**. 
-We could also have put a ``write()`` command into the macro to write the result to a geopoints file.
+We could also have put a :func:`write` command into the macro to write the result to a geopoints file.
 
 Finding geopoints points within 100km of a given location
 =========================================================
@@ -312,7 +312,7 @@ Finding geopoints points within 100km of a given location
 As a more complex example, we will combine two functions in order to find the locations of the points within a certain distance of a given location. 
 We will use the same geopoints file as before.
 
-The ``distance()`` function returns a new geopoints variable based on its input geopoints, where each point's value has been replaced by the distance of that point from the given location. 
+The :func:`distance` function returns a new geopoints variable based on its input geopoints, where each point's value has been replaced by the distance of that point from the given location. 
 The description of this function follows:
 
 .. code-block::
@@ -333,7 +333,7 @@ Now we will see a boolean operator in action. The expression distances < ``10000
 So the resulting geopoints will have a collection of ones and zeros. 
 Confirm that this is the case.
 
-The ``filter()`` function, from the documentation:
+The :func:`filter` function, from the documentation:
 
 .. code-block::
 
@@ -357,18 +357,18 @@ Saving geopoints data
 
 Geopoints variables can be saved to disk using the write() command:
 
-.. code-block::
+.. code-block:: python
 
   write('my_computed_data.gpt', points)
 
-It is also possible to convert between geopoints and GRIB format - this will be covered in `Processing Data <https://confluence.ecmwf.int/display/METV/Processing+Data>`_.
+It is also possible to convert between geopoints and GRIB format - this will be covered in :ref:`Processing Data <processing_data>`.
 
 Observation Data in BUFR files
 ******************************
 
 Much observation data is received in BUFR format. 
 BUFR is a complex format, capable of storing almost anything; BUFR files can vary widely, but there are some conventions which can help software to interpret them. 
-We will have a brief overview of Metview's BUFR-handling capabilities here; for more information, see the dedicated tutorial on the `Tutorials <https://confluence.ecmwf.int/display/METV/Tutorials>`_ page.
+We will have a brief overview of Metview's BUFR-handling capabilities here; for more information, see the dedicated tutorial on the :ref:`Tutorials <tutorials>` page.
 
 Examining BUFR Meta-data
 ========================
@@ -456,7 +456,7 @@ Find out which descriptor provides wind direction, then change the following par
 
 where ????? is replaced by the wind direction descriptor number.
 
-When you visualise the icon, you will see numbers as before, but if you drop a newly created `Wind Plotting <https://confluence.ecmwf.int/display/METV/Wind+Plotting>`_ icon into the **Display Window** you will see wind arrows. 
+When you visualise the icon, you will see numbers as before, but if you drop a newly created :ref:`Wind Plotting <mwind_icon>` icon into the **Display Window** you will see wind arrows. 
 Try the supplied *coloured_wind_arrows* icon too. 
 Try changing it to plot wind flags instead of arrows.
 You may wish to customise a *Coastlines* icon to provide a darker background for the plot.

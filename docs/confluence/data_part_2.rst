@@ -170,7 +170,7 @@ Try something similar with the ``time`` variable:
   print(times)
 
 The result is a list of date variables. 
-These will be explained in more detail in the session `Handling Time in Metview <https://confluence.ecmwf.int/display/METV/Handling+Time+in+Metview>`_.
+These will be explained in more detail in the session :ref:`Handling Time in Metview  <handling_time_in_metview>`.
 
 To get the 'packed' values for this variable, put this line before the call to ``values()``:
 

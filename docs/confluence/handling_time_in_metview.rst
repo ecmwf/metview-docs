@@ -401,7 +401,7 @@ One possible way to do it:
 
 * use the ``filter()`` and ``abs()`` functions to find just the absolute values greater than 4
 
-* plot with customised *Symbol Plotting* icons (we could take the ones used in the `Processing Data <https://confluence.ecmwf.int/display/METV/Processing+Data>`_ tutorial)
+* plot with customised *Symbol Plotting* icons (we could take the ones used in the :ref:`Processing Data <processing_data>` tutorial)
 
 * these points could be written to a file
 

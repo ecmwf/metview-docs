@@ -17,7 +17,7 @@ Overview
 ********
 
 In addition to all its interactive functionality, Metview can be run in a purely batch mode from the command line. 
-Of course, in this mode we cannot have an interactive plot window, but we can save plots in various formats (see `Working with graphical output <https://confluence.ecmwf.int/display/METV/Working+with+graphical+output>`_) and we can save computed data into files of various formats (see `Processing Data <https://confluence.ecmwf.int/display/METV/Processing+Data>`_).
+Of course, in this mode we cannot have an interactive plot window, but we can save plots in various formats (see :ref:`Working with graphical output  <working_with_graphical_output>`) and we can save computed data into files of various formats (see :ref:`Processing Data <processing_data>`).
 
 Running Metview in Batch Mode
 =============================
@@ -79,7 +79,7 @@ Try running the macro in batch mode, and also from the Macro Editor.
 
 If running in interactive mode (i.e. not "batch") then plot the data to an interactive **Display Window**. 
 If in batch mode, plot the data to a PostScript file called ``my_field.ps``. 
-See `Working with graphical output <https://confluence.ecmwf.int/display/METV/Working+with+graphical+output>`_ for more detail if required.
+See :ref:`Working with graphical output  <working_with_graphical_output>` for more detail if required.
 
 Invoking Metview's Data Examiners from the Command Line
 =======================================================

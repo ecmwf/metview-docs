@@ -5,7 +5,7 @@ Layout in Metview
 
 **Download**
 
-The download for this session is contained on the page `Analysis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+The download for this session is contained on the page :ref:`Analysis Views  <analysis_views>`.
 
 Plot Layout 
 ************
@@ -175,7 +175,7 @@ Extra work
 
 .. note::
 
-  If you are attending the training course at ECMWF, please also consider the extra tasks in `Analysis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+  If you are attending the training course at ECMWF, please also consider the extra tasks in :ref:`Analysis Views  <analysis_views>`.
 
 
 Create an A3 version of your plot layout

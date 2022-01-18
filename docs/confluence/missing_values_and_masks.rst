@@ -58,7 +58,7 @@ We now want to 'deactivate' the points where the land-sea mask is 0 (the sea poi
 
   When performing computations between two fields, they must be on the same grid, with the same number of points. 
   If this is not the case, you will need to use interpolation to transform one field onto the other's grid. 
-  See `Processing Data <https://confluence.ecmwf.int/display/METV/Processing+Data>`_.
+  See :ref:`Processing Data <processing_data>`.
 
 One way to do this could be to simply multiply the temperature field by the land-sea mask field - this would preserve the land points by simply multiplying them by 1, but would convert the other points to 0. 
 In some cases this might be what we want, but not here for two reasons:

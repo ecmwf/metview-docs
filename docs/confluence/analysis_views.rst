@@ -26,7 +26,7 @@ A *View* specifies the following definitions in a Metview plot:
 
 * plot position within the page (several plots can share a page)
 
-* how to overlay different data in the same plot (explored in `Handling Time in Metview <https://confluence.ecmwf.int/display/METV/Handling+Time+in+Metview>`_)
+* how to overlay different data in the same plot (explored in :ref:`Handling Time in Metview  <handling_time_in_metview>`)
 
 * plot decoration (e.g. draw a frame around the plot)
 
@@ -179,7 +179,7 @@ To customise the curves displayed in this plot, you can apply (or edit it first)
 The changes will be applied to both lines. 
 The ability to customise each line individually (temperature and dew point) is available in the `Thermo Plotting <https://confluence.ecmwf.int/display/METV/Thermo+Plotting>`_ icon. Try it!
 
-The `Wind Plotting <https://confluence.ecmwf.int/display/METV/Wind+Plotting>`_ icon is the visual definition responsible for specifying how wind vector data is displayed. 
+The :ref:`Wind Plotting <mwind_icon>` icon is the visual definition responsible for specifying how wind vector data is displayed. 
 It controls the plotting of features such as wind arrows and wind flags.
 
 .. image:: /_static/analysis_views/MWIND.png

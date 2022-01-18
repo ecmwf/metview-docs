@@ -146,7 +146,7 @@ Next, we determine the trajectory (i.e. the release) start date and time from th
   startSec=number(metadata_value(tbl,"start"))
   releaseDate=runDate + second(startSec)
   
-Next, we read the coordinates of the mean track and use `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ and `Graph Plotting <https://confluence.ecmwf.int/display/MAGP/Graph+Plotting>`_ to plot it:
+Next, we read the coordinates of the mean track and use :ref:`Input Visualiser  <input_visualiser_icon>` and `Graph Plotting <https://confluence.ecmwf.int/display/MAGP/Graph+Plotting>`_ to plot it:
   
 .. code-block:: python
   
@@ -276,7 +276,7 @@ The plotting of the track is the same as in **Step1**:
            graph_symbol_outline: "on"
           ) 
   
-Then we need to add a new plotting layer for the date labels. Here we use a loop to construct and plot the date labels one by one with `Input Visualiser <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ and :ref:`Symbol Plotting <msymb_icon>`:
+Then we need to add a new plotting layer for the date labels. Here we use a loop to construct and plot the date labels one by one with :ref:`Input Visualiser  <input_visualiser_icon>` and :ref:`Symbol Plotting <msymb_icon>`:
   
 .. code-block:: python
   

@@ -14,7 +14,7 @@ This sort of window is called a *Metview desktop*.
 Download
 ********
 
-Download the icons for this session from the link below. Create a sub-directory called training inside your Metview home directory, $HOME/metview, and save the .tar.gz file there. Then, from Metview, navigate to this folder and right-click on the tar.gz icon; choose Extract to uncompress the files into their folder. Work from there. The main instructions are written for participants of the `Data analysis and visualisation using Metview <https://confluence.ecmwf.int/display/METV/Data+analysis+and+visualisation+using+Metview>`_ training course at ECMWF. Any files to be copied from the file system will also be downloadable from this page.
+Download the icons for this session from the link below. Create a sub-directory called training inside your Metview home directory, $HOME/metview, and save the .tar.gz file there. Then, from Metview, navigate to this folder and right-click on the tar.gz icon; choose Extract to uncompress the files into their folder. Work from there. The main instructions are written for participants of the :ref:`Data analysis and visualisation using Metview <data_analysis_and_visualisation_using_metview>` training course at ECMWF. Any files to be copied from the file system will also be downloadable from this page.
 
 .. list-table::
 
@@ -210,7 +210,7 @@ Notice that a *Geographical View* icon editor contains a place for an embedded :
 
 Try it with your *land_shade* and *polar_europe* icons, and test the result by visualising *polar_europe*. 
 Note that your two icons are now *linked* - if you modify *land_shade*, the changes will be picked up the next time you visualise *polar_europe*. 
-Another type of embedded icon is discussed in `Analysis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+Another type of embedded icon is discussed in :ref:`Analysis Views  <analysis_views>`.
 
 Creating a Simple Macro
 =======================
