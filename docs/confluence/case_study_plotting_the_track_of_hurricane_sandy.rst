@@ -309,7 +309,7 @@ Customise the graph with a :ref:`Graph Plotting <mgraph_icon>` icon by setting t
 Creating a title
 ================
 
-Define a custom title as shown in the example plot with a new `Text Plotting  <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icon.
+Define a custom title as shown in the example plot with a new `:ref:`Text Plotting <mtext_icon>` icon.
 
 Putting it all together
 ***********************

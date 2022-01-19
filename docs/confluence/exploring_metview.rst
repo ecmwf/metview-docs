@@ -135,4 +135,4 @@ Visualise the *FLEXTRA Plot* icon from the solutions folder (it will automatical
 The computations will take a minute or so; their input is a set of GRIB files stored on the file system. 
 **Examine** the *FLEXTRA Run* icon to see the model output.
 
-For more information on using FLEXTRA within Metview, please see the tutorial, available at `Tutorials <https://confluence.ecmwf.int/display/METV/Tutorials>`_.
+For more information on using FLEXTRA within Metview, please see the tutorial, available at :ref:`Tutorials <tutorials>`.

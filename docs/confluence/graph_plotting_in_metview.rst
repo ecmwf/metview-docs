@@ -27,7 +27,7 @@ The possible ways to provide data for graph plotting are:
 
 * ODB Visualiser
 
-The coordinate system is defined by the :ref:`Cartesian View <cartesianview_icon>` icon, the visual appearance of the axes by the `Axis Plotting <https://confluence.ecmwf.int/display/METV/Axis+Plotting>`_ icons and the title by the :ref:`Text Plotting <mtext_icon>` icon. The data points themselves can be modified with the :ref:`Symbol Plotting <msymb_icon>` (for points) and :ref:`Graph Plotting <mgraph_icon>` (for lines) icons.
+The coordinate system is defined by the :ref:`Cartesian View <cartesianview_icon>` icon, the visual appearance of the axes by the :ref:`Axis Plotting <maxis_icon>` icons and the title by the :ref:`Text Plotting <mtext_icon>` icon. The data points themselves can be modified with the :ref:`Symbol Plotting <msymb_icon>` (for points) and :ref:`Graph Plotting <mgraph_icon>` (for lines) icons.
 
 A Simple Graph
 **************

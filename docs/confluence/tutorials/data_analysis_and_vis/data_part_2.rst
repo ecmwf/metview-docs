@@ -86,17 +86,15 @@ Write the following code into a new *Macro* (you can exclude the comments):
   atts = attributes(nc)
   print(atts)
 
-Run the macro - this is what it should print:
-
-.. code-block::
+Run the macro - this is what it should print::
 
   [longitude,latitude,time,t2m,d2m]
   ATTRIBUTES(scale_factor:0.001611,add_offset:254.569370,missing_value:-32767,units:K,long_name:2 metre temperature)
 
-The ``variables()`` function returns a *list* of all the variable names in the netCDF file.
+The :func:`variables` function returns a *list* of all the variable names in the netCDF file.
 
-Most of the netCDF functions work on the *current* variable, set in the ``setcurrent()`` function. 
-The ``attributes()`` function returns a *definition* - a set of named members, similar to a Python dictionary, relevant to the current variable. 
+Most of the netCDF functions work on the *current* variable, set in the :func:`setcurrent` function. 
+The :func:`attributes` function returns a *definition* - a set of named members, similar to a Python dictionary, relevant to the current variable. 
 A definition's elements can be accessed either using the 'dot' operator, e.g. ``atts.units``,  or using indexing notation, e.g. ``atts["units"]``.
 
 .. image:: /_static/data_part_2/netcdf-title-from-attrs.png
@@ -112,7 +110,7 @@ Here are some hints:
 
 * replace the value to the right of ``text_line_1`` with the value of the long_name attribute
 
-* add a ``plot()`` command which contains the *NetCDF Visualiser* variable, the *Contouring* variable and the *Text Plotting* variable
+* add a :func:`plot` command which contains the *NetCDF Visualiser* variable, the *Contouring* variable and the *Text Plotting* variable
 
 * feel free to add the units attribute to the title as well, using the ampersand operator & to concatenate parts of the string
 
@@ -152,7 +150,7 @@ Try the following macro, which will print the 'real world' values from ``t2m``:
   print('max: ', maxvalue(vals))
   print('min: ', minvalue(vals))
 
-Now add the following line *before* the call to ``values()``:
+Now add the following line *before* the call to :func:`values` :
 
 .. code-block:: python
 
@@ -172,7 +170,7 @@ Try something similar with the ``time`` variable:
 The result is a list of date variables. 
 These will be explained in more detail in the session :ref:`Handling Time in Metview  <handling_time_in_metview>`.
 
-To get the 'packed' values for this variable, put this line before the call to ``values()``:
+To get the "packed" values for this variable, put this line before the call to :func:`values` :
 
 .. code-block:: python
 
@@ -192,7 +190,7 @@ Visualising ASCII table data
 Look at the supplied file ``t2_20120304_1400_1200.csv``. 
 This is a standard CSV file, with a header row at the top, followed by one row per observation, one column per field.
 
-.. code-block::
+::
 
   Station,Lat,Lon,T2m
 
@@ -231,7 +229,7 @@ Visualise this icon to plot the data, and apply the supplied *symb_colours* icon
 Converting ASCII Table data to geopoints format
 -----------------------------------------------
 
-Although Metview has some functionality for handling this type of data in Macro, it can do much more with the `geopoints <https://confluence.ecmwf.int/display/METV/Geopoints>`_ format. 
+Although Metview has some functionality for handling this type of data in Macro, it can do much more with the :class:`Geopoints` format. 
 Therefore, if the data points are in geographic coordinates, one useful exercise is to read one of these files and convert it to geopoints.
 
 Create a new *Table Reader* icon - this is purely a helper icon which exists only to aid the generation of Macro code. 
@@ -250,7 +248,7 @@ The following lines of code will print some information about the data:
 Now we will create a new geopoints variable, and set its lats, lons and values to those from the CSV data.
 
 First, use the ``values()`` function to extract arrays of lats, lons and T2m from the CSV data. 
-These will be returned in variables of type `vector <https://confluence.ecmwf.int/display/METV/Vectors>`_ - this is an in-memory array of double-precision numbers.
+These will be returned in variables of type :ref:`vector <macro_vector>` - this is an in-memory array of double-precision numbers.
 
 .. code-block::
 
@@ -261,7 +259,7 @@ Returns the given column specified either by an index (starting at 1) or a name 
 If the column type is number, a vector is returned; if it is string, then a list of strings is returned. 
 If the column cannot be found, an error message is generated.
 
-Next, find out how many values there are, using the ``count()`` function on one of the returned vectors.
+Next, find out how many values there are, using the :func:`count` function on one of the returned vectors.
 
 Finally, the following code shows how to construct a simple geopoints variable using only these columns (i.e. it will be in XYV format):
 
@@ -272,7 +270,7 @@ Finally, the following code shows how to construct a simple geopoints variable u
   geo = set_longitudes(geo, lons)
   geo = set_values    (geo, vals)
 
-The macro can now write this to disk, return it to the user interface or process it further using all the available `geopoints functions <https://confluence.ecmwf.int/display/METV/Geopoints+Functions>`_.
+The macro can now write this to disk, return it to the user interface or process it further using all the available geopoints functions.
 
 ASCII Lat / Lon Matrices
 ========================
@@ -285,7 +283,7 @@ In this way, we can import such data into Metview and have access to all its GRI
 Reading/Writing General ASCII Data to/from Disk
 ===============================================
 
-ASCII files that are not in *Geopoints*, *ASCII Table* or *Lat/Long Matrix* format can be read using the ``read()`` function. 
+ASCII files that are not in *Geopoints*, *ASCII Table* or *Lat/Long Matrix* format can be read using the :func:`read` function. 
 It will return a list of strings - one string will contain the contents of one line of the file. 
 Look at the supplied text file, *params.txt*, and see that it contains a list of codes for meteorological parameters:
 
@@ -305,17 +303,17 @@ Create a new *Macro* and type the following code to read and parse this data:
   param_list = parse(params, '/') # split the string into a list of strings
   print(param_list)
 
-There are many more `string functions <https://confluence.ecmwf.int/display/METV/String+Functions>`_ available.
+There are many more :ref:`string functions <macro_string_fn>` available.
 
 Now do the reverse: write this list of parameters into another text file. 
 The new file should look exactly like the original. 
 Here are some hints:
 
-* the ``write()`` function always takes a filename as its first argument, and it can take a string as its second argument
+* the :func:`write` function always takes a filename as its first argument, and it can take a string as its second argument
 
 * it always overwrites an existing file of the same name, so there exists another function, append() which will add your string to a new line on an existing file
 
-* so you will need to call ``write()`` once with the first line of text, and ``append()`` once with the list of parameters
+* so you will need to call :func:`write` once with the first line of text, and :func:`append` once with the list of parameters
 
 * the list of parameters will need to be flattened out into a string with '/' as the separator - this will need to be done in a loop with a string variable initialised to '', and each element added with the ``&`` operator
 
@@ -337,7 +335,7 @@ Look at the **ODB Query** field to get an idea of what data will be filtered.
 Now close the editor and **examine** the icon to see the filtered subset of data it has produced. 
 The *ODB Visualiser* icon *tb_plot* tells Metview which columns of data to use for the visualisation; visualise it and apply the symb_colours icon to obtain a nice plot.
 
-There is a dedicated tutorial for handling ODB data in Metview on the `Tutorials <https://confluence.ecmwf.int/display/METV/Tutorials>`_ page.
+There is a dedicated tutorial for handling ODB data in Metview on the :ref:`Tutorials <tutorials>` page.
 
 Extra Work
 **********
@@ -352,7 +350,7 @@ Optimisations to file writing
 
 The last ASCII example could be made more optimal, which could be important if dealing with large amounts of data:
 
-* in fact, it could be done with a single ``write()`` function if we just build up a string representing the whole file with ``newline`` characters between lines
+* in fact, it could be done with a single :func:`write` function if we just build up a string representing the whole file with ``newline`` characters between lines
 
 * if writing many many lines, there is another syntax which avoids multiple file open and close operations:
 

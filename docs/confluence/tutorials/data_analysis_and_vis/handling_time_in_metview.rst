@@ -99,7 +99,7 @@ We can do this with more complex field indexing.
 So we want field 2 minus field 1, field 3 minus field 2, etc. 
 We can do this in a single line of code because we can handle multiple fields in a single operation as shown:
 
-[GLYPHY]
+.. image:: /_static/handling_time_in_metview/fieldset_oper_minus.png
 
 To extract fields 1 to 4, for example, we can use the following syntax:
 
@@ -131,12 +131,12 @@ Modify the *precip_shade* icon and set:
 Visualise your macro result again and confirm that you now have precipitation only for the 3-hour periods, which does not accumulate with each frame.
 
 Note that the meta-data for each field is taken from the first field in each subtraction; "step9 minus step6" returns a field with meta-data from step9, so be aware of this. 
-Macro has `functions <https://confluence.ecmwf.int/display/METV/Fieldset+Functions>`_ for setting GRIB meta-data if you need to change it in order to correctly describe the new data.
+Macro has :ref:`functions <macro_fieldset_fn>` for setting GRIB meta-data if you need to change it in order to correctly describe the new data.
 
 Dates in Macro
 **************
 
-Macro has specific `date-handling abilities <https://confluence.ecmwf.int/display/METV/Date+Functions>`_. Dates are a built-in data type which in fact describe both a date and a time.
+Macro has specific :ref:`date-handling abilities <macro_date_fn>`. Dates are a built-in data type which in fact describe both a date and a time.
 
 Defining dates
 ==============
@@ -325,7 +325,7 @@ Computing a climatology
 The supplied GRIB file *era_t2m_jan_2009_2013.grib* contains 2 metre temperature fields from the ERA Interim data set, interpolated onto a low-resolution 5x5 degree grid. The data are from years 2009 to 2013 and only include the month of January. The data are also from two times: 00:00 and 12:00. Check that all of this is true!
 
 We will compute a small climatology dataset, which will simply be the mean of all these fields. 
-Write a small macro to do this - it should be just 2 lines long: one to read the GRIB file, and one to compute the mean (simply the ``mean()`` function). 
+Write a small macro to do this - it should be just 2 lines long: one to read the GRIB file, and one to compute the mean (simply the :func:`mean` function). 
 Return or plot the result to confirm that it looks sensible.
 
 .. note::
@@ -343,7 +343,7 @@ Extracting dates from other data types
 Geopoints
 ---------
 
-To extract dates from a geopoints file/variable, use the ``dates()`` Macro function. 
+To extract dates from a geopoints file/variable, use the :func:`dates` Macro function. 
 Try it on the supplied geopoints file to see what it returns.
 
 BUFR
@@ -354,12 +354,12 @@ The easiest way to extract dates from a BUFR file is to convert it to geopoints 
 GRIB
 ----
 
-For GRIB, we also have the ``base_date()`` function, which returns the model run time for each field.
+For GRIB, we also have the :func:`base_date` function, which returns the model run time for each field.
 
 NetCDF
 ------
 
-The ``values()`` function will return a list of dates when the current variable is a time variable - see :ref:`Data Part 2 <data_part_2>`.
+The :func:`values` function will return a list of dates when the current variable is a time variable - see :ref:`Data Part 2 <data_part_2>`.
 
 Extra Work
 **********
@@ -399,10 +399,10 @@ One possible way to do it:
 
 * convert the anomaly field to geopoints (conversion to geopoints only works with one field at a time)
 
-* use the ``filter()`` and ``abs()`` functions to find just the absolute values greater than 4
+* use the :func:`filter` and :func:`abs` functions to find just the absolute values greater than 4
 
 * plot with customised *Symbol Plotting* icons (we could take the ones used in the :ref:`Processing Data <processing_data>` tutorial)
 
 * these points could be written to a file
 
-In `Missing Values and Masks <https://confluence.ecmwf.int/display/METV/Missing+Values+and+Masks>`_, we will see how we could do this sort of thing directly with the GRIB fields
+In :ref:`Missing Values and Masks  <missing_values_and_masks>`, we will see how we could do this sort of thing directly with the GRIB fields
