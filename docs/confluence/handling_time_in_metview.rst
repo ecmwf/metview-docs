@@ -359,7 +359,7 @@ For GRIB, we also have the ``base_date()`` function, which returns the model run
 NetCDF
 ------
 
-The ``values()`` function will return a list of dates when the current variable is a time variable - see `Data Part 2 <https://confluence.ecmwf.int/display/METV/Data+Part+2>`_.
+The ``values()`` function will return a list of dates when the current variable is a time variable - see :ref:`Data Part 2 <data_part_2>`.
 
 Extra Work
 **********

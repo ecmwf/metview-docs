@@ -24,15 +24,15 @@ One of Metview's most powerful features is its data processing ability. Data fro
 Fieldset Manipulation
 =====================
 
-A *fieldset* is a collection of fields stored physically in GRIB files. Metview has many built-in `functions and operators <https://confluence.ecmwf.int/display/METV/Fieldset+Functions>`_ to manipulate fieldsets, from simple arithmetic operators to vertical integrations through the atmosphere. Many of these operations are available from the icon-based user interface, all are available in the Macro language. The results can be stored on disk, or passed to other functions for further manipulation.
+A :class:`Fieldset` is a collection of fields stored physically in GRIB files. Metview has many built-in functions and operators to manipulate fieldsets, from simple arithmetic operators to vertical integrations through the atmosphere. Many of these operations are available from the icon-based user interface, all are available in the Macro language. The results can be stored on disk, or passed to other functions for further manipulation.
 
 Most of these functions work on each gridpoint value of each field in the fieldset. For example, if we add 1 to a fieldset which contains 3 fields, this will return a new fieldset with 3 fields, the values of whose gridpoints are 1 greater than those in their respective input fields, as shown below:
 
-[FIELDSET ILLUSTRATION]
+.. image:: /_static/processing_data/fieldset_illustr_1.png
 
 The situation is similar for operations between two fieldsets:
 
-[FIELDSET ILLUSTRATION]
+.. image:: /_static/processing_data/fieldset_illustr_2.png
 
 This example also illustrates what happens when *missing values* are in the data, represented here by an "x". 
 In most cases it is not valid to use the missing value in the result, so that point in the result will itself be set to the missing value indicator.
@@ -80,7 +80,7 @@ By default, the macro is written so that it will produce an interactive plot win
 
 Have a look at the generated macro code. With a little cleanup, the code to read the GRIB files and compute their difference is just this:
 
-.. code-block::
+.. code-block:: python
 
   temperature_forecast = read("temperature_forecast.grib")
   temperature_analysis = read("temperature_analysis.grib")
@@ -89,12 +89,12 @@ Have a look at the generated macro code. With a little cleanup, the code to read
 
 The variables ``temperature_forecast`` and ``temperature_analysis`` are of type *fieldset*, which is Metview Macro's own data type for storing fields. You can confirm this, and print the number of fields with these lines of code:
 
-.. code-block::
+.. code-block:: python
 
   print(type(temperature_forecast))
   print(count(temperature_forecast))
 
-Metview Macro has a large set of `functions and operators on fieldsets <https://confluence.ecmwf.int/display/METV/Fieldset+Functions>`_.
+Metview Macro has a large set of functions and operators on :class:`Fieldset` objects.
 
 Computing a Forecast - Observation Difference
 *********************************************
@@ -107,7 +107,7 @@ We will use the *t2m_forecast.grib* icon (the gridded forecast data), and the ob
 Extracting the 2 metre temperature
 ==================================
 
-The first step to comparing GRIB data with BUFR data is to extract just the parameter we want from the BUFR data and convert it to the `geopoints <https://confluence.ecmwf.int/display/METV/Geopoints>`_ format. 
+The first step to comparing GRIB data with BUFR data is to extract just the parameter we want from the BUFR data and convert it to the :class:`Geopoints` format. 
 Then the computation will be simple.
 
 Create a new *Observation Filter* icon and rename it to *filter_obs_t2m*, setting these parameters:
@@ -176,14 +176,14 @@ Returning the Result of a Computation for Further Interactive Use
 The result of the above macro does not have to live entirely inside the macro - it can be passed back to the user interface or used as input to other icons. 
 Do this:
 
-1. in the above macro, comment out the ``plot()`` command (using the hash, #, symbol)
+1. in the above macro, comment out the :func:`plot` command (using the hash, #, symbol)
 
 2. add a new line of code at the end:
    
    ``return speed``
 
 This passes the fieldset ``speed`` back to the user interface. 
-Try it by right-clicking on the macro's icon and selecting **examine*, **save** or **visualise**. 
+Try it by right-clicking on the macro's icon and selecting **examine**, **save** or **visualise**. 
 This icon can also be dropped into an existing **Display Window** to plot the data there. 
 It could also be used as an input to another icon, for example a *Simple Formula* icon, for further processing.
 
@@ -192,7 +192,7 @@ Writing the result of a computation to disk
 
 Again, modify the last line of the *compute_wind_speed* icon so that we now instead write the result to a file:
 
-.. code-block::
+.. code-block:: python
 
   write('wind_speed.grib', speed)
 
@@ -242,7 +242,7 @@ Conversion Between Fields and Points
 
 .. image:: /_static/processing_data/grib-to-geopoints.png
 
-Metview provides two icons, `Geopoints To Grib <https://confluence.ecmwf.int/display/METV/Geopoints+To+Grib>`_ and `Grib To Geopoints <https://confluence.ecmwf.int/display/METV/Grib+To+Geopoints>`_ for the purpose of converting between GRIB (gridded) and geopoints (scattered) formats.
+Metview provides two icons, :ref:`Geopoints To Grib <geo_to_grib_icon>` and :ref:`Grib To Geopoints <grib_to_geo_icon>` for the purpose of converting between GRIB (gridded) and geopoints (scattered) formats.
 
 Use a *GRIB to Geopoints* icon to convert the GRIB file *temperature_analysis.grib* to geopoints format. 
 **Examine** the result to confirm that it is now geopoints and that we have a list of all the individual points. You can also visualise it, applying the supplied *symb_colours* icon. 
@@ -260,7 +260,7 @@ Computing statistics fields
 Your forecast-analysis difference macro works on fieldsets containing 6 fields (6 different vertical levels in the atmosphere), so the result also contains 6 fields. Instead of plotting all 6 fields, compute fields which represent the minimum, maximum and means of these fields. 
 For example, if we have 6 fields in fieldset variable ``fs``, then the following code computes a single field, the values of which are the minimums across all 6 input fields:
 
-.. code-block::
+.. code-block:: python
 
   min_field = min(fs)
 
@@ -272,13 +272,13 @@ Extract field values at a set of locations
 Extract the temperature values from the *t2m_forecast.grib* file at all the locations in the geopoints data returned by the *filter_obs_t2m icon*. 
 Hint:
 
-* the Macro function ``interpolate(field, geopoints)`` returns a new geopoints variable whose locations are from its input geopoints and whose values are interpolated from the input field
+* the Macro function :func:`interpolate` returns a new geopoints variable whose locations are from its input geopoints and whose values are interpolated from the input field
 
 Extracting point values
 =======================
 
 There are many ways to extract the value of a field at a given point or set of points. 
-Try this one - call ``nearest_gridpoint_info ( fieldset,number,number )`` with the latitude and longitude of a geographical location and print the result to see which data gridpoint is closest to it.
+Try this one - call :func:`nearest_gridpoint_info` with the latitude and longitude of a geographical location and print the result to see which data gridpoint is closest to it.
 
 Automatic conversion between grids
 ==================================
@@ -286,8 +286,8 @@ Write some macro code which automatically converts *t2m_forecast.grib* to use th
 Hints:
 
 * read both files
-* use the ``grib_get_double(fieldset, string)`` function twice to extract the grid resolution from the first field in ``uv850 (uv850[1])``
+* use the :func:`grib_get_double` function twice to extract the grid resolution from the first field in ``uv850 (uv850[1])``
   
   * use the Grib Examiner to find which GRIB_API keys define these parameters
 
-* use the ``read()`` command to set the grid on the temperature field
+* use the :func:`read` command to set the grid on the temperature field

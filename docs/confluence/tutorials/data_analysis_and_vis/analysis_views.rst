@@ -42,28 +42,28 @@ The Geographical View
 
 .. image:: /_static/analysis_views/GEOVIEW.png 
 
-This is the default View for plotting geographic-based data. This View was discussed previously in `Customising Your Plot <https://confluence.ecmwf.int/display/METV/Customising+Your+Plot>`_.
+This is the default View for plotting geographic-based data. This View was discussed previously in :ref:`Customising Your Plot <customising_your_plot>`
 
 The Cartesian View     
 ==================
 
 .. image:: /_static/analysis_views/CARTESIANVIEW.png
 
-This view is for plots that are not on a map, and will be covered in another session: `Graph Plotting in Metview <https://confluence.ecmwf.int/display/METV/Graph+Plotting+in+Metview>`_.
+This view is for plots that are not on a map, and will be covered in another session: :ref:` Graph Plotting in Metview <graph_plotting_in_metview>`.
 
 The Annotation View    
 ===================
 
 .. image:: /_static/analysis_views/ANNOTATIONVIEW.png
 
-This will be covered in another session: `Layout in Metview <https://confluence.ecmwf.int/display/METV/Layout+in+Metview>`_.
+This will be covered in another session: :ref:`Layout in Metview <layout_in_metview>`.
 
 The Cross Section View    
 ======================
 
 .. image:: /_static/analysis_views/MXSECTIONVIEW.png
 
-The `Cross Section View <https://confluence.ecmwf.int/display/METV/Cross+Section+View>`_ icon is a plotting specification for cross section plots along a given transect line.
+The :ref:`Cross Section View <mxsectview_icon>` icon is a plotting specification for cross section plots along a given transect line.
 
 .. image:: /_static/analysis_views/cross-section-plot.png
 
@@ -87,7 +87,7 @@ The Vertical Profile View
 
 .. image:: /_static/analysis_views/MVPROFILEVIEW.png
 
-The `Vertical Profile View <https://confluence.ecmwf.int/display/METV/Vertical+Profile+View>`_ icon is a computation/plotting specification for vertical profiles.
+The :ref:`Vertical Profile View <mvertprofview_icon>` icon is a computation/plotting specification for vertical profiles.
 
 .. image:: /_static/analysis_views/vertical-profile-plot.png
 
@@ -95,7 +95,7 @@ Create a new *Vertical Profile View* icon, **Visualise** it and drop the *t_fc24
 The result shows a vertical profile at a point (or averaged over an area). 
 Experiment with this icon in a similar way to how you did with the *Cross Section View* icon.
 
-The `Graph Plotting <https://confluence.ecmwf.int/display/METV/Graph+Plotting>`_ icon is the visual definition used for the plotting of graphs (e.g. lines, curves and bar charts).
+The :ref:`Graph Plotting <mgraph_icon>` icon is the visual definition used for the plotting of graphs (e.g. lines, curves and bar charts).
 
 .. image:: /_static/analysis_views/MGRAPH.png
 
@@ -120,7 +120,7 @@ The Average View
 
 .. image:: /_static/analysis_views/MAVERAGEVIEW.png
 
-The `Average View <https://confluence.ecmwf.int/display/METV/Average+View>`_ icon is a plotting specification for average (zonal or meridional) cross-section plots over an area.
+The :ref:`Average View <maverageview_icon>` icon is a plotting specification for average (zonal or meridional) cross-section plots over an area.
 
 .. image:: /_static/analysis_views/average-view-plot.png
 
@@ -137,7 +137,7 @@ The Hovmoeller View
 
 .. image:: /_static/analysis_views/MHOVMOELLERVIEW.png
 
-The `Hovmoeller View <https://confluence.ecmwf.int/display/METV/Hovmoeller+View>`_ icon is a computation/plotting specification for Hovmoeller diagrams along a specified arbitrary transect line or a rectangular area. The diagram displays a two-dimensional graph with latitude or height as one axis, and time as the other.
+The :ref:`Hovmoeller View <mhovmoellerview_icon>` icon is a computation/plotting specification for Hovmoeller diagrams along a specified arbitrary transect line or a rectangular area. The diagram displays a two-dimensional graph with latitude or height as one axis, and time as the other.
 
 .. image:: /_static/analysis_views/hovmoeller-plot.png
 
@@ -163,7 +163,7 @@ The Thermo View
 
 .. image:: /_static/analysis_views/THERMOVIEW.png
 
-The `Thermo View <https://confluence.ecmwf.int/display/METV/Thermo+View>`_ icon is a plotting specification for Thermodynamic diagram plots from a suitable `GRIB <https://software.ecmwf.int/wiki/display/METV/Thermo+Data>`_ or `BUFR <https://software.ecmwf.int/wiki/display/METV/Thermo+Data>`_ data source. In such a diagram, temperature, humidity (represented by the dew point) and wind values are displayed with respect to pressure. Note that only the Tephigram diagram is currently available, although there exist other types of thermodynamic diagrams, such as Skew-T, Emagram and Stuve.
+The :ref:`Thermo View <thermoview_icon>` icon is a plotting specification for Thermodynamic diagram plots from a suitable GRIB (:func:`thermo_grib`) or BUFR (:func:`thermo_bufr`) data source. In such a diagram, temperature, humidity (represented by the dew point) and wind values are displayed with respect to pressure. Note that only the Tephigram diagram is currently available, although there exist other types of thermodynamic diagrams, such as Skew-T, Emagram and Stuve.
 
 .. image:: /_static/analysis_views/tephi-view.png
 
@@ -177,7 +177,7 @@ If the data is given in model levels then a Logarithm of Surface Pressure field 
 
 To customise the curves displayed in this plot, you can apply (or edit it first) icon *vdline*. 
 The changes will be applied to both lines. 
-The ability to customise each line individually (temperature and dew point) is available in the `Thermo Plotting <https://confluence.ecmwf.int/display/METV/Thermo+Plotting>`_ icon. Try it!
+The ability to customise each line individually (temperature and dew point) is available in the :ref:`Thermo Plotting <mthermo_icon>` icon. Try it!
 
 The :ref:`Wind Plotting <mwind_icon>` icon is the visual definition responsible for specifying how wind vector data is displayed. 
 It controls the plotting of features such as wind arrows and wind flags.
@@ -212,7 +212,7 @@ This exercise reads two forecast steps, computes the differences and visualises 
 Create a new Macro icon and rename it to *xsdiff*. 
 Edit it and do the following:
 
-* drop the *t_fc24.grib* icon into the Macro Editor. A variable called *t_fc24_2e_grib* is assigned to the value of the ``read()`` command, which reads the GRIB data. Rename the variable to simply be *t_fc24*.
+* drop the *t_fc24.grib* icon into the Macro Editor. A variable called *t_fc24_2e_grib* is assigned to the value of the :func:`read` command, which reads the GRIB data. Rename the variable to simply be *t_fc24*.
 
 * drop the *t_fc96.grib* icon into the Macro Editor. Rename the variable to *t_fc96*.
 
@@ -224,7 +224,7 @@ Edit it and do the following:
 
 * underneath the generated code, type the following line:
 
-.. code-block::
+.. code-block:: python
 
   plot(xs_europe,diff,neg,pos)
 
@@ -232,7 +232,7 @@ The says, "In the ``xs_europe`` view, plot the data field ``diff`` using the vis
 
 Your complete macro should look like this:
 
-.. code-block::
+.. code-block:: python
 
   t_fc96 = read("/path/to/home/metview/training/day_2/analysis views/t_fc96.grib")
   t_fc24 = read("/path/to/home/metview/training/day_2/analysis views/t_fc24.grib")
@@ -256,14 +256,14 @@ Your complete macro should look like this:
   plot(xs_europe,diff,neg,pos)
   
 Now run the macro to generate the plot. 
-You can also omit ``xs_europe`` from the ``plot()`` command; in this case, Metview will use the default view for GRIB data, which is a *Geographic View*, giving a map plot.
+You can also omit ``xs_europe`` from the :func:`plot` command; in this case, Metview will use the default view for GRIB data, which is a *Geographic View*, giving a map plot.
 
 Finally, **Examine** the two input GRIB icons to see how the fields differ in terms of date, time and step.
 
 View / Data Modules
 *******************
 
-Metview uses a netCDF format internally for the results of some computations (this format will be covered in the session `Data Part 2 <https://confluence.ecmwf.int/display/METV/Data+Part+2>`_). 
+Metview uses a netCDF format internally for the results of some computations (this format will be covered in the session :ref:`Data Part 2 <data_part_2>`). 
 Most of the Views described in this session (i.e. Cross Section, Vertical Profile, Average, Hovmøller and Thermo) do this, but the resulting data file is not available to the user. 
 Therefore, each of these *Views* has a corresponding *Data Module* icon. 
 If the intention is to simply plot the result, then the *View* icons are more useful. 
@@ -306,7 +306,7 @@ Extra Work
 
 .. note::
 
-  If you are attending the training course at ECMWF, please do `Layout in Metview <https://confluence.ecmwf.int/display/METV/Layout+in+Metview>`_ before tackling the extra work here.
+  If you are attending the training course at ECMWF, please do :ref:`Layout in Metview <layout_in_metview>` before tackling the extra work here.
 
 Hovmoeller Types
 ================

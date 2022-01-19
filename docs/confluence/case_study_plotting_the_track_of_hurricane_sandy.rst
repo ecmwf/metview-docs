@@ -95,7 +95,7 @@ Customising the storm track
 ===========================
 
 The storm track in its current form needs some customisation. 
-Use a `Graph Plotting <https://confluence.ecmwf.int/display/METV/Graph+Plotting>`_ icon for it by setting the
+Use a :ref:`Graph Plotting <mgraph_icon>` icon for it by setting the
 
 * the track line to black and thick
 * the track points to be white filled circles (their marker index is 15) with red outline.
@@ -300,7 +300,7 @@ Now visualise your :ref:`Cartesian View <cartesianview_icon>` icon and drag your
 Customising the graph
 =====================
 
-Customise the graph with a `Graph Plotting <https://confluence.ecmwf.int/display/METV/Graph+Plotting>`_ icon by setting the
+Customise the graph with a :ref:`Graph Plotting <mgraph_icon>` icon by setting the
 
 * the line thicker
 

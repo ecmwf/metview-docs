@@ -123,10 +123,11 @@ Annotation View
 
 .. image:: /_static/layout_in_metview/ANNOTATIONVIEW.png
 
-The `Annotation View <https://confluence.ecmwf.int/display/METV/Annotation+View>`_ icon provides a container for user-defined text boxes. 
+The :ref:`Annotation View <annotationview_icon>` icon provides a container for user-defined text boxes. 
 This view can also be used for layout purposes - if no user text is defined then an empty box will be created in the Display Window / paper sheet.
 
 .. image:: /_static/layout_in_metview/annotation-view-plot.png
+
 
 The user-defined text is provided by means of a :ref:`Text Plotting <mtext_icon>`  icon.
 

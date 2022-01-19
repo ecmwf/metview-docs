@@ -34,7 +34,7 @@ Steps
 Plotting the Cross Section
 ==========================
 
-Use a `Cross Section View <https://confluence.ecmwf.int/display/METV/Cross+Section+View>`_ icon with a logarithmic scale vertical axis.
+Use a :ref:`Cross Section View <mxsectview_icon>` icon with a logarithmic scale vertical axis.
 The transect line should go from [50oN, 90oW] to  [30oN, 60oW], and the top pressure level we wish to display is 200hPa.
 
 To add the title label "Pressure (hPa)", customise a new `Axis Plotting <https://confluence.ecmwf.int/display/METV/Axis+Plotting>`_ icon and drop it into the appropriate place in the *Cross Section View* icon's editor.
@@ -52,7 +52,7 @@ Plotting the Map
 ================
 
 Use a *Geographical View* icon to define the map. 
-The map area should be defined as being from [20oN, 110oW] to [70oN, 30oW] and should show the line of the cross section - use an :ref:`Input Visualiser  <input_visualiser_icon>` icon coupled with a `Graph Plotting <https://confluence.ecmwf.int/display/METV/Graph+Plotting>`_ icon to achieve this. 
+The map area should be defined as being from [20oN, 110oW] to [70oN, 30oW] and should show the line of the cross section - use an :ref:`Input Visualiser  <input_visualiser_icon>` icon coupled with a :ref:`Graph Plotting <mgraph_icon>` icon to achieve this. 
 The location of New York City (40.71oN, 74oW) can also be added with another *Input Visualiser* icon coupled with a :ref:`Symbol Plotting <msymb_icon>` icon. 
 The legend will look better if customised to use the **Disjoint** type.
 

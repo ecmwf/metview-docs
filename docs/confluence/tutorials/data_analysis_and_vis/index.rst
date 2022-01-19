@@ -18,4 +18,7 @@ Download
     customising_your_plot
     case_study_plotting_hurricane_sandy_on_a_map
     data_part_1
+    processing_data
+    analysis_views
+    layout_in_metview
     
