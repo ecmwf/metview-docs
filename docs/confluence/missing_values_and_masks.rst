@@ -152,7 +152,7 @@ Compute the mean value over a sub-area rather than over the whole globe. Note th
   europe = [75,-12.5,35,42.5]
   x = integrate(field,europe) 
 
-There is another function, ``average()``, to compute the mean value of a field. 
+There is another function, :func:`average`, to compute the mean value of a field. 
 Find its documentation to see what the difference is. 
 How different is the result?
 

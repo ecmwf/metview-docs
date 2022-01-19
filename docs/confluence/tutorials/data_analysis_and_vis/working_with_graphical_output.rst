@@ -153,15 +153,22 @@ The following piece of code shows the simplest way to save your plot as a PDF fi
   
 Try it!
 
-The ``pdf_output()`` function defines how a PDF file should be generated. 
+The :func:`pdf_output` function defines how a PDF file should be generated. 
 More options are available to further customise it. 
-The ``setoutput()`` function selects this output format. 
-So our code can contain many output format definitions and then select just one (or more) with the ``setoutput()`` function at run-time (see later).
+The :func:`setoutput` function selects this output format. 
+So our code can contain many output format definitions and then select just one (or more) with the :func:`setoutput` function at run-time (see later).
 
 The following code example shows how to set multiple output formats at the same time and also set various parameters for the different output formats. Note that in most cases the default values are sufficient. 
-A list of all options can found in the Magics documentation for each format at: `PostScript <https://software.ecmwf.int/wiki/display/MAGP/Postscript+output>`_, `SVG <https://confluence.ecmwf.int/download/attachments/45754147/Screenshot 2015-03-11 21.07.05.png?api=v2&modificationDate=1426108056016&version=1>`_, `PNG <https://software.ecmwf.int/wiki/display/MAGP/PNG+output>`_ and `KML <https://software.ecmwf.int/wiki/display/MAGP/KML+output>`_.
+A list of all options can found in documentation as follows:
 
-**Seeting multiple outputs in Metview Macro**
+* :func:`pdf_output`
+* :func:`ps_output`
+* :func:`png_output`
+* :func:`svg_output`
+* :func:`kml_output`
+
+
+**Seting multiple outputs in Metview Macro**
 
 .. code-block:: python
 
@@ -258,7 +265,7 @@ A related function, *stop()*, will do the same but allow the macro to exit in th
 To run the macro in batch mode, you call Metview with the option -b followed by the macro name on the command line (assuming you are running from the same directory as the macro - otherwise you must provide a path to it) or in shell scripts. 
 For example:
 
-.. code-block:: python
+::
 
   metview -b mymacro.mv
 
@@ -287,7 +294,7 @@ You can also trigger a new page in Metview Macro with the function
 This function is normally used within loops to generate output of each iteration on a separate page (or file). 
 It is the only way to use different views on different pages - this is the main purpose of it.
 
-To use ``newpage()`` you need first to define a ``plot_superpage()`` as shown in the example below.
+To use :func:`newpage` you need first to define a :func:`plot_superpage` as shown in the example below.
 
 **Multiple pages**
 
@@ -305,7 +312,7 @@ To use ``newpage()`` you need first to define a ``plot_superpage()`` as shown in
   ...
   plot(dw, ...)
   
-Here we create a default sized page with ``plot_page()``, which attaches to the super page. 
+Here we create a default sized page with :func:`plot_page`, which attaches to the super page. 
 Than we assign each plot command to a page.
 
 Task
@@ -317,7 +324,7 @@ Further processing outside Metview
 **********************************
 
 Of course you can do further processing of plots outside Metview. 
-The page `Generating animated GIFs from Metview plots <https://software.ecmwf.int/wiki/display/METV/Generating+animated+GIFs+from+Metview+plots>`_ gives you some helpful advice if you want to build animations.
+The page `Generating animated GIFs from Metview plots <https://confluence.ecmwf.int/display/METV/Generating+animated+GIFs+from+Metview+plots>`_ gives you some helpful advice if you want to build animations.
 
 Metview/Magics also supports special tags in SVG for the `Inkscape <https://inkscape.org/>`_ graphical editor. 
 This open source editor is great for when you need to further annotate your maps.

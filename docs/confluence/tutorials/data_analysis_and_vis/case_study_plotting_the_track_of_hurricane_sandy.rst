@@ -49,7 +49,7 @@ Setting the View
 
 With a new *Geographical View* icon, set up a cylindrical projection with its area defined as
 
-.. code-block:: python
+::
 
   South/West/North/East: 17/-97/51/-45
 
@@ -65,7 +65,7 @@ Plotting the Mean Sea Level Pressure field
 Plot the GRIB file *sandy_msl.grib* into your view using a new :ref:`Contouring <mcont_icon>` icon. 
 Plot black isolines with an interval of 5 hPa between them. Animate through the fields to see how the forecast is evolving.
 
-.. code-block:: python
+.. note::
 
   The fields you visualised were taken from the model run at 2012-10-27 0UTC and containing 12 hourly forecast steps from 0 to 120 hours.
 
@@ -107,7 +107,7 @@ To finalise the track plot we will add the date/time labels to the track points.
 This could be done with a :ref:`Symbol Plotting <msymb_icon>` icon by specifying the list of labels we want to plot into the map. 
 However, to make it reusable for other datasets as well, we will do it programmatically by using Metview *Macro*.
 
-Create a new *Macro* and edit it. First, read the CSV file in with the `Table Reader <https://confluence.ecmwf.int/display/METV/Table+Reader>`_:
+Create a new *Macro* and edit it. First, read the CSV file in with :func:`read_table` :
 
 .. code-block:: python
 
@@ -123,7 +123,7 @@ Create a new *Macro* and edit it. First, read the CSV file in with the `Table Re
   As you can see we specified the table delimiters exactly in the same way as we did for the *Table Visualiser* icon.
 
 In the code above, the object referenced by variable ``tbl`` contains all the columns from the CSV file. 
-Now read the date and time (from the first two columns) into separate `vectors <https://confluence.ecmwf.int/display/METV/Vectors>`_:
+Now read the date and time (from the first two columns) into separate :ref:`vectors <macro_vector>`:
 
 .. code-block:: python
 
@@ -171,7 +171,7 @@ We finish the macro by returning our Visual Definition.
 
 .. note::
 
-  By returning the visual definition our Macro behaves as if it were a real `Symbol Plotting  <https://confluence.ecmwf.int/display/METV/Symbol+Plotting>`_ icon.
+  By returning the visual definition our Macro behaves as if it were a real :ref:`Symbol Plotting <msymb_icon>` icon.
 
 Save the Macro and drag it into the plot to see the labels appearing along the track.
 
@@ -209,7 +209,7 @@ The idea goes like this:
 
 Create new *Macro* and edit it. 
 First, read the CSV file in the very same way as before. 
-However, this time, on top of date and time, we also need to read latitude and longitude into `vectors <https://confluence.ecmwf.int/display/METV/Vectors>`_:
+However, this time, on top of date and time, we also need to read latitude and longitude into :ref:`vectors <macro_vector>`:
 
 .. code-block:: python
 
@@ -260,7 +260,7 @@ Next, read the forecast data for the current forecast step and the area you defi
     
 Here we used the fact the forecasts steps are stored in hours units in the GRIB file.
 
-Next, compute the minimum of the field in the subarea using the ``minval()`` macro function:
+Next, compute the minimum of the field in the subarea using the :func:`minval` macro function:
 
 .. code-block:: python
 
@@ -279,7 +279,7 @@ And also build the list of dates:
   dt = date(val_date[i]) + hour(val_time[i])
   trDate = trDate & [dt]
 
-Having finished the body of the loop the last step in our Macro is to define an `Input Visualiser  <https://confluence.ecmwf.int/display/METV/Input+Visualiser>`_ and return it. The code we need to add is like this:
+Having finished the body of the loop the last step in our Macro is to define an :ref:`Input Visualiser <input_visualider_icon>` and return it. The code we need to add is like this:
 
 .. code-block:: python
 
@@ -309,7 +309,7 @@ Customise the graph with a :ref:`Graph Plotting <mgraph_icon>` icon by setting t
 Creating a title
 ================
 
-Define a custom title as shown in the example plot with a new `:ref:`Text Plotting <mtext_icon>` icon.
+Define a custom title as shown in the example plot with a new :ref:`Text Plotting <mtext_icon>` icon.
 
 Putting it all together
 ***********************
@@ -337,7 +337,7 @@ Hints:
 
 If you visualise the Macro your *Graph Plotting* settings will be directly applied to the resulting curve.
 
-* next, compute the maximum of the pressure (with the ``maxvalue()`` function) in the loop and store its values in another list. 
+* next, compute the maximum of the pressure (with the :func:`maxvalue` function) in the loop and store its values in another list. 
   Build an input visualiser out of it (e.g. call it ``vis_max``). 
   Add a *Graph Plotting* for it (e.g. call it ``graph_max``) using a different colour. 
   In the end you need to return a longer list like this:
@@ -346,7 +346,7 @@ If you visualise the Macro your *Graph Plotting* settings will be directly appli
 
   return [vis,graph,vis_max,graph_max]
   
-* the average pressure curve (with the ``average()`` function) can be derived in a very similar manner
+* the average pressure curve (with the :func:`average` function) can be derived in a very similar manner
 
 * add a *Legend* with *disjoint mode*. 
   Set **legend_text_composition** to *user_text_only* and carefully set the **legend_user_lines** to provide a textual description to each curve in the legend. 

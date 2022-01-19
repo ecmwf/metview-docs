@@ -25,7 +25,7 @@ The possible ways to provide data for graph plotting are:
 
 * :ref:`NetCDF Visualiser <netcdf_visualiser_icon>`
 
-* ODB Visualiser
+* :ref:`ODB Visualiser <odb_visualiser_icon>`
 
 The coordinate system is defined by the :ref:`Cartesian View <cartesianview_icon>` icon, the visual appearance of the axes by the :ref:`Axis Plotting <maxis_icon>` icons and the title by the :ref:`Text Plotting <mtext_icon>` icon. The data points themselves can be modified with the :ref:`Symbol Plotting <msymb_icon>` (for points) and :ref:`Graph Plotting <mgraph_icon>` (for lines) icons.
 
@@ -95,9 +95,9 @@ Do the same with the other icons and add a :func:`plot` command, remembering tha
 
 Now make it more robust to changing data by computing the **X Min**, etc extents of the view to be 10% less and more than the min and max data values. These are the steps:
 
-* put the lists of x and y values into *list* variables at the top of the macro and use these variables in the ``cartesianview()`` call
+* put the lists of x and y values into *list* variables at the top of the macro and use these variables in the :func:`cartesianview` call
 
-* to find the minimum value from a list, we need to convert it into a *vector* variable, then use the ``minvalue()`` function on the new vector
+* to find the minimum value from a list, we need to convert it into a *vector* variable, then use the :func:`minvalue` function on the new vector
 
   * hint: ``min_x = minvalue(vector(x_values))``
 
@@ -183,9 +183,9 @@ Try plotting the lines in a polar stereographic *Geographical View*.
 Marking an area using mvl_geoline
 =================================
 
-Macro has a function called ``mvl_geoline()`` which simply splits a geographic line into smaller parts which will follow any view projection.
+Macro has a function called :func:`mvl_geoline` which simply splits a geographic line into smaller parts which will follow any view projection.
 
-.. code-block:: python
+::
 
   definition mvl_geoline(lat1 : number, lon1 : number, lat2 : number, lon2 : number,  incrm : number)
 

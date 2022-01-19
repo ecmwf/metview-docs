@@ -148,8 +148,8 @@ So in this case we should use a handy feature of the *Text Plotting* icon which 
 Using meta-data references in titles
 ====================================
 
-In the previous example, Macro constructed a title string and passed it to the ``plot()`` command, which used it directly. 
-However, the ``plot()`` command can be more clever than that. 
+In the previous example, Macro constructed a title string and passed it to the :func:`plot` command, which used it directly. 
+However, the :func:`plot` command can be more clever than that. 
 For a start, it knows to translate ``<magics_title/>`` into the automatic title. 
 It also has some other tricks.
 

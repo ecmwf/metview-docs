@@ -24,4 +24,8 @@ Download
     case_study_cross_section_of_sandy
     data_part_2
     handling_time_in_metview
+    graph_plotting_in_metview
+    case_study_plotting_the_track_of_hurricane_sandy
+    working_with_graphical_output
+
     

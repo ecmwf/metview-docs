@@ -350,7 +350,7 @@ Change the list of contour levels so that the whole plot will be covered - you o
 Updating the Macro
 ==================
 
-Edit your macro icon again and drop the *fixed_t* icon into the editor, aiming the drop so that the code is generated above the ``plot()`` command. 
+Edit your macro icon again and drop the *fixed_t* icon into the editor, aiming the drop so that the code is generated above the :func:`plot` command. 
 The code to generate the contouring specification will appear, assigned to the variable ``fixed_t`` (the variable is always named after the icon that was dropped). 
 Add this to the end of the plot command:
 

@@ -996,7 +996,7 @@ The next step is to define a visualiser
   
   flx_plot=flextra_visualiser(flextra_data: flx) 
   
-Finally we add our objects to the ``plot()`` command: 
+Finally we add our objects to the :func:`plot` command: 
  
 .. code-block:: python
   
@@ -1410,7 +1410,7 @@ Keeping this in mind we will create two visualiser objects: one for the first gr
   plot_Katla=flextra_visualiser(flextra_data: flx[1]) 
   plot_Stromboli=flextra_visualiser(flextra_data: flx[2]) 
   
-We simply pass these objects to the ``plot()`` command:
+We simply pass these objects to the :func:`plot` command:
 
 .. code-block:: python
   
