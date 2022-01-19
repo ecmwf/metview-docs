@@ -27,5 +27,8 @@ Download
     graph_plotting_in_metview
     case_study_plotting_the_track_of_hurricane_sandy
     working_with_graphical_output
+    organising_macros
+    missing_values_and_masks
+    optimising_your_workflow
 
     

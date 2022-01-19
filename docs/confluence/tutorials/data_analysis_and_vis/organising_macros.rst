@@ -105,4 +105,4 @@ Extending the Macro Language
 ============================
 
 It is possible to write your own C/C++/Fortran code and interface it with Metview Macro. 
-In this way we can write functions in another language and call them directly from a macro, passing variables such as vectors, numbers and fieldsets between them. This is beyond the scope of this training course, but be aware that it is possible! It is currently documented in the `2014 Metview training course <https://confluence.ecmwf.int/display/METV/Tutorials>`_, and examples are given in the solutions folder if you'd like to have a look.
+In this way we can write functions in another language and call them directly from a macro, passing variables such as vectors, numbers and fieldsets between them. This is beyond the scope of this training course, but be aware that it is possible! It is currently documented in the `2014 Metview training course <tutorials>`, and examples are given in the solutions folder if you'd like to have a look.

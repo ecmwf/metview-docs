@@ -259,7 +259,7 @@ Fieldset Macro functions
    
    .. note::
 
-      See also ``nobitmap``.
+      See also :func:`nobitmap`.
 
 
 .. describe:: number or list corr_a ( fieldset,fieldset )

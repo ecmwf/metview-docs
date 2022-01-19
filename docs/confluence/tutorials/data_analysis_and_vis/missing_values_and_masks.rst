@@ -49,7 +49,7 @@ The plots above show the 'raw' land-sea field and then the 'cleaned' one.
 
 Now we want to read *t2m.grib* - this contains 2 metre temperature analysis data from 5 days. 
 Add a line of code to read this file into a new variable ``t2m``. 
-Compute the mean value of the points using the ``integrate()`` function. 
+Compute the mean value of the points using the :func:`integrate` function. 
 It will return a list of values - the mean value from each field.
 
 We now want to 'deactivate' the points where the land-sea mask is 0 (the sea points).
@@ -67,24 +67,23 @@ In some cases this might be what we want, but not here for two reasons:
 
 * if we want to compute the mean over the field, the sea points will still be used and will simply result in a lower mean because they are all zero
 
-So we will convert the zeros in the ``lsm`` fieldset to *missing values* using the ``bitmap()`` and ``nobitmap()`` functions, whose `documentation <https://confluence.ecmwf.int/display/METV/Fieldset+Functions>`_ is reproduced here:
+So we will convert the zeros in the ``lsm`` fieldset to *missing values* using the :func:`bitmap` and :func:`nobitmap` functions, whose :ref:`documentation <macro_fieldset_fn>` is reproduced here:
 
-.. code-block:: python
+::
   
   fieldset bitmap (fieldset,number)
   fieldset bitmap (fieldset,fieldset)
   
-Returns a copy of the input fieldset (first argument) with zero or more of its values replaced with grib missing value indicators. 
-If the second argument is a number, then any value equal to that number in the input fieldset is replaced with the missing value indicator. 
-If the second argument is another fieldset with the same number of fields as the first fieldset, then the result takes the arrangement of missing values from the second fieldset. 
-If the second argument is another fieldset with one field, the arrangement of missing values from that field are copied into all fields of the output fieldset. See also ``nobitmap``.
+  Returns a copy of the input fieldset (first argument) with zero or more of its values replaced with grib missing value indicators. 
+  If the second argument is a number, then any value equal to that number in the input fieldset is replaced with the missing value indicator. 
+  If the second argument is another fieldset with the same number of fields as the first fieldset, then the result takes the arrangement of missing values from the second fieldset. 
+  If the second argument is another fieldset with one field, the arrangement of missing values from that field are copied into all fields of the output fieldset. See also nobitmap().
   
-.. code-block:: python
 
   fieldset nobitmap ( fieldset,number )
   
-Returns a copy of the input fieldset (first argument) with all of its missing values replaced with the number specified by the second argument. 
-See also ``bitmap``.
+  Returns a copy of the input fieldset (first argument) with all of its missing values replaced with the number specified by the second argument. 
+  See also bitmap().
 
 Try the following steps:
 
@@ -92,7 +91,7 @@ Try the following steps:
 
 * copy the missing value mask from ``lsm`` to ``t2m`` (plot ``t2m`` to verify)
 
-* compute and print the mean values of the fields in ``t2m`` - use the function ``integrate()``
+* compute and print the mean values of the fields in ``t2m`` - use the function :func:`integrate`
 
 * this result is now the means of only the land points
 
@@ -145,7 +144,7 @@ Computing different means
 
 Try computing the mean value over the sea points. 
 This should be just one small change to your code.
-Compute the mean value over a sub-area rather than over the whole globe. Note that the ``integrate()`` function can do this:
+Compute the mean value over a sub-area rather than over the whole globe. Note that the :func:`integrate` function can do this:
 
 .. code-block:: python
   
@@ -156,8 +155,8 @@ There is another function, :func:`average`, to compute the mean value of a field
 Find its documentation to see what the difference is. 
 How different is the result?
 
-Cheat: the ``integrate()`` function can accept an additional argument of a field of 1s and 0s, and will only compute the mean value where this field has 1s. 
-Using this functionality, you can avoid using the bitmap functions altogether, at least in this particular computation! See `Fieldset Functions <https://confluence.ecmwf.int/display/METV/Fieldset+Functions>`_.
+Cheat: the :func:`integrate` function can accept an additional argument of a field of 1s and 0s, and will only compute the mean value where this field has 1s. 
+Using this functionality, you can avoid using the bitmap functions altogether, at least in this particular computation! See :ref:`Fieldset Functions <macro_fieldset_fn>`.
 
 The Land-sea mask
 =================
@@ -165,6 +164,6 @@ The Land-sea mask
 Write a line of macro code which will compute the number of land points in the ``lsm`` variable. 
 There are two methods:
 
-* ``accumulate()`` - adds all the values in a field to return a single number; this should do the job, since the values are 1 over land and 0 over sea
+* :func:`accumulate` - adds all the values in a field to return a single number; this should do the job, since the values are 1 over land and 0 over sea
 
-* ``datainfo()`` - returns information about the number of points and missing values in the field
+* :func:`datainfo` - returns information about the number of points and missing values in the field
