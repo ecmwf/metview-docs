@@ -10,7 +10,7 @@ Using ODB with Metview
 Preparations
 ************
 
-First start Metview; at ECMWF, the command to use is metview for this tutorial (see `Metview at ECMWF <https://software.ecmwf.int/wiki/display/METV/Metview+at+ECMWF>`_ for details of Metview versions).
+First start Metview; at ECMWF, the command to use is metview for this tutorial (see `Metview at ECMWF <https://confluence.ecmwf.int/display/METV/Metview+at+ECMWF>`_ for details of Metview versions).
 
 Then run the following command from the command line:
  

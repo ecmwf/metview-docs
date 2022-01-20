@@ -25,7 +25,7 @@ Output formats
 
 All graphical output formats are generated through ECMWF's graphics library `Magics <https://confluence.ecmwf.int/display/MAGP/Magics>`_. 
 This means that all graphical capabilities in Metview depend on what Magics offers. 
-Detailed descriptions of the output formats and their settings can be found in the `Magics reference documentation <https://software.ecmwf.int/wiki/display/MAGP/Reference+guide>`_.
+Detailed descriptions of the output formats and their settings can be found in the `Magics reference documentation <https://confluence.ecmwf.int/display/MAGP/Reference+guide>`_.
 
 The table below gives you a list of all the formats that Magics/Metview support and how you can use them.
 

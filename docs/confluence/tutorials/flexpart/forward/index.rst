@@ -10,8 +10,6 @@ Using FLEXPART with Metview
 
 .. note::
 
-  **Requirements**
-  
   Please note that this tutorial requires Metview version **5.0** or later.
   
 Preparations
@@ -30,9 +28,9 @@ The icons you will work with are already prepared for you - please download the 
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.
 
-Alternatively, if **at ECMWF** then you can copy it like this from the command line:
+Alternatively, if **at ECMWF** then you can copy it like this from the command line::
 
-  ``cp -R /home/graphics/cgx/tutorials/flexpart_tutorial ~/metview``
+  cp -R /home/graphics/cgx/tutorials/flexpart_tutorial ~/metview
   
 You should now (after a few seconds) see a *flexpart*_*tutorial* folder. 
 Please open it up.
@@ -41,7 +39,7 @@ The input data
 **************
 
 The input data is already prepared for you and is located in folder 'Data'. 
-You will find a `FLEXPART Prepare -old <https://confluence.ecmwf.int/display/METV/FLEXPART+Prepare+-old>`_ icon that was used to generate the data in folder 'Prepare'. 
+You will find a :ref:`FLEXPART Prepare <flexpart_prepare_icon>` icon that was used to generate the data in folder 'Prepare'. 
 The corresponding macro code can also be found there.
 
 You do not need to run the data preparation. 
@@ -55,7 +53,7 @@ However, if you wish to do so please note that it requires MARS access and you m
 
   In this tutorial we will run a forward simulation by releasing some SO2 from the Icelandic volcano Eyjafjallajokull.
   
-The simulation itself is defined by the 'fwd_conc' `FLEXPART Run <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Run>`_ icon and the 'rel_volcano' `FLEXPART Release <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Release>`_ icon, respectively. 
+The simulation itself is defined by the 'fwd_conc' :ref:`FLEXPART Run <flexpart_run_icon>` icon and the 'rel_volcano' :ref:`FLEXPART Release <flexpart_release_icon>` icon, respectively. 
 Both these are encompassed in a single macro called 'fwd_conc.mv'. 
 For simplicity will use this macro to examine the settings in detail. 
 
@@ -80,13 +78,10 @@ This says that the release will happen over a 45 h period between heights 1651 a
 
 .. note::
 
-  Please note that
+  * the species is not defined here (will be defined in :func:`flexpart_run`)
+  * we used dates relative to the starting date of the simulation (see also in :func:`flexpart_run`)
   
-  * the species is not defined here (will be defined in ``flexpart_run()``)
-  
-  * we used dates relative to the starting date of the simulation (see also in ``flexpart_run()``)
-  
-The actual simulation is carried out by calling ``flexpart_run()``:
+The actual simulation is carried out by calling :func:`flexpart_run`:
   
 .. code-block:: python
   
@@ -94,7 +89,7 @@ The actual simulation is carried out by calling ``flexpart_run()``:
   
   r = flexpart_run(
       output_path         :   "result_fwd",
-    input_path          :   "../data",
+      input_path          :   "../data",
       starting_date       :   20120517,
       starting_time       :   12,
       ending_date         :   20120519,
@@ -117,10 +112,10 @@ We also told FLEXPART to generate gridded mass concentration and flux fields on 
 
 .. note::
 
-  The actual species to release are defined as an integer number (for details about using the species see `here <https://software.ecmwf.int/wiki/display/METV/FLEXPART+species>`_). 
+  The actual species to release are defined as an integer number (for details about using the species see `here <https://confluence.ecmwf.int/display/METV/FLEXPART+species>`_). 
   With the default species settings number 8 stands for SO2.
 
-If we run this macro (or alternatively right-click execute the `FLEXPART Run <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Run>`_ icon) the results (after a minute or so) will be available in folder 'result_fwd'. 
+If we run this macro (or alternatively right-click execute the :ref:`FLEXPART Run <flexpart_run_icon>` icon) the results (after a minute or so) will be available in folder 'result_fwd'. 
 The computations actually took place in a temporary folder then Metview copied the results to the output folder. 
 If we open folder 'result_fwd' we will see three files:
 
@@ -135,3 +130,11 @@ If we open folder 'result_fwd' we will see three files:
   Please note that these are not the original outputs form FLEXPART but were converted to more suitable ones for Metview. For details about the FLEXPART outputs click `here <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_.
 
 To process and visualise the results please see these pages:
+
+.. toctree::
+    :maxdepth: 1
+
+    flexpart_plotting_concentration_fields
+    flexpart_plotting_flux_fields
+    flexpart_plotting_total_column_mass
+    flexpart_plotting_cross_sections

@@ -10,8 +10,6 @@ Using FLEXPART with Metview
 
 .. note::
 
-  **Requirements**
-  
   Please note that this tutorial requires Metview version **5.0** or later.
   
 Preparations
@@ -30,9 +28,9 @@ The icons you will work with are already prepared for you - please download the 
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.
 
-Alternatively, if **at ECMWF** then you can copy it like this from the command line:
+Alternatively, if **at ECMWF** then you can copy it like this from the command line::
 
-  ``cp -R /home/graphics/cgx/tutorials/flexpart_tutorial ~/metview``
+  cp -R /home/graphics/cgx/tutorials/flexpart_tutorial ~/metview
 
 You should now (after a few seconds) see a *flexpart_tutorial* folder. 
 Please open it up.
@@ -41,23 +39,19 @@ The input data
 **************
 
 The **input data is already prepared** for you and is located in folder 'Data'. 
-You will find a `FLEXPART Prepare -old <https://confluence.ecmwf.int/display/METV/FLEXPART+Prepare+-old>`_ icon that was used to generate the data in folder 'Prepare'. 
+You will find a :ref:`FLEXPART Prepare <flexpart_prepare_icon>` icon that was used to generate the data in folder 'Prepare'. 
 The corresponding macro code can also be found there.
 
 You do not need to run the data preparation. However, if you wish to do so please note that it requires MARS access and you must set the **Output Path** parameter accordingly.
 
 .. note::
 
-  Please enter folder 'backward' to start working.
-
-.. note::
-
-  In this exercise we will perform a backward simulation to compute the residence time of the particles reaching Inverness in Scotland.
+  Please enter folder 'backward' to start working. In this exercise we will perform a backward simulation to compute the residence time of the particles reaching Inverness in Scotland.
 
 Running a backward simulation
 *****************************
 
-The simulation itself is defined by the 'bwd_time' `FLEXPART Run <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Run>`_ icon and the 'rel_inv' `FLEXPART Release <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Release>`_ icon, respectively. 
+The simulation itself is defined by the 'bwd_time' :ref:`FLEXPART Run <flexpart_run_icon>` icon and the 'rel_inv' :ref:`FLEXPART Release <flexpart_release_icon>` icon, respectively. 
 Both these are encompassed in a single macro called 'bwd_time.mv'. 
 For simplicity will use this macro to examine the settings in detail. 
 The macro starts with defining the release like this:  
@@ -81,13 +75,10 @@ This says that the backward release will happen over a 24 h period in the lower 
 
 .. note::
 
-  Please note that
-  
   * for the masses we set 1 since any value given here will be normalised for the residence time computations
+  * we used dates relative to the starting date of the simulation (see also in :func:`flexpart_run`)
   
-  * we used dates relative to the starting date of the simulation (see also in ``flexpart_run()``)
-  
-The actual simulation is carried out by calling ``flexpart_run()``: 
+The actual simulation is carried out by calling :func:`flexpart_run`: 
   
 .. code-block:: python
   
@@ -117,7 +108,7 @@ The actual simulation is carried out by calling ``flexpart_run()``:
 Here we defined both the input and output paths and specified the simulation period, the output grid and levels as well. 
 We also told FLEXPART to generate residence time fields on output.
 
-If we run this macro (or alternatively right-click execute the `FLEXPART Run <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Run>`_ icon) the results (after a minute or so) will be available in folder 'result_bwd'. 
+If we run this macro (or alternatively right-click execute the :ref:`FLEXPART Run <flexpart_run_icon>` icon) the results (after a minute or so) will be available in folder 'result_bwd'. 
 The computations actually took place in a temporary folder then Metview copied the results to the output folder. 
 If we open this folder we will see two files:
 
@@ -149,7 +140,7 @@ Generating the plot
 The macro to visualise the residence time on a given level is 'plot_time_step1.mv'.
 
 In the macro first we define the level (700 m) and the parameter ("fprt") we want to plot. 
-Then we call the `flexpart_filter() <https://confluence.ecmwf.int/display/METV/flexpart_filter>`_ to extract the data for all the timesteps:  
+Then we call the :func:`flexpart_filter` to extract the data for all the timesteps:  
   
 .. code-block:: python
   
@@ -197,7 +188,7 @@ Next, we define the contouring:
       contour_shade_colour_direction  :   "clockwise"       
       )
   
-Next, we build the title with `flexpart_build_title() <https://confluence.ecmwf.int/display/METV/flexpart_build_title>`_. Please note that we need to explicitly specify the plotting units!  
+Next, we build the title with :func:`flexpart_build_title`. Please note that we need to explicitly specify the plotting units!  
   
 .. code-block:: python
   
@@ -276,7 +267,7 @@ This macro is basically the same as the one in **Step 1**, but the data access a
       g=100*g/maxTime
   end if
   
-In the code above we called `flexpart_total_column() <https://confluence.ecmwf.int/display/METV/flexpart_total_column>`_ to add up the residence times in the specified layer. 
+In the code above we called :func:`flexpart_total_column` to add up the residence times in the specified layer. 
 Then we took the result and normalised it with the maximum value.
 
 We also need to customise the title:
@@ -300,7 +291,7 @@ Step 3 - Total residence time in the whole atmospheric column
 =============================================================
 
 Macro 'plot_time_step3.mv' shows how to plot the total residence time for the whole atmospheric column. 
-It goes exactly like **Step 2** but we need to omit top_level and bottom_level in the `flexpart_total_column() <https://confluence.ecmwf.int/display/METV/flexpart_total_column>`_ call:  
+It goes exactly like **Step 2** but we need to omit top_level and bottom_level in the :func:`flexpart_total_column` call:  
   
 .. code-block:: python
   
@@ -327,7 +318,7 @@ Step 4 - Total residence time in a layer for the whole period
 In this step we will plot the total residence time summed up for the whole period for the bottom 500m layer.
 
 The macro to use is 'plot_time_step4.mv'. 
-This macro is basically the same as the one in **Step 2**, but after calling `flexpart_total_column() <https://confluence.ecmwf.int/display/METV/flexpart_total_column>`_ we call sum() to sum up the fields over time: 
+This macro is basically the same as the one in **Step 2**, but after calling :func:`flexpart_total_column` we call sum() to sum up the fields over time: 
   
 .. code-block:: python
   
@@ -350,7 +341,7 @@ Step 5 - Total residence time in the whole atmospheric column for the whole peri
 
 In this step we will plot the total residence time summed up for the whole period for the whole atmospheric column.
 
-The macro to use is 'plot_time_step5.mv'. This macro is basically the same as the one in **Step 3**, but after calling `flexpart_total_column() <https://confluence.ecmwf.int/display/METV/flexpart_total_column>`_ we call sum() to sum up the fields over time:
+The macro to use is 'plot_time_step5.mv'. This macro is basically the same as the one in **Step 3**, but after calling :func:`flexpart_total_column` we call sum() to sum up the fields over time:
   
 .. code-block:: python
   

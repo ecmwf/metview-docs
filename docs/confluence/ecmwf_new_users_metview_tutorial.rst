@@ -401,7 +401,7 @@ Next, specify the where statement of the query in the **ODB Where** parameter as
   varno = 2 and vertco_reference_1=50000
   
 Save these settings, then right-click **visualise** the '*vis_temp*' icon to generate the plot. 
-Then drag the the provided :ref:`Symbol Plotting <msymb_icon>`, :ref:`Coastlines <mcoast_icon>`, `Legend <https://software.ecmwf.int/wiki/display/METV/Legend>`_ and `Text Plotting <https://software.ecmwf.int/wiki/display/METV/Text+Plotting>`_ icons into the plot for further customisation. Metview's plot window has many tools for inspecting data values, described in detail in the standalone tutorial "`Using ODB with Metview <https://confluence.ecmwf.int/display/METV/Using+ODB+with+Metview>`_". Do not close the plot window yet.
+Then drag the the provided :ref:`Symbol Plotting <msymb_icon>`, :ref:`Coastlines <mcoast_icon>`, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot for further customisation. Metview's plot window has many tools for inspecting data values, described in detail in the standalone tutorial "`Using ODB with Metview <https://confluence.ecmwf.int/display/METV/Using+ODB+with+Metview>`_". Do not close the plot window yet.
 
 Overlaying with GRIB data
 =========================
@@ -410,7 +410,7 @@ The '*fc.grib*' GRIB icon contains 12 h global forecasts of temperature and wind
 
 To overlay the 500 hPa temperature forecast we need to filter the matching field from the GRIB file. 
 The '*t500_fc*' GRIB Filter icon is already already set up to perform this task. 
-Just drag '*t500_fc*' into the plot, then drag the '*t_cont*' `Contouring <https://software.ecmwf.int/wiki/display/METV/Contouring>`_ icon into the plot as well to customise the contour lines (**Figure 13**).
+Just drag '*t500_fc*' into the plot, then drag the '*t_cont*' `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon into the plot as well to customise the contour lines (**Figure 13**).
 
 Further ODB work
 ================

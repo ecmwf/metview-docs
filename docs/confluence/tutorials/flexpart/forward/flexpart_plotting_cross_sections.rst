@@ -3,7 +3,7 @@
 FLEXPART - Plotting cross sections
 ##################################
  
-For preparations and running the simulation needed for this tutorial `click here ... <https://confluence.ecmwf.int/display/METV/FLEXPART+-+Forward+simulation>`_
+For preparations and running the simulation needed for this tutorial :ref:`click here ... <flexpart_forward_simulation>`
 
 .. note::
 
@@ -11,7 +11,7 @@ For preparations and running the simulation needed for this tutorial `click here
   
 The macro to plot a vertical cross section is 'plot_xs.mv'. We will see how this macro works.
 
-First, we define the parameter and time step for the cross section then call `flexpart_filter() <https://confluence.ecmwf.int/display/METV/flexpart_filter>`_ to extract the data. 
+First, we define the parameter and time step for the cross section then call :func:`flexpart_filter` to extract the data. 
 The result is a fieldset with units of "kg m**-3", which we scale explicitly to "ng m**-3" units for plotting.
 
 .. code-block:: python

@@ -3,7 +3,7 @@
 FLEXPART - Plotting flux fields
 ###############################
  
-For preparations and running the FLEXPART simulation needed for this tutorial `click here ... <https://confluence.ecmwf.int/display/METV/FLEXPART+-+Forward+simulation>`_
+For preparations and running the FLEXPART simulation needed for this tutorial :ref:`click here ... <flexpart_forward_simulation>`
 
 .. note::
 
@@ -25,7 +25,7 @@ Generating the plot
 The macro to visualise the flux fields on a given level is 'plot_flux.mv'.
 
 In the macro first we define the level (8000 m) and the parameter ("feflux" = eastward flux) we want to plot. 
-Then we call `flexpart_filter() <https://confluence.ecmwf.int/display/METV/flexpart_filter>`_ to extract the data.
+Then we call :func:`flexpart_filter` to extract the data.
   
 .. code-block:: python
   
@@ -69,7 +69,7 @@ The contour definition itself goes like this:
       contour_method                  :   "linear"
       )
   
-Next, we build the title with `flexpart_build_title() <https://confluence.ecmwf.int/display/METV/flexpart_build_title>`_. 
+Next, we build the title with :func:`flexpart_build_title`. 
 Please note that we need to explicitly specify the plotting units! 
   
 .. code-block:: python

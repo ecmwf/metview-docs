@@ -10,8 +10,6 @@ Using FLEXPART with Metview
 
 .. note::
 
-  **Requirements**
-  
   Please note that this tutorial requires Metview version **5.0** or later.
   
 Preparations
@@ -31,9 +29,9 @@ The icons you will work with are already prepared for you - please download the 
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.
 
-Alternatively, if **at ECMWF** then you can copy it like this from the command line:
+Alternatively, if **at ECMWF** then you can copy it like this from the command line::
 
-  ``cp -R /home/graphics/cgx/tutorials/flexpart_tutorial ~/metview``
+  cp -R /home/graphics/cgx/tutorials/flexpart_tutorial ~/metview
   
 You should now (after a few seconds) see a *flexpart_tutorial* folder. 
 Please open it up.
@@ -42,20 +40,16 @@ The input data
 **************
 
 The input data is already prepared for you and is located in folder 'Data'. 
-You will find a `FLEXPART Prepare -old <https://confluence.ecmwf.int/display/METV/FLEXPART+Prepare+-old>`_ icon that was used to generate the data in folder 'Prepare'. 
+You will find a :ref:`FLEXPART Prepare <flexpart_prepare_icon>` icon that was used to generate the data in folder 'Prepare'. 
 The corresponding macro code can also be found there.
 
 You do not need to run the data preparation. However, if you wish to do so please note that it requires MARS access and you must set the **Output Path** parameter accordingly.
 
 .. note::
 
-  Please enter folder 'plume_trajectory' to start working.
-
-.. note::
-
-  In this example we will generate a forward trajectory by releasing atmospheric tracers from Newcastle.
+  Please enter folder 'plume_trajectory' to start working. In this example we will generate a forward trajectory by releasing atmospheric tracers from Newcastle.
   
-The simulation itself is defined by the 'tr_run' `FLEXPART Run <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Run>`_ icon and the 'rel_ncastle' `FLEXPART Release <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Release>`_ icon, respectively. Both these are encompassed in a single macro called 'tr_run.mv'. For simplicity will use this macro to examine the settings in detail. 
+The simulation itself is defined by the 'tr_run' :ref:`FLEXPART Run <flexpart_run_icon>` icon and the 'rel_ncastle' :ref:`FLEXPART Release <flexpart_release_icon>` icon, respectively. Both these are encompassed in a single macro called 'tr_run.mv'. For simplicity will use this macro to examine the settings in detail. 
 
 The macro starts with defining the release like this:  
 
@@ -79,11 +73,10 @@ This says that the release will happen over a 3 h period in the lower 500 m at N
 
 .. note::
 
-  Please note that
+  * the species is not defined here (will be defined in :func:`flexpart_run`)  
+  * we used dates relative to the starting date of the simulation (see also in :func:`flexpart_run`).
   
-  * the species is not defined here (will be defined in ``flexpart_run()``)
-  
-  * we used dates relative to the starting date of the simulation (see also in ``flexpart_run()``)The actual simulation is carried out by calling ``flexpart_run()``:
+The actual simulation is carried out by calling :func:`flexpart_run`:
   
 .. code-block:: python
   
@@ -110,17 +103,17 @@ We also told FLEXPART to only generate plume trajectories on output.
 
 .. note::
 
-  The actual species that will be released is defined as an integer number (for details about using the species see `here <https://software.ecmwf.int/wiki/display/METV/FLEXPART+species>`_). 
+  The actual species that will be released is defined as an integer number (for details about using the species see `here <https://confluence.ecmwf.int/display/METV/FLEXPART+species>`_). 
   With the default species settings number 1 stands for atmospheric  tracer.
 
-If we run this macro (or alternatively right-click **execute** the `FLEXPART Run <https://software.ecmwf.int/wiki/display/METV/FLEXPART+Run>`_ icon) the resulting CSV file, 'tr_r001.csv', will appear (after a minute or so) in folder 'result_tr'. 
+If we run this macro (or alternatively right-click **execute** the :ref:`FLEXPART Run <flexpart_run_icon>` icon) the resulting CSV file, 'tr_r001.csv', will appear (after a minute or so) in folder 'result_tr'. 
 For details about the FLEXPART trajectory outputs `click here. <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_
 
 Step 1 - Plotting the mean track
 ********************************
 
 The macro to plot the mean trajectories is 'plot_tr_step1.mv'. 
-We will see how this macro works.First, we read the CSV file using a `Table Reader <https://confluence.ecmwf.int/display/METV/Table+Reader>`_:
+We will see how this macro works.First, we read the CSV file using a :ref:`Table Reader <read_table_icon>`:
   
 .. code-block:: python
   
@@ -146,7 +139,7 @@ Next, we determine the trajectory (i.e. the release) start date and time from th
   startSec=number(metadata_value(tbl,"start"))
   releaseDate=runDate + second(startSec)
   
-Next, we read the coordinates of the mean track and use :ref:`Input Visualiser  <input_visualiser_icon>` and `Graph Plotting <https://confluence.ecmwf.int/display/MAGP/Graph+Plotting>`_ to plot it:
+Next, we read the coordinates of the mean track and use :ref:`Input Visualiser <input_visualiser_icon>` and :ref:`Graph Plotting <mgraph_icon>` to plot it:
   
 .. code-block:: python
   
@@ -367,7 +360,7 @@ In this plot layer we draw circles around the mean trajectory waypoints using th
       end if
   end for
   
-Please note that we use `mvl_geocircle() <https://confluence.ecmwf.int/display/METV/mvl_geocircle>`_ to construct the circle and plotted the circle around every second waypoint to avoid cluttering. The only other change with respect to **Step 2** is that we need to extend the plot command with the new data layer (``pltRmsLst``):
+Please note that we use :func:`mvl_geocircle` to construct the circle and plotted the circle around every second waypoint to avoid cluttering. The only other change with respect to **Step 2** is that we need to extend the plot command with the new data layer (``pltRmsLst``):
   
 .. code-block:: python
   

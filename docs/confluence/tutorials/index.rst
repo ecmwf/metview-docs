@@ -115,7 +115,7 @@ Using FLEXPART From Within Metview
 **********************************
 The following material describes the use of the particle dispersion model FLEXPART from within Metview.
 
-* `Using FLEXPART with Metview <https://confluence.ecmwf.int/display/METV/Using+FLEXPART+with+Metview>`_
+* :ref:`Using FLEXPART with Metview <using_flexpart_with_metview>`
 
 Using Metview to Prepare data for 3D Visualisation in VAPOR
 ***********************************************************

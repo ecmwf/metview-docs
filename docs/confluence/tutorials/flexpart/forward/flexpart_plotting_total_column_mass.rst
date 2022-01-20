@@ -3,7 +3,7 @@
 FLEXPART - Plotting total column mass
 #####################################
  
-For preparations and running the simulation needed for this tutorial `click here ... <https://confluence.ecmwf.int/display/METV/FLEXPART+-+Forward+simulation>`_
+For preparations and running the simulation needed for this tutorial :ref:`click here ... <flexpart_forward_simulation>`
 
 .. note::
 
@@ -12,7 +12,7 @@ For preparations and running the simulation needed for this tutorial `click here
 The total column integrated mass is not an output of FLEXPART so we need to compute it. 
 The macro to do the computation and plot the resulting fields is 'plot_total.mv'.
   
-In the macro first we call `flexpart_total_column() <https://confluence.ecmwf.int/display/METV/flexpart_total_column>`_ to compute the "tcmd" fields:
+In the macro first we call :func:`flexpart_total_column` to compute the "tcmd" fields:
   
 .. code-block:: python
   
@@ -51,7 +51,7 @@ The contour definition itself goes like this:
       grib_scaling_of_derived_fields  :   "off"
       )
   
-Next, we build the title with `flexpart_build_title() <https://confluence.ecmwf.int/display/METV/flexpart_build_title>`_. 
+Next, we build the title with :func:`flexpart_build_title`. 
 Please note that we need to explicitly specify the plotting units!
   
 .. code-block:: python
