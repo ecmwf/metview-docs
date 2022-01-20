@@ -26,26 +26,26 @@ Metview runs in batch mode when the option ``-b`` is specified when you first ca
 You can run Metview in batch mode while having a Metview interactive session up and running - they will not interfere with each other. 
 To run a macro in batch mode simply specify its name on the command line after the ``-b`` option:
   
-.. code-block:: python
+::
   
   % metview -b macro_name [arg1 arg2 ...]
   
 where ``macro_name`` is the name of the macro you want to run. 
 You can specify a path to the macro if it is not in the current directory.
 
-The ``arguments()`` function returns a list of command-line arguments.
+The :func:`arguments` function returns a list of command-line arguments.
 Write a short new Macro which requires a single argument (a meteorological parameter short name such as Z, T or RH) to be passed to it on the command line. 
 It should fail if more or less arguments are passed. 
 It should print the argument that has been passed to it. 
 Useful hints:
 
-* the ``count()`` function returns the number of elements in a list
+* the :func:`count` function returns the number of elements in a list
 
-* the ``fail()`` function takes a string as its argument and will print the string and exit Metview with an error code
+* the :func:`fail` function takes a string as its argument and will print the string and exit Metview with an error code
 
 Expand the macro to retrieve this parameter from MARS on a 1x1 degree grid. 
-The only parameters required to be set in the ``retrieve()`` function are **Parameter** and **Grid**. 
-You can use the ``print()`` function to confirm that the fields have been retrieved.
+The only parameters required to be set in the :func:`retrieve` function are **Parameter** and **Grid**. 
+You can use the :func:`print` function to confirm that the fields have been retrieved.
 
 .. note::
 
@@ -58,7 +58,7 @@ Getting Environment Variables
 Environment variables can be queried, not only in batch mode but also in interactive mode. 
 This can be an alternative way to pass information to a macro.
 
-In a macro, get the value of a chosen environment variable (e.g. HOST) using the ``getenv()`` function. 
+In a macro, get the value of a chosen environment variable (e.g. HOST) using the :func:`getenv` function. 
 For example:
   
 .. code-block:: python
@@ -70,7 +70,7 @@ For example:
 Detecting Whether Metview is Running in Batch Mode
 ==================================================
 
-The macro function ``runmode()`` returns a string which tells us the mode in which it has been run. 
+The macro function :func:`runmode` returns a string which tells us the mode in which it has been run. 
 If the return value is "batch" then Metview has been invoked in batch mode.
 
 Add a check to your macro: if it is running in batch mode, then take the parameter from the command line arguments as before; otherwise, set it to some string of your choosing. 
@@ -87,7 +87,7 @@ Invoking Metview's Data Examiners from the Command Line
 Metview has a shortcut for invoking the data examiners from the command line for quick data inspection.
 Find a GRIB file somewhere in your Metview directory structure (it can also be outside the Metview home directory). From the command-line, type:
   
-.. code-block:: python
+::
   
   metview -e grib /path/to/grib
   
@@ -98,7 +98,7 @@ Plotting a Data File from the Command Line
 
 For the same GRIB file, from the command-line, type:
   
-.. code-block:: python
+::
   
   metview -p /path/to/grib
   

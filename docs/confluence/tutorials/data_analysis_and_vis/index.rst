@@ -30,5 +30,11 @@ Download
     organising_macros
     missing_values_and_masks
     optimising_your_workflow
+    customising_your_plot_title
+    case_study_ensemble_forecast
+    running_metview_in_batch_mode
+    working_with_folders_and_icons
+    exploring_metview
+
 
     

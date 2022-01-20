@@ -1,3 +1,5 @@
+.. _mv_desktop_overview:
+
 Metview's user interface
 ==============================
 

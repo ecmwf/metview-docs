@@ -1445,7 +1445,7 @@ We start editing the macro with reading our FLEXTRA output file.
   flx=read("res_multi.txt") 
   
 Now variable ``flx`` holds all the data in our FLEXTRA output. 
-First, we will find out the number of trajectory groups we have by using the ``count()`` function.
+First, we will find out the number of trajectory groups we have by using the :func:`count` function.
  
 .. code-block:: python
   

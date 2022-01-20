@@ -14,7 +14,7 @@ To enter a folder double-click, hit enter or right-click **Open** on the icon.
 Folders can also be opened in a **new tab or window** by using the context menu of the *Folder* icon.
 
 The central part of Desktop can contain **multiple tabs**, each showing a different folder. 
-`Folder navigation <https://confluence.ecmwf.int/display/METV/Metview%27s+user+interface>`_ works for each tab independently.
+:ref:`Folder navigation <mv_desktop_overview>` works for each tab independently.
 
 New tabs can be added by the blue button at the right edge of the tab bar or by using the **Ctrl+T** keyboard shourtcut.
 

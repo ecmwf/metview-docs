@@ -118,7 +118,7 @@ Enter the following text into line 2:
 Some Metview users have used coloured text in the title as an alternative legend.
 
 If you are writing a macro, then you can use all of the string manipulation capabilities to construct the title. 
-Type the following macro code, or try the one in the *solutions* folder. It calls the `grib_get <https://confluence.ecmwf.int/display/METV/Fieldset+Functions>`_ functions to retrieve meta-data from the GRIB header, then constructs a title using it.
+Type the following macro code, or try the one in the *solutions* folder. It calls :func:`grib_get` functions to retrieve meta-data from the GRIB header, then constructs a title using it.
 
 .. note::
 
@@ -139,7 +139,7 @@ Type the following macro code, or try the one in the *solutions* folder. It call
    
   plot(rh, title)
   
-The ``print()`` command shows you what is going into the ``mtext()`` definition (which is the Macro function for the *Text Plotting* icon).
+The :func:`print` command shows you what is going into the :func:`mtext` definition (which is the Macro function for the *Text Plotting* icon).
 
 This is fine for a single field, but if you move between the two fields in the plot, there are two different vertical levels - but we only have one title, and it was constructed using the meta-data from the first field. 
 We cannot tell it to "use this title for the first field, but use another title for the second field". 

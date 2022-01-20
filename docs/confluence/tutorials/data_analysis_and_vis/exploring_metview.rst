@@ -22,7 +22,7 @@ You can either do whatever you please, or follow some of the suggestions below.
 Working with Folders and Icons
 ==============================
 
-Go through `this <https://confluence.ecmwf.int/display/METV/Working+with+Folders+and+Icons>`_ tutorial to become more proficient at using Metview's user interface for navigating folders and finding icons.
+Go through :ref:`this <working_with_folders_and_icons>` tutorial to become more proficient at using Metview's user interface for navigating folders and finding icons.
 
 Monitoring Metview's Processes
 ==============================
@@ -72,7 +72,7 @@ Create a new *Wind Plotting* icon and set the following parameters in order to c
   * - Wind Advanced Colour Parameter
     - Speed
 
-Visualise *ztuv.grb* from the `Data Part 1 <https://confluence.ecmwf.int/display/METV/Data+Part+1>`_ session and move to a wind field. 
+Visualise *ztuv.grb* from the :ref:`Data Part 1 <data_part_1>` session and move to a wind field. 
 Drop the new *Wind Plotting* icon into the plot window. 
 This plot is clearer if dark grey land/sea shading is used.
 
@@ -114,7 +114,7 @@ The WMS standard is defined by the `Open Geospatial Consortium (OGC) <http://www
 The WMS module can be used to query an OGC-compliant WMS server, retrieve maps from it and overlay them with other data. 
 The WMS icon is a great way to integrate web services within Metview. 
 
-We have a `separate tutorial <https://confluence.ecmwf.int/display/METV/Metview+WMS+Tutorial>`_ which shows in more detail how you can use maps served by web map services within Metview.
+We have a :ref:`separate tutorial <metview_wms_tutorial>` which shows in more detail how you can use maps served by web map services within Metview.
 
 * We provided you with some example WMS icons. 
   Try out the four WMS icons in the directory by visualising them.

@@ -54,11 +54,11 @@ Setting the View
 
 With a new *Geographical View* icon, set up a cylindrical projection with its area defined as
 
-.. code-block:: python
+::
   
   South/West/North/East: 43/-20/60/10
   
-Set up a new `Coastlines <https://software.ecmwf.int/wiki/display/METV/Coastlines>`_ icon with the following:
+Set up a new :ref:`Coastlines <mcoast_icon>` icon with the following:
 
 * the land coloured in *cream*
 
@@ -74,7 +74,7 @@ With a new Display Window icon define a 2x2 layout so that each plot should cont
 Visualising the latest forecast
 ===============================
 
-The GRIB file *fc_latest_oper.grib *contains the latest forecast run preceding the event. 
+The GRIB file *fc_latest_oper.grib* contains the latest forecast run preceding the event. 
 Drag it into the top left map and customise it with the wgust_shade :ref:`Contouring <mcont_icon>` icon and the title_oper :ref:`Text Plotting <mtext_icon>` icon. 
 Animate through the fields to see the location of the areas heavily hit by the storm.
 
@@ -123,7 +123,7 @@ Within the loop, first, read all the 51 ENS members for the given time step:
     step: step
   )   
 
-Next, compute their mean with the ``mean()`` macro function:
+Next, compute their mean with the :func:`mean` macro function:
   
 .. code-block:: python
   
@@ -155,7 +155,7 @@ Visualising the ensemble spread
 
 The ensemble spread is the standard deviation of the ENS members. 
 We can compute it in a very similar way to the ensemble mean. 
-The only difference is that this time we need to use the ``stdev()`` function instead of ``mean()``. 
+The only difference is that this time we need to use the :func:`stdev` function instead of :func:`mean`. 
 Now it is your task to write a Macro for it. 
 Once you finished your Macro drag it into the bottom right map and customise it with the *wgust_spread_shade* :ref:`Contouring <mcont_icon>` icon and with a custom :ref:`Text Plotting <mtext_icon>` icon. 
 You will see that the ensemble spread is fairly high in the investigated area.
@@ -203,7 +203,7 @@ This plot, for an obvious reason, is called a stamp plot.
 This is a complex plot so we will write a Macro to generate it.
 
 Create a new Macro and edit it. 
-Drop your Geographical View and the `Coastlines <https://software.ecmwf.int/wiki/display/METV/Coastlines>`_ icons into the Macro editor. 
+Drop your Geographical View and the :ref:`Coastlines <mcoast_icon>` icons into the Macro editor. 
 Once you've tidied up the code, define a 6x9 layout so that each plot should contain your view:
 
 .. code-block:: python
@@ -270,7 +270,7 @@ We finish the case study by looking into the predictability of the large scale f
 This is a fairly complex plot and we will write a Macro to produce it.
 
 Create a new Macro and edit it. 
-Drop your *Geographical View* and the `Coastlines <https://software.ecmwf.int/wiki/display/METV/Coastlines>`_ icons into the Macro editor and change the map area to
+Drop your *Geographical View* and the :ref:`Coastlines <mcoast_icon>` icons into the Macro editor and change the map area to
 
 .. code-block:: python
   
@@ -290,7 +290,7 @@ Next, define the contouring used for the "spaghetti" by dropping the *cont_spag*
       contour_highlight: "off"
    )
 
-In this ``mcont()`` we turned contour labels off to keep the plot uncluttered and defined only a single contour value (for 560 gpm).
+In this :func:`mcont` we turned contour labels off to keep the plot uncluttered and defined only a single contour value (for 560 gpm).
 
 Continue with reading in the GRIB file of the ENS forecasts used for the "spaghetti":
 
@@ -325,7 +325,7 @@ To avoid having too many titles we use a custom :ref:`Text Plotting <mtext_icon>
   
   title=mtext(text_line_1: "Value: 560 gpm T+<grib_info key='step' where='number=50' /> h" )
 
-Here we used the **where** statement inside the **grib_info** tag (`as described here <https://confluence.ecmwf.int/display/METV/Customising+Your+Plot+Title>`_)  to make the title appear for one member (the 50th member) only.
+Here we used the **where** statement inside the **grib_info** tag (:ref:`as described here <customising_your_plot_title>`)  to make the title appear for one member (the 50th member) only.
 
 Last, plot the field with our contour settings and title:
 

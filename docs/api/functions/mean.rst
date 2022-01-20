@@ -19,6 +19,7 @@ mean
 
 
 .. py:function:: mean(gpt)
+    :noindex:
 
     Computes the mean of all the values in the values column of ``gpt``. 
     
