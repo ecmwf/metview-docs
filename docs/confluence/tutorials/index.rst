@@ -109,7 +109,7 @@ Using FLEXTRA From Within Metview (ECMWF internal only)
 *******************************************************
 The following material describes the use of FLEXTRA within Metview, and is currently only applicable to internal ECMWF users.
 
-* `FLEXTRA tutorial <https://confluence.ecmwf.int/display/METV/FLEXTRA+tutorial>`_
+* :ref:`FLEXTRA tutorial <flextra_tutorial>`
 
 Using FLEXPART From Within Metview
 **********************************

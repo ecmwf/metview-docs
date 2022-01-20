@@ -7,8 +7,6 @@ This tutorial explains how to use the FLEXTRA trajectory model within Metview.
 
 .. note::
 
-  **Requirements**
-  
   Please note that this tutorial requires Metview version **5.0** or later.
 
 Preparations
@@ -28,9 +26,9 @@ You will create some icons yourself, but some are supplied for you - please down
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.
 
-Alternatively, if at ECMWF then you can copy it like this from the command line:
+Alternatively, if at ECMWF then you can copy it like this from the command line::
 
-  ``cp -R /home/graphics/cgx/tutorials/flextra_tutorial ~/metview``
+  cp -R /home/graphics/cgx/tutorials/flextra_tutorial ~/metview
   
 You should now (after a few seconds) see a *flexta*_*tutorial* folder which contains the solutions and also some additional icons required by these exercises. 
 You will work in the *flextra_tutorial* folder so open it up. 
@@ -63,7 +61,7 @@ These are as follows:
   
     `http://transport.nilu.no/flexpart <http://transport.nilu.no/flexpart>`_
 
-    This website contains a link to the latest available FLEXTRA documentation:
+  This website contains a link to the latest available FLEXTRA documentation:
     
     `http://zardoz.nilu.no/~andreas/flextra/flextra3.html <http://zardoz.nilu.no/~andreas/flextra/flextra3.html>`_
 
@@ -95,7 +93,7 @@ These files are valid for the period of 2012-01-11 00 UTC to 2012-01-15 00 UTC.
 There is the AVAILABLE file here as well. 
 It is a parameter file telling FLEXTRA the names and dates of the input GRIB files.
 
-This dataset was generated through the Metview FLEXTRA interface.The chapter on `data preparation <https://confluence.ecmwf.int/pages/viewpage.action?pageId=146637830#FLEXTRAtutorial-data_preparation>`_ explains how it works and helps prepare your own dataset if it is needed.
+This dataset was generated through the Metview FLEXTRA interface. The chapter on :ref:`data preparation <flextra_tutorial_data_preparation>` explains how it works and helps prepare your own dataset if it is needed.
 
 Running FLEXTRA
 ***************
@@ -167,9 +165,7 @@ We set the length of the trajectories to 72 h and specified that the output data
 
 .. note::
 
-  **First step omitted**
-  
-  FLEXTRA cannot start the computations from the very first available date and time. So we could not start from 2012-01-11 00 UTC (the first available date and time in our data) but had to use the next available step (3h).
+  The **first step is omitted**! FLEXTRA cannot start the computations from the very first available date and time. So we could not start from 2012-01-11 00 UTC (the first available date and time in our data) but had to use the next available step (3h).
   
 The last step is to define the starting point parameters:
 
@@ -205,18 +201,14 @@ With these settings we specified the trajectory type to be three-dimensional (se
   The format of parameters holdings times is **hh:mm:ss** with the following rules:
   
   * If mm:ss is omitted it defaults to hh (without the colon!). E,g. 12 = 12 h
-  
   * The leading zero is not mandatory for hh. E.g.: 2 = 2 h
-  
   * If ss is omitted it defaults to hh:mm. E.g. 12:30 = 12 h 30 m
   
   Parameters **Flextra Trajectory Length**, **Flextra Starting Time Interval** and **Flextra Output Interval Value** have the format of **hhh:mm:ss.** 
   The following rules apply:
   
   * If ss is omitted it defaults to hhh:mm. E.g. "120:30" = 120 h 30 m 0 s
-  
   * If mm:ss is omitted it defaults to hhh. E.g. 120 = 120 h
-  
   * The leading zero is not mandatory for hhh. E.g.: 12 = 12 h
 
 .. note::
@@ -227,39 +219,32 @@ With these settings we specified the trajectory type to be three-dimensional (se
   The possible values are as follows:
   
     1. Three-dimensional
-  
     2. Model layer
-  
     3. Mixing layer
-  
     4. Isobaric
-  
     5. Isentropic
   
   The **level units** were also given by an ID. 
   The possible values are as follows:
   
     1. Metres above sea level
-    
     2. Metres above ground level
-    
     3. Hectopascals
 
 Parameter **Flextra Output Interval Mode** controls how the trajectory points are written out into the output file. It can have three values:
 
   * **Original**: The trajectory points are written out into the output file exactly at the computational time steps. 
     In the FLEXTRA terminology these are called **flexible time steps**.
-  
   * **Interval**: The trajectory points are written out into the output file at regular intervals specified by parameter **Flextra Output Interval Value**. 
     In the FLEXTRA terminology these are called **constant time steps**.
-    
   * **Both**: Two output files will be generated: one for the flexible time steps and one for the constant time steps (in *Part 11* we will see how to deal with multiple FLEXTRA outputs).
   
-We only specified one starting point but in the chapter on `multiple_outputs <https://confluence.ecmwf.int/pages/viewpage.action?pageId=146637830#FLEXTRAtutorial-multiple_output>`_ we will see how to work with multiple starting points for a NORMAL run.
+We only specified one starting point but in the chapter on :ref:`multiple outputs <flextra_tutorial_multiple_outputs>` we will see how to work with multiple starting points for a NORMAL run.
 
 .. note::
 
   **GRIB2 input fields**
+
   If **global GRIB2** input fields generated by Metview are used in **FLEXTRA 5** it incorrectly detects the domain and treats it as a limited area. 
   As a consequence trajectories cannot cross the domain boundaries because the computation stops at the border.
 
@@ -281,16 +266,14 @@ What you are looking at is a custom ASCII format describing the resulting trajec
 .. note::
 
   **FLEXTRA stop index**
+
   Flextra assigns an exit code called **stop index** for each trajectory. 
   Its value can be seen in the FLEXTRA output (the examiner highlights it in blue in the trajectory header). 
   The possible values are as follows:
   
     1. Normal exit.
-    
     2. The trajectory left the computation domain.
-    
     3. The time difference between two wind fields was too large.
-    
     4. No wind fields were available.
 
 Now close the FLEXTRA examiner. 
@@ -344,7 +327,7 @@ What you are looking at is a global map (it might be different for you depending
 There is a *Map View* icon called 'map_Katla' prepared for you in the folder and we suggest that you drop it into the plot to get the right area and a shaded map background as well (alternatively you can zoom into this area).The first thing to note in the plot is the title. 
 It reads as
 
-.. code-block:: python
+::
   
   FLEXTRA: Forward 3D 1512m Katla (-19.05,63.63)
   
@@ -827,13 +810,11 @@ Basics
 
 The implementation of FLEXTRA-related operations in Metview macro follow the same principles as in the interactive mode. In macro we work with the macro command equivalents of the FLEXTRA icons we have seen so far:
 
-  * *FLEXTRA File* icon: its corresponding macro commands are **read()** and **write()**.
+  * *FLEXTRA File* icon: its corresponding macro commands are :func:`read`` and :func:`write`.
+  * *FLEXTRA Run* icon: its corresponding macro command is :func:`flextra_run`.
+  * *FLEXTRA Visualiser* icon: its corresponding macro command is :func:`flextra_visualiser`.
   
-  * *FLEXTRA Run* icon: its corresponding macro command is **flextra_run()**.
-  
-  * *FLEXTRA Visualiser* icon: its corresponding macro command is **flextra_visualiser()**.
-  
-There is also a macro equivalent command for icon FLEXTRA Prepare, which is used to prepare input data for FLEXTRA. Please see the chapter on `data preparation <https://confluence.ecmwf.int/pages/viewpage.action?pageId=146637830#FLEXTRAtutorial-data_preparation>`_ for details on it.
+There is also a macro equivalent command for icon FLEXTRA Prepare, which is used to prepare input data for FLEXTRA. Please see the chapter on :ref:`data preparation <flextra_tutorial_data_preparation>` for details on it.
 
 Automatic macro generation
 ==========================
@@ -929,7 +910,7 @@ The macro should look like this:
   
 Our code now contains an ``if`` statement to check if the FLEXTRA output file exits. 
 If it does not exist we run FLEXTRA to compute the trajectories and save the resulting data into this file using the write() function. 
-Otherwise we read the file from the disk with the ``read()`` function into our ``run_normal`` variable.
+Otherwise we read the file from the disk with the :func:`read` function into our ``run_normal`` variable.
 
 Run this macro to make sure that it is working (a *FLEXTRA File* icon called 'res_normal_macro.txt' should appear in the folder). 
 Then run it again to see that the execution time really became shorter because we bypassed the FLEXTRA trajectory computations.
@@ -1008,12 +989,12 @@ If you run this macro you should see your plot with the custom title in the **Di
 
   1. Function flextra_group_get() returns values only for those metadata keys which have the same value for all the trajectories in the group. If this condition is not fulfilled the function returns a ``nil`` value. 
      For example in our FLEXTRA output each trajectory has a different starting time. 
-     So if we specified key ``startTime`` for ``flextra_group_get()`` it would return a ``nil`` value for it.
+     So if we specified key ``startTime`` for :func:`flextra_group_get` it would return a ``nil`` value for it.
   
   2. The second argument of flextra_group_get() can also be a single key (instead of a list of keys). 
      In this case the return value is a string (instead of a list).
   
-Please find below the list of the metadata keys used by ``flextra_group_get()``:
+Please find below the list of the metadata keys used by :func:`flextra_group_get`:
 
 .. list-table::
 
@@ -1174,7 +1155,7 @@ The next step is to read the actual data values from a given trajectory. It goes
   
   vals=flextra_tr_get(flx,1,["date","lat","lon"]
   
-Here we read the date, latitude and longitude data from the first rajectory. 
+Here we read the date, latitude and longitude data from the first trajectory. 
 What flextra_tr_get() returns is a list that contains either a vector or a list for a given key. 
 For date we get a lists of dates, while for lat and lon we get vectors. 
 Finally, we load the results into another set of variables and print their values out in a loop.
@@ -1196,7 +1177,7 @@ Now, if you run this macro you will see the data values appearing in the standar
   The second argument of flextra_tr_get() can also be a single key (instead of a list of keys). 
   In this case the function returns either a single string value, a list or a vector depending of the key specified.
 
-Please find below the list of the metadata keys used by ``flextra_tr_get()``:
+Please find below the list of the metadata keys used by :func:`flextra_tr_get`:
 
 .. list-table::
 
@@ -1283,6 +1264,8 @@ Please find below the list of the metadata keys used by ``flextra_tr_get()``:
   * - **zAboveGroundLevel**
     - Height above ground level.
     - vector
+
+.. _flextra_tutorial_multiple_outputs:
 
 Multiple Outputs
 ****************
@@ -1423,7 +1406,7 @@ Now, if you run this macro you should see a **Display Window** popping up showin
   When we worked with the FLEXTRA Visualiser icon we specified the index of the trajectory group to be visualised. 
   This approach is working in macro as well. E.g. in our macro we could have written the code for volcano Stromboli as:
   
-  .. code-block::
+  .. code-block:: python
   
     plot_Srtromboli=flextra_visualiser(
       flextra_data: flx,
@@ -1480,6 +1463,8 @@ In the last step we print the data:
   
 Now, if you run this macro you will see the data values appearing in the standard output.
 
+.. _flextra_tutorial_data_preparation:
+
 Input Data Preparation
 **********************
 
@@ -1500,7 +1485,9 @@ An important restriction is that all the data fields used within a FLEXTRA run m
 All the required fields, with one exception, can be retrieved from ECMWF's MARS archive. 
 The only exception is the vertical velocity because FLEXTRA needs the following field for its computations:
 
-\( \dot \eta \frac{\partial \eta}{\partial p} \)
+.. math::
+
+    \dot \eta \frac{\partial \eta}{\partial p}
 
 The problem with this product is that only is archived in MARS and the full product needs to be computed during the data preparation process.
 
@@ -1514,7 +1501,7 @@ This file can be optionally provided by the users.
 The FLEXTRA Prepare Icon
 ========================
 
-The `FLEXTRA Prepare <https://confluence.ecmwf.int/display/METV/FLEXTRA+Prepare>`_ icon is used to generate all the input data needed for a FLEXTRA run including the MARS retrievals, the computations and the generation of the AVAILABLE file as well.
+The :ref:`FLEXTRA Prepare <flextra_prepare_icon>` icon is used to generate all the input data needed for a FLEXTRA run including the MARS retrievals, the computations and the generation of the AVAILABLE file as well.
 
 .. image:: /_static/flextra_tutorial/worddavef8cfa9d4d5ac4e1292a9f601d430e4b.png
 
@@ -1590,7 +1577,7 @@ The input data preparations involved several Metview tasks in the background:
 Now open a terminal window and check the content of your output directory. 
 When this tutorial was written our *FLEXTRA Prepare* icon generated the following results (remember we used relative dates in the icon so your current dates will be different):
 
-.. code-block:: python
+::
   
   244     2012-02-02 16:08 AVAILABLE
   547200  2012-02-02 16:07 EN12020100
@@ -1599,7 +1586,7 @@ When this tutorial was written our *FLEXTRA Prepare* icon generated the followin
   
 If we check the AVAILABLE file itself we will see the following content (again, you will see different dates in your file):
  
-.. code-block:: python
+::
   
   DATE TIME FILNAME SPECIFICATIONS
   YYYYMMDD HHMMSS
@@ -1629,11 +1616,8 @@ In this case Metview checks the existence of the data to be generated and if the
   This is the list of the keys that are checked:
   
     * date, time, stepRange
-    
     * gridType
-    
-    * iDirectionIncrement, jDirectionIncrementlatitudeOfFirstGridPoint, latitudeOfLastGridPoint
-    
+    * iDirectionIncrement, jDirectionIncrementlatitudeOfFirstGridPoint, latitudeOfLastGridPoint  
     * longitudeOfFirstGridPoint, longitudeOfLastGridPoint
 
 Running FLEXTRA with the FLEXTRA Prepare Icon
@@ -1667,7 +1651,7 @@ Just like the other FLEXTRA icons the *FLEXTRA Prepare* icon can also be used in
 Its macro command equivalent is flextra_prepare().
 
 However, please note that it should be used with extra care. 
-The reason for it is that ``flextra_prepare()`` is executed asynchronously and if we do not reference the variable it returns we can run into problems. 
+The reason for it is that :func:`flextra_prepare` is executed asynchronously and if we do not reference the variable it returns we can run into problems. 
 The following macro code illustrates this situation:  
 
 .. code-block:: python
@@ -1684,7 +1668,7 @@ The following macro code illustrates this situation:
     ...
   )
   
-With this code we want to generate the input data for FLEXTRA with flextra_prepare() but we do not use the variable it returns in ``flextra_run()``. 
+With this code we want to generate the input data for FLEXTRA with flextra_prepare() but we do not use the variable it returns in :func:`flextra_run`. 
 Instead we simply use the path where the generated input data should be located. 
 Now, because flextra_prepare() is executed asynchronously the macro starts to execute it and does not wait until it finishes but jumps immediately to flextra_run(). 
 Then flextra_run() fails because the input data is not yet in place so the macro fails as well.
@@ -1701,8 +1685,8 @@ We can overcome this difficulty by simply referencing the return value of flextr
   flextra_run( ...
   )
   
-Alternatively we can set the Macro execution mode to synchronous by using the ``waitmode()`` function. 
-We need to place it before calling ``flextra prepare()`` like this: 
+Alternatively we can set the Macro execution mode to synchronous by using the :func:`waitmode` function. 
+We need to place it before calling :func:`flextra_prepare` like this: 
  
 .. code-block:: python
   
