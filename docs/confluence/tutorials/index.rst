@@ -32,7 +32,7 @@ Metview Tutorial for the Introduction for New Users Course
 **********************************************************
 The following tutorial was written for ECMWF's Introduction for New Users course (COM_MARS) and shows how to retrieve data from MARS using Metview, perform some basic manipulations and plot the result.
 
-* `ECMWF New Users Metview Tutorial <https://confluence.ecmwf.int/display/METV/ECMWF+New+Users+Metview+Tutorial>`_
+* :ref:`ECMWF New Users Metview Tutorial <ecmwf_new_users_metview_tutorial>`
 
 Metview Introductory Material
 *****************************
@@ -95,15 +95,14 @@ Using ODB From Within Metview
 *****************************
 A tutorial is available here:
 
-* `ODB Tutorial <https://confluence.ecmwf.int/display/METV/ODB+Tutorial>`_
-
-* `Using ODB with Metview <https://confluence.ecmwf.int/display/METV/Using+ODB+with+Metview>`_  [designed to be used from within ECMWF]
+* :ref:`ODB Tutorial <odb_tutorial>`
+* :ref:`Using ODB with Metview <using_odb_with_metview>`  [designed to be used from within ECMWF]
 
 Using OGC services from Within Metview
 **************************************
 To support the meteorological community in adopting the OGC standards, the `MetOcean Domain Working Group <http://external.opengis.org/twiki_public/MetOceanDWG>`_ was established within the OGC. ECMWF is an active participant of this working group. Metview 4 provides a WMS (Web Map Service) module which can be used to query an OGC-compliant WMS server, retrieve maps from it and overlay them with other data. A tutorial is available here:
 
-* `Metview WMS Tutorial <https://confluence.ecmwf.int/display/METV/Metview+WMS+Tutorial>`_
+* :ref:`Metview WMS Tutorial <metview_wms_tutorial>`
 
 Using FLEXTRA From Within Metview (ECMWF internal only)
 *******************************************************
@@ -121,11 +120,11 @@ Using Metview to Prepare data for 3D Visualisation in VAPOR
 ***********************************************************
 A tutorial is available here:
 
-* `VAPOR Tutorial <https://confluence.ecmwf.int/display/METV/VAPOR+Tutorial>`_
+* :ref:`VAPOR Tutorial <vapor_tutorial>`
 
 Using the Single Column Model in Metview
 ****************************************
 This tutorial requires a single column model executable, which is not a standard part of the Metview distribution. It is, however, used as part of `OpenIFS Home <https://confluence.ecmwf.int/display/OIFS/OpenIFS+Home>`_ Workshops and the Parametrization of subgrid physical processes training course. The Metview-SCM tutorial is here:
 This tutorial requires a single column model executable, which is not a standard part of the Metview distribution. It is, however, used as part of `OpenIFS Home <https://confluence.ecmwf.int/display/OIFS/OpenIFS+Home>`_ Workshops and the `Parametrization of subgrid physical processes <http://www.ecmwf.int/en/learning/training/parametrization-of-subgrid-physical-processes>`_ training course. The Metview-SCM tutorial is here:
 
-* `The SCM Interface in Metview - Tutorial <https://confluence.ecmwf.int/display/METV/The+SCM+Interface+in+Metview+-+Tutorial>`_
+* :ref:`The SCM Interface in Metview - Tutorial <the_scm_interface_in_metview_tutorial>`

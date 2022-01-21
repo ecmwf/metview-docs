@@ -247,7 +247,7 @@ The following lines of code will print some information about the data:
 
 Now we will create a new geopoints variable, and set its lats, lons and values to those from the CSV data.
 
-First, use the ``values()`` function to extract arrays of lats, lons and T2m from the CSV data. 
+First, use the :func:`values` function to extract arrays of lats, lons and T2m from the CSV data. 
 These will be returned in variables of type :ref:`vector <macro_vector>` - this is an in-memory array of double-precision numbers.
 
 .. code-block::
@@ -283,7 +283,7 @@ In this way, we can import such data into Metview and have access to all its GRI
 Reading/Writing General ASCII Data to/from Disk
 ===============================================
 
-ASCII files that are not in *Geopoints*, *ASCII Table* or *Lat/Long Matrix* format can be read using the :func:`read` function. 
+ASCII files that are not in *Geopoints*, *ASCII Table* or *Lat/Long Matrix* format can be read using the :ref:`read() <read_fn>` function. 
 It will return a list of strings - one string will contain the contents of one line of the file. 
 Look at the supplied text file, *params.txt*, and see that it contains a list of codes for meteorological parameters:
 
@@ -329,11 +329,11 @@ The data structure of an ODB database can be seen as a table of variables called
 Right-click **examine** the *ODB Database* icon *AMSUA.odb* to see a list of the variables in the data. 
 The **Data** tab provides access to the actual data itself. 
 ODB data can be filtered using ODB/SQL queries. 
-The supplied *ODB Filter* icon contains an ODB/SQL query to retrieve certain columns of data. 
+The supplied :ref:`ODB Filter <odb_filter_icon>` icon contains an ODB/SQL query to retrieve certain columns of data. 
 Edit it - note that this pre-prepared icon is using the *AMSUA.odb* icon as its data input. 
 Look at the **ODB Query** field to get an idea of what data will be filtered. 
 Now close the editor and **examine** the icon to see the filtered subset of data it has produced. 
-The *ODB Visualiser* icon *tb_plot* tells Metview which columns of data to use for the visualisation; visualise it and apply the symb_colours icon to obtain a nice plot.
+The :ref:`ODB Visualiser <odb_visualiser_icon>` icon *tb_plot* tells Metview which columns of data to use for the visualisation; visualise it and apply the symb_colours icon to obtain a nice plot.
 
 There is a dedicated tutorial for handling ODB data in Metview on the :ref:`Tutorials <tutorials>` page.
 

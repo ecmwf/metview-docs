@@ -7,8 +7,6 @@ This tutorial explains how to use the WMS (Web Map Service) client within Metvie
 
 .. note::
 
-  **Requirements**
-  
   Please note that this tutorial requires Metview version **4.0.5** or later.
 
 Preparations
@@ -18,9 +16,7 @@ First start Metview; at ECMWF, the command to use is metview (see `Metview at EC
 You should see the main Metview desktop popping up.
 
 You will create some icons yourself, but some are supplied for you. 
-If you are at ECMWF then you can copy the icons from the command line like this:
-
-.. code-block:: python
+If you are at ECMWF then you can copy the icons from the command line like this::
   
   cp -R /home/graphics/cgx/tutorials/wms_tutorial $HOME/metview
   
@@ -28,8 +24,6 @@ Otherwise, please download the following file:
 
 .. list-table::
 
-  * - **Download**
-  
   * - `wms_tutorial.tar <https://confluence.ecmwf.int/download/attachments/46599079/wms_tutorial.tar?api=v2&modificationDate=1426071647457&version=1>`_
 
 and save it in your ``$HOME/metview`` directory. 
@@ -79,7 +73,7 @@ The **Metview WMS client** can perform both of these request types enabling user
 The WMS standard defines **different versions**. 
 Metview supports all the versions commonly used to date: 1.0, 1.1, 1.1.1 and 1.3.0.
 
-For further information on WMS standards please turn to the official documents available at the OGC web site:`http://www.opengeospatial.org/standards <http://www.opengeospatial.org/standards>`_
+For further information on WMS standards please turn to the official documents available at the OGC web site: `http://www.opengeospatial.org/standards <http://www.opengeospatial.org/standards>`_
 
 Getting started
 ***************
@@ -135,10 +129,8 @@ The service provider's meta-data (Service tab) is also displayed on the right ha
 Selecting a Layer
 =================
 
-Now browse the layer tree on the left hand side and select the sub-layer called
+Now browse the layer tree on the left hand side and select the sub-layer called::
 
-.. code-block:: python
-  
   Sea Surface Temperature 1981-2006 (1 month - AVHRR)
   
 Then switch to the Layer information tab on the right hand side of the editor. 
@@ -159,8 +151,8 @@ On top of the meta-data various user-configurable map image generation parameter
 
 * **CRS/SRS**: It stands for **Coordinate Reference System** (for WMS version 1.3.0 or later) or **Spatial Reference System** (older WMS versions). 
   Each layer can offer an arbitrary number of reference systems. 
-  Metview currently supports the **CRS:84** and **EPSG:4326 **reference systems. 
-  Both stand for the lat-lon or plate-carr�e projection. 
+  Metview currently supports the **CRS:84** and **EPSG:4326** reference systems. 
+  Both stand for the lat-lon or plate-carrée projection. 
   Please note that a bounding box is associated for each CRS/SRS in a given layer. 
   However, this bounding box is not editable in the WMS Client editor, instead Metview will adjust it automatically for the needs of visualisation.
 
@@ -266,9 +258,7 @@ Edit it and select the Layer settings tab on the left hand side.
 This panel lists all the dimensions of the selected layer. 
 Here we can only see dimension **Time** because only this dimension is defined for the layer. 
 Now click on the extension button next to the **Time** label to see all the possible values. 
-What you can see here is as follows (apart from the default value):
-
-.. code-block:: python
+What you can see here is as follows (apart from the default value)::
   
   1981-09-01/2006-12-01/P1M
   
@@ -276,10 +266,8 @@ This expression defines a range of time values based on a special encoding (this
 This expression reads as: dates from 1981-09-01 to 2006-12-01 by a one month step.
 
 Now we will specify every month in 2006 to generate twelve map images for our animation. 
-First we need to clear the current selection (by clicking on the clear button to the right of the text input area) and then type in the following text:
+First we need to clear the current selection (by clicking on the clear button to the right of the text input area) and then type in the following text::
  
-.. code-block:: python
-  
   2006-01-01/2006-01-12/P1M
   
 Having done this the interface should look like as follows:
@@ -318,8 +306,9 @@ To manage the key profiles (e.g. to add your own profiles) please try the **Key 
 **Remarks**:
 
 * As a general rule multiple dimension values can be specified as a comma separated list. 
-  This is also true for dimension **Time** so our time selection could have been written as:
-      *2006-01-01,2006-02-01,2006-03-01,2006-04-01,2006-05-01,2006-06-01,2006-07-01,2006-08-01,2006-09-01,2006-10-01,2006-11-01,2006-12-01*
+  This is also true for dimension **Time** so our time selection could have been written as::
+
+      2006-01-01,2006-02-01,2006-03-01,2006-04-01,2006-05-01,2006-06-01,2006-07-01,2006-08-01,2006-09-01,2006-10-01,2006-11-01,2006-12-01
 
 Please note that white spaces are not allowed between the commas and the values!
 
@@ -372,10 +361,8 @@ The editable WMS request parameters are listed on the left hand side of the inte
 Whenever you edit a parameter the WMS request displayed on the right hand side of the interface is immediately updated.
 
 To demonstrate the editor's capabilities we will change parameter **Time** by adding an another date to it. 
-Now change parameter **Time** and type in the following text into its editor:
+Now change parameter **Time** and type in the following text into its editor::
 
-.. code-block:: python
-  
   2006-11-01,2006-12-01
   
 From *Part 3* we know that the date we added (November 2006) is a valid date. 
@@ -462,7 +449,7 @@ You should see something like this (after removing the comment lines starting wi
   nasa = wmsclient(
      server     :"http://neowms.sci.gsfc.nasa.gov...",
        version    :    "Default",
-     request    :    "http://neowms.sci.gsfc...",
+       request    :    "http://neowms.sci.gsfc...",
        extra_getcap_par     :    "",
        extra_getmap_par     :    "",
        http_user  :    "",
@@ -470,7 +457,7 @@ You should see something like this (after removing the comment lines starting wi
        layer_title     :    "Sea Surface Temperature \u2026",
        layer_description    :    "Sea surface \u2026",
        service_title   :    "NASA Earth \u2026",
-     layer_legend    :    "http://neo.sci...",
+       layer_legend    :    "http://neo.sci...",
        time_dimensions :    "TIME"
        )
   

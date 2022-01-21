@@ -30,9 +30,7 @@ Start Metview
 =============
 
 To access the SCM interface metview_new has to be used. 
-It can be started up by typing
-
-.. code-block:: python
+It can be started up by typing::
 
   metview &
  
@@ -41,9 +39,7 @@ on the command line.
 Copy the tutorial files
 =======================
 
-From a command line, type  
-  
-.. code-block:: python
+From a command line, type::  
   
   /home/ectrain/trx/pa/scm_setup
 
@@ -92,7 +88,7 @@ The editor's window is split into three parts:
   On smaller screens the file information panel may occupy too much space and thus reduces the visible data/plot area. 
   You can easily hide (or shown again) by using this toolbar icon:
     
-  [missing image]
+  .. image:: /_static/the_scm_interface_in_metview_tutorial/image_m1.png
     
 Profile selection
 =================
@@ -105,16 +101,16 @@ Profiles can be selected in various ways:
 
 * by clicking into the parameter list located above the profile plot (see the snapshot below).
 
-[missing image]
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image_m2.png
 
 This list only contains the model level parameters and their colour code indicate whether they are editable (light beige) or not (dark beige). 
 Use this button 
 
-[missing image]
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image_m3.png
 
 in the toolbar to show only the editable parameters.
 
-**Select the temperature profile - we will edit it in the next step**.
+** Now select the temperature profile - we will edit it in the next step**.
 
 Parameter editing
 =================
@@ -128,7 +124,7 @@ Modified data values are highlighted in deep orange.
 **Now change some values in the temperature profile to see how editing works.** 
 Try both the table-based and graphical editing.
 
-[missing image]
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image_m4.png
 
 The **redo/undo** functionality works for all individual editing steps. 
 You can access it via these toolbar buttons
@@ -139,7 +135,7 @@ or by the Ctrl+Z (undo) Ctrl+Shift+Z (redo) keyboard shortcuts.
 
 If you would like to reject all your changes and go back to the last saved state just click on the **Reset** button in the bottom left corner of the editor window.
 
-[missing image]
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image_m5.png
 
 .. note::
 
@@ -148,18 +144,18 @@ If you would like to reject all your changes and go back to the last saved state
   Please note that no changes are saved back into the edited file until you click **Save** or **Ok** (this performs save and closes the editor) in the bottom right corner of the editor window. 
   There is another button here: **Cancel**, which closes the editor and rejects all the unsaved modifications.
 
-  [missing image]
+  .. image:: /_static/the_scm_interface_in_metview_tutorial/image_m6.png
 
 Time stepping
 =============
 
 You can easily navigate through the timesteps either by using the step **combo box** in the toolbar or the **previous/next buttons** next to it.
 
-[missing image]
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image_m7.png
 
 The step comb box indicates if a timestep was edited: for such steps a small "edited" icon appears next to the step label. 
 
-[missing image]
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image_m8.png
 
 Overwriting time steps
 ======================
@@ -169,7 +165,7 @@ Now you will learn how to overwrite the other timesteps with the data in the cur
 First, ensure that you selected your modified timestep.  
 Second, click this button in the toolbar:
 
-[missing image]
+.. image:: /_static/the_scm_interface_in_metview_tutorial/image_m9.png
 
 You will see a dialog popping up asking you to confirm the changes. Please note that after this operation the redo/undo history gets deleted!
 
@@ -235,7 +231,7 @@ You have now run the single column model on two different sets of input data, an
 Visualising the SCM data
 ************************
 
-The output of an SCM run can be visualised using the *SCM Visualiser* icon, available from the right-click 'Create new icon' desktop menu:
+The output of an SCM run can be visualised using the :ref:`Scm Visualiser <scm_visualiser_icon>` icon, available from the right-click 'Create new icon' desktop menu:
 
 .. image:: /_static/the_scm_interface_in_metview_tutorial/image2013-1-22_12-18-50.png
 
@@ -256,7 +252,7 @@ This icon allows the generation of the following plot types (specified in the **
 Visualising a parameter as a time/value curve
 =============================================
 
-Create a new *SCM Visualiser* icon and edit it. Drop your *SCM Run* icon into the **Scm Data** parameter box in the *SCM Visualiser* icon editor.
+Create a new :ref:`Scm Visualiser <scm_visualiser_icon>` icon and edit it. Drop your *SCM Run* icon into the **Scm Data** parameter box in the :ref:`Scm Visualiser <scm_visualiser_icon>` icon editor.
 
 .. note::
 
@@ -283,7 +279,7 @@ To compare your two runs, set **Scm Compare Data** to **On** and drop your *SCM 
 Other visualisation types
 =========================
 
-To generate a different plot, but keep these settings, make a copy of your *Scm Visualiser* icon and edit this copy.
+To generate a different plot, but keep these settings, make a copy of your :ref:`Scm Visualiser <scm_visualiser_icon>` icon and edit this copy.
 
 .. note::
 
@@ -327,7 +323,7 @@ Additional information about plotting
 * For all plot types, it is possible to select multiple variables, but in this case, **Scm Output Mode** must be set to Postscript. 
   This limitation should be lifted in the future.
   
-* The *Scm Visualiser* also contains parameters which can be used to change the x and y axis limits, and also to set the limits on the value range considered for shading in the matrix plots. 
+* The :ref:`Scm Visualiser <scm_visualiser_icon>` icon also contains parameters which can be used to change the x and y axis limits, and also to set the limits on the value range considered for shading in the matrix plots. 
   An axis grid can also be enabled.
   
-* The *Scm Visualiser* can also be used to plot the SCM input netCDF files - set **Scm Data Type** to **Input**; the parameters **Scm Input 1d Variables** and **Scm Input 2d Variables** become available.
+* The :ref:`Scm Visualiser <scm_visualiser_icon>` icon can also be used to plot the SCM input netCDF files - set **Scm Data Type** to **Input**; the parameters **Scm Input 1d Variables** and **Scm Input 2d Variables** become available.

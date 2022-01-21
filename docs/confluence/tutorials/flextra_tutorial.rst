@@ -17,8 +17,6 @@ You should see the main Metview desktop popping up.
 
 You will create some icons yourself, but some are supplied for you - please download the following file:
 
-**Download**
-
 .. list-table::
 
   * - `flextra_tutorial.tar.gz <http://download.ecmwf.org/test-data/metview/tutorial/flextra_tutorial.tar.gz>`_
@@ -810,7 +808,7 @@ Basics
 
 The implementation of FLEXTRA-related operations in Metview macro follow the same principles as in the interactive mode. In macro we work with the macro command equivalents of the FLEXTRA icons we have seen so far:
 
-  * *FLEXTRA File* icon: its corresponding macro commands are :func:`read`` and :func:`write`.
+  * *FLEXTRA File* icon: its corresponding macro commands are :ref:`read() <read_fn>`` and :func:`write`.
   * *FLEXTRA Run* icon: its corresponding macro command is :func:`flextra_run`.
   * *FLEXTRA Visualiser* icon: its corresponding macro command is :func:`flextra_visualiser`.
   
@@ -910,7 +908,7 @@ The macro should look like this:
   
 Our code now contains an ``if`` statement to check if the FLEXTRA output file exits. 
 If it does not exist we run FLEXTRA to compute the trajectories and save the resulting data into this file using the write() function. 
-Otherwise we read the file from the disk with the :func:`read` function into our ``run_normal`` variable.
+Otherwise we read the file from the disk with the :ref:`read() <read_fn>` function into our ``run_normal`` variable.
 
 Run this macro to make sure that it is working (a *FLEXTRA File* icon called 'res_normal_macro.txt' should appear in the folder). 
 Then run it again to see that the execution time really became shorter because we bypassed the FLEXTRA trajectory computations.

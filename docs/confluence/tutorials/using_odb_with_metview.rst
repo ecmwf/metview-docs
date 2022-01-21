@@ -12,10 +12,8 @@ Preparations
 
 First start Metview; at ECMWF, the command to use is metview for this tutorial (see `Metview at ECMWF <https://confluence.ecmwf.int/display/METV/Metview+at+ECMWF>`_ for details of Metview versions).
 
-Then run the following command from the command line:
+Then run the following command from the command line::
  
-.. code-block:: unix
-  
   cp -Rf ~cgx/tutorials/odb_seminar_2017 ~/metview/
   
 This will copy all the examples into your Metview home folder. 
@@ -33,7 +31,7 @@ Enter folder 'main' to start the exercise.
 Retrieving the ODB data from MARS
 =================================
 
-The 'ret_temp' *MARS Retrieval* icon is already prepared for you to fetch Land TEMP ODB data from MARS for a given date. 
+The 'ret_temp' :ref:`MARS Retrieval <retrieve_icon>` icon is already prepared for you to fetch Land TEMP ODB data from MARS for a given date. 
 Edit the icon (right-click & **edit**) to see what parameters are set. 
 The most important ones are as follows:
 
@@ -76,10 +74,10 @@ A few seconds later an *ODB Database* icon with the given name will appear at th
 Using the ODB Visualiser
 ========================
 
-We will visualise the 500 hPa temperature values from our ODB using the 'vis_temp' *ODB Visualiser* icon. 
+We will visualise the 500 hPa temperature values from our ODB using the 'vis_temp' :ref:`ODB Visualiser <odb_visualiser_icon>` icon. 
 The query we need to perform is as follows:
  
-.. code-block:: python
+.. code-block:: SQL
   
   select 
     lat@hdr, 
@@ -94,7 +92,7 @@ First, drop your *ODB Database* icon into the **ODB Data** field.
 
 Next, specify the where statement of the query in the **ODB Where** parameter as:
   
-.. code-block:: python
+.. code-block:: SQL
   
   varno = 2 and vertco_reference_1=50000
   
@@ -153,7 +151,7 @@ Writing a Macro
 
 We will write a Macro to reproduce the same temperature map as we plotted with icons.
 
-Create a new *Macro* icon (in an empty area of the desktop right-click and select **Create new macro**) and edit it. First, drag your 'vis_temp' *ODB Visualiser* icon into the **Macro editor** just below the line containing the ``#Metview Macro`` text.  
+Create a new *Macro* icon (in an empty area of the desktop right-click and select **Create new macro**) and edit it. First, drag your 'vis_temp' :ref:`ODB Visualiser <odb_visualiser_icon>` icon into the **Macro editor** just below the line containing the ``#Metview Macro`` text.  
 Next, drag your 'symbol' :ref:`Symbol Plotting <msymb_icon>` icon into the  editor below the text the editor already holds. Next, add the following line to the macro:
   
 .. code-block:: python

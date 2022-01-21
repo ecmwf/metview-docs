@@ -16,15 +16,11 @@ In Metview, all operations can be performed via icons. All icons are available v
 
 You will create some icons yourself, but some are supplied for you - please download the following file and save it in your ``$HOME/metview`` directory:
 
-**Download**
-
 .. list-table::
 
   * - `metview_intro.tar.gz <https://confluence.ecmwf.int/download/attachments/24315573/metview_intro.tar.gzhttps://confluence.ecmwf.int/download/attachments/24315573/metview_intro.tar.gz?version=1&modificationDate=1487239314179&api=v2>`_
 
-Alternatively, if at ECMWF then you can copy it like this from the command line:
-
-.. code-block:: unix
+Alternatively, if at ECMWF then you can copy it like this from the command line::
 
   cp /scratch/graphics/cgi/metview_intro.tar.gz $HOME/metview/
 
@@ -32,9 +28,10 @@ You should see it appear on your main Metview desktop, from where you can right-
 You should now (after a few seconds) see a *metview_intro* folder which contains the icons we will work with. 
 You should work in this folder, not the embedded *solutions* folder.
 
-**Figure 1 - the Metview desktop**
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/default-desktop.png
+     
+    Figure 1 - the Metview desktop
 
-.. image:: /_static/ecmwf_new_users_metview_tutorial/default-desktop.png
 
 Exercise 1: forecast - analysis difference
 ******************************************
@@ -70,6 +67,10 @@ Edit your icon (right-click & **edit**, see **Figure 2**) and set the following 
 
 To save these settings, click the Save button at the bottom-left of the icon editor (or click Ok to save and close the editor).
 
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/mars-editor.png
+
+    Figure 2 - the Mars Retrieval icon editor
+
 Inspecting the analysis data
 ============================
 
@@ -80,6 +81,10 @@ To see what was retrieved, right-click **examine** the icon.
 This brings up Metview's GRIB Examiner tool (**Figure 3**). 
 Here we can see that we retrieved six vertical levels of data; this is as expected if we look at the **Levelist** parameter in the icon editor.
 
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-35-56.png
+
+    Figure 3 - the GRIB Examiner
+
 .. note::
 
   The GRIB Examiner allows in-depth examination of GRIB files with many ways to customise the information. 
@@ -88,6 +93,10 @@ Here we can see that we retrieved six vertical levels of data; this is as expect
 Now **visualise** the data, again using the icon's context menu. 
 You will see a map plot with the default contouring style in the Display Window (**Figure 4**). 
 The *zoom* controls in the toolbar give control over the area selection.
+
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-36-59.png
+
+    Figure 4 - a default map plot
 
 To plot the data with shaded colours, create another new icon - this time select the *Contouring* icon. 
 Rename it *shade* and edit it, providing these parameters:
@@ -128,6 +137,11 @@ Rename it *shade* and edit it, providing these parameters:
 
 Save the icon settings (Save) and drop this into the Display Window (re-visualise the data if you have closed the Display Window). 
 The result should resemble **Figure 5**. 
+
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-45-44.png
+
+    Figure 5 - map plot with shaded contours
+
 Metview's *Contouring* icon provides much flexibility in choosing how to display gridded fields; this tutorial uses only simple colour schemes.
 
 The fields can be visualised using different *views*. 
@@ -137,6 +151,10 @@ Visualise the *polar_stereo_europe* icon and drop your *temperature_analysis* ic
 Now close the Display Window and visualise your data in the same way with the the *cross_section_example* view. 
 This icon defines a geographical line along which a cross section of the data is computed (remember that the data consists of a number of vertical levels). 
 You can also drop your *shade* icon into the plot (**Figure 6**).
+
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-27-57.png
+
+    Figure 6 - cross section plot of data
 
 .. note::
 
@@ -185,6 +203,10 @@ Note that all 6 fields in each data icon are used in the computation - the resul
 The *solutions* folder contains two *Contouring* icons which can be used to show the differences: select both *pos_shade* and *neg_shade* with the mouse and drop them both together into the Display Window (see Figure 7). 
 It is also possible to drop them one at a time, but they do not accumulate - one will replace the other.
 
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-26_17-3-10.png
+
+    Figure 7 - difference plot with two contour icons
+
 Automating the whole procedure
 ==============================
 
@@ -192,41 +214,16 @@ Ensure that the difference fieldset is visualised with the contouring applied.
 To generate a Metview Macro script from this plot, click the **Generate Macro** button (also available from the **File** menu). 
 A new Macro script will be generated - have a look at it to confirm that it contains code to retrieve all the data, compute the difference and plot the result. 
 Run the macro to obtain the plot, either by using the Run button from the Macro Editor, or by selecting *visualise* from the icon's context menu). 
-By default, the macro is written so that it will produce an interactive plot window; it will generate a PostScript file if it is run with the **execute** command, or if it is run from the command line:
-
-.. code-block:: unic
+By default, the macro is written so that it will produce an interactive plot window; it will generate a PostScript file if it is run with the **execute** command, or if it is run from the command line::
 
   metview -b  <macro-name>
  
 .. note::
 
   Metview Macro is a rich, powerful scripting language designed for the high-level manipulation and plotting of meteorological data. 
-  For examples of the available functions, see `List of Operators and Functions <https://confluence.ecmwf.int/display/METV/List+of+Operators+and+Functions>`_. 
+  For examples of the available functions, see :ref:`List of Operators and Functions <macro_fn_list>`. 
   The code generated automatically above is intended as a starting point only - usually at least some editing will be required in order to make the code more streamlined for your needs.
 
-**Figure 2 - the Mars Retrieval icon editor**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/mars-editor.png
-
-**Figure 3 - the GRIB Examiner**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-35-56.png
-
-**Figure 4 - a default map plot**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-36-59.png
-
-**Figure 5 - map plot with shaded contours**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-25_16-45-44.png
-
-**Figure 6 - cross section plot of data**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-27-57.png
-
-**Figure 7 - difference plot with two contour icons**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-26_17-3-10.png
 
 Exercise 2: forecast - observation difference
 *********************************************
@@ -254,10 +251,18 @@ Edit it and set the following parameters in order to retrieve BUFR observation d
     - -3
 
 Retrieve the data and **examine** it. 
-Metview's BUFR Examiner displays the contents of the BUFR data (**Figure 8**). 
-Each message contains many measurements. 
+Metview's BUFR Examiner displays the contents of the BUFR data (**Figure 8**). Each message contains many measurements. 
+
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-47-38.png
+
+    Figure 8 - the BUFR Examiner
+
 If you **visualise** the data, you will see a standard display of synoptic observations. 
 **Figure 9** shows this, using the shaded_coastlines icon from the solutions folder (this plot has also been zoomed to show a smaller area).
+
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-53-3.png
+
+    Figure 9 - synoptic observation plotting
 
 Extracting the 2 metre temperature
 ==================================
@@ -286,6 +291,10 @@ With this icon we will extract just the 2m temperature into Metview's custom ASC
   When you **visualise** the data, you will see that the actual values are plotted as text on the screen; we can do better than this. 
   From the *solutions* folder, drop the *coloured_markers* icon into the Display Window. 
   The *shaded_coastlines* icon may also help make the points easier to see (**Figure 10**).
+
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_10-0-50.jpg
+
+    Figure 10 - 2m temperature observations
  
 Retrieving the forecast data
 ============================
@@ -329,21 +338,10 @@ Visualise *t2m_forecast* and drop the *shade* icon into the plot.
 Now drop *fc_obs_diff* into the plot, followed by (or with) *diff_symb_hot* and *diff_symb_cold*. 
 The observation differences don't stand out well against the strongly coloured field, so drop *shade_light* into the plot to obtain something like Figure 11.
 
-**Figure 8 - the BUFR Examiner**
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_13-7-29.jpg
 
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-47-38.png
+    Figure 11 - temperature forecast field with obs-forecast differences overlaid
 
-**Figure 9 - synoptic observation plotting**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_9-53-3.png
-
-**Figure 10 - 2m temperature observations**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_10-0-50.jpg
-
-**Figure 11 - temperature forecast field with obs-forecast differences overlaid**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/image2013-2-27_13-7-29.jpg
 
 Exercise 3: ODB data
 ********************
@@ -385,10 +383,14 @@ Save a local copy of the ODB data to the current folder by right-clicking **Save
 A few seconds later an *ODB Database* icon (**Figure 12**) with the given name will appear at the bottom of your folder. 
 We will work with this to avoid repeating the retrieval.
 
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/odb-icons.png
+
+    Figure 12 - ODB and ODB Visualiser icon
+
 Using the ODB Visualiser
 ========================
 
-We will select and visualise the 500 hPa temperature values from our ODB using the '*vis_temp*' *ODB Visualiser* icon.
+We will select and visualise the 500 hPa temperature values from our ODB using the '*vis_temp*' :ref:`ODB Visualiser <odb_visualiser_icon>` icon.
 
 Now edit the *vis_temp* icon.
 
@@ -396,12 +398,12 @@ First, drop your *ODB Database* icon into the **ODB Data** field.
 
 Next, specify the where statement of the query in the **ODB Where** parameter as:
   
-.. code-block:: python
+.. code-block:: SQL
   
   varno = 2 and vertco_reference_1=50000
   
 Save these settings, then right-click **visualise** the '*vis_temp*' icon to generate the plot. 
-Then drag the the provided :ref:`Symbol Plotting <msymb_icon>`, :ref:`Coastlines <mcoast_icon>`, `Legend <https://confluence.ecmwf.int/display/METV/Legend>`_ and `Text Plotting <https://confluence.ecmwf.int/display/METV/Text+Plotting>`_ icons into the plot for further customisation. Metview's plot window has many tools for inspecting data values, described in detail in the standalone tutorial "`Using ODB with Metview <https://confluence.ecmwf.int/display/METV/Using+ODB+with+Metview>`_". Do not close the plot window yet.
+Then drag the the provided :ref:`Symbol Plotting <msymb_icon>`, :ref:`Coastlines <mcoast_icon>`, :ref:`Legend <mlegend_icon>` icon and :ref:`Text Plotting <mtext_icon>` icon icons into the plot for further customisation. Metview's plot window has many tools for inspecting data values, described in detail in the standalone tutorial "`Using ODB with Metview <https://confluence.ecmwf.int/display/METV/Using+ODB+with+Metview>`_". Do not close the plot window yet.
 
 Overlaying with GRIB data
 =========================
@@ -410,7 +412,11 @@ The '*fc.grib*' GRIB icon contains 12 h global forecasts of temperature and wind
 
 To overlay the 500 hPa temperature forecast we need to filter the matching field from the GRIB file. 
 The '*t500_fc*' GRIB Filter icon is already already set up to perform this task. 
-Just drag '*t500_fc*' into the plot, then drag the '*t_cont*' `Contouring <https://confluence.ecmwf.int/display/METV/Contouring>`_ icon into the plot as well to customise the contour lines (**Figure 13**).
+Just drag '*t500_fc*' into the plot, then drag the '*t_cont*' :ref:`Contouring <mcont_icon>` icon icon into the plot as well to customise the contour lines (**Figure 13**).
+
+.. figure:: /_static/ecmwf_new_users_metview_tutorial/odb-t-overlay.png
+
+    Figure 13 - ODB and GRIB data overlai
 
 Further ODB work
 ================
@@ -418,22 +424,10 @@ Further ODB work
 If you have time, inspect and run the supplied macros:
 
 * '*diff.mv*' - computes and plots the difference between the ODB observation data and the GRIB model forecast
-
 * '*plot_wind.mv*' - extracts U and V wind components from the ODB data, converts to *geopoints* format and plots the result
-
 * '*plot_tephi.mv*' - computes and plots a tephigram for a given station ID
 
-The results can be seen in **Figure 14**.
-
-**Figure 12 - ODB and ODB Visualiser icons**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-icons.png
-
-**Figure 13 - ODB and GRIB data overlaid**
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-t-overlay.png
-
-**Figure 14 - further ODB plots**
+The results can be seen in the images below:
 
 .. image:: /_static/ecmwf_new_users_metview_tutorial/odb-diff.png
 

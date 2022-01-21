@@ -222,7 +222,7 @@ Create a new *Macro* icon and edit it.
 This time we see a code editor, custom-built for the Macro language. 
 The editor can automatically translate Metview icons into Macro code, so do the following:
 
-* drop the *t1000.grb* icon into the Macro Editor; a variable called ``t1000_2e_grb`` is assigned to the value of the :func:`read` command, which reads the GRIB data. Such variable names are based on the names of the icons used to generate them, but with non-permitted characters replaced by their hexadecimal code (in this case, the dot in the filename is replaced with 2e).
+* drop the *t1000.grb* icon into the Macro Editor; a variable called ``t1000_2e_grb`` is assigned to the value of the :ref:`read() <read_fn>` command, which reads the GRIB data. Such variable names are based on the names of the icons used to generate them, but with non-permitted characters replaced by their hexadecimal code (in this case, the dot in the filename is replaced with 2e).
 * rename the variable to simply be ``t1000``
 * drop your polar_europe icon into the Macro Editor
 * underneath the generated code, type the following line:
@@ -259,7 +259,7 @@ Your complete macro should look like this:
 
 Now run the macro to generate the plot.
 
-Note that we can put a relative path into the :func:`read` command:
+Note that we can put a relative path into the :ref:`read() <read_fn>` command:
 
 .. code-block:: python
 

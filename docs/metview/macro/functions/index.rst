@@ -1,3 +1,5 @@
+.. _macro_fn_list:
+
 Macro functions
 ====================================
 

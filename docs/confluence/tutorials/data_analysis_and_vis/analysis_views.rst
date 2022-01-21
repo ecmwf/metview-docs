@@ -212,7 +212,7 @@ This exercise reads two forecast steps, computes the differences and visualises 
 Create a new Macro icon and rename it to *xsdiff*. 
 Edit it and do the following:
 
-* drop the *t_fc24.grib* icon into the Macro Editor. A variable called *t_fc24_2e_grib* is assigned to the value of the :func:`read` command, which reads the GRIB data. Rename the variable to simply be *t_fc24*.
+* drop the *t_fc24.grib* icon into the Macro Editor. A variable called *t_fc24_2e_grib* is assigned to the value of the :ref:`read() <read_fn>` command, which reads the GRIB data. Rename the variable to simply be *t_fc24*.
 
 * drop the *t_fc96.grib* icon into the Macro Editor. Rename the variable to *t_fc96*.
 

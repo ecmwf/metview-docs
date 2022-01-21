@@ -3,12 +3,10 @@
 VAPOR Tutorial
 ##############
  
-This tutorial explains how to convert ECMWF GRIB data into VAPOR format and how to `visualise <https://confluence.ecmwf.int/display/METV/VAPOR+Tutorial#VAPORTutorial-visualisation>`_ the resulting data in VAPOR.
+This tutorial explains how to convert ECMWF GRIB data into VAPOR format and how to :ref:`visualise <vapor_tutorial_visualisation>` the resulting data in VAPOR.
 
 .. note::
 
-  **Requirements**
-  
   Please note that this tutorial requires Metview version **4.4.6** or later. 
   Also for users outside ECMWF the Metview VAPOR interface should be properly set up as described `here <https://confluence.ecmwf.int/display/METV/VAPOR+Setup>`_.
 
@@ -18,16 +16,15 @@ Preparations
 First start Metview; at ECMWF, the command to use is metview (see `Metview at ECMWF <https://confluence.ecmwf.int/display/METV/Metview+at+ECMWF>`_ for details of Metview versions). 
 You should see the main Metview desktop popping up.
 
-You will create some icons yourself, but some are supplied for you - please download the following file:
+You will create some icons yourself, but some are supplied for you - please download the following file: 
 
-.. list-table::
-
-  * - **Download**
+.. list-table:: 
   
   * - `vapor_tutorial.tar.gz <https://confluence.ecmwf.int/download/attachments/29328811/vapor_tutorial.tar.gz?api=v2&modificationDate=1390381084784&version=1>`_
 
-  * - Alternatively, if at ECMWF then you can copy it like this from the command line:
-    ``cp /home/graphics/cgx/tutorials/vapor_tutorial.tar.gz $HOME/metview
+Alternatively, if at ECMWF then you can copy it like this from the command line::
+  
+    cp /home/graphics/cgx/tutorials/vapor_tutorial.tar.gz $HOME/metview
     
 and save it in your ``$HOME/metview`` directory. You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files. 
 You should now (after a few seconds) see a *vapor_tutorial* folder which contains the solutions and also some additional icons required by these exercises. 
@@ -52,7 +49,7 @@ These are NetCDF files containing wavelet compressed 3D data.
 There is a separate file for each variable and timestep organized into a folder hierarchy.
 
 There are a set of VAPOR command line tools that can convert NetCDF input data into this format but there is no such tool available for GRIB. 
-This tutorial shows you how to use Metview's `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ icon to convert GRIB data into the VAPOR format.
+This tutorial shows you how to use Metview's :ref:`VAPOR Prepare <vapor_prepare_icon>` icon icon to convert GRIB data into the VAPOR format.
 
 VAPOR grids
 ===========
@@ -74,7 +71,6 @@ The grid in this case is not **layered** but can be regarded as **regular** in i
 VAPOR uses a right-handed coordinate system which means that :
 
 * the horizontal grid has to start at the SW corner
-
 * the vertical coordinates have to increase along the z axis (upwards)
 
 Supported GRIBs
@@ -96,7 +92,6 @@ The GRIB data is already in its place.
 In your folder you will find the two GRIB files you need to use for this exercise:
 
 * pl.grib: contains z, t, r, u and v on pressure levels
-
 * pl_surf.grib: contains z, 2t ,10u and 10v on surface
 
 Please note that both these files were retrieved from MARS by using the 'ret_pl' and 'ret_pl_surf' *MARS retrieval* icons in the *solutions* folder.
@@ -104,7 +99,7 @@ Please note that both these files were retrieved from MARS by using the 'ret_pl'
 Running Vapor Prepare
 =====================
 
-Create a `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ icon (right-click in the desktop when no icons are selected and use the New icon ... menu).
+Create a :ref:`VAPOR Prepare <vapor_prepare_icon>` icon icon (right-click in the desktop when no icons are selected and use the New icon ... menu).
 
 .. image:: /_static/vapor_tutorial/doc1.png
 
@@ -126,7 +121,7 @@ Then you need to define the list of GRIB parameters you want to see in VAPOR.
 
 .. note::
 
-  Internally `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ converts surface geopotential to metres and rename it **HGT**.
+  Internally :ref:`VAPOR Prepare <vapor_prepare_icon>` icon converts surface geopotential to metres and rename it **HGT**.
 
 The vertical coordinate system has to be set carefully:
 
@@ -149,7 +144,7 @@ You also specified the vertical coordinate range (in metres) that VAPOR will dis
 
 .. note::
 
-  Internally `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ converts geopotential to metres and rename it ELEVATION (this is required by VAPOR).
+  Internally :ref:`VAPOR Prepare <vapor_prepare_icon>` icon converts geopotential to metres and rename it ELEVATION (this is required by VAPOR).
 
 The last step is to specify the name and location of the results of the conversion:
 
@@ -170,10 +165,10 @@ All the other VAPOR data files will be placed into a subdirectory called 'tut_pl
   However, real life examples can easily result in huge VAPOR files (gigabytes). 
   Therefore you should always **carefully select the output path** for the GRIB to VAPOR conversion.
 
-Now save your `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ icon then right click Execute to run the conversion. 
+Now save your :ref:`VAPOR Prepare <vapor_prepare_icon>` icon icon then right click Execute to run the conversion. 
 The icon will first turn orange then green when the conversion finishes.
 
-To visualise the VAPOR data generated please follow the instructions `here <https://confluence.ecmwf.int/display/METV/VAPOR+Tutorial#VAPORTutorial-visualisation>`_.
+To visualise the VAPOR data generated please follow the instructions :ref:`here <vapor_tutorial_visualisation>`.
 
 Converting model level data with elevation
 ******************************************
@@ -196,12 +191,12 @@ Please note that these files were retrieved from MARS by using the 'ret_ml', 're
 
 .. note::
 
-  Please note that upper level geopotential (z) is not available in the input files because it is not archived in MARS for model levels. However, `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ can derive it if tempreature (t), specific humidity (q) and logarithm of surface pressure (lnsp) are available (it is the case for our input data).
+  Please note that upper level geopotential (z) is not available in the input files because it is not archived in MARS for model levels. However, :ref:`VAPOR Prepare <vapor_prepare_icon>` icon can derive it if tempreature (t), specific humidity (q) and logarithm of surface pressure (lnsp) are available (it is the case for our input data).
 
 Running Vapor Prepare
 =====================
 
-Create a `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ icon. Rename it 'vapor_ml' and open up its editor.
+Create a :ref:`VAPOR Prepare <vapor_prepare_icon>` icon icon. Rename it 'vapor_ml' and open up its editor.
 
 First, ensure that **Vapor Input Mode** is set to Icon then drop your three Mars Retrieval icons into the **Vapor Input Data field**.
 
@@ -238,7 +233,7 @@ We also specified the vertical coordinate range (in metres) that VAPOR will disp
 
 .. note::
 
-  Although geopotential (z) is not available on model levels in the input data `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ computes it automatically if tempreature (t), specific humidity (q) and logarithm of surface pressure (lnsp) are available. 
+  Although geopotential (z) is not available on model levels in the input data :ref:`VAPOR Prepare <vapor_prepare_icon>` icon computes it automatically if tempreature (t), specific humidity (q) and logarithm of surface pressure (lnsp) are available. 
   Geopotential then gets converted into metres units and renamed to ELEVATION.
 
 Last, we specify the name and location of the results of the conversion:
@@ -251,9 +246,11 @@ Last, we specify the name and location of the results of the conversion:
   * - **Vapor Output Path**
     - *your_path_on_the_filesystem*
     
-Now save your `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ icon then right click Execute to run the conversion. The icon will first turn orange then green when the conversion finishes.
+Now save your :ref:`VAPOR Prepare <vapor_prepare_icon>` icon icon then right click Execute to run the conversion. The icon will first turn orange then green when the conversion finishes.
 
-To visualise the VAPOR data generated please follow the instructions `here <https://confluence.ecmwf.int/display/METV/VAPOR+Tutorial#VAPORTutorial-visualisation>`_.
+To visualise the VAPOR data generated please follow the instructions in the next chapter.
+
+.. _vapor_prepare_visualisation:
 
 Visualisation
 *************
@@ -270,12 +267,12 @@ Visualisation
 Stating up VAPOR
 ================
 
-Right click **Visualise** your `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ icon to start up VAPOR. 
+Right click **Visualise** your :ref:`VAPOR Prepare <vapor_prepare_icon>` icon icon to start up VAPOR. 
 You will see this window popping up:
 
 .. image:: /_static/vapor_tutorial/image2014-1-10_11-33-41.png
 
-Your **vdf file** (that you have created with your `VAPOR Prepare <https://confluence.ecmwf.int/display/METV/VAPOR+Prepare>`_ icon) is now loaded into VAPOR and you can see a cube representing your 3D data volume.
+Your **vdf file** (that you have created with your :ref:`VAPOR Prepare <vapor_prepare_icon>` icon icon) is now loaded into VAPOR and you can see a cube representing your 3D data volume.
 
 Adjusting the view volume
 =========================
