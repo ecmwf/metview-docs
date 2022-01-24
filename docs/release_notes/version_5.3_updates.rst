@@ -4,7 +4,7 @@ Version 5.3 updates
 ///////////////////
 
 
-**Externally **\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ ** on
+**Externally** `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ ** on
 2018-12-05**
 
 **Became metview/new at ECMWF on 2018-12-05 (Linux desktops, ecgate,
@@ -15,10 +15,10 @@ lxc, lxop)**
    -  Installed **2018-12-05**
 
    -  Built
-      with **Magics **\ `3.3.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      with **Magics** `3.3.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.10.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.10.0+released>`__\ ** **
+      with **ecCodes** `2.10.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.10.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__

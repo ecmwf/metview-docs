@@ -17,20 +17,19 @@ Table of Contents
 Version 5.9.1
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2020-07-22
-Became metview/new at ECMWF on 2020-07-22 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-07-22
+* Became metview/new at ECMWF on 2020-07-22 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2020-07-22**
 
    -  Built
-      with **Magics **\ `4.4.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.4.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.18.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.18.0+released>`__\ ** **
+      with **ecCodes** `2.18.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.18.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.19.4 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -75,20 +74,19 @@ lxop)**
 Version 5.9.0
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2020-06-24
-Became metview/new at ECMWF on 2020-06-24 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-06-24
+* Became metview/new at ECMWF on 2020-06-24 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2020-06-24**
 
    -  Built
-      with **Magics **\ `4.4.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.4.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.18.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.18.0+released>`__\ ** **
+      with **ecCodes** `2.18.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.18.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.19.4 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__

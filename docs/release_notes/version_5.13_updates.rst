@@ -3,36 +3,23 @@
 Version 5.13 Updates
 ////////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.13.2 `3 <#version-5.13.2>`__
-
-2 Version 5.13.1 `4 <#version-5.13.1>`__
-
-3 Version 5.13.0 `5 <#version-5.13.0>`__
 
 Version 5.13.2
 ==============
 
-**Not externally released.
-Became metview/new at ECMWF on 2021-09-29 (Linux desktops, ecgate, lxc,
-lxop)**
+* Not externally released. 
+* Became metview/new at ECMWF on 2021-09-29 (Linux desktops, ecgate, lxc, lxop)
 
 **No changes in this version - installed at ECMWF as a 'container' for
-metview-python 1.8.1 - see **\ `Metview Python Release
+metview-python 1.8.1 - see**:  `Metview Python Release
 Notes <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__
 
 Version 5.13.1
 ==============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2021-09-16
-Not installed at ECMWF, as there is no need**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2021-09-16
+* Not installed at ECMWF, as there is no need
+
 
 **Startup:**
 
@@ -47,20 +34,19 @@ Not installed at ECMWF, as there is no need**
 Version 5.13.0
 ==============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2021-08-26
-Became metview/new at ECMWF on 2021-08-25 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2021-08-26
+* Became metview/new at ECMWF on 2021-08-25 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2021-08-25**
 
    -  Built
-      with **Magics **\ `4.9.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.9.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.23.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.23.0+released>`__
+      with **ecCodes** `2.23.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.23.0+released>`__
 
    -  Built with **ODC** version **1.4.1**
 
@@ -74,29 +60,29 @@ lxop)**
 
 -  new function shear_deformation() - computes the shear deformation of
    vector fields. See the
-   `description <https://metview.readthedocs.io/en/latest/api/functions/shear_deformation.html#shear_deformation>`__
-   and `gallery
-   example <https://metview.readthedocs.io/en/latest/gen_files/gallery/deformation.html#gallery-deformation>`__
+   :ref:`description <shear_deformation>`
+   and :ref:`gallery
+   example <gallery_deformation>`
    on readthedocs.
 
 -  new function stretch_deformation() - computes the stretch deformation
    of vector fields. See the
-   `description <https://metview.readthedocs.io/en/latest/api/functions/stretch_deformation.html#stretch_deformation>`__
-   and `gallery
-   example <https://metview.readthedocs.io/en/latest/gen_files/gallery/deformation.html#gallery-deformation>`__
+   :ref:`description <stretch_deformation>`
+   and :ref:`gallery
+   example <gallery_deformation>`
    on readthedocs.
 
 -  new function virtual_temperature() - computes the virtual
    temperature. See the description on
-   `readthedocs. <https://metview.readthedocs.io/en/latest/api/functions/virtual_temperature.html#virtual_temperature>`__
+   :ref:`readthedocs. <virtual_temperature>`
 
 -  new function specific_humidity_from_dewpoint() - computes the
    specific humidity from dewpoint temperature. See the description on
-   `readthedocs. <https://metview.readthedocs.io/en/latest/api/functions/specific_humidity_from_dewpoint.html#specific_humidity_from_dewpoint>`__
+   :ref:`readthedocs. <specific_humidity_from_dewpoint>`
 
 -  new function pressure_derivative() - computes the vertical pressure
    derivative. See the description on
-   `readthedocs. <https://metview.readthedocs.io/en/latest/api/functions/pressure_derivative.html#pressure_derivative>`__
+   :ref:`readthedocs. <pressure_derivative>`
 
 -  GRIB functions mask() and rmask() now accept an additional argument
    to change their behaviour. By default, any values outside the
@@ -106,21 +92,21 @@ lxop)**
    so it acts similar to a cropping tool. Example Macro and Python code
    to activate this:
 
-.. note::
+   .. code-block:: python
 
- # Macro:                                                              
-                                                                       
- a = mask(data, area, "missing")                                   
-                                                                       
-                                                                       
-                                                                       
- # Python:                                                             
-                                                                       
- a = mask(data, area, missing\ =\ True)                        
+      # Macro:                                                              
+      a = mask(data, area, "missing")                                   
+   
+   .. code-block:: python
 
-See also the `gallery
-example <https://metview.readthedocs.io/en/latest/gen_files/gallery/masking.html>`__
-on readthedocs
+      # Python:      
+      import metview as 
+
+      a = mv. mask(data, area, missing\ =\ True)                        
+
+   See also the :ref:`gallery
+   example <gallery_masking>`
+   on readthedocs
 
 -  allow interpolate() function on GRIB to work with arrays of
    coordinates. In Macro, this function can now take vectors of lats and
@@ -128,9 +114,9 @@ on readthedocs
    multiple fields, this will return a list of vectors/arrays, and for a
    single field it will return a single vector/array.
 
-.. note::
+   .. code-block:: python
 
- result = interpolate(grib, lats, lons)                            
+      result = interpolate(grib, lats, lons)                            
 
 -  fixed issue where univertint() resulted in incorrect sign of values
    for pressure level data
@@ -150,30 +136,24 @@ Example of the different mask modes:
 **Plotting:**
 
 -  it is now possible to define a **polar_streographic** projection in
-   `geoview() <https://metview.readthedocs.io/en/latest/gen_files/icon_functions/geoview.html#id0>`__
-   by a centre point and scale. See the `gallery
-   example <https://metview.readthedocs.io/en/latest/gen_files/gallery/polar_with_centre_point.html#gallery-polar-with-centre-point>`__
+   :func:`geoview`
+   by a centre point and scale. See the :ref:`gallery
+   example <gallery_polar_with_centre_point>`
    on readthedocs.
 
-.. note::
+   .. code-block:: python
 
- # Python:                                                             
-                                                                       
- view = mv.geoview(                                                
-                                                                       
- map_projection\ ="polar_stereographic",                           
-                                                                       
- map_area_definition\ ="centre",                                   
-                                                                       
- map_vertical_longitude\ =\ 20,                                    
-                                                                       
- map_centre_latitude\ =\ 47,                                       
-                                                                       
- map_centre_longitude\ =\ 20,                                      
-                                                                       
- map_scale\ =\ 1e7                                                 
-                                                                       
- )                                                                     
+      import metview as mv
+
+      view = mv.geoview(
+         map_projection="polar_stereographic",
+         map_area_definition="centre",
+         map_vertical_longitude=20,
+         map_centre_latitude=47,
+         map_centre_longitude=20,
+         map_scale=1e7
+      )
+                                                       
 
 -  parameter 'map_vertical_longitude' is now available for projections
    'polar_north' and 'polar_south'
@@ -183,21 +163,17 @@ Example of the different mask modes:
    a more consistent plot, regardless of the data resolution or the zoom
    area. These are the two methods, shown with Python code:
 
-.. note::
+   .. code-block:: python
 
- # plot 4 wind arrows per cm of plot space (within the limits of the   
- data resolution)                                                      
-                                                                       
- wdef = mv.mwind(wind_thinning_method\ ="density",             
- wind_density\ =\ 4) # default is 5                                
-                                                                       
-                                                                       
-                                                                       
- # plot a window arrow for every 3rd data point                        
-                                                                       
- wdef = mv.mwind(wind_thinning_method\ ="thinning",            
- wind_thinning_factor\ =\ 3) # default is 2                        
+      import metview as mv
 
+      # plot 4 wind arrows per cm of plot space (within the limits of the data resolution)
+      wdef = mv.mwind(wind_thinning_method="density", wind_density=4) # default is 5
+      
+      # plot a window arrow for every 3rd data point
+      wdef = mv.mwind(wind_thinning_method="thinning", wind_thinning_factor=3) # default is 2
+                                                           
+                         
 -  fixed issue where missing values in
    `geopoints <https://confluence.ecmwf.int/display/METV/Geopoints+Overview>`__ data
    were included in the statistics in the Display Window sidebar,
@@ -230,7 +206,7 @@ Example of the different mask modes:
 **DivRot:**
 
 -  The
-   `divrot <https://metview.readthedocs.io/en/latest/gen_files/icon_functions/divrot.html>`__
+   :ref:`divrot <divrot_icon>`
    function / `Rotational or Divergent
    Wind <https://confluence.ecmwf.int/display/METV/Rotational+or+Divergent+Wind>`__
    icon has gained parameters to specify the paramIds of the divergence

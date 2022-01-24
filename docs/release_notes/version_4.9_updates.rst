@@ -17,7 +17,7 @@ Table of Contents
 Version 4.9.1 
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
+**Externally** `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
 2017-10-10**
 
 -  **Tarball:** fixed issue that prevented the 4.9.0 tarball from

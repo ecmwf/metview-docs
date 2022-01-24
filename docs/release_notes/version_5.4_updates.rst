@@ -14,10 +14,10 @@ desktops, ecgate, lxc, lxop)**
    -  Installed **2019-01-17**
 
    -  Built
-      with **Magics **\ `3.3.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      with **Magics** `3.3.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.10.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.10.0+released>`__\ ** **
+      with **ecCodes** `2.10.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.10.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__

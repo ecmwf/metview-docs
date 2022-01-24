@@ -31,10 +31,10 @@ desktops, ecgate, lxc, lxop)
    -  Installed **2019-06-13**
 
    -  Built
-      with **Magics **\ `4.0.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
+      with **Magics** `4.0.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built
-      with **ecCodes **\ `2.12.5 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.5+released>`__
+      with **ecCodes** `2.12.5 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.5+released>`__
 
    -  Built
       with **ODB_API** version `0.19.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -62,10 +62,10 @@ lxc, lxop)
    -  Installed **2019-05-09**
 
    -  Built
-      with **Magics **\ `4.0.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
+      with **Magics** `4.0.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built
-      with **ecCodes **\ `2.12.5 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.5+released>`__
+      with **ecCodes** `2.12.5 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.5+released>`__
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -107,10 +107,10 @@ lxc, lxop)
    -  Installed **2019-04-11**
 
    -  Built
-      with **Magics **\ `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
+      with **Magics** `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built
-      with **ecCodes **\ `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
+      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -130,7 +130,7 @@ lxc, lxop)
 Version 5.5.1
 =============
 
-**Externally **\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ ** 2019-02-26**
+**Externally** `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ ** 2019-02-26**
 
 **Became metview/new at ECMWF on 2019-02-26** (Linux desktops, ecgate,
 lxc, lxop)
@@ -140,10 +140,10 @@ lxc, lxop)
    -  Installed **2019-02-26**
 
    -  Built
-      with **Magics **\ `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
+      with **Magics** `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built
-      with **ecCodes **\ `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
+      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -174,7 +174,7 @@ on 2019-02-15** (Linux desktops, ecgate, lxc, lxop)
       with **Magics**\ `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built
-      with **ecCodes **\ `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
+      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__

@@ -6,11 +6,10 @@ Version 5.14 Updates
 
 Version 5.14.1
 ==============
-      
-.. admonition:: Release date
 
-   * Externally  `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2022-01-19
-   * Became metview/new at ECMWF on 2022-01-19 (Linux desktops, ecgate, lxc, lxop)
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2022-01-19
+* Became metview/new at ECMWF on 2022-01-19 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
@@ -38,7 +37,7 @@ Version 5.14.1
    its memory
 
 -  Fixed issue in
-   the `geo_to_grib <https://metview.readthedocs.io/en/latest/gen_files/icon_functions/geo_to_grib.html>`__ module
+   the :ref:`geo_to_grib <geo_to_grib_icon>` module
    where it did not properly ignore missing input values when run in the
    'nearest' modes
 
@@ -54,20 +53,19 @@ Version 5.14.1
 Version 5.14.0
 ==============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2021-12-07
-Became metview/new at ECMWF on 2021-12-07 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2021-12-07
+* Became metview/new at ECMWF on 2021-12-07 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2021-12-07**
 
    -  Built
-      with **Magics **\ `4.10.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.10.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.24.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.24.0+released>`__
+      with **ecCodes** `2.24.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.24.0+released>`__
 
    -  Built with **ODC** version **1.4.3**
 
@@ -155,7 +153,7 @@ lxop)**
 -  there is now a way to revert to sending plots to the interactive
    window:  setoutput("screen")
 
--  new `parameters <https://metview.readthedocs.io/en/5.14.0/gen_files/icon_functions/mcont.html>`__ to
+-  new :ref:`parameters <mcont_icon>` to
    further control the positioning of grid value
    plotting: **contour_grid_value_position, contour_grid_value_justification, contour_grid_value_vertical_align**
 
@@ -175,7 +173,7 @@ lxop)**
 
 -  new function: specific_humidity_from_relative_humidity(t, r, p)
 
--  the `grib_get() <https://metview.readthedocs.io/en/latest/api/functions/grib_get.html>`__ function
+-  the :func:`grib_get` function
    now allows to extract GRIB keys in their native type:
 
    -  a = grib_get(fs, ['level:n', 'centre:n'])
@@ -256,7 +254,7 @@ lxop)**
    files as input
 
 -  fixed an issue in
-   the `Regrid <https://metview.readthedocs.io/en/latest/gen_files/icon_functions/regrid.html>`__ module
+   the :ref:`Regrid <regrid_icon>` module
    where it crashed if a string is supplied to the **Template
    Data** parameter
 
@@ -265,7 +263,7 @@ lxop)**
 -  improved filter speed for compressed subsets of BUFR data
 
 -  updated the list of WMO stations as used by
-   the `Stations <https://metview.readthedocs.io/en/latest/gen_files/icon_functions/stations.html>`__ module
+   the :ref:`Stations <stations_icon>` module
 
 -  new environment variable: set METVIEW_MARS_HOME to point to the
    location of non-default MARS config files

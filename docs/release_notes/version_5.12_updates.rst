@@ -3,34 +3,23 @@
 Version 5.12 Updates
 ////////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Upcoming Version 5.12.1 `3 <#upcoming-version-5.12.1>`__
-
-2 Version 5.12.0 `4 <#version-5.12.0>`__
 
 Upcoming Version 5.12.1
 =======================
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2021-06-17
-Became metview/new at ECMWF on 2021-06-17 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2021-06-17
+* Became metview/new at ECMWF on 2021-06-17 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2021-06-17**
 
    -  Built
-      with **Magics **\ `4.8.2 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.8.2 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.22.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.22.1+released>`__
+      with **ecCodes** `2.22.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.22.1+released>`__
 
    -  Built with **ODC** version **1.3.0**
 
@@ -49,9 +38,8 @@ lxop)**
 -  fixed issue where the Geopoints Examiner only showed one station id
    in the stnid column
 
--  fixed issue where the setting 'Order' to 'Sorted' in the read()
-   command (`GRIB
-   Filter <https://confluence.ecmwf.int/display/METV/GRIB+Filter>`__)
+-  fixed issue where the setting 'Order' to 'Sorted' in the :func:`read``
+   command 
    did not work properly with fields of daily climatologies
 
 -  fixed issue where the :ref:`Symbol
@@ -65,20 +53,19 @@ lxop)**
 Version 5.12.0
 ==============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2021-05-19
-Became metview/new at ECMWF on 2021-05-19 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2021-05-19
+* Became metview/new at ECMWF on 2021-05-19 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2021-05-19**
 
    -  Built
-      with **Magics **\ `4.8.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.8.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.22.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.22.0+released>`__
+      with **ecCodes** `2.22.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.22.0+released>`__
 
    -  Built with **ODC** version **1.3.0**
 
@@ -93,7 +80,7 @@ lxop)**
 -  try out the all-new documentation for the Python interface on
    `readthedocs <https://metview.readthedocs.io/en/latest/index.html>`__!
 
--  
+
 .. image:: /_static/release/version_5.12_updates/image1.png
    :width: 4.05208in
    :height: 2.60417in
@@ -113,7 +100,7 @@ lxop)**
    plane via the setting wind_unprojected = "on"
 
    -  see new gallery example
-      `here <https://metview.readthedocs.io/en/latest/gen_files/gallery/cross_section_wind_unprojected.html#gallery-cross-section-wind-unprojected>`__ 
+      :ref:`here <gallery_cross_section_wind_unprojected>` 
 
 **Plotting:**
 

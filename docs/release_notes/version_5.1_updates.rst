@@ -30,7 +30,7 @@ Table of Contents
 Version 5.1.1
 =============
 
-**Externally **\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **on
+**Externally** `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **on
 2018-07-31
 Installed at ECMWF on 2018-07-24, became metview/new on
 2018-07-31 (Linux desktops, ecgate, lxc, lxop)**
@@ -40,10 +40,10 @@ Installed at ECMWF on 2018-07-24, became metview/new on
    -  Installed **2018-07-24**
 
    -  Built
-      with **Magics **\ `3.1.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      with **Magics** `3.1.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.8.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.8.0+released>`__\ ** **
+      with **ecCodes** `2.8.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.8.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -82,20 +82,19 @@ Installed at ECMWF on 2018-07-24, became metview/new on
 Version 5.1.0
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2018-06-25
-Became metview/new at ECMWF on 2018-06-25 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2018-06-25
+* Became metview/new at ECMWF on 2018-06-25 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2018-06-22**
 
    -  Built
-      with **Magics **\ `3.1.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      with **Magics** `3.1.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.8.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
+      with **ecCodes** `2.8.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__

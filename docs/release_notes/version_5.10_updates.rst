@@ -21,20 +21,19 @@ Table of Contents
 Version 5.10.2
 ==============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2021-01-20
-Became metview/new at ECMWF on 2021-01-20 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2021-01-20
+* Became metview/new at ECMWF on 2021-01-20 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2021-01-20**
 
    -  Built
-      with **Magics **\ `4.5.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.5.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.20.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.20.0+released>`__
+      with **ecCodes** `2.20.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.20.0+released>`__
 
    -  Built with **ODC** version **1.2.0**
 
@@ -107,17 +106,16 @@ icon:
 Version 5.10.1
 ==============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2020-11-09
-Became metview/new at ECMWF on 2020-11-09 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-11-09
+* Became metview/new at ECMWF on 2020-11-09 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2020-11-09**
 
    -  Built
-      with **Magics **\ `4.5.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.5.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
       with **ecCodes**\ `2.19.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.1+released>`__\ ** **
@@ -233,20 +231,19 @@ Code Block 1 Code for the above plot...
 Version 5.10.0
 ==============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2020-10-15
-Became metview/new at ECMWF on 2020-10-15 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-10-15
+* Became metview/new at ECMWF on 2020-10-15 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2020-10-15**
 
    -  Built
-      with **Magics **\ `4.5.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.5.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.19.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.0+released>`__\ ** **
+      with **ecCodes** `2.19.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.0+released>`__\ ** **
 
    -  Built with **ODC** version **1.1.0**
 
@@ -527,20 +524,19 @@ lxop)**
 Version 5.10.0
 ==============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2020-10-15
-Became metview/new at ECMWF on 2020-10-15 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-10-15
+* Became metview/new at ECMWF on 2020-10-15 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2020-10-15**
 
    -  Built
-      with **Magics **\ `4.5.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.5.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.19.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.0+released>`__\ ** **
+      with **ecCodes** `2.19.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.0+released>`__\ ** **
 
    -  Built with **ODC** version **1.1.0**
 

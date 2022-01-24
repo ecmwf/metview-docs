@@ -19,20 +19,19 @@ Table of Contents
 Version 5.8.3
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2020-04-30
-Became metview/new at ECMWF on 2020-04-30 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-04-30
+* Became metview/new at ECMWF on 2020-04-30 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2020-04-30**
 
    -  Built
-      with **Magics **\ `4.3.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.3.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.17.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.17.0+released>`__\ ** **
+      with **ecCodes** `2.17.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.17.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.19.4 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -75,20 +74,19 @@ lxop)**
 Version 5.8.2
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2020-04-01
-Became metview/new at ECMWF on 2020-04-01 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-04-01
+* Became metview/new at ECMWF on 2020-04-01 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2020-04-01**
 
    -  Built
-      with **Magics **\ `4.3.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.3.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.17.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.17.0+released>`__\ ** **
+      with **ecCodes** `2.17.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.17.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.19.3 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -113,20 +111,19 @@ lxop)**
 Version 5.8.1
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2020-03-10
-Became metview/new at ECMWF on 2020-03-10 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-03-10
+* Became metview/new at ECMWF on 2020-03-10 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2020-03-10**
 
    -  Built
-      with **Magics **\ `4.3.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.3.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.17.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.17.0+released>`__\ ** **
+      with **ecCodes** `2.17.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.17.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.19.3 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__

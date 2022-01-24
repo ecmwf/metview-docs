@@ -39,20 +39,19 @@ for faster plot revisions
 Version 5.0.3
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2018-05-xx
-Became metview/new at ECMWF on 2018-05-16 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2018-05-xx
+* Became metview/new at ECMWF on 2018-05-16 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2018-05-16**
 
    -  Built
-      with **Magics **\ `3.0.4 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      with **Magics** `3.0.4 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.7.3 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
+      with **ecCodes** `2.7.3 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.17.6 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -116,10 +115,10 @@ lxc, lxop)**
    -  Installed **2018-04-018**
 
    -  Built
-      with **Magics **\ `3.0. <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__\ **\ 3**
+      with **Magics** `3.0. <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__\ **\ 3**
 
    -  Built
-      with **ecCodes **\ `2.7.3 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
+      with **ecCodes** `2.7.3 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.17.6 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -136,20 +135,19 @@ lxc, lxop)**
 Version 5.0.1 
 =============
 
-**Externally **\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ ** on
-2018-03-01
-Became metview/new at ECMWF on 2018-03-05 (Linux desktops, ecgate, lxc,
-lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2018-03-01
+* Became metview/new at ECMWF on 2018-03-05 (Linux desktops, ecgate, lxc, lxop)
+
 
 -  **At ECMWF:**
 
    -  Installed **2018-03-01**
 
    -  Built
-      with **Magics **\ `3.0.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      with **Magics** `3.0.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes **\ `2.7.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.7.0+released>`__\ ** **
+      with **ecCodes** `2.7.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.7.0+released>`__\ ** **
 
    -  Built
       with **ODB_API** version `0.17.6 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
