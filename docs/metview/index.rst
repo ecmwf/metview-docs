@@ -7,4 +7,4 @@ Using Metview
 
 
     macro/index.rst
-    *
+    using_metview/index.rst

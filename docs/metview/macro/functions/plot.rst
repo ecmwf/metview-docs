@@ -1,3 +1,5 @@
+.. _macro_plot_fn:
+
 Plotting Macro functions
 ===========================
 

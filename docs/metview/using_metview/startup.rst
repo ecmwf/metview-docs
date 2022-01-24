@@ -1,3 +1,5 @@
+.. _metview_startup:
+
 Metview's startup options 
 ==============================
 

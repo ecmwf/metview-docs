@@ -3,6 +3,11 @@
 Tutorials
 #########
 
+.. toctree::
+    :maxdepth: 1
+
+    res
+
 
 Introduction to Metview
 ***********************
