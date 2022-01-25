@@ -25,5 +25,5 @@ Powerful data filtering and processing facilities are then available, and if gra
 * :ref:`x/y graph plots <gallery_group_xy>`
 * intelligent overlay of data from various sources on the same map arrangement of multiple plots on the same page
 
-Metview can also interface with external models and applications, such as `VAPOR <https://confluence.ecmwf.int/display/METV/3D+visualisation+with+VAPOR>`_, `Met3D  <https://confluence.ecmwf.int/display/METV/Met3D+Prepare>`_, `FLEXTRA <https://confluence.ecmwf.int/display/METV/The+FLEXTRA+interface>`_ and `FLEXPART <https://confluence.ecmwf.int/display/METV/The+FLEXPART+interface>`_.
+Metview can also interface with external models and applications, such as :ref:`VAPOR <3d_visualisation_with_vapor>`, :ref:`Met3D  <met3d_prepare_icon>`, :ref:`FLEXTRA <the_flextra_interface>` and :ref:`FLEXPART <the_flexpart_interface>`.
 

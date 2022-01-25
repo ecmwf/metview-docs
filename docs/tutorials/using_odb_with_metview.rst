@@ -1,6 +1,6 @@
 .. _using_odb_with_metview:
 
-Using ODB with Metview
+ODB Tutorial 2
 ######################
 
 .. note::

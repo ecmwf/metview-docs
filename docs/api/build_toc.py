@@ -209,6 +209,7 @@ This is the list of the functions that are represented as an icon in Metviews' u
         # process each yaml from icon/desc
         for f_name in sorted(glob.glob(os.path.join(ICON_DIR, "*.rst"))):
             name = format(os.path.basename(f_name).split(".rst")[0])
+            # print(f"name={name}")
             fn = self.find(name)
             if not fn:
                 continue
