@@ -1,6 +1,6 @@
 .. _how_to_use_the_weather_symbol_editor_in_metview:
 
-How to use the Weather Symbol Editor in Metview
+Weather Symbol Editor
 ///////////////////////////////////////////////
 
 .. note::

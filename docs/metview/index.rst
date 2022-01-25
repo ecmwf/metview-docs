@@ -1,4 +1,4 @@
-Using Metview
+User Guide
 ==============
 
 .. toctree::

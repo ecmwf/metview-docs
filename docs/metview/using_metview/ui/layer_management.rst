@@ -1,7 +1,7 @@
 .. _layer_management:
 
-Layer Management
-////////////////
+Layer Management in the Display Window
+////////////////////////////////////////
 
 Layers
 ======

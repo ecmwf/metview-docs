@@ -1,6 +1,6 @@
 .. _how_to_use_the_colour_gradient_editor:
 
-How to use the colour gradient editor
+Colour gradient editor
 /////////////////////////////////////
 
 Colour gradients offer an easy way to define stunning colour schemes for

@@ -3,12 +3,19 @@
 The SCM Interface in Metview Tutorial
 #####################################
 
+.. note::
+
+  Please note that this tutorial was designed to be used only at **ECMWF**.
+
+.. note::
+
+  This tutorial requires a **single column model** executable, which is not a standard part of the Metview distribution. It is, however, used as part of `OpenIFS Home <https://confluence.ecmwf.int/display/OIFS/OpenIFS+Home>`_ Workshops and the `Parametrization of subgrid physical processes <http://www.ecmwf.int/en/learning/training/parametrization-of-subgrid-physical-processes>`_ training course.
+
+
 Introduction to using the Single Column Model interface in Metview
 ******************************************************************
 
-What does Metview offer for SCM users?
-
-In Metview users can:
+What does Metview offer for SCM users? In Metview users can:
 
 * examine and edit (modify) an input netCDF file
 
@@ -110,7 +117,7 @@ Use this button
 
 in the toolbar to show only the editable parameters.
 
-** Now select the temperature profile - we will edit it in the next step**.
+**Now select the temperature profile - we will edit it in the next step**.
 
 Parameter editing
 =================
@@ -318,12 +325,9 @@ The other way of visualising the differences between two runs is to set **Scm Co
 Additional information about plotting
 =====================================
 
-.. note::
 
-* For all plot types, it is possible to select multiple variables, but in this case, **Scm Output Mode** must be set to Postscript. 
-  This limitation should be lifted in the future.
+* For all plot types, it is possible to select multiple variables, but in this case, **Scm Output Mode** must be set to Postscript. This limitation should be lifted in the future.
   
-* The :ref:`Scm Visualiser <scm_visualiser_icon>` icon also contains parameters which can be used to change the x and y axis limits, and also to set the limits on the value range considered for shading in the matrix plots. 
-  An axis grid can also be enabled.
+* The :ref:`Scm Visualiser <scm_visualiser_icon>` icon also contains parameters which can be used to change the x and y axis limits, and also to set the limits on the value range considered for shading in the matrix plots. An axis grid can also be enabled.
   
 * The :ref:`Scm Visualiser <scm_visualiser_icon>` icon can also be used to plot the SCM input netCDF files - set **Scm Data Type** to **Input**; the parameters **Scm Input 1d Variables** and **Scm Input 2d Variables** become available.

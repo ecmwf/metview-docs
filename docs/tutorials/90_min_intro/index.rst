@@ -2,7 +2,11 @@
 
 Metview 90 minute introduction
 ##############################
-The following sub-pages form an introduction to Metview, covering the major data types one by one. They only give a taste of what's possible, and should be achievable in 90 minutes or so.
+
+.. note::
+
+    This short course gives a taste of much of Metview's functionality, with links to resources for further exploration. The emphasis here is on visual, interactive and scripted data analysis.
+
 
 Resources
 *********

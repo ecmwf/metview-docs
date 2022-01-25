@@ -36,7 +36,7 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    jupyter
    api/ref_guide 
    metview/index
-   confluence/index
+   tutorials/index
    release_notes/index
 
 .. toctree::

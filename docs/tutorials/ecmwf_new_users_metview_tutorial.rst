@@ -3,11 +3,12 @@
 ECMWF New Users Metview Tutorial
 ################################
 
+.. note::
+
+  This tutorial was written for ECMWF's Introduction for New Users course (COM_MARS) and shows how to retrieve data from MARS using Metview, perform some basic manipulations and plot the result.
+
 Preparation
 ***********
-
-These exercises demonstrate some basic functionality of Metview, showing how to retrieve data from MARS, examine the data's structure, compute the differences between different data sets and visualise them.
-Note that the figures can be clicked on to obtain full-sized versions.
 
 First start Metview; at ECMWF, the command to use is simply metview. 
 You should see the main Metview desktop which looks something like Figure 1.

@@ -55,7 +55,7 @@ There is a
 available on the use of VAPOR with Metview. It explains both the data
 preparation steps and the basics of the visualisation.
 
-.. info::
+.. note::
   
     Details about setting up the Metview VAPOR interface *outside      
     ECMWF* can be accessed :ref:`here <vapor_setup>`.  

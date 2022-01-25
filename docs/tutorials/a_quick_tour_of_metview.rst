@@ -3,6 +3,11 @@
 A Quick Tour of Metview
 #######################
 
+.. note::
+
+  This standalone module is a good first introduction to Metview and should take 20-30 minutes.
+
+
 A Simple Data Visualisation
 ***************************
 When you first start Metview, you will see something like this:

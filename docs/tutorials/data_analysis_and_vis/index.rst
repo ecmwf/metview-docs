@@ -3,13 +3,12 @@
 Data analysis and visualisation using Metview
 #############################################
 
-This is a modular course on the use of Metview for data analysis and visualisation. It encompasses much of Metview's functionality in a series of self-contained tutorials.
+This is a modular course on the use of Metview for data analysis and visualisation. It encompasses much of Metview's functionality in a series of self-contained tutorials. This material formed the official Metview training course at ECMWF between 2015-2017.
 
-Download
-********
+The course slides can be find `here <https://confluence.ecmwf.int/pages/viewpageattachments.action?pageId=46599653&preview=/46599653/62392267/2016-09-26-Metview_COM_MV.pdf>`_.
 
-`batch_job.tar.gz <https://confluence.ecmwf.int/download/attachments/46599653/batch_job.tar.gz?api=v2&modificationDate=1475247744383&version=1>`_ 
-
+Course modules
+-----------------
 
 .. toctree::
     :maxdepth: 1
@@ -38,3 +37,7 @@ Download
 
 
     
+Download
+----------
+
+`batch_job.tar.gz <https://confluence.ecmwf.int/download/attachments/46599653/batch_job.tar.gz?api=v2&modificationDate=1475247744383&version=1>`_ 

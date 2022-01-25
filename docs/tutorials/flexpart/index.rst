@@ -1,6 +1,6 @@
 .. _using_flexpart_with_metview:
 
-Using FLEXPART with Metview
+FLEXPART tutorial
 ###########################
 
 This tutorial explains how to use the FLEXPART Lagrangian dispersion model within Metview

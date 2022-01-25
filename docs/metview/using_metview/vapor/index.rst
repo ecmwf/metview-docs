@@ -1,6 +1,6 @@
-.. _running_external_models_from_metview:
+.. _vapor_index:
 
-VAPOR
+VAPOR 3D
 /////////////
 
 
