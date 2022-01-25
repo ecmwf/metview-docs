@@ -1,7 +1,7 @@
 .. _the_flexpart_interface:
 
-The FLEXPART interface
-//////////////////////
+Overview of the FLEXPART interface
+//////////////////////////////////////
 
 What is FLEXPART?
 =================
@@ -86,7 +86,7 @@ FLEXPART at ECMWF
 
 FLEXPART is installed *at ECMWF* to be directly used from within
 Metview. You can find out more about it
-`here <https://confluence.ecmwf.int/display/METV/FLEXPART+at+ECMWF>`__.
+:ref:`here <flexpart_at_ecmwf>`.
 
 FLEXPART outside ECMWF
 ======================

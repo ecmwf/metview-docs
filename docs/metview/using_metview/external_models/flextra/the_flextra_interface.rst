@@ -1,7 +1,7 @@
 .. _the_flextra_interface:
 
-The FLEXTRA interface
-/////////////////////
+Overview of the FLEXTRA interface
+////////////////////////////////////
 
 What is FLEXTRA?
 ================
@@ -58,7 +58,7 @@ The snapshots below show some FLEXTRA plots generated with Metview:
 .. note::
 
     There is a                                                         
-    `tutorial <https://confluence.ecmwf.int/display/METV/FLEXTRA+tutorial>`__ 
+    :ref:`tutorial <flextra_tutorial>` 
     available on the use of FLEXTRA with Metview. It explains both the 
     data preparation steps and the basics of the visualisation.        
 
@@ -73,7 +73,7 @@ FLEXTRA at ECMWF
 
 FLEXTRA is installed *at ECMWF* to be directly used from within Metview.
 You can find out more about it
-`here <https://confluence.ecmwf.int/display/METV/FLEXTRA+at+ECMWF>`__.
+:ref:`here <flextra_at_ecmwf>`.
 
 FLEXTRA outside ECMWF
 =====================

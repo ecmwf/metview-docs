@@ -1,9 +1,9 @@
 .. _metview_startup:
 
-Metview's startup options 
+Startup options 
 ==============================
 
-This page only lists a selection of startup options. To see a more complete list, type
+This page only lists a selection of the Metview startup options. To see a more complete list, type
 
 .. code-block:: python
 

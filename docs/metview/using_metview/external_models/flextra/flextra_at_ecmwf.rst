@@ -8,10 +8,10 @@ The FLEXTRA environment
 
 At ECMWF version 5.0 of FLEXTRA is *centrally installed* on ecgb and on
 some internal Linux-based systems. On these systems Metview is
-configured to pick up the FLEXTRA location automatically via this
-environment variable:
+configured to pick up the FLEXTRA executable location automatically via this preset
+environment variable::
 
--  **MV_FLEXTRA_EXE_PATH**: defines the FLEXTRA executable
+   MV_FLEXTRA_EXE_PATH
 
 Hard-coded parameters
 =====================

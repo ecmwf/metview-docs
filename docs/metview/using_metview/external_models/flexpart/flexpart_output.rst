@@ -35,7 +35,7 @@ currently defined set of keys in Section 2.
     Unfortunately, Metview's *Grib Filter* icon cannot handle these    
     files (partly due to the local GRIB definition they use) so we     
     need to use *Macro* with some FLEXPART-related command to deal     
-    with this problems. See `Using FLEXPART with Metview <https://confluence.ecmwf.int/display/METV/Using+FLEXPART+with+Metview>`__ for details.                                                       
+    with this problems. See the :ref:`FLEXPART tutorial <using_flexpart_with_metview>` for details.                                                       
 
 Concentration fields
 --------------------
@@ -53,18 +53,17 @@ actual field type and units are based on the **Receptor Units** settings
 in the :ref:`FLEXPART
 Run <flexpart_run_icon>` icon.
 
-+--------------------+------------------+----------+--------+---------+
-| Options in         | Description      | GRIB     | GRIB   | GRIB    |
-|                    |                  |          |        |         |
-| FLEXPART Run       |                  | s        | p      | units   |
-|                    |                  | hortname | aramId |         |
-+====================+==================+==========+========+=========+
-| r                  | mass             | conc     | 20001  | kg      |
-| eceptor_units=mass | concentration    |          |        | m**-3   |
-+--------------------+------------------+----------+--------+---------+
-| r                  | mass mixing      | mxrm     | 20002  | kg      |
-| eceptor_units=mixr | ratio            |          |        | kg**-1  |
-+--------------------+------------------+----------+--------+---------+
++---------------------+------------------+------------+---------+---------+
+| Options in          | Description      | GRIB       | GRIB    | GRIB    |
+|                     |                  |            |         |         |
+| FLEXPART Run        |                  | shortName  | paramId | units   |
++=====================+==================+============+=========+=========+
+| receptor_units=mass | mass             | conc       | 20001   | kg      |
+|                     | concentration    |            |         | m**-3   |
++---------------------+------------------+------------+---------+---------+
+| receptor_units=mixr | mass mixing      | mxrm       | 20002   | kg      |
+|                     | ratio            |            |         | kg**-1  |
++---------------------+------------------+------------+---------+---------+
 
 Volume mixing ratio fields
 --------------------------
@@ -82,7 +81,7 @@ where SSS is the species index (starts from 1) with leading zeros.
 +-------------------------+--------------+-----------+----------------+
 | Description             | GRIB         | GRIB      | GRIB           |
 |                         |              |           |                |
-|                         | shortname    | paramId   | units          |
+|                         | shortName    | paramId   | units          |
 +=========================+==============+===========+================+
 | volume mixing ratio     | mxrv         | 20052     | mol mol**-1    |
 +-------------------------+--------------+-----------+----------------+
@@ -99,7 +98,7 @@ files.
 +----------------------+-----------------+-------------+--------------+
 | Description          | GRIB            | GRIB        | GRIB         |
 |                      |                 |             |              |
-|                      | shortname       | paramId     | units        |
+|                      | shortName       | paramId     | units        |
 +======================+=================+=============+==============+
 | dry deposition       | fdd             | 20197       | kg m**-2     |
 +----------------------+-----------------+-------------+--------------+
@@ -121,7 +120,7 @@ where SSS is the species index (starts from 1) with leading zeros.
 +--------------------+---------------+-----------+--------------------+
 | Description        | GRIB          | GRIB      | GRIB               |
 |                    |               |           |                    |
-|                    | shortname     | paramId   | units              |
+|                    | shortName     | paramId   | units              |
 +====================+===============+===========+====================+
 | eastward flux      | feflux        | 20199     | kg m**-2 s**-1     |
 +--------------------+---------------+-----------+--------------------+
@@ -165,71 +164,66 @@ first row in the trajectory file contains metadata as a set of key value
 pairs, while the the second row contains the header. The table below
 gives a detailed description about the different columns.
 
-+------+---------+------+----------------------------------------------+
-| Co   | Name    | U    | Description                                  |
-| lumn | (       | nits |                                              |
-|      | header) |      |                                              |
-+======+=========+======+==============================================+
-| 1    | time    | s    | the elapsed time in seconds since the middle |
-|      |         |      | point of the release interval                |
-+------+---------+------+----------------------------------------------+
-| 2    | meanLon | deg  | mean longitude position for all the          |
-|      |         | rees | particles                                    |
-+------+---------+------+----------------------------------------------+
-| 3    | meanLat | deg  | mean latitude position for all the particles |
-|      |         | rees |                                              |
-+------+---------+------+----------------------------------------------+
-| 4    | meanZ   | m    | mean height for all the particles (above sea |
-|      |         |      | level)                                       |
-+------+---------+------+----------------------------------------------+
-| 5    | m       | m    | mean topography underlying all the particles |
-|      | eanTopo |      |                                              |
-+------+---------+------+----------------------------------------------+
-| 6    | meanPBL | m    | mean PBL (Planetary  Boundary Layer) height  |
-|      |         |      | for all the particles (above ground level)   |
-+------+---------+------+----------------------------------------------+
-| 7    | me      | m    | mean tropopause height at the positions of   |
-|      | anTropo |      | particles (above sea level)                  |
-+------+---------+------+----------------------------------------------+
-| 8    | meanPv  | PVU  | mean potential vorticity for all the         |
-|      |         |      | particles                                    |
-+------+---------+------+----------------------------------------------+
-| 9    | rms     | km   | total horizontal RMS (root mean square)      |
-|      | HBefore |      | distance before clustering                   |
-+------+---------+------+----------------------------------------------+
-| 10   | rm      | km   | total horizontal RMS distance after          |
-|      | sHAfter |      | clustering                                   |
-+------+---------+------+----------------------------------------------+
-| 11   | rms     | m    | total vertical RMS distance before           |
-|      | VBefore |      | clustering                                   |
-+------+---------+------+----------------------------------------------+
-| 12   | rm      | m    | total vertical RMS distance after            |
-|      | sVAfter |      | clustering                                   |
-+------+---------+------+----------------------------------------------+
-| 13   | p       | %    | fraction of particles in the PBL             |
-|      | blFract |      |                                              |
-+------+---------+------+----------------------------------------------+
-| 14   | p       | %    | fraction of particles with PV<2pvu           |
-|      | v2Fract |      |                                              |
-+------+---------+------+----------------------------------------------+
-| 15   | tro     | %    | fraction of particles within the             |
-|      | poFract |      | troposphere                                  |
-+------+---------+------+----------------------------------------------+
-| 16\* | clLon   | deg  | mean longitude position for all the          |
-|      | \_\ *N* | rees | particles in *cluster N*                     |
-+------+---------+------+----------------------------------------------+
-| 17\* | clLat   | deg  | mean latitude position for all the particles |
-|      | \_\ *N* | rees | in *cluster N*                               |
-+------+---------+------+----------------------------------------------+
-| 18\* | clZ     | m    | mean height for all the particles in         |
-|      | \_\ *N* |      | *cluster N* (above sea level)                |
-+------+---------+------+----------------------------------------------+
-| 19\* | clFract | %    | fraction of particles in *cluster N* (above  |
-|      | \_\ *N* |      | sea level)                                   |
-+------+---------+------+----------------------------------------------+
-| 20\* | clRms   | km   | total horizontal RMS distance in *cluster N* |
-|      | \_\ *N* |      |                                              |
-+------+---------+------+----------------------------------------------+
++------+----------------+------+----------------------------------------------+
+| Co   | Name (header)  | U    | Description                                  |
+| lumn |                | nits |                                              |
+|      |                |      |                                              |
++======+================+======+==============================================+
+| 1    | time           | s    | the elapsed time in seconds since the middle |
+|      |                |      | point of the release interval                |
++------+----------------+------+----------------------------------------------+
+| 2    | meanLon        | deg  | mean longitude position for all the          |
+|      |                | rees | particles                                    |
++------+----------------+------+----------------------------------------------+
+| 3    | meanLat        | deg  | mean latitude position for all the particles |
+|      |                | rees |                                              |
++------+----------------+------+----------------------------------------------+
+| 4    | meanZ          | m    | mean height for all the particles (above sea |
+|      |                |      | level)                                       |
++------+----------------+------+----------------------------------------------+
+| 5    | meanTopo       | m    | mean topography underlying all the particles |
++------+----------------+------+----------------------------------------------+
+| 6    | meanPBL        | m    | mean PBL (Planetary  Boundary Layer) height  |
+|      |                |      | for all the particles (above ground level)   |
++------+----------------+------+----------------------------------------------+
+| 7    | meanTropo      | m    | mean tropopause height at the positions of   |
+|      |                |      | particles (above sea level)                  |
++------+----------------+------+----------------------------------------------+
+| 8    | meanPv         | PVU  | mean potential vorticity for all the         |
+|      |                |      | particles                                    |
++------+----------------+------+----------------------------------------------+
+| 9    | rmsHBefore     | km   | total horizontal RMS (root mean square)      |
+|      |                |      | distance before clustering                   |
++------+----------------+------+----------------------------------------------+
+| 10   | rmsHAfter      | km   | total horizontal RMS distance after          |
+|      |                |      | clustering                                   |
++------+----------------+------+----------------------------------------------+
+| 11   | rmsVBefore     | m    | total vertical RMS distance before           |
+|      |                |      | clustering                                   |
++------+----------------+------+----------------------------------------------+
+| 12   | rmsVAfter      | m    | total vertical RMS distance after            |
+|      |                |      | clustering                                   |
++------+----------------+------+----------------------------------------------+
+| 13   | pblFract       | %    | fraction of particles in the PBL             |
++------+----------------+------+----------------------------------------------+
+| 14   | pv2Fract       | %    | fraction of particles with PV<2pvu           |
++------+----------------+------+----------------------------------------------+
+| 15   | tropoFract     | %    | fraction of particles within the             |
++------+----------------+------+----------------------------------------------+
+| 16\* | clLon\_\ *N*   | deg  | mean longitude position for all the          |
+|      |                | rees | particles in *cluster N*                     |
++------+----------------+------+----------------------------------------------+
+| 17\* | clLat\_\ *N*   | deg  | mean latitude position for all the particles |
+|      |                | rees | in *cluster N*                               |
++------+----------------+------+----------------------------------------------+
+| 18\* | clZ\_\ *N*     | m    | mean height for all the particles in         |
+|      |                |      | *cluster N* (above sea level)                |
++------+----------------+------+----------------------------------------------+
+| 19\* | clFract\_\ *N* | %    | fraction of particles in *cluster N* (above  |
+|      |                |      | sea level)                                   |
++------+----------------+------+----------------------------------------------+
+| 20\* | clRms\_\ *N*   | km   | total horizontal RMS distance in *cluster N* |                       
++------+----------------+------+----------------------------------------------+
 
 Columns 16-20 get repeated for each cluster.
 

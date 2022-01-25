@@ -1,7 +1,7 @@
 .. _3d_visualisation_with_vapor:
 
-3D visualisation with VAPOR
-///////////////////////////
+Overview of the VAPOR interface
+/////////////////////////////////
 
 
 What is VAPOR?

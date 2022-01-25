@@ -422,8 +422,7 @@ Version 5.10.0
 **Startup:**
 
 -  the 'examine' startup mode no longer requires the data type to be
-   specified - see `Metview's Startup
-   Options <https://confluence.ecmwf.int/display/METV/Metview%27s+Startup+Options>`__
+   specified - see :ref:`Metview's Startup Options <metview_startup>`
 
 -  Geopoints are now supported in Metview's 'examiner' startup mode
 

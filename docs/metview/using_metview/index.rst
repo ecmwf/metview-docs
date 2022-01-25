@@ -6,3 +6,5 @@ Using Metview
     :glob:
 
     *
+    vapor/index.rst
+    external_models/index.rst

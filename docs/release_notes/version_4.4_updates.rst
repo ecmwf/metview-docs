@@ -107,9 +107,7 @@ Test Version 4.4.9
 
 -  **User Interface**: now recognises JPEG, GIF and TIFF as icon types
 
--  **Desktop**: improvements in Metview's `new user
-   interface <https://confluence.ecmwf.int/display/METV/Metview%27s+user+interface>`__
-   (invoked by adding -desktop to the Metview command line)
+-  **Desktop**: improvements in Metview's :ref:`new user interface <mv_desktop_overview>` (invoked by adding -desktop to the Metview command line)
 
    -  Right-click \| 'Save result' now works on MARS icons which return
       satellite imagery
@@ -184,9 +182,7 @@ Version 4.4.8-export became available.
 -  **Grib Examiner**: fixed issue where occasionally the last-used
    profile was not remembered between sessions
 
--  **Desktop**: many improvements in Metview's `new user
-   interface <https://confluence.ecmwf.int/display/METV/Metview%27s+user+interface>`__
-   (invoked by adding -desktop to the Metview command line)
+-  **Desktop**: many improvements in Metview's :ref:`new user interface <mv_desktop_overview>` (invoked by adding -desktop to the Metview command line)
 
    -  added an advanced icon search dialogue
 
@@ -281,9 +277,7 @@ Test Version 4.4.7
 
   -  Built with **emoslib** 000394
 
--  **Desktop**: Metview's `experimental new user
-   interface <https://confluence.ecmwf.int/display/METV/Metview%27s+user+interface>`__
-   (enabled with -desktop on the command line) has had many small fixes
+-  **Desktop**: Metview's :ref:`experimental new user interface <mv_desktop_overview>` (enabled with -desktop on the command line) has had many small fixes
 
 -  **Macro**: function nearest_gridpoint_info() returns an additional
    member: index, which gives the (1-based) index of the found point in
