@@ -6,8 +6,7 @@ Version 5.4 Updates
 
 **Not externally released.**
 
-**Became  metview/default and metview/new at ECMWF on 2019-01-29 (Linux
-desktops, ecgate, lxc, lxop)**
+* Became  metview/default and metview/new at ECMWF on 2019-01-29 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -17,19 +16,19 @@ desktops, ecgate, lxc, lxop)**
       with **Magics** `3.3.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.10.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.10.0+released>`__\ ** **
+      with **ecCodes** `2.10.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.10.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000459 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
+      with **emoslib** `000459 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
    -  Built with **mir 1.1.1**
 
 **Highlights:**
 
--  **interpolation: **\ this is the first version of Metview to use
+-  **interpolation**: this is the first version of Metview to use
    **mir** as its interpolation library **by default** when running at
    ECMWF. The following functions are affected:
 

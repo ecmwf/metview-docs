@@ -3,37 +3,12 @@
 Version 5.1 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.1.1 `3 <#version-5.1.1>`__
-
-2 Version 5.1.0 `4 <#version-5.1.0>`__
-
-3 Highlights `5 <#highlights>`__
-
-3.1 BUFR handling performed by ecCodes
-`5 <#bufr-handling-performed-by-eccodes>`__
-
-3.2 Additional modules using MIR as the interpolation package
-`5 <#additional-modules-using-mir-as-the-interpolation-package>`__
-
-4 Other features of Metview 5.1 `9 <#other-features-of-metview-5.1>`__
-
-4.1 Example of the new  symbol plotting parameter
-`11 <#example-of-the-new-symbol-plotting-parameter>`__
 
 Version 5.1.1
 =============
 
-**Externally** `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **on
-2018-07-31
-Installed at ECMWF on 2018-07-24, became metview/new on
-2018-07-31 (Linux desktops, ecgate, lxc, lxop)**
+* Externally released `<https://confluence.ecmwf.int/display/METV/Releases>`__ 2018-07-31
+* Installed at ECMWF on 2018-07-24, became metview/new on 2018-07-31 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -43,19 +18,19 @@ Installed at ECMWF on 2018-07-24, became metview/new on
       with **Magics** `3.1.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.8.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.8.0+released>`__\ ** **
+      with **ecCodes** `2.8.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.8.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000456 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000456 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=78283744>`__
 
    -  Built with **mir 0.10.0**
 
 **Features:**
 
--  **Input Visualiser: **\ fixed issue where nil values passed to
+-  **Input Visualiser:** fixed issue where nil values passed to
    the :ref:`Input
    Visualiser <input_visualiser_icon>`
    were not properly treated
@@ -85,7 +60,6 @@ Version 5.1.0
 * Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2018-06-25
 * Became metview/new at ECMWF on 2018-06-25 (Linux desktops, ecgate, lxc, lxop)
 
-
 -  **At ECMWF:**
 
    -  Installed **2018-06-22**
@@ -94,13 +68,13 @@ Version 5.1.0
       with **Magics** `3.1.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.8.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
+      with **ecCodes** `2.8.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.7.3+released>`__
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000456 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000456 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=78283744>`__
 
 Highlights
 ==========
@@ -150,304 +124,154 @@ until the official release of mir.
 Example of using the new mir-based MARS routines to compare against
 libemos:
 
-+-----------+----------------------------------------------------------+
-| Plot      | Code                                                     |
-+===========+==========================================================+
-| |\_scro   | +-----------------------------------------------------+  |
-| ll_extern | |    # Metview Macro                                  |  |
-| al/attach | |                                                     |  |
-| ments/mv- | |    # \***************************\* LICENSE START   |  |
-| mir-vs-em | |    \**********************************\*            |  |
-| os-1935a5 | |                                                     |  |
-| d8e074773 | |    #                                                |  |
-| 12fa4dba1 | |                                                     |  |
-| ae2822735 | |    # Copyright 2018 ECMWF. This software is         |  |
-| fc24e270a | |    distributed under the terms                      |  |
-| 632368201 | |                                                     |  |
-| e2abadfff | |    # of the Apache License version 2.0. In applying |  |
-| 8783.png| | |    this license, ECMWF does not                     |  |
-|           | |                                                     |  |
-|           | |    # waive the privileges and immunities granted to |  |
-|           | |    it by virtue of its status as                    |  |
-|           | |                                                     |  |
-|           | |    # an Intergovernmental Organization or submit    |  |
-|           | |    itself to any jurisdiction.                      |  |
-|           | |                                                     |  |
-|           | |    #                                                |  |
-|           | |                                                     |  |
-|           | |    # \****************************\* LICENSE END    |  |
-|           | |    \***********************************\*           |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |    req **=** (param:'t', levelist: 850, grid:[1,1]) |  |
-|           | |                                                     |  |
-|           | |    emos **=** retrieve(req)                         |  |
-|           | |                                                     |  |
-|           | |    mir **=** retrieve_mir(req)                      |  |
-|           | |                                                     |  |
-|           | |    diff **=** mir **-** emos                        |  |
-|           | |                                                     |  |
-|           | |    maxdiff **=** maxvalue(abs(diff))                |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |    levels **=** maxdiff **\*** [**-**\ 1,           |  |
-|           | |    **-**\ 0.75, **-**\ 0.5, **-**\ 0.25,            |  |
-|           | |    **-**\ 0.1, 0.1, 0.25, 0.5, 0.75, 1]             |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |    diff_cont **=** mcont(                           |  |
-|           | |                                                     |  |
-|           | |    legend : "on",                                   |  |
-|           | |                                                     |  |
-|           | |    contour : "off",                                 |  |
-|           | |                                                     |  |
-|           | |    contour_level_selection_type : "level_list",     |  |
-|           | |                                                     |  |
-|           | |    contour_level_list : levels,                     |  |
-|           | |                                                     |  |
-|           | |    contour_shade : "on",                            |  |
-|           | |                                                     |  |
-|           | |    contour_shade_technique : "grid_shading",        |  |
-|           | |                                                     |  |
-|           | |    contour_shade_colour_method : "palette",         |  |
-|           | |                                                     |  |
-|           | |    contour_shade_palette_name :                     |  |
-|           | |    "eccharts_blue_white_red_9"                      |  |
-|           | |                                                     |  |
-|           | |    )                                                |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |    vi **=** version_info()                          |  |
-|           | |                                                     |  |
-|           | |    title **=** mtext(text_line_count: 2,            |  |
-|           | |                                                     |  |
-|           | |    text_line_2 : "Mir (" & vi.mir_version & ") -    |  |
-|           | |    Emos (" & vi.emos_version & ")")                 |  |
-|           | |                                                     |  |
-|           | |    legend **=** mlegend(legend_text_font_size :     |  |
-|           | |    0.275)                                           |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |    plot(diff, diff_cont, title, legend)             |  |
-|           | +=====================================================+  |
-|           | +-----------------------------------------------------+  |
-|           |                                                          |
-|           | Code Block 1 Macro to compare libemos and mir            |
-|           | interpoations                                            |
-+-----------+----------------------------------------------------------+
+   .. image:: /_static/release/version_5.1_updates/image2.png
+      :width: 400px
+   
+   .. code-block:: python
 
-**New thermodynamic diagram types**
+      # Metview Macro
+      #  **************************** LICENSE START ***********************************
+      #
+      #  Copyright 2018 ECMWF. This software is distributed under the terms
+      #  of the Apache License version 2.0. In applying this license, ECMWF does not
+      #  waive the privileges and immunities granted to it by virtue of its status as
+      #  an Intergovernmental Organization or submit itself to any jurisdiction.
+      #
+      #  ***************************** LICENSE END ************************************
+      
+      req = (param:'t', levelist: 850, grid:[1,1])
+      emos = retrieve(req)
+      mir  = retrieve_mir(req)
+      diff = mir - emos
+      maxdiff = maxvalue(abs(diff))
+      
+      levels = maxdiff * [-1, -0.75, -0.5, -0.25, -0.1, 0.1, 0.25, 0.5, 0.75, 1]
+      
+      diff_cont = mcont(
+         legend                       : "on",
+         contour                      : "off",
+         contour_level_selection_type : "level_list",
+         contour_level_list           : levels,
+         contour_shade                : "on",
+         contour_shade_technique      : "grid_shading",
+         contour_shade_colour_method  : "palette",
+         contour_shade_palette_name   : "eccharts_blue_white_red_9"
+         )
+      
+      vi = version_info()
+      title = mtext(text_line_count: 2,
+                  text_line_2 : "Mir (" & vi.mir_version & ") - Emos (" & vi.emos_version & ")")
+      legend = mlegend(legend_text_font_size : 0.275)
+      
+      plot(diff, diff_cont, title, legend)
+
+
+New thermodynamic diagram types
+-----------------------------------
 
 Metview has added new thermodynamic diagram types Skew-T and Emagram to
 the `Thermo
 View <https://software.ecmwf.int/wiki/display/METV/Thermo+View>`__ icon.
 The following example shows how to plot all three.
 
-+----------+-----------------------------------------------------------+
-| Plot     | Code                                                      |
-+==========+===========================================================+
-| |\_s     | +------------------------------------------------------+  |
-| croll_ex | |    # Metview Macro                                   |  |
-| ternal/a | |                                                      |  |
-| ttachmen | |    # \***************************\* LICENSE START    |  |
-| ts/therm | |    \**********************************\*             |  |
-| o-plots- | |                                                      |  |
-| x3-a616d | |    #                                                 |  |
-| a818bc39 | |                                                      |  |
-| 77e8e807 | |    # Copyright 2018 ECMWF. This software is          |  |
-| 0e5de500 | |    distributed under the terms                       |  |
-| 9b4765bf | |                                                      |  |
-| 7ef5e978 | |    # of the Apache License version 2.0. In applying  |  |
-| 8c5696ec | |    this license, ECMWF does not                      |  |
-| f33631dc | |                                                      |  |
-| 77a.png| | |    # waive the privileges and immunities granted to  |  |
-|          | |    it by virtue of its status as                     |  |
-|          | |                                                      |  |
-|          | |    # an Intergovernmental Organization or submit     |  |
-|          | |    itself to any jurisdiction.                       |  |
-|          | |                                                      |  |
-|          | |    #                                                 |  |
-|          | |                                                      |  |
-|          | |    # \****************************\* LICENSE END     |  |
-|          | |    \***********************************\*            |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    data_for_tephigram **=** retrieve(                |  |
-|          | |                                                      |  |
-|          | |    param : ["t","q"],                                |  |
-|          | |                                                      |  |
-|          | |    grid : [1,1])                                     |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    thermo_data **=** thermo_grib(                    |  |
-|          | |                                                      |  |
-|          | |    coordinates : [49.63,21.12],                      |  |
-|          | |                                                      |  |
-|          | |    data : data_for_tephigram)                        |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    tephiview **=** thermoview(subpage_y_position :   |  |
-|          | |    5)                                                |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    page **=** plot_page(                             |  |
-|          | |                                                      |  |
-|          | |    right : 33.33333,                                 |  |
-|          | |                                                      |  |
-|          | |    view : tephiview)                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    skewtview **=** thermoview(type:                  |  |
-|          | |    "skewt",subpage_y_position : 5)                   |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    page_1 **=** plot_page(                           |  |
-|          | |                                                      |  |
-|          | |    left : 33.3333,                                   |  |
-|          | |                                                      |  |
-|          | |    right : 66.66667,                                 |  |
-|          | |                                                      |  |
-|          | |    view : skewtview)                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    emagramview **=** thermoview(type : "emagram",    |  |
-|          | |    subpage_y_position : 5)                           |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    page_2 **=** plot_page(                           |  |
-|          | |                                                      |  |
-|          | |    left : 66.66667,                                  |  |
-|          | |                                                      |  |
-|          | |    right : 100.0,                                    |  |
-|          | |                                                      |  |
-|          | |    view : emagramview)                               |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    dw **=** plot_superpage(                          |  |
-|          | |                                                      |  |
-|          | |    layout_size : "custom",                           |  |
-|          | |                                                      |  |
-|          | |    custom_width : 40,                                |  |
-|          | |                                                      |  |
-|          | |    custom_height : 10,                               |  |
-|          | |                                                      |  |
-|          | |    pages : [page,page_1,page_2])                     |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    title_tephi **=** mtext(text_line_1: "Tephigram", |  |
-|          | |    text_font_size : 0.35)                            |  |
-|          | |                                                      |  |
-|          | |    title_skewt **=** mtext(text_line_1: "Skew-T",    |  |
-|          | |    text_font_size : 0.35)                            |  |
-|          | |                                                      |  |
-|          | |    title_emagr **=** mtext(text_line_1: "Emagram",   |  |
-|          | |    text_font_size : 0.35)                            |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    plot(dw[1], thermo_data, title_tephi)             |  |
-|          | |                                                      |  |
-|          | |    plot(dw[2], thermo_data, title_skewt)             |  |
-|          | |                                                      |  |
-|          | |    plot(dw[3], thermo_data, title_emagr)             |  |
-|          | +======================================================+  |
-|          | +------------------------------------------------------+  |
-|          |                                                           |
-|          | Code Block 2 Macro demonstrating the new thermo diagrams  |
-+----------+-----------------------------------------------------------+
+   .. image:: /_static/release/version_5.1_updates/image3.png
+         :width: 500px
+      
 
-**Access to pre-defined palettes in Magics**
+   .. code-block:: python
+
+      # Metview Macro
+      #  **************************** LICENSE START ***********************************
+      #
+      #  Copyright 2018 ECMWF. This software is distributed under the terms
+      #  of the Apache License version 2.0. In applying this license, ECMWF does not
+      #  waive the privileges and immunities granted to it by virtue of its status as
+      #  an Intergovernmental Organization or submit itself to any jurisdiction.
+      #
+      #  ***************************** LICENSE END ************************************
+      
+      data_for_tephigram = retrieve(
+         param : ["t","q"],
+         grid  : [1,1])
+      
+      thermo_data = thermo_grib(
+         coordinates : [49.63,21.12],
+         data        : data_for_tephigram)
+      
+      tephiview = thermoview(subpage_y_position : 5)
+      
+      page = plot_page(
+         right : 33.33333,
+         view  : tephiview)
+      
+      skewtview = thermoview(type: "skewt",subpage_y_position : 5)
+      
+      page_1 = plot_page(
+         left  : 33.3333,
+         right : 66.66667,
+         view  : skewtview)
+      
+      emagramview = thermoview(type : "emagram", subpage_y_position : 5)
+      
+      page_2 = plot_page(
+         left  : 66.66667,
+         right : 100.0,
+         view  : emagramview)
+      
+      dw = plot_superpage(
+         layout_size   : "custom",
+         custom_width  : 40,
+         custom_height : 10,
+         pages         : [page,page_1,page_2])
+      
+      title_tephi = mtext(text_line_1: "Tephigram", text_font_size : 0.35)
+      title_skewt = mtext(text_line_1: "Skew-T",    text_font_size : 0.35)
+      title_emagr = mtext(text_line_1: "Emagram",   text_font_size : 0.35)
+      
+      plot(dw[1], thermo_data, title_tephi)
+      plot(dw[2], thermo_data, title_skewt)
+      plot(dw[3], thermo_data, title_emagr)   
+
+
+Access to pre-defined palettes in Magics
+------------------------------------------
 
 Added the set of predefined palettes available in Magics - see the
-example below, also see `Predefined palettes in
+example below, also see `Predefined palettes in
 Magics <https://software.ecmwf.int/wiki/display/MAGP/Predefined+palettes+in+Magics>`__ for
 the list of available palettes.
 
-+-----------+----------------------------------------------------------+
-| Plot      | Code                                                     |
-+===========+==========================================================+
-| |\_s      | +-----------------------------------------------------+  |
-| croll_ext | |    # Metview Macro                                  |  |
-| ernal/att | |                                                     |  |
-| achments/ | |    # \***************************\* LICENSE START   |  |
-| mv-predef | |    \**********************************\*            |  |
-| ined-pale | |                                                     |  |
-| tte-examp | |    #                                                |  |
-| le-39fd41 | |                                                     |  |
-| bad73c588 | |    # Copyright 2018 ECMWF. This software is         |  |
-| 533f4f7ce | |    distributed under the terms                      |  |
-| 1446649b2 | |                                                     |  |
-| 0fc94b945 | |    # of the Apache License version 2.0. In applying |  |
-| 68a4986d3 | |    this license, ECMWF does not                     |  |
-| e909ad30f | |                                                     |  |
-| de7b.png| | |    # waive the privileges and immunities granted to |  |
-|           | |    it by virtue of its status as                    |  |
-|           | |                                                     |  |
-|           | |    # an Intergovernmental Organization or submit    |  |
-|           | |    itself to any jurisdiction.                      |  |
-|           | |                                                     |  |
-|           | |    #                                                |  |
-|           | |                                                     |  |
-|           | |    # \****************************\* LICENSE END    |  |
-|           | |    \***********************************\*           |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |    t **=** retrieve(                                |  |
-|           | |                                                     |  |
-|           | |    levelist : 850,                                  |  |
-|           | |                                                     |  |
-|           | |    param : "t",                                     |  |
-|           | |                                                     |  |
-|           | |    grid : [2,2]                                     |  |
-|           | |                                                     |  |
-|           | |    )                                                |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |    pal4 **=** mcont(                                |  |
-|           | |                                                     |  |
-|           | |    legend : "on",                                   |  |
-|           | |                                                     |  |
-|           | |    contour_highlight : "off",                       |  |
-|           | |                                                     |  |
-|           | |    contour_level_count : 25,                        |  |
-|           | |                                                     |  |
-|           | |    contour_shade : "on",                            |  |
-|           | |                                                     |  |
-|           | |    contour_shade_colour_method : "palette",         |  |
-|           | |                                                     |  |
-|           | |    contour_shade_method : "area_fill",              |  |
-|           | |                                                     |  |
-|           | |    contour_shade_palette_name :                     |  |
-|           | |    "eccharts_rainbow_purple_red_25"                 |  |
-|           | |                                                     |  |
-|           | |    )                                                |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |                                                     |  |
-|           | |    plot(t, pal4)                                    |  |
-|           | +=====================================================+  |
-|           | +-----------------------------------------------------+  |
-|           |                                                          |
-|           | Code Block 3 Macro demonstrating predefined colour       |
-|           | palettes                                                 |
-+-----------+----------------------------------------------------------+
+   .. image:: /_static/release/version_5.1_updates/image4.png
+            :width: 400px
+
+   .. code-block:: python
+
+      # Metview Macro
+      #  **************************** LICENSE START ***********************************
+      #
+      #  Copyright 2018 ECMWF. This software is distributed under the terms
+      #  of the Apache License version 2.0. In applying this license, ECMWF does not
+      #  waive the privileges and immunities granted to it by virtue of its status as
+      #  an Intergovernmental Organization or submit itself to any jurisdiction.
+      #
+      #  ***************************** LICENSE END ************************************
+      
+      t = retrieve(
+         levelist : 850,
+         param    : "t",
+         grid     : [2,2]
+         )
+      
+      pal4 = mcont(
+         legend                      : "on",
+         contour_highlight           : "off",
+         contour_level_count         : 25,
+         contour_shade               : "on",
+         contour_shade_colour_method : "palette",
+         contour_shade_method        : "area_fill",
+         contour_shade_palette_name  : "eccharts_rainbow_purple_red_25"
+         )
+      
 
 Other features of Metview 5.1
 =============================
@@ -455,16 +279,16 @@ Other features of Metview 5.1
 -  **Geopoints**:
 
    -  added new Macro data
-      type, `Geopointset <https://software.ecmwf.int/wiki/display/METV/Geopointset>`__,
+      type, `Geopointset <https://software.ecmwf.int/wiki/display/METV/Geopointset>`__,
       a container for multiple geopoints variables
 
    -  added the ability to store and query arbitrary meta-data in
       a `Geopoints <https://software.ecmwf.int/wiki/display/METV/Geopoints>`__ file/variable
 
    -  added the ability to filter a geopointset based on the meta-data
-      of its constituent geopoints, e.g. 
+      of its constituent geopoints, e.g. ::
 
-      gfilt = filter(gptset, (level:500, step:[6, 12, 18]))
+         gfilt = filter(gptset, (level:500, step:[6, 12, 18]))
 
 -  **Data examiners**:
 

@@ -3,17 +3,6 @@
 Version 5.6 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.6.1 `3 <#version-5.6.1>`__
-
-2 Version 5.6.0 `4 <#version-5.6.0>`__
-
 Version 5.6.1
 =============
 
@@ -29,13 +18,13 @@ Version 5.6.1
       with **Magics** `4.1.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.13.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.13.1+released>`__\ ** **
+      with **ecCodes** `2.13.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.13.1+released>`__
 
    -  Built
       with **ODB_API** version `0.19.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
 **Fixes:**
 
@@ -124,20 +113,20 @@ Version 5.6.0
       with **Magics** `4.1.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.13.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.13.0+released>`__\ ** **
+      with **ecCodes** `2.13.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.13.0+released>`__
 
    -  Built
       with **ODB_API** version `0.19.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
 **Desktop**: 
 
 -  **new way to drop icons** - when an icon editor is open, the icon
    shown in the top-left is now directly draggable, making workflows
    more efficient; for instance, open
-   a :ref:`Contouring <mcont_icon>`\ icon
+   a :ref:`Contouring <mcont_icon>` icon
    editor, make some changes and drag the editor's icon directly in the
    plot window. Icons can also be dropped into a Metview desktop (a copy
    of the icon will be made), or indeed anywhere that an icon can
@@ -145,28 +134,28 @@ Version 5.6.0
    it. When dragged and dropped, any changes made in the editor are
    automatically saved.
 
-   -  .. image:: /_static/release/version_5.6_updates/image1.png
+   .. image:: /_static/release/version_5.6_updates/image1.png
          :width: 3.66667in
          :height: 1.55208in
 
 -  files that appear as NOTES or BINARY icons have a new context menu
    action "Recheck icon type" in case they have been mis-categorised
 
-   -  .. image:: /_static/release/version_5.6_updates/image2.png
+   .. image:: /_static/release/version_5.6_updates/image2.png
          :width: 2.08333in
          :height: 1.55208in
 
 -  new context menu item on icons "copy filesystem path" to put the file
    path into the clipboard
 
-   -  .. image:: /_static/release/version_5.6_updates/image3.png
+   .. image:: /_static/release/version_5.6_updates/image3.png
          :width: 2.08333in
          :height: 1.5625in
 
 -  new menu "Editors", which lists the open icon editors and raises them
    if selected
 
-   -  .. image:: /_static/release/version_5.6_updates/image4.png
+   .. image:: /_static/release/version_5.6_updates/image4.png
          :width: 3.20833in
          :height: 1.01042in
 
@@ -187,13 +176,13 @@ Version 5.6.0
 -  the colour editor widget in icon editors now has syntax highlighting
    in the HTML component:
 
-   -  .. image:: /_static/release/version_5.6_updates/image5.png
+   .. image:: /_static/release/version_5.6_updates/image5.png
          :width: 2.70833in
          :height: 1.12736in
 
 -  added control for navigating the tab history:
 
-   -  .. image:: /_static/release/version_5.6_updates/image6.png
+   .. image:: /_static/release/version_5.6_updates/image6.png
          :width: 2.5in
          :height: 1.17708in
 
@@ -217,10 +206,10 @@ Version 5.6.0
    with
    the :ref:`Coastlines <mcoast_icon>` icon.
    New parameters are **Map User Layer**, **Map User Layer Name**, **Map
-   User Layer Style**, **Map User Layer Colour **\ and **Map** **User
-   Layer Thickness**
+   User Layer Style**, **Map User Layer Colour** and **Map User
+   Layer Thickness**:
 
-   -  .. image:: /_static/release/version_5.6_updates/image7.png
+   .. image:: /_static/release/version_5.6_updates/image7.png
          :width: 3.48719in
          :height: 2.60417in
 
@@ -277,27 +266,31 @@ Version 5.6.0
    function list, or to get help for the function under the cursor.
    Press F2 for a colour helper.
 
-   -  
+   .. figure:: /_static/release/version_5.6_updates/image8.png
+         :width: 3.48719in
+         :height: 2.60417in
 
-+---------------+-----------------+-----------------+-----------------+
-| F1 for        | F1 for specific | Help for        | F2 for          |
-| function list | function help   | colour-related  | standalone      |
-|               |                 | parameters      | colour helper   |
-+===============+=================+=================+=================+
-| |\            | |\_scroll_exte  | |\_scroll_exte  | |\_             |
-| _scroll_exter | rnal/attachment | rnal/attachment | scroll_external |
-| nal/attachmen | s/code-editor-h | s/code-editor-h | /attachments/im |
-| ts/code-edito | elp-2-4f0d10cf8 | elp-3-3bfa46adc | age2019-9-27_9- |
-| r-help-1-20e3 | 3e2fa9a949f813f | 85b28e9991d6648 | 13-40-0708f9aa1 |
-| 09d4b95e510a3 | 8b37106ecd6d304 | 5f2746a74a97682 | 0e5b49bbfc6203a |
-| 236c75b74b1b1 | 5ff61a9afd2a9bf | 12c9ba9dbb39506 | 82d4e8ab4c7d846 |
-| f1e18ca5db59a | ed9f4f23d8.png| | a95617756e.png| | d4f21c12efacac4 |
-| da3eab1c4ab9c |                 |                 | 570f306bd3.png| |
-| 9e656fde.png| |                 |                 |                 |
-+---------------+-----------------+-----------------+-----------------+
+         F1 for function list
 
--  new
-   function: `grid_cell_area(fieldset) <https://confluence.ecmwf.int/display/METV/Fieldset+Functions#FieldsetFunctions-grid_cell_area>`__ -
+   .. figure:: /_static/release/version_5.6_updates/image9.png
+         :width: 3.48719in
+         :height: 2.60417in
+
+         F1 for specific function help
+
+   .. figure:: /_static/release/version_5.6_updates/image10.png
+         :width: 3.48719in
+         :height: 2.60417in
+
+         Help for colour-related parameters 
+         
+   .. figure:: /_static/release/version_5.6_updates/image11.png
+         :width: 3.48719in
+         :height: 2.60417in
+
+         F2 for standalone colour helper 
+
+-  new function: `grid_cell_area(fieldset) <https://confluence.ecmwf.int/display/METV/Fieldset+Functions#FieldsetFunctions-grid_cell_area>`__ -
    returns a fieldset whose values are the areas, in square meters, of
    each cell
 
@@ -322,12 +315,10 @@ Version 5.6.0
 -  :func:`nearest_gridpoint` and :func:`nearest_gridpoint_info` now
    have an option 'valid' to return the nearest non missing value
 
-   -  
+   .. code-block:: python
 
-.. note::
-
- v = nearest_gridpoint(f, [48, 16], 'valid')                           
- v = nearest_gridpoint_info(f, [48, 16], 'valid')                      
+      v = nearest_gridpoint(f, [48, 16], 'valid')
+      v = nearest_gridpoint_info(f, [48, 16], 'valid')
 
 -  added the possibility to batch process points using
    the :func:`surrounding_points_indexes` function.
@@ -338,11 +329,9 @@ Version 5.6.0
    to :func:`surrounding_points_indexes`,
    'all', to also collect missing value points
 
-   -  
+   .. code-block:: python
 
-.. note::
-
- surrounding_points_indexes(f, inlat, inlon, 'all')                    
+      surrounding_points_indexes(f, inlat, inlon, 'all')                    
 
 -  when running a macro, the **list** data type is significantly more
    efficient than it was previously, and a memory leak when appending to
@@ -350,24 +339,20 @@ Version 5.6.0
 
 -  allow :func:`create_geo` to
    accept arbitrary column names when creating an NCOLS formatted
-   geopoints variable
+   geopoints variable. E.g.
 
-   -  e.g.
+  
+   .. code-block:: python
 
-+-----------------------------------------------------------------------+
-| g = create_geo(type:       'ncols',                                   |
-|                latitudes:  \|4, 5, 6|,                                |
-|                longitudes: \|2.3, 1.1, 6.5|,                          |
-|                levels:     850,  # all rows will have 850 as their    |
-| level                                                                 |
-|                times:      nil,                                       |
-|                stnids:     ['aberdeen', 'aviemore', 'edinburgh'],     |
-|                temp:       \|273.15, 269.78, 281.45|,                 |
-|                precip:     [4, 5, 1],  # lists also work, but are     |
-| less efficient                                                        |
-|                speed:      \|2, 3, 5\| )                              |
-+=======================================================================+
-+-----------------------------------------------------------------------+
+      g = create_geo(type:       'ncols',
+               latitudes:  |4, 5, 6|,
+               longitudes: |2.3, 1.1, 6.5|,
+               levels:     850,  # all rows will have 850 as their level
+               times:      nil,
+               stnids:     ['aberdeen', 'aviemore', 'edinburgh'],
+               temp:       |273.15, 269.78, 281.45|,
+               precip:     [4, 5, 1],  # lists also work, but are less efficient
+               speed:      |2, 3, 5| )
 
 -  new geopoints
    function :func:`times` to

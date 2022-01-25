@@ -3,20 +3,6 @@
 Version 5.10 Updates
 ////////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.10.2 `3 <#version-5.10.2>`__
-
-2 Version 5.10.1 `5 <#version-5.10.1>`__
-
-3 Version 5.10.0 `7 <#version-5.10.0>`__
-
-4 Version 5.10.0 `13 <#version-5.10.0-1>`__
 
 Version 5.10.2
 ==============
@@ -118,7 +104,7 @@ Version 5.10.1
       with **Magics** `4.5.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes**\ `2.19.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.1+released>`__\ ** **
+      with **ecCodes**\ `2.19.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.1+released>`__\
 
    -  Built with **ODC** version **1.1.0**
 
@@ -143,61 +129,37 @@ Version 5.10.1
       on the left, now it looks the one on the right, which is
       consistent with the other drivers:
 
-      -  
-.. image:: /_static/release/version_5.10_updates/image3.png
-   :width: 1.5625in
-   :height: 1.2627in
-  
-.. image:: /_static/release/version_5.10_updates/image4.png
-   :width: 1.5625in
-   :height: 1.15388in
+      .. image:: /_static/release/version_5.10_updates/image3.png
+         :width: 1.5625in
+         :height: 1.2627in
+        
+      .. image:: /_static/release/version_5.10_updates/image4.png
+         :width: 1.5625in
+         :height: 1.15388in
 
+      .. code-block:: python
 
-      -  
+            # Metview Macro
+            
+            ivis = input_visualiser(
+               input_plot_type        : "geo_points",
+               input_longitude_values : 0,
+               input_latitude_values  : 0,
+               input_values           : 10
+               )
+            
+            symb = msymb(
+               symbol_type         : "marker",
+               symbol_height       : 0.6,
+               symbol_marker_mode  : "image",
+               symbol_image_path   : "./MSYMB.png",
+               symbol_image_format : "png",
+               symbol_image_width  : 10,
+               symbol_image_height : 10
+               )
+            
+            plot(ivis, symb)
 
-.. note::
-
- # Metview Macro                                                       
-                                                                       
-                                                                       
-                                                                       
- ivis = input_visualiser(                                          
-                                                                       
- input_plot_type : "geo_points",                                       
-                                                                       
- input_longitude_values : 0,                                           
-                                                                       
- input_latitude_values : 0,                                            
-                                                                       
- input_values : 10                                                     
-                                                                       
- )                                                                     
-                                                                       
-                                                                       
-                                                                       
- symb = msymb(                                                     
-                                                                       
- symbol_type : "marker",                                               
-                                                                       
- symbol_height : 0.6,                                                  
-                                                                       
- symbol_marker_mode : "image",                                         
-                                                                       
- symbol_image_path : "./MSYMB.png",                                    
-                                                                       
- symbol_image_format : "png",                                          
-                                                                       
- symbol_image_width : 10,                                              
-                                                                       
- symbol_image_height : 10                                              
-                                                                       
- )                                                                     
-                                                                       
-                                                                       
-                                                                       
- plot(ivis, symb)                                                      
-
-Code Block 1 Code for the above plot...
 
 -  benefits from a fix in Magics 4.5.1 where cross sections that cross a
    pole did not plot properly
@@ -243,7 +205,7 @@ Version 5.10.0
       with **Magics** `4.5.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.19.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.0+released>`__\ ** **
+      with **ecCodes** `2.19.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.0+released>`__
 
    -  Built with **ODC** version **1.1.0**
 
@@ -271,17 +233,15 @@ Version 5.10.0
    takes it to the next level! **NOTE: in this release, the Regrid
    module is considered to be a beta release, meaning that we may make
    small changes to the interface in upcoming releases; we welcome
-   feedback.**
+   feedback.
 
-   -  
-.. image:: /_static/release/version_5.10_updates/image5.png
-   :width: 4.78746in
-   :height: 2.60417in
+   .. image:: /_static/release/version_5.10_updates/image5.png
+      :width: 4.78746in
+      :height: 2.60417in
  
-
-   -  .. image:: /_static/release/version_5.10_updates/image6.png
-         :width: 3.33333in
-         :height: 4.74679in
+   .. image:: /_static/release/version_5.10_updates/image6.png
+      :width: 3.33333in
+      :height: 4.74679in
 
 **User Interface:**
 
@@ -289,7 +249,7 @@ Version 5.10.0
 
    -  activated via the 'eye' icon in the toolbar: 
 
-   -  .. image:: /_static/release/version_5.10_updates/image7.png
+      .. image:: /_static/release/version_5.10_updates/image7.png
          :width: 1.0625in
          :height: 0.67708in
 
@@ -301,30 +261,29 @@ Version 5.10.0
       View <geoview_icon>` icons,
       you will see a plot preview:
 
-   -  
-.. image:: /_static/release/version_5.10_updates/image8.png
-   :width: 2.1875in
-   :height: 2.21788in
-  
-.. image:: /_static/release/version_5.10_updates/image9.png
-   :width: 2.14583in
-   :height: 2.27281in
- 
-.. image:: /_static/release/version_5.10_updates/image10.png
-   :width: 1.97917in
-   :height: 2.24934in
+      .. image:: /_static/release/version_5.10_updates/image8.png
+         :width: 2.1875in
+         :height: 2.21788in
+        
+      .. image:: /_static/release/version_5.10_updates/image9.png
+         :width: 2.14583in
+         :height: 2.27281in
+       
+      .. image:: /_static/release/version_5.10_updates/image10.png
+         :width: 1.97917in
+         :height: 2.24934in
 
 
 -  added a parameter filter to the icon editors to speed up the finding
    of parameters:
 
-   -  .. image:: /_static/release/version_5.10_updates/image11.png
+   .. image:: /_static/release/version_5.10_updates/image11.png
          :width: 3.16667in
          :height: 2.60417in
 
 -  added a tab history navigation tool
 
-   -  .. image:: /_static/release/version_5.10_updates/image12.png
+   .. image:: /_static/release/version_5.10_updates/image12.png
          :width: 1.875in
          :height: 0.91255in
 
@@ -334,15 +293,17 @@ Version 5.10.0
 
 -  redesigned icons for graphical output types for clarity, e.g.
 
-   -  
-.. image:: /_static/release/version_5.10_updates/image13.png
-   :width: 0.58333in
-   :height: 0.57292in
-  → 
-.. image:: /_static/release/version_5.10_updates/image14.png
-   :width: 0.58333in
-   :height: 0.57292in
+   .. figure:: /_static/release/version_5.10_updates/image13.png
+      :width: 0.58333in
+      :height: 0.57292in
 
+      Old icon style
+    
+   .. figure:: /_static/release/version_5.10_updates/image14.png
+      :width: 0.58333in
+      :height: 0.57292in
+      
+      New icon style
 
 -  fixed issue where the help sidebar in the Code Editor could not be
    restored after it had been collapsed using the splitter handle
@@ -361,7 +322,7 @@ Version 5.10.0
 
 -  added syntax highlighting to GRIB dump text
 
-   -  .. image:: /_static/release/version_5.10_updates/image15.png
+   .. image:: /_static/release/version_5.10_updates/image15.png
          :width: 3.34375in
          :height: 2.60417in
 
@@ -518,307 +479,3 @@ Version 5.10.0
 
    -  :ref:`Geopolyline on Map
       Example <gallery_geopolyline_on_map>`
-
-.. _version-5.10.0-1:
-
-Version 5.10.0
-==============
-
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2020-10-15
-* Became metview/new at ECMWF on 2020-10-15 (Linux desktops, ecgate, lxc, lxop)
-
-
--  **At ECMWF:**
-
-   -  Installed **2020-10-15**
-
-   -  Built
-      with **Magics** `4.5.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
-
-   -  Built
-      with **ecCodes** `2.19.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.19.0+released>`__\ ** **
-
-   -  Built with **ODC** version **1.1.0**
-
-   -  Includes
-      version `1.5.0 <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__ of
-      the Python interface
-
-**GRIB Regridding:**
-
--  new module
-   - :ref:`Regrid <regrid_icon>` -
-   providing powerful and flexible interpolation and processing methods
-   on GRIB data. Supports many configurable interpolation methods,
-   output to various grid types including rotated grids and Lambert
-   variants, supports nabla operators, and processing such as spectral
-   to gridpoint, sub-area extraction, frame carving and changing the
-   bits-per-value. The module also allows a template GRIB to be
-   supplied, circumventing the need to set any output grid parameters.
-   The most common of these parameters are already available through
-   the :ref:`MARS
-   Retrieval <retrieve_icon>`
-   and `GRIB
-   Filter <https://confluence.ecmwf.int/display/METV/GRIB+Filter>`__
-   icons - :ref:`Regrid <regrid_icon>`
-   takes it to the next level! **NOTE: in this release, the Regrid
-   module is considered to be a beta release, meaning that we may make
-   small changes to the interface in upcoming releases; we welcome
-   feedback.**
-
-   -  
-.. image:: /_static/release/version_5.10_updates/image5.png
-   :width: 4.78746in
-   :height: 2.60417in
- 
-
-   -  .. image:: /_static/release/version_5.10_updates/image6.png
-         :width: 3.33333in
-         :height: 4.74679in
-
-**User Interface:**
-
--  added a Preview panel in the main user interface:
-
-   -  activated via the 'eye' icon in the toolbar: 
-
-   -  .. image:: /_static/release/version_5.10_updates/image7.png
-         :width: 1.0625in
-         :height: 0.67708in
-
-   -  now, when the mouse cursor is over an icon, you see some
-      information about it in the Preview panel, e.g. for data icons you
-      will see some meta-data,
-      for :ref:`Coastlines <mcoast_icon>`
-      and :ref:`Geographical
-      View <geoview_icon>` icons,
-      you will see a plot preview:
-
-   -  
-.. image:: /_static/release/version_5.10_updates/image8.png
-   :width: 2.1875in
-   :height: 2.21788in
-  
-.. image:: /_static/release/version_5.10_updates/image9.png
-   :width: 2.14583in
-   :height: 2.27281in
- 
-.. image:: /_static/release/version_5.10_updates/image10.png
-   :width: 1.97917in
-   :height: 2.24934in
-
-
--  added a parameter filter to the icon editors to speed up the finding
-   of parameters:
-
-   -  .. image:: /_static/release/version_5.10_updates/image11.png
-         :width: 3.16667in
-         :height: 2.60417in
-
--  added a tab history navigation tool
-
-   -  .. image:: /_static/release/version_5.10_updates/image12.png
-         :width: 1.875in
-         :height: 0.91255in
-
--  added a search capability to the getCapabilities view of the :ref:`WMS
-   Client <wmsclient_icon>`
-   editor
-
--  redesigned icons for graphical output types for clarity, e.g.
-
-   -  
-.. image:: /_static/release/version_5.10_updates/image13.png
-   :width: 0.58333in
-   :height: 0.57292in
-  → 
-.. image:: /_static/release/version_5.10_updates/image14.png
-   :width: 0.58333in
-   :height: 0.57292in
-
-
--  fixed issue where the help sidebar in the Code Editor could not be
-   restored after it had been collapsed using the splitter handle
-
--  fixed issue where an icon editor could be closed unintentionally when
-   pressing a key
-
--  fixed issues on macOS 10.15 where no more than one instance of
-   various modules (e.g. Code Editor, GRIB Examiner, batch plotting)
-   could be run simultaneously
-
--  fixed issue on macOS where closing an icon editor's Help widget could
-   cause a crash
-
-**GRIB Examiner:**
-
--  added syntax highlighting to GRIB dump text
-
-   -  .. image:: /_static/release/version_5.10_updates/image15.png
-         :width: 3.34375in
-         :height: 2.60417in
-
-**Plotting:**
-
--  added option to render :ref:`Thermo
-   Grid <mthermogrid_icon>` to
-   background or foreground layer
-
--  fixed issue where the :ref:`Table
-   Visualiser <table_visualiser_icon>` could
-   plot "geo_vector" data at the wrong locations
-
--  fixed issue in
-   the :ref:`Contouring <mcont_icon>`
-   icon where parameter **contour_hilo_format** was not available if
-   **contour_hilo_type** was set to **BOTH**
-
-**Macro / Python:**
-
--  added function to compute xy components from polar components,
-   xy_from_polar() - see :ref:`Fieldset
-   Functions <macro_fieldset_fn>`
-
--  added function to generate orography polygon for cross section,
-   xs_build_orog() - see :ref:`Plotting
-   Functions <macro_plot_fn>`
-
--  added function to generate curve from a field for cross section,
-   xs_build_curve() - see :ref:`Plotting
-   Functions <macro_plot_fn>`
-
--  added function to extract data values from thermo data objects,
-   thermo_data_values() - see :ref:`Thermodynamic
-   Functions <macro_thermo_fn>`
-
--  added function to create a geographic polyline
-   object, mvl_geopolyline() - see :ref:`Plotting
-   Functions <macro_plot_fn>`
-
--  add convenience function to generate xy area plot objects, xy_area()
-   - see :ref:`Plotting
-   Functions <macro_plot_fn>`
-
--  add function to compute vertical velocity from omega, w_from_omega()
-   - see :ref:`Fieldset
-   Functions <macro_fieldset_fn>`
-
--  added function to compute dewpoint from specific
-   humidity, dewpoint_from_specific_humidity() - see :ref:`Thermodynamic
-   Functions <macro_thermo_fn>`
-
--  added function to compute dewpoint from relative
-   humidity, dewpoint_from_relative_humidity() - see :ref:`Thermodynamic
-   Functions <macro_thermo_fn>`
-
--  added an option to the indexes() function to allow interpolation
-   between indexes - see :ref:`Fieldset
-   Functions <macro_fieldset_fn>`
-
--  enabled ml_to_hl() to work with target heights defined by fieldsets -
-   see :ref:`Fieldset
-   Functions <macro_fieldset_fn>`
-
--  enabled vapour_pressure() to work with model levels fields -
-   see :ref:`Thermodynamic
-   Functions <macro_thermo_fn>`
-
--  renamed function geostrophic_wind_pl() to geostrophic_wind()
-
--  switched off unnecessary printouts when reading BUFR data through
-   Python
-
--  fixed issue that Metview did not fail when dividing one field by
-   another that contains zeros
-
--  fixed issue where the pressure() function did not set paramId to 54
-   on output field
-
-**Geopoints:**
-
--  handle the case where a station id contains internal spaces
-
--  fixed issue where invalid latlon values in geopoints would make the
-   geopoints-grib operator crash
-
--  fixed issue where :ref:`Observation
-   Filter <obsfilter_icon>` did
-   not set missing values correctly for geopoints output
-
--  fixed issue where the Geopoints format string was not set for
-   traditional type when loaded from file
-
-**Cross section:**
-
--  added option to perform vertical extrapolation when
-   vertical_coordinates="user".  The new option name is
-   **VERTICAL_COORDINATE_EXTRAPOLATE.** The possible values are **on**
-   and **off**. See :ref:`Cross Section
-   Data <mcross_sect_icon>`
-
-**Hovmoeller:**
-
--  fixed issue where parameter time_axis_mode was not respected when run
-   from Macro/Python
-
-**ODB support:**
-
--  Metview is now built with the **odc** library, which replaces
-   ODB_API; functionality remains unchanged
-
-**Startup:**
-
--  the 'examine' startup mode no longer requires the data type to be
-   specified - see `Metview's Startup
-   Options <https://confluence.ecmwf.int/display/METV/Metview%27s+Startup+Options>`__
-
--  Geopoints are now supported in Metview's 'examiner' startup mode
-
--  fixed an issue where a user's initial Metview directory was read-only
-
--  fixed an issue where macOS machines could not untar some system files
-   needed for the users' initial directory, leading either to: untidy
-   startup folder, or unable to untar and build the source
-
-**Build:**
-
--  note that this version of Metview requires CMake 3.12.0+, ecCodes
-   2.19.0+ and Magics 4.5.0+.
-
-**Gallery:**
-
--  added a new example for ensemble data handling:
-
-   -  :ref:`ENS Tephigram
-      Example <gallery_ens_tephigram>`
-
--  added new examples for cross section:
-
-   -  :ref:`Cross Section in Pressure with Orography and Boundary Layer
-      Height
-      Example <gallery_cross_section_orog_and_blh>`
-
-   -  :ref:`Cross Section in Height for Model Level Data with Orography
-      Example <gallery_cross_section_height_ml_orog>`
-
--  added a new example for plotting ODB data onto a tephigram:
-
-   -  :ref:`Tephigram from ODB
-      Example <gallery_tephigram_odb>`
-
--  added a new example for plotting polylines/polygons into arbitrary
-   map projections:
-
-   -  :ref:`Geopolyline on Map
-      Example <gallery_geopolyline_on_map>`
-
-
-
-
-
-
-
-
-
-
-

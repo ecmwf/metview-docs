@@ -3,24 +3,6 @@
 Version 5.7 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.7.5 `3 <#version-5.7.5>`__
-
-2 Version 5.7.4 `4 <#version-5.7.4>`__
-
-3 Version 5.7.3 `5 <#version-5.7.3>`__
-
-4 Version 5.7.2 `6 <#version-5.7.2>`__
-
-5 Version 5.7.1 `7 <#version-5.7.1>`__
-
-6 Version 5.7.0 `8 <#version-5.7.0>`__
 
 Version 5.7.5
 =============
@@ -43,7 +25,7 @@ Version 5.7.5
       with **ODB_API** version `0.19.2 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
    -  Includes
       version `1.3.3 <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__ of
@@ -104,13 +86,13 @@ Version 5.7.4
       with **Magics** `4.2.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.15.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.15.0+released>`__\ ** **
+      with **ecCodes** `2.15.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.15.0+released>`__
 
    -  Built
       with **ODB_API** version `0.19.2 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
    -  Includes version
       `1.3.2 <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__ of
@@ -171,13 +153,13 @@ Version 5.7.3
       with **Magics** `4.2.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.15.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.15.0+released>`__\ ** **
+      with **ecCodes** `2.15.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.15.0+released>`__
 
    -  Built
       with **ODB_API** version `0.19.2 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
    -  Includes version
       `1.3.0 <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__
@@ -198,10 +180,8 @@ Version 5.7.3
    window
 
    -  if you experience this problem, please ensure that you use Magics
-      4.2.3, and set the environment variable 
-
-      | MV_FORCE_TEXT_PEN=1
-      | before starting Metview, and please give us your feedback!
+      4.2.3, and set the environment variable MV_FORCE_TEXT_PEN=1
+      before starting Metview, and please give us your feedback!
 
 Version 5.7.2
 =============
@@ -218,13 +198,13 @@ Version 5.7.2
       with **Magics** `4.2.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.14.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.14.0+released>`__\ ** **
+      with **ecCodes** `2.14.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.14.0+released>`__
 
    -  Built
       with **ODB_API** version `0.19.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
    -  Includes version
       `1.3.0 <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__
@@ -272,13 +252,13 @@ Version 5.7.0
       with **Magics** `4.2.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.14.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.14.0+released>`__\ ** **
+      with **ecCodes** `2.14.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.14.0+released>`__
 
    -  Built
       with **ODB_API** version `0.19.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000462 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
    -  Includes version
       `1.3.0 <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__
@@ -294,8 +274,6 @@ Version 5.7.0
 
 -  it is now possible to view the online documentation in a web browser
    for all the functions/icons listed in the Code Editor sidebar:
-
-..
 
    .. image:: /_static/release/version_5.7_updates/image1.png
       :width: 3.13542in
@@ -349,9 +327,9 @@ Version 5.7.0
 -  fixed issue when the polar_north and polar_south projections resulted
    in empty plots when specified via certain corner coordinates.
 
-**MARS: **
+**MARS:**
 
--  set the environment variable  METVIEW_MARS_LOG=1 before starting
+-  set the environment variable METVIEW_MARS_LOG=1 before starting
    Metview in order to obtain useful logging information from the MARS
    client without setting -slog
 

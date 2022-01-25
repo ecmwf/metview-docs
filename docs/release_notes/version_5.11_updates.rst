@@ -3,23 +3,11 @@
 Version 5.11 Updates
 ////////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.11.1 `3 <#version-5.11.1>`__
-
-2 Version 5.11.0 `4 <#version-5.11.0>`__
-
 Version 5.11.1
 ==============
 
 * Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2021-04-27
 * Became metview/new at ECMWF on 2021-04-27 (Linux desktops, ecgate, lxc, lxop)
-
 
 -  **At ECMWF:**
 
@@ -173,9 +161,8 @@ Version 5.11.0
 .. image:: /_static/release/version_5.11_updates/image5.png
    :width: 5.08333in
    :height: 2.60417in
-\ ** 
- 
- **\ 
+
+
 .. image:: /_static/release/version_5.11_updates/image6.png
    :width: 3.6875in
    :height: 2.60417in

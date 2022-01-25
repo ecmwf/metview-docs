@@ -3,17 +3,6 @@
 Version 5.9 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.9.1 `3 <#version-5.9.1>`__
-
-2 Version 5.9.0 `4 <#version-5.9.0>`__
-
 Version 5.9.1
 =============
 
@@ -29,7 +18,7 @@ Version 5.9.1
       with **Magics** `4.4.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.18.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.18.0+released>`__\ ** **
+      with **ecCodes** `2.18.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.18.0+released>`__
 
    -  Built
       with **ODB_API** version `0.19.4 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -86,7 +75,7 @@ Version 5.9.0
       with **Magics** `4.4.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.18.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.18.0+released>`__\ ** **
+      with **ecCodes** `2.18.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.18.0+released>`__
 
    -  Built
       with **ODB_API** version `0.19.4 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -103,28 +92,28 @@ Version 5.9.0
    -  Mercator grid supported for processing and plotting, including
       Cursor Data
 
-      -  .. image:: /_static/release/version_5.9_updates/image1.png
+      .. image:: /_static/release/version_5.9_updates/image1.png
             :width: 3.50048in
             :height: 2.60417in
 
    -  Lambert Azimuthal Equal Area grid, including on oblate spheroid,
       supported for plotting
 
-      -  .. image:: /_static/release/version_5.9_updates/image2.png
+      .. image:: /_static/release/version_5.9_updates/image2.png
             :width: 3.91234in
             :height: 2.60417in
 
    -  Lambert Conformal grid supported for processing and plotting,
       including Cursor Data
 
-      -  .. image:: /_static/release/version_5.9_updates/image3.png
+      .. image:: /_static/release/version_5.9_updates/image3.png
             :width: 3.82348in
             :height: 2.60417in
 
    -  Polar Stereographic grid supported for plotting, including Cursor
       Data
 
-      -  .. image:: /_static/release/version_5.9_updates/image4.png
+      .. image:: /_static/release/version_5.9_updates/image4.png
             :width: 4.03625in
             :height: 2.60417in
 
@@ -138,13 +127,13 @@ Version 5.9.0
    up of hundreds of times compared to using lists. Example plot using
    the Binning options of the Input Visualiser:
 
-   -  .. image:: /_static/release/version_5.9_updates/image5.png
+      .. image:: /_static/release/version_5.9_updates/image5.png
          :width: 3.60577in
          :height: 2.60417in
 
-   -  Improved step string in the title of a FLEXPART plot using
-      the flexpart_build_title() function - for example, a step of 90
-      minutes will now be rendered as "1h 30m" in the title
+-  Improved step string in the title of a FLEXPART plot using
+   the flexpart_build_title() function - for example, a step of 90
+   minutes will now be rendered as "1h 30m" in the title
 
 **BUFR:**
 

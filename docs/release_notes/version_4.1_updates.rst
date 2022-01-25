@@ -3,42 +3,17 @@
 Version 4.1 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Test Version 4.1.5 `3 <#test-version-4.1.5>`__
-
-2 User Version 4.1.3 `4 <#user-version-4.1.3>`__
-
-3 Test Version 4.1.3 `5 <#test-version-4.1.3>`__
-
-4 Export Version 4.1.3 `6 <#export-version-4.1.3>`__
-
-5 Test Version 4.1.3 `7 <#test-version-4.1.3-1>`__
-
-6 Export Version 4.1.2 `8 <#export-version-4.1.2>`__
-
-7 User Version 4.1.2 `9 <#user-version-4.1.2>`__
-
-8 Test Version 4.1.2 `10 <#test-version-4.1.2>`__
-
 Test Version 4.1.5
 ==================
 
-`scroll-bookmark-1 <#test-version-4.1.5>`__\ **\ Introduced 2012-02-01**
-(Linux desktops, lxab cluster; not ecgate)
+Introduced 2012-02-01 (Linux desktops, lxab cluster; not ecgate)
 
 -  Installed as *metview4_new*
 
 -  Rebuilt with GRIB_API 1.10.0, odb_api 0.9.9, latest Mars client and
    Magics 2.14.10
 
-`scroll-bookmark-1 <#test-version-4.1.5>`__\ **\ Introduced 2012-02-20**
-(Linux desktops, lxab cluster; not ecgate)
+Introduced 2012-02-20 (Linux desktops, lxab cluster; not ecgate)
 
 -  Rebuilt Mars client with latest GRIB_API 1.10.0
 
@@ -47,29 +22,28 @@ User Version 4.1.3
 
 **Upgrade 2011-11-28 (Linux desktops, lxab cluster; not ecgate)**
 
--  Version 4.1.3 became *User Version* at ECMWF
+Version 4.1.3 became *User Version* at ECMWF
 
 Test Version 4.1.3
 ==================
 
 **Update 2011-11-24**
 
--  Rebuilt with Magics 2.14.7
+Rebuilt with Magics 2.14.7
 
 Export Version 4.1.3
 ====================
 
 **External release 2011-11-21**
 
--  Version 4.1.3-export became available
+Version 4.1.3-export became available
 
 .. _test-version-4.1.3-1:
 
 Test Version 4.1.3
 ==================
 
-`scroll-bookmark-1 <#test-version-4.1.5>`__\ **\ Introduced 2011-11-23**
-(Linux desktops, lxab cluster; not ecgate)
+Introduced 2011-11-23 (Linux desktops, lxab cluster; not ecgate)
 
 -  Installed as *metview4_new*
 
@@ -90,39 +64,32 @@ Test Version 4.1.3
 
 -  Fix in setoutput() Macro function
 
-`scroll-bookmark-1 <#test-version-4.1.5>`__
 
 Export Version 4.1.2
 ====================
 
 **External release 2011-11-04**
 
--  Version 4.1.2-export became available
+Version 4.1.2-export became available
 
 User Version 4.1.2
 ==================
 
 **Upgrade 2011-10-26 (Linux desktops, lxab cluster; not ecgate)**
 
--  Version 4.1.2 became *User Version* at ECMWF
+Version 4.1.2 became *User Version* at ECMWF
 
-`scroll-bookmark-1 <#test-version-4.1.5>`__
 
 Test Version 4.1.2
 ==================
 
-`scroll-bookmark-1 <#test-version-4.1.5>`__\ **\ Introduced 2011-10-19**
-(Linux desktops, lxab cluster; not ecgate)
+Introduced 2011-10-19 (Linux desktops, lxab cluster; not ecgate)
 
--  Installed as *metview4_new*
+Installed as *metview4_new*
 
--  Major update, including the following changes:
+Major update, including the following changes:
 
-..
-
-   **Plotting**
-
--  
+-  **Plotting**
 
    -  Added basic page layout to Macro (multiple plots on a single page)
 
@@ -136,32 +103,24 @@ Test Version 4.1.2
       be plotted in various ways (e.g. in geographical or Cartesian
       space, as a matrix or as points). The supported data types are:
 
-..
+      - NetCDF - NetCDF files
+      - ODB - ODB databases
+      - Table - ASCII tables (e.g. CSV files)
+      - Input - lists of coordinates and values
 
-   | NetCDF - NetCDF files
-   | ODB - ODB databases
-   | Table - ASCII tables (e.g. CSV files)
-   | Input - lists of coordinates and values
-
-   **WMS**
+-  **WMS**
 
    When zooming in a plot with a WMS layer, a new WMS request is issued
    in order to ensure optimal image quality for the new area
 
-   **Other**
-
--  
+-  **Other**
 
    -  On-screen font size issue fixed
 
    -  Uses latest Magics++ features including updated coastlines and new
       legend mode: histogram
 
-..
-
-   **Display Window**
-
--  
+-  **Display Window**
 
    -  Plots can be resized using controls in the toolbar. Note that this
       is a purely graphical scaling; plots are not recomputed.
@@ -174,11 +133,7 @@ Test Version 4.1.2
 
    -  New "Layer Data" tab for layer meta-data
 
-..
-
-   **ODB**
-
--  
+-  **ODB**
 
    -  Complete change to ODB interface in Metview for improved usability
       - old ODB icons will not be visible. Please see the revised ODB
@@ -191,46 +146,23 @@ Test Version 4.1.2
 
    -  MARS-ODB client available
 
-..
-
-   **Macro**
-
--  
+-  **Macro**
 
    -  Can now read ASCII table files: use the Table Reader icon to help
       define how the file is read. Available functions are:
 
-..
+      * read_table() - read a file into a 'table' variable
+      * count() - return the number of columns
+      * name() - returns the name of the indexed column
+      * values() - returns a vector or a list of strings for the column
+      * specified by index or name
 
-   | read_table() - read a file into a 'table' variable
-   | count() - return the number of columns
-   | name() - returns the name of the indexed column
-   | values() - returns a vector or a list of strings for the column
-   | specified by index or name
+   - Renamed various Macro functions for consistency when extracting or setting arrays of values in various data types. The original versions still work, but issue a warning. All these functions work with vectors for efficiency. The list of deprecated functions and the new versions is:
 
--  Renamed various Macro functions for consistency when extracting or
-   setting arrays of values in various data types. The original versions
-   still work, but issue a warning. All these functions work with
-   vectors for efficiency. The list of deprecated functions and the new
-   versions is:
-
-..
-
-   | *fieldset functions*:
-   | gridvals->values, gridlats->latitudes, gridlons->longitudes,
-     set_gridvals->set_values.
-   | *geopoint functions*:
-   | date->dates, level->levels, latitude->latitudes,
-     longitude->longitudes, value->values, value2->value2s,
-     set_latitude->set_latitudes, set_longitude->set_longitudes,
-   | set_level->set_levels, set_date->set_dates, set_time->set_times,
-     set_value->set_values, set_value2->set_value2s.
-   | *table functions*:
-   | value->values.
-   | *odb functions*:
-   | value->values.
-
--  
+      * *fieldset functions*: gridvals->values, gridlats->latitudes, gridlons->longitudes,set_gridvals->set_values.
+      * *geopoint functions*: date->dates, level->levels, latitude->latitudes,longitude->longitudes, value->values, value2->value2s, set_latitude->set_latitudes,set_longitude->set_longitudes, set_level->set_levels, set_date->set_dates,set_time->set_times, set_value->set_values, set_value2->set_value2s.
+      * *table functions*: value->values.
+      * *odb functions*: value->values.
 
    -  New Macro function: number(string) - converts a string into a
       number; if a string cannot be converted into a number, then  zero
@@ -246,13 +178,9 @@ Test Version 4.1.2
 
    -  New Macro library function mvl_create_netcdf_2d()
 
-..
+- **Macro Editor**
 
-   **Macro Editor**
-
--  
-
-   -  Program \| Run Options... for more debugging options:
+   -  Program > Run Options... for more debugging options:
 
       -  highlight current execution line
 
@@ -264,15 +192,11 @@ Test Version 4.1.2
 
    -  Now detects and warns if a file has been externally modified
 
-..
+- **Data Examiners**
 
-   **Data Examiners**
+   -  New NetCDF data examiner (right-click > examine)
 
--  
-
-   -  New NetCDF data examiner (right-click \| examine)
-
-   -  New geopoints data examiner (right-click \| examine)
+   -  New geopoints data examiner (right-click > examine)
 
    -  Added sorting to the Data tab of the ODB Examiner. Sorting can be
       enabled by clicking on any of the data column headers but it is
@@ -286,11 +210,7 @@ Test Version 4.1.2
 
    -  Added search facilities to all data examiners
 
-..
-
-   **New Module 'BUFR Picker'**
-
--  
+-  **New Module 'BUFR Picker'**
 
    -  Provides users with better access to BUFR satellite data. Users
       can define several coordinate descriptors (with given coordinate
@@ -300,59 +220,35 @@ Test Version 4.1.2
    -  Temporary documentation can be found in
       /home/graphics/cgx/docs/mvug-bufr-picker.pdf
 
-..
-
-   **Geo To Grib Module**
-
--  
+-  **Geo To Grib Module**
 
    -  Added new interpolation methods to determine how points are
       weighted according to their distance from the target point:
 
       -  Reciprocal - default, and the same as in previous versions:
 
-.. note::
+         .. code-block:: C++
 
-    **if**\ ( dist == 0 )                                              
-                                                                       
-    **return** grid_value(); //-- Here the point is on the Grid        
-                                                                       
-    weight = 1/dist;                                                   
+            if( dist == 0 )
+               return grid_value(); //Here the point is on the Grid
+            weight = 1/dist;
 
-..
+      -  Exponential Mean - note the special case where Tolerance is zero:
 
-    
+         .. code-block:: C++
 
--  
+            if ( Tolerance != 0 )
+               weight = exp(-(dist/(pow(Tolerance,2))));
+            else
+               weight = dist ? 1 : 0;
 
-   -  Exponential Mean - note the special case where Tolerance is zero:
 
-.. note::
+      -  Exponential Sum - same as Exponential Mean, but the final value is
+         not divided by the total weight; when Tolerance is zero, this mode
+         will compute the number of source points located at each target
+         point.
 
-    **if** ( Tolerance != 0 )                                          
-                                                                       
-    weight = exp(-(dist/(pow(Tolerance,2))));                          
-                                                                       
-    **else**                                                           
-                                                                       
-    weight = dist ? 1 : 0;                                             
-
-..
-
-    
-
--  
-
-   -  Exponential Sum - same as Exponential Mean, but the final value is
-      not divided by the total weight; when Tolerance is zero, this mode
-      will compute the number of source points located at each target
-      point.
-
-..
-
-   **WMS**
-
--  
+- **WMS**
 
    -  Added preview to the plain editor mode of the WMS Client
 
@@ -366,21 +262,13 @@ Test Version 4.1.2
 
    -  See also the relevant entries in "Plotting"
 
-..
-
-   **Other**
-
--  
+-  **Other**
 
    -  Re-introduced VelStr icon (Velocity Potential / Stream Function)
 
    -  Area selection dialog can now be used to select a single point
 
-..
-
-   **Support libraries**
-
--  
+- **Support libraries**
 
    -  The latest Mars client, emoslib 000390 and GRIB_API 1.9.10
 

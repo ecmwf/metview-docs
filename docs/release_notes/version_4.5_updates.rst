@@ -3,71 +3,29 @@
 Version 4.5 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Export Version 4.5.7 `3 <#export-version-4.5.7>`__
-
-2 Test Version 4.5.7 `4 <#test-version-4.5.7>`__
-
-3 Test Version 4.5.6 `6 <#test-version-4.5.6>`__
-
-4 Export Version 4.5.6 `7 <#export-version-4.5.6>`__
-
-5 Default Version upgraded to 4.5.5
-`8 <#default-version-upgraded-to-4.5.5>`__
-
-6 Export Version 4.5.5 `9 <#export-version-4.5.5>`__
-
-7 Test Version 4.5.5 `10 <#test-version-4.5.5>`__
-
-8 Export Version 4.5.4 `11 <#export-version-4.5.4>`__
-
-9 Test Version 4.5.4 `12 <#test-version-4.5.4>`__
-
-10 Export Version 4.5.3 `13 <#export-version-4.5.3>`__
-
-11 Test Version 4.5.3 `14 <#test-version-4.5.3>`__
-
-12 Export Version 4.5.2 `15 <#export-version-4.5.2>`__
-
-13 Test Version 4.5.2 `16 <#test-version-4.5.2>`__
-
-14 Export Version 4.5.1 `17 <#export-version-4.5.1>`__
-
-15 Test Version 4.5.0 `18 <#test-version-4.5.0>`__
-
 Export Version 4.5.7
 ====================
 
 **External release 2015-10-16**
 
-`Version 4.5.7-export became available. See
-the  <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-page for download.
+Version 4.5.7-export became available.
 
 Test Version 4.5.7
 ==================
 
-`Introduced 2015-10-07 (Linux desktops, lxab and lxc clusters,
-ecgb) <#export-version-4.5.7>`__
+Introduced 2015-10-07 (Linux desktops, lxab and lxc clusters, cgb) 
 
--  `Installed as metview4_new <#export-version-4.5.7>`__
+* At ECMWF:
+  
+  -  Installed as metview4_new
 
--  `Built with Magics 2.25.2. See the Magics <#export-version-4.5.7>`__
-   `Latest
-   News <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__.
+  -  Built with Magics 2.25.2.
 
--  Built with **GRIB_API** 1.14.1
+  -  Built with **GRIB_API** 1.14.1
 
--  Built with **ODB_API** version 0.10.5
+  -  Built with **ODB_API** version 0.10.5
 
--  Built with **emoslib** 000411. See the `Change
-   History <https://software.ecmwf.int/wiki/display/EMOS/Changes+in+version+000411>`__.
+  -  Built with **emoslib** 000411.
 
 -  **Tephigrams**: added `Thermo
    Grid <https://software.ecmwf.int/wiki/display/METV/Thermo+Grid>`__
@@ -145,38 +103,34 @@ ecgb) <#export-version-4.5.7>`__
    another application.
 
 -  **Build**: added the ability to run post-installation tests for added
-   confidence in the installation. From the build directory:
-
-   -  | cd tests/macros
-      | ./post_install_tests.sh
+   confidence in the installation. From the build directory::
+      
+      cd tests/macros
+      ./post_install_tests.sh
 
 Test Version 4.5.6
 ==================
 
-`Introduced 2015-06-17 (Linux desktops, lxab and lxc clusters,
-ecgate) <#export-version-4.5.7>`__
+Introduced 2015-06-17 (Linux desktops, lxab and lxc clusters, ecgate)
 
--  `Installed as metview4_new (module swap
-   metview/new) <#export-version-4.5.7>`__
+* At ECMWF:
+  
+  -  Installed as metview4_new (module swap metview/new)
 
--  `Built with Magics 2.25.1. See the Magics <#export-version-4.5.7>`__
-   `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Built with Magics 2.25.1.
 
--  Built with **GRIB_API** 1.13.1
+  -  Built with **GRIB_API** 1.13.1
 
--  Built with **ODB_API** version 0.10.2
+  -  Built with **ODB_API** version 0.10.2
 
--  Built with **emoslib** 000406
+  -  Built with **emoslib** 000406
 
 Export Version 4.5.6
 ====================
 
 **External release 2015-06-16**
 
-`Version 4.5.6-export became available. See
-the  <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-page for download.
+Version 4.5.6-export became available. 
 
 -  **Plotting**: fixed issue where plotting of small details in PDF and
    PNG format gave a bad plot because of outline attributes which were
@@ -216,41 +170,34 @@ Default Version upgraded to 4.5.5
 
 -  Version 4.5.5 became the *default version* (command metview) at ECMWF
 
--  To use another version, please use the modules system:
+-  To use another version, please use the modules system::
 
-   -  module avail metview
-
--  
-
-   -  module switch metview/x.x.x
+      module avail metview
+      module switch metview/x.x.x
 
 Export Version 4.5.5
 ====================
 
 **External release 2015-05-27**
 
-`Version 4.5.5-export became available. See
-the  <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-page for download.
+Version 4.5.5-export became available. 
 
 Test Version 4.5.5
 ==================
 
-`Introduced 2015-05-27 (Linux desktops, lxab and lxc clusters,
-ecgate) <#export-version-4.5.7>`__
+Introduced 2015-05-27 (Linux desktops, lxab and lxc clusters, ecgate)
 
--  `Installed as metview4_new (module swap
-   metview/new) <#export-version-4.5.7>`__
+* At ECMWF:
 
--  `Built with Magics 2.24.7. See the Magics <#export-version-4.5.7>`__
-   `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Installed as metview4_new (module swap metview/new) 
 
--  Built with **GRIB_API** 1.13.1
+  -  Built with Magics 2.24.7. 
 
--  Built with **ODB_API** version 0.10.2
+  -  Built with **GRIB_API** 1.13.1
 
--  Built with **emoslib** 000406
+  -  Built with **ODB_API** version 0.10.2
+
+  -  Built with **emoslib** 000406
 
 -  **MARS**: when building Metview outside ECMWF, `MARS access through
    the Web
@@ -272,9 +219,7 @@ Export Version 4.5.4
 
 **External release 2015-05-14**
 
-`Version 4.5.4-export became available. See
-the  <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-page for download.
+Version 4.5.4-export became available.
 
 Note: it is recommended to use at least Magics 2.24.3 in order to build
 with plotting enabled.
@@ -282,20 +227,19 @@ with plotting enabled.
 Test Version 4.5.4
 ==================
 
-`Introduced 2015-05-12 (Linux desktops, lxab cluster,
-ecgb) <#export-version-4.5.7>`__
+Introduced 2015-05-12 (Linux desktops, lxab cluster, ecgb)
 
--  `Installed as metview4_new <#export-version-4.5.7>`__
+* At ECMWF:
 
--  `Built with Magics 2.24.6. See the Magics <#export-version-4.5.7>`__
-   `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Installed as metview4_new
 
--  Built with **GRIB_API** 1.13.1
+  -  Built with Magics 2.24.6. 
 
--  Built with **ODB_API** version 0.10.2
+  -  Built with **GRIB_API** 1.13.1
 
--  Built with **emoslib** 000402
+  -  Built with **ODB_API** version 0.10.2
+
+  -  Built with **emoslib** 000402
 
 -  **Legend**: added new parameter to the *Legend* icon - **Legend
    Automatic Position**. Can have one of two values: top (default) and
@@ -365,10 +309,7 @@ Export Version 4.5.3
 
 **External release 2015-03-12**
 
-`Version 4.5.3-export became available. See
-the  <https://software.ecmwf.int/wiki/display/METV/Development+Snapshots>`__\ `Development
-Snapshots <https://confluence.ecmwf.int/display/METV/Development+Snapshots>`__
-page for download.
+Version 4.5.3-export became available. 
 
 Note: it is recommended to use Magics 2.24.1 in order to build with
 plotting enabled.
@@ -376,21 +317,19 @@ plotting enabled.
 Test Version 4.5.3
 ==================
 
-`Introduced 2015-03-12 (Linux desktops, lxab cluster,
-ecgb) <#export-version-4.5.7>`__
+Introduced 2015-03-12 (Linux desktops, lxab cluster, ecgb)
 
--  `Installed as metview_new   (module swap metview/new ;
-   metview) <#export-version-4.5.7>`__
+* At ECMWF:
 
--  `Built with Magics 2.24.1. See the Magics <#export-version-4.5.7>`__
-   `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Installed as metview_new   (module swap metview/new ;metview) 
 
--  Built with **GRIB_API** 1.13.0
+  -  Built with Magics 2.24.1.
 
--  Built with **ODB_API** version 0.10.2
+  -  Built with **GRIB_API** 1.13.0
 
--  Built with **emoslib** 000400
+  -  Built with **ODB_API** version 0.10.2
+
+  -  Built with **emoslib** 000400
 
 -  **WMS**: fixed issue where a configuration file required for correct
    operation of Metview's :ref:`Web Map
@@ -411,10 +350,7 @@ Export Version 4.5.2
 
 **External release 2015-03-09**
 
-`Version 4.5.2-export became available. See
-the  <#export-version-4.5.7>`__\ `Development
-Snapshots <https://confluence.ecmwf.int/display/METV/Development+Snapshots>`__
-page for download.
+Version 4.5.2-export became available. 
 
 Note: it is recommended to use Magics 2.24.1 in order to build with
 plotting enabled.
@@ -422,21 +358,19 @@ plotting enabled.
 Test Version 4.5.2
 ==================
 
-`Introduced 2015-03-05 (Linux desktops, lxab cluster,
-ecgb) <#export-version-4.5.7>`__
+Introduced 2015-03-05 (Linux desktops, lxab cluster, ecgb) 
 
--  `Installed as metview_new   (module swap metview/new ;
-   metview) <#export-version-4.5.7>`__
+* At ECMWF:
 
--  `Built with Magics 2.24.1. See the Magics <#export-version-4.5.7>`__
-   `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Installed as metview_new   (module swap metview/new ; metview)
 
--  Built with **GRIB_API** 1.13.0
+  -  Built with Magics 2.24.1. 
 
--  Built with **ODB_API** version 0.10.2
+  -  Built with **GRIB_API** 1.13.0
 
--  Built with **emoslib** 000400
+  -  Built with **ODB_API** version 0.10.2
+
+  -  Built with **emoslib** 000400
 
 -  **Plot export**: when exporting a plot from the interactive display
    window, the available options for the selected file format are now
@@ -478,10 +412,7 @@ Export Version 4.5.1
 
 **External release 2015-02-11**
 
-`Version 4.5.1-export became available. See
-the  <#export-version-4.5.7>`__\ `Development
-Snapshots <https://confluence.ecmwf.int/display/METV/Development+Snapshots>`__
-page for download.
+Version 4.5.1-export became available. 
 
 Note: this version requires Magics 2.24.0 in order to build with
 plotting enabled.
@@ -546,20 +477,19 @@ plotting enabled.
 Test Version 4.5.0
 ==================
 
-`Introduced 2015-01-06 (Linux desktops, lxab cluster,
-ecgb) <#export-version-4.5.7>`__
+Introduced 2015-01-06 (Linux desktops, lxab cluster, ecgb)
 
--  `Installed as metview4_new <#export-version-4.5.7>`__
+* At ECMWF:
+  
+  -  Installed as metview4_new
 
--  `Built with Magics 2.23.6. See the Magics <#export-version-4.5.7>`__
-   `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Built with Magics 2.23.6. 
 
--  Built with **GRIB_API** 1.12.3
+  -  Built with **GRIB_API** 1.12.3
 
--  Built with **ODB_API** version 0.9.31
+  -  Built with **ODB_API** version 0.9.31
 
--  Built with **emoslib** 000400
+  -  Built with **emoslib** 000400
 
 -  **User Interface**: the new *Desktop* user interface (see `New
    Desktop user

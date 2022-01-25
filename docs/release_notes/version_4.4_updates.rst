@@ -3,52 +3,6 @@
 Version 4.4 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Change of default Metview versions on ecgate
-`3 <#change-of-default-metview-versions-on-ecgate>`__
-
-2 User Version 4.4.10 `4 <#user-version-4.4.10>`__
-
-3 Export Version 4.4.10 `5 <#export-version-4.4.10>`__
-
-4 Test Version 4.4.10 `6 <#test-version-4.4.10>`__
-
-5 Test Version 4.4.9 `7 <#test-version-4.4.9>`__
-
-6 Export Version 4.4.8 `8 <#export-version-4.4.8>`__
-
-7 Export Version 4.4.7 `10 <#export-version-4.4.7>`__
-
-8 Test Version 4.4.7 `11 <#test-version-4.4.7>`__
-
-9 Export Version 4.4.6 `12 <#export-version-4.4.6>`__
-
-10 Test Version 4.4.6 `13 <#test-version-4.4.6>`__
-
-11 Export Version 4.4.5 `14 <#export-version-4.4.5>`__
-
-12 Test Version 4.4.5 `15 <#test-version-4.4.5>`__
-
-13 Export Version 4.4.4 `16 <#export-version-4.4.4>`__
-
-14 Test Version 4.4.4 `17 <#test-version-4.4.4>`__
-
-15 Change of default Metview versions
-`19 <#change-of-default-metview-versions>`__
-
-16 Export Version 4.4.3 `20 <#export-version-4.4.3>`__
-
-17 User Version 4.4.3 `21 <#user-version-4.4.3>`__
-
-18 Test Version 4.4.3 `22 <#test-version-4.4.3>`__
-
-19 Test Version 4.4.2 `23 <#test-version-4.4.2>`__
 
 Change of default Metview versions on ecgate
 ============================================
@@ -90,16 +44,17 @@ Test Version 4.4.10
 
 **Introduced 2014-10-01** (Linux desktops, lxab cluster, ecgb)
 
--  Installed as *metview4_new*
+* At ECMWF:
 
--  Built with **Magics 2.23.1.** See the Magics `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Installed as *metview4_new*
 
--  Built with **GRIB_API** 1.12.3
+  -  Built with **Magics 2.23.1.**
 
--  Built with **ODB_API** version 0.9.31
+  -  Built with **GRIB_API** 1.12.3
 
--  Built with **emoslib** 000396
+  -  Built with **ODB_API** version 0.9.31
+
+  -  Built with **emoslib** 000396
 
 -  **Cross Section and Average**: parameter **Interpolate Values** is no
    longer available in the user interface, as Metview will always
@@ -132,16 +87,17 @@ Test Version 4.4.9
 
 **Introduced 2014-09-08** (Linux desktops, lxab cluster, ecgb)
 
--  Installed as *metview4_new*
+* At ECMWF:
 
--  Built with **Magics 2.23.1.** See the Magics `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Installed as *metview4_new*
 
--  Built with **GRIB_API** 1.12.3
+  -  Built with **Magics 2.23.1.**
 
--  Built with **ODB_API** version 0.9.31
+  -  Built with **GRIB_API** 1.12.3
 
--  Built with **emoslib** 000396
+  -  Built with **ODB_API** version 0.9.31
+
+  -  Built with **emoslib** 000396
 
 -  **Reprojection**: now copies more meta-data (e.g. satellite and
    channel ID) from input to output GRIB
@@ -166,9 +122,7 @@ Export Version 4.4.8
 
 **External release 2014-08-13**
 
-Version 4.4.8-export became available. See the
-`Releases <https://software.ecmwf.int/wiki/display/METV/Releases>`__
-page for download.
+Version 4.4.8-export became available.
 
 -  **Spectra**: the
    `Spectra <https://software.ecmwf.int/wiki/display/METV/Spectra>`__
@@ -308,25 +262,24 @@ Export Version 4.4.7
 
 **External release 2014-05-13**
 
-Version 4.4.7-export became available. See the
-`Releases <https://software.ecmwf.int/wiki/display/METV/Releases>`__
-page for download.
+Version 4.4.7-export became available.
 
 Test Version 4.4.7
 ==================
 
 **Introduced 2014-05-13** (Linux desktops, lxab cluster, ecgb)
 
--  Installed as *metview4_new*
+* At ECMWF:
 
--  Built with **Magics 2.23.0.** See the Magics `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Installed as *metview4_new*
 
--  Built with **GRIB_API** 1.12.1
+  -  Built with **Magics 2.23.0.**
 
--  Built with **ODB_API** version 0.9.31
+  -  Built with **GRIB_API** 1.12.1
 
--  Built with **emoslib** 000394
+  -  Built with **ODB_API** version 0.9.31
+
+  -  Built with **emoslib** 000394
 
 -  **Desktop**: Metview's `experimental new user
    interface <https://confluence.ecmwf.int/display/METV/Metview%27s+user+interface>`__
@@ -355,25 +308,24 @@ Export Version 4.4.6
 
 **External release 2014-04-29**
 
-Version 4.4.6-export became available. See the
-`Releases <https://software.ecmwf.int/wiki/display/METV/Releases>`__
-page for download.
+Version 4.4.6-export became available. 
 
 Test Version 4.4.6
 ==================
 
 **Introduced 2014-04-29** (Linux desktops, lxab cluster, ecgb)
 
--  Installed as *metview4_new*
+* At ECMWF:
 
--  Built with **Magics 2.23.0.** See the Magics `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Installed as *metview4_new*
 
--  Built with **GRIB_API** 1.12.0
+  -  Built with **Magics 2.23.0.**
 
--  Built with **ODB_API** version 0.9.31
+  -  Built with **GRIB_API** 1.12.0
 
--  Built with **emoslib** 000394
+  -  Built with **ODB_API** version 0.9.31
+
+  -  Built with **emoslib** 000394
 
 -  **Tephigrams**: new module - `Thermo
    Data <https://software.ecmwf.int/wiki/display/METV/Thermo+Data>`__ -
@@ -438,25 +390,24 @@ Export Version 4.4.5
 
 **External release 2014-03-04**
 
-Version 4.4.5-export became available. See the
-`Releases <https://software.ecmwf.int/wiki/display/METV/Releases>`__
-page for download.
+Version 4.4.5-export became available.
 
 Test Version 4.4.5
 ==================
 
 **Introduced 2014-03-03** (Linux desktops, lxab cluster, ecgb)
 
--  Installed as *metview4_new*
+* At ECMWF:
+  
+  -  Installed as *metview4_new*
 
--  Built with **Magics 2.23.0.** See the Magics `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Built with **Magics 2.23.0.**
 
--  Built with **GRIB_API** 1.11.0
+  -  Built with **GRIB_API** 1.11.0
 
--  Built with **ODB_API** version 0.9.31
+  -  Built with **ODB_API** version 0.9.31
 
--  Built with **emoslib** 000394
+  -  Built with **emoslib** 000394
 
 -  **Display Window**: fixed issue where plotting a map with Coastlines
    switched off could cause a crash
@@ -504,260 +455,254 @@ Export Version 4.4.4
 
 **External release 2014-02-06**
 
-Version 4.4.4-export became available. See the
-`Releases <https://software.ecmwf.int/wiki/display/METV/Releases>`__
-page for download.
+Version 4.4.4-export became available. 
 
 Test Version 4.4.4
 ==================
 
 **Introduced 2014-01-22 (Linux desktops, lxab cluster, ecgb)**
 
--  **Installed as metview4_new**
+* At ECMWF:
 
--  **Built with Magics 2.23.0. See the Magics**\ `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__\ **.**
+  -  **Installed as metview4_new**
 
--  **Built with GRIB_API 1.11.0**
+  -  **Built with Magics 2.23.0.**
 
--  **Built with ODB_API version 0.9.31**
+  -  **Built with GRIB_API 1.11.0**
 
--  **Built with emoslib 000394**
+  -  **Built with ODB_API version 0.9.31**
 
--  **Display Window: fixed issue where the Cursor Data panel was not
-   updated when the displayed frame was changed**
+  -  **Built with emoslib 000394**
 
--  **FLEXTRA: fixed issue where running in CET mode failed**
+-  **Display Window:** fixed issue where the Cursor Data panel was not
+   updated when the displayed frame was changed
 
--  **Meteogram: local meteogram generation now enabled on all platforms
-   (internal to ECMWF)**
+-  **FLEXTRA:** fixed issue where running in CET mode failed
 
--  **Cross Section: can now plot the result of a Cross Section Data
+-  **Meteogram:** local meteogram generation now enabled on all platforms
+   (internal to ECMWF)
+
+-  **Cross Section:** can now plot the result of a Cross Section Data
    macro call in a Cross Section View (similarly for Average Data,
-   Vertical Profile Data and Hovmoeller Data)**
+   Vertical Profile Data and Hovmoeller Data)
 
--  **Cross Section: small fixes. Now, if a model level to pressure level
+-  **Cross Section:** small fixes. Now, if a model level to pressure level
    conversion is required, Interpolate Values is automatically set to
    Yes. The algorithm for finding an LNSP field to use has become less
    strict: try first to find a LNSP field with the same date/time/expver
    of the given ML fieldset. If not found, find the first LNSP field in
-   the fieldset.**
+   the fieldset.
 
--  **Observations: fixed unwanted pop-up message about observation
-   grouping**
+-  **Observations:** fixed unwanted pop-up message about observation
+   grouping
 
--  **Macro: unary functions such as** sin **and** log **have been added
-   to netCDF processing, e.g.** new_nc = sin(nc)\ **. See**\ `NetCDF
-   Functions <https://software.ecmwf.int/wiki/display/METV/NetCDF+Functions>`__\ **.**
+-  **Macro:** unary functions such as sin and log have been added
+   to netCDF processing, e.g. new_nc = sin(nc) . See: `NetCDF
+   Functions <https://software.ecmwf.int/wiki/display/METV/NetCDF+Functions>`__
 
--  **Macro: automatic generation of a macro from a Map View fixed
-   (previously did not honour the geographic region selected)**
+-  **Macro:** automatic generation of a macro from a Map View fixed
+   (previously did not honour the geographic region selected)
 
--  **Macro: macro library
-   function**\ `mvl_geoline <https://software.ecmwf.int/wiki/display/METV/mvl_geoline>`__\ **\ has
+-  **Macro:** macro library
+   function `mvl_geoline <https://software.ecmwf.int/wiki/display/METV/mvl_geoline>`__ has
    been revised so that its input parameters are more sensible and so
    that it can work when given a line with the endpoints at the same
    longitude. Previously the input parameters were left_lon, right_lon,
-   top_lat, bot_lat.**
+   top_lat, bot_lat.
 
    Now they are lat1,lon1,lat2,lon2 - coordinates of the two end-points
-   of the line in lat/lon. **This means that existing macros which call
+   of the line in lat/lon. This means that existing macros which call
    this function will no longer give the correct result unless their
-   code is changed!**
+   code is changed!
 
--  **Macro: the macro which is automatically-generated from the
+-  **Macro:** the macro which is automatically-generated from the
    'Generate Macro' button in the Display Window is now saved to the
-   expected directory**
+   expected directory
 
--  **Symbol Plotting: the parameter symbol_format is now enabled when
-   table mode is on**
+-  **Symbol Plotting:** the parameter symbol_format is now enabled when
+   table mode is on
 
--  **Wind Plotting: the wind calm threshold parameters are now enabled
-   when the wind calm indicator is off**
+-  **Wind Plotting:** the wind calm threshold parameters are now enabled
+   when the wind calm indicator is off
 
--  **GRIB: fixed the behaviour of the environment variable
+-  **GRIB:** fixed the behaviour of the environment variable
    METVIEW_EXTRA_GRIB_DEFINITION_PATH so that it adds the correct system
-   path to the user's path for GRIB tables**
+   path to the user's path for GRIB tables
 
--  **User Interface: double-clicking on a PostScript icon now visualises
-   the file rather than opening it in a text editor**
+-  **User Interface:** double-clicking on a PostScript icon now visualises
+   the file rather than opening it in a text editor
 
--  **Build: the configure script now checks whether emoslib has been
-   built with GRIB_API support or not**
+-  **Build:** the configure script now checks whether emoslib has been
+   built with GRIB_API support or not
 
--  **Build: missing .qrc files now in the tarball**
+-  **Build:** missing .qrc files now in the tarball
 
--  **Build: compilation errors relating to QXmlQuery on Ubuntu fixed**
+-  **Build:** compilation errors relating to QXmlQuery on Ubuntu fixed
 
 Change of default Metview versions
 ==================================
 
 **Done on 2013-12-03 (Linux desktops, lxab cluster only)**
 
--  **Command metview now launches metview4**
+-  Command metview now launches metview4
 
--  **Commands metview_new and metview_test now launch metview4_new**
+-  Commands metview_new and metview_test now launch metview4_new
 
--  **Command metview_old now launches metview4_old**
+-  Command metview_old now launches metview4_old
 
--  **Commands metview3, metview3_test and metview3_old are still
-   available for running Metview 3**
+-  Commands metview3, metview3_test and metview3_old are still
+   available for running Metview 3
 
--  **See**\ `Metview at
-   ECMWF <https://confluence.ecmwf.int/display/METV/Metview+at+ECMWF>`__\ **for
-   more details**
+-  See `Metview at ECMWF <https://confluence.ecmwf.int/display/METV/Metview+at+ECMWF>`__ for more details
 
 Export Version 4.4.3
 ====================
 
 **External release 2013-11-08**
 
-**Version 4.4.3-export became available. See
-the**\ `Releases <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **page
-for download.**
+Version 4.4.3-export became available.
 
 User Version 4.4.3
 ==================
 
 **Upgrade 2013-11-05 (Linux desktops, lxab cluster, ecgate)**
 
--  **Version 4.4.3 became User Version (command** metview4\ **) at
-   ECMWF**
+Version 4.4.3 became User Version (command **metview4**) atECMWF
 
 Test Version 4.4.3
 ==================
 
 **Introduced 2013-10-16 (Linux desktops, lxab cluster, ecgate)**
 
--  **Installed as metview4_new**
+-  installed as metview4_new
 
--  **Macro: in the case where an icon-function is given an input
+-  **Macro:** in the case where an icon-function is given an input
    definition which contains either an invalid parameter or an invalid
    value for a parameter, Metview's behaviour was always to reset the
    definition to its defaults. As this causes unexpected results, the
-   new behaviour is to stop with an error message in this situation.**
+   new behaviour is to stop with an error message in this situation.
 
--  **Graph Plotting: changed the default value of Legend from On to Off.
+-  **Graph Plotting:** changed the default value of Legend from On to Off.
    This once again allows a legend to be plotted when a Graph Plotting
-   visual definition is used.**
+   visual definition is used
 
 Test Version 4.4.2
 ==================
 
 **Introduced 2013-10-15 (Linux desktops, lxab cluster, ecgate)**
 
--  **Installed as metview4_new**
+* At ECMWF:
 
--  **Built with Magics 2.20.2. See the Magics**\ `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__\ **.**
+  -  **Installed as metview4_new**
 
--  **Built with latest Mars client code**
+  -  **Built with Magics 2.20.2.**
 
--  **Built with GRIB_API 1.11.0**
+  -  **Built with latest Mars client code**
 
--  **Built with ODB_API version 0.9.31**
+  -  **Built with GRIB_API 1.11.0**
 
--  **Built with netCDF 4.1.2 libraries for HDF support**
+  -  **Built with ODB_API version 0.9.31**
 
--  **Cross Section, Average, Vertical Profile, Hovmoeller: redesigned
+  -  **Built with netCDF 4.1.2 libraries for HDF support**
+
+-  **Cross Section, Average, Vertical Profile, Hovmoeller:** redesigned
    these icons so as to have a clearer separation between the
    responsibilities of the Data icons and the View icons. Possible
-   action required: please see**\ `New Cross Section, Average, Vertical
+   action required: please see `New Cross Section, Average, Vertical
    Profile and Hovmoeller modules in Metview
-   4.4 <https://software.ecmwf.int/wiki/display/METV/New+Cross+Section%2C+Average%2C+Vertical+Profile+and+Hovmoeller+modules+in+Metview+4.4>`__\ **.**
+   4.4 <https://software.ecmwf.int/wiki/display/METV/New+Cross+Section%2C+Average%2C+Vertical+Profile+and+Hovmoeller+modules+in+Metview+4.4>`__
 
--  **Cross Section, Average views: fixed issues where running in batch
+-  **Cross Section, Average views:** fixed issues where running in batch
    mode did not work properly when try to generate multiple plots either
-   within one PostScript file, or between multiple PostScript files.**
+   within one PostScript file, or between multiple PostScript files.
 
--  **Hovmoeller View: re-introduced Hovmoeller View icon. Added new
-   parameter: Vertical Scaling (Linear or Log).**
+-  **Hovmoeller View:** re-introduced Hovmoeller View icon. Added new
+   parameter: Vertical Scaling (Linear or Log).
 
--  **Annotations: new Annotation View icon available. This accepts a
+-  **Annotations:** new Annotation View icon available. This accepts a
    Text Plotting icon; in this case it mimics Metview 3's Text View
    icon. If no Text Plotting icon is passed to it, then it mimics
-   Metview 3's Empty View icon. See**\ `Migrating from Metview 3 to
+   Metview 3's Empty View icon. See `Migrating from Metview 3 to
    Metview
-   4 <https://software.ecmwf.int/wiki/display/METV/Migrating+from+Metview+3+to+Metview+4>`__\ **.**
+   4 <https://software.ecmwf.int/wiki/display/METV/Migrating+from+Metview+3+to+Metview+4>`__
 
--  **Relative Humidity: re-introduced the Relative Humidity icon. When
+-  **Relative Humidity:** re-introduced the Relative Humidity icon. When
    used in Macro, it has been simplified so that it only returns a
    fieldset, rather than the previous behaviour which was to return a
    list which included visual definitions. This may require user-changes
    to Macro code which does something with the result of this module
-   call.**
+   call.
 
--  **Macro: user-defined Macro functions now take precedence over
+-  **Macro:** user-defined Macro functions now take precedence over
    built-in Macro functions of the same name if they are defined
    directly in the user's macro (not simply in their search path). The
    previous behaviour was that Metview's own Macro functions would
-   always take precedence.**
+   always take precedence.
 
--  **Macro: fixed issue where plotting the result of another module call
-   could fail.**
+-  **Macro:** fixed issue where plotting the result of another module call
+   could fail.
 
--  **Macro: fixed issue where passing a merged fieldset to another
-   module resulted in a temporary file not being deleted.**
+-  **Macro:** fixed issue where passing a merged fieldset to another
+   module resulted in a temporary file not being deleted.
 
--  **Macro: fixed issue where the function** global_attributes(netcdf)
+-  **Macro:** fixed issue where the function** global_attributes(netcdf)
    **was crashing if one of the global attributes was more than 1024
-   characters.**
+   characters.
 
--  **Macro: fixed issue where a command-line call to Metview in batch
-   mode (option** -b\ **) failed if the path to the macro script
-   contained whitespace.**
+-  **Macro:** fixed issue where a command-line call to Metview in batch
+   mode (option **-b**) failed if the path to the macro script
+   contained whitespace.
 
--  **Macro Editor: indenting a block of text no longer indents empty
-   lines.**
+-  **Macro Editor:** indenting a block of text no longer indents empty
+   lines.
 
--  **Visual definition icons: updated all visdef icons to reflect the
+-  **Visual definition icons:** updated all visdef icons to reflect the
    latest Magics parameters. This is now done automatically from the
-   Magics resource files.**
+   Magics resource files.
 
--  **Geopoints to Grib: fixed issue where a temporary file generated by
-   the Geopoints To Grib module was not being deleted.**
+-  **Geopoints to Grib:** fixed issue where a temporary file generated by
+   the Geopoints To Grib module was not being deleted.
 
--  **Geopoints to Grib: fixed issue where supplying a small Threshold
+-  **Geopoints to Grib:** fixed issue where supplying a small Threshold
    value (< 0.5 degrees) meant that some surrounding points outwith the
    threshold area, but within 0.5 degrees, were included in the
-   calculations.**
+   calculations.
 
--  **Data Examiners: fixed an issue where invoking one of Metview's data
+-  **Data Examiners:** fixed an issue where invoking one of Metview's data
    examiners from the command line (-e option) with a path that contains
-   spaces in it did not work.**
+   spaces in it did not work.
 
--  **ODB: Metview's ODB tools can now handle 'double' type ODB
-   columns.**
+-  **ODB:** Metview's ODB tools can now handle 'double' type ODB
+   columns.
 
--  **Plotting: harmonised the subpage coordinates for the non-geographic
+-  **Plotting:** harmonised the subpage coordinates for the non-geographic
    views (Cartesian, Cross Section, Average, Vertical Profile). This
-   means that some plots may be slightly shifted on the page.**
+   means that some plots may be slightly shifted on the page.
 
--  **RTTOV: added new functionality for running the RTTOV model from
+-  **RTTOV:** added new functionality for running the RTTOV model from
    within Metview and visualising the results. We plan to release some
-   documentation on this.**
+   documentation on this.
 
--  **Geo View: added new Magics projections - Robinson and  Lambert
-   North Atlantic.**
+-  **Geo View:** added new Magics projections - Robinson and  Lambert
+   North Atlantic.
 
--  **NetCDF: enabled '**-e netcdf\ **' option on startup in order to
-   start the netCDF examiner on startup, e.g.** metview -e netcdf
+-  **NetCDF:** enabled '-e netcdf' option on startup in order to
+   start the netCDF examiner on startup, e.g. metview -e netcdf
    /path/to/netcdf/file
 
--  **Text Plotting: it is now possible to provide finer-grained control
+-  **Text Plotting:** it is now possible to provide finer-grained control
    over which fields are used in generating a user-defined title which
-   accesses GRIB_API keys. see the Magics**\ `Text
-   Plotting <https://software.ecmwf.int/wiki/display/MAGP/Text+Plotting>`__\ **page
-   for more details.**
+   accesses GRIB_API keys. see the Magics `Text
+   Plotting <https://software.ecmwf.int/wiki/display/MAGP/Text+Plotting>`__ page
+   for more details.
 
--  **Layout: fixed issue where setting the page orientation to Portrait
+-  **Layout:** fixed issue where setting the page orientation to Portrait
    did not work; the workaround was to set up user-defined page
-   dimensions - this may no longer work.**
+   dimensions - this may no longer work.
 
--  **MARS: when installing Metview on a non-ECMWF machine which has
-   access to a local MARS server, (configure option**
-   --enable-mars-access\ **), it is now possible to tell Metview where
+-  **MARS:** when installing Metview on a non-ECMWF machine which has
+   access to a local MARS server, (configure option
+   --enable-mars-access), it is now possible to tell Metview where
    the MARS configuration files are by setting the new configure
-   option:** --with-local-mars-home=/path/to/mars/home\ **.**
+   option: --with-local-mars-home=/path/to/mars/home 
 
-** **

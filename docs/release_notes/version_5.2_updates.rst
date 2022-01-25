@@ -3,33 +3,10 @@
 Version 5.2 updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.2.4 `3 <#version-5.2.4>`__
-
-2 Version 5.2.3 `4 <#version-5.2.3>`__
-
-3 Version 5.2.2 `5 <#version-5.2.2>`__
-
-4 Version 5.2.1 `6 <#version-5.2.1>`__
-
-5 Version 5.2.0 `7 <#version-5.2.0>`__
-
-6 Highlights `8 <#highlights>`__
-
-7 Other features of Metview 5.2.0
-`11 <#other-features-of-metview-5.2.0>`__
-
 Version 5.2.4
 =============
 
-**Became metview/new at ECMWF on 2018-11-26 (Linux desktops, ecgate,
-lxc, lxop)**
+Became metview/new at ECMWF on 2018-11-26 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -39,15 +16,15 @@ lxc, lxop)**
       with **Magics** `3.2.3 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.9.2 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__\ ** **
+      with **ecCodes** `2.9.2 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000458 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
+      with **emoslib** `000458 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
-   -  Built with\ ** mir 1.0.1**
+   -  Built with\ **mir 1.0.1**
 
 **Features:**
 
@@ -66,8 +43,7 @@ lxc, lxop)**
 Version 5.2.3
 =============
 
-**Became metview/new at ECMWF on 2018-11-14 (Linux desktops, ecgate,
-lxc, lxop)**
+Became metview/new at ECMWF on 2018-11-14 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -77,15 +53,15 @@ lxc, lxop)**
       with **Magics** `3.2.2 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.9.2 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__\ ** **
+      with **ecCodes** `2.9.2 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000458 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
+      with **emoslib** `000458 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
-   -  Built with\ ** mir 1.0.0**
+   -  Built with **mir 1.0.0**
 
 **Features:**
 
@@ -103,8 +79,7 @@ lxc, lxop)**
 Version 5.2.2
 =============
 
-**Became metview/new at ECMWF on 2018-11-07 (Linux desktops, ecgate,
-lxc, lxop)**
+Became metview/new at ECMWF on 2018-11-07 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -114,13 +89,13 @@ lxc, lxop)**
       with **Magics** `3.2.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.9.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__\ ** **
+      with **ecCodes** `2.9.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000457 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
+      with **emoslib** `000457 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
    -  Built with **mir 1.0.0**
 
@@ -131,17 +106,14 @@ lxc, lxop)**
    code
 
    -  *since version 5.1.0, Metview has included mir-based versions of
-      various module - see *\ `Version 5.1
+      various module - see* `Version 5.1
       Updates <https://confluence.ecmwf.int/display/METV/Version+5.1+Updates>`__
 
 Version 5.2.1
 =============
 
-**Externally** `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ ** on
-2018-10-23**
-
-**Became metview/new at ECMWF on 2018-10-23 (Linux desktops, ecgate,
-lxc, lxop)**
+* Externally `released <https://confluence.ecmwf.int/display/METV/Releases>`__ on 2018-10-23
+* Became metview/new at ECMWF on 2018-10-23 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -151,13 +123,13 @@ lxc, lxop)**
       with **Magics** `3.2.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.9.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__\ ** **
+      with **ecCodes** `2.9.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000457 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
+      with **emoslib** `000457 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
 **Features:**
 
@@ -203,11 +175,11 @@ lxc, lxop)**
 -  **Build**: ensure that the palette and style browsers work fully when
    Metview is installed from a bundle
 
-.. image:: /_static/release/version_5.2_updates/image1.png
-   :width: 4.16667in
-   :height: 1.63854in
+   .. figure:: /_static/release/version_5.2_updates/image1.png
+      :width: 4.16667in
+      :height: 1.63854in
 
-*Improved style browser in the Contouring icon*
+      Improved style browser in the Contouring icon
 
 Version 5.2.0
 =============
@@ -224,135 +196,99 @@ Version 5.2.0
       with **Magics** `3.2.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.9.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__\ ** **
+      with **ecCodes** `2.9.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.9.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000457 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
+      with **emoslib** `000457 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
 Highlights
 ==========
 
-**New parameters in the Contouring icon for using ecCharts styles**
+- New parameters in the Contouring icon for using ecCharts styles
 
-The **CONTOUR AUTOMATIC SETTING** parameter in the
-:ref:`Contouring <mcont_icon>`
-icon now makes the style selection quick and straightforward. Users can
-choose from these three options:
+   The **CONTOUR AUTOMATIC SETTING** parameter in the
+   :ref:`Contouring <mcont_icon>`
+   icon now makes the style selection quick and straightforward. Users can
+   choose from these three options:
 
--  Off: manual contouring settings will be used 
+   -  Off: manual contouring settings will be used 
 
--  Ecmwf: the default ecCharts style associated with the field to be
-   visualised will be automatically applied
+   -  Ecmwf: the default ecCharts style associated with the field to be
+      visualised will be automatically applied
 
--  Style name: the ecCharts style defined in the **CONTOUR STYLE NAME**
-   parameter will be used. When this parameter is active the editor
-   features a style browser to help select the appropriate style.
+   -  Style name: the ecCharts style defined in the **CONTOUR STYLE NAME**
+      parameter will be used. When this parameter is active the editor
+      features a style browser to help select the appropriate style.
 
-+---------------+--------+--------------------------------------------+
-| Icon editor   | Plot   | Macro                                      |
-+===============+========+============================================+
-| |\_scr        | |\_s   | +---------------------------------------+  |
-| oll_external/ | croll_ | |    # Metview Macro                    |  |
-| attachments/i | extern | |                                       |  |
-| mage2018-9-27 | al/att | |    # \***************************\*   |  |
-| _9-29-40-ce56 | achmen | |    LICENSE START                      |  |
-| 62c29a214fc5c | ts/ima | |                                       |  |
-| c9343c35b4e9a | ge2018 | | \**********************************\* |  |
-| b4d2bed8a61c2 | -9-27_ | |                                       |  |
-| 6a4e19851b41c | 10-54- | |    #                                  |  |
-| 2ad40d03.png| | 45-e56 | |                                       |  |
-|               | 2e7394 | |    # Copyright 2018 ECMWF. This       |  |
-|               | b3c98d | |    software is distributed under the  |  |
-|               | c67fcc | |    terms                              |  |
-|               | 02861a | |                                       |  |
-|               | 52069c | |    # of the Apache License version    |  |
-|               | 28eb9a | |    2.0. In applying this license,     |  |
-|               | 53e6a7 | |    ECMWF does not                     |  |
-|               | fb4fac | |                                       |  |
-|               | e0628b | |    # waive the privileges and         |  |
-|               | 5e1157 | |    immunities granted to it by virtue |  |
-|               | 1.png| | |    of its status as                   |  |
-|               |        | |                                       |  |
-|               |        | |    # an Intergovernmental             |  |
-|               |        | |    Organization or submit itself to   |  |
-|               |        | |    any jurisdiction.                  |  |
-|               |        | |                                       |  |
-|               |        | |    #                                  |  |
-|               |        | |                                       |  |
-|               |        | |    # \****************************\*  |  |
-|               |        | |    LICENSE END                        |  |
-|               |        | |    \                                  |  |
-|               |        | | ***********************************\* |  |
-|               |        | |                                       |  |
-|               |        | |                                       |  |
-|               |        | |                                       |  |
-|               |        | |    grib **=** retrieve(param:'2t',    |  |
-|               |        | |    levtype: "surface", grid:[1,1])    |  |
-|               |        | |                                       |  |
-|               |        | |                                       |  |
-|               |        | |                                       |  |
-|               |        | |    cont **=**                         |  |
-|               |        | |    mcont(contour_automatic_setting :  |  |
-|               |        | |    "style_name",                      |  |
-|               |        | |                                       |  |
-|               |        | |    contour_style_name :               |  |
-|               |        | |    "sh_all_fM52t48i4_light",          |  |
-|               |        | |                                       |  |
-|               |        | |    legend : "on"                      |  |
-|               |        | |                                       |  |
-|               |        | |    )                                  |  |
-|               |        | |                                       |  |
-|               |        | |                                       |  |
-|               |        | |                                       |  |
-|               |        | |    plot(grib, cont)                   |  |
-|               |        | +=======================================+  |
-|               |        | +---------------------------------------+  |
-|               |        |                                            |
-|               |        | Code Block 1 Macro to plot fields with an  |
-|               |        | eccharts style                             |
-+---------------+--------+--------------------------------------------+
+      .. figure:: /_static/release/version_5.2_updates/image2.png
+         :width: 250px
+      
+         Icon editor
 
-**New palette-selection helper in
-the **\ :ref:`Contouring <mcont_icon>`\ ** icon for
-when Contour Shade Colour Method is Palette**
+      .. figure:: /_static/release/version_5.2_updates/image3.png
+         :width: 250px
+   
+         Plot
 
-.. image:: /_static/release/version_5.2_updates/image4.png
-   :width: 3.13542in
-   :height: 2.71605in
+      Macro to plot fields with an eccharts style
 
-**Added option to hide disabled parameters in icon editors**
+      .. code-block:: Python
 
-There is a new option in all icon editors to hide the disabled
-parameters instead of greying them out (hiding the parameters is the
-default behaviour, a button at the top allows to toggle the behaviour).
-This feature can be particularly useful for editors with a very large
-number of parameters (e.g. Contouring icon) **.**
+         # Metview Macro
+         #  **************************** LICENSE START ***********************************
+         #
+         #  Copyright 2018 ECMWF. This software is distributed under the terms
+         #  of the Apache License version 2.0. In applying this license, ECMWF does not
+         #  waive the privileges and immunities granted to it by virtue of its status as
+         #  an Intergovernmental Organization or submit itself to any jurisdiction.
+         #
+         #  ***************************** LICENSE END ************************************
+         
+         grib = retrieve(param:'2t', levtype: "surface", grid:[1,1])
+         
+         cont = mcont(contour_automatic_setting : "style_name",
+                     contour_style_name        : "sh_all_fM52t48i4_light",
+                     legend                    : "on"
+         )
+         
+         plot(grib, cont)
 
 
-.. image:: /_static/release/version_5.2_updates/image5.png
-   :width: 2.23584in
-   :height: 2.60417in
-\ 
-.. image:: /_static/release/version_5.2_updates/image6.png
-   :width: 2.20921in
-   :height: 2.60417in
+- New palette-selection helper in the :ref:`Contouring <mcont_icon>` icon for when Contour Shade Colour Method is Palette:
+
+   .. image:: /_static/release/version_5.2_updates/image4.png
+      :width: 3.13542in
+      :height: 2.71605in
+
+- Added option to hide disabled parameters in icon editors:
+
+   There is a new option in all icon editors to hide the disabled
+   parameters instead of greying them out (hiding the parameters is the
+   default behaviour, a button at the top allows to toggle the behaviour).
+   This feature can be particularly useful for editors with a very large
+   number of parameters (e.g. Contouring icon).
+
+   .. image:: /_static/release/version_5.2_updates/image5.png
+      :width: 2.23584in
+      :height: 2.60417in
+
+   .. image:: /_static/release/version_5.2_updates/image6.png
+      :width: 2.20921in
+      :height: 2.60417in
 
 
-**Added support for **\ `tilted perspective
-projection <https://proj4.org/operations/projections/tpers.html>`__\ ** in
-the Geographic View icon**
+- Added support for `tilted perspective projection <https://proj4.org/operations/projections/tpers.html>`__ in the Geographic View icon:
 
+   .. image:: /_static/release/version_5.2_updates/image7.png
+      :width: 2.62548in
+      :height: 2.60417in
 
-.. image:: /_static/release/version_5.2_updates/image7.png
-   :width: 2.62548in
-   :height: 2.60417in
-\ **  **\ 
-.. image:: /_static/release/version_5.2_updates/image8.png
-   :width: 2.5in
-   :height: 2.49381in
+   .. image:: /_static/release/version_5.2_updates/image8.png
+      :width: 2.5in
+      :height: 2.49381in
 
 
 Other features of Metview 5.2.0
@@ -401,8 +337,10 @@ Other features of Metview 5.2.0
 
    -  now allows the setting of sub-elements of a Fieldset object, e.g.
 
-      -  | g = read('gribfile.grib')
-         | g[3] = g[3] + 100
+      .. code-block:: python
+
+         g = read('gribfile.grib')
+         g[3] = g[3] + 100
 
 -  **Data examiners**:
 
@@ -455,26 +393,26 @@ Other features of Metview 5.2.0
 
 -  **Macro editor**
 
-   -  The Macro Editor has\ ** **\ introduced four new colour schemes on
+   -  The Macro Editor has introduced four new colour schemes on
       top of the existing ones: **blueish, borland classic, solarized**
       and **solarized dark (light comment)**. The colour scheme can be
       selected from the Settings -> Colour Scheme menu.
       
-.. image:: /_static/release/version_5.2_updates/image9.png
-   :width: 2.70066in
-   :height: 1.5625in
-\ 
-.. image:: /_static/release/version_5.2_updates/image10.png
-   :width: 2.75696in
-   :height: 1.5625in
-\ 
-.. image:: /_static/release/version_5.2_updates/image11.png
-   :width: 2.71295in
-   :height: 1.5625in
-\ 
-.. image:: /_static/release/version_5.2_updates/image12.png
-   :width: 2.7112in
-   :height: 1.5625in
+      .. image:: /_static/release/version_5.2_updates/image9.png
+         :width: 2.70066in
+         :height: 1.5625in
+
+      .. image:: /_static/release/version_5.2_updates/image10.png
+         :width: 2.75696in
+         :height: 1.5625in
+
+      .. image:: /_static/release/version_5.2_updates/image11.png
+         :width: 2.71295in
+         :height: 1.5625in
+
+      .. image:: /_static/release/version_5.2_updates/image12.png
+         :width: 2.7112in
+         :height: 1.5625in
 
 
 -  **Met.3D**:

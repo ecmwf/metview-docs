@@ -3,74 +3,20 @@
 Version 4.3 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Export Version 4.3.11 `3 <#export-version-4.3.11>`__
-
-2 User Version 4.3.11 `4 <#user-version-4.3.11>`__
-
-3 Test Version 4.3.11 `5 <#test-version-4.3.11>`__
-
-4 Export Version 4.3.10 `6 <#export-version-4.3.10>`__
-
-5 Test Version 4.3.10 `7 <#test-version-4.3.10>`__
-
-6 User Version 4.3.9 `8 <#user-version-4.3.9>`__
-
-7 Export Version 4.3.9 `9 <#export-version-4.3.9>`__
-
-8 Test Version 4.3.9 `10 <#test-version-4.3.9>`__
-
-9 Export Version 4.3.8 `11 <#export-version-4.3.8>`__
-
-10 Test Version 4.3.8 `12 <#test-version-4.3.8>`__
-
-11 Export Version 4.3.7 `14 <#export-version-4.3.7>`__
-
-12 User Version 4.3.7 `15 <#user-version-4.3.7>`__
-
-13 Test Version 4.3.7 `16 <#test-version-4.3.7>`__
-
-14 Test Version 4.3.6 `17 <#test-version-4.3.6>`__
-
-15 Test Version 4.3.5 `18 <#test-version-4.3.5>`__
-
-16 Export Version 4.3.4 `20 <#export-version-4.3.4>`__
-
-17 Test Version 4.3.4 `21 <#test-version-4.3.4>`__
-
-18 User Version 4.3.3 `23 <#user-version-4.3.3>`__
-
-19 Test Version 4.3.3 `24 <#test-version-4.3.3>`__
-
-20 Export Version 4.3.2 `25 <#export-version-4.3.2>`__
-
-21 Export Version 4.3.1 `26 <#export-version-4.3.1>`__
-
-22 Test Version 4.3.1 `27 <#test-version-4.3.1>`__
-
-23 Test Version 4.3.0 `28 <#test-version-4.3.0>`__
 
 Export Version 4.3.11
 =====================
 
 **External release 2013-09-17**
 
-Version 4.3.11-export became available. See the
-`Releases <https://confluence.ecmwf.int/display/METV/Releases>`__ page
-for download.
+Version 4.3.11-export became available.
 
 User Version 4.3.11
 ===================
 
 **Upgrade 2013-09-17 (Linux desktops, lxab cluster, ecgate)**
 
--  Version 4.3.11 became *User Version* (command metview4) at ECMWF
+Version 4.3.11 became *User Version* (command metview4) at ECMWF
 
 Test Version 4.3.11
 ===================
@@ -80,16 +26,15 @@ Test Version 4.3.11
 -  Installed as *metview4_new*
 
 -  **Macro**: added a vector function to return a vector of sorted
-   indices from a vector:
+   indices from a vector::
 
-..
+      vector sort_indices(vector)
+      vector sort_indices(vector, string)
 
-   | vector sort_indices(vector)
-   | vector sort_indices(vector, string)
-   | Sorts a vector and returns the sorted indices. The default
-     behaviour is to sort in ascending order unless an alternative
-     comparison function is provided. A second argument consisting of a
-     string can be given: '<' for ascending, '>' for descending order.
+      Sorts a vector and returns the sorted indices. The default
+      behaviour is to sort in ascending order unless an alternative
+      comparison function is provided. A second argument consisting of a
+      string can be given: '<' for ascending, '>' for descending order.
 
 -  **FLEXTRA**: Metview's FLEXTRA modules can now run with 137-level
    model level data
@@ -108,9 +53,7 @@ Export Version 4.3.10
 
 **External release 2013-05-28**
 
--  Version 4.3.10-export became available. See the
-   `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-   page for download. **Anyone using version 4.3.8 should immediately
+-  Version 4.3.10-export became available. **Anyone using version 4.3.8 should immediately
    upgrade to 4.3.10**.
 
 Test Version 4.3.10
@@ -140,17 +83,14 @@ User Version 4.3.9
 
 **Upgrade 2013-05-21 (Linux desktops, lxab cluster, ecgate)**
 
--  Version 4.3.9 became *User Version* (command metview4) at ECMWF
+Version 4.3.9 became *User Version* (command metview4) at ECMWF
 
 Export Version 4.3.9
 ====================
 
 **External release 2013-05-16**
 
--  Version 4.3.9-export became available. See the
-   `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-   page for download. **Anyone using version 4.3.8 should immediately
-   upgrade to 4.3.9**.
+Version 4.3.9-export became available. **Anyone using version 4.3.8 should immediately upgrade to 4.3.9**.
 
 Test Version 4.3.9
 ==================
@@ -170,23 +110,22 @@ Export Version 4.3.8
 
 **External release 2013-05-08**
 
--  Version 4.3.8-export became available. See the
-   `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-   page for download.
+Version 4.3.8-export became available.
 
 Test Version 4.3.8
 ==================
 
 **Introduced 2013-05-08** (Linux desktops, lxab cluster, ecgate)
 
--  Installed as *metview4_new*
+* At ECMWF:
+  
+  -  Installed as *metview4_new*
 
--  Built with **Magics 2.18.16** See the Magics `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+  -  Built with **Magics 2.18.16**
 
--  Built with updated **Mars** client code
+  -  Built with updated **Mars** client code
 
--  Built with **ODB_API** version 0.9.28
+  -  Built with **ODB_API** version 0.9.28
 
 -  **ODB Data Probe**: fixed issue where this was not showing the
    correct values when the plot was zoomed
@@ -277,13 +216,9 @@ Export Version 4.3.7
 
 **External release 2013-03-11**
 
--  Version 4.3.7-export became available. See the
-   `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-   page for download.
+-  Version 4.3.7-export became available.
 
--  **NOTE:** Requires Magics++ version 2.18.2 - see the Magics
-   `Releases <https://confluence.ecmwf.int/display/MAGP/Releases>`__
-   page.
+-  **NOTE:** Requires Magics++ version 2.18.2
 
 User Version 4.3.7
 ==================
@@ -331,7 +266,7 @@ Test Version 4.3.6
 -  Built with **Magics 2.18.13** See the Magics `Change
    History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
 
--  Fixed issue where **netCDF matrix plots**\ with a vertical date/time
+-  Fixed issue where **netCDF matrix plots** with a vertical date/time
    axis were empty
 
    -  This also fixed the *Forward* setting of the **Hovmoeller** plots
@@ -345,10 +280,8 @@ Test Version 4.3.6
 -  The colour scales in the Profile option in the **SCM Visualiser**
    have been improved
 
--  New function added to `The Metview Macro
-   Library <https://confluence.ecmwf.int/display/METV/The+Metview+Macro+Library>`__
-   -
-   `mvl_geoline <https://confluence.ecmwf.int/display/METV/mvl_geoline>`__.
+-  New function added to the Metview Macro
+   Library `mvl_geoline <https://confluence.ecmwf.int/display/METV/mvl_geoline>`__.
    This function can be used to draw geographical lines on a map
    regardless of projection
 
@@ -359,8 +292,7 @@ Test Version 4.3.5
 
 -  Installed as *metview4_new*
 
--  Built with **Magics 2.18.9** See the Magics `Change
-   History <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__.
+-  Built with **Magics 2.18.9**
 
 -  Support for ECMWF **Single Column Model** data - new facilities to
 
@@ -375,16 +307,10 @@ Test Version 4.3.5
    -  see the short tutorial: `The SCM Interface in Metview -
       Tutorial <https://confluence.ecmwf.int/display/METV/The+SCM+Interface+in+Metview+-+Tutorial>`__
 
-..
+-  **Macro**: added new function :func:`dimension_names`. Description::
 
-   .. image:: /_static/release/version_4.3_updates/image1.png
-      :width: 3.125in
-      :height: 3.34821in
-
--  **Macro**: added new function dimension_names(netcdf). Description:
-
-   list dimension_names(netcdf)returns a list of the dimension names for
-   the current netCDF variable.
+      list dimension_names(netcdf)returns a list of the dimension names for
+      the current netCDF variable.
 
 -  Improved efficiency (significantly) of **Average Data** icon
 
@@ -471,13 +397,10 @@ Test Version 4.3.4
    table is highlighted. Conversely, if a row in the data table is
    highlighted, the data probe is automatically positioned over the
    corresponding point on the map.
-
-..
-
     
-.. image:: /_static/release/version_4.3_updates/image2.png
-   :width: 3.125in
-   :height: 2.273in
+   .. image:: /_static/release/version_4.3_updates/image2.png
+      :width: 3.125in
+      :height: 2.273in
 
 
 -  New feature: enabled **ODB Visualiser** to save additional columns to
@@ -508,44 +431,15 @@ Test Version 4.3.4
    stored. METVIEW_EXTRA_GRIB_DEFINITION_PATH should be set before
    starting Metview.
 
--  New **Macro** function: grib_get() for the efficient retrieval of
-   multiple GRIB keys from a fieldset. Description:
-
-| list grib_get(fieldset, list)
-| list grib_get(fieldset, list, string)
-
-   For the efficient retreival of multiple GRIB keys from a fieldset.
-   The keys are provided as a list for the second argument; by default
-   they will be retreived as strings, but their type can be specified by
-   adding a modifier to their names, following the convention used by
-   grib_ls where the key name is followed by a colon and then one or two
-   characters which specify the type (s=string, l=long, d=double,
-   la=long array, da=double array). For example, the key 'centre' can be
-   retreived as a string with 'centre' or 'centre:s', or as a number
-   with 'centre:l'. The result is always a list of lists; by default, or
-   if the optional third argument is 'field', the result will be grouped
-   by field, containing one list per field, each of these lists
-   containing one element per key; if the optional third parameter is
-   'key', the result will be grouped by key, containing one list per
-   key, each of these lists containing one element per field. Example -
-   the following lines of Macro code on a particular 6-field fieldset:
-
-   | print(grib_get(data, ['editionNumber', 'centre',   'level',
-     'step'], 'field'))
-   | print(grib_get(data, ['editionNumber', 'centre:l', 'level',
-     'step'], 'key'))
-
-   produces this output:
-
-   | [[1,ecmf,1000,0],[1,ecmf,500,0],[1,ecmf,100,0],[1,ecmf,1000,48],[1,ecmf,500,48],[1,ecmf,100,48]]
-   | [[1,1,1,1,1,1],[98,98,98,98,98,98],[1000,500,100,1000,500,100],[0,0,0,48,48,48]]
+-  New **Macro** function: :func:`grib_get` for the efficient retrieval of
+   multiple GRIB keys from a fieldset.
 
 User Version 4.3.3
 ==================
 
 **Upgrade 2012-09-18 (Linux desktops, lxab cluster, ecgate)**
 
--  Version 4.3.3 became *User Version* (command metview4) at ECMWF
+Version 4.3.3 became *User Version* (command metview4) at ECMWF
 
 Test Version 4.3.3
 ==================
@@ -596,9 +490,7 @@ Export Version 4.3.1
 
 **External release 2012-08-06**
 
--  Version 4.3.1-export became available. See the
-   `Releases <https://confluence.ecmwf.int/display/METV/Releases>`__
-   page for download.
+Version 4.3.1-export became available.
 
 Test Version 4.3.1
 ==================
@@ -632,74 +524,35 @@ Test Version 4.3.0
 
 -  Built with Magics 2.15.7
 
--  | New module: :ref:`Grib
-     Vectors <grib_vectors_icon>`
-   | - similar to Metview 3's Vectors module. The purpose is to tell
-     Metview to plot given pairs of fields as vectors. Also allows for
-     the colouring of the arrows by a third field.
+-  New module: :ref:`Grib Vectors <grib_vectors_icon>` - similar to Metview 3's Vectors module. The purpose is to   tell Metview to plot given pairs of fields as vectors. Also allows for the colouring of the arrows by a third field.
 
--  Improved automatic recognition of vector fields, including wave
-   fields
+-  Improved automatic recognition of vector fields, including wave ields
 
--  | New module: `Opera Radar
-     Filter <https://confluence.ecmwf.int/display/METV/Opera+Radar+Filter>`__
-   | - new module for the purpose of reading OPERA radar BUFR messages
-     and converting the data to geopoints format.
+-  New module: `Opera Radar Filter <https://confluence.ecmwf.int/display/METV/Opera+Radar+Filter>`__ - new module for the purpose of reading OPERA radar BUFR messages and converting the data to geopoints format.
 
--  | ObsFilter module: extended level filter to work with arbitrary
-     coordinate descriptors.
-   | The level filter in ObsFilter has so far only allowed surface or
-     pressure level/layer selection. Now two new options were added to
-     the level filter so that it could work for any kind of coordinate
-     descriptors (e.g. height, satellite channel etc). These two new
-   | options are follows:
-   | - Descriptor Value: If Level is set to Descriptor Value then
-     ObsFilter performs level filtering according to the descriptor
-     specified in Level Descriptor. The level value is taken from
-     parameter First Level.
-   | - Descriptor Range: If Level is set to Descriptor Range then
-     ObsFilter works similarly but selects the first available level in
-     the specified range. The level range is taken form parameters First
-     Level and Second Level.
+-  ObsFilter module: extended level filter to work with arbitrary coordinate descriptors. The level filter in ObsFilter has so far only allowed surface or pressure level/layer selection. Now two new options were added to the level filter so that it could work for any kind of coordinate descriptors (e.g. height, satellite channel etc). These two new options are follows:
 
--  | New macro function: filter(vector, vector)
-   | - takes two vectors, and returns a new vector containing only the
-     values of the first vector where the second vector's values are
-     non-zero and non-missing. See :ref:`Vector
-     Functions <macro_vector_fn>`.
+   - Descriptor Value: If Level is set to Descriptor Value then ObsFilter performs level filtering according to the descriptor specified in Level Descriptor. The level value is taken from parameter First Level.
 
--  | Plotting: added parameter LEGEND_TITLE_ORIENTATION to the Legend
-     icon
-   | - Horizontal/Vertical
+   - Descriptor Range: If Level is set to Descriptor Range then ObsFilter works similarly but selects the first available level in the specified range. The level range is taken for parameters First Level and Second Level.
 
--  | Macro: added optional 'resize' parameter to set_values(fieldset,
-     vector)
-   | - if the user wants to create a new fieldset from a template, they
-     may wish to change the number of values. The default behaviour is
-     to produce an error if the input fieldset and vector have different
-     numbers of values. If, however, a third parameter (set to the
-     string 'resize') is passed to the function, the resulting fieldset
-     will instead be resized to have the same number of values as the
-     input vector.
+-  New macro function: filter(vector, vector) - takes two vectors, and returns a new vector containing only the values of the first vector where the second vector's values are non-zero and non-missing. See :ref:`Vector Functions <macro_vector_fn>`.
 
--  Geo To Grib module: fixed issue in determining the size of the
-   resulting grid. Also more checks to ensure the consistency of the
-   requested grid (e.g. if grid resuolution matches the size of the
-   domain)
+-  Plotting: added parameter LEGEND_TITLE_ORIENTATION to the Legend icon - Horizontal/Vertical
 
--  Fix in stdev(fieldset) macro function (inherited from Mars code)
+-  Macro: added optional 'resize' parameter to set_values(fieldset, vector) - if the user wants to create a new fieldset from a template, they may wish to change the number of values. The default behaviour is to produce an error if the input fieldset and vector have different numbers of values. If, however, a third parameter (set to the string 'resize') is passed to the function, the resulting fieldset will instead be resized to have the same number of values as the input vector.
 
--  | Macro editor: improved visual display of whitespace characters
-   | - available from the Settings \| Tabs menu
+-  Geo To Grib module: fixed issue in determining the size of the resulting grid. Also more checks to ensure the consistency of the requested grid (e.g. if grid resuolution matches the size of the domain)
+
+-  Fix in :func:`stdev` (fieldset) macro function (inherited from Mars code)
+
+-  Macro editor: improved visual display of whitespace characters (available from the Settings > Tabs menu)
 
 -  Fix in the setting of a plot area in Lambert projection
 
 -  Updated mvl_ml2hPa() to properly encode levels < 1 hPa
 
--  | Removed code for handling computations with GRIB fields stored in
-     polar
-   | stereographic grids. This does not affect the plotting of data onto
-     a polar stereographic map.
+-  Removed code for handling computations with GRIB fields stored in polar stereographic grids. This does not affect the plotting of data onto a polar stereographic map.
 
 -  Smaller fixes and improvements
 

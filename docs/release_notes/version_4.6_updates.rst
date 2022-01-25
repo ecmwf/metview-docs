@@ -3,48 +3,14 @@
 Version 4.6 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 4.6.7 `3 <#version-4.6.7>`__
-
-2 Default Version at ECMWF upgraded to 4.6.6
-`4 <#default-version-at-ecmwf-upgraded-to-4.6.6>`__
-
-3 Test Version 4.6.6 `5 <#test-version-4.6.6>`__
-
-4 Version 4.6.5 `6 <#version-4.6.5>`__
-
-5 Default Version at ECMWF upgraded to 4.6.4
-`8 <#default-version-at-ecmwf-upgraded-to-4.6.4>`__
-
-6 Version 4.6.4 `9 <#version-4.6.4>`__
-
-7 Version 4.6.3 `10 <#version-4.6.3>`__
-
-8 Version 4.6.1 `11 <#version-4.6.1>`__
-
-9 Version 4.6.0 `12 <#version-4.6.0>`__
-
-9.1 Example of streamlines plotting and subpage clipping
-`13 <#example-of-streamlines-plotting-and-subpage-clipping>`__
-
-9.2 Example of new grib_set function
-`14 <#example-of-new-grib_set-function>`__
 
 Version 4.6.7
 =============
 
-**Externally**\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **on
-2016-06-29
-Became metview/new at ECMWF on 2016-07-12 (Linux desktops, ecgate,
-lxc)**
+- Externally `released <https://confluence.ecmwf.int/display/METV/Releases>`__ on 2016-06-29
+- Became metview/new at ECMWF on 2016-07-12 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Installed as *metview/new*
 
@@ -56,7 +22,7 @@ lxc)**
 
    -  Built with **ODB_API** version 0.12.0
 
-   -  Built with **emoslib 000442. See the** `Change
+   -  Built with **emoslib** 000442. See the `Change
       History <https://software.ecmwf.int/wiki/display/EMOS/History+of+EMOSLIB+changes>`__.
 
 -  **GRIB**: fixed an issue when interpreting GRIB fields which are
@@ -135,21 +101,22 @@ Default Version at ECMWF upgraded to 4.6.6
 Test Version 4.6.6
 ==================
 
-`scroll-bookmark-1 <#version-4.6.7>`__\ **\ Externally**\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **on
-2016-05-10Became metview/new at ECMWF on 2016-05-10** (Linux desktops,
-ecgate, lxc)
+- Externally `released <https://confluence.ecmwf.int/display/METV/Releases>`__ on 2016-05-10
+- Became metview/new at ECMWF on 2016-05-10** (Linux desktops, ecgate, lxc)
 
--  Installed as *metview/new*
+*  **At ECMWF:**
 
--  Built with **Magics 2.29.0.** See the Magics `Latest
-   News <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__.
+   - Installed as *metview/new*
 
--  Built with **GRIB_API** 1.15.0
+   -  Built with **Magics 2.29.0.** See the Magics `Latest
+      News <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__.
 
--  Built with **ODB_API** version 0.11.4
+   -  Built with **GRIB_API** 1.15.0
 
--  Built with **emoslib 000441. See the** `Change
-   History <https://software.ecmwf.int/wiki/display/EMOS/History+of+EMOSLIB+changes>`__.
+   -  Built with **ODB_API** version 0.11.4
+
+   -  Built with **emoslib** 000441. See the `Change
+      History <https://software.ecmwf.int/wiki/display/EMOS/History+of+EMOSLIB+changes>`__.
 
 -  **Plotting**: Metview now allows for the plotting of geographic areas
    smaller than 0.1 degrees N/S and E/W
@@ -201,11 +168,10 @@ ecgate, lxc)
 Version 4.6.5
 =============
 
-**Externally**\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **on
-2016-03-06
-Became metview/new at ECMWF on 2016-03-06**
+- Externally `released <https://confluence.ecmwf.int/display/METV/Releases>`__ on 2016-03-06
+- Became metview/new at ECMWF on 2016-03-06
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Built with **Magics 2.28.0.** See the Magics `Latest
       News <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__.
@@ -318,9 +284,9 @@ Default Version at ECMWF upgraded to 4.6.4
 Version 4.6.4
 =============
 
-**Became metview/new at ECMWF on 2016-02-01**
+- Became metview/new at ECMWF on 2016-02-01
 
--  **At ECMWF:**
+* **At ECMWF:**
 
    -  Built with **Magics 2.26.1.** See the Magics `Latest
       News <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__.
@@ -357,8 +323,8 @@ Version 4.6.3
 Version 4.6.1
 =============
 
-**Externally released 2015-12-02
-Became metview/new at ECMWF on 2015-12-09**
+* Externally released 2015-12-02
+* Became metview/new at ECMWF on 2015-12-09
 
 -  **At ECMWF:**
 
@@ -392,7 +358,7 @@ Became metview/new at ECMWF on 2015-12-09**
       -  if the next point is a non-missing value then take that value;
          otherwise, take the previous non-missing value.
 
--  **Macro: ** added Metview revision number (member "metview_revision")
+-  **Macro:** added Metview revision number (member "metview_revision")
    to function version_info().
 
 -  **Average View**: fixed issue where it was not possible to plot the
@@ -516,114 +482,61 @@ Example of streamlines plotting and subpage clipping
 
 The code to generate this plot is here (click to expand the source):
 
-.. note::
+.. code-block:: python 
 
-    # Metview Macro                                                    
-                                                                       
-    # \***************************\* LICENSE START                     
-    \**********************************\*                              
-                                                                       
-    #                                                                  
-                                                                       
-    # Copyright 2015 ECMWF. This software is distributed under the     
-    terms                                                              
-                                                                       
-    # of the Apache License version 2.0. In applying this license,     
-    ECMWF does not                                                     
-                                                                       
-    # waive the privileges and immunities granted to it by virtue of   
-    its status as                                                      
-                                                                       
-    # an Intergovernmental Organization or submit itself to any        
-    jurisdiction.                                                      
-                                                                       
-    #                                                                  
-                                                                       
-    # \****************************\* LICENSE END                      
-    \***********************************\*                             
-                                                                       
-    uv = retrieve(                                                 
-                                                                       
-    levelist : 1000,                                                   
-                                                                       
-    param : ["u","v"],                                                 
-                                                                       
-    grid : [1,1]                                                       
-                                                                       
-    )                                                                  
-                                                                       
-    streamlines = mwind(                                           
-                                                                       
-    wind_field_type : "streamlines",                                   
-                                                                       
-    wind_streamline_min_density : 4,                                   
-                                                                       
-    wind_streamline_min_speed : 4,                                     
-                                                                       
-    wind_streamline_colour : "bluish_purple",                          
-                                                                       
-    wind_streamline_head_shape : 1                                     
-                                                                       
-    )                                                                  
-                                                                       
-    arrows = mwind(                                                
-                                                                       
-    wind_arrow_colour : "RGB(0.48,0.73,0.22)",                         
-                                                                       
-    wind_arrow_head_shape : 1,                                         
-                                                                       
-    wind_arrow_head_ratio : 0.2,                                       
-                                                                       
-    wind_arrow_unit_velocity : 15                                      
-                                                                       
-    )                                                                  
-                                                                       
-    land_sea_shading = mcoast(                                     
-                                                                       
-    map_coastline_land_shade : "on",                                   
-                                                                       
-    map_coastline_land_shade_colour : "cream",                         
-                                                                       
-    map_coastline_sea_shade : "on",                                    
-                                                                       
-    map_coastline_sea_shade_colour : "RGB(0.9,0.95,1)",                
-                                                                       
-    map_grid_latitude_increment : 20,                                  
-                                                                       
-    map_grid_longitude_increment : 40,                                 
-                                                                       
-    map_grid_colour : "charcoal"                                       
-                                                                       
-    )                                                                  
-                                                                       
-    view_with_clipping = geoview(                                  
-                                                                       
-    map_area_definition : "corners",                                   
-                                                                       
-    area : [6.71,\ -\ 78.97,83.91,45.61],                          
-                                                                       
-    subpage_clipping : "on",                                           
-                                                                       
-    coastlines : land_sea_shading                                      
-                                                                       
-    )                                                                  
-                                                                       
-    plot(view_with_clipping, uv, arrows, streamlines)                  
+   # Metview Macro
+   #  **************************** LICENSE START ***********************************
+   #
+   #  Copyright 2015 ECMWF. This software is distributed under the terms
+   #  of the Apache License version 2.0. In applying this license, ECMWF does not
+   #  waive the privileges and immunities granted to it by virtue of its status as
+   #  an Intergovernmental Organization or submit itself to any jurisdiction.
+   #
+   #  ***************************** LICENSE END ************************************
+   uv = retrieve(
+      levelist : 1000,
+      param    : ["u","v"],
+      grid     : [1,1]
+      )
+   streamlines = mwind(
+      wind_field_type             : "streamlines",
+      wind_streamline_min_density : 4,
+      wind_streamline_min_speed   : 4,
+      wind_streamline_colour      : "bluish_purple",
+      wind_streamline_head_shape  : 1
+      )
+   arrows = mwind(
+      wind_arrow_colour        : "RGB(0.48,0.73,0.22)",
+      wind_arrow_head_shape    : 1,
+      wind_arrow_head_ratio    : 0.2,
+      wind_arrow_unit_velocity : 15
+      )
+   land_sea_shading = mcoast(
+      map_coastline_land_shade        : "on",
+      map_coastline_land_shade_colour : "cream",
+      map_coastline_sea_shade         : "on",
+      map_coastline_sea_shade_colour  : "RGB(0.9,0.95,1)",
+      map_grid_latitude_increment     : 20,
+      map_grid_longitude_increment    : 40,
+      map_grid_colour                 : "charcoal"
+      )
+   view_with_clipping = geoview(
+      map_area_definition : "corners",
+      area                : [6.71,-78.97,83.91,45.61],
+      subpage_clipping    : "on",
+      coastlines          : land_sea_shading
+      )
+   plot(view_with_clipping, uv, arrows, streamlines)
+                 
 
 Example of new grib_set function
 --------------------------------
 
-.. note::
+.. code-block:: python
 
-    # data types are automatically recognised as string, **double** or 
-    **long**                                                           
-                                                                       
-    data = grib_set (data, ["dataTime", 1500,                          
-                                                                       
-    "identificationOfOriginatingGeneratingCentre", 99,                 
-                                                                       
-    "level", 101,                                                      
-                                                                       
-    "longitudeOfLastGridPointInDegrees", 300.001,                      
-                                                                       
-    "stepType","avgd"])                                                
+   # data types are automatically recognised as string, double or long
+   data = grib_set (data, ["dataTime", 1500,
+                           "identificationOfOriginatingGeneratingCentre", 99,
+                           "level", 101,
+                           "longitudeOfLastGridPointInDegrees", 300.001,
+                           "stepType","avgd"])

@@ -38,7 +38,7 @@ Upcoming Version 5.12.1
 -  fixed issue where the Geopoints Examiner only showed one station id
    in the stnid column
 
--  fixed issue where the setting 'Order' to 'Sorted' in the :func:`read``
+-  fixed issue where the setting 'Order' to 'Sorted' in the :func:`read`
    command 
    did not work properly with fields of daily climatologies
 

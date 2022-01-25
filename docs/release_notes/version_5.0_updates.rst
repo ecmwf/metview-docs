@@ -3,43 +3,10 @@
 Version 5.0 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.0.3 `3 <#version-5.0.3>`__
-
-2 Version 5.0.2 `4 <#version-5.0.2>`__
-
-3 Version 5.0.1 `5 <#version-5.0.1>`__
-
-4 Version 5.0.0 Beta `6 <#version-5.0.0-beta>`__
-
-5 Highlights `7 <#highlights>`__
-
-5.1 New interactive layer management inside the plot window, allowing
-for faster plot revisions
-`7 <#new-interactive-layer-management-inside-the-plot-window-allowing-for-faster-plot-revisions>`__
-
-5.2 Per-colour transparency `7 <#per-colour-transparency>`__
-
-5.3 New colour gradients shading option
-`10 <#new-colour-gradients-shading-option>`__
-
-5.4 FLEXPART support added `15 <#flexpart-support-added>`__
-
-6 Macro Editor has new colour schemes
-`18 <#macro-editor-has-new-colour-schemes>`__
-
-7 Other features of Metview 5 `19 <#other-features-of-metview-5>`__
-
 Version 5.0.3
 =============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2018-05-xx
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2018-05-xx
 * Became metview/new at ECMWF on 2018-05-16 (Linux desktops, ecgate, lxc, lxop)
 
 
@@ -51,13 +18,13 @@ Version 5.0.3
       with **Magics** `3.0.4 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.7.3 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
+      with **ecCodes** `2.7.3 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.7.3+released>`__
 
    -  Built
       with **ODB_API** version `0.17.6 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000455 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000455 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
 -  **Macro**:
 
@@ -107,24 +74,23 @@ Version 5.0.3
 Version 5.0.2 
 =============
 
-**Became metview/new at ECMWF on 2018-04-18 (Linux desktops, ecgate,
-lxc, lxop)**
+Became metview/new at ECMWF on 2018-04-18 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
    -  Installed **2018-04-018**
 
    -  Built
-      with **Magics** `3.0. <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__\ **\ 3**
+      with **Magics** `3.0. <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.7.3 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.7.3+released>`__\ ** **
+      with **ecCodes** `2.7.3 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.7.3+released>`__
 
    -  Built
       with **ODB_API** version `0.17.6 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000455 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+      with **emoslib** `000455 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
 -  **Macro**: fixes for inline C/Fortran
 
@@ -135,7 +101,7 @@ lxc, lxop)**
 Version 5.0.1 
 =============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2018-03-01
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2018-03-01
 * Became metview/new at ECMWF on 2018-03-05 (Linux desktops, ecgate, lxc, lxop)
 
 
@@ -147,13 +113,13 @@ Version 5.0.1
       with **Magics** `3.0.1 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.7.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.7.0+released>`__\ ** **
+      with **ecCodes** `2.7.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.7.0+released>`__
 
    -  Built
       with **ODB_API** version `0.17.6 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000454 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__\ ** **
+      with **emoslib** `000454 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
 -  **Plotting**:
 
@@ -207,26 +173,24 @@ Version 5.0.1
 Version 5.0.0 Beta 
 ==================
 
-**Externally**\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **on
-2017-12-20
-Available internally ECMWF via the command "module swap metview/5b"
-on 2017-12-20 (Linux desktops, ecgate, lxc, lxop)**
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2017-12-20
+* Available internally ECMWF via the command "module swap metview/5b" on 2017-12-20 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
    -  Installed **2017-12-20**
 
    -  Built with
-      **Magics**\ `3.0.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `3.0.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.6.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.6.0+released>`__
+      **ecCodes** `2.6.0 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.6.0+released>`__
 
    -  Built with **ODB_API** version
       `0.17.6 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built with
-      **emoslib**\ `000453 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__\ ** **
+      **emoslib** `000453 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
 .. note::
 
@@ -251,7 +215,7 @@ for more.
 .. image:: /_static/release/version_5.0_updates/image1.png
    :width: 3.52083in
    :height: 4.16667in
-\ e
+
 
 Per-colour transparency
 -----------------------
@@ -262,6 +226,84 @@ alpha values per colour. In Macro, these are specified as RGBA, e.g.
 "RGBA(1, 0, 0, 0.8)" for a red colour with 80% opacity (0 is invisible,
 1 is full opacity). Note that PostScript output does not support
 transparency.
+
+.. code-block:: python
+
+   # Metview Macro
+   
+   #  **************************** LICENSE START ***********************************
+   #
+   #  Copyright 2017 ECMWF. This software is distributed under the terms
+   #  of the Apache License version 2.0. In applying this license, ECMWF does not
+   #  waive the privileges and immunities granted to it by virtue of its status as
+   #  an Intergovernmental Organization or submit itself to any jurisdiction.
+   #
+   #  ***************************** LICENSE END ************************************
+   
+   # retrieve simulated satellite image
+   simsat = retrieve(
+      type       : "ssd",
+      expver     : 0001,
+      param      : 260510,
+      date       : -3,
+      step       : 0,
+      channel    : 9,
+      ident      : 57,
+      instrument : 207
+      )
+   
+   # retrieve precipitation
+   tp = retrieve(
+      type    : "pf",
+      stream  : "ef",
+      levtype : "sfc",
+      param   : "tp",
+      date    : -3,
+      step    : 6,
+      number  : "all",
+      grid    : [0.5,0.5]
+      )
+   
+   prob_tp = mean(tp > 0.005) * 100 # probability of > 5mm of precipitation
+   
+   sat_shade = mcont(
+      legend                         : "on",
+      contour                        : "off",
+      contour_level_count            : 20,
+      contour_label                  : "off",
+      contour_shade                  : "on",
+      contour_shade_technique        : "cell_shading",
+      contour_shade_cell_resolution  : 40,
+      contour_shade_cell_method      : "interpolate",
+      contour_shade_max_level_colour : "black",
+      contour_shade_min_level_colour : "white",
+      contour_shade_colour_direction : "clockwise"
+      )
+   
+   tp_prob_shade = mcont(
+      legend                       : "on",
+      contour                      : "off",
+      contour_level_selection_type : "level_list",
+      contour_level_list           : [5,20,40,60,80,95,105],
+      contour_label                : "off",
+      contour_shade                : "on",
+      contour_shade_colour_method  : "list",
+      contour_shade_method         : "area_fill",
+      contour_shade_colour_list    : ["RGBA(0.48,0.82,0.78,0.38)",
+                                       "RGBA(0.42,0.79,0.27,0.38)",
+                                       "RGBA(0.83,0.85,0.2,0.38)",
+                                       "RGBA(0.9,0.64,0.23,0.38)",
+                                       "RGBA(0.97,0.43,0.43,0.38)",
+                                       "RGBA(1,0.0039,1,0.38)"]
+      )
+   
+   coastlines = mcoast(
+      map_coastline_colour    : "RGB(0.97,0.94,0.41)",
+      map_coastline_thickness : 2,
+      map_grid_colour         : "RGB(0.95,0.92,0.69)"
+      )
+   
+   plot(simsat, sat_shade, prob_tp, tp_prob_shade, coastlines)
 
 +----------+--------+-------------------------------------------------+
 | Editor   | Plot   | Macro                                           |
@@ -451,6 +493,156 @@ definition. Please see :ref:`How to use the colour gradient
 editor <how_to_use_the_colour_gradient_editor>`
 for more information on this feature. More examples will be added to
 the `Gallery <https://confluence.ecmwf.int/display/METV/Gallery>`__!
+
+.. code-block: python
+
+   # Metview Macro
+   
+   #  **************************** LICENSE START ***********************************
+   #
+   #  Copyright 2017 ECMWF. This software is distributed under the terms
+   #  of the Apache License version 2.0. In applying this license, ECMWF does not
+   #  waive the privileges and immunities granted to it by virtue of its status as
+   #  an Intergovernmental Organization or submit itself to any jurisdiction.
+   #
+   #  ***************************** LICENSE END ************************************
+   
+   # read the input grib file
+   my_data = read('visibility.grib')
+   
+   #set up the contours
+   my_contour = mcont(
+      legend                                : "on",
+      contour                               : "off",
+      contour_level_selection_type          : "level_list",
+      contour_level_list                    : [0,500,2000,6000,10000,40000],
+      contour_label                         : "off",
+      contour_shade                         : "on",
+      contour_shade_colour_method           : "gradients",
+      contour_shade_method                  : "area_fill",
+      contour_gradients_colour_list         : ["magenta","yellow","yellowish_green","ecmwf_blue","RGB(0.74,0.8,0.92)","white"],
+      contour_gradients_waypoint_method     : "left",
+      contour_gradients_technique           : "hsl",
+      contour_gradients_technique_direction : "anti_clockwise",
+      contour_gradients_step_list           : [5,3,4,2,3]
+      )
+   
+   # set up the coastlines
+   my_coast = mcoast(map_coastline_colour            : "charcoal",
+                     map_coastline_resolution        : "medium",
+                     map_coastline_thickness         : 2,
+                     map_coastline_land_shade        : "off",
+                     map_coastline_sea_shade         : "off",
+                     map_grid_line_style             : "dash",
+                     map_label_height                : 0.4,
+                     map_grid_colour                 : "charcoal"
+   )
+   
+   # set up the geographical view
+   my_view = geoview(map_area_definition : "corners",
+                     map_projection      : "cylindrical",
+                     area                : [20.00,-20.00,70.00,50.00],
+                     coastlines          : my_coast)
+   
+   # set-up the title
+   my_title = mtext(text_font_size     : 0.6,
+                  text_lines         : ["Visibility - Gradients method for shading",
+                                          "Computing a range of colours with 6 waypoints which are given as level list",
+                                          "<font colour='evergreen'>contour_level_list                     : [0, 500, 2000, 6000, 10000, 40000]</font>",
+                                          "<font colour='evergreen'>contour_gradients_step_list     : [5, 3, 4, 2, 3]</font>",
+                                          "<font colour='red'>5</font> colours between <font colour='red'>0</font> and <font colour='red'>500</font>, "
+                                          & "<font colour='red'>3</font> between <font colour='red'>500</font> and <font colour='red'>2000</font>, "
+                                          & "<font colour='red'>4</font> between <font colour='red'>2000</font> and <font colour='red'>6000</font>..."],
+                  text_justification : "left",
+                  text_colour        : "charcoal")
+               
+   # set up a legend for the field                  
+   my_legend = mlegend(legend_text_colour    : "charcoal",
+                     legend_text_font_size : 0.4,
+                     legend_display_type   : "continuous",
+                     legend_box_mode       : "positional",
+                     legend_box_x_position : 25.00,
+                     legend_box_y_position : 0.2,
+                     legend_box_x_length   : 3.00,
+                     legend_box_y_length   : 17.50)                 
+                     
+   
+   
+   plot(my_view, my_data, my_contour, my_legend, my_title)
+
+.. code-block:: python
+
+   # Metview Macro
+   
+   #  **************************** LICENSE START ***********************************
+   #
+   #  Copyright 2015 ECMWF. This software is distributed under the terms
+   #  of the Apache License version 2.0. In applying this license, ECMWF does not
+   #  waive the privileges and immunities granted to it by virtue of its status as
+   #  an Intergovernmental Organization or submit itself to any jurisdiction.
+   #
+   #  ***************************** LICENSE END ************************************
+   
+   # read the input grib file
+   my_data = read("t850.grb")
+   
+   #set up the contours
+   my_contour = mcont(
+      legend                            : "on",
+      contour                           : "off",
+      contour_level_selection_type      : "level_list",
+      contour_level_list                : [-40,-20,0,20,40],
+      contour_gradients_step_list       : 10,
+      contour_label                     : "off",
+      contour_shade                     : "on",
+      contour_shade_colour_method       : "gradients",
+      contour_gradients_technique       : "rgb",
+      contour_shade_method              : "area_fill",
+      contour_gradients_colour_list     : ["RGB(0.01961,0.251,0.4157)","greenish_blue","white","orangish_red","RGB(0.3756,0.06648,0.05582)"],
+      contour_gradients_waypoint_method : "ignore"
+      )
+      
+   # set up the coastlines
+   my_coast = mcoast(map_coastline_colour            : "charcoal",
+                     map_coastline_resolution        : "medium",
+                     map_coastline_thickness         : 2,
+                     map_coastline_land_shade        : "off",
+                     map_coastline_land_shade_colour : "RGB(0.25,0.25,0.25)",
+                     map_coastline_sea_shade         : "off",
+                     map_grid_line_style             : "dash",
+                     map_grid_colour                 : "charcoal"
+   )
+   
+   # set up the geographical view
+   my_view = geoview(map_area_definition : "corners",
+                     map_projection      : "cylindrical",
+                     area                : [20.00,-20.00,70.00,50.00],
+                     coastlines          : my_coast)
+   
+   # set-up the title
+   my_title = mtext(text_font_size     : 0.6,
+                  text_lines         : ["Gradients technique for shading",
+                                          "Computing a range of colours with 5 waypoints given as level list",
+                                          "<font colour='evergreen'>contour_level_list                      : [-40,-20,0,20,40]</font>",
+                                          "<font colour='evergreen'>contour_gradients_step_list     : 10 </font>",
+                                          "<font colour='red'>10</font> colours between each 2 waypoints"],
+                  text_justification : "left",
+                  text_colour        : "charcoal")
+   
+   # set up a legend for the field
+   my_legend = mlegend(legend_text_colour    : "charcoal",
+                     legend_text_font_size : 0.35,
+                     legend_display_type   : "continuous",
+                     legend_box_mode       : "positional",
+                     legend_box_x_position : 25.00,
+                     legend_box_y_position : -1.00,
+                     legend_box_x_length   : 3.00,
+                     legend_box_y_length   : 17.50)
+   
+   
+   # plot the data onto the map
+   plot(my_view, my_data, my_contour, my_legend, my_title)
+
 
 +------+--------+-------------------------------------------+----------+
 | Plot | Editor | Code                                      | Data     |
@@ -852,27 +1044,25 @@ the `Gallery <https://confluence.ecmwf.int/display/METV/Gallery>`__!
 FLEXPART support added
 ----------------------
 
-| A new interface was developed for the\ ** FLEXPART** Lagrangian
-  particle dispersion model. The `FLEXPART interface
-  page <https://confluence.ecmwf.int/display/METV/The+FLEXPART+interface>`__ gives
-  an overview about the installation and setup of FLEXPART and also
-  serves as a hub to access the icon documentation and the :ref:`FLEXPART
-  tutorial <using_flexpart_with_metview>`.
-|   |\_scroll_external/remote/image2017-10-31_14-2-43-373a32fb6f3e25f2f190ff575e49f5888a2e88897c0dfbf0c4e05e3a1845faec.png|\ |\_scroll_external/remote/image2017-11-9_10-59-5-2bca01d7f920c46d32f33b0282536eba44e8650d0c7c37dd96011b2ac275926e.png|\ |\_scroll_external/remote/image2017-10-31_15-6-34-a168bd0583f319911f91669e282d633e5da9ac829521c5b6ee599820e6cc98d9.png|
+A new interface was developed for the **FLEXPART** Lagrangian
+particle dispersion model. The `FLEXPART interface
+page <https://confluence.ecmwf.int/display/METV/The+FLEXPART+interface>`__ gives
+an overview about the installation and setup of FLEXPART and also
+serves as a hub to access the icon documentation and the :ref:`FLEXPART
+tutorial <using_flexpart_with_metview>`.
 
 Macro Editor has new colour schemes
 ===================================
 
-The Macro Editor has\ ** **\ introduced two new colour
-schemes: **solarized dark** and **solarized light**. The colour scheme
+The Macro Editor has introduced two new colour
+schemes: **solarized dark** and **solarized light**. The colour scheme
 can be selected from the Settings -> Colour Scheme menu. The original
 colour scheme is called **Metview** and is kept as default. 
-
 
 .. image:: /_static/release/version_5.0_updates/image9.png
    :width: 3.14583in
    :height: 1.80009in
-\ 
+
 .. image:: /_static/release/version_5.0_updates/image10.png
    :width: 3.14583in
    :height: 1.80626in

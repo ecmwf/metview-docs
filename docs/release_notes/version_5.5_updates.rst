@@ -3,28 +3,11 @@
 Version 5.5 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.5.4 `3 <#version-5.5.4>`__
-
-2 Version 5.5.3 `4 <#version-5.5.3>`__
-
-3 Version 5.5.2 `5 <#version-5.5.2>`__
-
-4 Version 5.5.1 `6 <#version-5.5.1>`__
-
-5 Version 5.5.0 `7 <#version-5.5.0>`__
 
 Version 5.5.4
 =============
 
-**Became metview/new and metview/default at ECMWF on 2019-06-13** (Linux
-desktops, ecgate, lxc, lxop)
+Became metview/new and metview/default at ECMWF on 2019-06-13 (Linuxdesktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -40,7 +23,7 @@ desktops, ecgate, lxc, lxop)
       with **ODB_API** version `0.19.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000461 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
+      with **emoslib** `000461 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
 
    -  Built with **mir 1.2.5**
 
@@ -54,8 +37,7 @@ desktops, ecgate, lxc, lxop)
 Version 5.5.3
 =============
 
-**Became metview/new at ECMWF on 2019-05-10** (Linux desktops, ecgate,
-lxc, lxop)
+Became metview/new at ECMWF on 2019-05-10 (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -71,7 +53,7 @@ lxc, lxop)
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000461 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
+      with **emoslib** `000461 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
 
    -  Built with **mir 1.2.4**
 
@@ -110,19 +92,19 @@ lxc, lxop)
       with **Magics** `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built
-      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
+      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000460 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
+      with **emoslib** `000460 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
 
    -  Built with **mir 1.2.0**
 
 **Bug fixes:**
 
--  ** **\ Fixed a bug where contouring of a global Gaussian grid encoded
+-  Fixed a bug where contouring of a global Gaussian grid encoded
    in GRIB 1 produced isolines and shading positioned one grid point
    down from where they should be. This bug was introduced in Metview
    5.3.0 (Magics 3.3.1).
@@ -130,10 +112,8 @@ lxc, lxop)
 Version 5.5.1
 =============
 
-**Externally** `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ ** 2019-02-26**
-
-**Became metview/new at ECMWF on 2019-02-26** (Linux desktops, ecgate,
-lxc, lxop)
+* Externally `released <https://confluence.ecmwf.int/display/METV/Releases>`__ 2019-02-26
+* Became metview/new at ECMWF on 2019-02-26** (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
@@ -143,13 +123,13 @@ lxc, lxop)
       with **Magics** `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built
-      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
+      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000460 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
+      with **emoslib** `000460 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
 
    -  Built with **mir 1.2.0**
 
@@ -161,45 +141,38 @@ lxc, lxop)
 Version 5.5.0
 =============
 
-**Externally**\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **2019-02-15**
-
-**Became  metview/default and metview/new at ECMWF
-on 2019-02-15** (Linux desktops, ecgate, lxc, lxop)
+* Externally `released <https://confluence.ecmwf.int/display/METV/Releases>`__ 2019-02-15
+* Became  metview/default and metview/new at ECMWF on 2019-02-15** (Linux desktops, ecgate, lxc, lxop)
 
 -  **At ECMWF:**
 
    -  Installed **2019-02-15**
 
    -  Built
-      with **Magics**\ `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
+      with **Magics** `4.0.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built
-      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__\ ** **
+      with **ecCodes** `2.12.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.12.0+released>`__
 
    -  Built
       with **ODB_API** version `0.18.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built
-      with **emoslib **\ `000460 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
+      with **emoslib** `000460 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=131391857>`__
 
    -  Built with **mir 1.2.0**
 
 **Highlights:**
 
--  | **Macro and Python**: a new set of functions based on the
+-  **Macro and Python**: a new set of functions based on the
      horizontal derivatives of regular lat-lon fieldsets have been
-     added. This is the complete list of the new methods:
-   | first_derivative_x(), first_derivative_y(), second_derivative_x(),
-     second_derivative_y(),
-   | gradient(),  geostrophic_wind_pl(), divergence(), laplacian(),
-     vorticity()
-   | For details please check the :ref:`fieldset
+     added. This is the complete list of the new methods: first_derivative_x(), first_derivative_y(), second_derivative_x(),
+     second_derivative_y(), gradient(),  geostrophic_wind_pl(), divergence(), laplacian(),
+     vorticity(). For details please check the :ref:`fieldset
      documentation <macro_fieldset_fn>`
      or see the new Gallery example to compute and plot humidity
      advection
      :ref:`here <gallery_advection>`.
-
-..
 
    .. image:: /_static/release/version_5.5_updates/image1.png
       :width: 3.47222in
@@ -220,8 +193,6 @@ on 2019-02-15** (Linux desktops, ecgate, lxc, lxop)
       :alt: image-2019-02-05-11-23-12-878.png
       :width: 3.50949in
       :height: 2.60417in
-
-   Figure 1 image-2019-02-05-11-23-12-878.png
 
 -  **Macro and Python**: new function bearing(), to compute the bearing
    between a point and all points in a GRIB field
@@ -292,24 +263,20 @@ on 2019-02-15** (Linux desktops, ecgate, lxc, lxop)
    variables was incorrect
 
 -  **ODB data probe**: the ODB data probe in the Display Window now has
-   a new mode (available via the
+   a new mode, available via the
    
-.. image:: /_static/release/version_5.5_updates/image3.png
-   :width: 0.25in
-   :height: 0.25in
-\ icon)
-   to only show the values belonging to the point selected by the probe.
+   .. image:: /_static/release/version_5.5_updates/image3.png
+      :width: 0.25in
+      :height: 0.25in
+   
+   icon, to only show the values belonging to the point selected by the probe.
    It was added for the easier inspection of multiple satellite channels
    available for the same pixel etc.
-
-..
 
    .. image:: /_static/release/version_5.5_updates/image4.png
       :alt: image-2018-12-11-08-49-17-883.png
       :width: 2.90641in
       :height: 1.5625in
-
-Figure 2 image-2018-12-11-08-49-17-883.png
 
 -  **General**: improved error message handling between modules
 

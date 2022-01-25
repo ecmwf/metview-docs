@@ -3,45 +3,27 @@
 Version 4.7 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 4.7.2 `3 <#version-4.7.2>`__
-
-2 Version 4.7.1 `4 <#version-4.7.1>`__
-
-3 Version 4.7.0 `5 <#version-4.7.0>`__
-
-3.1 Example of Nearest Gridpoint Count mode of the Geopoints to GRIB
-module
-`6 <#example-of-nearest-gridpoint-count-mode-of-the-geopoints-to-grib-module>`__
 
 Version 4.7.2
 =============
 
-**Externally**\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **on
-2016-10-20
-Became metview/new at ECMWF on 2016-10-20 (Linux desktops, ecgate,
-lxc)**
+- Externally `released <https://confluence.ecmwf.int/display/METV/Releases>`__ on 2016-10-20
+- Became metview/new at ECMWF on 2016-10-20 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+* **At ECMWF:**
 
    -  Installed as *metview/new*
 
    -  Built with
-      **Magics**\ `2.29.6 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
+      **Magics** `2.29.6 <https://confluence.ecmwf.int/display/MAGP/Latest+News+-+archive>`__
 
    -  Built with
-      **GRIB_API**\ `1.18.0 <https://confluence.ecmwf.int/display/GRIB/GRIB+API+version+1.18.0+released>`__
+      **GRIB_API** `1.18.0 <https://confluence.ecmwf.int/display/GRIB/GRIB+API+version+1.18.0+released>`__
 
    -  Built with **ODB_API** version 0.15.2
 
    -  Built with
-      **emoslib**\ `000444 <https://confluence.ecmwf.int/display/EMOS/Changes+in+version+000444>`__
+      **emoslib** `000444 <https://confluence.ecmwf.int/display/EMOS/Changes+in+version+000444>`__
 
 -  **GRIB**: fixed issues when interpreting the base/valid dates of
    hindcast data - now the hindcast date is always used; the following
@@ -81,13 +63,12 @@ lxc)**
 Version 4.7.1 
 =============
 
-**Became metview/new at ECMWF on 2016-08-22 (Linux desktops, ecgate,
-lxc)**
+- Became metview/new at ECMWF on 2016-08-22 (Linux desktops, ecgate, lxc)::
+ 
+      This version contains no changes to Metview itself - the only
+      difference is that it is linked with GRIB_API 1.17.0 and emoslib 4.4.3.
 
-*This version contains no changes to Metview itself - the only
-difference is that it is linked with GRIB_API 1.17.0 and emoslib 4.4.3.*
-
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Installed as *metview/new*
 
@@ -104,12 +85,10 @@ difference is that it is linked with GRIB_API 1.17.0 and emoslib 4.4.3.*
 Version 4.7.0
 =============
 
-**Externally**\ `released <https://confluence.ecmwf.int/display/METV/Releases>`__\ **on
-2016-07-19
-Became metview/new at ECMWF on 2016-07-19 (Linux desktops, ecgate,
-lxc)**
+- Externally `released <https://confluence.ecmwf.int/display/METV/Releases>`__ on 2016-07-19
+- Became metview/new at ECMWF on 2016-07-19 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Installed as *metview/new*
 
@@ -120,7 +99,7 @@ lxc)**
 
    -  Built with **ODB_API** version 0.11.4
 
-   -  Built with **emoslib 000442. See the** `Change
+   -  Built with **emoslib** 000442. See the `Change
       History <https://software.ecmwf.int/wiki/display/EMOS/History+of+EMOSLIB+changes>`__.
 
 -  **New module**: the `Download from
@@ -177,267 +156,133 @@ lxc)**
 Example of Nearest Gridpoint Count mode of the Geopoints to GRIB module
 -----------------------------------------------------------------------
 
-+----------+-----------------------------------------------------------+
-| Plot     | Macro Code                                                |
-+==========+===========================================================+
-| |\_scr   | +------------------------------------------------------+  |
-| oll_exte | |     # Metview macro                                  |  |
-| rnal/att | |                                                      |  |
-| achments | |                                                      |  |
-| /metview | |                                                      |  |
-| -geo-to- | |    # \***************************\* license start    |  |
-| grib-nea | |    \**********************************\*             |  |
-| rest-cou | |                                                      |  |
-| nt-c2099 | |    #                                                 |  |
-| 7b96e6be | |                                                      |  |
-| 5fc322c2 | |    # copyright 2016 ecmwf. this software is          |  |
-| fdd20727 | |    distributed under the terms                       |  |
-| 6a6175cd | |                                                      |  |
-| 11e05a09 | |    # of the apache license version 2.0. in applying  |  |
-| 45292507 | |    this license, ecmwf does not                      |  |
-| a1a16c37 | |                                                      |  |
-| ffe.png| | |    # waive the privileges and immunities granted to  |  |
-|          | |    it by virtue of its status as                     |  |
-|          | |                                                      |  |
-|          | |    # an intergovernmental organization or submit     |  |
-|          | |    itself to any jurisdiction.                       |  |
-|          | |                                                      |  |
-|          | |    #                                                 |  |
-|          | |                                                      |  |
-|          | |    # \****************************\* license end     |  |
-|          | |    \***********************************\*            |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    # retrieve some observation data and conver it to |  |
-|          | |    geopoints format                                  |  |
-|          | |                                                      |  |
-|          | |    data1 **=** retrieve(                             |  |
-|          | |                                                      |  |
-|          | |    type : "ob",                                      |  |
-|          | |                                                      |  |
-|          | |    repres : "bu",                                    |  |
-|          | |                                                      |  |
-|          | |    date : 20150715                                   |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    obs_wmo_block **=** obsfilter(                    |  |
-|          | |                                                      |  |
-|          | |    output : "geopoints",                             |  |
-|          | |                                                      |  |
-|          | |    parameter : 01001,                                |  |
-|          | |                                                      |  |
-|          | |    data : data1                                      |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    # convert the geopoints to GRIB, counting the     |  |
-|          | |    number of points in each 4-degree cell            |  |
-|          | |                                                      |  |
-|          | |    obs_heat_map **=** geo_to_grib(                   |  |
-|          | |                                                      |  |
-|          | |    grid : [ 4,4 ],                                   |  |
-|          | |                                                      |  |
-|          | |    interpolation_method : "nearest_gridpoint_count", |  |
-|          | |                                                      |  |
-|          | |    geopoints : obs_wmo_block                         |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    # plotting attributes                             |  |
-|          | |                                                      |  |
-|          | |    heat_map_shade **=** mcont(                       |  |
-|          | |                                                      |  |
-|          | |    legend : "on",                                    |  |
-|          | |                                                      |  |
-|          | |    contour : "off",                                  |  |
-|          | |                                                      |  |
-|          | |    contour_level_selection_type : "level_list",      |  |
-|          | |                                                      |  |
-|          | |    contour_min_level : 1,                            |  |
-|          | |                                                      |  |
-|          | |    contour_level_list : [                            |  |
-|          | |    1,3,6,9,12,15,20,50,100,150,200 ],                |  |
-|          | |                                                      |  |
-|          | |    contour_shade : "on",                             |  |
-|          | |                                                      |  |
-|          | |    contour_shade_technique : "grid_shading",         |  |
-|          | |                                                      |  |
-|          | |    contour_shade_max_level_colour : "red",           |  |
-|          | |                                                      |  |
-|          | |    contour_shade_min_level_colour : "grey",          |  |
-|          | |                                                      |  |
-|          | |    contour_shade_colour_direction : "clockwise"      |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    title **=** mtext(                                |  |
-|          | |                                                      |  |
-|          | |    text_line_1 : "number of observations within each |  |
-|          | |    <grib_info key='jDirectionIncrementInDegrees'/>   |  |
-|          | |    degree box"                                       |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    symb_advanced_mono **=** msymb(                   |  |
-|          | |                                                      |  |
-|          | |    symbol_type : "marker",                           |  |
-|          | |                                                      |  |
-|          | |    symbol_outline : "on",                            |  |
-|          | |                                                      |  |
-|          | |    symbol_colour : "bluish_green",                   |  |
-|          | |                                                      |  |
-|          | |    symbol_marker_index : 15                          |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    # call function to build layout (defined at end   |  |
-|          | |    of macro)                                         |  |
-|          | |                                                      |  |
-|          | |    dw **=** build_layout()                           |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    # plot commands                                   |  |
-|          | |                                                      |  |
-|          | |    plot ( dw[1], title, obs_heat_map, heat_map_shade |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |    plot ( dw[2], obs_wmo_block, symb_advanced_mono ) |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    # end of main program                             |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    # function to build the layout                    |  |
-|          | |                                                      |  |
-|          | |    function build_layout()                           |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    #pagedescription                                  |  |
-|          | |                                                      |  |
-|          | |    land_sea_shade **=** mcoast(                      |  |
-|          | |                                                      |  |
-|          | |    map_coastline_land_shade : "on",                  |  |
-|          | |                                                      |  |
-|          | |    map_coastline_land_shade_colour :                 |  |
-|          | |    "rgb(0.98,0.95,0.82)",                            |  |
-|          | |                                                      |  |
-|          | |    map_coastline_sea_shade : "on",                   |  |
-|          | |                                                      |  |
-|          | |    map_coastline_sea_shade_colour :                  |  |
-|          | |    "rgb(0.85,0.93,1)"                                |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |    geographical_view **=** geoview(                  |  |
-|          | |                                                      |  |
-|          | |    coastlines : land_sea_shade                       |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |    page **=** plot_page(                             |  |
-|          | |                                                      |  |
-|          | |    top : 2.58317033154,                              |  |
-|          | |                                                      |  |
-|          | |    bottom : 52.5831715633,                           |  |
-|          | |                                                      |  |
-|          | |    left : 0,                                         |  |
-|          | |                                                      |  |
-|          | |    right : 100,                                      |  |
-|          | |                                                      |  |
-|          | |    view : geographical_view                          |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    coastlines **=** mcoast(                          |  |
-|          | |                                                      |  |
-|          | |    map_coastline_land_shade : "on",                  |  |
-|          | |                                                      |  |
-|          | |    map_coastline_land_shade_colour :                 |  |
-|          | |    "rgb(0.98,0.95,0.82)",                            |  |
-|          | |                                                      |  |
-|          | |    map_coastline_sea_shade : "on",                   |  |
-|          | |                                                      |  |
-|          | |    map_coastline_sea_shade_colour :                  |  |
-|          | |    "rgb(0.85,0.93,1)",                               |  |
-|          | |                                                      |  |
-|          | |    map_label_top : "off"                             |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |    gv_obs **=** geoview(                             |  |
-|          | |                                                      |  |
-|          | |    coastlines : coastlines                           |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |    page_1 **=** plot_page(                           |  |
-|          | |                                                      |  |
-|          | |    top : 50,                                         |  |
-|          | |                                                      |  |
-|          | |    bottom : 100,                                     |  |
-|          | |                                                      |  |
-|          | |    left : 0,                                         |  |
-|          | |                                                      |  |
-|          | |    right : 100,                                      |  |
-|          | |                                                      |  |
-|          | |    view : gv_obs                                     |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |    # superpage description                           |  |
-|          | |                                                      |  |
-|          | |    display_window **=** plot_superpage(              |  |
-|          | |                                                      |  |
-|          | |    layout_size : "a4",                               |  |
-|          | |                                                      |  |
-|          | |    layout_orientation : "landscape",                 |  |
-|          | |                                                      |  |
-|          | |    custom_width : 29.7,                              |  |
-|          | |                                                      |  |
-|          | |    custom_height : 21.0,                             |  |
-|          | |                                                      |  |
-|          | |    pages : [ page, page_1 ]                          |  |
-|          | |                                                      |  |
-|          | |    )                                                 |  |
-|          | |                                                      |  |
-|          | |    # plot_superpage returns a list of drop           |  |
-|          | |    identifiers.                                      |  |
-|          | |                                                      |  |
-|          | |    # index 1 is for first page, and so on.           |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    **return** display_window                         |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |                                                      |  |
-|          | |    end build_layout                                  |  |
-|          | +======================================================+  |
-|          | +------------------------------------------------------+  |
-+----------+-----------------------------------------------------------+
+.. figure:: /_static/release/version_4.7_updates/image1.png
+   :width: 300px
 
+.. code-block:: python
 
+   # Metview macro
+   
+   #  **************************** license start ***********************************
+   #
+   #  copyright 2016 ecmwf. this software is distributed under the terms
+   #  of the apache license version 2.0. in applying this license, ecmwf does not
+   #  waive the privileges and immunities granted to it by virtue of its status as
+   #  an intergovernmental organization or submit itself to any jurisdiction.
+   #
+   #  ***************************** license end ************************************
+   
+   
+   # retrieve some observation data and conver it to geopoints format
+   data1 = retrieve(
+      type   : "ob",
+      repres : "bu",
+      date   : 20150715
+      )
+   
+   obs_wmo_block = obsfilter(
+      output    : "geopoints",
+      parameter : 01001,
+      data      : data1
+      )
+   
+   # convert the geopoints to GRIB, counting the number of points in each 4-degree cell
+   obs_heat_map = geo_to_grib(
+      grid                 : [ 4,4 ],
+      interpolation_method : "nearest_gridpoint_count",
+      geopoints            : obs_wmo_block
+      )
+   
+   # plotting attributes
+   heat_map_shade = mcont(
+      legend                         : "on",
+      contour                        : "off",
+      contour_level_selection_type   : "level_list",
+      contour_min_level              : 1,
+      contour_level_list             : [ 1,3,6,9,12,15,20,50,100,150,200 ],
+      contour_shade                  : "on",
+      contour_shade_technique        : "grid_shading",
+      contour_shade_max_level_colour : "red",
+      contour_shade_min_level_colour : "grey",
+      contour_shade_colour_direction : "clockwise"
+      )
+   
+   title = mtext(
+      text_line_1 : "number of observations within each <grib_info key='jDirectionIncrementInDegrees'/> degree box"
+      )
+   
+   symb_advanced_mono = msymb(
+      symbol_type         : "marker",
+      symbol_outline      : "on",
+      symbol_colour       : "bluish_green",
+      symbol_marker_index : 15
+      )
+   
+   
+   # call function to build layout (defined at end of macro)
+   dw = build_layout()
+   
+   # plot commands
+   plot ( dw[1], title, obs_heat_map, heat_map_shade )
+   plot ( dw[2], obs_wmo_block, symb_advanced_mono )
+   
+   # end of main program
+   
+   # function to build the layout
+   function build_layout()
+   
+      #pagedescription
+      
+      land_sea_shade = mcoast(
+         map_coastline_land_shade        : "on",
+         map_coastline_land_shade_colour : "rgb(0.98,0.95,0.82)",
+         map_coastline_sea_shade         : "on",
+         map_coastline_sea_shade_colour  : "rgb(0.85,0.93,1)"
+         )
+      
+      geographical_view = geoview(
+         coastlines    : land_sea_shade
+         )
+      
+      page = plot_page(
+         top     : 2.58317033154,
+         bottom  : 52.5831715633,
+         left    : 0,
+         right   : 100,
+         view    : geographical_view
+      )
+   
+      coastlines = mcoast(
+         map_coastline_land_shade        : "on",
+         map_coastline_land_shade_colour : "rgb(0.98,0.95,0.82)",
+         map_coastline_sea_shade         : "on",
+         map_coastline_sea_shade_colour  : "rgb(0.85,0.93,1)",
+         map_label_top                   : "off"
+         )
+      
+      gv_obs = geoview(
+         coastlines    : coastlines
+         )
+      
+      page_1 = plot_page(
+         top     : 50,
+         bottom  : 100,
+         left    : 0,
+         right   : 100,
+         view    : gv_obs
+      )
+      
+      # superpage description
+      display_window = plot_superpage(
+         layout_size        : "a4",
+         layout_orientation : "landscape",
+         custom_width       : 29.7,
+         custom_height      : 21.0,
+         pages              : [ page, page_1 ]
+      )
+      # plot_superpage returns a list of drop identifiers.
+      # index 1 is for first page, and so on.
+   
+      return display_window
+   
+   end build_layout   

@@ -155,7 +155,11 @@ Version 5.14.0
 
 -  new :ref:`parameters <mcont_icon>` to
    further control the positioning of grid value
-   plotting: **contour_grid_value_position, contour_grid_value_justification, contour_grid_value_vertical_align**
+   plotting: 
+   
+      - contour_grid_value_position
+      - contour_grid_value_justification,
+      - contour_grid_value_vertical_align
 
 -  fixed issue where the Zoom stack was not rendered correctly
 

@@ -3,81 +3,50 @@
 Version 4.8 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 4.8.8 `3 <#version-4.8.8>`__
-
-2 Version 4.8.7 `4 <#version-4.8.7>`__
-
-3 Version 4.8.6 `5 <#version-4.8.6>`__
-
-4 Version 4.8.4 `6 <#version-4.8.4>`__
-
-5 Version 4.8.3 `7 <#version-4.8.3>`__
-
-6 Version 4.8.2 `8 <#version-4.8.2>`__
-
-7 Version 4.8.1 `9 <#version-4.8.1>`__
-
-8 Version 4.8.0 `11 <#version-4.8.0>`__
-
 Version 4.8.8 
 =============
 
-**Became metview/new at ECMWF on 2017-07-19 (Linux desktops, ecgate,
-lxc)**
+Became metview/new at ECMWF on 2017-07-19 (Linux desktops, ecgate, lxc)
 
 -  **At ECMWF:**
 
    -  Installed **2017-07-19**
 
    -  Built with
-      **Magics**\ `2.34.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `2.34.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.4.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.4.0+released>`__
+      **ecCodes** `2.4.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.4.0+released>`__
 
-   -  | Built with **ODB_API** version
-        `0.17.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
-      | Built with
-        **emoslib**\ `4.5.0 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__\ ** **
+   -  Built with **ODB_API** version `0.17.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
+      
+   -  Built with **emoslib** `4.5.0 <https://confluence.ecmwf.int/pages/viewpage.action?pageId=78283744>`__
 
--  | **Build**: this is the same as Metview 4.8.7, but relinked with
-     emoslib 4.5.0
-   |  
+-  **Build**: this is the same as Metview 4.8.7, but relinked with emoslib 4.5.0
 
 Version 4.8.7 
 =============
 
-**Externally**\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **on
-2017-06-29
-Became metview/new at ECMWF on 2017-06-29 (Linux desktops, ecgate,
-lxc)**
+- Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2017-06-29
+- Became metview/new at ECMWF on 2017-06-29 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Installed **2017-07-29**
 
    -  Built with
-      **Magics**\ `2.34.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `2.34.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.4.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.4.0+released>`__
+      **ecCodes** `2.4.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.4.0+released>`__
 
    -  Built with **ODB_API** version
       `0.17.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built with
-      **emoslib**\ `000449 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
+      **emoslib** `000449 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
--  | **User Interface**: fixed problem with colour of tooltips that
-     occurred on some desktops
-   |  
+-  **User Interface**: fixed problem with colour of tooltips that occurred on some desktops
 
 -  **Display Window**: improved default settings for first-time users
 
@@ -85,7 +54,7 @@ lxc)**
 
    -  "Animate All Scenes" is now ON by default
 
--    **Gallery**: moved the examples up one level to make them easier to
+-  **Gallery**: moved the examples up one level to make them easier to
    find - see the
    `Gallery <https://confluence.ecmwf.int/display/METV/Gallery>`__ page
    for example Metview plots and the macros that generate them
@@ -93,26 +62,24 @@ lxc)**
 Version 4.8.6 
 =============
 
-**Externally**\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **on
-2017-05-23
-Became metview/new at ECMWF on 2017-05-23 (Linux desktops, ecgate,
-lxc)**
+- Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2017-05-23
+- Became metview/new at ECMWF on 2017-05-23 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Installed **2017-05-2\ 2**
 
    -  Built with
-      **Magics**\ `2.33.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `2.33.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.3.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.2.0+released>`__
+      **ecCodes** `2.3.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.2.0+released>`__
 
    -  Built with **ODB_API** version
       `0.17.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built with
-      **emoslib**\ `000448 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
+      **emoslib** `000448 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
 -  **VAPOR**: the :ref:`VAPOR
    Prepare <vapor_prepare_icon>`
@@ -130,26 +97,24 @@ lxc)**
 Version 4.8.4
 =============
 
-**Externally**\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **on
-2017-03-23
-Became metview/new at ECMWF on 2017-03-23 (Linux desktops, ecgate,
-lxc)**
+- Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2017-03-23
+- Became metview/new at ECMWF on 2017-03-23 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Installed **2017-03-23**
 
    -  Built with
-      **Magics**\ `2.32.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `2.32.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.2.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.2.0+released>`__
+      **ecCodes** `2.2.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.2.0+released>`__
 
    -  Built with **ODB_API** version
       `0.16.2 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built with
-      **emoslib**\ `000447 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
+      **emoslib** `000447 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
 -  **NetCDF**: added new parameter NETCDF_MATRIX_PRIMARY_INDEX (can be
    LATITUDE or LONGITUDE) for plotting geographic netCDF files with the
@@ -173,26 +138,24 @@ lxc)**
 Version 4.8.3
 =============
 
-**Externally**\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **on
-2017-02-06
-Became metview/new at ECMWF on 2017-02-06 (Linux desktops, ecgate,
-lxc)**
+- Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2017-02-06
+- Became metview/new at ECMWF on 2017-02-06 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
-   -  Installed **2017-02-0\ 6**
+   -  Installed **2017-02-06**
 
    -  Built with
-      **Magics**\ `2.31.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `2.31.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.1.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.1.0+released>`__
+      **ecCodes** `2.1.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.1.0+released>`__
 
    -  Built with **ODB_API** version
       `0.16.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built with
-      **emoslib**\ `000446 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
+      **emoslib** `000446 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
 -  **WMS**: fixed crash in the :ref:`WMS
    Client <metview_wms_tutorial>`
@@ -206,30 +169,26 @@ lxc)**
 Version 4.8.2
 =============
 
-**Externally**\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **on
-2017-02-01
-Became metview/new at ECMWF on 2017-02-01** (Linux desktops, ecgate,
-lxc)
+- Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2017-02-01
+- Became metview/new at ECMWF on 2017-02-01 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Installed **2017-02-01**
 
    -  Built with
-      **Magics**\ `2.31.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `2.31.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.1.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.1.0+released>`__
+      **ecCodes** `2.1.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.1.0+released>`__
 
    -  Built with **ODB_API** version
       `0.16.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built with
-      **emoslib**\ `000446 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
+      **emoslib** `000446 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
--  **ODB**: fixed problem introduced in 4.8.1 where the
-   :ref:`ODB <odb_tutorial>`
-   Visualiser no longer worked
+-  **ODB**: fixed problem introduced in 4.8.1 where the :func:`odb_visualiser` no longer worked
 
 -  **DivRot**: fixed problem where the *Rotational and Divergent Wind*
    (DivRot) module no longer worked
@@ -240,36 +199,33 @@ lxc)
 Version 4.8.1
 =============
 
-**Externally**\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **on
-2017-01-30
-Became metview/new at ECMWF on 2017-01-31** (Linux desktops, ecgate,
-lxc)
+- Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2017-01-30
+- Became metview/new at ECMWF on 2017-01-31 (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+* **At ECMWF:**
 
    -  Installed **2017-01-30**
 
    -  Built with
-      **Magics**\ `2.31.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `2.31.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.1.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.1.0+released>`__
+      **ecCodes** `2.1.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.1.0+released>`__
 
    -  Built with **ODB_API** version
       `0.16.1 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built with
-      **emoslib**\ `000446 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
+      **emoslib** `000446 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
 -  **Macro**: added new function to return the unique elements of a
    vector variable, e.g.
 
-+-----------------------------------------------------------------------+
-| a = \|5, 7, 3, 3, 1, 3, 7\|                                           |
-|                                                                       |
-| u = unique(a) # u is now \|5, 7, 3, 1\|                               |
-+=======================================================================+
-+-----------------------------------------------------------------------+
+   .. code-block:: python
+
+      a = |5, 7, 3, 3, 1, 3, 7|
+      u = unique(a)  # u is now |5, 7, 3, 1|
+
 
 See :ref:`Vector
 Functions <macro_vector_fn>`.
@@ -371,28 +327,26 @@ Functions <macro_vector_fn>`.
 Version 4.8.0
 =============
 
-**Externally**\ `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\ **on
-2016-11-23
-Became metview/new at ECMWF on 2016-11-??** (Linux desktops, ecgate,
-lxc)
+- Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2016-11-23
+- Became metview/new at ECMWF on 2016-11-?? (Linux desktops, ecgate, lxc)
 
--  **At ECMWF:**
+*  **At ECMWF:**
 
    -  Installed as *metview/new*
 
    -  Built with
-      **Magics**\ `2.30.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
+      **Magics** `2.30.0 <https://software.ecmwf.int/wiki/display/MAGP/Latest+News>`__
 
    -  Built with
-      **ecCodes**\ `2.0.2 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.0.2+released>`__
+      **ecCodes** `2.0.2 <https://software.ecmwf.int/wiki/display/ECC/ecCodes+version+2.0.2+released>`__
 
    -  Built with **ODB_API** version
       `0.16.0 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
 
    -  Built with
-      **emoslib**\ `000445 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
+      **emoslib** `000445 <https://software.ecmwf.int/wiki/pages/viewpage.action?pageId=56669028>`__
 
--  **Build**: the CMake option **ENABLE_ECCODES** is now **ON** by
+*  **Build**: the CMake option **ENABLE_ECCODES** is now **ON** by
    default. To build Metview with GRIB_API, please set
    **-DENABLE_ECCODES=OFF**
 

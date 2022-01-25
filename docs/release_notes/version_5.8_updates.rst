@@ -3,18 +3,6 @@
 Version 5.8 Updates
 ///////////////////
 
-Metview
-
-Exported on Jan 24, 2022
-
-Table of Contents
-=================
-
-1 Version 5.8.3 `3 <#version-5.8.3>`__
-
-2 Version 5.8.2 `4 <#version-5.8.2>`__
-
-3 Version 5.8.1 `5 <#version-5.8.1>`__
 
 Version 5.8.3
 =============
@@ -31,7 +19,7 @@ Version 5.8.3
       with **Magics** `4.3.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.17.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.17.0+released>`__\ ** **
+      with **ecCodes** `2.17.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.17.0+released>`__
 
    -  Built
       with **ODB_API** version `0.19.4 <https://software.ecmwf.int/wiki/display/ODBAPI/Latest+news>`__
@@ -142,17 +130,15 @@ Version 5.8.1
    -  to access the metadata and statistics for a given layer, just
       double-click on its thumbnail in the sidebar
 
-   -  | to get back to the list of layers, click the Layer List button
-      | 
-.. image:: /_static/release/version_5.8_updates/image1.png
-   :width: 2.44792in
-   :height: 2.60417in
- 
-           
-          
-.. image:: /_static/release/version_5.8_updates/image2.png
-   :width: 2.44792in
-   :height: 2.60417in
+   -  to get back to the list of layers, click the Layer List button
+      
+      .. image:: /_static/release/version_5.8_updates/image1.png
+         :width: 2.44792in
+         :height: 2.60417in
+
+      .. image:: /_static/release/version_5.8_updates/image2.png
+         :width: 2.44792in
+         :height: 2.60417in
 
 
 -  the :ref:`Geographical
@@ -209,9 +195,11 @@ Version 5.8.1
       :width: 3.13542in
       :height: 1.63542in
 
--  | the BUFR Examiner now shows the total number of subsets across all
-     messages
-   |  |\_scroll_external/other/74212_image-2020-01-09-10-25-45-379-0acc30772f27a37bed95e7288167cf32d7d63fcc53e614a9f03e2446e5d7a6f9.png|
+-  the BUFR Examiner now shows the total number of subsets across all messages
+
+   .. image:: /_static/release/version_5.8_updates/image6.png
+      :width: 4.16667in
+      :height: 0.34849in
 
 -  improved performance when the BUFR Examiner is initially scanning the
    messages in the given BUFR file
@@ -224,14 +212,14 @@ Version 5.8.1
    default font size for everything in the user interface; now you can
    start Metview like this for large fonts:
 
-.. note::
+   .. code-block::
 
- metview -fs 16                                                        
+      metview -fs 16                                                        
 
 -  fixed issue where dropping a :ref:`MARS
    Retrieval <retrieve_icon>`
-   icon into a Python code editor generated the parameter name 'cls'
-   instead of the correct 'class_'
+   icon into a Python code editor generated the parameter name ``cls``
+   instead of the correct ``class_``
 
 -  fixed issue where the data examiners and Code Editor did not work on
    macOS Catalina
@@ -259,13 +247,11 @@ Version 5.8.1
 -  in Python, allow indexed assignment using any type (e.g. strings) as
    an index; the particular case in mind was this:
 
-.. note::
+   .. code-block:: python
 
- gp =                                                              
- metview.cre                                                           
- ate_geo(type\ ='ncols',vals_0\ =\ numpy.array([10.,20.,30.])) 
-                                                                       
- gp['vals_0'] = numpy.array([-\ 10.,\ -\ 20.,\ -\ 30]) 
+      gp = metview.create_geo(type='ncols',vals_0=numpy.array([10.,20.,30.]))
+      gp['vals_0'] = numpy.array([-10.,-20.,-30])
+
 
 -  new function purge_mem() to release unused memory; this can be called
    at any time
