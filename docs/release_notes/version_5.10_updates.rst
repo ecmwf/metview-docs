@@ -169,7 +169,7 @@ Version 5.10.1
 
 **Geopoints:**
 
--  fixed issue where geopoints station ids (function stnids()) could
+-  fixed issue where geopoints station ids (:func:`stnids`) could
    return numbers instead of strings if the station ids were 'numeric'
    in nature, e.g. '12345'. Now they are always returned as strings.
 
@@ -230,10 +230,11 @@ Version 5.10.0
    and `GRIB
    Filter <https://confluence.ecmwf.int/display/METV/GRIB+Filter>`__
    icons - :ref:`Regrid <regrid_icon>`
-   takes it to the next level! **NOTE: in this release, the Regrid
-   module is considered to be a beta release, meaning that we may make
-   small changes to the interface in upcoming releases; we welcome
-   feedback.
+   takes it to the next level! 
+   
+   .. note::
+      
+      In this release, the Regrig module is considered to be a beta release, meaning that we may make small changes to the interface in upcoming releases; we welcome feedback.
 
    .. image:: /_static/release/version_5.10_updates/image5.png
       :width: 4.78746in
@@ -343,55 +344,39 @@ Version 5.10.0
 
 **Macro / Python:**
 
--  added function to compute xy components from polar components,
-   xy_from_polar() - see :ref:`Fieldset
-   Functions <macro_fieldset_fn>`
+-  added function to compute xy components from polar components:
+   :func:`xy_from_polar`
 
--  added function to generate orography polygon for cross section,
-   xs_build_orog() - see :ref:`Plotting
-   Functions <macro_plot_fn>`
+-  added function to generate orography polygon for cross section:
+   :func:`xs_build_orog`
 
--  added function to generate curve from a field for cross section,
-   xs_build_curve() - see :ref:`Plotting
-   Functions <macro_plot_fn>`
+-  added function to generate curve from a field for cross section:
+   :func:`xs_build_curve`
 
--  added function to extract data values from thermo data objects,
-   thermo_data_values() - see :ref:`Thermodynamic
-   Functions <macro_thermo_fn>`
+-  added function to extract data values from thermo data objects:
+   :func:`thermo_data_values`
 
 -  added function to create a geographic polyline
-   object, mvl_geopolyline() - see :ref:`Plotting
-   Functions <macro_plot_fn>`
+   object: :func:`mvl_geopolyline`
 
--  add convenience function to generate xy area plot objects, xy_area()
-   - see :ref:`Plotting
-   Functions <macro_plot_fn>`
+-  add convenience function to generate xy area plot objects: :func:`xy_area`
 
--  add function to compute vertical velocity from omega, w_from_omega()
-   - see :ref:`Fieldset
-   Functions <macro_fieldset_fn>`
+-  add function to compute vertical velocity from omega: :func:`w_from_omega`
 
 -  added function to compute dewpoint from specific
-   humidity, dewpoint_from_specific_humidity() - see :ref:`Thermodynamic
-   Functions <macro_thermo_fn>`
+   humidity: :func:`dewpoint_from_specific_humidity`
 
 -  added function to compute dewpoint from relative
-   humidity, dewpoint_from_relative_humidity() - see :ref:`Thermodynamic
-   Functions <macro_thermo_fn>`
+   humidity: :func:`dewpoint_from_relative_humidity`
 
--  added an option to the indexes() function to allow interpolation
-   between indexes - see :ref:`Fieldset
-   Functions <macro_fieldset_fn>`
+-  added an option to the :func:`indexes` function to allow interpolation
+   between indexes
 
--  enabled ml_to_hl() to work with target heights defined by fieldsets -
-   see :ref:`Fieldset
-   Functions <macro_fieldset_fn>`
+-  enabled :func:`ml_to_hl` to work with target heights defined by fieldsets
 
--  enabled vapour_pressure() to work with model levels fields -
-   see :ref:`Thermodynamic
-   Functions <macro_thermo_fn>`
+-  enabled :func:`vapour_pressure` to work with model levels fields
 
--  renamed function geostrophic_wind_pl() to geostrophic_wind()
+-  renamed function :func:`geostrophic_wind_pl` to :func:`geostrophic_wind`
 
 -  switched off unnecessary printouts when reading BUFR data through
    Python
@@ -399,7 +384,7 @@ Version 5.10.0
 -  fixed issue that Metview did not fail when dividing one field by
    another that contains zeros
 
--  fixed issue where the pressure() function did not set paramId to 54
+-  fixed issue where the :func:`pressure` function did not set paramId to 54
    on output field
 
 **Geopoints:**

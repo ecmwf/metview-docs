@@ -35,8 +35,8 @@ Version 5.11.1
 **Macro/Python:**
 
 -  derivatives: error in second derivative finite backward difference
-   computation affecting the functions second_derivative_x(),
-   second_derivative_y(), laplacian()
+   computation affecting the functions :func:`second_derivative_x`,
+   :func:`second_derivative_y`, :func:`laplacian`
 
 **Plotting:**
 
@@ -140,7 +140,7 @@ Version 5.11.0
 
 -  added new parameter axis_title_position to the :ref:`Axis
    Plotting <maxis_icon>`
-   icon / maxis() function. This applies to vertical axes and takes a
+   icon / :func:`maxis` function. This applies to vertical axes and takes a
    number as a percentage as its value, with small values resulting in
    the axis title being closer to the axis and large values moving the
    title further from the axis
@@ -195,7 +195,7 @@ Version 5.11.0
 
 **Macro/Python:**
 
--  added function absolute_vorticity() to compute absolute vorticity
+-  added function :func:`absolute_vorticity` to compute absolute vorticity
    from relative vorticity GRIB data
 
 -  added function random_vector(num) to return a vector of num random

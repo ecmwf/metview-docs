@@ -41,11 +41,11 @@ Version 5.14.1
    where it did not properly ignore missing input values when run in the
    'nearest' modes
 
--  Fixed issue in the new :ref:`annotations symbol
+-  Fixed issue in the new :ref:`weather symbol
    editor <how_to_use_the_weather_symbol_editor_in_metview>` where
    uPlot crashed if a line was added outside of the map area
 
--  Fixed issue in the new :ref:`annotations symbol
+-  Fixed issue in the new :ref:`weather symbol
    editor <how_to_use_the_weather_symbol_editor_in_metview>` where
    interactive resizing of a line's arrowheads did not take effect until
    the line was moved
@@ -91,11 +91,10 @@ Version 5.14.0
    Metview <how_to_use_the_weather_symbol_editor_in_metview>` for
    more information on this new feature!
 
--  .. image:: /_static/release/version_5.14_updates/image1.png
+   .. image:: /_static/release/version_5.14_updates/image1.png
       :width: 5.20833in
       :height: 4.07292in
 
-      
 
    .. image:: /_static/release/version_5.14_updates/image2.png
       :width: 5in
@@ -122,7 +121,7 @@ Version 5.14.0
 
 **STVL access:**
 
--  new module stvl() to retrieve data from the STVL on internal ECMWF
+-  new module :func:`stvl` to retrieve data from the STVL on internal ECMWF
    machines (workstations, lxc, lxop)
 
 -  .. image:: /_static/release/version_5.14_updates/image5.png
@@ -167,38 +166,38 @@ Version 5.14.0
 
 **Macro/Python:**
 
--  new function: solar_zenith_angle(fieldset)
+-  new function: :func:`solar_zenith_angle`
 
--  new function to compute the speed() from U and V fieldsets:
+-  new function to compute the :func:`speed` from U and V fieldsets::
 
-   -  spd = speed(u, v)
+      spd = speed(u, v)
 
--  new function: relative_humidity_from_specific_humidity(t, q, p)
+-  new function: :func:`relative_humidity_from_specific_humidity`
 
--  new function: specific_humidity_from_relative_humidity(t, r, p)
+-  new function: :func:`specific_humidity_from_relative_humidity`
 
 -  the :func:`grib_get` function
-   now allows to extract GRIB keys in their native type:
+   now allows to extract GRIB keys in their native type::
 
-   -  a = grib_get(fs, ['level:n', 'centre:n'])
+      a = grib_get(fs, ['level:n', 'centre:n'])
 
--  function saturation_mixing_ratio() now works with fieldsets
+-  function :func:`saturation_mixing_ratio` now works with fieldsets
 
--  improved execution speed of ml_to_hl()
+-  improved execution speed of :func:`ml_to_hl`
 
--  add option to ml_to_hl() to specify input data values on the surface
+-  add option to :func:`ml_to_hl` to specify input data values on the surface
 
--  functions relative_humidity_from_dewpoint() and dewpoint_from_relative_humidity() now
+-  functions :func:`relative_humidity_from_dewpoint` and :func:`dewpoint_from_relative_humidity` now
    return their results as percentages rather than values in the
    range [0,1]
 
--  fixed crash in ml_to_hl() when target level is outside input z range
+-  fixed crash in :func:`ml_to_hl` when target level is outside input z range
 
--  allow mvl_geopotential_on_ml() to use a subset of levels in arbitrary
+-  allow :func:`mvl_geopotential_on_ml` to use a subset of levels in arbitrary
    order, reducing the amount of input data required and therefore the
    processing requirements
 
--  fixed issue where the wind direction() function accumulated memory
+-  fixed issue where the wind :func:`direction` function accumulated memory
 
 **Main user interface:**
 
@@ -209,11 +208,9 @@ Version 5.14.0
 
    -  dark: suitable for 'dark' modes
 
-   -  .. image:: /_static/release/version_5.14_updates/image8.png
+      .. image:: /_static/release/version_5.14_updates/image8.png
          :width: 4.21288in
          :height: 2.60417in
-
-        
 
       .. image:: /_static/release/version_5.14_updates/image9.png
          :width: 4.21288in
@@ -225,7 +222,7 @@ Version 5.14.0
 -  improved helper for list parameters in icon editors; short names are
    now shown, and there is a filter:
 
-   -  .. image:: /_static/release/version_5.14_updates/image10.png
+      .. image:: /_static/release/version_5.14_updates/image10.png
          :width: 3.95833in
          :height: 2.33333in
 
@@ -242,7 +239,7 @@ Version 5.14.0
 -  the Geopoints examiner now displays the metadata from the geopoints
    file:
 
-   -  .. image:: /_static/release/version_5.14_updates/image11.png
+      .. image:: /_static/release/version_5.14_updates/image11.png
          :width: 4.90069in
          :height: 1.02506in
 
@@ -254,7 +251,7 @@ Version 5.14.0
 
 **Regridding:**
 
--  Regridding via either regrid() or read() now supports space_view GRIB
+-  Regridding via either :func:`regrid` or :func:`read` now supports space_view GRIB
    files as input
 
 -  fixed an issue in

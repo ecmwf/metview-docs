@@ -10,14 +10,12 @@ Version 5.13.2
 * Not externally released. 
 * Became metview/new at ECMWF on 2021-09-29 (Linux desktops, ecgate, lxc, lxop)
 
-**No changes in this version - installed at ECMWF as a 'container' for
-metview-python 1.8.1 - see**:  `Metview Python Release
-Notes <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__
+**No changes in this version** - installed at ECMWF as a 'container' for metview-python 1.8.1 - see:  `Metview Python Release Notes <https://confluence.ecmwf.int/display/METV/Metview+Python+Release+Notes>`__
 
 Version 5.13.1
 ==============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2021-09-16
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__ on 2021-09-16
 * Not installed at ECMWF, as there is no need
 
 
@@ -58,33 +56,23 @@ Version 5.13.0
 
 **Macro/Python:**
 
--  new function shear_deformation() - computes the shear deformation of
-   vector fields. See the
-   :ref:`description <shear_deformation>`
-   and :ref:`gallery
-   example <gallery_deformation>`
-   on readthedocs.
+-  new function :func:`shear_deformation` - computes the shear deformation of
+   vector fields. See the :ref:`gallery
+   example <gallery_deformation>`.
 
--  new function stretch_deformation() - computes the stretch deformation
-   of vector fields. See the
-   :ref:`description <stretch_deformation>`
-   and :ref:`gallery
-   example <gallery_deformation>`
-   on readthedocs.
+-  new function :func:`stretch_deformation` - computes the stretch deformation
+   of vector fields. See the :ref:`gallery example <gallery_deformation>`.
 
--  new function virtual_temperature() - computes the virtual
-   temperature. See the description on
-   :ref:`readthedocs. <virtual_temperature>`
+-  new function :func:`virtual_temperature` - computes the virtual
+   temperature. 
 
--  new function specific_humidity_from_dewpoint() - computes the
-   specific humidity from dewpoint temperature. See the description on
-   :ref:`readthedocs. <specific_humidity_from_dewpoint>`
+-  new function :func:`specific_humidity_from_dewpoint` - computes the
+   specific humidity from dewpoint temperature. 
 
--  new function pressure_derivative() - computes the vertical pressure
-   derivative. See the description on
-   :ref:`readthedocs. <pressure_derivative>`
+-  new function :func:`pressure_derivative` - computes the vertical pressure
+   derivative.
 
--  GRIB functions mask() and rmask() now accept an additional argument
+-  GRIB functions :func:`mask` and :func:`rmask` now accept an additional argument
    to change their behaviour. By default, any values outside the
    specified area become zeros and any values inside the area become
    ones. When the new option is supplied, any values outside the area
@@ -102,13 +90,11 @@ Version 5.13.0
       # Python:      
       import metview as 
 
-      a = mv. mask(data, area, missing\ =\ True)                        
+      a = mv.mask(data, area, missing\ =\ True)                        
 
-   See also the :ref:`gallery
-   example <gallery_masking>`
-   on readthedocs
+   See also the :ref:`gallery example <gallery_masking>`
 
--  allow interpolate() function on GRIB to work with arrays of
+-  allow :func:`interpolate` function on GRIB to work with arrays of
    coordinates. In Macro, this function can now take vectors of lats and
    lons, and in Python it can take numpy arrays of lats and lons. For
    multiple fields, this will return a list of vectors/arrays, and for a
@@ -118,13 +104,13 @@ Version 5.13.0
 
       result = interpolate(grib, lats, lons)                            
 
--  fixed issue where univertint() resulted in incorrect sign of values
+-  fixed issue where :func:`univertint` resulted in incorrect sign of values
    for pressure level data
 
 -  fixed issue where the result of merge(fs[4], fs[5]) was not properly
-   passed to read() and regrid() functions 
+   passed to :func:`read` and :func:`regrid` functions 
 
--  improved the error message if the examine() function is called when
+-  improved the error message if the :func:`examine` function is called when
    the user interface has not been built
 
 Example of the different mask modes:
@@ -138,8 +124,7 @@ Example of the different mask modes:
 -  it is now possible to define a **polar_streographic** projection in
    :func:`geoview`
    by a centre point and scale. See the :ref:`gallery
-   example <gallery_polar_with_centre_point>`
-   on readthedocs.
+   example <gallery_polar_with_centre_point>`.
 
    .. code-block:: python
 

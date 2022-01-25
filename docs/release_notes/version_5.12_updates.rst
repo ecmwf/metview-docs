@@ -97,10 +97,11 @@ Version 5.12.0
 **Cross Section:**
 
 -  allow the plotting of horizontal wind as arrows/flags along transect
-   plane via the setting wind_unprojected = "on"
+   plane via the setting::
+      
+      wind_unprojected = "on"
 
-   -  see new gallery example
-      :ref:`here <gallery_cross_section_wind_unprojected>` 
+   See new gallery example :ref:`here <gallery_cross_section_wind_unprojected>` 
 
 **Plotting:**
 
