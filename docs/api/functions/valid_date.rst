@@ -17,6 +17,7 @@ valid_date
 
 
 .. py:function:: valid_date(fs)
+   :noindex:
 
    Returns the valid dates (including the time components) for each field in ``fs``.
    

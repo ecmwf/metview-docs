@@ -92,7 +92,7 @@ Datetime keys
           - the keys it is built from
         * - dateTime
           - date, time
-        * - dataDate
+        * - dataDateTime
           - dataDate, dataTime
         * - validityDateTime
           - validityDate, validityTime
@@ -114,7 +114,7 @@ Datetime keys
             g = f.select(dateTime="2021-02-04 12:00", step=9)
             g = f.select(validityDateTime="2021-02-04 21:00")
 
-   Datetime keys are particularly useful when we need to extract analyis fields matching a set of forecast fields. The following example shows how it can be done with the help of  :func:`base_date`:
+   Datetime keys are particularly useful when we need to extract analysis fields matching a set of forecast fields. The following example shows how it can be done with the help of  :func:`valid_date`:
 
         .. code-block:: python
 
@@ -182,7 +182,7 @@ Slicing with the [] operator
             g = fs["pv320K"]
 
 
-    For **wind** data the [] operator not only extracts the wind components but pair them up properly so that they could be directly plotted. For plotting wind fields a u wind field must always be followed by a v wind field in the given :class:`Fieldset`.
+    For **wind** data the [] operator not only extracts the wind components but pair them up properly so that they could be directly plotted. For wind plotting a U wind field must always be followed by a V wind field in the given :class:`Fieldset`.
 
       .. note::
       
@@ -206,7 +206,7 @@ Slicing with the [] operator
            # Extract "u"/"v" on 500 hPa and pair them up.
            g = fs["wind500hPa"]
 
-           # model level wind data -  the level units specifier ("ml") must be used.
+           # model level wind data - the level units specifier ("ml") must be used.
            # Extract "u"/"v" on model level 32 and pair them up.
            g = fs["wind32ml"]
                      
@@ -216,7 +216,7 @@ Slicing with the [] operator
 
            fs = mv.Fieldset(path="wind3d.grib")
 
-           # extract "u","v", "w" and align them  in that order
+           # extract "u","v", "w" and align them in that order
            g = fs["wind3d"]
            
 
