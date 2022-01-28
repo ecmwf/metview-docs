@@ -1,3 +1,6 @@
+Installation
+------------
+
 Binaries and Python Bindings
 ============================
 

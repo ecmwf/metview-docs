@@ -33,17 +33,21 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
 
    overview
    data_types/index
-   jupyter
    api/ref_guide 
    metview/index
    tutorials/index
-   release_notes/index
 
 .. toctree::
    :maxdepth: 1
    :caption: Installation  
    
    install
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Release notes  
+   
+   release_notes/index
 
 Indices and tables
 ==================
