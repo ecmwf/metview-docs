@@ -6,6 +6,4 @@ User Guide
     :glob:
 
 
-    macro/index.rst
     using_metview/index.rst
-    jupyter.rst

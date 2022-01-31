@@ -3,6 +3,11 @@
 Tutorials
 #########
 
+.. note::
+
+  These tutorials were written before Metview's Python interface had been developed, and emphasise
+  the user interface and the Macro language. It is, however, fairly trivial to translate
+  Macro code into Python code, as their syntaxes are very similar.
 
 Introduction to Metview
 --------------------------

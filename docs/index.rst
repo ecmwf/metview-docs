@@ -32,9 +32,10 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    :caption: Documentation
 
    overview
-   data_types/index
-   api/ref_guide 
-   metview/index
+   metview/using_metview/ui/index.rst
+   python
+   metview/macro/index.rst
+   metview/using_metview/index
    tutorials/index
 
 .. toctree::
