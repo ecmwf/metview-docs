@@ -13,7 +13,7 @@ sort
    :type orders: str or list
    :rtype: :class:`Fieldset` 
 
-   The list of MARS keys that can be used for the sorting are as follows (theye are specified in order of precedence): 
+   The list of MARS keys that can be used for the sorting are as follows (they are specified in order of precedence): 
 
       * date
       * time
@@ -26,7 +26,7 @@ sort
 
    If no options are specified :func:`sort` sorts ``fs`` in ascending order according to the allowed MARS keys.
 
-   If ``keys`` are specified (either as a list or a str) they modify the precedence of the sorting keys.
+   If ``keys`` are specified (either as a list or a str) they define the sorting keys, which must be chosen from the allowed list of MARS keys.
 
    The optional ``orders`` can specify the sorting direction: ">" means descending, while "<" means ascending order. ``orders`` can be either a str or a list:
 
