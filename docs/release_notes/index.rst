@@ -1,6 +1,13 @@
 Release notes
 ==============
 
+Python API release notes
+------------------------
+The Python API changelog is `here <https://github.com/ecmwf/metview-python/blob/master/CHANGELOG.rst>`_.
+
+Metview binary release notes
+----------------------------
+
 .. toctree::
     :maxdepth: 1
     :glob:
