@@ -37,6 +37,7 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    
    install
    release_notes/index
+   licence.rst
 
 
 Indices and tables
