@@ -3,9 +3,10 @@
 Macro language
 ====================================
 
-These pages describe the Metview Macro language. Macro was developed before Python became popular,
-but has similar principles and syntax. As the Python language and ecosystem has become so
-well-featured, you may wish to consider using Metview's :ref:`Python API <python_api>` instead of the Macro language.
+.. note::
+   These pages describe the Metview Macro language. Macro was developed before Python became popular,
+   but has similar principles and syntax. As the Python language and ecosystem has become so
+   well-featured, you may wish to consider using Metview's :ref:`Python API <python_api>` instead of the Macro language.
 
 A macro language was part of the first design specification of Metview. It is designed to perform data manipulation and plotting from within the Metview system environment. A language is the best "user interface" to describe very complex sequences of actions, particularly if the flow of action is conditional. It also provides a common means to express the mathematical formulae used when performing data manipulations.
 

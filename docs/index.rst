@@ -11,12 +11,6 @@ for both the operational and research meteorologist. Its capabilities include po
 processing and visualisation. It features both a powerful **icon-based user interface** for
 interactive work and a **Python** interface for batch processing.
 
-.. note::
-   These pages concentrate on the Python interface. The full documentation will appear here over time,
-   but for now the rest of the Metview documentation (the user interface and the Macro language) and
-   supplemental resources such as training courses and FAQs can be found at
-   https://confluence.ecmwf.int/metview.
-
 Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian National Institute for Space Research).
 
 .. toctree::
@@ -32,10 +26,9 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    :caption: Documentation
 
    overview
-   metview/using_metview/ui/index.rst
+   metview/using_metview/index
    python
    metview/macro/index.rst
-   metview/using_metview/index
    tutorials/index
 
 .. toctree::
