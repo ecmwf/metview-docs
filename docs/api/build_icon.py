@@ -75,7 +75,7 @@ ICON_HEADER_STANDARD = """
 
 {}
 
-\t\t.. note:: This function performs the same task as the {} icon in Metview’s user interface. It accepts its parameters as keyword arguments, described below.
+\t\t.. note:: This function performs the same task as the **{}** icon in Metview’s :ref:`user interface <user_interface>`. It accepts its parameters as keyword arguments, described below.
 
 
 .. py:function:: {}(**kwargs)
@@ -101,7 +101,7 @@ ICON_HEADER_STANDARD_ECMWF = """
 
 \t\t.. warning:: This function is only available for internal ECMWF use.
 
-\t\t.. note:: This function performs the same task as the {} icon in Metview’s user interface. It accepts its parameters as keyword arguments, described below.
+\t\t.. note:: This function performs the same task as the **{}** icon in Metview’s :ref:`user interface <user_interface>`. It accepts its parameters as keyword arguments, described below.
 
 
 .. py:function:: {}(**kwargs)
@@ -150,7 +150,8 @@ class DocParam:
         r = self.p_type
         if (
             self.p_type in ["str", "number"]
-            and self.values and isinstance(self.values, str)
+            and self.values
+            and isinstance(self.values, str)
             and (len(self.values.split("/")) < 6 or len(self.values) < 60)
         ):
             r = self._format_list(self.values)
@@ -165,9 +166,7 @@ class DocParam:
                 "{" + ", ".join([self._add_double_quote(v) for v in v.split("/")]) + "}"
             )
         elif "number" in self.p_type:
-            return (
-                    "{" + ", ".join([v for v in v.split("/")]) + "}"
-                )
+            return "{" + ", ".join([v for v in v.split("/")]) + "}"
         else:
             return str()
 
@@ -204,11 +203,21 @@ class DocParam:
                 t = self.default.replace("path::", "")
                 return self._add_double_quote(t)
             elif "/" in self.default:
-                if "str" in self.p_type and (not "number" in self.p_type or "to" in self.default.lower()):
-                    return ("[" + ", ".join([self._add_double_quote(v) for v in self.default.split("/")]) + "]")
+                if "str" in self.p_type and (
+                    not "number" in self.p_type or "to" in self.default.lower()
+                ):
+                    return (
+                        "["
+                        + ", ".join(
+                            [self._add_double_quote(v) for v in self.default.split("/")]
+                        )
+                        + "]"
+                    )
                 else:
                     return (
-                        "[" + ", ".join([v.strip() for v in self.default.split("/")]) + "]"
+                        "["
+                        + ", ".join([v.strip() for v in self.default.split("/")])
+                        + "]"
                     )
                 # return (
                 #     "[" + ", ".join([v.strip() for v in self.default.split("/")]) + "]"
@@ -350,14 +359,14 @@ class IconDocBuilder:
 
             # generates rst
             if fn.standard:
-                if not fn.skip_icon_link:
-                     icon_link =  "`{} <https://confluence.ecmwf.int/display/METV/{}>`_".format(
-                            fn.conf_label, fn.title.replace(" ", "+")
-                        )
-                else:
-                    icon_link = fn.conf_label  
+                # if not fn.skip_icon_link:
+                #  icon_link =  "`{} <https://confluence.ecmwf.int/display/METV/{}>`_".format(
+                #         fn.conf_label, fn.title.replace(" ", "+")
+                #     )
+                # else:
+                icon_link = fn.conf_label
 
-                if not fn.ecmwf: 
+                if not fn.ecmwf:
                     txt += ICON_HEADER_STANDARD.format(
                         name,
                         fn.pix,
@@ -367,14 +376,14 @@ class IconDocBuilder:
                         one_liner,
                     )
                 else:
-                   txt += ICON_HEADER_STANDARD_ECMWF.format(
+                    txt += ICON_HEADER_STANDARD_ECMWF.format(
                         name,
                         fn.pix,
                         self.indent_summary(summary),
                         icon_link,
                         fn.name,
                         one_liner,
-                    )  
+                    )
 
             else:
                 txt += ICON_HEADER_SIMPLE.format(
