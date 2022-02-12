@@ -2,6 +2,8 @@ speed
 ==============
 
 .. py:function:: speed(u, v)
+.. py:function:: Fieldset.speed()
+   :noindex:
 
    Computes the wind speed from the ``u`` and ``v`` wind components.
 
@@ -13,7 +15,9 @@ speed
 
    The resulting values are speed values in the same units as the input fields. A missing value in either ``u`` or ``v``  will result in a missing value in the corresponding place in the output fieldset.
 
-   The ecCodes **paramId** in the output is set as follows:
+   When :func:`speed` is called on a :class:`Fieldset` without arguments it is assumed that the fields are already properly ordered; i.e. each u field is followed by the corresponding v field in the input data.
+
+   The ecCodes **paramId** in the output is set according to the paramId of ``u`` fields.  The possible output paramIds are as follows:
    
    * 10 (atmospheric wind speed)
    * 207 (10m wind speed)
