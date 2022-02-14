@@ -30,6 +30,7 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    python
    metview/macro/index.rst
    tutorials/index
+   faq
 
 .. toctree::
    :maxdepth: 1
