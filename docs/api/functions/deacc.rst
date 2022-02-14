@@ -1,8 +1,8 @@
 deacc
 ===========
 
-..  py:function:: deacc(fs, key="step", skip_first=False, mark_derived=True)
-..  py:function:: Fieldset.deacc(key="step", skip_first=False, mark_derived=True)
+..  py:function:: deacc(fs, key=None, skip_first=False, mark_derived=True)
+..  py:function:: Fieldset.deacc(key=None, skip_first=False, mark_derived=True)
     :noindex:
 
     *New in metview-python version 1.10.0*.
