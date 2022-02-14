@@ -338,6 +338,15 @@
     - geopoints_access
     - geopoints_object
     type: script
+- deacc:
+    category:
+      fieldset: De-accumulate values in a fieldset
+    desc: De-accumulate values in a fieldset
+    group:
+    - grib
+    - grib_object
+    - stats
+    type: script
 - definition:
     category: {}
     desc: ''
