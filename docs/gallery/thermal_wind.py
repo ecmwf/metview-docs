@@ -13,7 +13,6 @@ GRIB - Thermal Wind
 #
 
 import metview as mv
-import cdsapi
 
 # getting data
 use_cds = False
@@ -21,6 +20,8 @@ use_cds = False
 filename = "thw_era5.grib"
 
 if use_cds:
+    import cdsapi
+
     c = cdsapi.Client()
     area = [80, 160, 25, -100]
     filename_sfc = filename + ".part1"
@@ -63,24 +64,22 @@ if use_cds:
     g1 = mv.read(filename_sfc)
     g2 = mv.read(filename_pl)
     mv.write(filename, mv.merge(g1, g2))
+    g = mv.read(filename)
 else:
     if mv.exist(filename):
         g = mv.read(filename)
     else:
         g = mv.gallery.load_dataset(filename)
 
-# read data
-f = mv.read(filename)
-
 # get mean sea level pressure
-msl = mv.read(data=f, param="msl")
+msl = mv.read(data=g, param="msl")
 
 p_top = 500
 p_bottom = 1000
 
 # compute thickness
-z1 = mv.read(data=f, param="z", levelist=p_top)
-z2 = mv.read(data=f, param="z", levelist=p_bottom)
+z1 = mv.read(data=g, param="z", levelist=p_top)
+z2 = mv.read(data=g, param="z", levelist=p_bottom)
 th = z1 - z2
 
 # compute thermal wind

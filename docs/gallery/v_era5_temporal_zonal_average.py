@@ -13,7 +13,6 @@ GRIB - Temporal Zonal Average of ERA5 V Wind Component
 #
 
 import metview as mv
-import cdsapi
 
 # getting data
 use_cds = False
@@ -24,6 +23,8 @@ pressures = [1000, 925, 850, 700, 500, 400, 300, 250, 200, 150, 100]
 
 # getting forecast data from CDS
 if use_cds:
+    import cdsapi
+
     c = cdsapi.Client()
     c.retrieve(
         "reanalysis-era5-pressure-levels-monthly-means",

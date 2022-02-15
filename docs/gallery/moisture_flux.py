@@ -13,7 +13,6 @@ GRIB - Moisture Flux
 #
 
 import metview as mv
-import cdsapi
 
 # getting data
 use_cds = False
@@ -21,6 +20,8 @@ use_cds = False
 filename = "mflux_era5.grib"
 
 if use_cds:
+    import cdsapi
+
     c = cdsapi.Client()
     area = [60, -10, 25, 40]
     filename_sfc = filename + ".part1"
@@ -66,23 +67,21 @@ if use_cds:
     g1 = mv.read(filename_sfc)
     g2 = mv.read(filename_pl)
     mv.write(filename, mv.merge(g1, g2))
+    g = mv.read(filename)
 else:
     if mv.exist(filename):
         g = mv.read(filename)
     else:
         g = mv.gallery.load_dataset(filename)
 
-#  read data
-f = mv.read(filename)
-
 #  get fields on 700 hpa
 level = 700
-q = mv.read(data=f, param="q", levelist=level)
-u = mv.read(data=f, param="u", levelist=level)
-v = mv.read(data=f, param="v", levelist=level)
+q = mv.read(data=g, param="q", levelist=level)
+u = mv.read(data=g, param="u", levelist=level)
+v = mv.read(data=g, param="v", levelist=level)
 
 # get msl
-msl = mv.read(data=f, param="msl")
+msl = mv.read(data=g, param="msl")
 
 # compute the moisture flux vector and scale it by 1000
 mf = mv.merge(u * q, v * q)

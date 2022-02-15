@@ -13,7 +13,6 @@ GRIB - ERA5 SST El Nino Maps
 #
 
 import metview as mv
-import cdsapi
 
 # getting the data
 use_cds = False
@@ -22,6 +21,8 @@ filename = "sst_era5_mnth.grib"
 
 # getting forecast data from CDS
 if use_cds:
+    import cdsapi
+
     c = cdsapi.Client()
     c.retrieve(
         "reanalysis-era5-single-levels-monthly-means",

@@ -13,7 +13,6 @@ GRIB - Ageostrophic Wind
 #
 
 import metview as mv
-import cdsapi
 
 # getting data
 use_cds = False
@@ -22,6 +21,8 @@ filename = "gw_era5.grib"
 
 # getting forecast data from CDS
 if use_cds:
+    import cdsapi
+
     c = cdsapi.Client()
     c.retrieve(
         "reanalysis-era5-pressure-levels",
