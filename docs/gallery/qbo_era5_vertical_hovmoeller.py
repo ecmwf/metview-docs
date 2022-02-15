@@ -13,7 +13,6 @@ GRIB - ERA5 Quasi Biennial Oscillation on Vertical Hovmoeller
 #
 
 import metview as mv
-import cdsapi
 
 # getting data
 use_cds = False
@@ -22,6 +21,8 @@ filename = "u_era5_mnth_strato.grib"
 
 # getting forecast data from CDS
 if use_cds:
+    import cdsapi
+
     c = cdsapi.Client()
     c.retrieve(
         "reanalysis-era5-pressure-levels-monthly-means",

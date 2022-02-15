@@ -14,7 +14,6 @@ GRIB - Map with Zonal Mean Curve
 
 import metview as mv
 import numpy as np
-import cdsapi
 
 # getting data
 use_cds = False
@@ -23,6 +22,8 @@ filename = "strd_era5.grib"
 
 # getting data from CDS
 if use_cds:
+    import cdsapi
+
     c = cdsapi.Client()
     c.retrieve(
         "reanalysis-era5-single-levels-monthly-means",
@@ -90,7 +91,10 @@ page_0 = mv.plot_page(right=75, view=map_view)
 page_1 = mv.plot_page(left=75, view=curve_view)
 
 dw = mv.plot_superpage(
-    pages=[page_0, page_1], layout_size="custom", custom_width=20, custom_height=8,
+    pages=[page_0, page_1],
+    layout_size="custom",
+    custom_width=20,
+    custom_height=8,
 )
 
 # define contour shading

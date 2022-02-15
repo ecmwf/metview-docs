@@ -13,7 +13,6 @@ GRIB - Deformation
 #
 
 import metview as mv
-import cdsapi
 
 # getting data
 use_cds = False
@@ -22,6 +21,8 @@ filename = "deformation_era5.grib"
 
 # getting forecast data from CDS
 if use_cds:
+    import cdsapi
+
     c = cdsapi.Client()
     c.retrieve(
         "reanalysis-era5-pressure-levels",
@@ -48,9 +49,6 @@ if use_cds:
         filename,
     )
     g = mv.read(filename)
-    import sys
-
-    sys.exit(0)
 # read data from file
 else:
     if mv.exist(filename):
