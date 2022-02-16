@@ -1,0 +1,24 @@
+eturn: :class:`Request`
+summary: Defines a ridge weather symbol.
+oneliner: Defines a ridge weather symbol.
+params:
+- colour:
+   default: 'black'
+   desc: Colour of the curve.
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the curve.
+   ptype: number
+- symbol_width:
+   default: '5'
+   desc: Width of the basic triangle shape making up the zigzag pattern.
+   ptype: number
+- symbol_orientation:
+   default: 'left'
+   desc: Orientation of the zig-zag pattern.
+   values: left/right
+   ptype: str
+- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_common.yaml 

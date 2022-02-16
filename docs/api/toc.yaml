@@ -38,6 +38,7 @@ groups:
   visdef: Visual definitions
   widget: Widgets
   wind: Wind
+  ws: Interactive Weather Symbols
 pages:
   apps:
     gr:
@@ -126,6 +127,7 @@ pages:
     - plot
     - layout
     - output
+    - ws
     title: Visualisation functions
   ui:
     gr:

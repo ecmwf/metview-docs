@@ -1,0 +1,8 @@
+- x:
+   default: '0'
+   desc: The x coordinates of the control points of the curve.
+   ptype: ndarray or list of numbers
+- y:
+   default: '0'
+   desc: The y coordinates of the control points of the curve.
+   ptype: ndarray or list of numbers

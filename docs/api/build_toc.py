@@ -55,6 +55,7 @@ dtypes = {
 GROUPS = {}
 PAGES = {}
 
+
 class TocPage:
     def __init__(self, name, item):
         self.name = name
@@ -171,6 +172,8 @@ class TocBuilder:
             if len(page.groups) > 1:
                 title_len = len(gr.title) + 2
                 txt += f"""
+
+.. _toc_{page.name}_{gr.name}:
 
 {gr.title}
 {"-" * title_len}

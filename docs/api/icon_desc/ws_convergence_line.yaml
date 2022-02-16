@@ -1,0 +1,29 @@
+return: :class:`Request`
+summary: Defines a convergence line weather symbol.
+oneliner: Defines a convergence line weather symbol.
+params:
+- colour:
+   default: 'orange'
+   desc: Colour of the convergence line.
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the curve and ticks.
+   ptype: number
+- symbol_width:
+   default: '5'
+   desc: Size of the ticks projected onto the curve.
+   ptype: number
+- symbol_gap:
+   default: '5'
+   desc: Width of the gap between the ticks.
+   ptype: number
+- symbol_orientation:
+   default: 'right'
+   desc: Orientation of the first tick.
+   values: left/right
+   ptype: str
+- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_common.yaml 
+

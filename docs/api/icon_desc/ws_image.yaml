@@ -1,0 +1,20 @@
+return: :class:`Request`
+summary: Defines an image weather symbol.
+oneliner: Defines an image weather symbol.
+params:
+# - type:
+#    default: 'user'
+#    ptype: str
+- name:
+   default: ''
+   desc: The name of the image.
+   ptype: str
+# - path:
+#    default: ''
+#    ptype: str
+- size:
+   default: '30'
+   desc: The width of the image.
+   ptype: number
+- _include: !include include/ws_xy_point.yaml
+- _include: !include include/ws_common.yaml

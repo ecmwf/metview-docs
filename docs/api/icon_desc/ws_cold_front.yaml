@@ -1,0 +1,35 @@
+return: :class:`Request`
+summary: Defines a cold front weather symbol.
+oneliner: Defines a cold front weather symbol.
+params:
+- colour:
+   default: 'blue'
+   desc: Colour of the front.
+   ptype: str
+   values: ''
+- type:
+   default: 'surface'
+   desc: Specifies the cold front type.
+   values: surface/upper/frontogenesis/frontolysis
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the front curve.
+   ptype: number
+- symbol_width:
+   default: '10'
+   desc: Width of the triangle symbol.
+   ptype: number
+- symbol_gap:
+   default: '15'
+   desc: Width of the gap between two triangle symbols.
+   ptype: number
+- symbol_orientation:
+   default: 'right'
+   desc: Orientation of the triangle symbols.
+   values: left/right
+   ptype: str
+- _include: !include include/ws_xy_array.yaml 
+- _include: !include include/ws_common.yaml 
+
+

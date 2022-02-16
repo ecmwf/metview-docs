@@ -1,0 +1,80 @@
+return: :class:`Request`
+summary: Defines a text weather symbol.
+oneliner: Defines a text weather symbol.
+params:
+- text:
+   desc: The text.
+   ptype: str
+- font_family:
+   default: 'sansserif'
+   desc: Font family.
+   values: arial/courier/helvetica/times/serif/sansserif
+   ptype: str
+- font_size:
+   default: '14'
+   desc: Font size in points.
+   ptype: number
+- font_bold_style:
+   default: 'off'
+   desc: Enable bold style.
+   values: on/off
+   ptype: str
+- font_italic_style:
+   default: 'off'
+   desc: Enable italic style.
+   values: on/off
+   ptype: str
+- font_underline_style:
+   default: 'off'
+   desc: Enable underline style.
+   values: on/off
+   ptype: str
+- font_colour:
+   default: 'black'
+   desc: Font colour.
+   values: ''
+   ptype: str
+- text_alignment:
+   default: 'left'
+   desc: Text alignment.
+   values: left/centre/right/justify
+   ptype: str
+- line:
+   default: 'on'
+   desc: Enable to draw text box outline.
+   values: on/off
+   ptype: str
+- line_colour:
+   default: 'black'
+   desc: Colour of the text box outline. Enabled when ``line`` is "on".
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the text box outline. Enabled when ``line`` is "on".
+   ptype: number
+- line_style:
+   default: 'solid'
+   desc: Style of the text box outline. Enabled when ``line`` is "on".
+   values: solid/dash/dot/dash_dot/dash_dot_dot
+   ptype: str
+- fill:
+   default: 'off'
+   desc: Enable to fill the text box.
+   values: on/off
+   ptype: str
+- fill_colour:
+   default: 'rgb(0.8,0.8,0.8)'
+   desc: Fill colour of the text box. Enabled when ``fill`` is "on".
+   values: ''
+   ptype: str
+- width:
+   default: '0'
+   desc: Width of the text box.
+   ptype: number
+- height:
+   default: '0'
+   desc: Height of the text box.
+   ptype: number
+- _include: !include include/ws_xy_point.yaml
+- _include: !include include/ws_common.yaml

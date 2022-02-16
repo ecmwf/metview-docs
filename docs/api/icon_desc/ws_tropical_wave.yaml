@@ -1,0 +1,15 @@
+return: :class:`Request`
+summary: Defines a tropical wave line weather symbol.
+oneliner: Defines a tropical wave line weather symbol.
+params:
+- colour:
+   default: 'black'
+   desc: Colour of the curve.
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the curve.
+   ptype: number
+- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_common.yaml 

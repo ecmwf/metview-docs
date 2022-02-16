@@ -52,8 +52,8 @@ adds a new point and double-click concludes the creation.
 What kind of symbol are available?
 ==================================
 
-Fitted geo-shapes
------------------
+Fully projected geo-shapes
+---------------------------------------
 
 .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image3.png
    :width: 2.54167in
@@ -64,7 +64,7 @@ positions as the projection changes and the edges between them are
 **sampled linearly** in lat-lon space. It means that in cylindrical
 projection the edges are always straight lines, while in other
 projections they might be **curves**. The following table shows how a
-fitted geo-shape changes as the projection changes from cylindrical to
+fully projected geo-shape changes as the projection changes from cylindrical to
 polar north:
 
 .. list-table::
@@ -74,31 +74,31 @@ polar north:
      - Cylindrical
      - Polar North
 
-   * - Geo Line
+   * - Proj Line
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image4.png
            :width: 100px
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image5.png
            :width: 100px      
-   * - Geo Polyline
+   * - Proj Polyline
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image6.png
            :width: 100px
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image7.png
            :width: 100px   
-   * - Geo Polygon
+   * - Proj Polygon
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image8.png
            :width: 100px
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image9.png
            :width: 100px  
-   * - Geo Quad
+   * - Proj Quad
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image10.png
            :width: 100px
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image11.png
            :width: 100px  
 
-For the **Geo Quad** the corner points always form a rectangle in the lat-lon space!
+For the **Proj Quad** the corner points always form a rectangle in the lat-lon space!
 
-Geo shapes
-----------
+Projected geo shapes
+----------------------------
 
 .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image12.png
    :width: 2.54167in
@@ -108,7 +108,7 @@ In these shapes all the vertices keep their lat-lon positions as the
 projection changes and they are always connected with a **straight
 line** (or with a B-Spline for curves) in all the projections.
 
-The **geo rectangle** is a special object because it always keeps its
+The **rectangle** is a special object because it always keeps its
 rectangular shape. It means that if we zoom, the lat-lon positions of
 the corner points do not change. However, if we change the projection
 the lat-lon positions of the corners are automatically adjusted so that
@@ -126,7 +126,7 @@ the shape will be a rectangle in the new projection.
            :width: 100px
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image14.png
            :width: 100px   
-   * - Geo rectangle
+   * - Rectangle
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image15.png
            :width: 100px
      - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image16.png

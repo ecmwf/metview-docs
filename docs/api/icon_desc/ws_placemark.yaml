@@ -1,0 +1,49 @@
+return: :class:`Request`
+summary: Defines a placemark weather symbol.
+oneliner: Defines a placemark weather symbol.
+params:
+- line:
+   default: 'on'
+   desc: Enable to draw the outline.
+   values: on/off
+   ptype: str
+- line_colour:
+   default: 'black'
+   desc: Colour of the outline. Enabled when ``line`` is "on".
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the outline. Enabled when ``line`` is "on".
+   ptype: number
+- line_style:
+   default: 'solid'
+   desc: Style of the outline. Enabled when ``line`` is "on".
+   values: solid/dash/dot/dash_dot/dash_dot_dot
+   ptype: str
+- fill:
+   default: 'on'
+   desc: Enable to fill the placemark.
+   values: on/off
+   ptype: str
+- fill_colour:
+   default: 'rgb(0.9524,0.7171,0.01494)'
+   desc: Fill colour of the placemark. Enabled when ``fill`` is "on".
+   values: ''
+   ptype: str
+- inner_fill:
+   default: 'on'
+   desc: Enable to fill the hole in the placemark.
+   values: on/off
+   ptype: str
+- inner_fill_colour:
+   default: 'rgb(0,0,0)'
+   desc: Fill colour of the hole in the placemark. Enabled when ``inner_fill`` is "on".
+   values: ''
+   ptype: str
+- size:
+   default: '25'
+   desc: Size of the placemark. Enabled when ``type`` is "star".
+   type: number
+- _include: !include include/ws_xy_point.yaml
+- _include: !include include/ws_common.yaml

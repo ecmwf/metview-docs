@@ -1,0 +1,53 @@
+return: :class:`Request`
+summary: Defines a marker weather symbol.
+oneliner: Defines a marker weather symbol.
+params:
+- type:
+   default: 'rectangle'
+   desc: Marker type.
+   values: rectangle/ellipse/triangle/diamond/star
+   ptype: str
+- line:
+   default: 'on'
+   desc: Enable to draw the outline.
+   values: on/off
+   ptype: str
+- line_colour:
+   default: 'black'
+   desc: Colour of the outline. Enabled when ``line`` is "on".
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the outline. Enabled when ``line`` is "on".
+   ptype: number
+- line_style:
+   default: 'solid'
+   desc: Style of the outline. Enabled when ``line`` is "on".
+   values: solid/dash/dot/dash_dot/dash_dot_dot
+   ptype: str
+- fill:
+   default: 'on'
+   desc: Enable to fill the marker.
+   values: on/off
+   ptype: str
+- fill_colour:
+   default: 'rgb(0.9524,0.7171,0.01494)'
+   desc: Fill colour of the marker. Enabled when ``fill`` is "on".
+   values: ''
+   ptype: str
+- width:
+   desc: Width of the marker. Enabled when ``type`` is not "star".
+   default: '30'
+   ptype: number
+- height:
+   desc: Height of the marker. Enabled when ``type`` is not "star".
+   default: '30'
+   ptype: number
+- size:
+   default: '30'
+   desc: Size of the marker. Enabled when ``type`` is "star".
+   ptype: number
+- _include: !include include/ws_xy_point.yaml
+- _include: !include include/ws_common.yaml
+

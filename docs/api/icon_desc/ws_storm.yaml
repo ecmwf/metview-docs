@@ -1,0 +1,21 @@
+return: :class:`Request`
+summary: Defines a storm weather symbol.
+oneliner: Defines a storm weather symbol.
+params:
+- type:
+   default: 'hurricane_nh'
+   desc: Type of the storm symbol.
+   values: hurricane_nh/hurricane_sh/tropical_storm_nh/tropical_storm_sh
+   ptype: str
+- colour:
+   default: 'rgb(0.9412,0,0)'
+   desc: Colour of the symbol.
+   values: ''
+   ptype: str
+- size:
+   default: '30'
+   desc: Size of the symbol.
+   type: number
+- _include: !include include/ws_xy_point.yaml
+- _include: !include include/ws_common.yaml
+

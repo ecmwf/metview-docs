@@ -1,0 +1,28 @@
+return: :class:`Request`
+summary: Defines an ITCZ (Intertropical Convergence Zone) line weather symbol.
+oneliner: Defines an ITCZ (Intertropical Convergence Zone) line weather symbol.
+params:
+- colour:
+   default: 'orange'
+   desc: Colour of the first segment.
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the curve and the intensity lines.
+   ptype: number
+- width:
+   default: '5'
+   desc: The distance between the two parallel curves forming the ITCZ.
+   ptype: number
+- intensity:
+   default: '1'
+   desc: Intensity (represented by the given number of intensity lines).
+   values: 1/2/3
+   ptype: number
+- intensity_gap:
+   default: '20'
+   desc: The distance between groups of intensity lines.
+   ptype: number
+- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_common.yaml 

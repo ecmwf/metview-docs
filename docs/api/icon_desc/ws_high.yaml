@@ -1,0 +1,19 @@
+return: :class:`Request`
+summary: Defines a high pressure weather symbol.
+oneliner: Defines a high pressure weather symbol.
+params:
+- colour:
+   default: 'rgb(0,0,0.6431)'
+   desc: Colour of character.
+   values: ''
+   type: str
+- size:
+   default: '30'
+   desc: Size of the character.
+   type: number
+- character:
+   default: 'H'
+   desc: The character representing the high pressure. A single character has to be specified here.
+   type: str
+- _include: !include include/ws_xy_point.yaml
+- _include: !include include/ws_common.yaml 

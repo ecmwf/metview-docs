@@ -1,0 +1,19 @@
+return: :class:`Request`
+summary: Defines a low pressure weather symbol.
+oneliner: Defines a low pressure weather symbol.
+params:
+- colour:
+   default: 'rgb(0.8392,0,0)'
+   desc: Colour of character.
+   values: ''
+   type: str
+- size:
+   default: '30'
+   desc: Size of the character.
+   type: number
+- character:
+   default: 'L'
+   desc: The character representing the low pressure. A single character has to be specified here.
+   type: str
+- _include: !include include/ws_xy_point.yaml
+- _include: !include include/ws_common.yaml

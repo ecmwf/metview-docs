@@ -1,0 +1,48 @@
+return: :class:`Request`
+summary: Defines a WMO weather symbol.
+oneliner: Defines a WMO weather symbol.
+params:
+- type:
+   default: 'ww_91'
+   desc: The WMO symbol name.
+   ptype: str
+- shape_colour:
+   default: 'black'
+   desc: Colour of the WMO symbol.
+   values: ''
+   ptype: str
+- line:
+   default: 'off'
+   desc: Enable to draw the outline of the symbol box.
+   values: on/off
+   ptype: str
+- line_colour:
+   default: 'black'
+   desc: Colour of the outline. Enabled when ``line`` is "on".
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the outline. Enabled when ``line`` is "on".
+   ptype: number
+- line_style:
+   default: 'solid'
+   desc: Style of the outline. Enabled when ``line`` is "on".
+   values: solid/dash/dot/dash_dot/dash_dot_dot
+   ptype: str
+- fill:
+   default: 'off'
+   desc: Enable to fill the symbol box.
+   values: on/off
+   ptype: str
+- fill_colour:
+   default: 'white'
+   desc: Fill colour of the symbol box. Enabled when ``fill`` is "on".
+   values: ''
+   ptype: str
+- size:
+   default: '30'
+   desc: Size of the symbol box. 
+   ptype: number
+- _include: !include include/ws_xy_point.yaml
+- _include: !include include/ws_common.yaml

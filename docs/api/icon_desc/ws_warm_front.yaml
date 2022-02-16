@@ -1,0 +1,33 @@
+return: :class:`Request`
+summary: Defines a warm front weather symbol.
+oneliner: Defines a warm front weather symbol.
+params:
+- colour:
+   default: 'red'
+   desc: Colour of the front.
+   ptype: str
+   values: ''
+- type:
+   default: 'surface'
+   desc: Specifies the cold front type.
+   values: surface/upper/frontogenesis/frontolysis
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the front curve.
+   ptype: number
+- symbol_width:
+   default: '10'
+   desc: Width of the semi-circle symbol.
+   ptype: number
+- symbol_gap:
+   default: '15'
+   desc: Width of the gap between two semi-circle symbols.
+   ptype: number
+- symbol_orientation:
+   default: 'right'
+   desc: Orientation of the semi-circle symbols.
+   values: left/right
+   ptype: str
+- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_common.yaml 

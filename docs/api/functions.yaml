@@ -2985,6 +2985,153 @@
     pix: WMS_CLIENT
     title: WMS Client
     type: icon
+- ws_cold_front:
+    category: {}
+    desc: Cold front weather symbol
+    group:
+    - ws
+    pix: WS_COLDFRONT
+    type: icon
+- ws_convergence_line:
+    category: {}
+    desc: Convergence line weather symbol
+    group:
+    - ws
+    pix: WS_CONVERGENCELINE
+    type: icon
+- ws_high:
+    category: {}
+    desc: High pressure weather symbol
+    group:
+    - ws
+    pix: WS_HIGH
+    type: icon
+- ws_image:
+    category: {}
+    desc: Image weather symbol
+    group:
+    - ws
+    pix: WS_IMAGE
+    type: icon
+- ws_instability_line:
+    category: {}
+    desc: Instability line weather symbol
+    group:
+    - ws
+    pix: WS_INSTABILITYLINE
+    type: icon
+- ws_intertropical_discontinuity:
+    category: {}
+    desc: Intertropical discontinuity line weather symbol
+    group:
+    - ws
+    pix: WS_ITTDISCONTINUITY
+    type: icon
+- ws_itcz:
+    category: {}
+    desc: ITCZ line weather symbol
+    group:
+    - ws
+    pix: WS_ITCZ
+    type: icon
+- ws_low:
+    category: {}
+    desc: Low pressure weather symbol
+    group:
+    - ws
+    pix: WS_LOW
+    type: icon
+- ws_marker:
+    category: {}
+    desc: Marker weather symbol
+    group:
+    - ws
+    pix: WS_MARKER
+    type: icon
+- ws_occluded:
+    category: {}
+    desc: Occluded front weather symbol
+    group:
+    - ws
+    pix: WS_OCCLUDED
+    type: icon
+- ws_placemark:
+    category: {}
+    desc: Placemark  weather symbol
+    group:
+    - ws
+    pix: WS_PLACEMARK
+    type: icon
+- ws_quasi_stationary:
+    category: {}
+    desc: Quasi-stationary front weather symbol
+    group:
+    - ws
+    pix: WS_QUASISTATIONARY
+    type: icon
+- ws_ridge:
+    category: {}
+    desc: Ridge weather symbol
+    group:
+    - ws
+    pix: WS_RIDGE
+    type: icon
+- ws_shape:
+    category: {}
+    desc: Shape weather symbol
+    group:
+    - ws
+    pix: WS_SHAPE
+    type: icon
+- ws_shear_line:
+    category: {}
+    desc: Shear line weather symbol
+    group:
+    - ws
+    pix: WS_SHEARLINE
+    type: icon
+- ws_storm:
+    category: {}
+    desc: Storm weather symbol
+    group:
+    - ws
+    pix: WS_STORM
+    type: icon
+- ws_text:
+    category: {}
+    desc: Text weather symbol
+    group:
+    - ws
+    pix: WS_TEXT
+    type: icon
+- ws_trough:
+    category: {}
+    desc: Trough weather symbol
+    group:
+    - ws
+    pix: WS_TROUGH
+    type: icon
+- ws_tropical_wave:
+    category: {}
+    desc: Tropical wave weather symbol
+    group:
+    - ws
+    pix: WS_TROPICALWAVE
+    type: icon
+- ws_warm_front:
+    category: {}
+    desc: Warm front weather symbol
+    group:
+    - ws
+    pix: WS_WARMFRONT
+    type: icon
+- ws_wmo_symbol:
+    category: {}
+    desc: WMO weather symbol
+    group:
+    - ws
+    pix: WS_WMOSYMBOL
+    type: icon
 - write:
     category:
       io: 'Writes/appends the given data to file. args: (filehandler, any)'

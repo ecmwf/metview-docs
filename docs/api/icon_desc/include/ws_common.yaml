@@ -1,0 +1,5 @@
+- geolock:
+   default: 'off'
+   desc: Sets the geolock on the item for interactive editing in the plot window.
+   values: on/off
+   ptype: on_off

@@ -1,0 +1,60 @@
+return: :class:`Request`
+summary: Defines a shape weather symbol.
+oneliner: Defines a shape weather symbol.
+params:
+- type:
+   default: 'line'
+   desc: Shape type.
+   values: line/polyline/curve/polygon/closed_curve/rectangle/proj_line/proj_polyline/proj_polygon/proj_quad
+   ptype: str
+- line:
+   default: 'on'
+   desc: Enable to draw the line/outline.
+   values: on/off
+   ptype: str
+- line_colour:
+   default: 'black'
+   desc: Colour of the line/outline. Enabled when ``line`` is "on".
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the line/outline. Enabled when ``line`` is "on".
+   ptype: number
+- line_style:
+   default: 'solid'
+   desc: Style of the line/outline. Enabled when ``line`` is "on".
+   values: solid/dash/dot/dash_dot/dash_dot_dot
+   ptype: line_style
+- line_start_ptype:
+   default: 'none'
+   desc: Defines the arrow head for the start of the line. Enabled when ``type`` is "line", "polyline", "curve", "proj_line" or "proj_polyline".
+   values: none/open_arrow/filled_arrow
+   ptype: str
+- line_end_ptype:
+   default: 'none'
+   desc: Defines the arrow head for the end of the line. Enabled when ``type`` is "line", "polyline", "curve", "proj_line" or "proj_polyline".
+   values: none/open_arrow/filled_arrow
+   ptype: str
+- arrow_length:
+   default: '10'
+   desc: The length of the arrow head. Enabled when either ``line_start_ptype`` or `line_end_ptype`` is not 'none'.
+   ptype: number
+- fill:
+   default: 'on'
+   desc: Enable to fill the shape.
+   values: on/off
+   ptype: str
+- fill_colour:
+   default: 'rgba(0,0,1,0.3)'
+   desc: Fill colour of the shape. Enabled when ``fill`` is "on".
+   values: ''
+   ptype: str
+- segment_dateline_cross:
+   desc: special
+   ptype: ndarray or list of numbers
+- segment_dx:
+   desc: special
+   ptype: ndarray or list of numbers
+- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_common.yaml

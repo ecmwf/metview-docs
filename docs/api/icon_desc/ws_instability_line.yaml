@@ -1,0 +1,28 @@
+return: :class:`Request`
+summary: Defines an instability line weather symbol.
+oneliner: Defines an instability line weather symbol.
+params:
+- colour:
+   default: 'black'
+   desc: Colour of the curve.
+   values: ''
+   ptype: str
+- line_thickness:
+   default: '1'
+   desc: Thickness of the curve.
+   ptype: number
+- line_length:
+   default: '15'
+   desc: Length of the line segments.
+   ptype: number
+- line_gap:
+   default: '15'
+   desc: Width of the gap between the line segments.
+   ptype: number
+- circle_diameter:
+   default: '2'
+   desc: Diameter of the circles between the line segments. 
+   ptype: number
+- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_common.yaml 
+
