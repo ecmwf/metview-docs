@@ -3,3 +3,7 @@
    desc: Sets the geolock on the item for interactive editing in the plot window.
    values: on/off
    ptype: on_off
+- tooltip:
+   default: ''
+   desc: Text that appears as a tooltip when the visualised object is hovered over in Metview's plot window.
+   ptype: str
