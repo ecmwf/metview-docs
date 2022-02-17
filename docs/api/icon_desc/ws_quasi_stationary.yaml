@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines a quasi-stationary front weather symbol.
-oneliner: Defines a quasi-stationary front weather symbol.
+summary: rst
+oneliner: Defines a quasi-stationary front :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - warm_colour:
    default: 'red'
@@ -34,7 +34,7 @@ params:
    desc: Orientation of the triangle symbols.
    values: left/right
    ptype: str
-- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_xy_curve.yaml
 - _include: !include include/ws_common.yaml 
 
 

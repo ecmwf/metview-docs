@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines an occluded front weather symbol.
-oneliner: Defines an occluded front weather symbol.
+summary: rst
+oneliner: Defines an occluded front :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - colour:
    default: 'purple'
@@ -29,5 +29,5 @@ params:
    desc: Orientation of the triangle/semi-circle symbols.
    values: left/right
    ptype: str
-- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_xy_curve.yaml
 - _include: !include include/ws_common.yaml 

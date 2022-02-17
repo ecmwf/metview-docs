@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines a low pressure weather symbol.
-oneliner: Defines a low pressure weather symbol.
+summary: rst
+oneliner: Defines a low pressure :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - colour:
    default: 'rgb(0.8392,0,0)'

@@ -1,3 +1,5 @@
+.. _weather_symbols:
+
 Interactive Weather Symbols
 ==================================
 

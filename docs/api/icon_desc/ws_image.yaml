@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines an image weather symbol.
-oneliner: Defines an image weather symbol.
+summary: rst
+oneliner: Defines an image :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 # - type:
 #    default: 'user'

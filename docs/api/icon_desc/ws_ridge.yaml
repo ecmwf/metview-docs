@@ -1,6 +1,6 @@
 eturn: :class:`Request`
-summary: Defines a ridge weather symbol.
-oneliner: Defines a ridge weather symbol.
+summary: rst
+oneliner: Defines a ridge :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - colour:
    default: 'black'
@@ -20,5 +20,5 @@ params:
    desc: Orientation of the zig-zag pattern.
    values: left/right
    ptype: str
-- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_xy_curve.yaml
 - _include: !include include/ws_common.yaml 

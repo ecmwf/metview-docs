@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines a shape weather symbol.
-oneliner: Defines a shape weather symbol.
+summary: rst
+oneliner: Defines a shape :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - type:
    default: 'line'

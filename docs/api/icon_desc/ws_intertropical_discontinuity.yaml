@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines an intertropical discontinuity line weather symbol.
-oneliner: Defines an intertropical discontinuity line weather symbol.
+summary: rst
+oneliner: Defines an intertropical discontinuity line :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - colour_1:
    default: 'red'
@@ -24,5 +24,5 @@ params:
    default: '5'
    desc: Width of the gap between line segments.
    ptype: number
-- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_xy_curve.yaml
 - _include: !include include/ws_common.yaml 

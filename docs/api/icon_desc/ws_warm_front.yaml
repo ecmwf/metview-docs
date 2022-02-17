@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines a warm front weather symbol.
-oneliner: Defines a warm front weather symbol.
+summary: rst
+oneliner: Defines a warm front :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - colour:
    default: 'red'
@@ -29,5 +29,5 @@ params:
    desc: Orientation of the semi-circle symbols.
    values: left/right
    ptype: str
-- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_xy_curve.yaml
 - _include: !include include/ws_common.yaml 

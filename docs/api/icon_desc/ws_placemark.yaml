@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines a placemark weather symbol.
-oneliner: Defines a placemark weather symbol.
+summary: rst
+oneliner: Defines a placemark :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - line:
    default: 'on'

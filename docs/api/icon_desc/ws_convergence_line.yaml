@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines a convergence line weather symbol.
-oneliner: Defines a convergence line weather symbol.
+summary: rst
+oneliner: Defines a convergence line :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - colour:
    default: 'orange'
@@ -24,6 +24,6 @@ params:
    desc: Orientation of the first tick.
    values: left/right
    ptype: str
-- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_xy_curve.yaml
 - _include: !include include/ws_common.yaml 
 

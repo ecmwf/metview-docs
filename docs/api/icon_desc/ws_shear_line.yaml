@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines a shear line weather symbol.
-oneliner: Defines a shear line weather symbol.
+summary: rst
+oneliner: Defines a shear line :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - colour:
    default: 'black'
@@ -23,6 +23,6 @@ params:
    default: '2'
    desc: Diameter of the circles between the line segments. 
    ptype: number
-- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_xy_curve.yaml
 - _include: !include include/ws_common.yaml 
 

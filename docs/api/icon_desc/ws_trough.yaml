@@ -1,6 +1,6 @@
 return: :class:`Request`
-summary: Defines a trough line weather symbol.
-oneliner: Defines a trough line weather symbol.
+summary: rst
+oneliner: Defines a trough :ref:`Interactive Weather Symbol <weather_symbols>`.
 params:
 - colour:
    default: 'black'
@@ -11,5 +11,5 @@ params:
    default: '1'
    desc: Thickness of the curve.
    ptype: number
-- _include: !include include/ws_xy_array.yaml
+- _include: !include include/ws_xy_curve.yaml
 - _include: !include include/ws_common.yaml 
