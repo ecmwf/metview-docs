@@ -42,11 +42,11 @@ Version 5.14.1
    'nearest' modes
 
 -  Fixed issue in the new :ref:`weather symbol
-   editor <how_to_use_the_weather_symbol_editor_in_metview>` where
+   editor <weather_symbols>` where
    uPlot crashed if a line was added outside of the map area
 
 -  Fixed issue in the new :ref:`weather symbol
-   editor <how_to_use_the_weather_symbol_editor_in_metview>` where
+   editor <weather_symbols>` where
    interactive resizing of a line's arrowheads did not take effect until
    the line was moved
 
@@ -88,7 +88,7 @@ Version 5.14.0
 -  Accessible through the 'Symbols' tab on the sidebar​
 
 -  See :ref:`How to use the Weather Symbol Editor in
-   Metview <how_to_use_the_weather_symbol_editor_in_metview>` for
+   Metview <weather_symbols>` for
    more information on this new feature!
 
    .. image:: /_static/release/version_5.14_updates/image1.png

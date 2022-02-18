@@ -1,4 +1,4 @@
-.. _how_to_use_the_weather_symbol_editor_in_metview:
+.. _ws_on_screen_editing:
 
 On screen weather symbol editing
 ///////////////////////////////////////////////
@@ -23,7 +23,7 @@ It contains two pages:
 How to add a new item to the plot?
 =================================
 
-Just click on the item in the sidebar, the cursor changes into a cross,
+Just click on the item in the sidebar in **Types** page, the cursor changes into a cross,
 then click on the map to add the item.
 
 Lines
@@ -85,7 +85,7 @@ polar north:
 
 For the **Proj Quad** the corner points always form a rectangle in the lat-lon space!
 
-Projected geo shapes
+Projected geo-shapes
 ----------------------------
 
 .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image12.png
@@ -277,7 +277,7 @@ Can I drag symbols out of the map area?
 It is only possible for the **markers, the text and the WMO symbols**.
 The other symbols and shapes are all **clipped** to the map area, so any
 parts outside of it become invisible. The policy is even stricter for
-the **fitted geo shapes**: these are fully bound to the map area and
+the **fully projected geo-shapes**: these are fully bound to the map area and
 none of their points or edges can be moved outside!
 
 How does clipping work?
@@ -329,7 +329,7 @@ below shows how it works for a cold front).
           :width: 150px
         
 
-**Fitted geo shapes** are fully bound to the map area and none of their
+**Fully projected geo-shapes** are fully bound to the map area and none of their
 points or edges can be moved outside! 
 
 How to generate a PNG or PDF from the scene?
