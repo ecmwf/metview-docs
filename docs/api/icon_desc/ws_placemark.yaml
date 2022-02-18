@@ -45,5 +45,12 @@ params:
    default: '25'
    desc: Size of the placemark. Enabled when ``type`` is "star".
    type: number
-- _include: !include include/ws_xy_point.yaml
+- x:
+   default: '0'
+   desc: The x coordinate of the bottom-centre point of the symbol.
+   ptype: number
+- y:
+   default: '0'
+   desc: The y coordinate of the bottom-centre point of the symbol.
+   ptype: number
 - _include: !include include/ws_common.yaml

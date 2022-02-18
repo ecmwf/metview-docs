@@ -44,5 +44,12 @@ params:
    default: '30'
    desc: Size of the symbol box. 
    ptype: number
-- _include: !include include/ws_xy_point.yaml
+- x:
+   default: '0'
+   desc: The x coordinate of the centre of the symbol.
+   ptype: number
+- y:
+   default: '0'
+   desc: The y coordinate of the centre of the symbol.
+   ptype: number
 - _include: !include include/ws_common.yaml

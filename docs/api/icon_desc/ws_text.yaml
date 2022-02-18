@@ -76,5 +76,13 @@ params:
    default: '0'
    desc: Height of the text box.
    ptype: number
+- x:
+   default: '0'
+   desc: The x coordinate of the top-left point of the text box.
+   ptype: number
+- y:
+   default: '0'
+   desc: The y coordinate of top-left point of the text box.
+   ptype: number
 - _include: !include include/ws_xy_point.yaml
 - _include: !include include/ws_common.yaml

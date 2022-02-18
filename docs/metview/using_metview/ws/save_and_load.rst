@@ -5,7 +5,7 @@ Saving and loading weather symbols
 
 .. note::
 
-    Saving and loading Weather Symbol Objects was introduced in Metview 5.15.0.
+    Saving and loading of Weather Symbol Objects was introduced in Metview 5.15.0.
 
 
 Saving individual objects
@@ -26,7 +26,7 @@ Here the **Save to user library** action will add the given object to the :ref:`
 Saving a collection
 ----------------------------
 
-The context menu in the plot window also allows to save all the weather symbols in the current scene into disk as a collection. The resulting file is represented by a WS_COLLECTION icon in Metview's :ref:`user interface <user_interface>`.
+The context menu in the plot window also allows to save all the weather symbols in the current scene into disk as a collection using the **Save scene to disk** action. The resulting file is represented by a WS_COLLECTION icon in Metview's :ref:`user interface <user_interface>`.
 
 .. image:: /_static/WS_COLLECTION.png
    :width: 36px
@@ -50,10 +50,10 @@ The **User library** of weather symbols can be accessed in Metview's plot window
 .. image:: /_static/ug/ws_saving_and_loading/user_library_sidebar.png
    :width: 200px
 
-You can add the library items to the plot using two different actions:
+You can add a library item to the plot using either of these actions:
 
 * **Add to plot at stored coord**: the item is added to the plot at the coordinate position stored in the item
-* **Add to plot as click**: the item is added to the plot at the location where we click
+* **Add to plot as click**: the item is added to the plot at the location where we click next
 
 .. image:: /_static/ug/ws_saving_and_loading/context_menu_2.png
    :width: 200px
@@ -62,9 +62,8 @@ You can add the library items to the plot using two different actions:
 Where does the User library store its items?
 ----------------------------------------------
 
-The items in the User library are stored as weather symbol icons in two possible directories.
+The items in the User library are stored as weather symbol icons in one of the following directories:
 
-The primary directory is **System/Symbols/icons** in your Metview home directory. All the items added from the plot to the User library will be placed here.
+* The primary directory is **System/Symbols/icons** in your Metview home directory. All the items added from the plot to the User library will be placed here.
 
-You can also specify an extra directory using the **METVIEW_EXTRA_FEATURE_SYMBOLS_DIR** environment
-variable. If it is defined and it has an **icons** subdirectory its contents will be available in the User library. 
+* You can also specify an extra directory using the **METVIEW_EXTRA_FEATURE_SYMBOLS_DIR** environment variable. If it is defined and it has an **icons** subdirectory its contents will be available in the User library. 

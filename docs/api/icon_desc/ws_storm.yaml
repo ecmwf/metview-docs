@@ -1,5 +1,5 @@
 return: :class:`Request`
-summary: storm
+summary: rst
 oneliner: Defines a storm :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - type:
@@ -16,6 +16,13 @@ params:
    default: '30'
    desc: Size of the symbol.
    type: number
-- _include: !include include/ws_xy_point.yaml
+- x:
+   default: '0'
+   desc: The x coordinate of the centre of the symbol.
+   ptype: number
+- y:
+   default: '0'
+   desc: The y coordinate of the centre of the symbol.
+   ptype: number
 - _include: !include include/ws_common.yaml
 

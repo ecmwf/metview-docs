@@ -4,9 +4,9 @@
 
 .. warning:: 
 
-    The script-based Weather Symbol Object visualisation is currently restricted to 'screen' output target (i.e. when the output is Metview's plot window). On the one hand this requires the Metview GUI to be installed, on the other hand it limits the visualisation to these cases:
+    The script-based Weather Symbol Object visualisation is currently restricted to the 'screen' output target (i.e. when the output is Metview's plot window). On the one hand this requires the Metview GUI to be installed, on the other hand it limits the **script-based visualisation** to these cases:
 
-    * execute the code in Metview's Code Editor (and using the default output target)
+    * execute the code in Metview's Code Editor (the default output target here is already ‘screen’)
     * execute the code as a Jupyter notebook with the output target set to 'screen' (see :func:`setoutput`):
 
     In any other cases, e.g. in batch mode, :func:`plot` does not work.
