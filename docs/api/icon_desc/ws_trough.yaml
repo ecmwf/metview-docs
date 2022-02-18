@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: rst
-oneliner: Defines a trough :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines a trough :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - colour:
    default: 'black'

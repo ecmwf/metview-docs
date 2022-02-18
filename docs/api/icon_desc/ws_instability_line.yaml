@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: rst
-oneliner: Defines an instability line :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines an instability line :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - colour:
    default: 'black'

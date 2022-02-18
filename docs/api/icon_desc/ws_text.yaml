@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: rst
-oneliner: Defines a text :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines a text :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - text:
    desc: The text.

@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: rst
-oneliner: Defines a WMO weather symbol :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines a WMO weather symbol :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - type:
    default: 'ww_91'

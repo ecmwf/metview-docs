@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: rst
-oneliner: Defines a quasi-stationary front :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines a quasi-stationary front :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - warm_colour:
    default: 'red'

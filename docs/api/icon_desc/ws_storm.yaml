@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: storm
-oneliner: Defines a storm :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines a storm :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - type:
    default: 'hurricane_nh'

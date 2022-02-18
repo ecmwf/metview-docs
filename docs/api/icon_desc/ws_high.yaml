@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: rst
-oneliner: Defines a high pressure :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines a high pressure :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - colour:
    default: 'rgb(0,0,0.6431)'

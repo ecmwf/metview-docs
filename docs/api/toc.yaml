@@ -38,7 +38,7 @@ groups:
   visdef: Visual definitions
   widget: Widgets
   wind: Wind
-  ws: Interactive Weather Symbols
+  ws: Weather Symbol Objects
 pages:
   apps:
     gr:

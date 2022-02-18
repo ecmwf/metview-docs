@@ -1,20 +1,28 @@
 return: :class:`Request`
 summary: rst
-oneliner: Defines an image :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines an image :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 # - type:
 #    default: 'user'
 #    ptype: str
 - name:
    default: ''
-   desc: The name of the image.
+   desc: |-
+      The image file name. Only square-shaped SVG or PNG images are supported. It is also possible to specify the name without the image suffix. In this case if multiple images match ``name`` the format is selected in this order: SVG, PNG. The image file must be located in one of the directories described :ref:`here <ws_add_your_symbol>`.
    ptype: str
 # - path:
 #    default: ''
 #    ptype: str
 - size:
    default: '30'
-   desc: The width of the image.
+   desc: The size of the image (width and height).
    ptype: number
-- _include: !include include/ws_xy_point.yaml
+- x:
+   default: '0'
+   desc: The x coordinate of the centre of the image.
+   ptype: number
+- y:
+   default: '0'
+   desc: The y coordinate of the centre of the image.
+   ptype: number
 - _include: !include include/ws_common.yaml

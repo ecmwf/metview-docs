@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: rst
-oneliner: Defines an occluded front :ref:`Interactive Weather Symbol <weather_symbols>`.
+oneliner: Defines an occluded front :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - colour:
    default: 'purple'
