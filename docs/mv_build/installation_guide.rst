@@ -7,7 +7,7 @@ Build from source
 
     Note: this guide provides information on how to build Metview from 
     source. Please consider installing a pre-built version, as         
-    described in the :ref:`Releases <install>` 
+    described in the :ref:`Installation <install>` 
     page.                                                              
 
 Overview
@@ -230,7 +230,11 @@ also might have to install the respective "-devel" packages.
 
 .. list-table:: 
    :widths: 25 35 40
-
+   :header-rows: 1
+   
+   * - Package
+     - URL
+     - Notes
    * - Qt5/Qt6 
      - http://www.qt.io/
      - if Metview's user interface is required. Note that on some systems it is also necessary to install the libQtWebKit-devel development package (it may have different names on different systems)
@@ -242,7 +246,7 @@ also might have to install the respective "-devel" packages.
      - 
    * - netcdf 4
      - http://www.unidata.ucar.edu/software/netcdf/
-     - Please note: You also will need to install HDF5 and the legacy C++ interface if you wish to un the Single Column Model from Metview (ECMWF only)
+     - Please note: You also will need to install `HDF5 <https://www.hdfgroup.org/HDF5/>`__ and the `legacy C++ interface <https://www.unidata.ucar.edu/downloads/netcdf/index.jsp>`__ if you wish to un the Single Column Model from Metview (ECMWF only)
    * - curl
      -
      -
@@ -259,13 +263,17 @@ also might have to install the respective "-devel" packages.
 
 .. list-table:: 
    :widths: 25 35 40
+   :header-rows: 1
 
+   * - Package
+     - URL
+     - Notes
    * - ecCodes
      - `ecCodes Home <https://confluence.ecmwf.int/display/ECC/ecCodes+Home>`__
      - 
    * - magics
      - `Magics <https://confluence.ecmwf.int/display/MAGP/Magics>`__
-     - if plotting support is needed. Note that Magics should be configured with the -DENABLE_METVIEW=ON option. For a 'pure batch' installation of Metview with no user interface, it is possible to supply Magics no user interface, it is possible to supply Magics 
+     - if plotting support is needed. Note that Magics should be configured with the **-DENABLE_METVIEW=ON** option. For a 'pure batch' installation of Metview with no user interface, it is possible to supply Magics no user interface, it is possible to supply Magics with the option **-DENABLE_METVIEW_NO_QT=ON**
    * - odc
      - `ODC Home <https://confluence.ecmwf.int/display/ODC/ODC+Home>`__ `ODB-API Home <https://confluence.ecmwf.int/display/ODB/ODB+Home>`__
      - if ODB support needed  
@@ -277,119 +285,83 @@ CMake options used in Metview
 CMake options are passed to the cmake command by prefixing them with
 **-D**, for example **-DENABLE_UI=OFF**.
 
-+------------------------+------------------------------+-----------------+
-|      CMake option      |         Description          |     Default     |
-+========================+==============================+=================+
-| ENABLE_UI              | enables the Qt-based user    | ON              |
-|                        | interface                    |                 |
-+------------------------+------------------------------+-----------------+
-| ENABLE_PLOTTING        | enables plotting             | ON              |
-|                        | capabilities using           |                 |
-|                        | `Magics <https://confluenc   |                 |
-|                        | e.ecmwf.int/display/MAGP>`__ |                 |
-+------------------------+------------------------------+-----------------+
-| ENABLE_METVIEW_FORTRAN | enables inline Fortran code  | OFF (since      |
-|                        | inside macros                | Metview         |
-|                        |                              | 5.10.2)         |
-+------------------------+------------------------------+-----------------+
-| ENABLE_MARS            | enables MARS access (not     | OFF             |
-|                        | required if using through    |                 |
-|                        | the `Web                     |                 |
-|                        | API                          |                 |
-|                        | <https://confluence.ecmwf.i  |                 |
-|                        | nt/display/METV/Using+the+MA |                 |
-|                        | RS+Web+API+from+Metview>`__) |                 |
-+------------------------+------------------------------+-----------------+
-| MARS_LOCAL_HOME        | sets the path to where local |                 |
-|                        | MARS is installed            |                 |
-+------------------------+------------------------------+-----------------+
-| ENABLE_ODB             | enables processing and       | OFF             |
-|                        | plotting of ODB data         |                 |
-+------------------------+------------------------------+-----------------+
-| ENABLE_MARS_ODB        | enables ODB capabilities in  | OFF             |
-|                        | MARS client                  |                 |
-+------------------------+------------------------------+-----------------+
-| ENABLE_USAGE_LOG       | enables logging of Metview   | OFF             |
-|                        | startup calls                |                 |
-+------------------------+------------------------------+-----------------+
-| LOG_DIR                | path to where to log the     |                 |
-|                        | Metview startup calls        |                 |
-+------------------------+------------------------------+-----------------+
-| METVIEW_SCRIPT         | name of the generated        | metview         |
-|                        | Metview startup script       |                 |
-+------------------------+------------------------------+-----------------+
-| EXTRA_CONFIG_PATH      | path to optional directory   |                 |
-|                        | containing metview_local\*   |                 |
-|                        | script files                 |                 |
-+------------------------+------------------------------+-----------------+
-| ENABLE_QT_DEBUG        | outputs additional log       | OFF             |
-|                        | messages from Qt-based       |                 |
-|                        | modules                      |                 |
-+------------------------+------------------------------+-----------------+
-| EXTRA_TITLE            | build-specific title to add  |                 |
-|                        | to the log entries           |                 |
-+------------------------+------------------------------+-----------------+
-| ENABLE_INPE            | enables INPE modules         | OFF             |
-+------------------------+------------------------------+-----------------+
-| **Path options -       |                              |                 |
-| only required when     |                              |                 |
-| support libraries      |                              |                 |
-| are not installed in   |                              |                 |
-| default locations**    |                              |                 |
-+------------------------+------------------------------+-----------------+
-| ECCODES_PATH           | path to where ecCodes has    |                 |
-|                        | been installed               |                 |
-+------------------------+------------------------------+-----------------+
-| MAGICS_PATH            | path to where                | Only required   |
-|                        | `Magi                        | if plotting is  |
-|                        | cs <https://confluence.ecmwf | enabled         |
-|                        | .int/display/MAGP/Magics>`__ |                 |
-|                        | has been installed           |                 |
-+------------------------+------------------------------+-----------------+
-| NETCDF_PATH            | path to where netCDF has     |                 |
-|                        | been installed               |                 |
-+------------------------+------------------------------+-----------------+
-| ODC_PATH               | path to where ODC has been   | Only required   |
-|                        | installed                    | if ODB is       |
-|                        |                              | enabled         |
-+------------------------+------------------------------+-----------------+
-| ODB_PATH               | path to where the original   | Optional if     |
-|                        | ODB has been installed       | ODB is enabled  |
-+------------------------+------------------------------+-----------------+
-| EMOS_PATH              | path to                      | Also set        |
-|                        | where `Emosli                | EMOS_LIB_NAME   |
-|                        | b <https://confluence.ecmwf. |                 |
-|                        | int/display/EMOS/Emoslib>`__ |                 |
-|                        | has been installed           |                 |
-+------------------------+------------------------------+-----------------+
-| FDB_PATH               | path to where fdb has been   | Only required   |
-|                        | installed                    | if MARS is      |
-|                        |                              | enabled         |
-+------------------------+------------------------------+-----------------+
-| FLEXTRA_PATH           | path to where the FLEXTRA    | See             |
-|                        | executable has been          | :ref:`Tutorials |
-|                        | installed                    | <tutorials>`    |
-|                        |                              | for more on     |
-|                        |                              | FLEXTRA         |
-+------------------------+------------------------------+-----------------+
+.. list-table:: 
+   :widths: 25 35 40
+   :header-rows: 1
 
-Notes for installers of Metview 3
-=================================
+   * - CMake option
+     - Description
+     - Default
+   * - ENABLE_UI
+     - enables the Qt-based user interface
+     - ON
+   * - ENABLE_PLOTTING
+     - enables plotting capabilities using `Magics <https://confluence.ecmwf.int/display/MAGP>`__
+     - ON
+   * - ENABLE_METVIEW_FORTRAN
+     - enables inline Fortran code inside macros
+     - OFF (since Metview 5.10.2)
+   * - ENABLE_MARS 
+     - enables MARS access (not required if using through the `Web API <https://confluence.ecmwf.int/display/METV/Using+the+MARS+Web+API+from+Metview>`__)
+     - OFF
+   * - MARS_LOCAL_HOME
+     - sets the path to where local MARS is installed
+     - 
+   * - ENABLE_ODB
+     - enables processing and plotting of ODB data
+     - OFF
+   * - ENABLE_MARS_ODB
+     - enables ODB capabilities in MARS client
+     - OFF
+   * - ENABLE_USAGE_LOG
+     - enables logging of Metview startup calls
+     - OFF
+   * - LOG_DIR
+     - path to where to log the Metview startup calls
+     - 
+   * - METVIEW_SCRIPT
+     - name of the generated Metview startup script 
+     - metview
+   * - EXTRA_CONFIG_PATH
+     - path to optional directory containing metview_local script files
+     - 
+   * - ENABLE_QT_DEBUG
+     - outputs additional log messages from Qt-based modules
+     - OFF
+   * - EXTRA_TITLE
+     - build-specific title to add to the log entries
+     - 
+   * - ENABLE_INP
+     - enables INPE modules
+     - OFF
 
-If you have installed Metview 3 before, then here are some things to
-note. Metview 5 does not use directly OpenGL for its on-screen graphics;
-therefore, it is not necessary to build your own Mesa library anymore.
+**Path options - only required when support libraries are not installed in default locations**
 
-Metview 5 can be installed side-by-side with an existing Metview 3
-installation. However, note that the default startup script will be::
+.. list-table:: 
+   :widths: 25 35 40
+   :header-rows: 1
 
-   /usr/local/bin/metview
-
-so make sure this will not clash with an existing installation. See the
-table of CMake options for the flag which will allow you to change this.
-
-FAQ
-===
-
-See also the `Installation
-FAQ <https://confluence.ecmwf.int/display/METV/Installation+FAQ>`__.
+   * - CMake option
+     - Description
+     - Default
+   * - ECCODES_PATH
+     - path to where ecCodes has been installed
+     - 
+   * - MAGICS_PATH
+     - path to where `Magics <https://confluence.ecmwf.int/display/MAGP/Magics>`__ has been installed
+     - Only required if plotting is enabled
+   * - NETCDF_PATH
+     - path to where netCDF has been installed
+     - 
+   * - ODC_PATH
+     - path to where ODC has been installed
+     - Only required if ODB is enabled
+   * - ODB_PATH
+     - path to where the original ODB has been installed 
+     - Only required if ODB is enabled
+   * - FDB_PATH
+     - path to where fdb has been installed
+     - Only required if MARS is enabled
+   * - FLEXTRA_PATH
+     - path to where the FLEXTRA executable has been installed
+     - See :ref:`FLEXTRA <the_flextra_interface>` for more details

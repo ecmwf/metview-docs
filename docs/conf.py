@@ -17,6 +17,7 @@ import subprocess
 import sys
 
 import sphinx_rtd_theme
+
 # import pydata_sphinx_theme
 
 sys.path.insert(0, os.path.abspath("."))
@@ -26,7 +27,7 @@ sys.path.append(os.path.abspath("./_ext"))
 
 # -- Project information -----------------------------------------------------
 
-project = u"metview"
+project = "metview"
 author = "ECMWF"
 
 year = datetime.datetime.now().year
@@ -44,7 +45,7 @@ extensions = [
     # "pydata_sphinx_theme",
     "nbsphinx",
     "sphinx.ext.intersphinx",
-    "metview_sphinx"
+    "metview_sphinx",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -99,12 +100,13 @@ Try this notebook in |Binder|.
 
 """
 
+
 def setup(app):
-    # this is a pre-build step to generate RST files with running "make metview". 
+    # this is a pre-build step to generate RST files with running "make metview".
     # We need to put this code here because the Makefile is not run by
-    # Read The Docs (it directly runs sphinx-build instead!).  
+    # Read The Docs (it directly runs sphinx-build instead!).
     if os.environ.get("READTHEDOCS", "") != "":
         try:
             r = subprocess.run(["make", "metview"], check=True)
         except Exception as e:
-            print(f"  Failed to run preprocess step = \"make metview\". {e}")
+            print(f'  Failed to run preprocess step = "make metview". {e}')
