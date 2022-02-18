@@ -5,7 +5,7 @@ Saving and loading weather symbols
 
 .. note::
 
-    Saving and loading Interactive Weather Symbols was introduced in Metview 5.15.0.
+    Saving and loading Weather Symbol Objects was introduced in Metview 5.15.0.
 
 
 Saving individual objects
@@ -68,6 +68,3 @@ The primary directory is **System/Symbols/icons** in your Metview home directory
 
 You can also specify an extra directory using the **METVIEW_EXTRA_FEATURE_SYMBOLS_DIR** environment
 variable. If it is defined and it has an **icons** subdirectory its contents will be available in the User library. 
-
-When loading items **System/Symbols/icons** takes precedence over the extra directory, so if they both contain an icon with the same name the one from the extra directory will not be shown in the User library!
-

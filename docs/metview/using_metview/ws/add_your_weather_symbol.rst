@@ -1,14 +1,14 @@
 .. _ws_add_your_symbol:
 
-Adding your own weather symbols
-====================================
+Adding your own weather symbol types
+=======================================
 
 .. note::
 
-    Adding your own Interactive Weather Symbols was introduced in Metview 5.15.0.
+    Adding your own Interactive Weather Symbol types was introduced in Metview 5.15.0.
 
 
-You can use any square shaped SVG or PNG file to define a new Weather Symbol Object type. These images can be placed in two possible directories:
+You can use any square shaped SVG or PNG file to define a new Weather Symbol Object **type**. These images can be placed in two possible directories:
 
 * The primary directory is **System/Symbols/images** in your Metview home directory.
 
