@@ -206,6 +206,7 @@ Icon functions
 This is the list of the functions that are represented as an icon in Metviews' user interface.
 
 .. list-table::
+    :widths: 10 30 60
     :header-rows: 0
 
 """
