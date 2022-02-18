@@ -1,38 +1,26 @@
 .. _how_to_use_the_weather_symbol_editor_in_metview:
 
-Weather Symbol Editor
+On screen weather symbol editing
 ///////////////////////////////////////////////
-
-.. note::
-
-    The Weather Symbol Editor was introduced in Metview 5.14.0, with   
-    further development planned for the future                         
-
-The Weather Symbol Editor is a feature that allows you to add
-annotations to Metview plots that will survive plot updates such as
-zooming, changes of projection and contouring.
-
-.. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image1.png
-   :width: 5.20833in
-   :height: 4.23958in
-
-At ECMWF you need the latest Metview version to try out the editor. The
-command to run is::
-
-    module swap metview/new    
-    metview                                                            
 
 How to start the symbol editor?
 ===============================
 
-Start uPlot by visualising something, open the sidebar and select the
+Start Metview's plot window by visualising something, open the sidebar and select the
 **Symbols** tab:
 
 .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image2.png
    :width: 2.29167in
    :height: 1.40003in
 
-How to add a new item to the map?
+
+It contains two pages:
+
+* **Types**: shows all the symbol types that can be added to the plot
+* **User library**: provides access to the :ref:`User library <ws_user_library>` of saved weather symbols
+
+
+How to add a new item to the plot?
 =================================
 
 Just click on the item in the sidebar, the cursor changes into a cross,
@@ -191,16 +179,6 @@ projection changes and the extent is defined in pixels.
    :width: 2.9375in
    :height: 2.47917in
 
-Can I add my own symbols?
-=========================
-
-You can use any square shaped SVG or PNG file as a symbol. These have to
-be added to the **System/Symbols** folder in your Metview home
-directory. On top of that you can also use symbols from the directory
-specified by the **METVIEW_EXTRA_FEATURE_SYMBOLS_DIR** environment
-variable. When you start a uPlot window it scans these directories and
-adds all the files with .*svg or \*.png  suffix to the **Markers and
-text** group in the Symbols sidebar.
 
 How can I edit the symbols?
 ===========================
@@ -362,11 +340,6 @@ PDF_QT or PNG_QT output formats.
 
 Alternatively, just take a screenshot!
 
-Can I save the edited objects for later reuse?
-==============================================
-
-It is not possible at the moment, so you will lose all the objects when
-you close the uPlot window.
 
 How do these features behave across different time steps in the plot?
 =====================================================================
