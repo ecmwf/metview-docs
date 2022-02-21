@@ -45,7 +45,6 @@ Fully projected geo-shapes
 
 .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image3.png
    :width: 2.54167in
-   :height: 0.67708in
 
 These are special shapes where all the vertices keep their lat-lon
 positions as the projection changes and the edges between them are
@@ -90,7 +89,6 @@ Projected geo-shapes
 
 .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image12.png
    :width: 2.54167in
-   :height: 0.67708in
 
 In these shapes all the vertices keep their lat-lon positions as the
 projection changes and they are always connected with a **straight
@@ -126,7 +124,6 @@ Markers and text
 
 .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image17.png
    :width: 2.47917in
-   :height: 0.6875in
 
 For these objects only the anchor point (see below) keeps its lat-lon
 position as the projection changes, while the extent is defined in terms
@@ -164,7 +161,6 @@ Surface analysis
 
 .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image22.png
    :width: 2.73958in
-   :height: 0.94792in
 
 This is a collection of standard meteorological curves and symbols.
 
