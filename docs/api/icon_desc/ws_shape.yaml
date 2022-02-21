@@ -4,7 +4,19 @@ oneliner: Defines a shape :ref:`Weather Symbol Object <weather_symbols>`.
 params:
 - type:
    default: 'line'
-   desc: Shape type.
+   desc: |- 
+      Specifies the shape type. This also implicitly specifies the type of data which will be entered. The available types are as follows:
+      
+      * "line": straight line in all the projections
+      * "polyline": points connected with straight lines in all the projections
+      * "curve": points connected with a B-spline curve
+      * "polygon": points forming a closed shape, connected with straight lines in all the projections
+      * "closed_curve": points forming a closed shape, connected with a B-Spline curve
+      * "rectangle": rectangle with straight edges. The corner points will be adjusted when the projection changes to preserve the rectangular shape.
+      * "proj_line": a line sampled in lat-lon. The shape changes according to the projection.
+      * "proj_polyline": points connected with edges sampled in lat-lon. The edge shapes change according to the projection.
+      * "proj_polygon": points forming a closed shape, with edges sampled in lat-lon. The edge shapes change according to the projection.
+      * "proj_quad": a lat-lon rectangle with edges sampled in lat-lon. The shape changes into various quadrilaterals according to the current projection.
    values: line/polyline/curve/polygon/closed_curve/rectangle/proj_line/proj_polyline/proj_polygon/proj_quad
    ptype: str
 - line:
@@ -56,5 +68,18 @@ params:
 - segment_dx:
    desc: special
    ptype: ndarray or list of numbers
-- _include: !include include/ws_xy_array.yaml
+- x:
+   default: '0'
+   desc: |-
+      The x coordinates of the points making up the shape. The number of points required depends on the ``type``:
+      
+      * For "line" and "proj_line" exactly 2 points are needed. 
+      * For "polyline", "curve" and "proj_polyline" minimum 2 points are needed. 
+      * For "polygon", "closed_curve" and "proj_polygon" minimum 3 points are needed.
+      * For "rectangle" and "proj_quad" exactly 4 points are needed. 
+   ptype: ndarray or list of numbers
+- y:
+   default: '0'
+   desc: The y coordinates of the points making up the shape.  For the number of points required please see ``x``. 
+   ptype: ndarray or list of numbers
 - _include: !include include/ws_common.yaml

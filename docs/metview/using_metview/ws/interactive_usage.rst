@@ -232,10 +232,10 @@ mode.
    * - Normal mode
      - Edit mode
    
-   * - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image28.png
+   * - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image29.png
           :width: 2.08333in
           :height: 1.28808in
-     - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image29.png
+     - .. image:: /_static/ug/how_to_use_the_weather_symbol_editor_in_metview/image28.png
           :width: 2.08333in
           :height: 1.28808in
 
