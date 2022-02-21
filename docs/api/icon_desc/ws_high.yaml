@@ -7,9 +7,9 @@ params:
    desc: Colour of character.
    values: ''
    type: str
-- size:
+- width:
    default: '30'
-   desc: Size of the character.
+   desc: the width of the character including the bounding-box (height is determined automatically).
    type: number
 - character:
    default: 'H'

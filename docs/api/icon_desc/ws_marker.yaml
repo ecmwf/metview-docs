@@ -37,16 +37,12 @@ params:
    values: ''
    ptype: str
 - width:
-   desc: Width of the marker. Enabled when ``type`` is not "star".
+   desc: Width of the marker.
    default: '30'
    ptype: number
 - height:
-   desc: Height of the marker. Enabled when ``type`` is not "star".
+   desc: Height of the marker. When ``type`` is "star" ``height`` is disabled and determined automatically.
    default: '30'
-   ptype: number
-- size:
-   default: '30'
-   desc: Size of the marker. Enabled when ``type`` is "star".
    ptype: number
 - x:
    default: '0'

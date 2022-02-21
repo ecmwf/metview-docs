@@ -12,9 +12,9 @@ params:
    desc: Colour of the symbol.
    values: ''
    ptype: str
-- size:
+- width:
    default: '30'
-   desc: Size of the symbol.
+   desc: the width of the symbol (height is determined automatically).
    type: number
 - x:
    default: '0'

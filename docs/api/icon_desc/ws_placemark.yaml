@@ -41,9 +41,9 @@ params:
    desc: Fill colour of the hole in the placemark. Enabled when ``inner_fill`` is "on".
    values: ''
    ptype: str
-- size:
+- width:
    default: '25'
-   desc: Size of the placemark. Enabled when ``type`` is "star".
+   desc: the width of the placemark (height is determined automatically).
    type: number
 - x:
    default: '0'

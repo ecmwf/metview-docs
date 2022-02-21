@@ -8,14 +8,14 @@ params:
 - name:
    default: ''
    desc: |-
-      The image file name. Only square-shaped SVG or PNG images are supported. It is also possible to specify the name without the image suffix. In this case if multiple images match ``name`` the format is selected in this order: SVG, PNG. The image file must be located in one of the directories described :ref:`here <ws_add_your_symbol>`.
+      The image file name. Only SVG or PNG images are supported. It is also possible to specify the name without the image suffix. In this case if multiple images match ``name`` the format is selected in this order: SVG, PNG. The image file must be located in one of the directories described :ref:`here <ws_add_your_symbol>`.
    ptype: str
 # - path:
 #    default: ''
 #    ptype: str
-- size:
+- width:
    default: '30'
-   desc: The size of the image (width and height).
+   desc: The width of the image (height is determined automatically).
    ptype: number
 - x:
    default: '0'

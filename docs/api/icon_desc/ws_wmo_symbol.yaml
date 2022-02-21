@@ -40,9 +40,9 @@ params:
    desc: Fill colour of the symbol box. Enabled when ``fill`` is "on".
    values: ''
    ptype: str
-- size:
+- width:
    default: '30'
-   desc: Size of the symbol box. 
+   desc: the width of the symbol (height is determined automatically).
    ptype: number
 - x:
    default: '0'
