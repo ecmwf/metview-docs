@@ -84,6 +84,13 @@ https://github.com/ecmwf/metview-python
 Possible Startup Issues
 =======================
 
+The Python bindings can be tested for installation correctness by running
+the following command:
+
+.. code-block:: bash
+
+   python3 -m metview selfcheck
+
 If your environment has Metview installed or built but it is not in the system PATH,
 you can tell the Python bindings where to find it by setting this environment variable to
 the path to the 'metview' startup command:
