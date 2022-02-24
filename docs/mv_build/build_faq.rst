@@ -6,8 +6,8 @@ Build FAQ
 
 .. note::
    
-   We welcome any feedback and will add frequently asked questions to future editions of this document. To report bugs or ask for help please visit the `Software
-   Support <https://confluence.ecmwf.int/display/SUP/Home>`__ home page.
+   We welcome any feedback and will add frequently asked questions to future editions of this document. To report bugs or ask for help please visit
+   the `ECMWF Support Portal <https://confluence.ecmwf.int/site/support>`__.
 
 
 Q: Build fails with message relating to the file macro_built_in_functions.txt OR Metview fails to start because it cannot connect to port/host
