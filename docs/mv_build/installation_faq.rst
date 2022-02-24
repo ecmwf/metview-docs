@@ -65,3 +65,12 @@ ecCodes, is to change the value of the environment variable
 GRIB_DEFINITION_PATH. The command *grib_info* will tell you the
 current value. Normally, it should be set to: /usr/local/share/eccodes/definitions, 
 but you should first check that this directory exists.
+
+Q: I get this message at CMake time: "CMake Error at cmake/ecbuild_download_resource.cmake:57 (math): math sub-command EXPR option "+" is unknown."
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+This error has occasionally been seen on some systems. It comes from trying to download
+land-sea masks that are used only in specific cases when regridding data, so they are
+not necessary in most cases and the download can be disabled by rebuilding with
+
+   -DENABLE_MIR_DOWNLOAD_MASKS=OFF

@@ -331,9 +331,13 @@ CMake options are passed to the cmake command by prefixing them with
    * - EXTRA_TITLE
      - build-specific title to add to the log entries
      - 
-   * - ENABLE_INP
+   * - ENABLE_INPE
      - enables INPE modules
      - OFF
+
+   * - ENABLE_MIR_DOWNLOAD_MASKS
+     - whether to download land-sea masks for use with certain interpolation methods
+     - ON
 
 **Path options - only required when support libraries are not installed in default locations**
 
