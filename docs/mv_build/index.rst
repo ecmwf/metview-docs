@@ -6,5 +6,5 @@ Build
     :maxdepth: 1
 
     installation_guide.rst
-    installation_faq.rst
+    build_faq.rst
     

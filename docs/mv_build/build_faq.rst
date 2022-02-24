@@ -1,6 +1,6 @@
-.. _installation_faq:
+.. _build_faq:
 
-Installation FAQ
+Build FAQ
 ////////////////
 
 
