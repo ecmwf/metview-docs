@@ -45,3 +45,5 @@ Other
     using_the_mars_web_api_from_metview.rst
     external_models/index.rst
     tips/index.rst
+    regrid_intro.rst
+
