@@ -1,20 +1,20 @@
 xy_from_polar
 ====================
 
-..  py:function:: xy_from_polar(magnitude,  dir)
+..  py:function:: xy_from_polar(magnitude,  direction)
 
     Converts vector data from meteorological polar representation to xy representation.
 
     :param magnitude: the speed/magnitude
     :type magnitude: number, ndarray or :class:`Fieldset`
-    :param dir: the direction of the vector in degrees
+    :param direction: the meteorological direction of the vector in degrees
     :type dir: number, ndarray or :class:`Fieldset`
     :rtype: same type as ``magnitude`` or None
 
     In polar representation the data is specified by two components:
 
-    ``magnitude``: represents the speed/magnitude
-    ``dir``: represents the direction of the vector in degrees. Angles measured from South in clockwise direction.
+    * ``magnitude``: represents the speed/magnitude
+    * ``direction``: represents the meteorological direction of the vector in degrees (see :func:`direction` for explanation)
 
     In the target xy representation the x axis points East while the y axis points North.
 

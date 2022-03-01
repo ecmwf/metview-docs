@@ -3,7 +3,7 @@ direction
 
 .. py:function:: direction(u, v)
 
-   Computes the meteorological wind direction in each grid point of ``u`` and ``v``.
+   Computes the meteorological wind direction in degrees in each grid point of ``u`` and ``v``.
 
    :param u: u wind component
    :type u: :class:`Fieldset`
@@ -11,7 +11,15 @@ direction
    :type v: :class:`Fieldset`
    :rtype: :class:`Fieldset`
 
-   The resulting values are directions, in degrees clockwise from North, where a value of 0 represents a wind from the North and a value of 90 represents a wind from the East. A missing value in either ``u`` or ``v``  will result in a missing value in the corresponding place in the output fieldset.
+   The meteorological wind direction is the direction from which the wind is blowing. Wind direction increases
+   clockwise such that a northerly wind is 0°, an easterly wind is 90°, a southerly wind is 180°, and
+   a westerly wind is 270°. The figure below illustrates how it is related to the actual orientation of the wind vector.
 
+   .. image:: /_static/api/wind_direction.png
+        :width: 400px
+
+   .. note::
+
+      See also :func:`xy_from_polar`
 
 .. mv-minigallery:: direction
