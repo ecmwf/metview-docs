@@ -70,7 +70,10 @@ There were several improvements for the :ref:`Weather Symbol Objects <weather_sy
 
 **Plotting**
 
-- added new paramteter to :func:`mcoast` to enable and control the shading of user-supplied shapefiles as part of the coastlines
+- added new paramteter `map_user_layer_land_colour` to :func:`mcoast` to enable and control the shading of user-supplied shapefiles as part of the coastlines
+
+  .. image:: /_static/release/version_5.15_updates/user_land_shade.png
+      :width: 400px
 
 - added EPSG:32661 and EPSG:32761 to list of available projections
 
