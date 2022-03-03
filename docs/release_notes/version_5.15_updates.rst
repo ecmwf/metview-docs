@@ -56,7 +56,7 @@ There were several improvements for the :ref:`Weather Symbol Objects <weather_sy
 
 - :func:`create_geo` now supports a list containing numpy.nan values as input
 
-- Geopoints now supports missing values in the elevations column
+- :doc:`Geopoints </data_types/geopoints>` now supports missing values in the elevations column
 
 - fixed failure when extracting a subset of a float32 vector in Macro when
   the default type is float64 - and vice-versa
@@ -82,7 +82,7 @@ There were several improvements for the :ref:`Weather Symbol Objects <weather_sy
 
 **Regrid**
 
-- added Geopoints as possible input data type
+- added :doc:`Geopoints </data_types/geopoints>` as possible input data type
 - added TARGET parameter in order to directly specify where the output file should go
 - added new interpolation methods DETAILS REQUIRED
 
