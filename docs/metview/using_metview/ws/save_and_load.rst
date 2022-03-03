@@ -22,6 +22,7 @@ Here the **Save to user library** action will add the given object to the :ref:`
 
     Both the style and the geographical location are saved for each object.
 
+.. _ws_saving_collection:
 
 Saving a collection
 ----------------------------

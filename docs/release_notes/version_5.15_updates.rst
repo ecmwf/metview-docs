@@ -28,9 +28,28 @@ Version 5.15.0
       the Python interface
 
 
-**Weather Symbols**
+**Weather Symbol Objects**
 
-- DETAILS REQUIRED
+There were several improvements for the :ref:`Weather Symbol Objects <weather_symbols>`.
+
+* Each Weather Symbol Object is now represented by a **Metview icon** (see the full 
+  list of icons :ref:`here <toc_plot_ws>`). These icons can be directly visualised or dragged into the plot window. Plotting from a script (Python or Macro) is possible with some restrictions as described :ref:`here <ws_plotting>`.
+  
+  .. image:: /_static/release/version_5.15_updates/ws_editor.png
+      :width: 250px
+      
+* Using the icons the symbols :ref:`can be saved <ws_saving_and_loading>` from the Metview plot window for later reuse. To help the Weather Symbol management the :ref:`User Library <ws_user_library>` sidebar was added to the plot window:
+
+  .. image:: /_static/ug/ws_saving_and_loading/user_library_sidebar.png
+    :width: 210px
+
+* The whole scene of Weather Symbols (i.e. all the Weather Symbols in a plot view) can be saved as a :ref:`collection <ws_saving_collection>`. 
+* The way to add user defined images was refined and improved (see :ref:`here <ws_add_your_symbol>`).
+* The **geolocked** parameter was added to all the symbols to prevent accidental move when on screen editing.
+* The **tooltip** parameter was added to all the symbols to display a tooltip when the object is hovered over on screen.
+
+  .. image:: /_static/release/version_5.15_updates/ws_tooltip.png
+      :width: 210px
 
 
 **Macro/Python**
