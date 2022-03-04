@@ -718,7 +718,8 @@ First, we need to set the input data parameters (in the same way as we did it in
 
 .. list-table::
 
-  * - Flextra Input Mode**-Path
+  * - **Flextra Input Mode**
+    - Path
 
   * - **Flextra Input Data Path**
     - ../data
@@ -1519,7 +1520,7 @@ First, open its editor and set the following parameters:
     - 0
 
   * - **Flextra Step**
-    -0/3/6
+    - 0/3/6
   
 The selected option ('Forecast') for parameter **Flextra Prepare Mode** indicates that we want to generate the input data from a given forecast. 
 We specified the run date (-1 means yesterday) and run time of the forecast and defined the forecast steps as well. 
@@ -1547,7 +1548,7 @@ Last, we need to define the output directory:
 .. list-table::
 
   * - **Flextra Output Path**
-  - *your_path_to_flextra_data*
+    - *your_path_to_flextra_data*
   
 Here you need to define the output directory where the GRIB files and the AVAILABLE file will be generated. 
 Please note that the resulting files are rather small (around 1.5 Mb in total) so probably you do not need to worry about your quota.

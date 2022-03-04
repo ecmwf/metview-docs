@@ -299,8 +299,6 @@ We can load a pre-installed map image to get a better geographical reference for
 The VAPOR session file
 ======================
 
-.. note::
-
 The current scene settings can be saved into a **VAPOR session file** (with a **.vss** suffix) by using the **File**  -> **Save Session (As)** menu. 
 Then next time we start up VAPOR the saved session files can be loaded to initialise the scene with the saved settings.
 

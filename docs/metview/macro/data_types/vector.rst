@@ -73,6 +73,7 @@ is equivalent to:
 The same logic applies to functions. If the argument of a function is a vector, the result is a vector where each element is the result of the function at the corresponding element in the input vector. Thus :
 
 .. code-block:: python
+    
     Z = f(X)
 
 is equivalent to :
@@ -97,7 +98,7 @@ Indexing a vector allows you to access particular elements inside it. Indexing u
 
 .. code-block:: python
 
-    X[i] = ith value of vector X :
+    X[i] = ith value of vector X
 
     # copies element 2 of vector X into Y
     Y = X[2]

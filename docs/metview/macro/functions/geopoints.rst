@@ -170,7 +170,7 @@ Geopoints Macro functions
 
    Creates a new geopoints variable with the given number of points, all set to default values and coordinates. It is intended that this function be used in conjunction with the set_xxx geopoints functions in order to populate the geopoints with data. If saved, the geopoints file will be in the "traditional" 6-column format. If another format is desired, supply a string as the second parameter, possible values being 'polar_vector ', 'xy_vector ', 'xyv ' and 'ncols'. If format 'ncols' is specified, then the number of value columns can be given as the third argument (default is 1). In this case, an optional fourth argument can be used to provide a list of names of the value columns.
 
-   An alternative, and more efficient way to create a new geopoints variable if you already have the data to populate it, is to provide a set of named arguments as shown in the examples below. Using this syntax, you can completely create a new geopoints variable with all its column data in one go. This is much more efficient than creating an empty geopoints variable and then populating it using the set_ functions.
+   An alternative, and more efficient way to create a new geopoints variable if you already have the data to populate it, is to provide a set of named arguments as shown in the examples below. Using this syntax, you can completely create a new geopoints variable with all its column data in one go. This is much more efficient than creating an empty geopoints variable and then populating it using the *set\_* functions.
 
    Examples are shown below:
 
