@@ -82,10 +82,10 @@ There were several improvements for the :ref:`Weather Symbol Objects <weather_sy
 
 **Regrid**
 
-- added :doc:`Geopoints </data_types/geopoints>` as possible input data type
+- added :class:`Geopoints` as possible input data type
 - added TARGET parameter in order to directly specify where the output file should go
 - new interpolation method `k-nearest neighbours statistics` (use with `interpolation statistics` for maximum/minimum, mode, median, standard deviation, etc.)
-- new distance weighting method `reciprocal <https://confluence.ecmwf.int/display/METV/Geopoints+To+Grib>`__ (use with `interpolation` `k-nearest neighbours` to control how to weight source points according to their distance from the target point)
+- new distance weighting method :ref:`reciprocal <geo_to_grib_icon>` (use with `interpolation` `k-nearest neighbours` to control how to weight source points according to their distance from the target point)
 
 
 **Meteogram**
