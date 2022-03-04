@@ -10,15 +10,15 @@ Input definition
 
 Input data may be specified either by giving a path in the **Source**
 parameter or by giving a GRIB-based data object in the **Data**
-parameter. Note that you should specify either **Source** or **Data**,
+parameter. Note that you should specify either **Source** or **Data**,
 not both.
 
 -  **Source**: path to a GRIB file
 
--  **Data**: GRIB-based data object
+-  **Data**: GRIB-based data object
 
-Drop a :ref:`MARS
-Retrieval <retrieve_icon>` or
+Drop a :ref:`MARS
+Retrieval <retrieve_icon>` or
 a GRIB file icon inside this icon field. In Python or Macro, supply a
 Fieldset object.
 
@@ -33,7 +33,7 @@ Select a method for specifying the output grid.
 -  **Grid**: supply a valid string or list of numbers in the **Grid**
    parameter
 
--  **Lambert Conformal** or **Lambert Azimuthal Equal Area**: supply
+-  **Lambert Conformal** or **Lambert Azimuthal Equal Area**: supply
    details of the output grid in the set of Lambert grid definition
    parameters
 
@@ -52,13 +52,13 @@ Select a method for specifying the output grid.
    -  Note 1: this is equivalent to **Template**, with the input serving
       as the template (same input format limitations apply)
 
-   -  Note 2: **Interpolation** as **k-nearest neighbours** is the only
+   -  Note 2: **Interpolation** as **k-nearest neighbours** is the only
       method able to support filtering
 
 Grid
 ----
 
-Supply a grid definition as described here: `grid - keyword in
+Supply a grid definition as described here: `grid - keyword in
 MARS/Dissemination
 request <https://confluence.ecmwf.int/pages/viewpage.action?pageId=123799065>`__.
 
@@ -90,21 +90,21 @@ Examples of valid grid definitions:
 This parameter can be left empty to preserve the grid properties
 (regular/reduced lat/lon or Gaussian) while performing other kinds of
 post-processing (changing bits per value, calculation of gradients,
-etc.). 
+etc.).
 
 Template Source
 ---------------
 
-If **Grid Definition Mode** is **Template**, set path to a GRIB file to
+If **Grid Definition Mode** is **Template**, set path to a GRIB file to
 be used as template.
 
 Template Data
 -------------
 
-If **Grid Definition Mode** is **Template**, set a GRIB-based data
-object to be used as template.
+If **Grid Definition Mode** is **Template**, set a GRIB-based data
+object to be used as template.
 
-Lambert Conformal or Lambert Azimuthal Equal Area parameters
+Lambert Conformal or Lambert Azimuthal Equal Area parameters
 ------------------------------------------------------------
 
 These projections require setting several parameters, named following
@@ -124,7 +124,7 @@ meaning that they must be filled in. The parameters are:
 
 -  **Dy In Metres**: y-direction ...
 
--  **Nx**: number of points along x-direction in the projected frame
+-  **Nx**: number of points along x-direction in the projected frame
    (x/y)
 
 -  **Ny**: number of points along y-direction ...
@@ -149,16 +149,16 @@ Here are examples of generating Lambert grids.
 
 :Example: Lambert conformal
 
-   .. list-table:: 
+   .. list-table::
       :widths: 50 50
 
       * -  .. image:: /_static/ug/regrid_explained/image2.png
                :width: 200px
         -  .. image:: /_static/ug/regrid_explained/image3.png
                :width: 200px
-             
+
    .. code-block:: python
-      
+
       regrid_lambert_conformal = mv.regrid(
          grid_definition_mode = "lambert_conformal",
          first_point          = [50.88,-1.66],
@@ -173,16 +173,16 @@ Here are examples of generating Lambert grids.
 
 :Example: Lambert_azimuthal equal area
 
-   .. list-table:: 
+   .. list-table::
       :widths: 50 50
 
       * -  .. image:: /_static/ug/regrid_explained/image4.png
                :width: 200px
         -  ..  image:: /_static/ug/regrid_explained/image5.png
                :width: 200px
-   
+
    .. code-block:: python
-      
+
       regrid_laea = mv.regrid(
          grid_definition_mode         = "lambert_azimuthal_equal_area",
          first_point                  = [66.982143,-35.034024],
@@ -203,22 +203,22 @@ Activates processing that is particular to wind fields. Winds are
 represented by its vector Cartesian components u/v (gridded) or U/V
 (spectral) and, typically, they are archived as (spectral)
 vorticity/divergence (vo/d.) The relation between the spectral and
-gridded wind components is *u = U / cos(latitude)* and *v = V /
-cos(latitude)*.  
+gridded wind components is *u = U / cos(latitude)* and *v = V /
+cos(latitude)*.
 
 It is up to the user to specify if the input consists of wind fields.
 Set this appropriatelly in order to perform the correct processing.
 
 Possible options are:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 80
 
    * - **U/V to u/v**
      - Converts pairs of Cartesian components vector fields (spectral) U/V to (gridded) u/v. This option is required if regridding wind fields on/to a rotated grid. Note: assumes that the input come in pairs of alternating U/V.
    * - **vo/d to u/v**
      - Converts pairs of (spectral) vo/d fields into (spectral) U/V or (gridded) u/v. In case of gridded output, scaling by the cosine of their latitudes is applied (as above.). Note: assumes that the input come in pairs of alternating vo/d.
-   * - **Off (default)** 
+   * - **Off (default)**
      - Each processed field is treated individually.
 
 Spectral to grid inverse transform
@@ -246,26 +246,26 @@ fine-tune the conversion to grid points. The general workflow is:
      projection (eg. Lambert Conformal, LAEA, etc.), is very expensive
      computationally
 
-5. final gridded data (see **Grid Definition Mode**)
+5. final gridded data (see **Grid Definition Mode**)
 
 Truncation
 ----------
 
-Spherical harmonics truncation, as described here: `truncation - keyword
+Spherical harmonics truncation, as described here: `truncation - keyword
 in MARS/Dissemination
 request <https://confluence.ecmwf.int/pages/viewpage.action?pageId=149341825>`__.
 
 When the output is spectral, defines the output intended truncation;
 When the output is gridded, defines the intermediate truncation before
 spectral inverse transform to gridded space. Possible values
-are **Automatic**, **None** or a number describing the spectral
+are **Automatic**, **None** or a number describing the spectral
 truncation to be applied.
 
 Intgrid
 -------
 
-Intermediate grid when performing spectral inverse transform to gridded
-space, as described `intgrid - keyword in MARS/Dissemination
+Intermediate grid when performing spectral inverse transform to gridded
+space, as described `intgrid - keyword in MARS/Dissemination
 request <https://confluence.ecmwf.int/pages/viewpage.action?pageId=149341832>`__.
 
 Possible values are:
@@ -273,11 +273,11 @@ Possible values are:
 -  **Automatic**: regular Gaussian grid, with N given as linear spectral
    order relation to output grid latitude increments
 
--  **Source**: octahedral reduced Gaussian grid, with N given as cubic
+-  **Source**: octahedral reduced Gaussian grid, with N given as cubic
    spectral order relation to output grid latitude increments (mimics
    dissemination)
 
--  **None**: no intermediate grid, spectral inverse transform target is
+-  **None**: no intermediate grid, spectral inverse transform target is
    the user's intended output (costly if many different outputs are
    intended)
 
@@ -298,53 +298,53 @@ Interpolation
 -------------
 
 Specifies the type of interpolation to be used on the fields. The
-default is **Automatic**, which selects either **Linear** or **Nearest
-Neighbour** based on an internal table of known parameters. If the
-parameter is unknown, the default will be **Linear.** The possible
+default is **Automatic**, which selects either **Linear** or **Nearest
+Neighbour** based on an internal table of known parameters. If the
+parameter is unknown, the default will be **Linear.** The possible
 interpolation methods are:
 
--  Finite Element-based interpolation with linear base functions
+-  Finite Element-based interpolation with linear base functions
 
-   -  **Linear**: FEM with supporting triangular mesh
+   -  **Linear**: FEM with supporting triangular mesh
 
-   -  **Bilinear**: FEM with supporting quadrilateral mesh (for reduced
+   -  **Bilinear**: FEM with supporting quadrilateral mesh (for reduced
       grids, possibly containing triangles instead of highly-distorted
       quadrilaterals)
 
--  Grid box method (based on `Model grid box and time
+-  Grid box method (based on `Model grid box and time
    step <https://confluence.ecmwf.int/display/CKB/Model+grid+box+and+time+step>`__)
 
    -  **Grid Box Average**: input/output grid box intersections
       interpolation preserving input value integrals (conservative
       interpolation)
 
-   -  **Grid Box Statistics**: input/output grid box intersections value
+   -  **Grid Box Statistics**: input/output grid box intersections value
       statistics - see parameter **Interpolation Statistics** for
       possible computations
 
 -  K-nearest neighbours based:
 
    -  **K-Nearest Neighbours**: general method combining **nearest
-      method** (choice of  neighbours) and **distance
-      weighting** (choice of interpolating neighbour values)
+      method** (choice of  neighbours) and **distance
+      weighting** (choice of interpolating neighbour values)
 
-   -  **Nearest Neighbour**: parametrised version of *K-Nearest
-      Neighbours* to chose a nearest neighbouring input point to define
+   -  **Nearest Neighbour**: parametrised version of *K-Nearest
+      Neighbours* to chose a nearest neighbouring input point to define
       output point value
 
    -  **Nearest LSM**: interpolated output point takes input only from
-      input points of the same type (land or sea — requires setting
+      input points of the same type (land or sea — requires setting
       land/sea masks)
 
 -  Structured methods, exploiting grid structure and configurable
-   stencil for fast interpolations (non cacheable, so do not benefit
+   stencil for fast interpolations (non cacheable, so do not benefit
    from speedups on subsequent runs)
 
    -  **Structured Bilinear**: bilinear interpolation
 
    -  **Structured Bicubic**: bicubic interpolation
 
-   -  **Structured Biquasicubic**: computationally economic bicubic
+   -  **Structured Biquasicubic**: computationally economic bicubic
       interpolation
 
 -  Automatic: see above.
@@ -357,32 +357,32 @@ Available for any of the 'nearest' interpolation methods; Supports
 values are:
 
 
-.. list-table:: 
+.. list-table::
    :widths: 20 80
 
    * - **Distance**
      - input points with radius (option Distance) of output point
    * - **Nclosest**
-     - n-closest input points (option **Nclosest**) to output point (default 4) 
+     - n-closest input points (option **Nclosest**) to output point (default 4)
    * - **Distance and nclosest**
      - input points respecting **Distance ∩ Nclosest**
    * - **Distance or nclosest**
-     - input points respecting **Distance U Nclosest**
+     - input points respecting **Distance U Nclosest**
    * - **Nclosest or nearest**
      - n-closest input points (option **Nclosest**), if all are at the same distance (within option **Distance Tolerance**) return all points within that distance (robust interpolation of pole values)
    * - **Nearest neighbour with lowest index**
-     - nearest input point, if at the same distance to other points (option **Nclosest**) chosen by lowest index 
+     - nearest input point, if at the same distance to other points (option **Nclosest**) chosen by lowest index
    * - **Sample**
      - Sample of n-closest points (option **Nclosest**) out of input points with radius (option **Distance**) of output point, not sorted by distance
    * - **Sorted sample**
-     -  as above, sorted by distance 
+     -  as above, sorted by distance
 
-Associated options supporting **Grid Box Statistics** (described above):
+Associated options supporting **Grid Box Statistics** (described above):
 
 -  **Distance**: in [m] choice of closest points by distance to input
    point
 
--  **Distance Tolerance**: in [m] tolerance checking the farthest from
+-  **Distance Tolerance**: in [m] tolerance checking the farthest from
    nearest points (when **Nearest Method** is **Nclosest or nearest**)
 
 -  **Nclosest**: choice of n-closest input points to input point
@@ -428,7 +428,7 @@ Possible values are:
 Distance Weighting
 ------------------
 
-Only available if **Interpolation** is **K Nearest Neighbours**. General
+Only available if **Interpolation** is **K Nearest Neighbours**. General
 way on how to interpolate input neighbouring point values to output
 points, including the Inverse Distance Weighting (IDW) class methods
 (see
@@ -436,11 +436,11 @@ points, including the Inverse Distance Weighting (IDW) class methods
 which operates over input points returned by **Nearest Method**.
 Possible values are:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 80
 
    * - **Climate Filter**
-     - filter for processing topographic data (see `IFS documentation, Part IV: Physical Processes <https://www.ecmwf.int/en/elibrary/19308-part-iv-physical-processes>`__,11.3.1 Smoothing operator)
+     - filter for processing topographic data (see `IFS documentation, Part IV: Physical Processes <https://www.ecmwf.int/en/elibrary/19308-part-iv-physical-processes>`__,11.3.1 Smoothing operator)
    * - **Inverse Distance Weighting**
      - IDW of the form :math:`distance^{-1}`; If input points match output point, only that point's value is used for output
    * - **Inverse Distance Weighting Squared**
@@ -460,7 +460,7 @@ Associated options supporting **Distance Weighting** (described above):
 
 -  **Distance Weighting Shepard Power**: specify Shepard's method power
    parameter
-   (see `Wikipedia <https://en.wikipedia.org/wiki/Inverse_distance_weighting>`__ specific
+   (see `Wikipedia <https://en.wikipedia.org/wiki/Inverse_distance_weighting>`__ specific
    section)
 
 -  **Distance Weighting Gaussian Stddev**: specify Gaussian standard
@@ -470,7 +470,7 @@ Associated options supporting **Distance Weighting** (described above):
 Non Linear
 ----------
 
-This treatment is applied after calculation of the interpolation
+This treatment is applied after calculation of the interpolation
 weights, and before they are applied to input values to generate output
 values. This allows modifications of these weights based on input data,
 such as the presence of missing values — In any case, no missing values
@@ -484,7 +484,7 @@ the remaining interpolation weights are re-normalised (linearly) to
 
 Possible values are:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 80
 
    * - **Missing If All Missing**
@@ -500,14 +500,14 @@ Possible values are:
    * - **No**
      - no non-linear corrections are applied. In the presence of missing values this can can create wrong results.
 
-Associated options supporting **Non Linear** (described above):
+Associated options supporting **Non Linear** (described above):
 
 -  **Simulated Missing Value**: if **Non Linear** is **Simulated Missing
    Value**, set which value should not be used for interpolation
    irrespective of how data is described
 
--  **Simulated Missing Value Epsilon**: if **Non Linear** is **Simulated
-   Missing Value**, set tolerance when checking for value not be used
+-  **Simulated Missing Value Epsilon**: if **Non Linear** is **Simulated
+   Missing Value**, set tolerance when checking for value not be used
    for interpolation
 
 Land-sea mask parameters
@@ -515,12 +515,12 @@ Land-sea mask parameters
 
 Land-sea masks (LSMs) can be configured for two different purposes:
 
-1. when **Interpolation** is **Nearest LSM**: use input/output LSMs to
+1. when **Interpolation** is **Nearest LSM**: use input/output LSMs to
    distinguish between points used for interpolation; If output point is
    land, only input points on land are used for interpolation
    (respectivelly for sea points)
 
-2. when **Interpolation** is not **Nearest LSM** and **LSM** is **On**
+2. when **Interpolation** is not **Nearest LSM** and **LSM** is **On**
    (as described here: `lsm - keyword in MARS/Dissemination
    request <https://confluence.ecmwf.int/pages/viewpage.action?pageId=149341727>`__):
    interpolation weights for input points are rebalanced (by factor
@@ -531,32 +531,32 @@ Land-sea masks (LSMs) can be configured for two different purposes:
 Distance Weighting With LSM
 ---------------------------
 
-Only available if **Interpolation**  is **Nearest LSM**. Possible values
+Only available if **Interpolation**  is **Nearest LSM**. Possible values
 are:
 
 -  **Nearest LSM**: chose the closest input point (no disambiguation if
    there is more than one closest point at the same distance)
 
 -  **Nearest LSM With Lowest Index**: cross-platform compatible version
-   (of the above **Nearest LSM**) with disambiguation of closest input
+   (of the above **Nearest LSM**) with disambiguation of closest input
    points at the same distance of output points
 
--  **Off**: use internal defaults (currently set to **Nearest LSM With
+-  **Off**: use internal defaults (currently set to **Nearest LSM With
    Lowest Index**)
 
 LSM Weight Adjustment
 ---------------------
 
-Only available if **LSM** is **On**, this is the factor adjusting input
+Only available if **LSM** is **On**, this is the factor adjusting input
 point weights if they are not of the same type (land/sea) as related
-output point; On application, all contributing input point weights
-are re-normalised (linearly) to *sum(w\ i) = 1*. 
+output point; On application, all contributing input point weights
+are re-normalised (linearly) to *sum(w\ i) = 1*.
 
 LSM Selection Input/Output
 --------------------------
 
-Specifies whether the input/output LSM file will come from **LSM Named
-Input/Output** (named, default) or **LSM File Input/Output** (file).
+Specifies whether the input/output LSM file will come from **LSM Named
+Input/Output** (named, default) or **LSM File Input/Output** (file).
 
 LSM Named Input/Output
 ----------------------
@@ -564,7 +564,7 @@ LSM Named Input/Output
 Select one of the predefined names from the following:
 
 
-.. list-table:: 
+.. list-table::
    :widths: 20 80
 
    * - **1km** (default)
@@ -572,13 +572,13 @@ Select one of the predefined names from the following:
    * - **10min**
      - binary-based LSM at high resolution (legacy, pre-climate files version 15)
    * - **O1280**
-     - GRIB-based IFS supporting climate files version 15, on this specific grid 
-   * - **O640** 
-     - (as above, for this grid) 
+     - GRIB-based IFS supporting climate files version 15, on this specific grid
+   * - **O640**
+     - (as above, for this grid)
    * - **O320**
-     - (as above, for this grid) 
+     - (as above, for this grid)
    * - **N320**
-     - (as above, for this grid) 
+     - (as above, for this grid)
    * - **N256**
      - (as above, for this grid)
    * - **N128**
@@ -620,11 +620,11 @@ Volume Module of the IFS, specifically:
 3. `Atlas: A library for numerical weather prediction and climate
    modelling <https://www.sciencedirect.com/science/article/pii/S0010465517302138>`__
 
-It employs an edge-based, median-dual finite-volume method, with field
+It employs an edge-based, median-dual finite-volume method, with field
 values interpreted as averaged quantities of the supporting "dual
 cells".
 
-There is support for both scalar and vector (u/v) fields; Due to the 
+There is support for both scalar and vector (u/v) fields; Due to the
 geometrical interpretation being ill-posed at the poles (singularities)
 there is an additional option to force missing values at the poles.
 
@@ -635,7 +635,7 @@ Activates a nabla (differential) operator processing on the fields.
 Possible options are:
 
 
-.. list-table:: 
+.. list-table::
    :widths: 30 70
 
    * - **Scalar Gradient**
@@ -643,13 +643,13 @@ Possible options are:
    * - **Scalar Laplaciant**
      - Scalar field `Laplacian <https://en.wikipedia.org/wiki/Vector_Laplacian>`__  (∇\ :sup:`2`)
    * - **UV Gradient**
-     - Vector (u/v) field `gradient <https://en.wikipedia.org/wiki/Gradient>`__ (∇)
-   * - **UV Divergence** 
-     - Vector (u/v) field `divergence <https://en.wikipedia.org/wiki/Divergence>`__ (∇⋅)
+     - Vector (u/v) field `gradient <https://en.wikipedia.org/wiki/Gradient>`__ (∇)
    * - **UV Divergence**
-     - Vector (u/v) field `vorticity or curl <https://en.wikipedia.org/wiki/Curl_(mathematics)>`__ (∇×) 
+     - Vector (u/v) field `divergence <https://en.wikipedia.org/wiki/Divergence>`__ (∇⋅)
+   * - **UV Divergence**
+     - Vector (u/v) field `vorticity or curl <https://en.wikipedia.org/wiki/Curl_(mathematics)>`__ (∇×)
    * - **Off** (default)
-     - no differential processing 
+     - no differential processing
 
 Nabla Poles Missing Values
 --------------------------
@@ -665,7 +665,7 @@ Extra Processing
 Area
 ----
 
-Supply a grid definition as described here: `area - keyword in
+Supply a grid definition as described here: `area - keyword in
 MARS/Dissemination
 request <https://confluence.ecmwf.int/pages/viewpage.action?pageId=151520973>`__
 (swapping north/south).
@@ -678,7 +678,7 @@ assist button to define the area graphically.
 
 For example, this set of parameters generates the following output data:
 
-.. list-table:: 
+.. list-table::
     :widths: 50 50
 
     * -  .. code-block:: python
@@ -690,7 +690,7 @@ For example, this set of parameters generates the following output data:
                 )
 
              mv.plot(t01)
-             
+
       -  ..  image:: /_static/ug/regrid_explained/image6.png
              :width: 200px
 
@@ -699,33 +699,33 @@ Frame
 -----
 
 Specifies the width of a frame within a given sub-area, as described
-here `frame - keyword in MARS/Dissemination
+here `frame - keyword in MARS/Dissemination
 request <https://confluence.ecmwf.int/pages/viewpage.action?pageId=118841732>`__.
 
 The width of the frame is specified as an (integer) number of grid
-points inwards from a given area. The following plots show a sub-area
+points inwards from a given area. The following plots show a sub-area
 with **Frame** set to 8.
 
 
 
-.. list-table:: 
+.. list-table::
    :widths: 50 50
 
    * -  ..  image:: /_static/ug/regrid_explained/image7.png
                :width: 200px
      -  ..  image:: /_static/ug/regrid_explained/image8.png
                :width: 200px
-               
+
 Rotation
 --------
 
 Position of the South Pole of the intended rotated grid as lat/lon in
-degree, as described here: `rotation - keyword in MARS/Dissemination
+degree, as described here: `rotation - keyword in MARS/Dissemination
 request <https://confluence.ecmwf.int/pages/viewpage.action?pageId=168664701>`__.
 
 This is applicable to regular lat/lon or regular/reduced Gaussian grids.
-Enter lat/lon in degree, or in Macro or Python, enter [lat, lon];
-alternatively, use the  assist button to select the point graphically.
+Enter lat/lon in degree, or in Macro or Python, enter [lat, lon];
+alternatively, use the  assist button to select the point graphically.
 
 Accuracy
 --------
@@ -737,7 +737,7 @@ request <https://confluence.ecmwf.int/pages/viewpage.action?pageId=168664740>`__
 If left empty, this will take the value from the input fields. This
 option can also be used to simply change the number of bits per value in
 a Fieldset if no other processing options are given. Note that
-if **Packing**  is set to **ieee**, then the only valid values for this
+if **Packing**  is set to **ieee**, then the only valid values for this
 parameter are 32 and 64.
 
 Packing
