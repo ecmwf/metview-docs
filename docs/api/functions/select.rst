@@ -19,7 +19,7 @@ select
    
    .. warning::
 
-        The result is always sorted in ascending order by the following keys: shortName, paramId, date, time, step, typeOfLevel, level, number, experimentVersionNumber, marsClass, marsStream and marsType. 
+        From *metview-python version 1.11.0* the result is not sorted but keeps the original field ordering. You need to use :func:`sort` to sort the output. 
 
    We can call :func:`select` either with a set of keyword arguments or with a dictionary as a single positional argument. 
 
