@@ -68,8 +68,7 @@ conf
 This is the directory containing the map and style configurations. It can be empty, however if we place files in it they will extend the built-in default configurations.
 
 conf/areas.yaml
--------------------
--------------------
+===================
 
 This file contains the definition of the map areas. 
     
@@ -91,8 +90,7 @@ Areas defined here can be used like this:
 
 
 conf/map_styles.yaml
-------------------------
-------------------------
+========================
 
 This file contains the definition of the map plotting styles (:func:`mcoast`). E.g.:
 
@@ -121,14 +119,12 @@ Styles defined here can be used like this:
         mv.plot_maps(v, view=view)
 
 conf/params.yaml
---------------------
---------------------
+====================
 
 This file defines the data parameters and assigns the plotting styles to them.
 
 
 conf/param_styles.yaml
----------------------------
----------------------------
+===========================
 
 This file defines the plotting styles for data.

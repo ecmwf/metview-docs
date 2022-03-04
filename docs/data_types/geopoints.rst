@@ -249,7 +249,7 @@ Storing Data Origin Information in a Geopoints File
 
    Currently, ODB is the only database system to generate this meta-information. It is not discussed in
    detail here because it is generated automatically. Functions exist to extract this information from
-   a geopoints variable - see those whose names begin with "db_\".
+   a geopoints variable - see those whose names begin with "db\_".
 
 
 Exporting as a pandas dataframe
