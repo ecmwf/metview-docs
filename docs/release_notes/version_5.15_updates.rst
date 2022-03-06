@@ -4,6 +4,17 @@ Version 5.15 Updates
 ////////////////////
 
 
+Version 5.15.1
+==============
+
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2022-03-06
+* Not deployed at ECMWF
+
+**Fixes:**
+
+-  Fixed build issue on macOS
+
+
 Version 5.15.0
 ==============
 
