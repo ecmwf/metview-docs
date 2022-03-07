@@ -95,6 +95,11 @@ params:
     desc: Orientation of the axis title.
     ptype: str
     values: horizontal/vertical/parallel
+- axis_title_position:
+    default: -1
+    desc: Controls the distance of the axis title from the axis.
+    ptype: number
+    values: ''
 - axis_title_colour:
     default: automatic
     desc: Colour of the axis title.
