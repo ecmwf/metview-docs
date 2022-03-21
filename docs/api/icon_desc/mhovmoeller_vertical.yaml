@@ -7,8 +7,7 @@ params:
     default: 
     desc: Specifies the input GRIB data (:class:`Fieldset`) for the Hovmeller diagram. 
       ``data`` must contain a time-series of a single meteorological variable on a latitude-longitude
-      or Gaussian grid, on a set of vertical levels. If ``data`` is specified on ECMWF model levels and ``vertical_level_type`` is "pressure" a
-      fixed surface pressure value (1013.25 hPa) is used to determine the pressure on model levels.
+      or Gaussian grid, on a set of vertical levels. If ``data`` is specified on ECMWF model levels and ``vertical_level_type`` is "pressure" ``data`` must also contain an Logarithm of Surface Pressure (LNSP) field (see ``lnsp_param``) for each step, otherwise the pressure on the model levels cannot be computed. 
     ptype: :class:`Fieldset`
     values:
 - area:
@@ -17,9 +16,29 @@ params:
       which the Hovmoeller diagram is calculated.
     ptype: list[number]
     values: ''
+- lnsp_param:
+    default: '152'
+    desc: Specifies the ecCodes paramId used to identify the Logarithm of Surface Pressure (LNSP) in the input data.  Enabled when ``vertical_level_type`` is "pressure". 
+    ptype: number
+    values: ''
 - vertical_level_type:
    default: as_in_data
-   desc: Specifies if a conversion from ECMWF model level to pressure level needs
+   desc: Specifies if a conversion from ECMWF model levels to pressure levels needs
      to be performed.
    ptype: str
    values: 'as_in_data/pressure' 
+- vertical_coordinate_extrapolate:
+    default: 'off'
+    desc: Performs and extrapolation for the ``top_level`` and ``bottom_level`` when the pressure level range derived from the input models levels does not contain these levels. Only used whe ``data`` contains model levels and ``vertical_level_type`` is "pressure".
+    ptype: str
+    values: on/off
+- bottom_level:
+    default: '1100.0'
+    desc: Specifies the lower (closest to the surface) limit of the Hovmoeller data as a pressure value (hPa) when ``data`` contains model levels and ``vertical_level_type`` is pressure. Enabled when ``vertical_level_type`` is "pressure".
+    ptype: number
+    values: ''
+- top_level:
+    default: '0.01'
+    desc: Specifies the upper (furthest from the surface) limit of the Hovmoeller data as a pressure value (hPa) when ``data`` contains model levels and ``vertical_level_type`` is pressure. Enabled when ``vertical_level_type`` is "pressure".
+    ptype: number
+    values: ''
