@@ -179,6 +179,7 @@ xy:
   - ens_rmse_curve
   - ens_plume
   - cdf_curve
+  - windrose
   - grib_scatterplot
   - odb_scatterplot_binning
   - odb_wind_profiler
