@@ -428,7 +428,8 @@ params:
     values: ''
 - contour_internal_reduction_factor:
     default: '4.0'
-    desc: Internal factor for contouring.
+    desc: Internal factor for contouring. It is used in the shading/contouring algorithm to
+        compute the size of the data matrix with respect to the size of the output (in internal units). The lower the value the higher the accuracy will be (but the contouring will be slower).  
     ptype: number
     values: ''
 - contour_threads:
