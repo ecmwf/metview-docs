@@ -3,42 +3,67 @@ summary: rst
 oneliner: Provides input for Hovemoeller diagrams derived from
   an input geographical area and a set of levels.
 params:
+- input_mode:
+    default: area
+    desc: |-
+      Defines the horizontal data selection method:
+
+      * "point": the data is interpolated to the location specified by ``point``
+      * "nearest_gridpoint": the nearest gridpoint to the location specified by ``point`` is extracted
+      * "area": the values inside the ``area`` are averaged using :func:`integrate`
+    type: str
+    values: point/nearest_gridpoint/area
+- point:
+    default: '0/0'
+    desc: Specifies the coordinates (as [lat, lon]) of the point for which the vertical Hovmoeller
+      is computed. Enabled when ``input_mode`` is "point" or "nearest_gridpoint".
+    ptype: list[number]
+    values: ''
+- area:
+    default: '30/-30/-30/30'
+    desc: Specifies the coordinates of the area (as [north, west, south, east]) over
+      which the Hovmoeller diagram is calculated. Enabled when ``input_mode`` is "area".
+    ptype: list[number]
+    values: ''
 - data:
     default: 
-    desc: Specifies the input GRIB data (:class:`Fieldset`) for the Hovmeller diagram. 
+    desc: Specifies the input GRIB data for the Hovmeller diagram. 
       ``data`` must contain a time-series of a single meteorological variable on a latitude-longitude
       or Gaussian grid, on a set of vertical levels. If ``data`` is specified on ECMWF model levels and ``vertical_level_type`` is "pressure" ``data`` must also contain an Logarithm of Surface Pressure (LNSP) field (see ``lnsp_param``) for each step, otherwise the pressure on the model levels cannot be computed. 
     ptype: :class:`Fieldset`
     values:
-- area:
-    default: '30/-30/-30/30'
-    desc: Specifies the coordinates of the area (as [north, west, south, east]) over
-      which the Hovmoeller diagram is calculated.
-    ptype: list[number]
-    values: ''
+- vertical_level_type:
+   default: as_in_data
+   desc: |-
+      Specifies the output vertical level type:
+
+      * "as_in_data": the level type of ``data`` is used. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa.
+      * "pressure": indicates that the ``data`` is defined on ECMWF model levels and the output vertical coordinate should be pressure in hPa. When this option is selected the input data must contain the corresponding Logarithm of Surface Pressure (LNSP) fields.
+      * "param": the vertical coordinates (both input and output) are defined by the fields of ``vertical_coordinate_param``. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa.
+   ptype: str
+   values: 'as_in_data/pressure'
 - lnsp_param:
     default: '152'
     desc: Specifies the ecCodes paramId used to identify the Logarithm of Surface Pressure (LNSP) in the input data.  Enabled when ``vertical_level_type`` is "pressure". 
     ptype: number
     values: ''
-- vertical_level_type:
-   default: as_in_data
-   desc: Specifies if a conversion from ECMWF model levels to pressure levels needs
-     to be performed.
-   ptype: str
-   values: 'as_in_data/pressure' 
+- vertical_coordinate_param:
+    default: ''
+    desc: Specifies the ecCodes paramId used to identify the vertical coordinate fields in the input data.  Enabled when ``vertical_level_type`` is "param". 
+    ptype: number
+    values: '' 
 - vertical_coordinate_extrapolate:
     default: 'off'
-    desc: Performs and extrapolation for the ``top_level`` and ``bottom_level`` when the pressure level range derived from the input models levels does not contain these levels. Only used whe ``data`` contains model levels and ``vertical_level_type`` is "pressure".
+    desc: Performs and extrapolation for the ``top_level`` and ``bottom_level`` when the output vertical level range does not contain these levels. Only used when ``vertical_level_type`` is "pressure" or "param".
     ptype: str
     values: on/off
 - bottom_level:
-    default: '1100.0'
-    desc: Specifies the lower (closest to the surface) limit of the Hovmoeller data as a pressure value (hPa) when ``data`` contains model levels and ``vertical_level_type`` is pressure. Enabled when ``vertical_level_type`` is "pressure".
+    default: '1015.0'
+    desc: Specifies the lower (closest to the surface) limit of the Hovmoeller data in the units of the vertical coordinates. Only levels in the range defined by ``top_level`` and ``bottom_level`` are included in the output data. An extra level on either side of this range is also added. Enabled when ``vertical_level_type`` is "pressure" or "param".
     ptype: number
     values: ''
 - top_level:
     default: '0.01'
-    desc: Specifies the upper (furthest from the surface) limit of the Hovmoeller data as a pressure value (hPa) when ``data`` contains model levels and ``vertical_level_type`` is pressure. Enabled when ``vertical_level_type`` is "pressure".
+    desc: Specifies the upper (furthest from the surface) limit of the Hovmoeller data in the units of the vertical coordinates. Only levels in the range defined by ``top_level`` and ``bottom_level`` are included in the output data. An extra level on either side of this range is also added. Enabled when ``vertical_level_type`` is "pressure" or "param".
     ptype: number
     values: ''
