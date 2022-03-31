@@ -41,7 +41,7 @@ params:
       * "pressure": indicates that the ``data`` is defined on ECMWF model levels and the output vertical coordinate should be pressure in hPa. When this option is selected the input data must contain the corresponding Logarithm of Surface Pressure (LNSP) fields.
       * "param": the vertical coordinates (both input and output) are defined by the fields of ``vertical_coordinate_param``. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa.
    ptype: str
-   values: 'as_in_data/pressure'
+   values: 'as_in_data/pressure/param'
 - lnsp_param:
     default: '152'
     desc: Specifies the ecCodes paramId used to identify the Logarithm of Surface Pressure (LNSP) in the input data.  Enabled when ``vertical_level_type`` is "pressure". 
