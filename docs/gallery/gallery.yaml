@@ -140,9 +140,10 @@ sections:
   - cross_section_wind_3d
   - time_height_xs
   - time_height_xs_wind
+  - qbo_era5_vertical_hovmoeller
+  - vert_hovm_ml_in_pressure
   - hovmoeller_area
   - ozone_era5_lat_hovmoeller
-  - qbo_era5_vertical_hovmoeller
   - zonal_average
   - v_era5_temporal_zonal_average
   - zonal_average_difference
