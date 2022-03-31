@@ -121,8 +121,8 @@ def build_sectors(
 
         start_angle += sector_gap / 2.0
         end_angle -= sector_gap / 2.0
-        for j in range(len(data.speed_bins) - 1, 0, -1):
-            radius = data.res[0 : j - 1, i].sum()
+        for j in range(len(data.speed_bins) - 2, -1, -1):
+            radius = data.res[0 : j + 1, i].sum()
             pie_x = [x_cent]
             pie_y = [y_cent]
             angle = start_angle
@@ -140,8 +140,8 @@ def build_sectors(
             graph = mv.mgraph(
                 legend=legend,
                 graph_type="area",
-                graph_line_colour=outline_colours[j - 1],
-                graph_shade_colour=fill_colours[j - 1],
+                graph_line_colour=outline_colours[j],
+                graph_shade_colour=fill_colours[j],
             )
             gr_lst.extend([vis, graph])
     return gr_lst
