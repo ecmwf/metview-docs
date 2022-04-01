@@ -142,6 +142,7 @@ sections:
   - time_height_xs_wind
   - qbo_era5_vertical_hovmoeller
   - vert_hovm_ml_in_pressure
+  - vert_hovm_ml_in_height
   - hovmoeller_area
   - ozone_era5_lat_hovmoeller
   - zonal_average
