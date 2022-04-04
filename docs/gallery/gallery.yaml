@@ -119,6 +119,7 @@ map-curves:
   examples:
   - storm_track
   - storm_quadrants
+  - ship_track_era5
   - flextra_forward
   - geoline_on_map
   - geopolyline_on_map
