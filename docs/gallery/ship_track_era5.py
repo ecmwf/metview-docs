@@ -205,7 +205,7 @@ wind_plotting = mv.mwind(
     wind_flag_origin_marker="off",
 )
 
-# define simbol plotting for the wave height
+# define symbol plotting for the wave height
 symbol_plotting = mv.msymb(
     legend="on",
     symbol_type="marker",

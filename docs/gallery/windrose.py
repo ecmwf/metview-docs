@@ -53,7 +53,7 @@ class WindRoseData:
                 speed, direction, bins=[self.speed_bins, self.dir_bins], normed=False
             )[0]
 
-            # unifiy the north bins
+            # unify the north bins
             self.res[:, 0] = self.res[:, 0] + self.res[:, -1]
             self.res = self.res[:, :-1]
             self.dir_bins = self.dir_bins[:-1]
@@ -301,7 +301,7 @@ def build_view(
             symbol_type="text",
             symbol_table_mode="advanced",
             symbol_advanced_table_selection_type="list",
-            symbol_advanced_table_level_list=idx_label,
+            symbol_advanced_table_level_list=[*idx_label, idx_label[-1] + 1],
             symbol_advanced_table_height_list=0.001,
             symbol_advanced_table_text_list=list(dir_labels.keys()),
             symbol_advanced_table_text_font_size=dir_label_size,
