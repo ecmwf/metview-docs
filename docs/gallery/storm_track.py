@@ -36,7 +36,7 @@ val_lat = mv.values(tbl, 3)
 # of msymb(). This requires associating each point with its text label, so we will
 # generate values of 0,1,2,3,...,N-1 for the points and create an msymb() that
 # maps each value to a generated date/time label.
-val_idx = list(range(len(val_lat))) # indexes: 0->N-1
+val_idx = list(range(len(val_lat)))  # indexes: 0->N-1
 
 # define date and time labels for track points
 val_label = []
@@ -63,20 +63,20 @@ track_text = mv.msymb(
     symbol_type="text",
     symbol_table_mode="advanced",
     symbol_advanced_table_selection_type="list",
-    symbol_advanced_table_level_list=val_idx,
+    symbol_advanced_table_level_list=[*val_idx, val_idx[-1] + 1],
     symbol_advanced_table_text_list=val_label,
     symbol_advanced_table_text_font_size=0.5,
     symbol_advanced_table_text_font_style="bold",
     symbol_advanced_table_text_font_colour="black",
     symbol_advanced_table_text_display_type="right",
-    )
+)
 
 # create a visualiser for the track
 track_vis = mv.input_visualiser(
     input_plot_type="geo_points",
     input_longitude_values=val_lon,
     input_latitude_values=val_lat,
-    input_values=val_idx
+    input_values=val_idx,
 )
 
 # read mslp forecast from grib file
