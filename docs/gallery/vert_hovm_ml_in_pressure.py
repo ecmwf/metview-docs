@@ -81,6 +81,7 @@ hov = mv.mhovmoellerview(
     top_level=100,
     bottom_level=1010,
     vertical_coordinate_extrapolate="on",
+    vertical_coordinate_extrapolate_mode="constant",
     time_axis=time_axis,
     vertical_axis=vertical_axis,
 )
