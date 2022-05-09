@@ -156,6 +156,16 @@ params:
     desc: Performs and extrapolation for the ``top_level`` and ``bottom_level`` when the output vertical level range does not contain these levels. Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "pressure" or "param".
     ptype: str
     values: on/off
+- vertical_coordinate_extrapolate_mode:
+    default: 'constant'
+    desc: Specifies the extrapolation technique. In "constant" mode the values on the nearest input levels are copied onto the target extrapolated levels. In "linear" mode a linear extrapolation is performed using the nearest two input levels. Enabled when ``vertical_coordinate_extrapolate`` is "on".
+    ptype: str
+    values: constant/linear  
+- vertical_coordinate_extrapolate_fixed_signed:
+    default: 'on'
+    desc: When "vertical_coordinate_extrapolate_mode" is "on" it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is "on" it prevents e.g. wind components to change sign due to extrapolation.
+    ptype: str
+    values: on/off   
 - vertical_scaling:
     default: linear
     desc: Specifies the type of the vertical axis .
