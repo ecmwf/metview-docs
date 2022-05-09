@@ -1,5 +1,5 @@
 """
-GRIB - Vertial Hovmoeller in Height with Model Level Data
+GRIB - Vertical Hovmoeller in Height with Model Level Data
 """
 
 # (C) Copyright 2017- ECMWF.
@@ -13,6 +13,8 @@ GRIB - Vertial Hovmoeller in Height with Model Level Data
 #
 
 import metview as mv
+
+# Note: at least Metview version 5.16.0 is required
 
 # getting data
 use_mars = False
@@ -84,6 +86,8 @@ vertical_axis = mv.maxis(
     axis_title_height=0.5,
 )
 
+# define vertical Hovmoeller with height above sea level axis for model level
+# data for a given location (at least Metview version 5.16.0 is required)
 hov = mv.mhovmoellerview(
     type="vertical_hovm",
     input_mode="nearest_gridpoint",

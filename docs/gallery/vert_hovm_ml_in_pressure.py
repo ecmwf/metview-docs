@@ -14,6 +14,8 @@ GRIB - Vertical Hovmoeller in Pressure with Model Level Data
 
 import metview as mv
 
+# Note: at least Metview version 5.16.0 is required
+
 # getting data
 use_mars = False
 
