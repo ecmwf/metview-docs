@@ -1,7 +1,6 @@
 return: :class:`NetCDF`
 summary: rst
-oneliner: Provides input for Hovemoeller diagrams derived from
-  an input geographical area and a set of levels.
+oneliner: Provides input for Hovemoeller diagrams derived at an input geographical location/area and on a set of levels.
 params:
 - input_mode:
     default: area
@@ -41,7 +40,7 @@ params:
       * "pressure": indicates that the ``data`` is defined on ECMWF model levels and the output vertical coordinate should be pressure in hPa. When this option is selected the input data must contain the corresponding Logarithm of Surface Pressure (LNSP) fields.
       * "param": the vertical coordinates (both input and output) are defined by the fields of ``vertical_coordinate_param``. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa.
    ptype: str
-   values: 'as_in_data/pressure/param'
+   values: 'as_in_data/pressure/user'
 - lnsp_param:
     default: '152'
     desc: Specifies the ecCodes paramId used to identify the Logarithm of Surface Pressure (LNSP) in the input data.  Enabled when ``vertical_level_type`` is "pressure". 
@@ -54,9 +53,19 @@ params:
     values: '' 
 - vertical_coordinate_extrapolate:
     default: 'off'
-    desc: Performs and extrapolation for the ``top_level`` and ``bottom_level`` when the output vertical level range does not contain these levels. Only used when ``vertical_level_type`` is "pressure" or "param".
+    desc: Performs an extrapolation for the ``top_level`` and ``bottom_level`` when the output vertical level range does not contain these levels. Only used when ``vertical_level_type`` is "pressure" or "param".
     ptype: str
     values: on/off
+- vertical_coordinate_extrapolate_mode:
+    default: 'constant'
+    desc: Specifies the extrapolation technique. In "constant" mode the values on the nearest input levels are copied onto the target extrapolated levels. In "linear" mode a linear extrapolation is performed using the nearest two input levels. Enabled when ``vertical_coordinate_extrapolate`` is "on".
+    ptype: str
+    values: constant/linear  
+- vertical_coordinate_extrapolate_fixed_signed:
+    default: 'on'
+    desc: When "vertical_coordinate_extrapolate_mode" is "on" it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is "on" it prevents e.g. wind components to change sign due to extrapolation.
+    ptype: str
+    values: on/off     
 - bottom_level:
     default: '1015.0'
     desc: Specifies the lower (closest to the surface) limit of the Hovmoeller data in the units of the vertical coordinates. Only levels in the range defined by ``top_level`` and ``bottom_level`` are included in the output data. An extra level on either side of this range is also added. Enabled when ``vertical_level_type`` is "pressure" or "param".
