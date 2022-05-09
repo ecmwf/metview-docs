@@ -163,7 +163,7 @@ params:
     values: constant/linear  
 - vertical_coordinate_extrapolate_fixed_signed:
     default: 'on'
-    desc: When "vertical_coordinate_extrapolate_mode" is "on" it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is "on" it prevents e.g. wind components to change sign due to extrapolation.
+    desc: When ``vertical_coordinate_extrapolate_mode`` is "on" it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is "on" it prevents e.g. wind components to change sign due to extrapolation.
     ptype: str
     values: on/off   
 - vertical_scaling:

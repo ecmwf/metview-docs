@@ -82,17 +82,38 @@
     values: interpolate/nearest_gridpoint
 - vertical_coordinates:
     default: default
-    desc: Setting this option to "user" will enable the use of general height-based
+    desc: Setting this option to "user" will enable the use of arbitrary vertical
       coordinates. In this mode, additional GRIB fields should be supplied (one per
       level) where the values of the grid points represent the heights of their locations.
     ptype: str
     values: default/user
 - vertical_coordinate_param:
     default: ''
-    desc: Specifies the ecCodes paramId of the general height-based coordinates if
+    desc: Specifies the ecCodes paramId of the general vertical coordinates if
       ``vertical_coordinates`` is set to "user".
     ptype: str
     values: ''
+- vertical_coordinate_extrapolate:
+    default: 'off'
+    desc: Performs an extrapolation for target levels outside the input vertical coordinate range. Only used when ``vertical_coordinates`` is "user".
+    ptype: str
+    values: on/off
+- vertical_coordinate_extrapolate_mode:
+    default: 'constant'
+    desc: |- 
+      Specifies the extrapolation technique. In "constant" mode the values on the nearest input levels are copied onto the target extrapolated levels. In "linear" mode a linear extrapolation is performed using the nearest two input levels. Enabled when ``vertical_coordinate_extrapolate`` is "on".
+      
+      *New in Metview version 5.16.0*.
+    ptype: str
+    values: constant/linear  
+- vertical_coordinate_extrapolate_fixed_signed:
+    default: 'on'
+    desc: |- 
+      When ``vertical_coordinate_extrapolate_mode`` is "on" it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is "on" it prevents e.g. wind components to change sign due to extrapolation.
+
+      *New in Metview version 5.16.0*.
+    ptype: str
+    values: on/off   
 - w_wind_scaling_factor_mode:
     default: automatic
     desc: |-
@@ -112,22 +133,29 @@
 - level_selection_type:
     default: from_data
     desc: |-
-      Specifies the method to define the output pressure levels when converting model level data to pressure levels. The possible values are:
+      Specifies the method to define the output vertical levels. The possible values are:
 
-      * "from_data": first computes the absolute bottom pressure level from the data, next for each model level computes the average pressure along the cross section line and uses it as the vertical pressure co-ordinate for that level, finally computes extra levels at the bottom by adding an offset (10 hPa) until it reaches the bottom pressure level. This will avoid blank areas in the plot near the orography line.
-      * "count": calculates the output pressure levels by taking into account the bottom and top pressure levels (``bottom_level`` and ``top_level``) and the given number of levels (``level_count``). The computed levels will be evenly spaced on either a linear or a logarithmic scale depending on the value of ``vertical_scaling``.
-      * "level_list": use the given list of pressure levels in ``level_list``
+      * "from_data": the algorithm depends on the level type.
+      
+        * if the *input and output level types are the same* the input levels will also be used as output levels
+        * if *model level data used with an output pressure axis* first computes the absolute bottom pressure level from the data. Next for each model level computes the average pressure along the cross section line and uses it as the vertical pressure co-ordinate for that level. Finally computes extra levels at the bottom by adding an offset (10 hPa) until it reaches the bottom pressure level. This will avoid blank areas in the plot near the orography line.
+        * when ``vertical_coordinates`` is "user": on each input level computes the average output coordinate along the cross section line and uses it as the output vertical co-ordinate for that level. When "vertical_coordinate_extrapolate" is on additional levels are added to avoid blank areas in the plot near the orography line.
+      * "adaptive": 
+      * "count": calculates the output vertical levels by taking into account the bottom and top levels (``bottom_level`` and ``top_level``) and the given number of levels (``level_count``). The computed levels will be evenly spaced on either a linear or a logarithmic scale depending on the value of ``vertical_scaling``.
+      * "level_list": use the given list of levels in ``level_list``
+
+      When ``vertical_coordinates`` is "user" options "count" and "level_list" are only available since *Metview version 5.16.0*.
     ptype: str
     values: from_data/count/level_list
 - level_list:
     default: '0.01'
-    desc: Specifies the list of output pressure levels. Only available if ``level_selection_type``
+    desc: Specifies the list of output vertical levels. Only available if ``level_selection_type``
       is set to "level_list".
     ptype: number or list[number]
     values: ''
 - level_count:
     default: '100'
-    desc: Specifies the number of output pressure levels if ``level_selection_type``
+    desc: Specifies the number of output vertical levels if ``level_selection_type``
       is set to "count".
     ptype: number
     values: ''
