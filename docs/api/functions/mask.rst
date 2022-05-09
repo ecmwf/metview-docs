@@ -48,7 +48,11 @@ mask
          # Then remove b
          m = m and not mv.mask(f,b)
 
-   
+   .. note::
+      
+      See also :func:`rmask`, :func:`poly_mask`, :func:`bitmap` and :func:`nobitmap`.
+
+
 .. py:function:: mask(gpt, area)
 
     Creates a :class:`Geopoints` containing values of 0 or 1 according to whether they are inside (1) or outside (0) the ``area``.

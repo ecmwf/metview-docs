@@ -23,7 +23,7 @@ rmask
    :rtype: :class:`Fieldset`
 
    .. note::
-      See also :func:`mask` to define a rectangular mask.  
-
+      
+      See also :func:`mask`, :func:`poly_mask`, :func:`bitmap` and :func:`nobitmap`.
 
 .. mv-minigallery:: rmask

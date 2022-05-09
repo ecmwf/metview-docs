@@ -1852,6 +1852,14 @@
     - geopoints_access
     - geopoints_object
     type: script
+- poly_mask:
+    category:
+      fieldset: Generates polygon masks for fieldsets
+    desc: Generates polygon masks for a fieldset
+    group:
+    - mask
+    - grib_object
+    type: script
 - potential_temperature:
     category:
       thermo: computes the potential temperature for a given temperature and pressure
