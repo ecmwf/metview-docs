@@ -9,9 +9,9 @@ poly_mask
 
    :param data: input data
    :type data: :class:`Fieldset` or :class:`Geopoints`
-   :param lats: the latitude of the polygon points. Use a list to define multiple polygons.
+   :param lats: the latitude of the polygon points. Use a list of ndarrays to define multiple polygons.
    :type lats: ndarray or list of ndarrays
-   :param lons: the longitude of the polygon points. Use a list to define multiple polygons.
+   :param lons: the longitude of the polygon points. Use a list of ndarrays to define multiple polygons.
    :type lons: ndarray or list of ndarrays
    :param missing: when it is ``True`` it will change the behaviour so that points outside the polygon(s) will become missing values and point inside the polygon(s) retain their original value.
    :type missing: bool
