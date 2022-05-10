@@ -7,7 +7,7 @@ sum
 
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
-   :param missing: controls what happens when missing values are present in ``fs``. When it is ``False``, a missing value in any of the fields at a given gridpoint will result in a missing value in the corresponding gridpoint in the output. If it is ``True`` all the non-missing values across the fields at a given grid point will be used to compute the sum. *New in Metview version 5.16.0*. In earlier versions the computations are carried out as if ``missing`` was set to ``False``.
+   :param missing: controls what happens when missing values are present in ``fs``. When it is ``False``, a missing value in any of the fields at a given gridpoint will result in a missing value in the corresponding gridpoint in the output. If it is ``True`` all the non-missing values across the fields at a given grid point will be used to compute the sum. *This parameter is new in Metview version 5.16.0*. In earlier versions the computations are carried out as if ``missing`` was set to ``False``.
    :type missing: bool
    :rtype: :class:`Fieldset`
 
