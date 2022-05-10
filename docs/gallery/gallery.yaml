@@ -54,6 +54,7 @@ map-scalar:
   - map_and_zonal_mean_curve
   - departure_from_zonal_mean
   - masking
+  - polygon_masking
   - deaccumulate_precip_fc
   - potential_temperature
   - equivalent_potential_temperature
