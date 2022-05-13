@@ -30,16 +30,32 @@ Version 5.16.0
   
 **Cross Section**
 
-* Improved data sampling near orography when using model level data and height vertical axis by implementing the following changes for :ref:`Cross Section Data <mcross_sect_icon>` and :ref:`Cross Section view <mxsectview_icon>`:
+* Improved data sampling near orography when using model level data and height vertical axis in :ref:`Cross Section Data <mcross_sect_icon>` and :ref:`Cross Section View <mxsectview_icon>`. Implemented by the following changes:
 
-   * the "count" and "level_list" options for the ``level_selection`` parameter were made available for user defined vertical coordinates too (when ``vertical_coordinates`` is "user")
-   * new parameter ``vertical_coordinate_extrapolate_mode``:  controls the extrapolation at the top and bottom of the coordinate range for user defined vertical coordinates (when ``vertical_coordinate`` is "user"). The possible options are "constant" and "linear".
-   * new parameter ``vertical_coordinate_extrapolate_fixed_sign``: for the "linear" extrapolation mode it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is “on” it prevents e.g. wind components to change sign due to extrapolation.
-   * fixed issue when 3D wind way displayed at incorrect levels when using model level data and height vertical axis
+   * The "count" and "level_list" options for the ``level_selection`` parameter were made available for user defined vertical coordinates too (when ``vertical_coordinates`` is "user")
+   * Added new parameter ``vertical_coordinate_extrapolate_mode``:  controls the extrapolation at the top and bottom of the coordinate range for user defined vertical coordinates (when ``vertical_coordinate`` is "user"). The possible options are "constant" and "linear".
+   * Added new parameter ``vertical_coordinate_extrapolate_fixed_sign``: for the "linear" extrapolation mode it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is “on” it prevents e.g. wind components to change sign due to extrapolation.
+   * Fixed issue when 3D wind way displayed at incorrect levels when using model level data and height vertical axis
 
    See the :ref:`gallery example <gallery_cross_section_wind3d_height_ml_orog>`.
 
 * In wind mode it is now mandatory to have the same number of input levels for all the required wind components
+
+**Hovmoeller**
+
+* Several improvements were made to the vertical Hovmeller diagrams in :func:`mhovmoeller_vertical` and :func:`mhovmoellerview`:
+  
+   .. warning::
+
+      Needs to be checked again!
+
+   * To display model level input with pressure vertical axis the input now **must contain** an LNSP (Logarithm of Surface Pressure) field. Previously it was not required but a fixed surface pressure value was used instead (internally), which led to incorrectly computed pressure levels.
+   * Added new parameter ``input_mode`` to control how the input data is extracted. The possible values are "area", "point" and "nearest_gridpoint". To specify the location for the last two modes the ``point`` parameter was added.
+   * Added a new mode "param" to ``vertical_level_type`` to enable the usage of arbitrary vertical coordinate fields identified by the ecCodes paramId specified in ``vertical_coordinate_param``.
+   * Added new parameter ``vertical_coordinate_extrapolate`` to control the extrapolation at the top and bottom when ``vertical_level_type`` is "param".
+   * Added new parameter ``vertical_coordinate_extrapolate_mode`` to controls the extrapolation. The possible options are "constant" and "linear".
+   * Added new parameter ``vertical_coordinate_extrapolate_fixed_sign``: for the "linear" extrapolation mode it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is “on” it prevents e.g. wind components to change sign due to extrapolation.
+
 
 **Macro/Python**
 
