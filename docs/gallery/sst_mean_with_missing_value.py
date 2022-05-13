@@ -14,6 +14,8 @@ GRIB - SST Mean with Missing Values
 
 import metview as mv
 
+# Note: at least Metview version 5.16.0 is required
+
 # getting the data
 use_cds = False
 
@@ -52,7 +54,8 @@ ci = g.select(shortName="ci")
 # set sst values to missing where there is sea ice
 sst_ice_free = mv.bitmap(sst, mv.bitmap(ci > 0, 1))
 
-# compute mean in two different ways
+# compute mean in two different ways. To use the missing argument
+# in mean() at least Metview version 5.16.0 is required
 sst_mean_t = mv.mean(sst_ice_free, missing=True)
 sst_mean_f = mv.mean(sst_ice_free, missing=False)
 
