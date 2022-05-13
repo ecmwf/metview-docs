@@ -55,7 +55,7 @@ params:
     values: '' 
 - vertical_coordinate_extrapolate:
     default: 'off'
-    desc: Performs an extrapolation for the ``top_level`` and ``bottom_level`` when the output vertical level range does not contain these levels. Only used when ``vertical_level_type`` is "pressure" or "user". *New in Metview version 5.16.0*
+    desc: Performs an extrapolation for the ``top_level`` and ``bottom_level`` when the output vertical level range does not contain these levels.  The purpose is to avoid blank areas in the plot near the bottom ot top. Only used when ``vertical_level_type`` is "pressure" or "user". *New in Metview version 5.16.0*
     ptype: str
     values: on/off
 - vertical_coordinate_extrapolate_mode:

@@ -90,7 +90,7 @@
 - vertical_coordinate_param:
     default: ''
     desc: Specifies the ecCodes paramId of the general vertical coordinates if
-      ``vertical_coordinates`` is set to "user".
+      ``vertical_coordinates`` is "user".
     ptype: str
     values: ''
 - vertical_coordinate_extrapolate:
@@ -106,7 +106,7 @@
       *New in Metview version 5.16.0*.
     ptype: str
     values: constant/linear  
-- vertical_coordinate_extrapolate_fixed_signed:
+- vertical_coordinate_extrapolate_fixed_sign:
     default: 'on'
     desc: |- 
       When ``vertical_coordinate_extrapolate_mode`` is "on" it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is "on" it prevents e.g. wind components to change sign due to extrapolation.
@@ -138,9 +138,9 @@
       * "from_data": the algorithm depends on the level type.
       
         * if the *input and output level types are the same* the input levels will also be used as output levels
-        * if *model level data used with an output pressure axis* first computes the absolute bottom pressure level from the data. Next for each model level computes the average pressure along the cross section line and uses it as the vertical pressure co-ordinate for that level. Finally computes extra levels at the bottom by adding an offset (10 hPa) until it reaches the bottom pressure level. This will avoid blank areas in the plot near the orography line.
-        * when ``vertical_coordinates`` is "user": on each input level computes the average output coordinate along the cross section line and uses it as the output vertical co-ordinate for that level. When "vertical_coordinate_extrapolate" is on additional levels are added to avoid blank areas in the plot near the orography line.
-      * "adaptive": 
+        * if *model level data used with pressure axis* first computes the absolute bottom pressure level from the data. Next for each model level computes the average pressure along the cross section line and uses it as the vertical pressure co-ordinate for that level. Finally computes extra levels at the bottom by adding an offset (10 hPa) until it reaches the bottom pressure level. This will avoid blank areas in the plot near the orography line.
+        * when ``vertical_coordinates`` is "user" on each input level computes the average output coordinate along the cross section line and uses it as the output vertical co-ordinate for that level. When "vertical_coordinate_extrapolate" is "on" additional levels are added to avoid blank areas in the plot near the orography line.
+
       * "count": calculates the output vertical levels by taking into account the bottom and top levels (``bottom_level`` and ``top_level``) and the given number of levels (``level_count``). The computed levels will be evenly spaced on either a linear or a logarithmic scale depending on the value of ``vertical_scaling``.
       * "level_list": use the given list of levels in ``level_list``
 
