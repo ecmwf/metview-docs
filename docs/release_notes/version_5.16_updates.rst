@@ -44,17 +44,16 @@ Version 5.16.0
 **Hovmoeller**
 
 * Several improvements were made to the vertical Hovmeller diagrams in :func:`mhovmoeller_vertical` and :func:`mhovmoellerview`:
-  
-   .. warning::
-
-      Needs to be checked again!
 
    * To display model level input with pressure vertical axis the input now **must contain** an LNSP (Logarithm of Surface Pressure) field. Previously it was not required but a fixed surface pressure value was used instead (internally), which led to incorrectly computed pressure levels.
    * Added new parameter ``input_mode`` to control how the input data is extracted. The possible values are "area", "point" and "nearest_gridpoint". To specify the location for the last two modes the ``point`` parameter was added.
-   * Added a new mode "param" to ``vertical_level_type`` to enable the usage of arbitrary vertical coordinate fields identified by the ecCodes paramId specified in ``vertical_coordinate_param``.
-   * Added new parameter ``vertical_coordinate_extrapolate`` to control the extrapolation at the top and bottom when ``vertical_level_type`` is "param".
+   * Added a new mode "user" to ``vertical_level_type`` to enable the usage of arbitrary vertical coordinate fields. These fields are identified by the ecCodes paramId specified in ``vertical_coordinate_param``.
+   * Added new parameter ``vertical_coordinate_extrapolate`` to control the extrapolation at the top and bottom when ``vertical_level_type`` is "user".
    * Added new parameter ``vertical_coordinate_extrapolate_mode`` to controls the extrapolation. The possible options are "constant" and "linear".
    * Added new parameter ``vertical_coordinate_extrapolate_fixed_sign``: for the "linear" extrapolation mode it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is “on” it prevents e.g. wind components to change sign due to extrapolation.
+
+   See the :ref:`gallery example <gallery_vert_hovm_ml_in_pressure>`.  
+   See the :ref:`gallery example <gallery_vert_hovm_ml_in_height>`. 
 
 
 **Macro/Python**
