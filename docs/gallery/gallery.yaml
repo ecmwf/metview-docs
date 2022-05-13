@@ -53,6 +53,7 @@ map-scalar:
   - vertical_integral
   - map_and_zonal_mean_curve
   - departure_from_zonal_mean
+  - sst_mean_with_missing_value
   - masking
   - polygon_masking
   - deaccumulate_precip_fc
