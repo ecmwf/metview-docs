@@ -55,9 +55,11 @@ Version 5.16.0
    * Added new parameter ``vertical_coordinate_extrapolate_mode`` to control the extrapolation. The possible options are "constant" and "linear".
    * Added new parameter ``vertical_coordinate_extrapolate_fixed_sign``: for the "linear" extrapolation mode it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is “on” it prevents e.g. wind components to change sign due to extrapolation.
 
-   See the :ref:`gallery example <gallery_vert_hovm_ml_in_pressure>`.  
-   See the :ref:`gallery example <gallery_vert_hovm_ml_in_height>`. 
-
+   See the :ref:`gallery example <gallery_vert_hovm_ml_in_pressure>` for displaying model levels in pressure level Hovmoeller
+   and the :ref:`gallery example <gallery_vert_hovm_ml_in_height>` for displaying model levels in height level Hovmoeller. 
+     .. image:: /_build/html/_images/vert_hovm_ml_in_height.png
+      :width: 350px
+      
 
 **Macro/Python**
 
@@ -74,9 +76,12 @@ See the :ref:`gallery example <gallery_sst_mean_with_missing_value>`.
 
 **UI/uPlot**
 
-* Added new projection 'EPSG:3035' to :func:`geoview`
+* Added new projection 'EPSG:3035' to :func:`geoview`, :ref:`gallery example <gallery_epsg_3035>`.
 * Added new **Preferences** option called ``Default Folder For File Dialogs`` to control what folder the Save/Export dialogs show when they are opened up. The possible values are "current" and "previous".
 * Fixed issue when the Metview interface exited with error code 1 on normal exit
+
+     .. image:: /_build/html/_images/epsg_3035.png
+      :width: 350px
 
 **Miscellaneous**
 

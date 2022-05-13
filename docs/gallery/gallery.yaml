@@ -20,6 +20,7 @@ projection:
     - bonne
     - bonne_subarea
     - collignon
+    - epsg_3035
 coastlines:
   title: Coastlines
   anchor: _gallery_group_coastlines
