@@ -12,6 +12,7 @@ Metview binary release notes
     :maxdepth: 1
     :glob:
 
+    version_5.16_updates 
     version_5.15_updates    
     version_5.14_updates    
     version_5.13_updates
