@@ -24,7 +24,7 @@ Version 5.16.0
    -  Built with **ODC** version **1.4.5**
 
    -  Includes
-      version `1.11.0 <https://github.com/ecmwf/metview-python/blob/master/CHANGELOG.rst>`__ of
+      version `1.12.0 <https://github.com/ecmwf/metview-python/blob/master/CHANGELOG.rst>`__ of
       the Python interface
 
   
@@ -38,6 +38,9 @@ Version 5.16.0
    * Fixed issue when 3D wind way displayed at incorrect levels when using model level data and height vertical axis
 
    See the :ref:`gallery example <gallery_cross_section_wind3d_height_ml_orog>`.
+     .. image:: /_build/html/_images/cross_section_wind3d_height_ml_orog.png
+      :width: 350px
+      
 
 * In wind mode it is now mandatory to have the same number of input levels for all the required wind components
 
@@ -63,13 +66,19 @@ Version 5.16.0
 * :func:`mvl_ml2hPa`, :func:`ml_to_hl`, :func:`mvl_geopotential_on_ml`: faster implementation
 * :func:`mvl_ml2hPa`: fixed issue when incorrect results were produced when called from Python
 * :func:`mvl_geopotential_on_ml`: fixed issue when crashed during reporting certain errors
-
+* NetCDF variables with uint values are now supported
+* NetCDF variables with int64 attributes are now supported
+* fixed issue where two newly-created NCOLS-formatted geopoints could not be merged after one had been written to disk
 
 See the :ref:`gallery example <gallery_sst_mean_with_missing_value>`.
 
 **UI/uPlot**
 
+* Added new projection 'EPSG:3035' to :func:`geoview`
 * Added new **Preferences** option called ``Default Folder For File Dialogs`` to control what folder the Save/Export dialogs show when they are opened up. The possible values are "current" and "previous".
 * Fixed issue when the Metview interface exited with error code 1 on normal exit
- 
- 
+
+**Miscellaneous**
+
+* the environment variable ECCODES_DEBUG is now preserved when running at ECMWF
+* if RPC libraries are not found when building Metview, the build will stop at CMake time with a relevant error message
