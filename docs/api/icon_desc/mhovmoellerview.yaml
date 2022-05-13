@@ -20,12 +20,14 @@ params:
       * "point": the data is interpolated to the location specified by ``point``
       * "nearest_gridpoint": the nearest gridpoint to the location specified by ``point`` is extracted
       * "area": the values inside the ``area`` are averaged using :func:`integrate`
+
+      *New in Metview version 5.16.0*
     type: str
     values: point/nearest_gridpoint/area
 - point:
     default: '0/0'
     desc: Specifies the coordinates (as [lat, lon]) of the point for which the vertical Hovmoeller
-      is computed. Enabled when ``type`` is "vertical_hovm"  and ``input_mode`` is "point" or "nearest_gridpoint".
+      is computed. Enabled when ``type`` is "vertical_hovm"  and ``input_mode`` is "point" or "nearest_gridpoint". *New in Metview version 5.16.0*
     ptype: list[number]
     values: ''
 - line:
@@ -138,9 +140,9 @@ params:
 
       * "as_in_data": the level type of ``data`` is used. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa.
       * "pressure": indicates that the ``data`` is defined on ECMWF model levels and the output vertical coordinate should be pressure in hPa. When this option is selected the input data must contain the corresponding Logarithm of Surface Pressure (LNSP) fields.
-      * "param": the vertical coordinates (both input and output) are defined by the fields of ``vertical_coordinate_param``. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa.
+      * "user": the vertical coordinates (both input and output) are defined by the fields of ``vertical_coordinate_param``. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa. *New in Metview version 5.16.0*
    ptype: str
-   values: 'as_in_data/pressure/param'
+   values: 'as_in_data/pressure/user'
 - lnsp_param:
     default: '152'
     desc: Specifies the ecCodes paramId used to identify the Logarithm of Surface Pressure (LNSP) in the input data. Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "pressure". 
@@ -148,22 +150,22 @@ params:
     values: ''
 - vertical_coordinate_param:
     default: ''
-    desc: Specifies the ecCodes paramId used to identify the vertical coordinate fields in the input data.  Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "param". 
+    desc: Specifies the ecCodes paramId used to identify the vertical coordinate fields in the input data.  Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "user". *New in Metview version 5.16.0*
     ptype: number
     values: '' 
 - vertical_coordinate_extrapolate:
     default: 'off'
-    desc: Performs and extrapolation for the ``top_level`` and ``bottom_level`` when the output vertical level range does not contain these levels. Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "pressure" or "param".
+    desc: Performs and extrapolation for the ``top_level`` and ``bottom_level`` when the output vertical level range does not contain these levels. Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "pressure" or "user". *New in Metview version 5.16.0*
     ptype: str
     values: on/off
 - vertical_coordinate_extrapolate_mode:
     default: 'constant'
-    desc: Specifies the extrapolation technique. In "constant" mode the values on the nearest input levels are copied onto the target extrapolated levels. In "linear" mode a linear extrapolation is performed using the nearest two input levels. Enabled when ``vertical_coordinate_extrapolate`` is "on".
+    desc: Specifies the extrapolation technique. In "constant" mode the values on the nearest input levels are copied onto the target extrapolated levels. In "linear" mode a linear extrapolation is performed using the nearest two input levels. Enabled when ``vertical_coordinate_extrapolate`` is "on". *New in Metview version 5.16.0*
     ptype: str
     values: constant/linear  
-- vertical_coordinate_extrapolate_fixed_signed:
+- vertical_coordinate_extrapolate_fixed_sign:
     default: 'on'
-    desc: When ``vertical_coordinate_extrapolate_mode`` is "on" it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is "on" it prevents e.g. wind components to change sign due to extrapolation.
+    desc: When ``vertical_coordinate_extrapolate_mode`` is "on" it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is "on" it prevents e.g. wind components to change sign due to extrapolation. *New in Metview version 5.16.0*
     ptype: str
     values: on/off   
 - vertical_scaling:
