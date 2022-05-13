@@ -41,4 +41,8 @@ Version 5.16.0
 
 * In wind mode it is now mandatory to have the same number of input levels for all the required wind components
 
-**Vertical Computations**
+**Macro/Python**
+
+* :func:`mean` and :func:`sum` now have an option called ``missing`` to control how to handle missing values during the computations. By default ``missing`` is False, which means that if at a gridpoint there is a missing value in any of the input fields the output will contain a missing value at that gridpoint. However, when ``missing`` is True all the non-missing values are used to form the mean/sum at a given gridpoint. 
+
+See the :ref:`gallery example <gallery_sst_mean_with_missing_value>`.
