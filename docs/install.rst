@@ -52,6 +52,19 @@ If not in a conda environment, then install via pip:
     pip install metview
 
 
+Installing Metview from conda on an M1 Mac
+******************************************
+
+While not all of the third-party libraries required for Metview's user interface are available
+on conda for M1-based Mac devices, metview-batch and metview-python are available for it -
+the instructions in the above section will work for it. If you require Metview's user interface
+on an M1 Mac, you should create a separate conda environment and choose the channel `conda-forge/osx-64`,
+so the command would be:
+
+.. code-block:: bash
+
+    conda install metview -c conda-forge/osx-64
+
 Community-built Binary Packages
 ==================================
 

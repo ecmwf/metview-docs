@@ -5,7 +5,7 @@ speed
 .. py:function:: Fieldset.speed()
    :noindex:
 
-   *New in metview-python version 1.9.0*.
+   *New in Metview version 5.14.0*. The method callable without an argument on a :class:`Fieldset` object is *new in metview-python version 1.9.0*.
 
    Computes the wind speed from the ``u`` and ``v`` wind components.
 
