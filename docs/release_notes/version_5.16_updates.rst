@@ -63,8 +63,8 @@ Version 5.16.0
 
 **Macro/Python**
 
-* :func:`poly_mask`, :ref:`gallery example <gallery_polygon_masking>`.
-* :func:`mean` and :func:`sum` now have an option called ``missing`` to control how to handle missing values during the computations. By default ``missing`` is False, which means that if at a gridpoint there is a missing value in any of the input fields the output will contain a missing value at that gridpoint. However, when ``missing`` is True all the non-missing values are used to form the mean/sum at a given gridpoint. 
+* :func:`poly_mask`, :ref:`gallery example with user points <gallery_polygon_masking>`, :ref:`gallery example with shapefile <gallery_shapefile_masking>`.
+* :func:`mean` and :func:`sum` now have an option called ``missing`` to control how to handle missing values during the computations. By default ``missing`` is False, which means that if at a gridpoint there is a missing value in any of the input fields the output will contain a missing value at that gridpoint. However, when ``missing`` is True all the non-missing values are used to form the mean/sum at a given gridpoint, :ref:`gallery example <gallery_sst_mean_with_missing_value>`
 * :func:`mvl_ml2hPa`, :func:`ml_to_hl`, :func:`mvl_geopotential_on_ml`: faster implementation
 * :func:`mvl_ml2hPa`: fixed issue when incorrect results were produced when called from Python
 * :func:`mvl_geopotential_on_ml`: fixed issue when crashed during reporting certain errors
@@ -72,7 +72,8 @@ Version 5.16.0
 * NetCDF variables with int64 attributes are now supported
 * fixed issue where two newly-created NCOLS-formatted geopoints could not be merged after one had been written to disk
 
-See the :ref:`gallery example <gallery_sst_mean_with_missing_value>`.
+     .. image:: /_build/html/_images/shapefile_masking.png
+      :width: 350px
 
 **UI/uPlot**
 
