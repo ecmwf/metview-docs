@@ -1,7 +1,7 @@
 return: :class:`Table`
 summary: Reads ASCII table file with various formatting and reading
   options allowing a wide variety of ASCII data tables to be parsed. See
-  `ASCII Tables <https://confluence.ecmwf.int/display/METV/ASCII+Tables>`_
+  :ref:`ASCII Tables <macro_table>`
   for more details. 
 oneliner: Reads ASCII table data with various formatting and reading
   options allowing a wide variety of ASCII data tables to be parsed.
@@ -31,7 +31,7 @@ params:
       possible to represent missing values in the table. If "off", then
       a delimiter not surrounded by two data values indicates there
       is a missing value on at least one side of it. See the discussion
-      in `ASCII Tables <https://confluence.ecmwf.int/display/METV/ASCII+Tables>`_
+      in :ref:`ASCII Tables macro_table>`
       for more details.
     ptype: str
     values: 'on/off'

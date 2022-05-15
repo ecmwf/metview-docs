@@ -1,7 +1,7 @@
 return: :class:`Request`
 summary: rst
 oneliner: Runs the
-   `FLEXPART <https://confluence.ecmwf.int/display/METV/The+FLEXPART+interface>`_ Lagrangian 
+   :ref:`FLEXPART <the_flexpart_interface>` Lagrangian 
    particle dispersion model.
 params:
 - output_path:
@@ -9,8 +9,7 @@ params:
     desc: Specifies the location of the output data files. Both an absolute and relative
       path can be given here. Please note that Metview converts FLEXPART output into
       other formats and only these converted results are copied from the work directory
-      into ``output_path``. For further details about the output formats click `here
-      <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_.
+      into ``output_path``. For further details about the output formats click :ref:`here <flexpart_output>`.
     ptype: str
     values: ''
 - input_data:
@@ -40,7 +39,7 @@ params:
       OH_7lev_agl.dat, surfdata.t, surfdepo.t ) needed to run FLEXPART. Both an absolute
       and relative path can be given here. If it is left blank (this is the default)
       Metview will use the MV_FLEXPART_RESOURCES environment variable to locate the
-      resources. For further details about the resources `click here <https://confluence.ecmwf.int/display/METV/FLEXPART+setup>`_.
+      resources. For further details about the resources :ref:`click here <flexpart_setup>`.
     ptype: str
     values: ''
 - simulation_direction:
@@ -106,7 +105,7 @@ params:
       * "none": no gridded output
       * "rtime": residence time/response function
       
-      For more details about gridded output `click here. <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_
+      For more details about gridded output :ref:`click here. <flexpart_output>`
     ptype: str
     values: 'none/conc/mixr/both/rtime'
 - output_flux:
@@ -115,15 +114,15 @@ params:
       output. Fluxes corresponding to northward, southward, eastward,
       westward, upward and downward directions are calculated for each grid cell of
       the output grid.The control surfaces are placed in the middle of each output grid
-      cell. For more details about flux output `click
-      here. <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_
+      cell. For more details about flux output :ref:`click
+      here. <flexpart_output>`
     ptype: str
     values: on/off
 - output_trajectory:
     default: 'off'
     desc: Specifies if the plume trajectories should be computed.
       For more details about trajectory output `click
-      here. <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_
+      here. <flexpart_output>`
     ptype: str
     values: on/off
 - output_area:
@@ -148,7 +147,7 @@ params:
     desc: Specifies the location of the user defined species files. Both an absolute
       and relative path can be given here. If it is left blank (this is the default
       value) Metview will use the MV_FLEXPART_SPECIES environment variable to locate
-      the species. For more details about the species `click here <https://confluence.ecmwf.int/display/METV/FLEXPART+species>`_.
+      the species. For more details about the species :ref:`click here <flexpart_species>`.
     ptype: str
     values: ''
 - release_species:
@@ -157,7 +156,7 @@ params:
       release locations the same species are emitted. The species are identified by
       the NNN number (with leading zeros) appearing in the the name of the SPECIES_NNN
       files. These files contain the physical and chemical properties of species.
-      For more details about the species `click here <https://confluence.ecmwf.int/display/METV/FLEXPART+species>`_.
+      For more details about the species :ref:`click here <flexpart_species>`.
     ptype: str or list[str]
     values: ''
 - release_units:
@@ -183,7 +182,7 @@ params:
     desc: Enables the usage of receptor sites. When it is enabled
       the list of receptor sites can be defined via ``receptor_names``, ``receptor_latitudes``
       and ``receptor_longitudes``. For more details about
-      receptor output `click here <https://confluence.ecmwf.int/display/METV/FLEXPART+species>`_.
+      receptor output :ref:`click here <flexpart_species>`.
     ptype: str
     values: on/off
 - receptor_names:

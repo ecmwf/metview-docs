@@ -2,7 +2,7 @@
 return: :class:`Request`
 summary: rst
 oneliner: Visualises the results of the
-   `FLEXTRA <https://confluence.ecmwf.int/display/METV/The+FLEXTRA+interface>`_ trajectory
+   :ref:`FLEXTRA <the_flextra_interface>` trajectory
     model.
 params:
 - flextra_plot_type:

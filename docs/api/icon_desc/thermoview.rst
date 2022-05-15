@@ -6,4 +6,4 @@ A suitable :class:`Fieldset` (GRIB), :class:`Bufr` or :func:`input_visualiser` d
 
 When using :func:`thermoview` the generated profile data cannot be accessed. If you need to access this data use :func:`thermo_bufr` or :func:`thermo_grib` instead.
 
-For further details on the role and usage of views in the visualisation process, please see `Anaylis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+For further details on the role and usage of views in the visualisation process, please see :ref:`Anaylis Views <analysis_views>`.

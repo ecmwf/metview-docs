@@ -1,6 +1,5 @@
 return: :class:`Request`
-summary: Controls the parsing and plotting of
- `ASCII Tables <https://confluence.ecmwf.int/display/METV/ASCII+Tables>`_ such
+summary: Controls the parsing and plotting of :ref:`ASCII Tables <macro_table>` such
   as CSV. The columns used for plotting can be
   selected by name (if there is a header row) or by index, starting at 1. The points
   may be interpreted as either geographic co-ordinates or as generic X/Y co-ordinates. 
@@ -125,7 +124,7 @@ params:
       are aligned in columns. Note that in this case, it is not possible to represent
       missing values in the table. If "off", then a delimiter not surrounded by two data
       values indicates there is a missing value on at least one side of it. 
-      See `ASCII Tables <https://confluence.ecmwf.int/display/METV/ASCII+Tables>`_ for more details. 
+      See :ref:`ASCII Tables <macro_table>` for more details. 
     ptype: str
     values: 'on/off'
 - table_header_row:
@@ -147,6 +146,6 @@ params:
 - table_meta_data_rows:
     default: ''
     desc: Specifies the rows (if any) which contain meta-data in a form which can be 
-      parsed by Metview. See `ASCII Tables <https://confluence.ecmwf.int/display/METV/ASCII+Tables>`_ for more details. 
+      parsed by Metview. See :ref:`ASCII Tables macro_table>` for more details. 
     ptype: number or list
     values: ''

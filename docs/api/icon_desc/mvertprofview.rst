@@ -4,6 +4,6 @@ In addition to the parameters required for the vertical profile computation, :fu
 
 When using :func:`mvertprofview` the generated profile data cannot be accessed. If you need to access this data use :func:`mvert_prof` instead.
 
-For further details on the role and usage of views in the visualisation process, please see `Anaylis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+For further details on the role and usage of views in the visualisation process, please see :ref:`Anaylis Views <analysis_views>`.
 
 

@@ -1,4 +1,4 @@
 
-Runs the `FLEXTRA <https://confluence.ecmwf.int/display/METV/The+FLEXTRA+interface>`_ trajectory model
+Runs the :ref:`FLEXTRA <the_flextra_interface>` trajectory model
 
-.. tip:: A tutorial on using FLEXTRA from within Metview is available `here <https://confluence.ecmwf.int/display/METV/FLEXTRA+tutorial>`_.
+.. tip:: A tutorial on using FLEXTRA from within Metview is available :ref:`here <flextra_tutorial>`.

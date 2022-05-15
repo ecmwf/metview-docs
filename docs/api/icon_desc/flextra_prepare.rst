@@ -1,6 +1,6 @@
-Generates the gridded input data and the AVAILABLE file needed to run the `FLEXTRA <https://confluence.ecmwf.int/display/METV/The+FLEXPART+interface>`_ trajectory model. The input forecast or analysis fields are either automatically retrieved from ECMWF's MARS archive or read from the specified input file. 
+Generates the gridded input data and the AVAILABLE file needed to run the :ref:`FLEXTRA <the_flexpart_interface>` trajectory model. The input forecast or analysis fields are either automatically retrieved from ECMWF's MARS archive or read from the specified input file. 
 
-.. tip:: A tutorial on using FLEXTRA from within Metview is available `here <https://confluence.ecmwf.int/display/METV/FLEXTRA+tutorial>`_.
+.. tip:: A tutorial on using FLEXTRA from within Metview is available :ref:`here <flextra_tutorial>`.
 
 **What data is available?**
 

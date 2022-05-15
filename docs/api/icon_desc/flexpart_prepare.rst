@@ -1,6 +1,6 @@
-Generates the gridded input data and the AVAILABLE file needed to run the `FLEXPART <https://confluence.ecmwf.int/display/METV/The+FLEXPART+interface>`_  Lagrangian dispersion model. The input forecast or analysis fields are either automatically retrieved from ECMWF's MARS archive or read from the specified input file. 
+Generates the gridded input data and the AVAILABLE file needed to run the :ref:`FLEXPART <the_flexpart_interface>`  Lagrangian dispersion model. The input forecast or analysis fields are either automatically retrieved from ECMWF's MARS archive or read from the specified input file. 
 
-.. tip:: A tutorial on using FLEXPART from within Metview is available `here <https://confluence.ecmwf.int/display/METV/Using+FLEXPART+with+Metview>`_.
+.. tip:: A tutorial on using FLEXPART from within Metview is available :ref:`here <using_flexpart_with_metview>`.
 
 **What data is available?**
 

@@ -1,6 +1,6 @@
-Converts GRIB data into the format required by the `VAPOR <https://confluence.ecmwf.int/display/METV/3D+visualisation+with+VAPOR>`_  3D visualisation system.
+Converts GRIB data into the format required by the :ref:`VAPOR <3d_visualisation_with_vapor>`  3D visualisation system.
 
-.. tip:: A tutorial for :func:`vapor_prepare` can be found `here <https://confluence.ecmwf.int/display/METV/VAPOR+Tutorial>`_.  Details about setting up the Metview VAPOR interface outside ECMWF can be accessed `here <https://confluence.ecmwf.int/display/METV/VAPOR+Setup>`_.
+.. tip:: A tutorial for :func:`vapor_prepare` can be found :ref:`here <vapor_tutorial>`.  Details about setting up the Metview VAPOR interface outside ECMWF can be accessed :ref:`here <vapor_setup>`.
 
 **VAPOR input files**
 

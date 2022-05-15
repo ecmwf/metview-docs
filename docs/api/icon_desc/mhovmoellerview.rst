@@ -4,5 +4,5 @@ In addition to the parameters required for the Hovmoeller diagram computation, :
 
 To access the computed output values use a hovmoeller data object.
 
-For further details on the role and usage of views in the visualisation process, please see `Anaylis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+For further details on the role and usage of views in the visualisation process, please see :ref:`Anaylis Views <analysis_views>`.
   

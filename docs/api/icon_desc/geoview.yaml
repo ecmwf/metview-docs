@@ -1,7 +1,7 @@
 return: :class:`Request`
 summary: Defines a geographical view. For further details on the role and usage of
   views in the visualisation process, please see
-   `Anaylis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+   :ref:`Anaylis Views <analysis_views>`.
 oneliner: Defines a geographical view.  
 params:
 - coastlines:

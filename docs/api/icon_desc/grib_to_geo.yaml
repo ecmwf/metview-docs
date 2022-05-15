@@ -17,8 +17,7 @@ params:
     default: traditional
     desc: Specifies which of two geopoints_formats should be used for the output
       - either "traditional" (6 columns including date, time and level) or "xyv" (just
-      3 columns - longitude, latitude and value). See `Geopoints <https://confluence.ecmwf.int/display/METV/Geopoints>`_
-      for details of these formats.
+      3 columns - longitude, latitude and value). See :class:`Geopoints` for details on these formats.
     ptype: str
     values: traditional/xyv
 - missing_data:

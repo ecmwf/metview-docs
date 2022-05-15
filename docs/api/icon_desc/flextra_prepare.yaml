@@ -1,7 +1,7 @@
 return: :class:`Request`
 summary: rst
 oneliner: Generates the gridded input data and the AVAILABLE file needed to 
-  run the `FLEXTRA <https://confluence.ecmwf.int/display/METV/The+FLEXPART+interface>`_ trajectory model. 
+  run the :ref:`FLEXTRA <the_flexpart_interface>` trajectory model. 
 params:
 - flextra_prepare_mode:
     default: forecast

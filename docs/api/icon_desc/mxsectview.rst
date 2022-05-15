@@ -6,4 +6,4 @@ When using :func:`mxsectview` the generated profile data cannot be accessed. If 
 
 If an orography is plotted it can be customised by applying :func:`mgraph`.
 
-For further details on the role and usage of views in the visualisation process, please see `Anaylis Views <https://confluence.ecmwf.int/display/METV/Analysis+Views>`_.
+For further details on the role and usage of views in the visualisation process, please see :ref:`Anaylis Views <analysis_views>`.

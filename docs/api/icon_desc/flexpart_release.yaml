@@ -1,6 +1,6 @@
 return: :class:`Request`
 summary: Defines release conditions for
- running the `FLEXPART <https://confluence.ecmwf.int/display/METV/The+FLEXPART+interface>`_
+ running the :ref:`FLEXPART <the_flexpart_interface>`
  Lagrangian particle dispersion model via :func:`flexpart_run`.
 oneliner: Defines release conditions for :func:`flexpart_run`.
 params:

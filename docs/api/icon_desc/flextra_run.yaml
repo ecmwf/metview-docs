@@ -1,8 +1,6 @@
 return: :class:`Request`
 summary:  rst
-oneliner: Runs the
-   `FLEXTRA <https://confluence.ecmwf.int/display/METV/The+FLEXTRA+interface>`_ trajectory
-    model.
+oneliner: Runs the :ref:`FLEXTRA <the_flextra_interface>` trajectory model.
 params:
 - flextra_exe_path:
     default: ''

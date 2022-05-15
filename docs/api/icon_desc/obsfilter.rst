@@ -1,4 +1,4 @@
-Filters data from a BUFR file and produces output either a :class:`Bufr`, :class:`Geopoints` or :class:`Table` object. A tutorial about the use of :func:`obsfilter` can be found `here <https://confluence.ecmwf.int/display/METV/Observation+Filter?preview=/14158627/18482215/mv_bufr_tutorial.pdf>`_. 
+Filters data from a BUFR file and produces output either a :class:`Bufr`, :class:`Geopoints` or :class:`Table` object. A tutorial about the use of :func:`obsfilter` can be found :ref:`here <bufr_tutorial>`. 
 
 **Filtering Efficiency**
 

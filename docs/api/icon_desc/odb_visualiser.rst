@@ -1,6 +1,6 @@
 Defines the visualisation for :class:`Odb` data using various plot types. Optionally it can perform an `ODB/SQL <https://confluence.ecmwf.int/display/ODBAPI/SQL>`_ query on the input ODB and visualises the resulting data. It works for both databases (ODB-1) and files (ODB-2 or ODC).
 
-.. tip:: A tutorial about using ODB in Metview can be found `here <https://confluence.ecmwf.int/display/METV/ODB+Tutorial>`_.
+.. tip:: A tutorial about using ODB in Metview can be found :ref:`here <odb_tutorial>`.
 
 **How can ODB/SQL queries be used in odb_visualiser?**
 
