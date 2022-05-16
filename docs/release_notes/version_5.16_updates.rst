@@ -35,11 +35,13 @@ Version 5.16.0
    * The "count" and "level_list" options for the ``level_selection`` parameter were made available for user defined vertical coordinates too (when ``vertical_coordinates`` is "user")
    * Added new parameter ``vertical_coordinate_extrapolate_mode``:  controls the extrapolation at the top and bottom of the coordinate range for user defined vertical coordinates (when ``vertical_coordinate`` is "user"). The possible options are "constant" and "linear".
    * Added new parameter ``vertical_coordinate_extrapolate_fixed_sign``: for the "linear" extrapolation mode it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is “on” it prevents e.g. wind components to change sign due to extrapolation.
-   * Fixed issue when 3D wind way displayed at incorrect levels when using model level data and height vertical axis
+   * Fixed issue when 3D wind way displayed at incorrect levels when using model level data and height vertical axis.
 
-   See the :ref:`gallery example <gallery_cross_section_wind3d_height_ml_orog>`.
-     .. image:: /_build/html/_images/cross_section_wind3d_height_ml_orog.png
+   See the new :ref:`gallery example <gallery_cross_section_wind3d_height_ml_orog>` showcasing some of these options:
+
+   .. image:: /_build/html/_static/gallery/cross_section_wind3d_height_ml_orog.png
       :width: 350px
+      :target: ../gen_files/gallery/cross_section_wind3d_height_ml_orog.html
       
 
 * In wind mode it is now mandatory to have the same number of input levels for all the required wind components
@@ -55,34 +57,53 @@ Version 5.16.0
    * Added new parameter ``vertical_coordinate_extrapolate_mode`` to control the extrapolation. The possible options are "constant" and "linear".
    * Added new parameter ``vertical_coordinate_extrapolate_fixed_sign``: for the "linear" extrapolation mode it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is “on” it prevents e.g. wind components to change sign due to extrapolation.
 
-   See the :ref:`gallery example <gallery_vert_hovm_ml_in_pressure>` for displaying model levels in pressure level Hovmoeller
-   and the :ref:`gallery example <gallery_vert_hovm_ml_in_height>` for displaying model levels in height level Hovmoeller. 
-     .. image:: /_build/html/_images/vert_hovm_ml_in_height.png
-      :width: 350px
-      
+   See the new gallery examples for displaying :ref:`model levels with pressure axis <gallery_vert_hovm_ml_in_pressure>` and :ref:`model levels with height axis <gallery_vert_hovm_ml_in_height>`: 
+
+   .. image:: /_build/html/_static/gallery/vert_hovm_ml_in_pressure.png
+      :width: 250px
+      :target: ../gen_files/gallery/vert_hovm_ml_in_pressure.html
+
+   .. image:: /_build/html/_static/gallery/vert_hovm_ml_in_height.png
+      :width: 250px
+      :target: ../gen_files/gallery/vert_hovm_ml_in_height.html
 
 **Macro/Python**
 
-* :func:`poly_mask`, :ref:`gallery example with user points <gallery_polygon_masking>`, :ref:`gallery example with shapefile <gallery_shapefile_masking>`.
-* :func:`mean` and :func:`sum` now have an option called ``missing`` to control how to handle missing values during the computations. By default ``missing`` is False, which means that if at a gridpoint there is a missing value in any of the input fields the output will contain a missing value at that gridpoint. However, when ``missing`` is True all the non-missing values are used to form the mean/sum at a given gridpoint, :ref:`gallery example <gallery_sst_mean_with_missing_value>`
-* :func:`mvl_ml2hPa`, :func:`ml_to_hl`, :func:`mvl_geopotential_on_ml`: faster implementation
+* Added new function :func:`poly_mask` to mask GRIB fields using arbitrary polygons. See the new gallery examples with polygons :ref:`defined by user points <gallery_polygon_masking>` and :ref:`extracted from a shapefile <gallery_shapefile_masking>`:
+
+   .. image:: /_build/html/_static/gallery/polygon_masking.png   
+      :width: 200px
+      :target: ../gen_files/gallery/gallery_polygon_masking.html
+
+   .. image:: /_build/html/_static/gallery/shapefile_masking.png
+      :width: 200px
+      :target: ../gen_files/gallery/shapefile_masking.html
+
+* :func:`mean` and :func:`sum` now have an option called ``missing`` to control how to handle missing values during the computations. By default ``missing`` is False, which means that if at a gridpoint there is a missing value in any of the input fields the output will contain a missing value at that gridpoint. However, when ``missing`` is True all the non-missing values are used to form the mean/sum at a given gridpoint. See the :ref:`gallery example <gallery_sst_mean_with_missing_value>`:
+
+   .. image:: /_build/html/_static/gallery/sst_mean_with_missing_value.png
+      :width: 350px
+      :target: ../gen_files/gallery/sst_mean_with_missing_value.html
+
+* :func:`mvl_ml2hPa`, :func:`ml_to_hl`, :func:`mvl_geopotential_on_ml`: these functions were re-implemented to improve performance by using less GRIB encoding-decoding and storing intermediate results in memory. The speed-up is quite significant: it is about x20 for :func:`mvl_ml2hPa`, x6 for :func:`ml_to_hl` and x3 for :func:`mvl_geopotential_on_ml`. This was achieved by only a 30% increase in memory usage for :func:`mvl_ml2hPa`, while the other two functions now use significantly less memory.
 * :func:`mvl_ml2hPa`: fixed issue when incorrect results were produced when called from Python
 * :func:`mvl_geopotential_on_ml`: fixed issue when crashed during reporting certain errors
 * NetCDF variables with uint values are now supported
 * NetCDF variables with int64 attributes are now supported
 * fixed issue where two newly-created NCOLS-formatted geopoints could not be merged after one had been written to disk
 
-     .. image:: /_build/html/_images/shapefile_masking.png
-      :width: 350px
 
 **UI/uPlot**
 
-* Added new projection 'EPSG:3035' to :func:`geoview`, :ref:`gallery example <gallery_epsg_3035>`.
+* Added new projection 'EPSG:3035' to :func:`geoview`, see the :ref:`gallery example <gallery_epsg_3035>`:
+
+   .. image:: /_build/html/_static/gallery/epsg_3035.png
+      :width: 250px
+      :target: ../gen_files/gallery/epsg_3035.html
+
 * Added new **Preferences** option called ``Default Folder For File Dialogs`` to control what folder the Save/Export dialogs show when they are opened up. The possible values are "current" and "previous".
 * Fixed issue when the Metview interface exited with error code 1 on normal exit
 
-     .. image:: /_build/html/_images/epsg_3035.png
-      :width: 350px
 
 **Miscellaneous**
 
