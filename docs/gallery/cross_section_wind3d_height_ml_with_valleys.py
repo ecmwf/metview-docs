@@ -184,7 +184,7 @@ title = mv.mtext(
 )
 
 # define the output plot file
-mv.setoutput(mv.pdf_output(output_name="cross_section_wind3d_height_with_valleys"))
+mv.setoutput(mv.pdf_output(output_name="cross_section_wind3d_height_ml_with_valleys"))
 
 # generate plot
 mv.plot(
