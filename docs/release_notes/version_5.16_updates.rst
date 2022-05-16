@@ -39,11 +39,11 @@ Version 5.16.0
 
    See the new gallery examples (:ref:`example1 <gallery_cross_section_wind3d_height_ml_orog>` and :ref:`example2 <gallery_cross_section_wind3d_height_ml_with_valleys>`) showcasing some of these options:
 
-   .. image:: /_build/html/_static/gallery/cross_section_wind3d_height_ml_orog.png
+   .. image:: /_static/gallery/cross_section_wind3d_height_ml_orog.png
       :width: 250px
       :target: ../gen_files/gallery/cross_section_wind3d_height_ml_orog.html
 
-   .. image:: /_build/html/_static/gallery/cross_section_wind3d_height_ml_with_valleys.png
+   .. image:: /_static/gallery/cross_section_wind3d_height_ml_with_valleys.png
       :width: 250px
       :target: ../gen_files/gallery/cross_section_wind3d_height_ml_with_valleys.html
 
@@ -62,11 +62,11 @@ Version 5.16.0
 
    See the new gallery examples for displaying :ref:`model levels with pressure axis <gallery_vert_hovm_ml_in_pressure>` and :ref:`model levels with height axis <gallery_vert_hovm_ml_in_height>`: 
 
-   .. image:: /_build/html/_static/gallery/vert_hovm_ml_in_pressure.png
+   .. image:: /_static/gallery/vert_hovm_ml_in_pressure.png
       :width: 250px
       :target: ../gen_files/gallery/vert_hovm_ml_in_pressure.html
 
-   .. image:: /_build/html/_static/gallery/vert_hovm_ml_in_height.png
+   .. image:: /_static/gallery/vert_hovm_ml_in_height.png
       :width: 250px
       :target: ../gen_files/gallery/vert_hovm_ml_in_height.html
 
@@ -74,17 +74,17 @@ Version 5.16.0
 
 * Added new function :func:`poly_mask` to mask GRIB fields using arbitrary polygons. See the new gallery examples with polygons :ref:`defined by user points <gallery_polygon_masking>` and :ref:`extracted from a shapefile <gallery_shapefile_masking>`:
 
-   .. image:: /_build/html/_static/gallery/polygon_masking.png   
+   .. image:: /_static/gallery/polygon_masking.png   
       :width: 200px
       :target: ../gen_files/gallery/gallery_polygon_masking.html
 
-   .. image:: /_build/html/_static/gallery/shapefile_masking.png
+   .. image:: /_static/gallery/shapefile_masking.png
       :width: 200px
       :target: ../gen_files/gallery/shapefile_masking.html
 
 * :func:`mean` and :func:`sum` now have an option called ``missing`` to control how to handle missing values during the computations. By default ``missing`` is False, which means that if at a gridpoint there is a missing value in any of the input fields the output will contain a missing value at that gridpoint. However, when ``missing`` is True all the non-missing values are used to form the mean/sum at a given gridpoint. See the :ref:`gallery example <gallery_sst_mean_with_missing_value>`:
 
-   .. image:: /_build/html/_static/gallery/sst_mean_with_missing_value.png
+   .. image:: /_static/gallery/sst_mean_with_missing_value.png
       :width: 350px
       :target: ../gen_files/gallery/sst_mean_with_missing_value.html
 
@@ -100,7 +100,7 @@ Version 5.16.0
 
 * Added new projection 'EPSG:3035' to :func:`geoview`, see the :ref:`gallery example <gallery_epsg_3035>`:
 
-   .. image:: /_build/html/_static/gallery/epsg_3035.png
+   .. image:: /_static/gallery/epsg_3035.png
       :width: 250px
       :target: ../gen_files/gallery/epsg_3035.html
 
