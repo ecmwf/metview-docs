@@ -46,9 +46,9 @@ Version 5.16.0
 
 * In wind mode it is now mandatory to have the same number of input levels for all the required wind components
 
-**Hovmoeller**
+**Vertical Hovmoeller**
 
-* Several improvements were made to the vertical Hovmeller diagrams in :func:`mhovmoeller_vertical` and :func:`mhovmoellerview`:
+* Several improvements were made to the **vertical Hovmoeller** diagrams in :func:`mhovmoeller_vertical` and :func:`mhovmoellerview`:
 
    * To display model level input with pressure vertical axis the input now **must contain** an LNSP (Logarithm of Surface Pressure) field. Previously it was not required but a fixed surface pressure value was used instead (internally), which led to incorrectly computed pressure levels.
    * Added new parameter ``input_mode`` to control how the input data is extracted. The possible values are "area", "point" and "nearest_gridpoint". To specify the location for "point" or  "nearest_gridpoint" the ``point`` parameter was added.
