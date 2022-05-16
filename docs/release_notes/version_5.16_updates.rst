@@ -37,12 +37,15 @@ Version 5.16.0
    * Added new parameter ``vertical_coordinate_extrapolate_fixed_sign``: for the "linear" extrapolation mode it controls whether the extrapolated values can differ in sign from the values on the nearest input levels. When it is “on” it prevents e.g. wind components to change sign due to extrapolation.
    * Fixed issue when 3D wind way displayed at incorrect levels when using model level data and height vertical axis.
 
-   See the new :ref:`gallery example <gallery_cross_section_wind3d_height_ml_orog>` showcasing some of these options:
+   See the new gallery examples (:ref:`example1 <gallery_cross_section_wind3d_height_ml_orog>` and :ref:`example2 <gallery_cross_section_wind3d_height_ml_with_valleys>`) showcasing some of these options:
 
    .. image:: /_build/html/_static/gallery/cross_section_wind3d_height_ml_orog.png
-      :width: 350px
+      :width: 250px
       :target: ../gen_files/gallery/cross_section_wind3d_height_ml_orog.html
-      
+
+   .. image:: /_build/html/_static/gallery/cross_section_wind3d_height_ml_with_valleys.png
+      :width: 250px
+      :target: ../gen_files/gallery/cross_section_wind3d_height_ml_with_valleys.html
 
 * In wind mode it is now mandatory to have the same number of input levels for all the required wind components
 
