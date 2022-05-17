@@ -112,3 +112,19 @@ Version 5.16.0
 
 * the environment variable ECCODES_DEBUG is now preserved when running at ECMWF
 * if RPC libraries are not found when building Metview, the build will stop at CMake time with a relevant error message
+
+
+**New Gallery Examples**
+
+
+   .. image:: /_static/gallery/windrose.png
+      :width: 250px
+      :target: ../gen_files/gallery/windrose.html
+
+   .. image:: /_static/gallery/ship_track_era5.png
+      :width: 250px
+      :target: ../gen_files/gallery/ship_track_era5.html
+
+   .. image:: /_static/gallery/frame_masking.png
+      :width: 250px
+      :target: ../gen_files/gallery/frame_masking.html
