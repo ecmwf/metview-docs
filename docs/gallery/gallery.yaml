@@ -56,6 +56,7 @@ map-scalar:
   - departure_from_zonal_mean
   - sst_mean_with_missing_value
   - masking
+  - frame_masking
   - polygon_masking
   - shapefile_masking
   - deaccumulate_precip_fc
