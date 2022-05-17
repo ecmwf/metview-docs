@@ -1,5 +1,5 @@
 """
-GRIB - Shapefile masking
+GRIB - Shapefile Masking
 """
 
 # (C) Copyright 2021- ECMWF.
@@ -13,9 +13,10 @@ GRIB - Shapefile masking
 #
 
 import numpy as np
-import shapefile # pypi package 'pyshp'
+import shapefile  # pypi package 'pyshp'
 import metview as mv
 
+# Note: at least Metview version 5.16.0 is required
 
 # read the input grib file
 # regular lat-lon 1x1 degree
@@ -27,16 +28,16 @@ else:
 
 
 # get the location of the Natural Earth shapefiles that Magics uses for its coastlines
-maghome  = mv.getenv("MAGPLUS_HOME")
+maghome = mv.getenv("MAGPLUS_HOME")
 sf = shapefile.Reader(maghome + "/share/magics/50m/ne_50m_land.shp")
 
 # extract the list of points for the Great Britain polygon
 shapes = sf.shapes()
-points = shapes[135].points # GB
+points = shapes[135].points  # GB
 lats = np.array([p[1] for p in points])
 lons = np.array([p[0] for p in points])
 
-# mask the data to this polygon
+# mask the data to this polygon (at least Metview version 5.16.0 is required)
 m = mv.poly_mask(f, lats, lons, missing=True)
 
 # contouring - grid shading to ensure it fills all the way towards missing values
@@ -46,23 +47,21 @@ grid_shading = mv.mcont(
     contour_label="off",
     contour_shade="on",
     contour_shade_technique="grid_shading",
-    contour_shade_min_level_colour='blue',
-    contour_shade_max_level_colour='red',
-    contour_shade_colour_direction='clockwise',
+    contour_shade_min_level_colour="blue",
+    contour_shade_max_level_colour="red",
+    contour_shade_colour_direction="clockwise",
 )
 
 # define coastlines
 coast = mv.mcoast(
     map_coastline_colour="black",
     map_grid_colour="RGB(0.4,0.4,0.4)",
-    #map_label="off",
+    # map_label="off",
 )
 
 # define geographical view
 gview = mv.geoview(
-    coastlines=coast,
-    map_area_definition="corners",
-    area=[45.83,-13.87,62.03,8.92]
+    coastlines=coast, map_area_definition="corners", area=[45.83, -13.87, 62.03, 8.92]
 )
 
 # define the output plot file

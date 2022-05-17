@@ -1,5 +1,5 @@
 """
-GRIB - Polygon masking
+GRIB - Polygon Masking
 """
 
 # (C) Copyright 2021- ECMWF.
@@ -14,6 +14,8 @@ GRIB - Polygon masking
 
 import metview as mv
 import numpy as np
+
+# Note: at least Metview version 5.16.0 is required
 
 # read the input grib file
 # regular lat-lon 1x1 degree
