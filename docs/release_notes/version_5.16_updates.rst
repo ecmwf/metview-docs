@@ -7,13 +7,13 @@ Version 5.16 Updates
 Version 5.16.0
 ==============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2022-05-xx
-* Became metview/new at ECMWF on 2022-05-xx (Linux desktops, ecgate, lxc, lxop)
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2022-05-18
+* Became metview/new at ECMWF on 2022-05-18 (Linux desktops, ecgate, lxc, lxop)
 
 
 -  **At ECMWF:**
 
-   -  Installed **2022-05-xx**
+   -  Installed **2022-05-18**
 
    -  Built
       with **Magics** `4.12.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
