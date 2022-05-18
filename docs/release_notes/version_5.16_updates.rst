@@ -76,7 +76,7 @@ Version 5.16.0
 
    .. image:: /_static/gallery/polygon_masking.png   
       :width: 200px
-      :target: ../gen_files/gallery/gallery_polygon_masking.html
+      :target: ../gen_files/gallery/polygon_masking.html
 
    .. image:: /_static/gallery/shapefile_masking.png
       :width: 200px
