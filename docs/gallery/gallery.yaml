@@ -153,6 +153,9 @@ sections:
   - vert_hovm_ml_in_height
   - hovmoeller_area
   - ozone_era5_lat_hovmoeller
+  - line_hovm_era5_t850
+  - line_hovm_with_map_era5
+  - line_hovm_with_orog_era5
   - zonal_average
   - v_era5_temporal_zonal_average
   - zonal_average_difference
