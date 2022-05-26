@@ -20,34 +20,31 @@ Some of the important FLEXTRA parameters cannot be specified at run time
 but are hard-coded in the source. The FLEXTRA installation at ECMWF uses
 the following set of hard-coded parameters:
 
-+------------------------------------+-------+--------------+----------+
-| Description                        | Value | Parameter in | Source   |
-|                                    |       | source       | file     |
-+====================================+=======+==============+==========+
-| Maximum number of grid points in   | 721   | nxmax        | par      |
-| E-W (input grid)                   |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of grid points in   | 361   | nymax        | par      |
-| N-S (input grid)                   |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of model levels     | 138   |              | par      |
-| (input grid)                       |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of species          | 6     | maxspec      | par      |
-|                                    |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of particles        | 20    | maxpart      | par      |
-|                                    | 00000 |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of age classes      | 10    | maxageclass  | par      |
-|                                    |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of receptor sites   | 200   | maxreceptors | par      |
-|                                    |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of output grid      | 0     | maxnests     | par      |
-| nests                              |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
+.. list-table:: 
+   :widths: 40 10 30 20
+   :header-rows: 1
+   
+   * - Description
+     - Value
+     - Parameter in source
+     - Source file
+   * - Maximum number of grid points in E-W (input grid)
+     - 512
+     - nxmax 
+     - includepar
+   * - Maximum number of grid points in N-S (input grid)
+     - 361
+     - nymax 
+     - includepar
+   * - Maximum dimension of (u,v) wind fields in z direction (input grid) 
+     - 138
+     - nuwzmax 
+     - includepar
+   * - Maximum dimension of (w) wind fields in z direction (input grid) 
+     - 138
+     - nwzmax 
+     - includepar
+
 
 Compilation
 ===========
@@ -55,7 +52,7 @@ Compilation
 compiler: gfortran
 compilation options::
 
-    -O3 -m64 -mcmodel=medium -fconvert=little-endian -frecord-marker=4 
+    -march=native -O3
 
 Necessary code modifications
 ============================
