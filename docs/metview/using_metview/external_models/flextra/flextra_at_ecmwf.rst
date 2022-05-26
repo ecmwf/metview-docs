@@ -6,12 +6,14 @@ FLEXTRA at ECMWF
 The FLEXTRA environment
 =======================
 
-At ECMWF version 5.0 of FLEXTRA is *centrally installed* on ecgb and on
-some internal Linux-based systems. On these systems Metview is
+At ECMWF version 5.0 of FLEXTRA is *centrally installed* on ecgate, ATOS and on
+some internal Linux-based systems. On these systems (with the exception of ATOS) Metview is
 configured to pick up the FLEXTRA executable location automatically via this preset
 environment variable::
 
    MV_FLEXTRA_EXE_PATH
+
+On the ATOS supercomputer you need to set this variable manually for your Metview session.    
 
 Hard-coded parameters
 =====================
