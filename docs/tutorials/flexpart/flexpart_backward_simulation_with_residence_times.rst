@@ -39,7 +39,7 @@ The input data
 **************
 
 The **input data is already prepared** for you and is located in folder 'Data'. 
-You will find a :ref:`FLEXPART Prepare <flexpart_prepare_icon>` icon that was used to generate the data in folder 'Prepare'. 
+You will find a :func:`flexpart_prepare` icon that was used to generate the data in folder 'Prepare'. 
 The corresponding macro code can also be found there.
 
 You do not need to run the data preparation. However, if you wish to do so please note that it requires MARS access and you must set the **Output Path** parameter accordingly.
@@ -51,7 +51,7 @@ You do not need to run the data preparation. However, if you wish to do so pleas
 Running a backward simulation
 *****************************
 
-The simulation itself is defined by the 'bwd_time' :ref:`FLEXPART Run <flexpart_run_icon>` icon and the 'rel_inv' :ref:`FLEXPART Release <flexpart_release_icon>` icon, respectively. 
+The simulation itself is defined by the 'bwd_time' :func:`flexpart_run` icon and the 'rel_inv' :func:`flexpart_release` icon, respectively. 
 Both these are encompassed in a single macro called 'bwd_time.mv'. 
 For simplicity will use this macro to examine the settings in detail. 
 The macro starts with defining the release like this:  
@@ -108,7 +108,7 @@ The actual simulation is carried out by calling :func:`flexpart_run`:
 Here we defined both the input and output paths and specified the simulation period, the output grid and levels as well. 
 We also told FLEXPART to generate residence time fields on output.
 
-If we run this macro (or alternatively right-click execute the :ref:`FLEXPART Run <flexpart_run_icon>` icon) the results (after a minute or so) will be available in folder 'result_bwd'. 
+If we run this macro (or alternatively right-click execute the :func:`flexpart_run` icon) the results (after a minute or so) will be available in folder 'result_bwd'. 
 The computations actually took place in a temporary folder then Metview copied the results to the output folder. 
 If we open this folder we will see two files:
 

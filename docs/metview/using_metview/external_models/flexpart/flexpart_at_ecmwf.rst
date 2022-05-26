@@ -7,19 +7,21 @@ FLEXPART at ECMWF
 The FLEXPART environment
 ========================
 
-At ECMWF version 902 of FLEXPART is *centrally installed* on ecgate and
-on some internal Linux-based systems. On these systems Metview is
+At ECMWF version 902 of FLEXPART is *centrally installed* on ecgate, ATOS and
+on some internal Linux-based systems. On these systems (with the exception of ATOS) Metview is
 configured to pick up the FLEXPART location automatically via these
 environment variables:
 
--  **MV_FLEXPART_EXE_PATH**: defines the FLEXPART executable
+-  **MV_FLEXPART_EXE**: defines the FLEXPART executable
 
--  **MV_FLEXPART_RESOURCES_PATH**: specifies the directory containing
+-  **MV_FLEXPART_RESOURCES**: specifies the directory containing
    the following files **IGBP_int1.dat**, **OH_7lev_agl.dat**,
    **surfdata.t** and **surfdepo.t**
 
--  **MV_FLEXPART_SPECIES_PATH**: specifies the directory containing
+-  **MV_FLEXPART_SPECIES**: specifies the directory containing
    the species
+
+On the ATOS supercomputer you need to set these variables manually for your Metview session. 
 
 Hard-coded parameters
 =====================
@@ -28,37 +30,56 @@ Some of the important FLEXPART parameters cannot be specified at run
 time but are hard-coded in the source. The FLEXPART installation at
 ECMWF uses the following set of hard-coded parameters:
 
-+-----------------------------+--------+---------+------------+----------+
-| Description                 | Value  |         | Parameter  | Source   |
-|                             |        |         | in source  | file     |
-+=============================+========+=========+============+==========+
-|                             | ecgate | linux   |            |          |
-|                             |        | desktop |            |          |  
-+-----------------------------+--------+---------+------------+----------+
-| Maximum number of grid      | 721    | 721     | nxmax      | par      |
-| points in E-W (input grid)  |        |         |            | _mod.f90 |
-+-----------------------------+--------+---------+------------+----------+
-| Maximum number of grid      | 361    | 361     | nymax      | par      |
-| points in N-S (input grid)  |        |         |            | _mod.f90 |
-+-----------------------------+--------+---------+------------+----------+
-| Maximum number of model     | 138    | 138     |            | par      |
-| levels (input grid)         |        |         |            | _mod.f90 |
-+-----------------------------+--------+---------+------------+----------+
-| Maximum number of species   | 6      | 6       | maxspec    | par      |
-|                             |        |         |            | _mod.f90 |
-+-----------------------------+--------+---------+------------+----------+
-| Maximum number of particles | 20     | 20      | maxpart    | par      |
-|                             | 00000  | 00000   |            | _mod.f90 |
-+-----------------------------+--------+---------+------------+----------+
-| Maximum number of age       | 10     | 10      | m          | par      |
-| classes                     |        |         | axageclass | _mod.f90 |
-+-----------------------------+--------+---------+------------+----------+
-| Maximum number of receptor  | 200    | 200     | ma         | par      |
-| sites                       |        |         | xreceptors | _mod.f90 |
-+-----------------------------+--------+---------+------------+----------+
-| Maximum number of output    | 0      | 0       | maxnests   | par      |
-| grid nests                  |        |         |            | _mod.f90 |
-+-----------------------------+--------+---------+------------+----------+
+
+
+.. list-table:: 
+   :widths: 40 10 30 20
+   :header-rows: 1
+   
+   * - Description
+     - Value
+     - Parameter in source
+     - Source file
+   * - Maximum number of grid points in E-W (input grid)
+     - 1441
+     - nxmax 
+     - par_mod.f90
+   * - Maximum number of grid points in N-S (input grid)
+     - 721
+     - nymax 
+     - par_mod.f90
+   * - Maximum dimension of (u,v) wind fields in z direction (input grid) 
+     - 138
+     - nuwzmax
+     - par_mod.f90
+   * - Maximum dimension of (w) wind fields in z direction (input grid) 
+     - 138
+     - nwzmax
+     - par_mod.f90
+   * - Maximum dimension in z direction (input grid) 
+     - 138
+     - nzmax
+     - par_mod.f90
+   * - Maximum number of species
+     - 6
+     - maxspec
+     - par_mod.f90
+   * - Maximum number of particles
+     - 2000000
+     - maxpart
+     - par_mod.f90
+   * - Maximum number of age classes
+     - 10
+     - maxageclass
+     - par_mod.f90
+   * - Maximum number of receptor sites
+     - 200
+     - maxreceptors
+     - par_mod.f90
+   * - Maximum number of output grid nests
+     - 0
+     - maxnests
+     - par_mod.f90
 
 Compilation
 ===========

@@ -6,12 +6,14 @@ FLEXTRA at ECMWF
 The FLEXTRA environment
 =======================
 
-At ECMWF version 5.0 of FLEXTRA is *centrally installed* on ecgb and on
-some internal Linux-based systems. On these systems Metview is
+At ECMWF version 5.0 of FLEXTRA is *centrally installed* on ecgate, ATOS and on
+some internal Linux-based systems. On these systems (with the exception of ATOS) Metview is
 configured to pick up the FLEXTRA executable location automatically via this preset
 environment variable::
 
-   MV_FLEXTRA_EXE_PATH
+   MV_FLEXTRA_EXE
+
+On the ATOS supercomputer you need to set this variable manually for your Metview session.    
 
 Hard-coded parameters
 =====================
@@ -20,34 +22,31 @@ Some of the important FLEXTRA parameters cannot be specified at run time
 but are hard-coded in the source. The FLEXTRA installation at ECMWF uses
 the following set of hard-coded parameters:
 
-+------------------------------------+-------+--------------+----------+
-| Description                        | Value | Parameter in | Source   |
-|                                    |       | source       | file     |
-+====================================+=======+==============+==========+
-| Maximum number of grid points in   | 721   | nxmax        | par      |
-| E-W (input grid)                   |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of grid points in   | 361   | nymax        | par      |
-| N-S (input grid)                   |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of model levels     | 138   |              | par      |
-| (input grid)                       |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of species          | 6     | maxspec      | par      |
-|                                    |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of particles        | 20    | maxpart      | par      |
-|                                    | 00000 |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of age classes      | 10    | maxageclass  | par      |
-|                                    |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of receptor sites   | 200   | maxreceptors | par      |
-|                                    |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
-| Maximum number of output grid      | 0     | maxnests     | par      |
-| nests                              |       |              | _mod.f90 |
-+------------------------------------+-------+--------------+----------+
+.. list-table:: 
+   :widths: 40 10 30 20
+   :header-rows: 1
+   
+   * - Description
+     - Value
+     - Parameter in source
+     - Source file
+   * - Maximum number of grid points in E-W (input grid)
+     - 512
+     - nxmax 
+     - includepar
+   * - Maximum number of grid points in N-S (input grid)
+     - 361
+     - nymax 
+     - includepar
+   * - Maximum dimension of (u,v) wind fields in z direction (input grid) 
+     - 138
+     - nuwzmax 
+     - includepar
+   * - Maximum dimension of (w) wind fields in z direction (input grid) 
+     - 138
+     - nwzmax 
+     - includepar
+
 
 Compilation
 ===========
@@ -55,7 +54,7 @@ Compilation
 compiler: gfortran
 compilation options::
 
-    -O3 -m64 -mcmodel=medium -fconvert=little-endian -frecord-marker=4 
+    -march=native -O3
 
 Necessary code modifications
 ============================

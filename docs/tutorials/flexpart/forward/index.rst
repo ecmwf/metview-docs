@@ -39,7 +39,7 @@ The input data
 **************
 
 The input data is already prepared for you and is located in folder 'Data'. 
-You will find a :ref:`FLEXPART Prepare <flexpart_prepare_icon>` icon that was used to generate the data in folder 'Prepare'. 
+You will find a :func:`flexpart_prepare` icon that was used to generate the data in folder 'Prepare'. 
 The corresponding macro code can also be found there.
 
 You do not need to run the data preparation. 
@@ -53,7 +53,7 @@ However, if you wish to do so please note that it requires MARS access and you m
 
   In this tutorial we will run a forward simulation by releasing some SO2 from the Icelandic volcano Eyjafjallajokull.
   
-The simulation itself is defined by the 'fwd_conc' :ref:`FLEXPART Run <flexpart_run_icon>` icon and the 'rel_volcano' :ref:`FLEXPART Release <flexpart_release_icon>` icon, respectively. 
+The simulation itself is defined by the 'fwd_conc' :func:`flexpart_run` icon and the 'rel_volcano' :func:`flexpart_release` icon, respectively. 
 Both these are encompassed in a single macro called 'fwd_conc.mv'. 
 For simplicity will use this macro to examine the settings in detail. 
 
@@ -115,7 +115,7 @@ We also told FLEXPART to generate gridded mass concentration and flux fields on 
   The actual species to release are defined as an integer number (for details about using the species see `here <https://confluence.ecmwf.int/display/METV/FLEXPART+species>`_). 
   With the default species settings number 8 stands for SO2.
 
-If we run this macro (or alternatively right-click execute the :ref:`FLEXPART Run <flexpart_run_icon>` icon) the results (after a minute or so) will be available in folder 'result_fwd'. 
+If we run this macro (or alternatively right-click execute the :func:`flexpart_run` icon) the results (after a minute or so) will be available in folder 'result_fwd'. 
 The computations actually took place in a temporary folder then Metview copied the results to the output folder. 
 If we open folder 'result_fwd' we will see three files:
 
