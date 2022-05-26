@@ -23,10 +23,10 @@ Only version **5.0** is supported.
 How to specify the FLEXTRA executable in Metview?
 =================================================
 
-In Metview we can run FLEXTRA using the :ref:`Flextra Run <flextra_run_icon>` icon. The
-FLEXTRA executable is either defined via the **FLEXTRA_EXE_PATH**
-parameter in this icon or via the  **MV_FLEXTRA_EXE_PATH** environment
-variable (this has to be set before starting up Metview)\ **.**
+In Metview we can run FLEXTRA using :func:`flextra_run`. The
+FLEXTRA executable is either defined via the ``flextra_exe_path``
+parameter in this function or via the  **MV_FLEXTRA_EXE** environment
+variable (this has to be set before starting up Metview).
 
 Code modifications
 ==================

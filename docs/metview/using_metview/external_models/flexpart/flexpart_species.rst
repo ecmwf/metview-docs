@@ -4,15 +4,12 @@ FLEXPART species
 ////////////////
 
 The species (chemical elements) released during a simulation are
-specified as integer numbers in the **Release Species** parameter in
-:ref:`FLEXPART
-Run <flexpart_run_icon>`. The
+specified as integer numbers in the ``release_species`` parameter in :func:`flexpart_run`. The
 integer ID of the individual species are taken from the name of the
-species definition files.These have to be located in the directory
+species definition files. These have to be located in the directory
 defined
 
--  via the **User Species Path** parameter in :ref:`FLEXPART
-   Run <flexpart_run_icon>`
+-  via the ``users_species_path`` parameter in :func:`flexpart_run`
 
 -  or if it is left **blank** (this is the default value) Metview will
    use the **MV_FLEXPART_SPECIES** environment variable.
@@ -24,7 +21,6 @@ Folder **option/SPECIES** in the FLEXPART distribution contains a
 default set of species definitions. Here each species is represented by
 a file called SPECIES\_\ *NNN* , where NNN is the integer ID of the
 given species.The table below summarises what species are available:
-
 
 
 

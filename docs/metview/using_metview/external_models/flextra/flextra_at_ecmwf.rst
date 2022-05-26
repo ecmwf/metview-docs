@@ -11,7 +11,7 @@ some internal Linux-based systems. On these systems (with the exception of ATOS)
 configured to pick up the FLEXTRA executable location automatically via this preset
 environment variable::
 
-   MV_FLEXTRA_EXE_PATH
+   MV_FLEXTRA_EXE
 
 On the ATOS supercomputer you need to set this variable manually for your Metview session.    
 

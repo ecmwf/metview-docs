@@ -12,13 +12,13 @@ on some internal Linux-based systems. On these systems (with the exception of AT
 configured to pick up the FLEXPART location automatically via these
 environment variables:
 
--  **MV_FLEXPART_EXE_PATH**: defines the FLEXPART executable
+-  **MV_FLEXPART_EXE**: defines the FLEXPART executable
 
--  **MV_FLEXPART_RESOURCES_PATH**: specifies the directory containing
+-  **MV_FLEXPART_RESOURCES**: specifies the directory containing
    the following files **IGBP_int1.dat**, **OH_7lev_agl.dat**,
    **surfdata.t** and **surfdepo.t**
 
--  **MV_FLEXPART_SPECIES_PATH**: specifies the directory containing
+-  **MV_FLEXPART_SPECIES**: specifies the directory containing
    the species
 
 On the ATOS supercomputer you need to set these variables manually for your Metview session. 

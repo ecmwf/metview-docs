@@ -64,47 +64,30 @@ FLEXPART paths
 The location of the FLEXPART executable and that of some other
 files/directories have to be specified for Metview. These locations can
 be defined either through a set of Metview environment variables or via
-parameters in the :ref:`FLEXPART
-Run <flexpart_run_icon>` icon
-(these latter take precedence). The table below summarises what actually
-is needed to set for Metview.
+parameters in :func:`flexpart_run` (these latter take precedence). The table below summarises what actually
+is needed to be set for Metview.
 
-+---------------------+------------+----------------------------+----------------+
-| Description         | How to get | Metview environment        | Flexpart Run   |
-|                     | it/them    | variable                   | parameter file |
-+=====================+============+============================+================+
-| The FLEXPART        | Need to be | MV_FLEXPART_EXE_PATH       | User           |
-| executable          | built from |                            | Exe            |
-|                     | FLEXPART   |                            | Path           |
-|                     | source     |                            |                |
-+---------------------+------------+----------------------------+----------------+
-| The directory       | These      | MV_FLEXPART_RESOURCES_PATH | User Resources |
-| containing the      | files are  |                            | Path           |
-| following files:    | d          |                            |                |
-|                     | istributed |                            |                |
-| - IGBP_int1.dat     | in the     |                            |                |
-|                     | FLEXPART   |                            |                |
-|                     | source     |                            |                |
-| - OH_7lev_agl.dat   | inside     |                            |                |
-|                     | folder     |                            |                |
-|                     | **option** |                            |                |
-| - surfdata.t        |            |                            |                |
-|                     |            |                            |                |
-| - surfdepo.t        |            |                            |                |
-+---------------------+------------+----------------------------+----------------+
-| The directory       | A set of   | MV_FLEXPART_SPECIES_PATH   | User Species   |
-| containing the      | species    |                            | Path           |
-| species             | are        |                            |                |
-|                     | d          |                            |                |
-|                     | istributed |                            |                |
-|                     | in the     |                            |                |
-|                     | FLEXPART   |                            |                |
-|                     | source     |                            |                |
-|                     | inside     |                            |                | 
-|                     | folder     |                            |                |
-|                     | **option   |                            |                |
-|                     | /SPECIES** |                            |                |
-+---------------------+------------+----------------------------+----------------+
+
+.. list-table:: 
+   :widths: 25 25 25 25
+   :header-rows: 1
+   
+   * - Description
+     - How to get it/them
+     - Metview environment
+     - :func:`flexpart_run()` parameter
+   * - The FLEXPART executable
+     - Need to be built from FLEXPART source 
+     - MV_FLEXPART_EXE
+     - ``user_exe_path``
+   * - The directory containing the following files: *IGBP_int1.dat*, *OH_7lev_agl.dat*, *surfdata.t*, *surfdepo.t*
+     - These files are distributed in the FLEXPART source inside folder **option**
+     - MV_FLEXPART_RESOURCES
+     - ``user_resources_path``
+   * - The directory containing the species:
+     - A set of species are distributed in the FLEXPART source inside folder **option/SPECIES**
+     - MV_FLEXPART_SPECIES
+     - ``user_species_path``
 
 To see the actual values of the Metview environment variables run
 metview with the -h flag::
