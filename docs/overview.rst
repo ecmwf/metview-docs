@@ -18,9 +18,11 @@ Metview can take input data from a variety of sources, including:
 
 Powerful data filtering and processing facilities are then available, and if graphics output is desired, then Metview can produce many plot types, including:
 
-* map views with :ref:`scalar <gallery_group_map_scalar>`, :ref:`vector <gallery_group_map_vector>`, :ref:`point <gallery_group_map_point>` and :ref:`curve <gallery_group_map_curve>` data in various :ref:`projections <gallery_group_map_projections>` 
-* :ref:`cross sections <gallery_group_sections>`
-* vertical profiles
+* map views with :ref:`scalar <gallery_group_map_scalar>`, :ref:`ensemble <gallery_group_map_ens>`, :ref:`vector <gallery_group_map_vector>`, :ref:`point <gallery_group_map_point>` and :ref:`curve <gallery_group_map_curve>` data in various :ref:`projections <gallery_group_map_projections>` 
+* :ref:`cross sections <gallery_group_cross_section>`
+* :ref:`Hovmoeller diagrams <gallery_group_hovmoeller>`
+* :ref:`average sections <gallery_group_average_section>`
+* :ref:`vertical profiles <gallery_group_vertical_profile>`
 * :ref:`thermodynamic diagrams <gallery_group_map_thermo>`
 * :ref:`x/y graph plots <gallery_group_xy>`
 * intelligent overlay of data from various sources on the same map arrangement of multiple plots on the same page

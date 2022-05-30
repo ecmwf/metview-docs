@@ -64,11 +64,6 @@ map-scalar:
   - deaccumulate_precip_fc
   - potential_temperature
   - equivalent_potential_temperature
-  - ens_mean_and_spread
-  - ens_prob
-  - ens_percentile
-  - ens_stamp
-  - ens_spag
   - simulated_sat_img
   - sst_extended_latlon
   - sst_era5_elnino_map
@@ -85,6 +80,16 @@ map-scalar:
   - split_contour
   - nc_era5_t2
   - nc_era5_ozone
+map-ens:
+  title: Ensemble data on map
+  anchor: _gallery_group_map_ens
+  desc: These examples feature map plots with ensemble forecast data.
+  examples:
+  - ens_mean_and_spread
+  - ens_prob
+  - ens_percentile
+  - ens_stamp
+  - ens_spag
 map-vector:
   title: Vector data on map
   anchor: _gallery_group_map_vector
@@ -136,11 +141,10 @@ map-curves:
   - geoline_on_map
   - geopolyline_on_map
   - geocircle_on_map
-sections:
-  title: Vertical and temporal sections
-  anchor: _gallery_group_sections
-  desc: These examples feature vertical cross sections, average
-    cross sections and Hovmoeller diagrams.
+cross-sections:
+  title: Vertical cross sections
+  anchor: _gallery_group_cross_section
+  desc: These examples feature vertical cross sections.
   examples:
   - cross_section_pl_data
   - cross_section_pl_tadv
@@ -154,6 +158,11 @@ sections:
   - cross_section_wind_parallel
   - cross_section_wind_unprojected
   - cross_section_wind_3d
+hovmoeller:
+  title: Hovmoeller diagrams
+  anchor: _gallery_group_hovmoeller
+  desc: These examples feature Hovmoeller diagrams.
+  examples:
   - time_height_xs
   - time_height_xs_wind
   - qbo_era5_vertical_hovmoeller
@@ -164,13 +173,18 @@ sections:
   - line_hovm_era5_t850
   - line_hovm_with_map_era5
   - line_hovm_with_orog_era5
+average-sections:
+  title: Average sections
+  anchor: _gallery_group_average_section
+  desc: These examples feature average vertical sections.
+  examples:
   - zonal_average
   - v_era5_temporal_zonal_average
   - zonal_average_difference
   - meridional_average
 vertical-profiles:
   title: Vertical profiles
-  anchor: _gallery_group_map_vertical_profile
+  anchor: _gallery_group_vertical_profile
   desc: These examples feature vertical profiles.
   examples:
     - ozone_era5_profile
