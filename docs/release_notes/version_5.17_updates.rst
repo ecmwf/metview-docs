@@ -29,3 +29,5 @@ Version 5.17.0
 
   
 * :func:`lifted_condensation_level`: improved speed by using [DaviesJones1983]_ instead of an iterative process to compute the :math:`t_{LCL}`. Works now with ndarrays and :class:`Fieldset` as input (previously only numbers were accepted).
+
+* :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray
