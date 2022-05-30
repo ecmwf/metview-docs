@@ -49,11 +49,13 @@ map-scalar:
   - efi_marker_shading
   - model_orography
   - advection
+  - absolute_vorticity
   - thermal_front_parameter
   - deformation
   - vertical_integral
   - map_and_zonal_mean_curve
   - departure_from_zonal_mean
+  - eddy_kinetic_energy
   - sst_mean_with_missing_value
   - masking
   - frame_masking
@@ -70,8 +72,13 @@ map-scalar:
   - simulated_sat_img
   - sst_extended_latlon
   - sst_era5_elnino_map
+  - high_vegetation_type
+  - low_vegetation_type
   - legend3
   - legend2
+  - fc_steps
+  - fc_steps_shared_title
+  - fc_steps_shared_legend_title
   - contour3
   - contour10
   - rainbow_contour_diffs
@@ -136,6 +143,7 @@ sections:
     cross sections and Hovmoeller diagrams.
   examples:
   - cross_section_pl_data
+  - cross_section_pl_tadv
   - cross_section_orog
   - cross_section_orog_and_blh
   - cross_section_height_ml_orog

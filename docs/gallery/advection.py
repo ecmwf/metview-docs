@@ -30,8 +30,8 @@ z = mv.read(data=f, param="z")
 # compute specific humidity gradient
 grad = mv.gradient(q[0])
 
-# compute advection
-adv = u[0] * grad[0] + v[0] * grad[1]
+# compute humidity advection
+adv = -(u[0] * grad[0] + v[0] * grad[1])
 
 # scale results for better visualisation
 adv = adv * 1e6
