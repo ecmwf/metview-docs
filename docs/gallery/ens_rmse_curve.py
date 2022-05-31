@@ -86,7 +86,7 @@ gr_lst = []
 for i in range(1, 51):
     d = en.select(type="pf", number=i)
     d = mv.sqrt(mv.integrate((d - an) ** 2))
-    d = np.array(d) / (9.81 * 10)  # scale to dkm
+    d = np.array(d) / (9.81 * 10)  # scale to dam
 
     gr_lst.append(
         mv.input_visualiser(
@@ -113,7 +113,7 @@ for s in steps:
     en_mean.append(mv.mean(en.select(step=s)))
 
 d = mv.sqrt(mv.integrate((en_mean - an) ** 2))
-d = np.array(d) / (9.81 * 10)  # scale to dkm
+d = np.array(d) / (9.81 * 10)  # scale to dam
 gr_lst.append(
     mv.input_visualiser(
         input_x_type="date", input_date_x_values=d_times, input_y_values=d
@@ -133,7 +133,7 @@ gr_lst.append(mean_style)
 # ens - control forecast member
 d = f.select(type="cf")
 d = mv.sqrt(mv.integrate((d - an) ** 2))
-d = np.array(d) / (9.81 * 10)  # scale to dkm
+d = np.array(d) / (9.81 * 10)  # scale to dam
 gr_lst.append(
     mv.input_visualiser(
         input_x_type="date", input_date_x_values=d_times, input_y_values=d
@@ -152,7 +152,7 @@ gr_lst.append(cf_style)
 
 # high res forecast
 d = mv.sqrt(mv.integrate((fc - an) ** 2))
-d = np.array(d) / (9.81 * 10)  # scale to dkm
+d = np.array(d) / (9.81 * 10)  # scale to dam
 gr_lst.append(
     mv.input_visualiser(
         input_x_type="date", input_date_x_values=d_times, input_y_values=d
@@ -187,7 +187,7 @@ haxis = mv.maxis(
 )
 
 vaxis = mv.maxis(
-    axis_title_text="dkm", axis_title_height=0.5, axis_tick_label_height=0.4
+    axis_title_text="dam", axis_title_height=0.5, axis_tick_label_height=0.4
 )
 
 view = mv.cartesianview(

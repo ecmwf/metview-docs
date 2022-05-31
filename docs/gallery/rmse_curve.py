@@ -62,7 +62,7 @@ f_fc = mv.read(data=f, type="fc")
 # compute the rmse values
 d_fc = mv.sqrt(mv.integrate((f_fc - f_an) ** 2))
 
-# scale the results to dkm units
+# scale the results to dam units
 d_fc = np.array(d_fc) / (9.81 * 10)
 
 # get metadata for the title
@@ -107,7 +107,7 @@ haxis = mv.maxis(
 )
 
 vaxis = mv.maxis(
-    axis_title_text="dkm", axis_title_height=0.5, axis_tick_label_height=0.4
+    axis_title_text="dam", axis_title_height=0.5, axis_tick_label_height=0.4
 )
 
 view = mv.cartesianview(
