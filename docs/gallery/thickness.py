@@ -1,5 +1,5 @@
 """
-GRIB - Eddy Kinetic Energy
+GRIB - 500/1000 hPa Thickness
 """
 
 # (C) Copyright 2017- ECMWF.
@@ -18,7 +18,7 @@ import metview as mv
 # getting data
 use_cds = False
 
-filename = "eke_era5.grib"
+filename = "thickness_era5.grib"
 
 # getting data from CDS
 if use_cds:
@@ -32,96 +32,109 @@ if use_cds:
             "format": "grib",
             "variable": [
                 "geopotential",
-                "vorticity",
-                "u_component_of_wind",
-                "v_component_of_wind",
             ],
             "pressure_level": [
+                "1000",
                 "500",
             ],
-            "year": "1997",
+            "year": "1995",
             "month": "02",
-            "day": "11",
-            "time": "00:00",
+            "day": "02",
+            "time": "06:00",
             "area": [
                 90,
-                -180,
+                -100,
                 10,
-                180,
+                80,
             ],
         },
         filename,
     )
     g = mv.read(filename)
-# reading data from file or getting it from data server
+# reading data from file or getting from data server
 else:
     if mv.exist(filename):
         g = mv.read(filename)
     else:
         g = mv.gallery.load_dataset(filename)
 
+# get z fields on 1000 and 500 hPa
+z1 = g.select(shortName="z", level=1000)
+z2 = g.select(shortName="z", level=500)
 
-# get fields on 500 hPa
-level = 500
-u = mv.read(data=g, param="u", levelist=level)
-v = mv.read(data=g, param="u", levelist=level)
-z = mv.read(data=g, param="z", levelist=level)
+# compute the 500/1000 thickness (units gpm)
+th = z2 - z1
 
-# compute the eddy kinetic energy (per unit mass) in m2/s2 units
-u_p = u - mv.mean_ew(u)
-v_p = v - mv.mean_ew(v)
-eke = (u_p**2 + v_p**2) / 2
-
-# define contouring
-cont_eke = mv.mcont(
+# define contouring for dam units. The gpm units will
+# automatically be scaled to dam for contouring because
+# "grib_scaling_of_derived_fields" is "on". Fieldset th now qualifies
+# as "derived" since it is the result of a mathematical field
+# operation.
+cont_th = mv.mcont(
     legend="on",
     contour="off",
     contour_level_selection_type="level_list",
-    contour_level_list=[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1500],
+    contour_max_level=600,
+    contour_level_list=[
+        460,
+        480,
+        485,
+        490,
+        495,
+        500,
+        505,
+        510,
+        515,
+        520,
+        525,
+        530,
+        535,
+        540,
+        545,
+        550,
+        555,
+        560,
+        565,
+        570,
+        575,
+        580,
+        585,
+        590,
+        595,
+        610,
+    ],
     contour_label="off",
     contour_shade="on",
     contour_shade_colour_method="palette",
     contour_shade_method="area_fill",
-    contour_shade_palette_name="m_purple2_11",
-)
-
-cont_z = mv.mcont(
-    contour_line_thickness=2,
-    contour_line_colour="charcoal",
-    contour_highlight_colour="charcoal",
-    contour_highlight_thickness=4,
-    contour_level_selection_type="interval",
-    contour_interval=10,
-    contour_label_height=0.4,
+    contour_shade_palette_name="m_rainbow_purple_blue_red_24",
     grib_scaling_of_derived_fields="on",
 )
 
+
 # define coastlines
 coast = mv.mcoast(
-    map_coastline_land_shade="on",
-    map_coastline_land_shade_colour="grey",
-    map_grid_colour="RGB(0.3843,0.3843,0.3843)",
+    map_coastline_colour="charcoal",
+    map_coastline_thickness=2,
+    map_coastline_resolution="medium",
 )
-
 
 # define the geographical view
 view = mv.geoview(
     map_projection="polar_stereographic",
     map_area_definition="centre",
-    map_vertical_longitude=-20,
     map_centre_latitude=55,
-    map_centre_longitude=-20,
     map_scale=35.0e6,
     coastlines=coast,
 )
 
 
 # define title
-vdate = mv.valid_date(z)
+vdate = mv.valid_date(th)
 title = mv.mtext(
     text_lines=[
-        "ERA5 z [dam] and EKE [m2/s2] {} hPa {}".format(
-            level, vdate.strftime("%Y-%m-%d %H UTC")
+        "ERA5 500/1000 hPa thickness [dam] {}".format(
+            vdate.strftime("%Y-%m-%d %H UTC")
         ),
         "",
     ],
@@ -132,7 +145,7 @@ title = mv.mtext(
 legend = mv.mlegend(legend_text_font_size=0.4)
 
 # define output
-mv.setoutput(mv.pdf_output(output_name="eddy_kinetic_energy"))
+mv.setoutput(mv.pdf_output(output_name="thickness"))
 
 # generate plot
-mv.plot(view, eke, cont_eke, z, cont_z, title, legend)
+mv.plot(view, th, cont_th, title, legend)

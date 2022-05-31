@@ -50,8 +50,11 @@ map-scalar:
   - model_orography
   - advection
   - absolute_vorticity
+  - thickness
   - thermal_front_parameter
   - deformation
+  - potential_temperature
+  - equivalent_potential_temperature
   - vertical_integral
   - map_and_zonal_mean_curve
   - departure_from_zonal_mean
@@ -62,8 +65,6 @@ map-scalar:
   - polygon_masking
   - shapefile_masking
   - deaccumulate_precip_fc
-  - potential_temperature
-  - equivalent_potential_temperature
   - simulated_sat_img
   - sst_extended_latlon
   - sst_era5_elnino_map
