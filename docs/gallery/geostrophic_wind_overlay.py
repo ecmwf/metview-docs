@@ -102,7 +102,7 @@ view = mv.geoview(area_mode="name", area_name="north_america", coastlines=coastl
 # define title
 vdate = mv.valid_date(z)
 title = mv.mtext(
-    text_lines="z [dkm] and wind and geostrophic wind {} hPa {}".format(
+    text_lines="z [dam] and wind and geostrophic wind {} hPa {}".format(
         level, vdate.strftime("%Y-%m-%d %H UTC")
     ),
     text_font_size=0.5,

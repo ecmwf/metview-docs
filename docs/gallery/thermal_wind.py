@@ -126,7 +126,7 @@ w_style = mv.mwind(
 # define title
 vdate = mv.valid_date(th)
 title = mv.mtext(
-    text_lines="msl and {}/{} hPa thickness [dkm] and thermal wind {}".format(
+    text_lines="msl and {}/{} hPa thickness [dam] and thermal wind {}".format(
         p_top, p_bottom, vdate.strftime("%Y-%m-%d %H UTC")
     ),
     text_font_size=0.5,
@@ -149,5 +149,5 @@ legend = mv.mlegend(legend_text_font_size=0.4)
 # define output
 mv.setoutput(mv.pdf_output(output_name="thermal_wind"))
 
-# generate plot - scale thickness to dkm units
+# generate plot - scale thickness to dam units
 mv.plot(view, th / (9.81 * 10), cont_th, msl, cont_msl, tw, w_style, title, legend)

@@ -128,7 +128,7 @@ view = mv.geoview(
 # define title
 vdate = mv.valid_date(z)
 title = mv.mtext(
-    text_lines="z [dkm] and tfp(eqpt) [K/100km^2] {} hPa {}".format(
+    text_lines="z [dam] and tfp(eqpt) [K/100km^2] {} hPa {}".format(
         level, vdate.strftime("%Y-%m-%d %H UTC")
     ),
     text_font_size=0.5,

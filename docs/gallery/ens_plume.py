@@ -70,7 +70,7 @@ d_control = np.array(mv.nearest_gridpoint(gf, location))
 gf = mv.read(data=g, type="fc")
 d_hres = np.array(mv.nearest_gridpoint(gf, location))
 
-# convert data to dkm units
+# convert data to dam units
 d_pert = d_pert / (9.81 * 10)
 d_control = d_control / (9.81 * 10)
 d_hres = d_hres / (9.81 * 10)
@@ -224,7 +224,7 @@ haxis = mv.maxis(
 )
 
 vaxis = mv.maxis(
-    axis_title_text="dkm", axis_title_height=0.4, axis_tick_label_height=0.4
+    axis_title_text="dam", axis_title_height=0.4, axis_tick_label_height=0.4
 )
 
 view = mv.cartesianview(

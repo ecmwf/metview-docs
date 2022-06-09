@@ -1,5 +1,5 @@
 """
-GRIB - Absolute Vorticity ERA5
+GRIB - Absolute Vorticity
 """
 
 # (C) Copyright 2017- ECMWF.

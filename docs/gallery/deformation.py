@@ -107,13 +107,13 @@ dw = mv.plot_superpage(page=[page_0, page_1])
 # define title
 vdate = mv.valid_date(z)
 sh_title = mv.mtext(
-    text_lines="z [dkm] and shear deformation [1E-5 1/s] {} hPa {}".format(
+    text_lines="z [dam] and shear deformation [1E-5 1/s] {} hPa {}".format(
         level, vdate.strftime("%Y-%m-%d %H UTC")
     ),
     text_font_size=0.5,
 )
 st_title = mv.mtext(
-    text_lines="z [dkm] and stretch deformation [1E-5 1/s] {} hPa {}".format(
+    text_lines="z [dam] and stretch deformation [1E-5 1/s] {} hPa {}".format(
         level, vdate.strftime("%Y-%m-%d %H UTC")
     ),
     text_font_size=0.5,

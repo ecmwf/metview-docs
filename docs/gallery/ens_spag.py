@@ -68,7 +68,7 @@ cf = mv.read(data=z, type="cf")
 # define title (this solution prevents the title
 # from appearing 51 times in the plot!!)
 title = mv.mtext(
-    text_line_1="Z 850 hPa Value: 125 dkm T+<grib_info key='step' where='number=50' /> h",
+    text_line_1="Z 850 hPa Value: 125 dam T+<grib_info key='step' where='number=50' /> h",
     text_font_size=0.5,
 )
 
