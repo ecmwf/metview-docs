@@ -2425,6 +2425,14 @@
     - geopoints_object
     - netcdf_object
     type: script
+- static_stability:
+    category:
+      fieldset: Computes the static stability
+    desc: Computes the static stability
+    group:
+    - vertical
+    - grib
+    type: script
 - stations:
     category: {}
     desc: Specifies a WMO station
