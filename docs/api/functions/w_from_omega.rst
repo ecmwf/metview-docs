@@ -17,7 +17,7 @@ w_from_omega
 
     * if ``omega`` is a pressure level :class:`Fieldset` no ``p`` is needed
     * if ``omega`` is defined on ECMWF model levels (hybrid/eta) ``p`` must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a :class:`Fieldset` defining the pressure on the same levels as ``omega``
-    * for other level types ``omega`` must be a :class:`Fieldset` defining the pressure on the same levels as ``omega``.
+    * for other level types ``p`` must be a :class:`Fieldset` defining the pressure on the same levels as ``omega``.
 
     The computation is based on the following hydrostatic formula:
 
@@ -27,7 +27,7 @@ w_from_omega
 
     where
 
-    * Rd is the specific gas constant for dry air (287.058 J/(kg K)).
+    * :math:`R_{d}`` is the specific gas constant for dry air (287.058 J/(kg K)).
     * g is the gravitational acceleration (9.81 m/s\ :sup:`2`)
     
 
