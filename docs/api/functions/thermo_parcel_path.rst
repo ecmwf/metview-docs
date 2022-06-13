@@ -21,15 +21,18 @@ thermo_parcel_path
     
     It returns a dict containing all the data to plot the parcel path, buoyancy areas and related data into a thermodynamic diagram.
 
-    ``options`` specifies the various settings for the parcel computations. The members of this dict are as follows (temperature values are in °C and pressure values are in hPa):
+    ``options`` specifies the various settings for the parcel computations. All the values in ``options`` must be specified in **°C** (temperature) and **hPa** (pressure) units. The possible keys are as follows:
 
-    * **"mode"**: the start condition mode. The possible values are "surface", "custom", "mean_layer" and "most_unstable" (see  below for details)
+    * **"mode"**: the start condition mode. The possible values are "surface", "custom", "ml", "ml50", "ml100" and "mucape" (see  below for details)
     * **"start_t"**: the start temperature (see  below for details)
     * **"start_td"**: the start dewpoint (see  below for details)
     * **"start_p"**: the start pressure (see  below for details)
     * **"top_p"**: the top pressure of the start layer (see below for details)
     * **"bottom_p"**: the bottom pressure of the start layer (see below for details)
-    * **"stop_at_el"**: if it is defined and set to 1 the parcel computations will stop at the Equilibrium Level.
+    * **"layer_depth"**: the depth of the start layer (see below for details)
+    * **"stop_at_el"**: if it is defined and set to True the parcel computations will stop at the Equilibrium Level (EL)
+    * **"comp_top"**: if it is defined and set to True the Cloud Top Level (TOP) is determined
+    * **"el_area"**: if it is defined and set to True the parcel area above the Equilibrium Level (EL) gets computed and can be plotted onto the thermodynamic diagram
 
     The start condition ``mode`` can have these values:
 
@@ -57,16 +60,50 @@ thermo_parcel_path
              "bottom_p": layer_bottom}
 
         When bottom_p is omitted the layer starts at the surface.
+
+    * **"ml"**: the parcel ascends from the following mean start conditions in a given layer:
+  
+        * temperature: determined from the mean potential temperature of the layer
+        * dew point: the mean value in the layer
+        * pressure: the surface value
+ 
+        The format is as follows:
     
-    * **"most_unstable"**: the parcel ascends from the most unstable condition. To determine this, a parcel is started from all the points along the profile in the specified pressure layer. The start level of the parcel that results in the highest CAPE value will define the most unstable start condition. The format is as follows:
+        .. code-block:: python
+            
+            {"mode": "mean_layer",
+             "top_p": layer_top,
+             "bottom_p": layer_bottom}
+
+        or 
+
+        .. code-block:: python
+            
+            {"mode": "mean_layer",
+             "layer_depth": layer_depth,
+             "bottom_p": layer_bottom}
+
+        When ``bottom_p`` is omitted the layer starts at the surface.
+
+    * **"ml50"**: the parcel ascends from the mean start conditions in the 50 hPa layer at the surface. The start conditions are determined similarly to "ml". The format is as follows:
+ 
+        .. code-block:: python
+            
+            {"mode": "ml50"}
+    
+    * **"ml100"**: the parcel ascends from the mean start conditions in the 100 hPa layer at the surface. The start conditions are determined similarly to "ml". The format is as follows:
+ 
+        .. code-block:: python
+            
+            {"mode": "ml100"}
+
+    * **"mucape"**: the parcel ascends from the most unstable condition. To determine this, a parcel is started from all the points along the profile in the specified pressure layer. The start level of the parcel that results in the highest CAPE value will define the most unstable start condition. The layer is specified with the combination of ``top_p``, ``bottom_p``, ``layer_depth``.  When ``bottom_p`` is omitted the pressure layer starts at the surface. E.g.
         
         .. code-block:: python
 
-            {"mode": "most_unstable", 
-             "top_p": layer_top, 
-             "bottom_p": layer_bottom}
-
-        When bottom_p is omitted the pressure layer starts at the surface.
+            {"mode": "mucape", 
+             "layer_depth": 300,
+            }
 
     :func:`thermo_parcel_path` returns a dict to describe all the parameters related to the ascend of the parcel. The members of this dict are as follows (temperature values are in °C and pressure values are in hPa) :
 
@@ -77,6 +114,8 @@ thermo_parcel_path
     * "cape": value of the CAPE (Convective Available Potential Energy)  (J/kg)
 
     * "cin": value the CIN (Convective Inhibition) (J/kg)
+
+    * "li": the Lifted Index (K)
 
     * "lcl": Lifted Condensation Level. It is a definition with two members: t and p. If no LCL exists it is set to None.
 
