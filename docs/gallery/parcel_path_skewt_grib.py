@@ -21,7 +21,7 @@ if mv.exist(filename):
 else:
     g = mv.gallery.load_dataset(filename)
 
-# extract thermo profile
+# extract thermo profile (Lat/Lon)
 prof = mv.thermo_grib(coordinates=[5, 0], data=g)
 
 # compute parcel path - start from surface
@@ -66,19 +66,19 @@ txt.append(" Start td: {:.1f} C".format(parcel["start"]["td"]))
 txt.append("     CAPE: {:.3f} J/kg".format(parcel["cape"]))
 txt.append("      CIN: {:.3f} J/kg".format(parcel["cin"]))
 
-if parcel.lcl != None:
+if parcel["lcl"] is not None:
     txt.append("    LCL p: {:.0f} hPa".format(parcel["lcl"]["p"]))
     txt.append("    LCL t: {:.1f} C".format(parcel["lcl"]["t"]))
 
-if parcel.lfc != None:
+if parcel["lfc"] is not None:
     txt.append("    LFC p: {:.0f} hPa".format(parcel["lfc"]["p"]))
     txt.append("    LFC t: {:.1f} C".format(parcel["lfc"]["t"]))
 
-if parcel.el != None:
+if parcel["el"] is not None:
     txt.append("     EL p: {:.0f} hPa".format(parcel["el"]["p"]))
     txt.append("     EL t: {:.1f} C".format(parcel["el"]["t"]))
 
-if parcel.top != None:
+if parcel["top"] is not None:
     txt.append("    TOP p: {:.0f} hPa".format(parcel["top"]["p"]))
     txt.append("    TOP t: {:.1f} C".format(parcel["top"]["t"]))
 
