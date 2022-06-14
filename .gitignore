@@ -117,3 +117,4 @@ docs/gallery/*.sbx
 # notebooks
 docs/examples/grib_to_be_sliced.grib
 docs/examples/reversed.grib
+docs/examples/xs_t.nc
