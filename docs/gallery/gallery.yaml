@@ -70,6 +70,7 @@ map-scalar:
   - sst_era5_elnino_map
   - high_vegetation_type
   - low_vegetation_type
+  - categorical_wind_direction
   - legend3
   - legend2
   - fc_steps
