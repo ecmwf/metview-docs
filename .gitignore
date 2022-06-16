@@ -118,3 +118,4 @@ docs/gallery/*.sbx
 docs/examples/grib_to_be_sliced.grib
 docs/examples/reversed.grib
 docs/examples/xs_t.nc
+docs/examples/ne_50m*
