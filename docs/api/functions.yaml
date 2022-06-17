@@ -1953,6 +1953,14 @@
     desc: ''
     exclude: true
     type: icon
+- q_vector:
+    category:
+      fieldset: Computes the Q-vector
+    desc: Computes the Q-vector
+    group:
+    - vertical
+    - grib
+    type: script
 - read:
     category: {}
     desc: Filters and interpolates fieldset data
