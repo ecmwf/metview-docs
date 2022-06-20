@@ -72,6 +72,8 @@ The parcel computations have been revised and several new option were added.
 
 * :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray
 * added new function :func:`static_stability` to compute the static stability 
+* added new function :func:`q_vector` to compute the Q-vector used in the quasi-geostrophic (QG) theory
+* :func:`geostrophic_wind`: added new option ``coriolis`` to use a constant Coriolis parameter value
 
 
 **New Gallery Examples**
