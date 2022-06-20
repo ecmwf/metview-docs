@@ -3,7 +3,7 @@ static_stability
 
 ..  py:function:: static_stability(t,  [p, layer=False])
 
-    Computes the static stability used in the **quasi-geostrophic** theory.
+    Computes the static stability used in the quasi-geostrophic (QG) theory.
 
     :param t: temperature (K)
     :type t: :class:`Fieldset` or ndarray
@@ -39,6 +39,9 @@ static_stability
             \sigma = - \frac{R_{d} \overline{T}}{\overline{p}} log(\frac{\Delta \theta}{\Delta p})
 
     where :math:`\overline{T}` and :math:`\overline{p}` are the mean layer values.
-       
+           
+    .. note::
+
+        See also :func:`q_vector`.
 
 .. mv-minigallery:: static_stability
