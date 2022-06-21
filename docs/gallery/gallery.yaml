@@ -94,6 +94,7 @@ map-computations:
   - departure_from_zonal_mean
   - eddy_kinetic_energy
   - static_stability
+  - q_vector
   - potential_temperature
   - equivalent_potential_temperature
   - sst_mean_with_missing_value
