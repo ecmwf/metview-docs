@@ -98,6 +98,7 @@ map-computations:
   - equivalent_potential_temperature
   - sst_mean_with_missing_value
   - vertical_integral
+  - gaussian_smoothing
 map-vector:
   title: Vector data on map
   anchor: _gallery_group_map_vector
