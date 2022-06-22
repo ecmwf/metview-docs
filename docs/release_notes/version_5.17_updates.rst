@@ -27,10 +27,14 @@ Version 5.17.0
       version `1.12.0 <https://github.com/ecmwf/metview-python/blob/master/CHANGELOG.rst>`__ of
       the Python interface
 
+**Plotting**
+
+The predefined palettes and user defined colour lists can be automatically adjusted to the actual contour level values.
+
 
 **Thermo parcel path**
 
-The parcel computations have been revised and several new option were added. 
+The parcel computations have been revised and several new option were added/
 
 * :func:`lifted_condensation_level`: improved speed by using [DaviesJones1983]_ instead of an iterative process to compute the :math:`t_{LCL}`. Works now with ndarrays and :class:`Fieldset` as input (previously only numbers were accepted).
 * :func:`thermo_parcel_path`: 
@@ -65,8 +69,14 @@ The parcel computations have been revised and several new option were added.
       
 **Hovmoller**
 
+* Vertical Hovmoeller: added new parameters ``use_fixed_surface_pressure`` and ``fixed_surface_pressure`` to use a fixed surface pressure value in the computations. These can be used when the input data is model level and the vertical axis is pressure ( ``vertical_level_type`` = "pressure").
 * Line Hovmoeller: fixed issue when North and South coordinates of lines going from SW to NE were automatically swapped
   
+  
+**User interface**
+
+* Desktop: Added "Copy filesystem path" action to the context menu of the Breadcrumbs items
+* Counting icon editor: added option to show/hide filter options for palette chooser interface
 
 **Macro/Python**
 
