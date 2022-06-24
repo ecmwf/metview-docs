@@ -28,6 +28,11 @@ params:
        ``flextra_input_source`` is "file".
     ptype: str
     values: ''
+- flextra_an_mars_class:
+    default: 'od'
+    desc: The MARS class of the analysis fields. The possible values are "od" (operational analysis) and "ea" (ERA5). Enabled when ``flextra_prepare_mode`` is "period". *New in Metview version 5.17.0*
+    ptype: str
+    values: 'od/ea'
 - flextra_fc_mars_expver:
     default: '1'
     desc: The MARS experiment identifier of the forecast fields. The default value
@@ -37,7 +42,7 @@ params:
 - flextra_an_mars_expver:
     default: '1'
     desc: The MARS experiment identifier of the analysis fields. The default value
-      is "1" (operational analysis).
+      is "1" (operational analysis). Enabled when ``flextra_prepare_mode`` is "period".
     ptype: str
     values: ''
 - flextra_date:

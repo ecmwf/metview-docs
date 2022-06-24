@@ -354,11 +354,16 @@ params:
     desc: The name of the colour palette to use when ``contour_shade_colour_method`` is "palette".
     ptype: str
     values: ''
-- contour_shade_palette_policy:
+- contour_shade_colour_list_policy:
     default: lastone
-    desc: What to do if the list of colours is smaller than the list of levels.
+    desc: Determine what to do if the list of colours in a palette or colour list is smaller/larger than the list of levels. When it is set to "dynamic" the required colours will be determined with interpolation. Used when ``contour_shade_colour_method`` is "palette" or "list". *New in Metview version 5.17.0*
     ptype: str
-    values: lastone/cycle
+    values: lastone/cycle/dynamic    
+- contour_shade_colour_reverse_list:
+    default: off
+    desc: Reverse the list of colours in a palette or colour list. Used when ``contour_shade_colour_method`` is "palette" or "list". *New in Metview version 5.17.0*
+    ptype: str
+    values: on/off  
 - contour_shade_dot_size:
     default: '0.02'
     desc: Size of dot in shading pattern when ``contour_shade_method`` is "dot".

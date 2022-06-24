@@ -81,8 +81,9 @@ The parcel computations have been revised and several new option were added/
 
 **FLEXTRA/FLEXPART**
 
-* fixed issue when :func:`flextra_prepare` failed when ``flextra_prepare_mode``  was set to "period"
-* fixed issue when :func:`flexpart_prepare` failed when ``flexpart_prepare_mode``  was set to "period"
+* :func:`flextra_prepare`: added parameter ``flextra_an_mars_class`` to control the MARS class of the analysis data retrieved when ``flextra_prepare_mode`` is "period". The possible values are "od" (operational analysis) and "ea" (ERA5).
+* :func:`flextra_prepare`: fixed issue when setting ``flextra_prepare_mode`` to "period" caused an error
+* :func:`flexpart_prepare`: fixed issue when setting ``flexpart_prepare_mode`` to "period" caused an error
 
 **Macro/Python**
 
@@ -101,6 +102,7 @@ The parcel computations have been revised and several new option were added/
 
 * :func:`geostrophic_wind`: added new option ``coriolis`` to use a constant Coriolis parameter value
 * :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray
+* :func:`direction`: fixed issue when the ecCodes paramId in the resulting field was not set to 131 (=wind direction)
 * fixed issue when using fields with mixed expver caused Metview to hang in cross section, average cross section, vertical profile and Hovmoeller computations and plotting
 
 
