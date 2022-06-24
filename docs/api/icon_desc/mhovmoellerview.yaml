@@ -139,7 +139,7 @@ params:
       Specifies the output vertical level type for vertical Hovmoeller diagrams. Enabled when ``type`` is "vertical_hovm". The possible options are as follows:
 
       * "as_in_data": the level type of ``data`` is used. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa.
-      * "pressure": indicates that the ``data`` is defined on ECMWF model levels and the output vertical coordinate should be pressure in hPa. When this option is selected the input data must contain the corresponding Logarithm of Surface Pressure (LNSP) fields.
+      * "pressure": indicates that the ``data`` is defined on ECMWF model levels and the output vertical coordinate should be pressure in hPa. When this option is selected the input data must contain the corresponding Logarithm of Surface Pressure (LNSP) fields, unless a fixed surface pressure is used (see ``use_fixed_surface_pressure``).
       * "user": the vertical coordinates (both input and output) are defined by the fields of ``vertical_coordinate_param``. In this case ``top_level`` and ``bottom_level`` must always be set carefully, since their default values are set for pressure in hPa. *New in Metview version 5.16.0*
    ptype: str
    values: 'as_in_data/pressure/user'
@@ -148,6 +148,16 @@ params:
     desc: Specifies the ecCodes paramId used to identify the Logarithm of Surface Pressure (LNSP) in the input data. Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "pressure". 
     ptype: number
     values: ''
+- use_fixed_surface_pressure:
+    default: 'off'
+    desc: When it is "on" a fixed surface pressure value will be used in the computations and no LNSP fields have to be specified. Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "pressure". *New in Metview version 5.17.0*
+    ptype: str
+    values: 'on/off' 
+- fixed_surface_pressure:
+    default: 1013.25
+    desc: Specify the fixed surface pressure value in hPa when ``use_fixed_surface_pressure`` is "on".  Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "pressure". *New in Metview version 5.17.0*
+    ptype: number
+    values: ''      
 - vertical_coordinate_param:
     default: ''
     desc: Specifies the ecCodes paramId used to identify the vertical coordinate fields in the input data.  Only used for vertical Hovmoeller diagrams (``type`` is "vertical_hovm") when ``vertical_level_type`` is "user". *New in Metview version 5.16.0*

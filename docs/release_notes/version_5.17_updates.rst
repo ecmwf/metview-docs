@@ -69,7 +69,7 @@ The parcel computations have been revised and several new option were added/
       
 **Hovmoller**
 
-* Vertical Hovmoeller: added new parameters ``use_fixed_surface_pressure`` and ``fixed_surface_pressure`` to use a fixed surface pressure value in the computations. These can be used when the input data is model level and the vertical axis is pressure ( ``vertical_level_type`` = "pressure").
+* Vertical Hovmoeller: added new parameters ``use_fixed_surface_pressure`` and ``fixed_surface_pressure`` to use a fixed surface pressure value in the computations. These can be used when the input data is model level and the vertical axis is pressure ( ``vertical_level_type`` = "pressure"). See: :func:`mhovmoellerview` and :func:`mhovmoeller_vertical`.
 * Line Hovmoeller: fixed issue when North and South coordinates of lines going from SW to NE were automatically swapped
   
 
