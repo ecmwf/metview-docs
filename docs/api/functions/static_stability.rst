@@ -22,8 +22,8 @@ static_stability
 
     .. math:: 
 
-        \sigma = - \frac{R_{d} T}{p} log(\frac{\partial \Theta}{\partial p})
-    
+        \sigma = - \frac{R_{d} T}{p} \frac{\partial log \Theta}{\partial p} 
+
     where
 
     * :math:`R_{d}`` is the specific gas constant for dry air (287.058 J/(kg K)).
@@ -33,13 +33,23 @@ static_stability
 
     * when ``layer`` is False (this is the default) :math:`\sigma` is computed by  using :func:`pressure_derivative`
     * when ``layer`` is True ``t`` must contain exactly 2 levels defining the layer. The result will be a single level computed by the following formula:
-  
+
     .. math:: 
 
-            \sigma = - \frac{R_{d} \overline{T}}{\overline{p}} log(\frac{\Delta \theta}{\Delta p})
+            \sigma = - \frac{R_{d} \overline{T}}{\overline{p}} \frac{\Delta log\theta}{\Delta p}
 
     where :math:`\overline{T}` and :math:`\overline{p}` are the mean layer values.
-           
+
+    Please note that for the computations the formulas above are rewritten into the following equivalent forms:    
+
+    .. math:: 
+
+        \sigma = \frac{\kappa R_{d}}{p^{2}} T -  \frac{R_{d}}{p} \frac{\partial T}{\partial p}
+
+        \sigma = \frac{\kappa R_{d}}{\overline{p}^{2}} \overline{T} -  \frac{R_{d}}{\overline{p}} \frac{\Delta T}{\Delta p}
+
+    with :math:`\kappa = R_{d}/c_{pd}`.
+
     .. note::
 
         See also :func:`q_vector`.
