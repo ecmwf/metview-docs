@@ -72,18 +72,36 @@ The parcel computations have been revised and several new option were added/
 * Vertical Hovmoeller: added new parameters ``use_fixed_surface_pressure`` and ``fixed_surface_pressure`` to use a fixed surface pressure value in the computations. These can be used when the input data is model level and the vertical axis is pressure ( ``vertical_level_type`` = "pressure").
 * Line Hovmoeller: fixed issue when North and South coordinates of lines going from SW to NE were automatically swapped
   
-  
+
 **User interface**
 
 * Desktop: Added "Copy filesystem path" action to the context menu of the Breadcrumbs items
 * Counting icon editor: added option to show/hide filter options for palette chooser interface
+* Grib Examiner: fixed issue when the value of the mars.expver key was not shown in the Namespace dump
+
+**FLEXTRA/FLEXPART**
+
+* fixed issue when :func:`flextra_prepare` failed when ``flextra_prepare_mode``  was set to "period"
+* fixed issue when :func:`flexpart_prepare` failed when ``flexpart_prepare_mode``  was set to "period"
 
 **Macro/Python**
 
-* :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray
-* added new function :func:`static_stability` to compute the static stability 
-* added new function :func:`q_vector` to compute the Q-vector used in the quasi-geostrophic (QG) theory
+* improved speed and reduced memory usage in many GRIB-related functions
+* added new function :func:`static_stability` to compute the static stability. See the :ref:`gallery example <gallery_static_stability>`:
+
+   .. image:: /_static/gallery/static_stability.png
+      :width: 350px
+      :target: ../gen_files/gallery/static_stability.html
+
+* added new function :func:`q_vector` to compute the Q-vector used in the quasi-geostrophic (QG) theory. See the :ref:`gallery example <gallery_q_vector>`:
+
+   .. image:: /_static/gallery/q_vector.png
+      :width: 280px
+      :target: ../gen_files/gallery/q_vector.html
+
 * :func:`geostrophic_wind`: added new option ``coriolis`` to use a constant Coriolis parameter value
+* :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray
+* fixed issue when using fields with mixed expver caused Metview to hang in cross section, average cross section, vertical profile and Hovmoeller computations and plotting
 
 
 **New Gallery Examples**
@@ -100,6 +118,10 @@ The parcel computations have been revised and several new option were added/
    .. image:: /_static/gallery/eddy_kinetic_energy.png
       :width: 250px
       :target: ../gen_files/gallery/eddy_kinetic_energy.html
+
+   .. image:: /_static/gallery/categorical_wind_direction.png
+      :width: 250px
+      :target: ../gen_files/gallery/categorical_wind_direction.html
 
    .. image:: /_static/gallery/high_vegetation_type.png
       :width: 250px
