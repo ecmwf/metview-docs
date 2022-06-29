@@ -13,13 +13,12 @@ lifted_condensation_level
     :type p: number, ndarray or :class:`Fieldset`
     :rtype: dict or None
 
-    The LCL is the level where the parcel becomes saturated during an adiabatic ascend. First, the LCL temperature is computed with the formula [DaviesJones1983]_ (it is also used by the IFS model):
+    The LCL is the level where the parcel becomes saturated during an adiabatic ascend. First, the LCL temperature is computed with the formula from [Bolton1980]_:
 
         .. math::
 
-            t_{LCL} =  td - (0.212 + 1.571\times 10^{-3} (td - t_{0}) - 4.36\times 10^{-4} (t - t_{0})) (t - td)
+            t_{LCL} = 56.0 +  \frac{1}{\frac{1}{td - 56} + \frac{log(\frac{t}{td})}{800}}
 
-        where :math:`t_{0}` is the triple point of water (273.16 K).
 
     Then the LCL pressure is computed from :math:`t_{LCL}` using the dry adiabatic equations.
     

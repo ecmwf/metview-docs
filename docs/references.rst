@@ -6,9 +6,9 @@ References
 Bluestein, H. B., (1992). Principles of Kinematics and Dynamics. Vol. 1, Synoptic-Dynamic Meteorology in Midlatitudes. Oxford University Press, 448 pp.
 
 
-.. [DaviesJones1983] 
+.. [Bolton1980]
 
-Davies-Jones, R. P., (1983). An accurate theoretical approximation for adiabatic condensation temperature. Mon. Wea. Rev., 111 , 1119–1121.
+Bolton, D., (1980). The computation of equivalent potential temperature. Mon. Wea. Rev., 108, 1046-1053, doi: `10.1175/1520-0493(1980)108%3C1046:TCOEPT%3E2.0.CO;2 <https://doi.org/10.1175/1520-0493(1980)108%3C1046:TCOEPT%3E2.0.CO;2>`_
 
 
 .. [Lackman2012] 
