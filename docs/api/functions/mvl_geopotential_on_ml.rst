@@ -19,6 +19,18 @@ mvl_geopotential_on_ml
    
    The return value is a :class:`Fieldset` of geopotential defined on the model levels present in the input data sorted by ascending numeric level order.
 
+   The computations are based on the following hydrostatic formula:
+
+    .. math::
+      
+      z_{ml} = - \int_{p_{surf}}^{p_{ml}} \frac{R_{d} T_{v}}{p} dp
+
+   where:
+
+   * :math:`R_{d}`` is the specific gas constant for dry air (287.058 J/(kg K))
+   * :math:`T_{v}` is the virtual temperature (K)
+   * p is the pressure
+
    The required levels and their ordering in ``t`` and ``q`` depend on the Metview version used:
    
    * from Metview version **5.14.0**: ``t`` and ``q`` must contain the same levels in the same order but there is no restriction on the actual level ordering. The model level range must be contiguous and must include the bottom-most level. E.g. if the current vertical coordinate system has 137 model levels using only a subset of levels between e.g. 137-96 is allowed.
