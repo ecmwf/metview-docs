@@ -33,6 +33,11 @@ Training courses
 Tutorials on specific topics
 --------------------------------
 
+* Webinar (2022): `Slicing and dicing GRIB data <https://events.ecmwf.int/event/285/page/166-webinar-recordings>`_ and associated notebook :ref:`/examples/slicing_grib_data.ipynb`
+* Webinar (2021): `Stop, think, interpolate! <https://events.ecmwf.int/event/210/page/114-webinar-recordings>`_ and associated notebook :ref:`/examples/advanced_regrid.ipynb`
+* Workshop presentation from UEF 2022: `Interactive data visualisation and pre-processing with ECMWF's Metview software <https://events.ecmwf.int/event/296/timetable/>`_
+
+
 .. toctree::
     :maxdepth: 1
 
