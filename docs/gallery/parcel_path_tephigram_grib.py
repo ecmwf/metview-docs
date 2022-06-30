@@ -1,5 +1,5 @@
 """
-GRIB - Parcel Method on Skew-T
+GRIB - Parcel Path from Surface on Tephigram
 """
 
 # (C) Copyright 2017- ECMWF.
@@ -14,6 +14,8 @@ GRIB - Parcel Method on Skew-T
 
 import metview as mv
 
+# Note: at least Metview version 5.17.0 is required
+
 # read GRIB data
 filename = "thermo_profile.grib"
 if mv.exist(filename):
@@ -25,7 +27,7 @@ else:
 prof = mv.thermo_grib(coordinates=[5, 0], data=g)
 
 # compute parcel path - start from surface
-parcel = mv.thermo_parcel_path(prof)
+parcel = mv.thermo_parcel_path(prof, mode="surface")
 
 # create plot object for parcel areas
 parcel_area = mv.thermo_parcel_area(parcel)
@@ -40,10 +42,10 @@ prof_vis = mv.mthermo(
 
 # define the thermodynamic view
 view = mv.thermoview(
-    type="skewt",
-    minimum_temperature=-140,
-    maximum_temperature=40,
-    top_pressure=50,
+    type="tephigram",
+    minimum_temperature=-110,
+    maximum_temperature=30,
+    # top_pressure=50,
     subpage_clipping="ON",
 )
 
@@ -63,6 +65,7 @@ txt.append("     Mode: " + parcel["start"]["mode"])
 txt.append("  Start p: {:.0f} hPa".format(parcel["start"]["p"]))
 txt.append("  Start t: {:.1f} C".format(parcel["start"]["t"]))
 txt.append(" Start td: {:.1f} C".format(parcel["start"]["td"]))
+txt.append("       LI: {:.1f} K".format(parcel["li"]))
 txt.append("     CAPE: {:.3f} J/kg".format(parcel["cape"]))
 txt.append("      CIN: {:.3f} J/kg".format(parcel["cin"]))
 
@@ -100,7 +103,7 @@ info_box = mv.mtext(
 )
 
 # define the output plot file
-mv.setoutput(mv.pdf_output(output_name="parcel_path_skewt_grib"))
+mv.setoutput(mv.pdf_output(output_name="parcel_path_tephigram_grib"))
 
 # plot the profile, parcel areas, parcel path and info box together
 mv.plot(view, parcel_area, prof, prof_vis, parcel_vis, title, info_box)
