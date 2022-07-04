@@ -209,6 +209,7 @@ thermo:
   - tephigram_odb
   - parcel_path_tephigram_grib
   - parcel_path_max_cape
+  - parcel_path_from_bufr
   - parcel_path_multiple_start_conditions
   - ens_tephigram
   - hodograph 
