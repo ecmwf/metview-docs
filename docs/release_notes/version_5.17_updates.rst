@@ -64,7 +64,13 @@ The parcel computations have been revised and several new option were added/
         mv.thermo_parcel_path(prof)
         mv.thermo_parcel_path(prof, mode="mucape", layer_depth=300)
 
-  * Added new parameters ``compute_top`` and ``el_area`` to to control the  computations and data extraction above the Equilibrium Level (EL)
+  * Added new parameters ``compute_top`` to control the  computations and data extraction above the Equilibrium Level (EL)
+
+  * See the :ref:`gallery example <gallery_parcel_path_multiple_start_conditions>` showcasing some of the new features:
+
+   .. image:: /_static/gallery/parcel_path_multiple_start_conditions.png
+      :width: 280px
+      :target: ../gen_files/gallery/parcel_path_multiple_start_conditions.html
    
       
 **Hovmoller**
@@ -76,7 +82,7 @@ The parcel computations have been revised and several new option were added/
 **User interface**
 
 * Desktop: Added "Copy filesystem path" action to the context menu of the Breadcrumbs items
-* Counting icon editor: added option to show/hide filter options for palette chooser interface
+* Contour icon editor: added option to show/hide filter options for palette chooser interface
 * Grib Examiner: fixed issue when the value of the mars.expver key was not shown in the Namespace dump
 
 **FLEXTRA/FLEXPART**
@@ -160,3 +166,11 @@ The parcel computations have been revised and several new option were added/
    .. image:: /_static/gallery/line_hovm_with_orog_era5.png
       :width: 250px
       :target: ../gen_files/gallery/line_hovm_with_orog_era5.html
+
+   .. image:: /_static/gallery/parcel_path_from_bufr.png
+      :width: 250px
+      :target: ../gen_files/gallery/parcel_path_from_bufr.html
+
+   .. image:: /_static/gallery/skewt_parcel_path_with_hodograph.png
+      :width: 250px
+      :target: ../gen_files/gallery/skewt_parcel_path_with_hodograph.html
