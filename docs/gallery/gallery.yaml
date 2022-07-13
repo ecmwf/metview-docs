@@ -211,6 +211,7 @@ thermo:
   - parcel_path_max_cape
   - parcel_path_from_bufr
   - parcel_path_multiple_start_conditions
+  - skewt_parcel_path_with_hodograph
   - ens_tephigram
   - hodograph 
 xy:

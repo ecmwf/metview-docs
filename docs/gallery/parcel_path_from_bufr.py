@@ -60,9 +60,10 @@ def make_box_text(p):
     def _add_row_pt(label, val):
         t = "{:>7} ".format(label + ":")
         if val is None or not isinstance(val, dict):
-            t += "{:>7} {:<5}".format(label + ":", "-")
+            t += "-"
         else:
-            return "{:>7} {:.0f}/{:.1f}".format(label + ":", val["p"], val["t"])
+            t += "{:.0f}/{:.1f}".format(val["p"], val["t"])
+        return t
 
     t = []
     t.append("{:>7} {:<10}".format("mode:", p["start"]["mode"]))

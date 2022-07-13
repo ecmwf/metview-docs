@@ -1,5 +1,5 @@
 """
-GRIB - Multiple parcel path start conditions on Skew-T
+GRIB - Multiple Parcel Path Start Conditions on Skew-T
 """
 
 # (C) Copyright 2017- ECMWF.
