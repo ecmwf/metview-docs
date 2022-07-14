@@ -3,7 +3,7 @@ static_stability
 
 ..  py:function:: static_stability(t,  [p, layer=False])
 
-    Computes the static stability used in the quasi-geostrophic (QG) theory.
+    Computes the static stability used in the quasi-geostrophic (QG) theory. It is a measure of the stability of the atmosphere in hydrostatic equilibrium with respect to vertical displacements.
 
     :param t: temperature (K)
     :type t: :class:`Fieldset` or ndarray

@@ -3,7 +3,7 @@ q_vector
 
 ..  py:function:: q_vector(t, z, static_stability=2E-6, coriolis=None)
 
-    Computes the Q-vector used in the quasi-geostrophic (QG) theory.
+    Computes the Q-vector used in the quasi-geostrophic (QG) theory. It can determine the forcing for vertical motion in mid-latitude synoptic scale weather systems.
     
     :param t: temperature (K) on pressure levels
     :type t: :class:`Fieldset`
