@@ -17,7 +17,7 @@ import metview as mv
 # Note: at least Metview version 5.17.0 is required
 
 
-def make_title_text(prof):
+def build_title_text(prof):
     """
     Utility function to generate text for plot title
     """
@@ -42,7 +42,7 @@ def make_title_text(prof):
     return [t1, t2]
 
 
-def make_box_text(p):
+def build_box_text(p):
     """
     Utility function to generate text for parcel info box
     """
@@ -135,13 +135,13 @@ view = mv.thermoview(
 info = mv.thermo_data_info(prof)
 
 # define title
-title_txt = make_title_text(prof)
+title_txt = build_title_text(prof)
 title = mv.mtext(text_lines=title_txt, text_font_size=0.5, text_colour="charcoal")
 
 # define text lines for info box
-txt = make_box_text(parcel)
+txt = build_box_text(parcel)
 
-# create info box - make sure font is monospace
+# create info box - ensure font is monospace
 info_box = mv.mtext(
     text_lines=txt,
     text_font="courier",

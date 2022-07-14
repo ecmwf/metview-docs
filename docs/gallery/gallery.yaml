@@ -207,6 +207,7 @@ thermo:
   - tephigram
   - tephigram_bufr
   - tephigram_odb
+  - tephigram_fc_and_obs
   - parcel_path_tephigram_grib
   - parcel_path_max_cape
   - parcel_path_from_bufr

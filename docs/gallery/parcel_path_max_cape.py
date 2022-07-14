@@ -104,7 +104,7 @@ if parcel["el"] is not None:
     txt.append("     EL t: {:.1f} C".format(parcel["el"]["t"]))
 
 
-# create info box - make sure font is monospace
+# create info box - ensure font is monospace
 info_box = mv.mtext(
     text_lines=txt,
     text_font="courier",

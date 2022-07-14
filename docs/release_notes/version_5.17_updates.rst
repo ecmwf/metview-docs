@@ -167,6 +167,10 @@ The parcel computations have been revised and several new option were added/
       :width: 250px
       :target: ../gen_files/gallery/line_hovm_with_orog_era5.html
 
+   .. image:: /_static/gallery/tephigram_fc_and_obs.png
+      :width: 250px
+      :target: ../gen_files/gallery/tephigram_fc_and_obs.html
+
    .. image:: /_static/gallery/parcel_path_from_bufr.png
       :width: 250px
       :target: ../gen_files/gallery/parcel_path_from_bufr.html
