@@ -140,7 +140,7 @@ thermo_parcel_path
 
         where :math:`R_{d}`` is the specific gas constant for dry air (287.058 J/(kg K)).
 
-      LI (Lifted index) is the difference between the environment and parcel virtual temperature at 500 hPa.
+      LI (Lifted index) is the difference between the virtual temperature of the environment and the parcel at 500 hPa.
 
       .. image:: /_static/api/parcel_method.png
          :width: 500px 
