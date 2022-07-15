@@ -83,6 +83,9 @@ The parcel computations have been revised and several new option were added/
 
 * Desktop: Added "Copy filesystem path" action to the context menu of the Breadcrumbs items
 * Contour icon editor: added option to show/hide filter options for palette chooser interface
+* Family icons: fixed issue when could not edit newly created family icons
+* Advanced search: fixed issue when search did not work with time period in Metview versions built with Qt >= 5.8.0 
+* Advanced search: fixed issue when results from the last day of time period were excluded
 * Grib Examiner: fixed issue when the value of the mars.expver key was not shown in the Namespace dump
 
 **FLEXTRA/FLEXPART**
