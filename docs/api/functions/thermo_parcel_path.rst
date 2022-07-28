@@ -108,23 +108,25 @@ thermo_parcel_path
 
     * "li": the Lifted Index (K)
 
-    * "lcl": Lifted Condensation Level. It is a definition with two members: t and p. If no LCL exists it is set to None. 
+    * "lcl": Lifted Condensation Level. It is a dict with two members: t and p. If no LCL exists it is set to None. 
 
-    * "lfc": Level of Free Convection. It is a definition with two members: t and p. If no LFC exists it is set to None. 
+    * "lfc": Level of Free Convection. It is a dict with two members: t and p. If no LFC exists it is set to None. 
 
-    * "el": Equilibrium Level. It is a definition with two members: t and p. If no EL exists it is set to None.
+    * "el": Equilibrium Level. It is a dict with two members: t and p. If no EL exists it is set to None.
 
-    * "top": Cloud Top Level. It is a definition with two members: t and p. If no TOP exists it is set to None.
+    * "top": Cloud Top Level. It is a dict with two members: t and p. If no TOP exists it is set to None.
 
     * "start": start conditions of the parcel with four members: mode, t, td and p.
 
     .. note::
 
-      The parcel method is based on a hypothetical ascending air parcel. The parcel starts its path along a dry adiabat until it reaches saturation at the LCL (Lifted Condensation Level). In this part the potential temperature is invariant. Above the LCL :func:`thermo_parcel_path` assumes a pseudo-adiabatic ascent (all condensate is removed as soon as it forms). Along the pseudo-adiabat the saturation equivalent potential temperature at the LCL is invariant, it is  computed by Eq (39) from [Bolton1980]_.
+      The **parcel method** is based on the path of a hypothetical ascending air parcel, which can be best represented on thermodynamic diagrams. 
+      
+      The parcel starts ascending dry adiabatically until it reaches saturation at the LCL (Lifted Condensation Level). Above the LCL :func:`thermo_parcel_path` assumes a pseudo-adiabatic ascent (all condensate is removed as soon as it forms) determined by the saturation equivalent potential temperature at the LCL, which is invariant along a pseudo-adiabat. The (saturation)equivalent potential temperature is computed by Eq (39) from [Bolton1980]_.
 
-      By default, the virtual temperature correction is applied (``virtual`` is True) and the temperature in both the environmental and parcel profiles are replaced with the :func:`virtual_temperature`.
+      By default, the virtual temperature correction is applied (``virtual`` is True) and the temperature in both the environment and parcel profiles are replaced with the :func:`virtual_temperature`.
 
-      Once its done the intersections of the environmental and parcel virtual temperature profiles are determined to define the positive and negative buoyancy areas. In a positive area the parcel is warmer, while in a negative area it is colder than its environment. In the simplest case there is only one positive area above the LCL bounded by the LFC (Level of Free Convection) at the bottom and the EL (Equilibrium Level) at the top. However, in practice there can be several positive and negative areas above the LCL and :func:`thermo_parcel_path` makes the following choice for the computations:
+      Once its done the intersections of the environment and parcel virtual temperature profiles are determined to define the positive and negative buoyancy areas. In a positive area the parcel is warmer, while in a negative area it is colder than its environment. In the simplest case there is only one positive area above the LCL bounded by the LFC (Level of Free Convection) at the bottom and the EL (Equilibrium Level) at the top. However, in practice there can be several positive and negative areas above the LCL and :func:`thermo_parcel_path` makes the following choice for the computations:
 
         * the LFC is the bottom of the topmost positive area
         * the EL is the top of the topmost positive area
