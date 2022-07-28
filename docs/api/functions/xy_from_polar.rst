@@ -8,8 +8,8 @@ xy_from_polar
     :param magnitude: the speed/magnitude
     :type magnitude: number, ndarray or :class:`Fieldset`
     :param direction: the meteorological direction of the vector in degrees
-    :type dir: number, ndarray or :class:`Fieldset`
-    :rtype: same type as ``magnitude`` or None
+    :type direction: number, ndarray or :class:`Fieldset`
+    :rtype: list or :class:`Fieldset` or None
 
     In polar representation the data is specified by two components:
 
@@ -18,11 +18,15 @@ xy_from_polar
 
     In the target xy representation the x axis points East while the y axis points North.
 
-    The type of the result depends on the type of the input data
+    The type of the result depends on the type of the input data:
 
     * if the input is number the result is a list of two numbers
     * if the input is ndarray the result is a list of two ndarrays, the first ndarray contains the x components while the second ndarray the y components
-    * if the input is fieldset the result is a fieldset where an x component field is immediately followed by the corresponding y component field.
+    * if the input is :class:`Fieldset` the result is a fieldset where an x component field is immediately followed by the corresponding y component field.
+
+    .. note::   
+      
+      See also :func:`direction`.
 
 
 .. mv-minigallery:: xy_from_polar
