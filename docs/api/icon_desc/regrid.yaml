@@ -388,3 +388,10 @@ params:
             * "1d_logarithmic"
     ptype: str
     values: ''
+- target:
+    default: ''
+    desc:  |-
+        If specified, the resulting file will be written directly to that path
+        and no temporary file will be generated.
+    ptype: str
+    values: ''
