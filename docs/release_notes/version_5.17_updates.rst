@@ -34,12 +34,12 @@ The predefined palettes and user defined colour lists can be automatically adjus
 
 **Thermo parcel path**
 
-The parcel computations have been revised and several new option were added/
+The parcel computations have been revised and several new option were added:
 
 * :func:`lifted_condensation_level`: improved speed by using [Bolton1980]_ instead of an iterative process to compute the :math:`t_{LCL}`. Works now with ndarrays and :class:`Fieldset` as input (previously only numbers were accepted).
 * :func:`thermo_parcel_path`: 
   
-  * the options became keyword arguments. Previously they were specified as a dict as the last positional argument. The old interface still works for backwards compatibility. E.g.:
+  * the ``options`` became keyword arguments. Previously they were specified as a dict as the last positional argument. The old interface still works for backwards compatibility. E.g.:
 
       .. code-block:: python
 
