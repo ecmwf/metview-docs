@@ -20,7 +20,7 @@ smooth_n_point
    
       .. math::
 
-         \frac{1}{8} \begin{bmatrix}0 & 1 & 0\\1 & 1 & 1\\0 & 1 &0\end{bmatrix}
+         \frac{1}{8} \begin{bmatrix}0 & 1 & 0\\1 & 4 & 1\\0 & 1 &0\end{bmatrix}
 
    * with n=9:
 
@@ -37,7 +37,7 @@ smooth_n_point
 
    .. note::
       
-      See also :func:`smooth_gaussian`, :func:`convolve`.
+      See also :func:`smooth_gaussian`, :func:`convolve` and :func:`q_vector`.
 
 
 .. mv-minigallery:: smooth_n_point
