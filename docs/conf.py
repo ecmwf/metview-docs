@@ -79,10 +79,11 @@ html_static_path = ["_static"]
 
 html_css_files = ["css/custom_style.css", "css/gallery.css"]
 
-
 html_logo = "_static/metview.png"
 
 highlight_language = "none"
+
+intersphinx_mapping = {"scipy": ("https://docs.scipy.org/doc/scipy/reference", None)}
 
 rst_prolog = """
 .. role:: mval

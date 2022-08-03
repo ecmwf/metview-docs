@@ -69,7 +69,7 @@ The parcel computations have been revised and several new option were added/
   * See the :ref:`gallery example <gallery_parcel_path_multiple_start_conditions>` showcasing some of the new features:
 
    .. image:: /_static/gallery/parcel_path_multiple_start_conditions.png
-      :width: 280px
+      :width: 260px
       :target: ../gen_files/gallery/parcel_path_multiple_start_conditions.html
    
       
@@ -109,6 +109,14 @@ The parcel computations have been revised and several new option were added/
       :width: 280px
       :target: ../gen_files/gallery/q_vector.html
 
+* added new functions :func:`smooth_n_point` and :func:`smooth_gaussian` to perform spatial smoothing on fieldsets with lat-lon grids. See the :ref:`gallery example <gallery_gaussian_smoothing>`:
+
+   .. image:: /_static/gallery/gaussian_smoothing.png
+      :width: 280px
+      :target: ../gen_files/gallery/gaussian_smoothing.html
+
+* added new function :func:`convolve` to perform spatial 2D convolution on fieldsets with lat-lon grids
+* added new function :func:`rms_a` to compute area-weighted root mean square for each field ina fieldset
 * :func:`geostrophic_wind`: added new option ``coriolis`` to use a constant Coriolis parameter value
 * :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray
 * :func:`direction`: fixed issue when the ecCodes paramId in the resulting field was not set to 131 (=wind direction)

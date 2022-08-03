@@ -226,6 +226,14 @@
     desc: ''
     exclude: true
     type: icon
+- convolve:
+    category:
+      fieldset: Performs spatial convolution on a fieldset
+    desc: Performs spatial convolution on a fieldset
+    group:
+    - geo
+    - grib_object
+    type: script
 - corr_a:
     category:
       fieldset: Computes the area-weighted correlation for each field in a fieldset
@@ -2110,8 +2118,16 @@
     type: script
 - rms:
     category:
-      fieldset: Returns the root mean square of all the fields of a variable
-    desc: Returns the root mean square of all the fields in a fieldset
+      fieldset: Computes the pointwise root mean square for fieldsets
+    desc: Computes he pointwise root mean square for fieldsets
+    group:
+    - stats
+    - grib_object
+    type: script
+- rms_a:
+    category:
+      fieldset: Computes the area-weighted root mean square for fieldsets
+    desc: Computes the area-weighted root mean square for fieldsets
     group:
     - stats
     - grib_object
@@ -2361,6 +2377,22 @@
       unix: Sleep (number of seconds)
     desc: Sleep (number of seconds)
     exclude: true
+    type: script
+- smooth_gaussian:
+    category:
+      fieldset: Performs spatial smoothing on a fieldset
+    desc: Performs spatial smoothing on a fieldset
+    group:
+    - geo
+    - grib_object
+    type: script
+- smooth_n_points:
+    category:
+      fieldset: Performs spatial smoothing on a fieldset
+    desc: Performs spatial smoothing on a fieldset
+    group:
+    - geo
+    - grib_object
     type: script
 - solar_zenith_angle:
     category:
