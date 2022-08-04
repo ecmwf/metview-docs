@@ -26,7 +26,7 @@ smooth_gaussian
    
    .. note::
       
-      See also :func:`smooth_n_point`, :func:`convolve` and :func:`q_vector.
+      See also :func:`smooth_n_point`, :func:`convolve` and :func:`q_vector`.
 
 
 .. mv-minigallery:: smooth_gaussian
