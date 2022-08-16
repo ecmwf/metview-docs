@@ -2,13 +2,15 @@ grib_set
 =============
 
 
-.. py:function:: grib_set(fs, keys_and_values)
+.. py:function:: grib_set(fs, keys_and_values, repack=False)
 
    Sets information in the GRIB header of ``fs`` and returns a new :class:`Fieldset`.
    
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
    :param list keys_and_values: the ecCodes keys and values
+   :param repack: repack data. Sometimes after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm a repacking of data is needed.
+   :type repack: bool
    :rtype: :class:`Fieldset`
    
    ``keys_and_values`` has to be a list of the ecCodes keys and their values following each other. The actual data types are deduced from the values passed (and not from the key name!). 
@@ -27,15 +29,17 @@ grib_set
              "unitOfTimeRange", "D", # str
              "longitudeOfLastGridPointInDegrees", 100.5])  #  float
 
-.. py:function:: grib_set_long(fs, keys_and_values)
-.. py:function:: grib_set_double(fs, keys_and_values)
-.. py:function:: grib_set_string(fs, keys_and_values)
+.. py:function:: grib_set_long(fs, keys_and_values, repack=False)
+.. py:function:: grib_set_double(fs, keys_and_values, repack=False)
+.. py:function:: grib_set_string(fs, keys_and_values, repack=False)
 
    Sets information in the GRIB header of ``fs`` and returns a new :class:`Fieldset`.
    
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
    :param list keys_and_values: the ecCodes keys and values
+   :param repack: repack data. Sometimes after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm a repacking of data is needed.
+   :type repack: bool
    :rtype: :class:`Fieldset`
    
    ``keys_and_values`` has to be a list of the ecCodes keys and their values following each other. The actual values have to match the type of the function.  If applied to a multi-field fieldset, then all fields are modified.

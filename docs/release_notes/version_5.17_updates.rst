@@ -39,6 +39,14 @@ The parcel computations have been revised and several new option were added:
 * :func:`lifted_condensation_level`: improved speed by using [Bolton1980]_ instead of an iterative process to compute the :math:`t_{LCL}`. Works now with ndarrays and :class:`Fieldset` as input (previously only numbers were accepted).
 * :func:`thermo_parcel_path`: 
   
+  Algorithmic changes:
+
+  * the equivalent potential temperature defining the pseudo-adiabatic path is now computed with formula (39) from [Bolton1980]_ 
+  * the LFC (Level of Free Convection) is now determined as the bottom pressure of the positive buoyancy area highest in the atmosphere. This results in improved CIN computation when there are multiple positive buoyancy areas above the LCL. In these situations the CIN was formerly underestimated.
+  * the Lifted Index (LI) is now computed and added to the output
+
+  Interface changes:
+
   * the ``options`` became keyword arguments. Previously they were specified as a dict as the last positional argument. The old interface still works for backwards compatibility. E.g.:
 
       .. code-block:: python
@@ -50,7 +58,6 @@ The parcel computations have been revised and several new option were added:
          mv.thermo_parcel_path(prof, {"mode": "surface", "stop_at_el": False})
 
   * The computations can now use the **virtual temperature correction**, which is enabled by default. See the ``virtual`` key in the ``options`` argument.
-  * The **Lifted Index (LI)** was added to the output
   * The "most_unstable" mode was renamed "mucape". The old name is still supported but deprecated.
   * The "mean_layer" mode was renamed "ml". The old name is still supported but deprecated.
   * The "ml" start conditions are determined in a new way. Previously simply the mean values of temperature, dewpoint and pressure in the given layer were used. Now, the temperature is determined from the mean potential temperature, the dewpoint is the mean value in the layer and pressure is the surface pressure.
@@ -72,11 +79,16 @@ The parcel computations have been revised and several new option were added:
       :width: 260px
       :target: ../gen_files/gallery/parcel_path_multiple_start_conditions.html
    
-      
+
+**Thermo profile**
+
+* Thermo Bufr: added new parameters to specify location by WMO name, WMO ident and :xref:`wigos_wsi`. See: :func:`thermo_bufr` and :func:`thermoview`.
+
+
 **Hovmoller**
 
 * Vertical Hovmoeller: added new parameters ``use_fixed_surface_pressure`` and ``fixed_surface_pressure`` to use a fixed surface pressure value in the computations. These can be used when the input data is model level and the vertical axis is pressure ( ``vertical_level_type`` = "pressure"). See: :func:`mhovmoellerview` and :func:`mhovmoeller_vertical`.
-* Line Hovmoeller: fixed issue when North and South coordinates of lines going from SW to NE were automatically swapped
+* Line Hovmoeller: fixedzw issue when North and South coordinates of lines going from SW to NE were automatically swapped
   
 
 **User interface**
@@ -117,6 +129,7 @@ The parcel computations have been revised and several new option were added:
 
 * added new function :func:`convolve` to perform spatial 2D convolution on fieldsets with lat-lon grids
 * added new function :func:`rms_a` to compute area-weighted root mean square for each field ina fieldset
+* :func:`grib_set`: added new option ``repack`` to repack GRIB data. It is required to use when setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm.
 * :func:`geostrophic_wind`: added new option ``coriolis`` to use a constant Coriolis parameter value
 * :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray
 * :func:`direction`: fixed issue when the ecCodes paramId in the resulting field was not set to 131 (=wind direction)

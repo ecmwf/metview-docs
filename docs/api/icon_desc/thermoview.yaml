@@ -38,23 +38,73 @@ params:
     values: ''
 - point_selection:
     default: coordinates
-    desc: Specifies how the geographical location, for which the diagram is to be
-      plotted, will be selected.
+    desc: |-
+      Specifies the geographical location selection mode. The possible values are as follows:
+
+      * coordinates: use lat/lon coordinates
+      * area_average: [*GRIB only*] average in a geographical area
+      * wmo_name: [*BUFR only*] use the WMO station name from *stationOrSiteName* ecCodes BUFR key 
+      * wmo_ident: [*BUFR only*] use the WMO station identifier as *blockNumber*1000+stationNumber*
+      * wigos: [*BUFR only*] use the :xref:`wigos_wsi`. This is made up of four values (blocks) represented by ``wigos_series``, ``wigos_issuer``, ``wigos_issue_number`` and ``wigos_local_name``.
+      * station: use a :func:`stations` object
     ptype: str
-    values: coordinates/area_average/station
+    values: coordinates/area_average/wmo_name/wmo_ident/wigos/station
 - coordinates:
     default: '0/0'
     desc: Specifies the geographical location (as [lat, lon]) for which the diagram is to be plotted.
-      Available when ``point_selection`` is "coordinates".
+      Available when ``point_selection`` is "coordinates".  When BUFR data is used all the stations within the ``threshold`` around this location will be selected. 
     ptype: list
     values: ''
+- threshold:
+    default: 0.1
+    desc: |-
+      [*BUFR only*] Specifies the threshold in degrees (both in lat and lon) for selecting the matching station(s) for the specified coordinates. Available when ``point_selection`` is "coordinates". *New in Metview version 5.17.0*
+    ptype: number
+    values: '' 
 - area_average:
     default: '30/-30/-30/30'
-    desc: Specifies a geographical area over which an area average value will
+    desc: |-
+      [*GRIB only*] Specifies a geographical area over which an area average value will
       be used, instead of a point value, to produce the diagram.  The area is defined as
       [north, west, south, east]. Available when ``point_selection`` is "area_average".
     ptype: list
     values: ''
+- wmo_name:
+    default: ''
+    desc: |-
+      [*BUFR only*] Specifies the WMO name of the station to be selected by using the *stationOrSiteName* ecCodes BUFR key from the data section of the messages. Name matching is case insensitive with leading and trailing spaces omitted. Available when ``point_selection`` is "wmo_name". *New in Metview version 5.17.0* 
+    ptype: str
+    values: '' 
+- wmo_ident:
+    default: -1
+    desc: |-
+      [*BUFR only*] Specifies the numeric WMO identifier of the station to be selected. This is the combination of the WMO block and station number in the form of *blockNumber*1000+stationNumber*. These numbers are extracted from the data section of the BUFR message using the corresponding ecCodes keys. Available when ``point_selection`` is "wmo_ident". *New in Metview version 5.17.0* 
+    ptype: number
+    values: '' 
+- wigos_series:
+    default: ''
+    desc: |-
+      [*BUFR only*] Specifies the WIGOS Identifier Series represented by the *wigosIdentifierSeries* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
+    ptype: number
+    values: '' 
+- wigos_issuer:
+    default: ''
+    desc: |-
+      [*BUFR only*] Specifies the WIGOS Issuer of Identifier represented by the *wigosIssuerOfIdentifier* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
+    ptype: number
+    values: ''
+- wigos_issue_number:
+    default: ''
+    desc: |-
+      [*BUFR only*] Specifies the WIGOS Issue Number represented by the *wigosIssueNumber* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
+    ptype: number
+    values: ''
+- wigos_local_name:
+    default: ''
+    desc: |-
+      [*BUFR only*]  Specifies the WIGOS Local Identifier name represented by the *wigosLocalIdentifierCharacter* ecCodes key in the BUFR message. The default value (empty string) means that this parameter is not used in the  :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
+    ptype: str
+    values: ''    
 - station:
     default: ''
     desc: Specifies the location as a :func:`stations` object for which the diagram is to be plotted. 
@@ -64,43 +114,51 @@ params:
 - point_extraction:
     default: interpolate
     desc: |-
-      Specifies the way to calculate values at the point location for GRIB thermodynamic diagrams. The possible options are:
+      [*GRIB only*] Specifies the way to calculate values at the point location for GRIB thermodynamic diagrams. The possible options are:
       
       * "interpolate": interpolate values from the four surrounding grid points.
       * "nearest_gridpoint": use the data from the nearest grid point.
+
+      Available if ``point_selection`` is "coordinates".
     ptype: str
     values: interpolate/nearest_gridpoint
 - dew_point_formulation:
     default: saturation_over_water
-    desc: Specifies the equation to compute the dew point.
+    desc: |-
+      [*GRIB only*] Specifies the equation to compute the dew point.
     ptype: str
     values: saturation_over_water/mixed_phase_0_to\_\-23
 - temperature_param:
     default: '130'
-    desc: Specifies the ecCodes paramId used to identify the temperature in the input data.
+    desc: |-
+      [*GRIB only*]  Specifies the ecCodes paramId used to identify the temperature in the input data.
     ptype: number
     values: ''
 - specific_humidity_param:
     default: '133'
-    desc: Specifies the ecCodes paramId used to identify the specific humidity in the 
+    desc: |-
+      [*GRIB only*] Specifies the ecCodes paramId used to identify the specific humidity in the 
       input data.
     ptype: number
     values: ''
 - lnsp_param:
     default: '152'
-    desc: Specifies the ecCodes paramId used to identify the Logarithm of 
+    desc: |-
+      [*GRIB only*] Specifies the ecCodes paramId used to identify the Logarithm of 
       Surface Pressure (LNSP) in the input data. 
     ptype: number
     values: ''
 - u_wind_param:
     default: '131'
-    desc: Specifies the ecCodes paramId used to identify the U wind component in the 
+    desc: |-
+      [*GRIB only*] Specifies the ecCodes paramId used to identify the U wind component in the 
       input data.
     ptype: number
     values: ''
 - v_wind_param:
     default: '132'
-    desc: Specifies the ecCodes paramId used to identify the V wind component in the 
+    desc: |-
+      [*GRIB only*] Specifies the ecCodes paramId used to identify the V wind component in the 
       input data.
     ptype: number
     values: ''
