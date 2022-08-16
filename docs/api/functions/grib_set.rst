@@ -15,11 +15,13 @@ grib_set
    
    ``keys_and_values`` has to be a list of the ecCodes keys and their values following each other. The actual data types are deduced from the values passed (and not from the key name!). 
 
-   :Example:
+   :Examples:
 
       .. code-block:: python
          
          import metview as mv
+
+         f = mv.read("my.grib")
          f = mv.grib_set(f, 
             ["date", 20150601,       # int
              "time", 0600,           # int
@@ -28,6 +30,16 @@ grib_set
              "endStep", 31,          # int
              "unitOfTimeRange", "D", # str
              "longitudeOfLastGridPointInDegrees", 100.5])  #  float
+
+      .. code-block:: python
+         
+         import metview as mv
+
+         # GRIB data with ccsds packing
+         f = mv.read("ccsds.grib")
+         # when we change the packing type repacking must be used
+         f = mv.grib_set(f, ["packingType", "grid_simple"], repack=True)
+
 
 .. py:function:: grib_set_long(fs, keys_and_values, repack=False)
 .. py:function:: grib_set_double(fs, keys_and_values, repack=False)
