@@ -93,6 +93,11 @@ The parcel computations have been revised and several new option were added:
 
 **User interface**
 
+* Colour editor: redesigned interface and added RGB, HSL and greyscale colour sliders
+  
+   .. image:: /_static/release/version_5.17_updates/colour_slider.png  
+      :width: 280px
+      
 * Desktop: Added "Copy filesystem path" action to the context menu of the Breadcrumbs items
 * Contour icon editor: added option to show/hide filter options for palette chooser interface
 * Family icons: fixed issue when could not edit newly created family icons
