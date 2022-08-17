@@ -29,8 +29,12 @@ Version 5.17.0
 
 **Plotting**
 
-The predefined palettes and user defined colour lists can be automatically adjusted to the actual contour level values.
+:func:`mcont` can automatically adjust predefined palettes and user defined colour lists to the actual contour level values with the new ``contour_shade_colour_list_policy`` = "dynamic" option. It is also possible to reverse palettes and colour list for plotting by setting ``contour_shade_colour_reverse_list`` to "on". See the :ref:`gallery example <gallery_dynamic_palette>`:
 
+   .. image:: /_static/gallery/dynamic_palette.png
+      :width: 260px
+      :target: ../gen_files/gallery/dynamic_palette.html
+   
 
 **Thermo parcel path**
 
@@ -83,6 +87,7 @@ The parcel computations have been revised and several new option were added:
 **Thermo profile**
 
 * Thermo Bufr: added new parameters to specify location by WMO name, WMO ident and :xref:`wigos_wsi`. See: :func:`thermo_bufr` and :func:`thermoview`.
+* Improved error message when no BUFR message matching the required location and BUFR data subtype was found in input.
 
 
 **Hovmoller**

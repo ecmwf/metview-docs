@@ -41,6 +41,7 @@ map-scalar:
   examples:
   - contour9
   - contour5
+  - dynamic_palette
   - plot_t2m
   - field_anomalies
   - layoutx3
