@@ -93,7 +93,7 @@ The parcel computations have been revised and several new option were added:
 **Hovmoller**
 
 * Vertical Hovmoeller: added new parameters ``use_fixed_surface_pressure`` and ``fixed_surface_pressure`` to use a fixed surface pressure value in the computations. These can be used when the input data is model level and the vertical axis is pressure ( ``vertical_level_type`` = "pressure"). See: :func:`mhovmoellerview` and :func:`mhovmoeller_vertical`.
-* Line Hovmoeller: fixedzw issue when North and South coordinates of lines going from SW to NE were automatically swapped
+* Line Hovmoeller: fixed issue when North and South coordinates of lines going from SW to NE were automatically swapped
   
 
 **User interface**
@@ -103,7 +103,7 @@ The parcel computations have been revised and several new option were added:
    .. image:: /_static/release/version_5.17_updates/colour_slider.png  
       :width: 280px
       
-* Desktop: Added "Copy filesystem path" action to the context menu of the Breadcrumbs items
+* Desktop: added "Copy filesystem path" action to the context menu of the Breadcrumbs items
 * Contour icon editor: added option to show/hide filter options for palette chooser interface
 * Family icons: fixed issue when could not edit newly created family icons
 * Advanced search: fixed issue when search did not work with time period in Metview versions built with Qt >= 5.8.0 
