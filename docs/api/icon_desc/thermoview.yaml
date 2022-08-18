@@ -82,19 +82,19 @@ params:
     ptype: number
     values: '' 
 - wigos_series:
-    default: ''
+    default: -q
     desc: |-
       [*BUFR only*] Specifies the WIGOS Identifier Series represented by the *wigosIdentifierSeries* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
     ptype: number
     values: '' 
 - wigos_issuer:
-    default: ''
+    default: -1
     desc: |-
       [*BUFR only*] Specifies the WIGOS Issuer of Identifier represented by the *wigosIssuerOfIdentifier* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
     ptype: number
     values: ''
 - wigos_issue_number:
-    default: ''
+    default: -1
     desc: |-
       [*BUFR only*] Specifies the WIGOS Issue Number represented by the *wigosIssueNumber* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
     ptype: number

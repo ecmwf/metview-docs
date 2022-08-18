@@ -4,9 +4,11 @@ oneliner: Generates thermodynamic profiles from BUFR data suitable for plotting 
 params:
 - data:
     default:
-    desc: Specifies the input BUFR data, which should contain upper air soundings.
-      Please note that PILOT observations cannot be used here since they only 
-      contain wind data. 
+    desc: |-
+      Specifies the input BUFR data, which should contain upper air soundings identified by the relevant ecCodes BUFR keys as described below. Only messages where *dataCategory* is 2 are considered with the following subtypes: 
+      
+      * for edition 3 BUFR messages *dataSubCategory* has to be 101 or 109
+      * for edition 4 BUFR messages *internationalDataSubCategory* has to be 4
     values:
 - point_selection:
     default: coordinates
@@ -45,19 +47,19 @@ params:
     ptype: number
     values: '' 
 - wigos_series:
-    default: ''
+    default: -1
     desc: 
       Specifies the WIGOS Identifier Series represented by the *wigosIdentifierSeries* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
     ptype: number
     values: '' 
 - wigos_issuer:
-    default: ''
+    default: -1
     desc: 
       Specifies the WIGOS Issuer of Identifier represented by the *wigosIssuerOfIdentifier* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
     ptype: number
     values: ''
 - wigos_issue_number:
-    default: ''
+    default: -1
     desc: 
       Specifies the WIGOS Issue Number represented by the *wigosIssueNumber* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
     ptype: number
