@@ -29,7 +29,7 @@ Version 5.17.0
 
 **Plotting**
 
-:func:`mcont` can automatically adjust predefined palettes and user defined colour lists to the actual contour level values with the new ``contour_shade_colour_list_policy`` = "dynamic" option. It is also possible to reverse palettes and colour list for plotting by setting ``contour_shade_colour_reverse_list`` to "on". See the :ref:`gallery example <gallery_dynamic_palette>`:
+:func:`mcont` can automatically adjust predefined palettes and user defined colour lists to the actual contour level values with the new ``contour_shade_colour_list_policy`` = "dynamic" option. It is also possible to reverse palettes and colour lists for plotting by setting ``contour_shade_colour_reverse_list`` to "on". See the :ref:`gallery example <gallery_dynamic_palette>`:
 
    .. image:: /_static/gallery/dynamic_palette.png
       :width: 260px
