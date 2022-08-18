@@ -30,7 +30,7 @@ params:
     values: ''
 - flextra_an_mars_class:
     default: 'od'
-    desc: The MARS class of the analysis fields. The possible values are "od" (operational analysis) and "ea" (ERA5). Enabled when ``flextra_prepare_mode`` is "period". *New in Metview version 5.17.0*
+    desc: The MARS class of the analysis fields. The possible values are "od" (operational analysis) and "ea" (ERA5). The "ea" mode can only be used internally at ECMWF. Enabled when ``flextra_prepare_mode`` is "period". *New in Metview version 5.17.0*
     ptype: str
     values: 'od/ea'
 - flextra_fc_mars_expver:
