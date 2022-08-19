@@ -118,6 +118,7 @@ The parcel computations have been revised and several new option were added:
 
 **Macro/Python**
 
+* :func:`mean` and :func:`sum`: added new parameter ``dim`` to restrict computations to a specific dimension of :class:`Fieldset` data in python, e.g. compute an ensemble mean when multiple steps exist in the data
 * improved speed and reduced memory usage in many GRIB-related functions
 * added new function :func:`static_stability` to compute the static stability. See the :ref:`gallery example <gallery_static_stability>`:
 
@@ -138,7 +139,7 @@ The parcel computations have been revised and several new option were added:
       :target: ../gen_files/gallery/gaussian_smoothing.html
 
 * added new function :func:`convolve` to perform spatial 2D convolution on fieldsets with lat-lon grids
-* added new function :func:`rms_a` to compute area-weighted root mean square for each field ina fieldset
+* added new function :func:`rms_a` to compute area-weighted root mean square for each field in a fieldset
 * :func:`grib_set`: added new option ``repack`` to repack GRIB data. It is required to use when setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm.
 * :func:`geostrophic_wind`: added new option ``coriolis`` to use a constant Coriolis parameter value
 * :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray
