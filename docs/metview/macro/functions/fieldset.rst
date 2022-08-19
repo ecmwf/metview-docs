@@ -545,12 +545,17 @@ Fieldset Macro functions
       print (pl)
 
 
-.. describe:: fieldset grib_set ( fieldset, list )
+.. describe:: fieldset grib_set ( fieldset, list, [string])
 
-   This function sets information in the given fieldset's GRIB header, automatically deducing the type from the value passed (not from the key name). The list provided as the second argument should be a set of key/value pairs, for example:
+   This function sets information in the given fieldset's GRIB header, automatically deducing the type from the value passed (not from the key name). The list provided as the second argument should be a set of key/value pairs. 
+   
+   If the optional third argument is 'repack', the data will be repacked. It is required after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm.
+   
+   Examples:
 
    .. code-block:: python
 
+      f = read("my.grib")
       f = grib_set(f, ["date", 20150601,       # integer
                   "time", 0600,           # integer
                   "stepType", "avg",      # string
@@ -559,12 +564,23 @@ Fieldset Macro functions
                   "unitOfTimeRange", "D", # string
                   "longitudeOfLastGridPointInDegrees", 100.5]) #  double
 
+   .. code-block:: python
+      
+         # GRIB data with ccsds packing
+         f = read("ccsds.grib")
+         # when we change the packing type repacking must be used
+         f = grib_set(f, ["packingType", "grid_simple"], "repack")
 
-.. describe:: fieldset grib_set_long ( fieldset, list )
-.. describe:: fieldset grib_set_double ( fieldset, list )
-.. describe:: fieldset grib_set_string ( fieldset, list )
 
-   These functions set information in the given fieldset's GRIB header, and are type-specific. The list provided as the second argument should be a set of key/value pairs, for example:
+.. describe:: fieldset grib_set_long ( fieldset, list, [string] )
+.. describe:: fieldset grib_set_double ( fieldset, list, [string])
+.. describe:: fieldset grib_set_string ( fieldset, list, [string])
+
+   These functions set information in the given fieldset's GRIB header, and are type-specific. The list provided as the second argument should be a set of key/value pairs.
+   
+   If the optional third argument is 'repack', the data will be repacked. It is required after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm.
+
+   Example:
 
    .. code-block:: python
 
@@ -1041,6 +1057,21 @@ Fieldset Macro functions
 
       y = rms(x)
       y = sqrt(mean(x*x))
+
+
+.. describe:: fieldset rms_a ( fieldset)
+.. describe:: fieldset rms_a ( fieldset, list )
+
+   Computes the area weighted root mean square for each field in the input fieldset.  The area, if specified, is a list of numbers representing North, West, South, East. If the area is not specified, the whole field will be used in the calculation. The result is a number for a single field, or a list for a multi-field fieldset.
+ 
+   .. note::
+      
+      The computations are implemented via ``integrate`` and the following lines are equivalent:
+
+      .. code-block:: python
+
+         y = rms_a(x)
+         y = sqrt(integrate(x*x))
 
 
 .. describe:: fieldset second_derivative_x (f: fieldset)
