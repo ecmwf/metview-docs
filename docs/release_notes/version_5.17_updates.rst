@@ -119,6 +119,7 @@ The parcel computations have been revised and several new option were added:
 **Macro/Python**
 
 * :func:`mean` and :func:`sum`: added new parameter ``dim`` to restrict computations to a specific dimension of :class:`Fieldset` data in python, e.g. compute an ensemble mean when multiple steps exist in the data
+* added new function :func:`pl_to_pl` to perform interpolation from pressure level GRIB fields onto a set of target pressure levels
 * improved speed and reduced memory usage in many GRIB-related functions
 * added new function :func:`static_stability` to compute the static stability. See the :ref:`gallery example <gallery_static_stability>`:
 

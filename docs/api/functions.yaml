@@ -1844,6 +1844,14 @@
     pix: DISPLAYWINDOW
     title: Display Window
     type: icon
+- pl_to_pl:
+    category:
+      fieldset: Interpolates pressure level fields to pressure levels
+    desc: Interpolates pressure level fields to pressure levels
+    group:
+    - vertical
+    - grib_object
+    type: script
 - png_output:
     category: {}
     desc: Defines the PNG output format
