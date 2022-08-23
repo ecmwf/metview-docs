@@ -141,6 +141,7 @@ The parcel computations have been revised and several new option were added:
 
 * added new function :func:`convolve` to perform spatial 2D convolution on fieldsets with lat-lon grids
 * added new function :func:`rms_a` to compute area-weighted root mean square for each field in a fieldset
+* added new function :func:`grib_indexes` to return GRIB message information for a Fieldset
 * :func:`grib_set`: added new option ``repack`` to repack GRIB data. It is required to use when setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm.
 * :func:`geostrophic_wind`: added new option ``coriolis`` to use a constant Coriolis parameter value
 * :func:`mvl_ml2hPa`: allowed to specify the target pressure levels as an ndarray

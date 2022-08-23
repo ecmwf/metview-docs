@@ -861,6 +861,13 @@
     - grib_access
     - grib_object
     type: script
+- grib_indexes:
+    category:
+      fieldset: Returns list of indexes into the fields of the Fieldset
+    desc: Returns list of indexes into the fields of the Fieldset
+    group:
+    - grib_access
+    - grib_object
 - grib_set:
     category:
       fieldset: Writes GRIB headers using ecCodes keys
