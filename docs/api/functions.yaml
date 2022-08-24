@@ -226,6 +226,14 @@
     desc: ''
     exclude: true
     type: icon
+- convolve:
+    category:
+      fieldset: Performs spatial convolution on a fieldset
+    desc: Performs spatial convolution on a fieldset
+    group:
+    - geo
+    - grib_object
+    type: script
 - corr_a:
     category:
       fieldset: Computes the area-weighted correlation for each field in a fieldset
@@ -853,6 +861,13 @@
     - grib_access
     - grib_object
     type: script
+- grib_indexes:
+    category:
+      fieldset: Returns list of indexes into the fields of the Fieldset
+    desc: Returns list of indexes into the fields of the Fieldset
+    group:
+    - grib_access
+    - grib_object
 - grib_set:
     category:
       fieldset: Writes GRIB headers using ecCodes keys
@@ -1836,6 +1851,14 @@
     pix: DISPLAYWINDOW
     title: Display Window
     type: icon
+- pl_to_pl:
+    category:
+      fieldset: Interpolates pressure level fields to pressure levels
+    desc: Interpolates pressure level fields to pressure levels
+    group:
+    - vertical
+    - grib_object
+    type: script
 - png_output:
     category: {}
     desc: Defines the PNG output format
@@ -1953,6 +1976,14 @@
     desc: ''
     exclude: true
     type: icon
+- q_vector:
+    category:
+      fieldset: Computes the Q-vector
+    desc: Computes the Q-vector
+    group:
+    - vertical
+    - grib
+    type: script
 - read:
     category: {}
     desc: Filters and interpolates fieldset data
@@ -2102,8 +2133,16 @@
     type: script
 - rms:
     category:
-      fieldset: Returns the root mean square of all the fields of a variable
-    desc: Returns the root mean square of all the fields in a fieldset
+      fieldset: Computes the pointwise root mean square for fieldsets
+    desc: Computes he pointwise root mean square for fieldsets
+    group:
+    - stats
+    - grib_object
+    type: script
+- rms_a:
+    category:
+      fieldset: Computes the area-weighted root mean square for fieldsets
+    desc: Computes the area-weighted root mean square for fieldsets
     group:
     - stats
     - grib_object
@@ -2354,6 +2393,22 @@
     desc: Sleep (number of seconds)
     exclude: true
     type: script
+- smooth_gaussian:
+    category:
+      fieldset: Performs spatial smoothing on a fieldset
+    desc: Performs spatial smoothing on a fieldset
+    group:
+    - geo
+    - grib_object
+    type: script
+- smooth_n_points:
+    category:
+      fieldset: Performs spatial smoothing on a fieldset
+    desc: Performs spatial smoothing on a fieldset
+    group:
+    - geo
+    - grib_object
+    type: script
 - solar_zenith_angle:
     category:
       fieldset: Computes the solar zenith angle for a fieldset
@@ -2424,6 +2479,14 @@
     - grib_object
     - geopoints_object
     - netcdf_object
+    type: script
+- static_stability:
+    category:
+      fieldset: Computes the static stability
+    desc: Computes the static stability
+    group:
+    - vertical
+    - grib
     type: script
 - stations:
     category: {}

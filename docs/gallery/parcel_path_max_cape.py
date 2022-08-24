@@ -14,6 +14,8 @@ GRIB - Parcel with Maximum CAPE on Skew-T
 
 import metview as mv
 
+# Note: at least Metview version 5.17.0 is required
+
 # getting data
 use_mars = False
 
@@ -43,7 +45,7 @@ location = [56.5, 24.7]  # lat, lon
 prof = mv.thermo_grib(coordinates=location, data=g)
 
 # compute parcel path - maximum cape up to 700 hPa
-parcel = mv.thermo_parcel_path(prof, {"mode": "most_unstable", "top_p": 700})
+parcel = mv.thermo_parcel_path(prof, mode="mucape", top_p=700)
 
 # create plot object for parcel areas
 parcel_area = mv.thermo_parcel_area(parcel)
@@ -68,15 +70,11 @@ view = mv.thermoview(
 # get profile info for title
 info = mv.thermo_data_info(prof)
 
-# get base and valid date from the first field
-b_dt = mv.base_date(g[0])
-v_dt = mv.valid_date(g[0])
-
 # define title
 title_txt = "Run: {} UTC +{}h Valid: {} UTC Lat: {:.2f} Lon: {:.2f}".format(
-    b_dt.strftime("%Y-%m-%d %H"),
+    info["valid_date"].strftime("%Y-%m-%d %H"),
     int(info["step"]),
-    v_dt.strftime("%Y-%m-%d %H"),
+    info["base_date"].strftime("%Y-%m-%d %H"),
     info["lat"],
     info["lon"],
 )
@@ -91,6 +89,7 @@ txt.append("  Start t: {:.1f} C".format(parcel["start"]["t"]))
 txt.append(" Start td: {:.1f} C".format(parcel["start"]["td"]))
 txt.append("     CAPE: {:.3f} J/kg".format(parcel["cape"]))
 txt.append("      CIN: {:.3f} J/kg".format(parcel["cin"]))
+txt.append("       LI: {:.1f} K".format(parcel["li"]))
 
 if parcel["lcl"] is not None:
     txt.append("    LCL p: {:.0f} hPa".format(parcel["lcl"]["p"]))
@@ -104,11 +103,8 @@ if parcel["el"] is not None:
     txt.append("     EL p: {:.0f} hPa".format(parcel["el"]["p"]))
     txt.append("     EL t: {:.1f} C".format(parcel["el"]["t"]))
 
-if parcel["top"] is not None:
-    txt.append("    TOP p: {:.0f} hPa".format(parcel["top"]["p"]))
-    txt.append("    TOP t: {:.1f} C".format(parcel["top"]["t"]))
 
-# create info box - make sure font is monospace
+# create info box - ensure font is monospace
 info_box = mv.mtext(
     text_lines=txt,
     text_font="courier",

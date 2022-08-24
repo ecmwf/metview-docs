@@ -1,13 +1,75 @@
 return: :class:`NetCDF`
 summary: rst
-oneliner: Generates a Thermodynamic diagram data unit from BUFR data.
+oneliner: Generates thermodynamic profiles from BUFR data suitable for plotting in a thermodynamic view.
 params:
 - data:
     default:
-    desc: Specifies the input BUFR data, which should contain upper air soundings.
-      Please note that PILOT observations cannot be used here since they only 
-      contain wind data. 
+    desc: |-
+      Specifies the input BUFR data, which should contain upper air soundings identified by the relevant ecCodes BUFR keys as described below. Only messages where *dataCategory* is 2 are considered with the following subtypes: 
+      
+      * for edition 3 BUFR messages *dataSubCategory* has to be 101 or 109
+      * for edition 4 BUFR messages *internationalDataSubCategory* has to be 4
     values:
+- point_selection:
+    default: coordinates
+    desc: |-
+      Specifies the geographical location selection mode. The possible values are as follows:
+
+      * coordinates: use lat/lon coordinates 
+      * wmo_name: use the WMO station name from *stationOrSiteName* ecCodes BUFR key 
+      * wmo_ident: use the WMO station identifier as *blockNumber*1000+stationNumber*
+      * wigos: use the :xref:`wigos_wsi`. This is made up of four values (blocks) represented by ``wigos_series``, ``wigos_issuer``, ``wigos_issue_number`` and ``wigos_local_name``.
+      * station: use a :func:`stations` object
+
+      *New in Metview version 5.17.0*
+    ptype: str
+    values: coordinates/wmo_name/wmo_ident/wigos/station
+- coordinates:
+    default: '0/0'
+    desc: Specifies the geographical location (as [lat, lon]) for the profile extraction. All the stations within the ``threshold`` around this location will be selected. Available when ``point_selection`` is "coordinates". *New in  Metview version 5.17.0*
+    ptype: list
+    values: ''
+- threshold:
+    default: 0.1
+    desc: Specifies the threshold in degrees (both in lat and lon) for selecting the matching station(s) for the specified coordinates. Available when ``point_selection`` is "coordinates". *New in Metview version 5.17.0*
+    ptype: number
+    values: ''  
+- wmo_name:
+    default: ''
+    desc: 
+      Specifies the WMO name of the station to be selected by using the *stationOrSiteName* ecCodes BUFR key from the data section of the messages. Name matching is case insensitive with leading and trailing spaces omitted. Available when ``point_selection`` is "wmo_name". *New in Metview version 5.17.0* 
+    ptype: str
+    values: '' 
+- wmo_ident:
+    default: -1
+    desc: 
+      Specifies the numeric WMO identifier of the station to be selected. This is the combination of the WMO block and station number in the form of *blockNumber*1000+stationNumber*. These numbers are extracted from the data section of the BUFR message using the corresponding ecCodes keys. Available when ``point_selection`` is "wmo_ident". *New in Metview version 5.17.0* 
+    ptype: number
+    values: '' 
+- wigos_series:
+    default: -1
+    desc: 
+      Specifies the WIGOS Identifier Series represented by the *wigosIdentifierSeries* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
+    ptype: number
+    values: '' 
+- wigos_issuer:
+    default: -1
+    desc: 
+      Specifies the WIGOS Issuer of Identifier represented by the *wigosIssuerOfIdentifier* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
+    ptype: number
+    values: ''
+- wigos_issue_number:
+    default: -1
+    desc: 
+      Specifies the WIGOS Issue Number represented by the *wigosIssueNumber* ecCodes key in the BUFR message. The default value (-1) means that this parameter is not used in the :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
+    ptype: number
+    values: ''
+- wigos_local_name:
+    default: ''
+    desc: 
+      Specifies the WIGOS Local Identifier name represented by the *wigosLocalIdentifierCharacter* ecCodes key in the BUFR message. The default value (empty string) means that this parameter is not used in the  :xref:`wigos_wsi` matching. Available when ``point_selection`` is "wigos". *New in Metview version 5.17.0* . 
+    ptype: str
+    values: ''
 - station:
     default: ''
     desc: Specifies the location as a :func:`stations` object for which the data is to be extracted. 

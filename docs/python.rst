@@ -14,3 +14,4 @@ order to use its Python API, it only needs to be installed. Please see :ref:`ins
     data_types/index
     api/ref_guide 
     metview/jupyter.rst
+    references

@@ -9,7 +9,8 @@ mvl_ml2hPa
    :type lnsp: :class:`Fieldset`
    :param fs: fieldset to be interpolated (must contain model levels!). Does not have to be sorted by level.
    :type fs: :class:`Fieldset`
-   :param list pressures: list of target pressure levels in hPa. Does not have to be sorted.
+   :param pressures: target pressure levels in hPa. Does not have to be sorted. Note: it can be an ndarray only since *Metview version 5.17.0*.
+   :type pressures: list or ndarray
    :rtype: :class:`Fieldset`
   
    The input data (``fs``) must contain one field per model level only. It means that e.g. data containing multiple timesteps cannot be used as an input.

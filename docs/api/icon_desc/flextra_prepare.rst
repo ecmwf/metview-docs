@@ -4,7 +4,9 @@ Generates the gridded input data and the AVAILABLE file needed to run the :ref:`
 
 **What data is available?**
 
-:func:`flextra_prepare` is currently only able to handle data from the operational ECMWF forecasts/analyses 2008, 4 June onwards.
+:func:`flextra_prepare` is currently only able to handle data from the operational ECMWF forecasts/analyses 2008, 4 June onwards. 
+
+From Metview version 5.17.0 onwards when ``flextra_prepare_mode`` is "period" the analysis can also be retrieved from ERA5 (by setting ``flextra_an_mars_class`` to "ea").
 
 **About the FLEXTRA input data**
 

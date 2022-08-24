@@ -18,8 +18,7 @@ import sys
 
 import sphinx_rtd_theme
 
-# import pydata_sphinx_theme
-
+# Adds path to the folder _ext, where extensions are stored
 sys.path.insert(0, os.path.abspath("."))
 sys.path.append(os.path.abspath("./_ext"))
 # top = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
@@ -45,6 +44,7 @@ extensions = [
     # "pydata_sphinx_theme",
     "nbsphinx",
     "sphinx.ext.intersphinx",
+    "xref",
     "metview_sphinx",
 ]
 
@@ -79,10 +79,18 @@ html_static_path = ["_static"]
 
 html_css_files = ["css/custom_style.css", "css/gallery.css"]
 
-
 html_logo = "_static/metview.png"
 
 highlight_language = "none"
+
+xref_links = {
+    "wigos_wsi": (
+        "WIGOS Station Identifier",
+        "https://community.wmo.int/activity-areas/WIGOS/implementation-WIGOS/WIGOS-station-identifier",
+    )
+}
+
+intersphinx_mapping = {"scipy": ("https://docs.scipy.org/doc/scipy/reference", None)}
 
 rst_prolog = """
 .. role:: mval

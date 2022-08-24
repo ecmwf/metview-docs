@@ -258,6 +258,17 @@ class GalleryItem:
             # has_fn = "read_fn" in m
             # has_r = "read" in m
             # print(f"  fn={has_fn} read={has_r}")
+
+        # functions called on an object
+        m_fn = re.findall(r"f\.(\w+)\(", t)
+
+        # special treatment for the duplicate read
+        if "read" in m_fn:
+            m_fn.remove("read")
+
+        if m_fn:
+            m.extend(m_fn)
+
         BACKREF.add(m, self)
 
     def build_item(self, f):

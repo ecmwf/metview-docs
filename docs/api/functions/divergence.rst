@@ -45,6 +45,7 @@ divergence
    If ``fx`` and ``fy`` are horizontal wind components the ecCodes **paramId** of the resulting field is set to 155 (=divergence). 
    
    .. note::
+      
       See also :func:`vorticity`, :func:`shear_deformation` and :func:`stretch_deformation`.
 
 
