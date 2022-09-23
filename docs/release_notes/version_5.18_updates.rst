@@ -27,3 +27,12 @@ Version 5.18.0
    -  Includes
       version `1.13.0 <https://github.com/ecmwf/metview-python/blob/master/CHANGELOG.rst>`__ of
       the Python interface
+
+**Plotting**
+
+* streamlines: fixed issue when the arrowhead direction on the streamlines was inconsistent 
+
+**User interface**
+
+* :func:`eccharts`: added new layer called "tcw" (Total Column Water)
+* :func:`mcont`: add style "sh_tcw_f5t100" to the predefined list of styles for parameter ``contour_style_name``
