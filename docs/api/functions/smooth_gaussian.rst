@@ -3,6 +3,8 @@ smooth_gaussian
 
 .. py:function:: smooth_gaussian(fs, sigma=1, repeat=1, **kwargs)
 
+   *New in metview-python version 1.13.0*.
+
    Performs spatial smoothing using a Gaussian filter for each field in ``fs``.
    
    :param fs: input fieldset

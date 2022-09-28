@@ -9,9 +9,9 @@ mean
    :type fs: :class:`Fieldset`
    :param missing: controls what happens when missing values are present in ``fs``. When it is ``False``, a missing value in any of the fields at a given gridpoint will result in a missing value in the corresponding gridpoint in the output. If it is ``True`` all the non-missing values across the fields at a given grid point will be used to compute the mean. *This parameter is new in Metview version 5.16.0*. In earlier versions the computations are carried out as if ``missing`` were set to ``False``.
    :type missing: bool
-   :param dim: restrict the computations to a single dimension of the data - see main text below
+   :param dim: restrict the computations to a single dimension of the data - see main text below. *New in metview-python version 1.13.0*.
    :type dim: str
-   :param preserve_dims: may be used in conjunction with parameter ``dim`` - see main text below
+   :param preserve_dims: may be used in conjunction with parameter ``dim`` - see main text below. *New in metview-python version 1.13.0*.
    :type preserve_dims: list
    :rtype: :class:`Fieldset`
    
@@ -22,6 +22,10 @@ mean
    .. math::
 
          m_{i} = \frac {1}{N} \sum_{k}^{N}f_{i}^{k}
+
+   **Dimensions**
+   
+   *New in metview-python version 1.13.0*. 
 
    The ability to restrict the computations over a single dimension, such as time or ensemble member,
    is available via the ``dim`` and ``preserve_dims`` parameters, and only when this function is used as a method
@@ -45,6 +49,10 @@ mean
    if the input data contains multiple experiment versions. In this case, Metview by default would
    not preserve them as a 'dimension', but would include them in the mean computation. The solution
    would be to supply a ``preserved_dims`` parameter that includes ``"experimentVersionNumber"``.
+
+   .. note::
+      
+      See also :func:`sum`.
 
 
 .. py:function:: mean(gpt)

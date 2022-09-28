@@ -3,6 +3,8 @@ smooth_n_point
 
 .. py:function:: smooth_n_point(fs, n=9, repeat=1, **kwargs)
 
+   *New in metview-python version 1.13.0*.
+
    Performs spatial smoothing using a 5 or 9 point technique for each field in ``fs``.
    
    :param fs: input fieldset
