@@ -549,7 +549,7 @@ Fieldset Macro functions
 
    This function sets information in the given fieldset's GRIB header, automatically deducing the type from the value passed (not from the key name). The list provided as the second argument should be a set of key/value pairs. 
    
-   If the optional third argument is 'repack', the data will be repacked. It is required after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm.
+   If the optional third argument is 'repack', the data will be repacked . It is required after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm. This argument is *new in Metview version 5.17.0*.
    
    Examples:
 
@@ -578,7 +578,7 @@ Fieldset Macro functions
 
    These functions set information in the given fieldset's GRIB header, and are type-specific. The list provided as the second argument should be a set of key/value pairs.
    
-   If the optional third argument is 'repack', the data will be repacked. It is required after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm.
+   If the optional third argument is 'repack', the data will be repacked . It is required after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm. This argument is *new in Metview version 5.17.0*.
 
    Example:
 

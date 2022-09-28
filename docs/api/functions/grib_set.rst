@@ -9,7 +9,7 @@ grib_set
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
    :param list keys_and_values: the ecCodes keys and values
-   :param repack: repack data. Sometimes after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm a repacking of data is needed.
+   :param repack: repack data. Sometimes after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm a repacking of data is needed. *New in Metview version 5.17.0*
    :type repack: bool
    :rtype: :class:`Fieldset`
    
@@ -50,7 +50,7 @@ grib_set
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
    :param list keys_and_values: the ecCodes keys and values
-   :param repack: repack data. Sometimes after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm a repacking of data is needed.
+   :param repack: repack data. Sometimes after setting some ecCodes keys (e.g. *packingType*) involving properties of the packing algorithm a repacking of data is needed. *New in Metview version 5.17.0*
    :type repack: bool
    :rtype: :class:`Fieldset`
    

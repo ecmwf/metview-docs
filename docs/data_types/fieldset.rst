@@ -70,6 +70,15 @@ Indexing
     grib[0] = grib[0] * 10
     grib[4] = mv.sqrt(grib[3])
 
+   Slicing is done with standard Python notation, e.g.
+
+   .. code-block:: python
+
+     # select fields 4 to 7, step 2
+     my_slice = data[4:8:2]
+
+  For more examples of indexing and slicing Fieldsets, see :ref:`/examples/slicing_grib_data.ipynb`.
+
 
 Iteration
 ############
