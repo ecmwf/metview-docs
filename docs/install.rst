@@ -1,7 +1,8 @@
 .. _install:
 
+************
 Installation
-------------
+************
 
 Binaries and Python Bindings
 ============================
@@ -13,13 +14,34 @@ Metview's functionality. The binaries can run standalone, and the Python binding
 the binaries.
 
 
-Metview on conda and PyPi
-=========================
+Installing Metview's binaries
+=============================
 
-These packages are maintained by ECMWF and are generally up to date.
+The following package managers provide pre-built Metview binaries.
+The brew and conda packages are maintained by ECMWF and are generally up to date.
 
-Metview's binaries are available on conda for both Linux and MacOS, including the M1 processors. From a conda environment, the following command will install Metview without any
-need to compile from source:
+Homebrew
+^^^^^^^^
+
+Metview's binaries are available from Homebrew on macOS, including the M1 processors, and Linux
+(Linux distribution on brew exists but has not been tested). They are installed like this:
+
+.. code-block:: bash
+
+    brew install metview
+
+Once installed, Metview can be updated with this command:
+
+.. code-block:: bash
+
+    brew upgrade metview
+
+
+Conda
+^^^^^
+
+Metview's binaries are available on conda for both Linux and macOS, including the M1 processors. From a
+conda environment, the following command will install Metview:
 
 .. code-block:: bash
 
@@ -38,22 +60,9 @@ There is also a batch-only version of Metview's binaries on conda, called metvie
 
     conda install metview-batch  -c conda-forge
 
-Metview's Python interface is installed separately. If you are working in a conda environment, then
-it is recommended to install via conda:
-
-.. code-block:: bash
-
-    conda install metview-python  -c conda-forge
-
-If not in a conda environment, then install via pip:
-
-.. code-block:: bash
-
-    pip install metview
-
 
 Community-built Binary Packages
-==================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Community-built Metview binaries for a number of Linux distributions can be found here:
 https://software.opensuse.org/download.html?project=home%3ASStepke&package=Metview
@@ -66,6 +75,36 @@ From Ubuntu 16.04, Metview is available from the standard repositories and can b
 
 These packages are not maintained by ECMWF, so any issues with installation should be reported to
 their maintainers.
+
+
+
+Installing Metview's python interface
+=====================================
+
+Metview's Python interface is installed separately. Note: Metview's Python interface requires the binaries
+to be present.
+
+Conda
+^^^^^
+
+If you are working in a conda environment, then
+it is recommended to install via conda:
+
+.. code-block:: bash
+
+    conda install metview-python  -c conda-forge
+
+
+PyPi
+^^^^
+
+If not in a conda environment, then install via pip:
+
+.. code-block:: bash
+
+    pip install metview
+
+
 
 Metview Source Releases
 ============================
