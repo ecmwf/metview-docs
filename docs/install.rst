@@ -120,6 +120,45 @@ Metview's Python bindings are available on github:
 https://github.com/ecmwf/metview-python
 
 
+Tips on installing Metview into environments
+============================================
+
+These small guides are not intended to replace the official documentation on how to create and used
+conda environments and virtualenvs, they are just a quick suggested way to get started!
+
+Conda
+^^^^^
+
+Conda allows you to install binaries and Python packages into the same environment.
+With conda, it's almost always neater to install software into a created environment rather than the
+base environment. Here are some suggested steps, assuming that conda itself has been installed:
+
+.. code-block:: bash
+
+   conda create --name myenv
+   conda activate myenv
+   conda install metview -c conda-forge
+   conda install metview-python -c conda-forge
+
+Once this is done, any new shell should call the 'conda activate' command in order to use this Metview.
+
+Virtualenv
+^^^^^^^^^^
+
+Virtualenvs provide separate environments in which you can install Python packages. Binaries must be installed
+separately using one of the methods described above. For example, it could be a good idea to use Homebrew to install
+the binaries and use a virtualenv to install the Python bindings. Here's a quickstart:
+
+.. code-block:: bash
+
+   python3 -m venv $HOME/venvs/myenv
+   source $HOME/venvs/myenv/bin/activate
+   pip install metview
+
+Once this is done, any new shell should call the above 'source ..../activate' command in order to use these Metview
+Python bindings.
+
+
 Possible Startup Issues
 =======================
 
