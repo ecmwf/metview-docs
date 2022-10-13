@@ -36,18 +36,26 @@ params:
          diagram is calculated in [lat1, lon1, lat2, lon2] format. Enabled when ``type`` is "line_hovm".
     ptype: list[number]
     values: ''
-- area:
+- area: 
     default: '30/-30/-30/30'
     desc: Specifies the coordinates of the area (as [north, west, south, east]) over
       which the Hovmoeller diagram is calculated. Enabled when ``type`` is "area_hovm" or 
       "vertical_hovm" (and ``input_mode`` is "area").
     ptype: list[number]
     values: ''
+- area_statistics:
+    default: 'average'
+    desc: |-
+        Specifies the type of computation performed in the ``area``:
+
+        * when ``type`` is "area_hovm" it is a computation along the ``average_direction``.  For "average", "stdev" or "variance" when ``average_direction`` is "north_south" the aggregation is weighted by the cosine of the latitudes.
+        * when ``type`` is "vertical_hovm" and ``input_mode`` is "area" it is a computation performed on all the gridpoints in the ``area``. For "average", "stdev" or "variance" the aggregation is weighted by the cosine of the latitudes. 
+        Enabled when ``type`` is "area_hovm" or  "vertical_hovm" (and ``input_mode`` is "area"). 
+    ptype: str
+    values: average/minimum/maximum/stdev/variance/median    
 - average_direction:
     default: east_west
-    desc: Specifies the direction along which the averaging is
-      performed. Options are "north_south" and "east_west". For "north_south" the averaging
-      is weighted by the cosine of the latitudes.
+    desc: Specifies the direction along which the computation defined in ``area_statistics`` is performed. When it is "north_south" and ``area_statistics`` is "average", "stdev" or "variance" the aggregation is weighted by the cosine of the latitudes. Enabled when ``type`` is "area_hovm".
     ptype: str
     values: east_west/north_south
 - time_axis_mode:

@@ -16,11 +16,14 @@ params:
       which the Hovmoeller diagram is calculated.
     ptype: list[number]
     values: ''
+- area_statistics:
+    default: 'average'
+    desc: Specifies the type of computation performed along the `average_direction``. For "average", "stdev" or "variance" when ``average_direction`` is "north_south" the aggregation is weighted by the cosine of the latitudes.
+    ptype: str
+    values: average/minimum/maximum/stdev/variance/median
 - average_direction:
     default: east_west
-    desc: Specifies the direction along which the averaging is
-      performed. Options are "north_south" and "east_west". For "north_south" the averaging
-      is weighted by the cosine of the latitudes.
+    desc: Specifies the direction along which the computation defined in ``area_statistics`` is performed. When it is "north_south" and ``area_statistics`` is "average", "stdev" or "variance" the aggregation is weighted by the cosine of the latitudes.
     ptype: str
     values: east_west/north_south
 - swap_axes:
