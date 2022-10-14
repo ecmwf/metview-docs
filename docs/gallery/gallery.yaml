@@ -180,6 +180,7 @@ hovmoeller:
   - vert_hovm_ml_in_pressure
   - vert_hovm_ml_in_height
   - hovmoeller_area
+  - hovmoeller_stats
   - ozone_era5_lat_hovmoeller
   - line_hovm_era5_t850
   - line_hovm_with_map_era5
