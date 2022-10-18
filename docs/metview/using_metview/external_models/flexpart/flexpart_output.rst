@@ -55,7 +55,7 @@ in :func:`flexpart_run`.
 |                     |                  |            |         |         |
 | FLEXPART Run        |                  | shortName  | paramId | units   |
 +=====================+==================+============+=========+=========+
-| receptor_units=mass | mass             | conc       | 20001   | kg      |
+| receptor_units=mass | mass             | conc       | 20000   | kg      |
 |                     | concentration    |            |         | m**-3   |
 +---------------------+------------------+------------+---------+---------+
 | receptor_units=mixr | mass mixing      | mxrm       | 20002   | kg      |

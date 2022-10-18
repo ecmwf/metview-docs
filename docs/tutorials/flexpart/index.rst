@@ -19,15 +19,11 @@ The icons you will work with are already prepared for you - please download the 
 
 .. list-table::
 
-  * - `flexpart_tutorial.tar.gz <http://download.ecmwf.org/test-data/metview/tutorial/flexpart_tutorial.tar.gz>`_
+  * - `flexpart_tutorial.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/flexpart_tutorial.tar.gz>`_
 
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.
 
-Alternatively, if **at ECMWF** then you can copy it like this from the command line::
-
-  cp -R /home/graphics/cgx/tutorials/flexpart_tutorial ~/metview
-  
 You should now (after a few seconds) see a *flexpart_tutorial* folder. 
 Please open it up.
 
