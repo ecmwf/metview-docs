@@ -16,7 +16,7 @@ params:
     values: ''
 - area_statistics:
     default: 'average'
-    desc: Specifies the type of computation performed along the `average_direction``. For "average", "stdev" or "variance" when ``average_direction`` is "north_south" the aggregation is weighted by the cosine of the latitudes.
+    desc: Specifies the type of computation performed along the `average_direction``. For "average", "stdev" or "variance" when ``average_direction`` is "north_south" the aggregation is weighted by the cosine of the latitudes. *New in Metview version 5.18.0*
     ptype: str
     values: average/minimum/maximum/stdev/variance/median
 - average_direction:
