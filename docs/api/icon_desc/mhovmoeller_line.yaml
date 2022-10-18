@@ -5,9 +5,7 @@ params:
 - data:
     default: 
     desc: Specifies the GRIB data (:class:`Fieldset`) from which to derive the Hovmeller diagram. 
-      ``data`` must specify a time-series of a meteorological variable in a latitude-longitude
-      or Gaussian grid. If ``data`` contains more than one parameter and/or level
-      :func:`mhovmoeller_line` returns a set of Hovmoeller diagrams. 
+      ``data``must specify a time-series of one meteorological variable on a given level on a latitude-longitude or Gaussian grid. Multiple parameters/levels are not supported. 
     ptype: :class:`Fieldset`
     values:
 - line:

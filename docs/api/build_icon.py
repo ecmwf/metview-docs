@@ -62,7 +62,7 @@ YamlIncludeConstructor.add_to_loader_class(
 
 ICON_HEADER_STANDARD = """
 {}
-=========================
+===============================================
 
 .. container::
     
@@ -86,7 +86,7 @@ ICON_HEADER_STANDARD = """
 
 ICON_HEADER_STANDARD_ECMWF = """
 {}
-=========================
+=====================================================
 
 .. container::
     
