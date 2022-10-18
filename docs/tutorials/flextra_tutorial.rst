@@ -19,14 +19,10 @@ You will create some icons yourself, but some are supplied for you - please down
 
 .. list-table::
 
-  * - `flextra_tutorial.tar.gz <http://download.ecmwf.org/test-data/metview/tutorial/flextra_tutorial.tar.gz>`_
+  * - `flextra_tutorial.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/flextra_tutorial.tar.gz>`_
 
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.
-
-Alternatively, if at ECMWF then you can copy it like this from the command line::
-
-  cp -R /home/graphics/cgx/tutorials/flextra_tutorial ~/metview
   
 You should now (after a few seconds) see a *flexta*_*tutorial* folder which contains the solutions and also some additional icons required by these exercises. 
 You will work in the *flextra_tutorial* folder so open it up. 
