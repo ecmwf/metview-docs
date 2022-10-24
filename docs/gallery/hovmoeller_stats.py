@@ -89,7 +89,7 @@ geo_axis = mv.maxis(
     )
      
 # build graphical contents    
-stats = ["average", "median", "minimum", "maximum", "stdev", "variance"]
+stats = ["mean", "median", "minimum", "maximum", "stdev", "variance"]
 shades = [shade_t, shade_t,shade_t,shade_t,shade_std,shade_var]
 
 gr = []

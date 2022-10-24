@@ -44,15 +44,15 @@ params:
     ptype: list[number]
     values: ''
 - area_statistics:
-    default: 'average'
+    default: 'mean'
     desc: |-
         Specifies the type of computation performed in the ``area``:
 
-        * when ``type`` is "area_hovm" it is a computation along the ``average_direction``.  For "average", "stdev" or "variance" when ``average_direction`` is "north_south" the aggregation is weighted by the cosine of the latitudes.
-        * when ``type`` is "vertical_hovm" and ``input_mode`` is "area" it is a computation performed on all the gridpoints in the ``area``. For "average", "stdev" or "variance" the aggregation is weighted by the cosine of the latitudes. 
+        * when ``type`` is "area_hovm" it is a computation along the ``average_direction``.  For "mean", "stdev" or "variance" when ``average_direction`` is "north_south" the aggregation is weighted by the cosine of the latitudes.
+        * when ``type`` is "vertical_hovm" and ``input_mode`` is "area" it is a computation performed on all the gridpoints in the ``area``. For "mean", "stdev" or "variance" the aggregation is weighted by the cosine of the latitudes. 
         Enabled when ``type`` is "area_hovm" or  "vertical_hovm" (and ``input_mode`` is "area"). *New in Metview version 5.18.0*
     ptype: str
-    values: average/minimum/maximum/stdev/variance/median    
+    values: mean/minimum/maximum/stdev/variance/median    
 - average_direction:
     default: east_west
     desc: Specifies the direction along which the computation defined in ``area_statistics`` is performed. When it is "north_south" and ``area_statistics`` is "average", "stdev" or "variance" the aggregation is weighted by the cosine of the latitudes. Enabled when ``type`` is "area_hovm".

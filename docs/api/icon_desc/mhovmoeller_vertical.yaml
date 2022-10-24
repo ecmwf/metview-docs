@@ -27,11 +27,11 @@ params:
     ptype: list[number]
     values: ''
 - area_statistics:
-    default: 'average'
-    desc: Specifies the type of computation performed for the ``area``. For "average", "stdev" or "variance" the aggregation is weighted by the cosine of the latitudes. Enabled when
+    default: 'mean'
+    desc: Specifies the type of computation performed for the ``area``. For "mean", "stdev" or "variance" the aggregation is weighted by the cosine of the latitudes. Enabled when
      ``input_mode`` is "area". *New in Metview version 5.18.0*
     ptype: str
-    values: average/minimum/maximum/stdev/variance/median
+    values: mean/minimum/maximum/stdev/variance/median
 - data:
     default: 
     desc: Specifies the input GRIB data for the Hovmeller diagram. 
