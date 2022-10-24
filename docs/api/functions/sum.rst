@@ -9,9 +9,9 @@ sum
    :type fs: :class:`Fieldset`
    :param missing: controls what happens when missing values are present in ``fs``. When it is ``False``, a missing value in any of the fields at a given gridpoint will result in a missing value in the corresponding gridpoint in the output. If it is ``True`` all the non-missing values across the fields at a given grid point will be used to compute the sum. *This parameter is new in Metview version 5.16.0*. In earlier versions the computations are carried out as if ``missing`` was set to ``False``.
    :type missing: bool
-   :param dim: restrict the computations to a single dimension of the data - see main text below
+   :param dim: restrict the computations to a single dimension of the data - see main text below.  *New in metview-python version 1.13.0*.
    :type dim: str
-   :param preserve_dims: may be used in conjunction with parameter ``dim`` - see main text below
+   :param preserve_dims: may be used in conjunction with parameter ``dim`` - see main text below.  *New in metview-python version 1.13.0*.
    :type preserve_dims: list
    :rtype: :class:`Fieldset`
 
@@ -25,6 +25,10 @@ sum
 
    To understand how to perform computations over a single 'dimension' of the data, see the
    documentation for the :func:`mean` function.
+
+   .. note::
+      
+      See also :func:`mean`.
 
 
 .. py:function:: sum(gpt)
