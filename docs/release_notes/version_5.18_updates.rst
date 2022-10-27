@@ -54,7 +54,7 @@ Version 5.18.0
 
 * :func:`eccharts`: added new layer called "tcw" (Total Column Water)
 * :func:`mcont`: add style "sh_tcw_f5t100" to the predefined list of styles for parameter ``contour_style_name``
-* added the Properties context menu action to icons. It brings up a dialog, which shows the file properties and offers and editor for symbolic links.
+* added the Properties context menu action to icons. It brings up a dialog showing the file properties and offering an editor for symbolic links.
 * gzip and bzip2 files are represented by an icon in the user interface. The supported context menu actions: "Compress", "Extract here" and "Extract to subfolder"
 * added the "Extract here" and "Extract to subfolder" actions to all the supported archive formats (tar, tgz, tbz, tz, zip)
 * fixed issue when the "examine" command did not work on archive (tar, tgz, tbz, zip) icons on macOS
