@@ -44,6 +44,12 @@ Version 5.18.0
 
 * streamlines: fixed issue when the arrowhead direction on the streamlines was inconsistent 
 
+**Python/Macro**
+
+* fixed issue when :func:`sort` called form Macro unnecessarily repacked the messages in the resulting :class:`Fieldset`
+* fixed issue when :func:`float` repacked the input messages 
+* fixed issue when the ``POLAR_VECTOR`` and ``XY_VECTOR`` output modes did not work in :func:`bufr_picker`
+
 **User interface**
 
 * :func:`eccharts`: added new layer called "tcw" (Total Column Water)
