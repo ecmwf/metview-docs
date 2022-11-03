@@ -45,10 +45,10 @@ mean
    will be generated for each unique combination of parameter, level and step. Metview uses
    a built-in list of keys that it ensures are preserved (unless specified as ``dim``). They are
    ``["shortName", "level", "step", "number", "date", "time"]``, but can be modifed by supplying
-   a new list of keys via the ``preserved_dims`` parameter. An example of using this would be
+   a new list of keys via the ``preserve_dims`` parameter. An example of using this would be
    if the input data contains multiple experiment versions. In this case, Metview by default would
    not preserve them as a 'dimension', but would include them in the mean computation. The solution
-   would be to supply a ``preserved_dims`` parameter that includes ``"experimentVersionNumber"``.
+   would be to supply a ``preserve_dims`` parameter that includes ``"experimentVersionNumber"``.
 
    .. note::
       
