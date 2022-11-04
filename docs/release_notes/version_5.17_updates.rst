@@ -4,6 +4,58 @@ Version 5.17 Updates
 ////////////////////
 
 
+Version 5.17.3
+==============
+
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2022.08.2.0 (Atos HPC, tag 'new')
+
+-  **At ECMWF:**
+
+   -  Installed **2022-11-04**
+
+   -  Built
+      with **Magics** `4.12.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.27.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.27.0+released>`__
+
+   -  Built with **ODC** version **1.4.6**
+
+
+**Fixes:**
+
+-  MARS client: updated client to allow retrieval of observations from the RDB
+-  GRIB Filter: fixed issue where parameter order='sorted' incorrectly sorted by step
+-  Bufr Picker: fixed issue where polar_vector output was not working
+-  FLEXPART: fixed issue where shortName was wrongly changed from mdc to mdens in the GRIB results
+-  Desktop: fixed issue where folder with broken link could be attempted to be opened
+
+Version 5.17.2
+==============
+
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2022.08.1.0 (Atos HPC, tag 'new')
+
+-  **At ECMWF:**
+
+   -  Installed **2022-10-19**
+
+   -  Built
+      with **Magics** `4.12.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.27.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.27.0+released>`__
+
+   -  Built with **ODC** version **1.4.6**
+
+
+**Fixes:**
+
+-  Meteogram module (:func:`meteogram`) uses URL to retrieve charts from Bologna by default
+-  Meteogram module: fixed issue where the specified time was ignored and the meteogram for time 00UTC was always retrieved
+-  FLEXPART: fixed paths to FLEXPART executable and resources at ECMWF
+-  Macro: fixed issue in the :func:`mask` function that caused an infinite loop if an area that straddled the date line was given
+  
+
 Version 5.17.0
 ==============
 

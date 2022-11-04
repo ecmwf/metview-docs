@@ -239,3 +239,11 @@ xy:
   - double_axis_2
   - spectra
   - taylor
+animation:
+  title: Animated gifs
+  anchor: _gallery_group_animation
+  desc: >-
+    These examples show how to generate animated gifs.
+  examples:
+    - t2_animation
+    - rotating_geos_globe_animation
