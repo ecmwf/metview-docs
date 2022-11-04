@@ -20,3 +20,4 @@ The Metview Macro language provides an easy, powerful and comprehensive way for 
    syntax
    data_types/index
    functions/index 
+   macro_animated_gif

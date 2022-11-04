@@ -10,12 +10,11 @@
 
 import argparse
 from collections import Counter
-import glob
 import logging
 import os
 from pathlib import Path
 import re
-import sys
+import shutil
 import subprocess
 
 # from colorama import Fore
@@ -170,71 +169,19 @@ class BackReference:
 BACKREF = BackReference()
 
 
-class GalleryItem:
-    def __init__(self, script, do_png=False, check_pdf=False):
+class BaseGalleryItem:
+    def __init__(self, script):
         self.status = True
         self.script = script
         self.script_name = os.path.basename(self.script)
         self.script_dir = os.path.dirname(script)
         self.name = self.script_name.split(".py")[0]
         self.title = self.name
+        self.f_image = None
         self.parse()
 
         self.label = "gallery_" + self.name
-        self.f_pdf = self.name + ".pdf"
-        self.f_png = os.path.join(PNG_DIR, self.name + ".png")
         self.f_thumbnail = os.path.join(PNG_DIR, self.name + "_thumb.png")
-
-        if do_png:
-            self.generate_png(check_pdf)
-            if self.status:
-                log_generated(self.f_png)
-                log_generated(self.f_thumbnail)
-        else:
-            if os.path.exists(self.f_png) and os.path.exists(self.f_thumbnail):
-                LOG.info("  PNGs are already generated")
-            else:
-                LOG.error(format_red(" PNGs need to be generated"))
-                self.status = False
-
-        self.build_page()
-
-    def generate_png(self, check_pdf):
-        do_png = True
-        if os.path.isfile(self.f_png):
-            src_mod_time = os.path.getmtime(self.script)
-            target_mod_time = os.path.getmtime(self.f_png)
-            if src_mod_time <= target_mod_time:
-                do_png = False
-                if check_pdf and not os.path.exists(self.f_pdf):
-                    do_png = True
-
-        # generate png
-        if do_png:
-            LOG.info("  making PDF ...")
-            try:
-                r = subprocess.run(["python3", self.script_name], check=True)
-            except Exception as e:
-                LOG.error(format_red(f" Failed to run script: {e}"))
-                self.status = False
-
-            if os.path.exists(self.f_pdf):
-                LOG.info("  making PNG ...")
-                try:
-                    cmd = f"convert -trim -border 8x8 -bordercolor white -depth 8 {self.f_pdf} {self.f_png}"
-                    r = subprocess.run(cmd.split(" "), check=True)
-                except Exception as e:
-                    LOG.error(format_red(f" Failed to convert PDF to PNG: {e}"))
-                    self.status = False
-
-        if not os.path.exists(self.f_thumbnail) or do_png:
-            LOG.info("  making thumbnail PNG ...")
-            try:
-                cmd = f"convert -trim -border 8x8 -bordercolor white -depth 8 {self.f_pdf} -resize 22% {self.f_thumbnail}"
-                r = subprocess.run(cmd.split(" "), check=True)
-            except Exception as e:
-                LOG.error(format_red(f" Failed to resize PNG: {e}"))
-                self.status = False
 
     def parse(self):
         with open(self.script, "r") as f:
@@ -285,12 +232,123 @@ class GalleryItem:
                     self.label,
                     self.title,
                     "=" * (len(self.title) + 2),
-                    to_rst_path(self.f_png),
+                    to_rst_path(self.f_image),
                     self.title,
                     to_rst_path(self.script),
                 )
             )
         log_generated(output)
+
+
+class PngGalleryItem(BaseGalleryItem):
+    def __init__(self, script, do_image=False, check_pdf=False):
+        super().__init__(script)
+
+        self.f_pdf = self.name + ".pdf"
+        self.f_image = os.path.join(PNG_DIR, self.name + ".png")
+
+        if do_image:
+            self.generate_png(check_pdf)
+            if self.status:
+                log_generated(self.f_image)
+                log_generated(self.f_thumbnail)
+        else:
+            if os.path.exists(self.f_image) and os.path.exists(self.f_thumbnail):
+                LOG.info("  PNGs are already generated")
+            else:
+                LOG.error(format_red(" PNGs need to be generated"))
+                self.status = False
+
+        self.build_page()
+
+    def generate_png(self, check_pdf):
+        do_image = True
+        if os.path.isfile(self.f_image):
+            src_mod_time = os.path.getmtime(self.script)
+            target_mod_time = os.path.getmtime(self.f_image)
+            if src_mod_time <= target_mod_time:
+                do_image = False
+                if check_pdf and not os.path.exists(self.f_pdf):
+                    do_image = True
+
+        # generate png
+        if do_image:
+            LOG.info("  making PDF ...")
+            try:
+                r = subprocess.run(["python3", self.script_name], check=True)
+            except Exception as e:
+                LOG.error(format_red(f" Failed to run script: {e}"))
+                self.status = False
+
+            if os.path.exists(self.f_pdf):
+                LOG.info("  making PNG ...")
+                try:
+                    cmd = f"convert -trim -border 8x8 -bordercolor white -depth 8 {self.f_pdf} {self.f_image}"
+                    r = subprocess.run(cmd.split(" "), check=True)
+                except Exception as e:
+                    LOG.error(format_red(f" Failed to convert PDF to PNG: {e}"))
+                    self.status = False
+
+        if not os.path.exists(self.f_thumbnail) or do_image:
+            LOG.info("  making thumbnail PNG ...")
+            try:
+                cmd = f"convert -trim -border 8x8 -bordercolor white -depth 8 {self.f_pdf} -resize 22% {self.f_thumbnail}"
+                r = subprocess.run(cmd.split(" "), check=True)
+            except Exception as e:
+                LOG.error(format_red(f" Failed to resize PNG: {e}"))
+                self.status = False
+
+
+class AnimationGalleryItem(BaseGalleryItem):
+    def __init__(self, script, do_image=False):
+        super().__init__(script)
+
+        self.f_src_image = self.name + ".gif"
+        self.f_image = os.path.join(PNG_DIR, self.name + ".gif")
+
+        if do_image:
+            self.generate_gif()
+            if self.status:
+                log_generated(self.f_image)
+                log_generated(self.f_thumbnail)
+        else:
+            if os.path.exists(self.f_image) and os.path.exists(self.f_thumbnail):
+                LOG.info("  images are already generated")
+            else:
+                LOG.error(format_red(" images need to be generated"))
+                self.status = False
+
+        self.build_page()
+
+    def generate_gif(self):
+        do_image = True
+        if os.path.isfile(self.f_image):
+            src_mod_time = os.path.getmtime(self.script)
+            target_mod_time = os.path.getmtime(self.f_image)
+            if src_mod_time <= target_mod_time:
+                do_image = False
+
+        # generate animated gif
+        if do_image:
+            LOG.info("  making animated GIF ...")
+            try:
+                r = subprocess.run(["python3", self.script_name], check=True)
+            except Exception as e:
+                LOG.error(format_red(f" Failed to run script: {e}"))
+                self.status = False
+
+            if os.path.exists(self.f_src_image):
+                shutil.copyfile(self.f_src_image, self.f_image)
+
+        if not os.path.exists(self.f_thumbnail) or do_image:
+            LOG.info("  making thumbnail PNG ...")
+            try:
+                cmd = f"convert -trim -border 8x8 -bordercolor white -depth 8 {self.f_image}[0] -resize 22% {self.f_thumbnail}"
+                # print(cmd)
+                r = subprocess.run(cmd.split(" "), check=True)
+            except Exception as e:
+                LOG.error(format_red(f" Failed to convert GIF to thumbnail PNG: {e}"))
+                self.status = False
 
 
 def build_gallery(r):
@@ -328,11 +386,11 @@ Gallery
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--png", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--image", action="store_true", help=argparse.SUPPRESS)
     parser.add_argument("--check-pdf", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
-    do_png = args.png
+    do_image = args.image
     check_pdf = args.check_pdf
     r = []
 
@@ -353,7 +411,10 @@ def main():
         for name in item["examples"]:
             LOG.info(f"[{cnt}/{total}] {name}")
             script = os.path.join(GALLERY_DIR, name + ".py")
-            item = GalleryItem(script, do_png=do_png, check_pdf=check_pdf)
+            if group == "animation":
+                item = AnimationGalleryItem(script, do_image=do_image)
+            else:
+                item = PngGalleryItem(script, do_image=do_image, check_pdf=check_pdf)
             gr_item["items"].append(item)
             cnt += 1
             if not item.status:
@@ -381,7 +442,4 @@ def main():
     # BACKREF.print()
 
 
-if __name__ == "__main__":
-    main()
-else:
-    main()
+main()

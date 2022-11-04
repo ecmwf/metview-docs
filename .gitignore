@@ -98,9 +98,12 @@ docs/gallery/*.geo
 docs/gallery/*.nc
 docs/gallery/*.odb
 docs/gallery/*.pdf
+docs/gallery/*/*.pdf
 docs/gallery/*.txt
 docs/gallery/*.csv
 docs/gallery/*.png
+docs/gallery/*.gif
+docs/gallery/*.ps
 docs/gallery/*.tar
 docs/gallery/*.tar.gz
 docs/gallery/*.zip
