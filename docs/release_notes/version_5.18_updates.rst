@@ -38,6 +38,7 @@ Version 5.18.0
 
 * fixed issue when dropping a matching Hovmoeller Data icon into a :func:`mhovmoellerview` window an empty plot was produced
 * fixed issue when plotting a Hovmoeller Data object into a non-matching :func:`mhovmoellerview` in a script resulted in a crash. Now an error message is generated.
+* fixed issue when :func:`mhovmoeller_vertical` randomly crashed
   
   
 **Plotting**
@@ -48,8 +49,7 @@ Version 5.18.0
 
 * fixed issue when :func:`sort` called form Macro unnecessarily repacked the messages in the resulting :class:`Fieldset`
 * fixed issue when :func:`float` repacked the input messages 
-* fixed issue when the ``POLAR_VECTOR`` and ``XY_VECTOR`` output modes did not work in :func:`bufr_picker`
-
+  
 **User interface**
 
 * :func:`eccharts`: added new layer called "tcw" (Total Column Water)
@@ -58,5 +58,18 @@ Version 5.18.0
 * gzip and bzip2 files are represented by an icon in the user interface. The supported context menu actions: "Compress", "Extract here" and "Extract to subfolder"
 * added the "Extract here" and "Extract to subfolder" actions to all the supported archive formats (tar, tgz, tbz, tz, zip)
 * fixed issue when the "examine" command did not work on archive (tar, tgz, tbz, zip) icons on macOS
+* fixed issue when a broken link to a folder could be opened/entered
+* fixed issue when double clicking on a Desktop icon caused a crash
 * fixed issue when the GRIB Examiner used too much memory for large GRIB fields in the Values tab. With this change data is only loaded into the Values tab when there are no more than 7 million values in the GRIB field.
   
+
+**New Gallery Examples**
+
+   .. image:: /_static/gallery/t2_animation.gif
+      :width: 300px
+      :target: ../gen_files/gallery/t2_animation.html
+
+
+   .. image:: /_static/gallery/rotating_geos_globe_animation.gif
+      :width: 300px
+      :target: ../gen_files/gallery/rotating_geos_globe_animation.html
