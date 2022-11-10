@@ -1,10 +1,8 @@
 newpage
 ==========
 
-.. py:function:: newpage(dw)
+.. py:function:: newpage()
 
-    Forces a new page to be taken in the current PostScript/PDF file.
-
-
+    Forces a new page to be taken in the current PostScript/PDF file. Has to be used as an argument to :func:`plot`.
 
 .. mv-minigallery:: newpage
