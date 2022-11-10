@@ -38,11 +38,14 @@ The Gallery contains a couple of Python examples showcasing this technique:
       :width: 350px
       :target: ../../../gen_files/gallery/t2_animation.html
 
-- :ref:`gallery_rotating_geos_globe_animation`: in this example the map projection changes in each animation frame. In Python we cannot generate a single PostScript/PDF output for this. Therefore a separate output file (PDF in this example, but could also be PNG) is produced for each frame. In the end these files are converted to animated gif in a single command.
+- :ref:`gallery_rotating_geos_globe_animation`: this generates PDF output containing one page for each view angle displaying the same field on each page. It is then converted into animated gif in one go.
 
    .. image:: /_static/gallery/rotating_geos_globe_animation.gif
       :width: 350px
       :target: ../../../gen_files/gallery/rotating_geos_globe_animation.html
+
+Metview Macro
+================
 
 A Metview Macro example can be found here: :ref:`generating_animated_gif_macro`.
 
@@ -65,6 +68,15 @@ Converting a multi-page PostScript to an animated GIF
 To perform this conversion use::
 
    convert -delay 200 -rotate "90<" input.ps output.gif
+
+
+Converting a multi-page PDF to an animated GIF
+=====================================================
+
+To perform this conversion use::
+
+   convert -delay 200 input.pdf output.gif
+
 
 Alter the speed of animation
 =================================

@@ -46,15 +46,18 @@ t_shade = mv.mcont(legend="on", contour_automatic_setting="ecchart")
 # define view
 view = mv.geoview(area_mode="name", area_name="pacific")
 
-# define postscript output
+# define title
+title = mv.mtext(text_font_size=0.4)
+
+# define PS output
 # (will contain one page per timestep)
 out_basename = "t2_animation"
 mv.setoutput(mv.ps_output(output_name=f"{out_basename}"))
 
 # generate plot
-mv.plot(view, f, t_shade)
+mv.plot(view, f, t_shade, title)
 
-# convert ps file to animated gif using imagemagick
+# convert PS file to animated GIF using imagemagick
 # with a 100ms pause between frames
 ps_file = f"{out_basename}.ps"
 gif_file = f"{out_basename}.gif"

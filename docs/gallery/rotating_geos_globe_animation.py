@@ -42,20 +42,17 @@ t_shade = mv.mcont(
 title = mv.mtext(text_font_size=0.5)
 legend = mv.mlegend(legend_text_font_size=0.45)
 
+# define PDF output
 out_basename = "rotating_geos_globe_animation"
+mv.setoutput(mv.pdf_output(output_name=out_basename))
 
-# create temporary dir for the intermediate PDFs
-out_dir = f"{out_basename}_tmp"
-os.makedirs(out_dir, exist_ok=True)
+# the list containing the plot objects
+gr = []
 
-# generate one PDF for each frame
+# generate each frame
 for i, lon in enumerate(range(90, -100, -10)):
 
-    mv.setoutput(
-        mv.pdf_output(output_name=os.path.join(out_dir, f"{out_basename}_{i:02d}"))
-    )
-
-    # define view
+    # define the view
     view = mv.geoview(
         map_projection="geos",
         map_vertical_longitude=lon,
@@ -66,13 +63,14 @@ for i, lon in enumerate(range(90, -100, -10)):
 
     dw = mv.plot_superpage(pages=[mv.plot_page(view=view)])
 
-    # generate plot
-    mv.plot(dw, g[0], t_shade, title, legend)
+    # define the contents of a given page in the PDF output
+    gr.extend([dw, g[0], t_shade, title, legend, mv.newpage()])
 
-# convert the individual PDF files to animated GIF using imagemagick
+# generate the plot
+mv.plot(gr)
+
+# convert the PDF file to animated GIF using imagemagick
 # with a 100ms pause between frames
-pdf_file = os.path.join(out_dir, f"{out_basename}_*.pdf")
+pdf_file = f"{out_basename}.pdf"
 gif_file = f"{out_basename}.gif"
 os.system(rf"""convert -delay 100 {pdf_file} {gif_file}""")
-
-# NOTE: the temporary PDF files are not cleaned up automatically
