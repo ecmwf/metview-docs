@@ -646,7 +646,7 @@ Possible options are:
      - Vector (u/v) field `gradient <https://en.wikipedia.org/wiki/Gradient>`__ (∇)
    * - **UV Divergence**
      - Vector (u/v) field `divergence <https://en.wikipedia.org/wiki/Divergence>`__ (∇⋅)
-   * - **UV Divergence**
+   * - **UV Vorticity**
      - Vector (u/v) field `vorticity or curl <https://en.wikipedia.org/wiki/Curl_(mathematics)>`__ (∇×)
    * - **Off** (default)
      - no differential processing
