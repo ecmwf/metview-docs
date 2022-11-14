@@ -19,7 +19,7 @@ mvl_geopotential_on_ml
    
    The return value is a :class:`Fieldset` of geopotential defined on the model levels present in the input data sorted by ascending numeric level order.
 
-   The computations are based on the following hydrostatic formula:
+   The computations are described on page 7-8 in [IFS-Dynamics]_ and based on the following hydrostatic formula:
 
     .. math::
       
@@ -33,7 +33,7 @@ mvl_geopotential_on_ml
 
    The required levels and their ordering in ``t`` and ``q`` depend on the Metview version used:
    
-   * from Metview version **5.14.0**: ``t`` and ``q`` must contain the same levels in the same order but there is no restriction on the actual level ordering. The model level range must be contiguous and must include the bottom-most level. E.g. if the current vertical coordinate system has 137 model levels using only a subset of levels between e.g. 137-96 is allowed.
+   * from Metview version **5.14.0**: ``t`` and ``q`` must contain the same levels in the same order but there is no restriction on the actual level ordering. The model level range must be contiguous and must include the bottom-most level, but **not all the levels must be present**. E.g. if the current vertical coordinate system has 137 model levels using only a subset of levels between e.g. 137-96 is allowed.
    * in **previous** Metview versions: ``t`` and ``q`` must contain the full model level range in ascending numeric order. E.g. if the current vertical coordinate system has 137 model levels ``t`` and ``q`` must contain all the levels ordered as 1,..., 137.
 
    .. note::
