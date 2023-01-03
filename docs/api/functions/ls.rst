@@ -1,8 +1,8 @@
 ls
 ===========
 
-..  py:function:: ls(fs, extra_keys=[], filter={})
-..  py:function:: Fieldset.ls(extra_keys=[], filter={})
+..  py:function:: ls(fs, extra_keys=[], filter={}, no_print=False)
+..  py:function:: Fieldset.ls(extra_keys=[], filter={}, no_print=False)
     :noindex:
 
     *New in metview-python version 1.8.0*.
@@ -15,7 +15,7 @@ ls
     :type extra_keys: list of str
     :param filter: defines a filter to list only a subset of the messages. A filter is a set of ecCodes keys each with a matching value or list of values. These individual conditions are combined together with a logical AND to define the filter (just like in :func:`select`).
     :type filter: dict 
-    :param no_print: optionally suppress printing to standard output. 
+    :param no_print: optionally suppress printing to standard output when not in a Jupyter notebook
     :type no_print: boolean
     :rtype: Pandas dataframe. If not in a Jupyter notebook the dataframe is printed to the standard output
     
