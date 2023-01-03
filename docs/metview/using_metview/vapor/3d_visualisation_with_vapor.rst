@@ -15,6 +15,16 @@ graphics cards.
 
 The home of the software is https://www.vapor.ucar.edu.
 
+What VAPOR Version is required?
+===============================
+
+Version **2** (2.2.2 and later) is supported.
+
+.. warning::
+
+   VAPOR version **3** is not supported in Metview.
+
+
 How to use VAPOR with Metview?
 ==============================
 

@@ -4,6 +4,29 @@ Version 5.17 Updates
 ////////////////////
 
 
+Version 5.17.4
+==============
+
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2022.08.3.0 (Atos HPC, tag 'new')
+
+-  **At ECMWF:**
+
+   -  Installed **2022-12-06**
+
+   -  Built
+      with **Magics** `4.12.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.27.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.27.1+released>`__
+
+   -  Built with **ODC** version **1.4.6**
+
+
+**Fixes:**
+
+-  Cross Section View: fixed issue where dropping a MARS Retrieval icon into the view produced an incorrect plot
+-  Desktop: fixed issue where the icon search could crash
+
 Version 5.17.3
 ==============
 
