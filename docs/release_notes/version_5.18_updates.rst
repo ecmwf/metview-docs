@@ -7,14 +7,13 @@ Version 5.18 Updates
 Version 5.18.0
 ==============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2022-xx-xx
-* Became metview/new at ECMWF on 2022-xx-xx (Linux desktops, ecgate, lxc, lxop, Cray HPC)
-* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2022.xx.xx.0 (Atos HPC)
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2023-xx-xx
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2023.xx.xx.0 (Atos HPC)
 
 
 -  **At ECMWF:**
 
-   -  Installed **2022-xx-xx**
+   -  Installed **2023-xx-xx**
 
    -  Built
       with **Magics** `4.12.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
