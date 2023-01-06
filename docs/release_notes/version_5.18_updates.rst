@@ -67,6 +67,11 @@ Version 5.18.0
    .. image:: /_static/ui/editor_doc_link.png
       :width: 350px
 
+* issues warning when the value of a list parameter contains a comma in the icon editor. While the list separator is a comma in script (Python or Macro), it is '/' in the user interface. So if a comma appears in a list it was most probably put there by mistake.  
+
+   .. image:: /_static/ui/editor_list_separator_warning.png
+      :width: 350px
+
 * :func:`eccharts`: added new layer called "tcw" (Total Column Water)
 * :func:`mcont`: add style "sh_tcw_f5t100" to the predefined list of styles for parameter ``contour_style_name``
 * added the **Properties** context menu action to icons. It brings up a dialog showing the file properties and offering an editor for symbolic links.
