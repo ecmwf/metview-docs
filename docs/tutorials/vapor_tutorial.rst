@@ -59,11 +59,9 @@ VAPOR input data must be defined on a 3D grid, which has to be regular horizonta
 It is crucially important to understand the vertical coordinate types of the input data VAPOR can use. 
 Here we discuss only the two types that the Metview VAPOR interface supports
 
-* For **layered** grids VAPOR expects a parameter specifying the elevation of each 3D level in the input data. 
-  This is typically the case for  pressure or model level (n levels) data with height or geopotential available (or it can be computed).
+* For **layered** grids VAPOR expects a parameter specifying the elevation of each 3D level in the input data. This is typically the case for  pressure or model level (n levels) data with height or geopotential available (or it can be computed).
   
-* For **regular** grids the 3D levels are supposed to be equidistant (in the user coordinate space). 
-This type can be used when the data is available on equidistant height levels.
+* For **regular** grids the 3D levels are supposed to be equidistant (in the user coordinate space). This type can be used when the data is available on equidistant height levels.
 
 When pressure or model level data is present without height information the situation is somewhat special. 
 The grid in this case is not **layered** but can be regarded as **regular** in its own coordinate space (pressure or model levels) letting the z axis simply represent pressure or model levels in the 3D scene rendered in VAPOR.

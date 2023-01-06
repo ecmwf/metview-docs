@@ -1,7 +1,7 @@
 .. _flexpart_plotting_concentration_fields:
 
 FLEXPART - Plotting concentration fields
-######################################
+#########################################
  
 For preparations and running the simulation needed for this tutorial :ref:`click here ... <flexpart_forward_simulation>`
 

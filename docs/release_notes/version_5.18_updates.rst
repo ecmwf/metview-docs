@@ -52,16 +52,37 @@ Version 5.18.0
   
 **User interface**
 
+* added Python code preview mode for icon editors:
+ 
+   .. image:: /_static/ui/editor_python_preview.png
+      :width: 280px
+
+* added syntax highlighting to text edit mode for icon editors:
+
+   .. image:: /_static/ui/editor_text_mode.png
+      :width: 280px
+
+* added button to access online documentation for icon editors:
+
+   .. image:: /_static/ui/editor_doc_link.png
+      :width: 350px
+
 * :func:`eccharts`: added new layer called "tcw" (Total Column Water)
 * :func:`mcont`: add style "sh_tcw_f5t100" to the predefined list of styles for parameter ``contour_style_name``
-* added the Properties context menu action to icons. It brings up a dialog showing the file properties and offering an editor for symbolic links.
-* gzip and bzip2 files are represented by an icon in the user interface. The supported context menu actions: "Compress", "Extract here" and "Extract to subfolder"
+* added the **Properties** context menu action to icons. It brings up a dialog showing the file properties and offering an editor for symbolic links.
+* gzip and bzip2 files are now represented by an icon in the user interface. The supported context menu actions: "Compress", "Extract here" and "Extract to subfolder"
 * added the "Extract here" and "Extract to subfolder" actions to all the supported archive formats (tar, tgz, tbz, tz, zip)
 * fixed issue when the "examine" command did not work on archive (tar, tgz, tbz, zip) icons on macOS
 * fixed issue when a broken link to a folder could be opened/entered
 * fixed issue when double clicking on a Desktop icon caused a crash
-* fixed issue when the GRIB Examiner used too much memory for large GRIB fields in the Values tab. With this change data is only loaded into the Values tab when there are no more than 7 million values in the GRIB field.
+* fixed issue when the GRIB Examiner used too much memory for large GRIB fields in the Values tab. With this change data is only loaded into the Values tab when there are no more than 7 million values in the GRIB field. Otherwise a warning message is displayed:
+
+   .. image:: /_static/ui/grib_examiner_values_limit_warning.png
+      :width: 320px
   
+**Code editor**
+
+* Documentation web links now point to pages on Read The Docs
 
 **New Gallery Examples**
 

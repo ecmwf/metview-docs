@@ -21,7 +21,7 @@ It contains two pages:
 
 
 How to add a new item to the plot?
-=================================
+==================================
 
 Just click on the item in the sidebar in **Types** page, the cursor changes into a cross,
 then click on the map to add the item.

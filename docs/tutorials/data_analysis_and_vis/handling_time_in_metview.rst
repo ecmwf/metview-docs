@@ -295,7 +295,7 @@ Now you have a list of time differences in days. You can multiply by 24 to get t
   date_diffs_in_hours = date_diffs * 24
 
 Extract the point value for each field in ``precip_diff``
------------------------------------------------------
+----------------------------------------------------------
 
 Use the ``nearest_gridpoint()`` function on the ``precip_diff`` fieldset. 
 It returns a list of values, one for each field. 

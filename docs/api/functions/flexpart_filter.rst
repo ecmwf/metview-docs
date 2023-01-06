@@ -1,5 +1,5 @@
 flexpart_filter
-=============
+==================
 
 .. py:function:: flexpart_filter(**kwargs) 
 

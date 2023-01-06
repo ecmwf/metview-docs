@@ -165,7 +165,7 @@ All of the icons (and their Macro equivalent functions) which plot graph data to
 We will do this in two different ways; first, using the *Input Visualiser*.
 
 Marking an area using *Input Visualiser*
-======================================
+=========================================
 
 Create a new Input *Visualiser* icon and set **Input Plot Type** to Geo Points. 
 We want to define 4 lines, therefore we need a list of 5 points to connect together in order to create a closed box.

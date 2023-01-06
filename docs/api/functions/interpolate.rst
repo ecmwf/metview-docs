@@ -4,6 +4,7 @@ interpolate
 
 .. py:function:: interpolate(fs, lats, lons)
 .. py:function:: interpolate(fs, location)
+   :noindex:
 .. py:function:: interpolate(fs, gpt)
    :noindex:
 
