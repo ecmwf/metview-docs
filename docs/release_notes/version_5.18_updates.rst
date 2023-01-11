@@ -79,10 +79,11 @@ Version 5.18.0
 * fixed issue when the "examine" command did not work on archive (tar, tgz, tbz, zip) icons on macOS
 * fixed issue when a broken link to a folder could be opened/entered
 * fixed issue when double clicking on a Desktop icon caused a crash
-* fixed issue when the GRIB Examiner used too much memory for large GRIB fields in the Values tab. With this change data is only loaded into the Values tab when there are no more than 7 million values in the GRIB field. Otherwise a warning message is displayed:
+* GRIB Examiner: fixed issue when used too much memory for large GRIB fields in the Values tab. With this change data is only loaded into the Values tab when there are no more than 7 million values in the GRIB field. Otherwise a warning message is displayed:
 
    .. image:: /_static/ui/grib_examiner_values_limit_warning.png
       :width: 320px
+* GRIB Examiner: improved speed and memory usage when loading data for the Values tab
   
 **Code editor**
 
