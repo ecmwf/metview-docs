@@ -48,6 +48,7 @@ Version 5.18.0
 
 * fixed issue when :func:`sort` called form Macro unnecessarily repacked the messages in the resulting :class:`Fieldset`
 * fixed issue when :func:`float` repacked the input messages 
+* fixed issue when :func:`interpolate` gave wrong results for longitudes in the [-180,0) range for GRIB2 data on reduced Gaussian grids on a sub-area 
   
 **User interface**
 
