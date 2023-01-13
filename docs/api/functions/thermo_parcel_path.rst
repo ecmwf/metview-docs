@@ -140,7 +140,7 @@ thermo_parcel_path
      
             CIN = R_{d} \int_{p_{START}}^{p_{LFC}} min(T_{v,parcel} - T_{v,env}, 0) dlog(p)
 
-        where :math:`R_{d}`` is the specific gas constant for dry air (287.058 J/(kg K)).
+        where :math:`R_{d}` is the specific gas constant for dry air (287.058 J/(kg K)).
 
       LI (Lifted index) is the difference between the virtual temperature of the environment and the parcel at 500 hPa.
 
