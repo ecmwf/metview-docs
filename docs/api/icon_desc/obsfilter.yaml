@@ -179,7 +179,9 @@ params:
     values: ''
 - fail_on_error:
     default: 'yes'
-    desc: ''
+    desc: Controls the behaviour when an error happens or the input data is empty. If it is set to "no"
+      :func:`obs_filter` will return None, while if the value is "yes" the Python script 
+      running :func:`obs_filter` will abort.
     ptype: str
     values: yes/no
 - fail_on_empty_output:
