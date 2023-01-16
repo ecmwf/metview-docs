@@ -24,7 +24,7 @@ Remember to give your icons useful names!
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `contouring sandy.tar.gz <https://confluence.ecmwf.int/download/attachments/45754795/contouring sandy.tar.gz?api=v2>`_
+  * - ZIP Archive `contouring_sandy.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/contouring_sandy.tar.gz>`_
     - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Steps

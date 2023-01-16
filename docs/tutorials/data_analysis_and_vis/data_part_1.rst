@@ -10,10 +10,10 @@ Data Part 1
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `data 1.tar.gz <https://confluence.ecmwf.int/download/attachments/45756991/data 1.tar.gz?api=v2>`_
+  * - ZIP Archive `data_1.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/data_1.tar.gz>`_
     - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
-  * - File `ztuv.grb <https://confluence.ecmwf.int/download/attachments/45756991/ztuv.grb?api=v2>`_
+  * - File `ztuv.grb <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/ztuv.grb>`_
     - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Getting Data into Metview
@@ -40,7 +40,7 @@ Retrieving data from MARS
 .. image:: /_static/data_part_1/icon-mars.png
 
 Metview has the ability to retrieve data directly from the ECMWF MARS archive (or indeed any other MARS archive installed outside ECMWF). 
-Metview can also retrieve data from certain data sets without much special setup using the `MARS Web API <https://confluence.ecmwf.int/display/METV/Using+the+MARS+Web+API+from+Metview>`_.
+Metview can also retrieve data from certain data sets without much special setup using the :ref:`MARS Web API <using_the_mars_web_api_from_metview>`_.
 
 Create a new *Mars Retrieval* icon. 
 Edit it and set only the following:

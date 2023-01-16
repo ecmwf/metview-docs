@@ -6,7 +6,7 @@ Data analysis and visualisation using Metview
 
 This is a modular course on the use of Metview for data analysis and visualisation. It encompasses much of Metview's functionality in a series of self-contained tutorials. This material formed the official Metview training course at ECMWF between 2015-2017.
 
-The course slides can be found `here <https://confluence.ecmwf.int/pages/viewpageattachments.action?pageId=46599653&preview=/46599653/62392267/2016-09-26-Metview_COM_MV.pdf>`_.
+The course slides can be found `here <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/2016-09-26-Metview_COM_MV-1.pdf>`_.
 
 .. if we use a chapter title here the TOC content does not appear in the sidebar
 **Course modules**
@@ -38,6 +38,8 @@ The course slides can be found `here <https://confluence.ecmwf.int/pages/viewpag
 
 
     
-**Download**
+.. **Download**
 
-`batch_job.tar.gz <https://confluence.ecmwf.int/download/attachments/46599653/batch_job.tar.gz?api=v2&modificationDate=1475247744383&version=1>`_ 
+.. <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/metview-batch-2016.pdf>
+
+.. <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/batch_job.tar.gz>

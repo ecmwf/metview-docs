@@ -10,7 +10,7 @@ Case study: Plotting the Track of Hurricane Sandy
   * - **File**
     - **Modified**
 
-  * - File `sandy track.tar.gz <https://confluence.ecmwf.int/download/attachments/45755019/sandy track.tar.gz?api=v2>`_
+  * - File `sandy_track.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/sandy_track.tar.gz>`_
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Case description

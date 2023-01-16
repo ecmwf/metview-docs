@@ -19,7 +19,7 @@ You will create some icons yourself, but some are supplied for you - please down
 
 .. list-table::
 
-  * - `metview_intro.tar.gz <https://confluence.ecmwf.int/download/attachments/24315573/metview_intro.tar.gzhttps://confluence.ecmwf.int/download/attachments/24315573/metview_intro.tar.gz?version=1&modificationDate=1487239314179&api=v2>`_
+  * - `metview_intro.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/new_users/metview_intro.tar.gz>`_
 
 Alternatively, if at ECMWF then you can copy it like this from the command line::
 

@@ -10,7 +10,7 @@ Working with graphical output
   * - **File**
     - **Modified**
 
-  * - File `graphics formats.tar.gz <https://confluence.ecmwf.int/download/attachments/45754147/graphics formats.tar.gz?api=v2>`_
+  * - File `graphics_formats.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/graphics_formats.tar.gz>`_
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Overview
@@ -324,7 +324,7 @@ Further processing outside Metview
 **********************************
 
 Of course you can do further processing of plots outside Metview. 
-The page `Generating animated GIFs from Metview plots <https://confluence.ecmwf.int/display/METV/Generating+animated+GIFs+from+Metview+plots>`_ gives you some helpful advice if you want to build animations.
+The page :ref:`Generating animated GIFs from Metview plots <generating_animated_gifs_from_metview_plots>` gives you some helpful advice if you want to build animations.
 
 Metview/Magics also supports special tags in SVG for the `Inkscape <https://inkscape.org/>`_ graphical editor. 
 This open source editor is great for when you need to further annotate your maps.

@@ -10,7 +10,7 @@ Customising Your Plot Title
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `titles.tar.gz <https://confluence.ecmwf.int/download/attachments/45757926/titles.tar.gz?api=v2>`_
+  * - ZIP Archive `titles.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/titles.tar.gz>`_
     - Sep 16, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Text Plotting

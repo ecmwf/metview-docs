@@ -112,7 +112,7 @@ We also told FLEXPART to generate gridded mass concentration and flux fields on 
 
 .. note::
 
-  The actual species to release are defined as an integer number (for details about using the species see `here <https://confluence.ecmwf.int/display/METV/FLEXPART+species>`_). 
+  The actual species to release are defined as an integer number (for details about using the species see :ref:`here <flexpart_species>`). 
   With the default species settings number 8 stands for SO2.
 
 If we run this macro (or alternatively right-click execute the :func:`flexpart_run` icon) the results (after a minute or so) will be available in folder 'result_fwd'. 
@@ -127,7 +127,7 @@ If we open folder 'result_fwd' we will see three files:
 
 .. note::
 
-  Please note that these are not the original outputs form FLEXPART but were converted to more suitable ones for Metview. For details about the FLEXPART outputs click `here <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_.
+  Please note that these are not the original outputs form FLEXPART but were converted to more suitable ones for Metview. For details about the FLEXPART outputs click :ref:`here <flexpart_output>`.
 
 To process and visualise the results please see these pages:
 

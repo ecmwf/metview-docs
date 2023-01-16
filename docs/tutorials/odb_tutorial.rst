@@ -23,7 +23,7 @@ You will create some icons yourself, but some are supplied for you - please down
 
 .. list-table:: 
 
-  * - `odb_tutorial.tar.gz <https://confluence.ecmwf.int/download/attachments/69189318/odb_tutorial.tar.gz?api=v2&modificationDate=1483717650714&version=2>`_
+  * - `odb_tutorial.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/odb_tutorial.tar.gz>`_
 
 Alternatively, you can copy it like this from the command line::
 

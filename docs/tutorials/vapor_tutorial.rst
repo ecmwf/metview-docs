@@ -8,7 +8,7 @@ This tutorial explains how to convert ECMWF GRIB data into VAPOR format and how 
 .. note::
 
   Please note that this tutorial requires Metview version **4.4.6** or later. 
-  Also for users outside ECMWF the Metview VAPOR interface should be properly set up as described `here <https://confluence.ecmwf.int/display/METV/VAPOR+Setup>`_.
+  Also for users outside ECMWF the Metview VAPOR interface should be properly set up as described :ref:`here <vapor_setup>`_.
 
 Preparations
 ************
@@ -20,7 +20,7 @@ You will create some icons yourself, but some are supplied for you - please down
 
 .. list-table:: 
   
-  * - `vapor_tutorial.tar.gz <https://confluence.ecmwf.int/download/attachments/29328811/vapor_tutorial.tar.gz?api=v2&modificationDate=1390381084784&version=1>`_
+  * - `vapor_tutorial.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/vapor_tutorial.tar.gz>`_
 
 Alternatively, if at ECMWF then you can copy it like this from the command line::
   

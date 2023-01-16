@@ -24,7 +24,7 @@ Otherwise, please download the following file:
 
 .. list-table::
 
-  * - `wms_tutorial.tar <https://confluence.ecmwf.int/download/attachments/46599079/wms_tutorial.tar?api=v2&modificationDate=1426071647457&version=1>`_
+  * - `wms_tutorial.tar <https://get.ecmwf.int/repository/test-data/metview/tutorial/wms_tutorial.tar>`_
 
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.

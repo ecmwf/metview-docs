@@ -24,10 +24,10 @@ Download the icons for this session from the link below. Create a sub-directory 
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `a simple visualisation.tar.gz <https://confluence.ecmwf.int/download/attachments/59791413/a simple visualisation.tar.gz?api=v2>`_
+  * - ZIP Archive `a_simple_visualisation.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/a_simple_visualisation.tar.gz>`_
     - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
-  * - File `t1000.grb <https://confluence.ecmwf.int/download/attachments/59791413/t1000.grb?api=v2>`_
+  * - File `t1000.grb <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/t1000.grb>`_
     - Sep 06, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 To get started, copy a GRIB data file into your Metview directory (``~/metview``); if you are attending the training course at ECMWF, then you should carefully type the following command in a terminal window:

@@ -10,10 +10,10 @@ Processing Data
   * - **File**
     - Modified
 
-  * - File `processing data.tar.gz <https://confluence.ecmwf.int/download/attachments/45753989/processing data.tar.gz?api=v2>`_ 
+  * - File `processing_data.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/processing_data.tar.gz>`_ 
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
-  * - File `ztuv.grb <https://confluence.ecmwf.int/download/attachments/45753989/ztuv.grb?api=v2>`_
+  * - File `ztuv.grb <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/ztuv.grb>`_
     - Mar 23, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Overview

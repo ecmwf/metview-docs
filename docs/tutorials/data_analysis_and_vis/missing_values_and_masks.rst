@@ -10,7 +10,7 @@ Missing Values and Masks
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `missing values.tar.gz <https://confluence.ecmwf.int/download/attachments/45758672/missing values.tar.gz?api=v2>`_
+  * - ZIP Archive `missing_values.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/missing%20values.tar.gz>`_
     - Sep 16, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
     
 Overview

@@ -10,7 +10,7 @@ Analysis Views
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `analysis views.tar.gz <https://confluence.ecmwf.int/download/attachments/45755001/analysis views.tar.gz?api=v2>`_
+  * - ZIP Archive `analysis_views.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/analysis_views.tar.gz>`_
     - Sep 13, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 

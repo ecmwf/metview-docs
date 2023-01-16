@@ -14,7 +14,7 @@ Customising Your Plot
     * - **File**
       - **Modified**
 
-    * - ZIP Archive `customising your plot.tar.gz <https://confluence.ecmwf.int/download/attachments/59791892/customising your plot.tar.gz?api=v2>`_
+    * - ZIP Archive `customising_your_plot.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/customising_your_plot.tar.gz>`_
       - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Creating and Editing an Icon

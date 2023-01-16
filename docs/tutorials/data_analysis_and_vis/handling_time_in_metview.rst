@@ -10,7 +10,7 @@ Handling Time in Metview
   * - **File**
     - **Modified**
 
-  * - File `time.tar.gz <https://confluence.ecmwf.int/download/attachments/45758141/time.tar.gz?api=v2>`_
+  * - File `time.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/time.tar.gz>`_
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Time

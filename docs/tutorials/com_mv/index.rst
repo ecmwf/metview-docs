@@ -11,16 +11,16 @@ This material is taken from the COM_MV Metview training course held at ECMWF in 
 Metview Interactive Usage
 =========================
 
-* Slides from the course: `2014-04-29-Metview_COM_MV.pdf <https://confluence.ecmwf.int/download/attachments/14158627/2014-04-29-Metview_COM_MV.pdf?api=v2&modificationDate=1399015620602&version=1>`_
+* Slides from the course: `2014-04-29-Metview_COM_MV.pdf <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/2014-04-29-Metview_COM_MV.pdf>`_
 
-* Tutorial: `metview_gui_course.pdf <https://confluence.ecmwf.int/download/attachments/14158627/metview_gui_course.pdf?api=v2&modificationDate=1399015620617&version=3>`_
+* Tutorial: `metview_gui_course.pdf <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/metview_gui_course.pdf>`_
 
-* Files for the tutorial: `mv_tut_icons.zip <https://confluence.ecmwf.int/download/attachments/14158627/mv_tut_icons.zip?api=v2&modificationDate=1399015902599&version=3>`_, `t1000.grb <https://confluence.ecmwf.int/download/attachments/14158627/t1000.grb?api=v2&modificationDate=1343376120473&version=1>`_
+* Files for the tutorial: `mv_tut_icons.zip <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/mv_tut_icons.zip>`_
 
   
   * download these files into your main Metview directory
 
-  * `ztuv.grb <https://confluence.ecmwf.int/download/attachments/14158627/ztuv.grb?api=v2&modificationDate=1343376178894&version=1>`_ should go into a directory elsewhere on the filesystem
+  * `ztuv.grb <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/ztuv.grb>`_ should go into a directory elsewhere on the filesystem
  
 * Instructions:
 
@@ -35,17 +35,17 @@ Metview Interactive Usage
 Metview Macro
 =============
 
-* Slides from the course: `mv_macro.pdf <https://confluence.ecmwf.int/download/attachments/14158627/mv_macro.pdf?api=v2&modificationDate=1399015845407&version=3>`_
+* Slides from the course: `mv_macro.pdf <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/macrotut_syntax-1.pdf>`_
 
-* Macro syntax handout: `macrotut_syntax.pdf <https://confluence.ecmwf.int/download/attachments/14158627/macrotut_syntax.pdf?api=v2&modificationDate=1399015845422&version=3>`_
+* Macro syntax handout: `macrotut_syntax.pdf <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/macrotut_syntax-1.pdf>`_
 
-* First tutorial (Introduction) : `metview_macro_tutorial_1.pdf <https://confluence.ecmwf.int/download/attachments/14158627/metview_macro_tutorial_1.pdf?api=v2&modificationDate=1399015845423&version=3>`_
+* First tutorial (Introduction) : `metview_macro_tutorial_1.pdf <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/metview_macro_tutorial_1.pdf>`_
 
-* Second tutorial (Model-Obs Differences) : `metview_macro_tutorial_2.pdf <https://confluence.ecmwf.int/download/attachments/14158627/metview_macro_tutorial_2.pdf?api=v2&modificationDate=1399015845426&version=3>`_
+* Second tutorial (Model-Obs Differences) : `metview_macro_tutorial_2.pdf <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/metview_macro_tutorial_2.pdf>`_
 
-* Third tutorial (Advanced GRIB Handling) : `metview_macro_tutorial_3.pdf <https://confluence.ecmwf.int/download/attachments/14158627/metview_macro_tutorial_3.pdf?api=v2&modificationDate=1399015845419&version=3>`_
+* Third tutorial (Advanced GRIB Handling) : `metview_macro_tutorial_3.pdf <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/metview_macro_tutorial_3.pdf>`_
 
-* Icons and data for all Macro tutorials: `macro_tutorial_icons.zip <https://confluence.ecmwf.int/download/attachments/14158627/macro_tutorial_icons.zip?api=v2&modificationDate=1399015902595&version=1>`_
+* Icons and data for all Macro tutorials: `macro_tutorial_icons.zip <https://get.ecmwf.int/repository/test-data/metview/tutorial/com_mv/macro_tutorial_icons.zip>`_
 
 * Instructions::
 

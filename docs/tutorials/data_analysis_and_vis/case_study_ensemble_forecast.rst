@@ -10,7 +10,7 @@ Case study: Ensemble Forecast
   * - **File**
     - **Modified**
 
-  * - File `ensemble forecast.tar.gz <https://confluence.ecmwf.int/download/attachments/45757078/ensemble forecast.tar.gz?api=v2>`_
+  * - File `ensemble forecast.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/ensemble_forecast.tar.gz>`_
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Case description

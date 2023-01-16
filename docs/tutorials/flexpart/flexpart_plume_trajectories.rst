@@ -103,11 +103,11 @@ We also told FLEXPART to only generate plume trajectories on output.
 
 .. note::
 
-  The actual species that will be released is defined as an integer number (for details about using the species see `here <https://confluence.ecmwf.int/display/METV/FLEXPART+species>`_). 
+  The actual species that will be released is defined as an integer number (for details about using the species see :ref:`here <flexpart_species>`). 
   With the default species settings number 1 stands for atmospheric  tracer.
 
 If we run this macro (or alternatively right-click **execute** the :ref:`FLEXPART Run <flexpart_run_icon>` icon) the resulting CSV file, 'tr_r001.csv', will appear (after a minute or so) in folder 'result_tr'. 
-For details about the FLEXPART trajectory outputs `click here. <https://confluence.ecmwf.int/display/METV/FLEXPART+output>`_
+For details about the FLEXPART trajectory outputs :ref:`click here <flexpart_output>`.
 
 Step 1 - Plotting the mean track
 ********************************

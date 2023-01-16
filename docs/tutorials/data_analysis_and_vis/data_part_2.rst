@@ -10,7 +10,7 @@ Data Part 2
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `data 2.tar.gz <https://confluence.ecmwf.int/download/attachments/45756358/data 2.tar.gz?api=v2>`_
+  * - ZIP Archive `data_2.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/data_2.tar.gz>`_
     - Sep 15, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Introduction
