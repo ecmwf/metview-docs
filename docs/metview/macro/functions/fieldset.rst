@@ -100,6 +100,7 @@ Fieldset Macro functions
    Extract a selection of fields from a fieldset. The vector supplied as the argument provides the set of indices to be used. For example:
 
    .. code-block:: python
+      
       # copies fields 2, 1, 3 of x into y
       x = |2, 1, 3|
       y = x[i]

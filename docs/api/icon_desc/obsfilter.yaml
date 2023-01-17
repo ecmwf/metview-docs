@@ -179,15 +179,11 @@ params:
     values: ''
 - fail_on_error:
     default: 'yes'
-    desc: Controls the behaviour when an error happens or the input data is empty. If it is set to "no"
-      :func:`obs_filter` will return None, while if the value is "yes" the Python script 
-      running :func:`obs_filter` will abort.
+    desc: Controls the behaviour when an error happens during the data filtering/extraction. If it is "yes" the Python script running :func:`obs_filter` will abort.  If it is set to "no" :func:`obs_filter` will return a partial or empty result, in the latter case ``fail_on_empty_output`` applies.
     ptype: str
     values: yes/no
 - fail_on_empty_output:
     default: 'no'
-    desc: Controls the behaviour when the resulting output is empty. If it is set to "no"
-      :func:`obs_filter` will return None, while if the value is "yes" the Python script 
-      running :func:`obs_filter` will abort.
+    desc: Controls the behaviour when the resulting output is empty. If the value is "yes" the Python script running :func:`obs_filter` will abort. If it is set to "no" :func:`obs_filter` will return an empty result, which is a properly formatted empty Geopoints or CSV file, or a zero sized file when the ``output`` is "bufr".
     ptype: str
     values: yes/no
