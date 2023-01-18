@@ -892,6 +892,14 @@
     - grib_access
     - grib_object
     type: script
+- grib_set_long_array:
+    category:
+      fieldset: Writes GRIB headers using ecCodes keys
+    desc: Writes GRIB headers using ecCodes keys
+    group:
+    - grib_access
+    - grib_object
+    type: script
 - grib_set_string:
     category:
       fieldset: Writes GRIB headers using ecCodes keys

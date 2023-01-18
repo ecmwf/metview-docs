@@ -44,6 +44,7 @@ grib_set
 .. py:function:: grib_set_long(fs, keys_and_values, repack=False)
 .. py:function:: grib_set_double(fs, keys_and_values, repack=False)
 .. py:function:: grib_set_string(fs, keys_and_values, repack=False)
+.. py:function:: grib_set_long_array(fs, keys_and_values, repack=False)
 
    Sets information in the GRIB header of ``fs`` and returns a new :class:`Fieldset`.
    
@@ -54,7 +55,7 @@ grib_set
    :type repack: bool
    :rtype: :class:`Fieldset`
    
-   ``keys_and_values`` has to be a list of the ecCodes keys and their values following each other. The actual values have to match the type of the function.  If applied to a multi-field fieldset, then all fields are modified.
+   ``keys_and_values`` has to be a list of the ecCodes keys and their values following each other. The actual values have to match the type of the function. ``grib_set_long_array`` expects a vector containing the values. If applied to a multi-field fieldset, then all fields are modified.
 
    :Example:
 

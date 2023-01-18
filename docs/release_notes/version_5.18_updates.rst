@@ -43,6 +43,7 @@ Version 5.18.0
 
 **Python/Macro**
 
+* new function :func:`grib_set_long_array`
 * fixed issue when :func:`sort` called form Macro unnecessarily repacked the messages in the resulting :class:`Fieldset`
 * fixed issue when using :func:`float` repacked the input GRIB messages 
 * fixed issue when :func:`interpolate` gave wrong results for longitudes in the [-180,0) range for GRIB2 data on reduced Gaussian grids on a sub-area 
