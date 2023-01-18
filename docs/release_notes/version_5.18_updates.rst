@@ -16,16 +16,13 @@ Version 5.18.0
    -  Installed **2023-xx-xx**
 
    -  Built
-      with **Magics** `4.12.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+      with **Magics** `4.13.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.27.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.27.0+released>`__
+      with **ecCodes** `2.28.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.27.0+released>`__
 
    -  Built with **ODC** version **1.4.6**
 
-   -  Includes
-      version `1.13.0 <https://github.com/ecmwf/metview-python/blob/master/CHANGELOG.rst>`__ of
-      the Python interface
 
 **Hovmoller**
 
