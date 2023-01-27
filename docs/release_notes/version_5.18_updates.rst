@@ -19,7 +19,7 @@ Version 5.18.0
       with **Magics** `4.13.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.28.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.27.0+released>`__
+      with **ecCodes** `2.28.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.28.0+released>`__
 
    -  Built with **ODC** version **1.4.6**
 
