@@ -24,7 +24,7 @@ surrounding_points_indexes
    * ``location`` defines a single location.
    * ``lats`` and ``lons`` can define either a single location (as number) or multiple locations (as ndarray).
 
-   By default the 4 surrounding gridpoint indexes are returned. The only exception is when a field is defined on a **reduced Gaussian grid** and the input location is at the North or South pole, beyond the most extreme row of points. In this case there will be a 'circle' of surrounding points, and all of these indexes are returned.
+   By default the 4 surrounding gridpoint indexes are returned. The only exception is when a field is defined on a **Gaussian grid** and the input location is near the North or South pole, beyond the most extreme row of points. In this case there will be a 'circle' of surrounding points, and all of these indexes are returned.
    
    If any of the surrounding points are **missing**, :func:`surrounding_points_indexes` will return nan. To prevent this, and to return all the points regardless, option ``mode`` has to be set to "all".
    
