@@ -162,6 +162,13 @@ Python bindings.
 Possible Startup Issues
 =======================
 
+When starting Metview directly from the command line, the -slog option will provide output that may be useful:
+
+.. code-block:: bash
+
+   metview -slog
+
+
 The Python bindings can be tested for installation correctness by running
 the following command:
 
