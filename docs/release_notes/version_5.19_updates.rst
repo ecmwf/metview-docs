@@ -33,4 +33,4 @@ Version 5.19.0
 
 - added new action **Reset cursor data** to the **Tools** menu to move back the cursor data to the middle of the view. It is particularly useful when the cursor data is moved out of the view and we cannot interact with it any more.
 
-- changed the order how the current coordinates are displayed in the cursor data in geographical views. In the new version latitude comes first followed buy longitude
+- changed the order how the current coordinates are displayed in the cursor data in geographical views. In the new version latitude comes first followed by longitude
