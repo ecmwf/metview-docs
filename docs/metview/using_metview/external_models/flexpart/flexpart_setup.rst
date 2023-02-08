@@ -36,25 +36,21 @@ Code modifications
 To make FLEXPART work with ECMWF data the following modifications has to
 be made in the source code:
 
-- Resolve type mismatch in err.f90 with newer gfortran compiler: see flextra ticket49
+- Resolve type mismatch in **err.f90** when using a newer gfortran compiler (see flextra ticket49). This involves the modification in **err.f90** line 106 and 111: 
 
-    This involves the modification in **err.f90** of line 106 and 111
-
-    .. image:: /_static/ug/flexpart_setup/image1.png
+  .. image:: /_static/ug/flexpart_setup/image1.png
     :width: 5.90069in
     :height: 1.49569in
 
-    and line 140 and 145 as well.
+  and line 140 and 145 as well:
 
-    .. image:: /_static/ug/flexpart_setup/image2.png
+  .. image:: /_static/ug/flexpart_setup/image2.png
     :width: 5.90069in
     :height: 1.60483in
 
-- Make FLEXPART work for 137 model levels
+- Make FLEXPART work for 137 model levels by modifying line 125 in **par_mod.f90**:
 
-    In **par_mod.f90** line 125 has to be modified:
-
-    .. image:: /_static/ug/flexpart_setup/image3.png
+  .. image:: /_static/ug/flexpart_setup/image3.png
     :width: 5.90069in
     :height: 0.70953in
 
