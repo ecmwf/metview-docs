@@ -35,6 +35,8 @@ nearest_gridpoint
    * if ``mode`` is 'valid' then from out of the surrounding gridpoints the nearest valid one is returned; None or nan will still be returned if all the surrounding points are missing.
 
 .. note::
-      A similar function, :func:`interpolate`, also exists.
+
+      See also :func:`interpolate`, :func:`nearest_gridpoint_info` and :func:`surrounding_points_indexes`.
+
 
 .. mv-minigallery:: nearest_gridpoint
