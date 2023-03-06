@@ -30,7 +30,7 @@ The conversion also works for multiple selected Macros:
 .. image:: /_static/ui/macro_convert_context_menu_multi.png
    :width: 300px
 
-It the conversion fails for a given Macro its name turns red and the error message will be avialable in icon Log (start it from the icon context menu):
+It the conversion fails for a given Macro its name turns red and the error message will be avialable in icon Log (you can start it from the icon context menu):
 
 .. image:: /_static/ui/macro_convert_error_log.png
    :width: 300px
@@ -47,3 +47,24 @@ It will generate a Python script in the same folder where the Macro is located. 
 
 On success a popup dialog appears showing the path to the generated Python script. If an error happens the popup will contain the error message as to why the conversion failed.
 
+
+.. _macro_to_python_adjustments:
+
+How to adjust the results?
+-----------------------------------
+
+For most of the Macros you should expect to get a correctly formatted and fully functional Python script as a result. However, the converter cannot handle certain code
+structures and data types and it does not have any run-time information, so the generated code may require further **adjustments**. If this happens a set of **warnings** will be added to the top of the Python script. Please check these warnings and **modify your script** accordingly. The following list gives you detailed advice on how to do it:
+
+.. toctree::
+   :maxdepth: 1
+   
+   convert/convert_concat
+   convert/convert_date
+   convert/convert_plot
+   convert/convert_newpage
+   convert/convert_inline
+
+
+Once the adjustments are done try to run the Python script and see if it generates the same output as your Macro. If it does then congratulations you can start using your nice new Python script. However, if the results differ or the script fails please let the developers know about it by reporting it via the  `ECMWF Support Portal <https://confluence.ecmwf.int/site/support>`_.
+   
