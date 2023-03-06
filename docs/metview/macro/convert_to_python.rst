@@ -53,7 +53,7 @@ On success a popup dialog appears showing the path to the generated Python scrip
 How to adjust the results?
 -----------------------------------
 
-For most of the Macros you should expect to get a correctly formatted and fully functional Python script as a result. However, the converter cannot handle certain code
+For most of the Macros you should expect to get a correctly formatted and fully functional Python script. However, the converter cannot handle certain code
 structures and data types and it does not have any run-time information, so the generated code may require further **adjustments**. If this happens a set of **warnings** will be added to the top of the Python script. Please check these warnings and **modify your script** accordingly. The following list gives you detailed advice on how to do it:
 
 .. toctree::
