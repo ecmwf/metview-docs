@@ -6,8 +6,8 @@ In Macro the generic **concatenation** operator is **& (ampersand)**, which can 
 .. list-table:: Replacing & with _concat() calls in the generated Python code
    :header-rows: 1
  
-   * - Macro
-     - Python
+   * - Macro code
+     - Generated Python code
    * -
        .. code-block:: python
         
@@ -46,8 +46,8 @@ The following table can serve you as a guide to properly convert the & operator 
 .. list-table:: Resolving the Macro & operator calls in Python
    :header-rows: 1
  
-   * - Macro
-     - Python
+   * - Macro code
+     - Generated Python code
    * -
        .. code-block:: python
         

@@ -8,7 +8,7 @@ The following example demonstrates how this conversion can be done:
 
 .. list-table::
 
-   * - **Macro**
+   * - **Macro code**
    * - 
        .. code-block:: python
 
@@ -24,7 +24,7 @@ The following example demonstrates how this conversion can be done:
         # plot second page
         newpage()
         plot(dw, fs_2, visdef_2)
-   * - **Python** 
+   * - **Adjusted Python code** 
    * - 
        .. code-block:: python
 

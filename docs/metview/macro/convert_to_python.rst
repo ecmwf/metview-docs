@@ -63,8 +63,20 @@ structures and data types and it does not have any run-time information, so the 
    convert/convert_date
    convert/convert_plot
    convert/convert_newpage
+   convert/convert_vector_slice4
+
+Unsupported features
+----------------------
+
+Some features are unsupported in Metview Python and it is not possible to generate a working Python code out of them:
+
+.. toctree::
+   :maxdepth: 1
+   
    convert/convert_inline
 
+Testing the generated code
+-----------------------------
 
 Once the adjustments are done try to run the Python script and see if it generates the same output as your Macro. If it does then congratulations you can start using your nice new Python script. However, if the results differ or the script fails please let the developers know about it by reporting it via the  `ECMWF Support Portal <https://confluence.ecmwf.int/site/support>`_.
    

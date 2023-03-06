@@ -9,7 +9,7 @@ for a :ref:`graphical output <toc_plot_output>` when we have a layout, i.e. we u
 
 .. list-table:: Calling plot in multiple lines in Macro
  
-   * - **Macro**
+   * - **Macro code**
    * - 
        .. code-block:: python
 
@@ -19,7 +19,7 @@ for a :ref:`graphical output <toc_plot_output>` when we have a layout, i.e. we u
         # invoke a plot command for each layout page separately
         plot(dw[1], fs_1, visdef_1)
         plot(dw[2], fs_2, visdef_2)
-   * - **Python** 
+   * - **Adjusted Python code** 
    * -
        .. code-block:: python
 
@@ -37,7 +37,7 @@ for a :ref:`graphical output <toc_plot_output>` when we have a layout, i.e. we u
 
 .. list-table:: Calling plot in a loop in Macro
 
-   * - **Macro**
+   * - **Macro code**
    * - 
        .. code-block:: python
 
@@ -47,7 +47,7 @@ for a :ref:`graphical output <toc_plot_output>` when we have a layout, i.e. we u
         for i=1 to count(dw) do
             plot(dw[i], fs[i])
         end for
-   * - **Python**
+   * - **Adjusted Python code**
    * - 
        .. code-block:: python
 
