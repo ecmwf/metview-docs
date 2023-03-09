@@ -81,6 +81,7 @@ map-ens:
   - ens_prob
   - ens_percentile
   - ens_stamp
+  - ens_stamp_shared_legend_title
   - ens_spag
 map-computations:
   title: Computed scalar data on map
