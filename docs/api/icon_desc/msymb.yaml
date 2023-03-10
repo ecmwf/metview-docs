@@ -1,7 +1,5 @@
 return: :class:`Request`
-summary: This is the visual definition for specifying how 
-    symbols (e.g. circles and crosses) are displayed. This can be used with 
-    non-gridded data, such as :func:`Geopoints` or CSV.
+summary: rst
 oneliner: Defines the style for symbol plotting of non-gridded data.
 params:
 - legend:
@@ -95,12 +93,12 @@ params:
     values: index/name/image
 - symbol_marker_index:
     default: '1'
-    desc: Marker index. An integer between 1 and 28.
+    desc: Marker index. An integer between 0 and 28. The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: number
     values: ''
 - symbol_marker_name:
     default: dot
-    desc: Marker name.
+    desc: Marker name. The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: str
     values: ''
 - symbol_image_path:
@@ -177,13 +175,13 @@ params:
 - symbol_marker_table:
     default: ''
     desc: Table of marker indices. The table is to be used in conjunction with ``symbol_min_table``
-      and ``symbol_max_table``.
+      and ``symbol_max_table``. The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: number or list[number]
     values: ''
 - symbol_name_table:
     default: ''
     desc: Table of symbol names. The table is to be used in conjunction with ``symbol_min_table``
-      and ``symbol_max_table``.
+      and ``symbol_max_table``. The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: str or list[str]
     values: ''
 - symbol_colour_table:
@@ -276,12 +274,12 @@ params:
     values: lastone/cycle
 - symbol_advanced_table_marker_list:
     default: ''
-    desc: List of markers to be used in symbol plotting.
+    desc: List of markers to be used in symbol plotting. The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: number or list[number]
     values: ''
 - symbol_advanced_table_marker_name_list:
     default: ''
-    desc: List of symbol names to be used in symbol plotting.
+    desc: List of symbol names to be used in symbol plotting. The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: str or list[str]
     values: ''
 - symbol_advanced_table_marker_list_policy:
