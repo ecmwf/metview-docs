@@ -5,3 +5,4 @@ Resources
     :maxdepth: 1
 
     symbols
+    arrowheads

@@ -1,9 +1,5 @@
 return: :class:`Request`
-summary: This is the visual definition for specifying how vector
-    data is displayed. It controls features such as wind arrows and wind flags. Note
-    that Metview will automatically interpret certain pairs of GRIB parameters
-    as vector components, for example u/v and 10u/10v. Use :func:`grib_vectors` to plot an
-    arbitrary pair of scalar fields as a vector field.  
+summary: rst
 oneliner: Defines the style for wind plotting.
 params:
 - wind_field_type:
@@ -209,12 +205,12 @@ params:
     values: ''
 - wind_arrow_head_shape:
     default: '0'
-    desc: Indicates the shape of the arrow head.
+    desc: Indicates the shape of the arrow head. The list of available arrow head styles can be found :ref:`here <resource_wind_arrow_heads>`.
     ptype: number
-    values: ''
+    values: '0/1/2/3'
 - wind_arrow_head_ratio:
     default: '0.3'
-    desc: Indicates the shape of the arrow head.
+    desc: Indicates the shape of the arrow head. The list of available arrow head styles can be found :ref:`here <resource_wind_arrow_heads>`.
     ptype: number
     values: ''
 - wind_arrow_max_speed:
