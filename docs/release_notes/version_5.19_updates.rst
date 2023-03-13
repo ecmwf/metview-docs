@@ -38,3 +38,11 @@ Version 5.19.0
 **Macro to Python converter**
 
 A main new feature in this release is the :ref:`Macro to Python converter <macro_to_python>`. It can be launched from the icon context menu in the :ref:`user interface <mv_desktop_overview>` and from the File menu of the Macro editor. The converter is able to generate fully functional Python code in most of the cases but some code structures have to adjusted manually. Details about the adjustment process can be found :ref:`here <macro_to_python_adjustments>`.
+
+**User interface**
+
+
+- Macro Editor: improved vertical and horizontal space usage in help sidebar. The sidebar now stretches along the full vertical extent and its minimum horizontal extent is significantly reduced. As a further improvement the size of the lower and upper part of the parameter selector (available only for icon functions in the sidebar) can now be controlled with a vertical splitter.
+
+   .. image:: /_static/ui/macro_editor_all_panels.png
+      :width: 320px
