@@ -292,13 +292,13 @@ params:
 - contour_shade_marker_table:
     default: ''
     desc: Marker table defined by a a set of numerical symbol identifiers when 
-        ``contour_shade_marker_table_type`` is "index".
+        ``contour_shade_marker_table_type`` is "index". The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: number or list[number]
     values: ''
 - contour_shade_marker_name_table:
     default: ''
     desc: Marker table defined by a a set of symbol names when 
-        ``contour_shade_marker_table_type`` is "name". 
+        ``contour_shade_marker_table_type`` is "name". The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: str or list[str]
     values: ''
 - contour_shade_max_level_colour:

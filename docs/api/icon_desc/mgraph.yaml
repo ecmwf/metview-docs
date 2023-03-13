@@ -1,6 +1,5 @@
 return: :class:`Request`
-summary: This is the visual definition responsible for specifying how graph
-     data (e.g. lines, curves and bar charts) are displayed. 
+summary: rst
 oneliner: Specifies the style for graph plotting.
 params:
 - legend:
@@ -50,7 +49,7 @@ params:
     values: on/off
 - graph_symbol_marker_index:
     default: '3'
-    desc: The marker symbol index to be used.
+    desc: The marker symbol index to be used. The list of available symbol markers can be found :ref:`here <resource_symbol_markers>`.
     ptype: number
     values: ''
 - graph_symbol_height:

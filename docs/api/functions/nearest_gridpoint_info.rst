@@ -1,9 +1,10 @@
 nearest_gridpoint_info
-========================
+===========================
 
 .. py:function:: nearest_gridpoint_info(fs, lat, lon, [mode])
 .. py:function:: nearest_gridpoint_info(fs, location, [mode])
    :noindex:
+
 
    Returns the value and location of the nearest grid point to a given location in each field in ``fs``. 
    
@@ -19,7 +20,7 @@ nearest_gridpoint_info
    :rtype: list of dict
    
    The return value is a **list** containing the following values for each field:
-   
+  
    If the nearest gridpoint value is non missing a dictionary is returned with these members:
    
    * latitude: latitude of the nearest gridpoint
@@ -33,24 +34,33 @@ nearest_gridpoint_info
       * if ``mode`` is not specified None is returned
       * if ``mode`` is "valid" the dictionary for the nearest valid point from the surrounding gridpoints is returned. If all the surrounding points are missing None is returned
    
-   :Example:
+   This example:
+   
+   .. code-block:: python
 
-      .. code-block:: python
+      import metview as mv
+      
+      # read grib with 2 fields on a 1.5x1.5 degree grid
+      f = mv.read("my_data.grib")
+      
+      # get nearest gridpoint info
+      info = mv.nearest_gridpoint_info(f, 47, 19)
+      print(info)
 
-         import metview as mv
-         
-         # read grib with 2 fields on a 1.5x1.5 degree grid
-         f = mv.read("my_data.grib")
-         
-         # get nearest gridpoint info
-         info = mv.nearest_gridpoint_info(f, 47, 19)
-         print(info)
+   generates the following output::
 
-         >>> [{'latitude': 46.5, 'longitude': 19.5, 
-               'index': 6973.0, 'distance': 67.3506,
-               'value': 291.144}, 
-              {'latitude': 46.5, 'longitude': 19.5, 
-               'index': 6973.0, 'distance': 67.3506,
-               'value': 294.011'}]
+      [{'latitude': 46.5, 'longitude': 19.5, 
+        'index': 6973.0, 'distance': 67.3506,
+        'value': 291.144}, 
+       {'latitude': 46.5, 'longitude': 19.5, 
+        'index': 6973.0, 'distance': 67.3506,
+        'value': 294.011'}]
+
+
+   .. note::
+
+      See also :func:`nearest_gridpoint`, :func:`surrounding_points_indexes` and :func:`interpolate`.
+
 
 .. mv-minigallery:: nearest_gridpoint_info
+

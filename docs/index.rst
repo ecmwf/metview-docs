@@ -29,6 +29,7 @@ Metview was developed as part of a cooperation between ECMWF and INPE (Brazilian
    metview/using_metview/index
    python
    metview/macro/index.rst
+   resources/index.rst
    tutorials/index
    faq
 

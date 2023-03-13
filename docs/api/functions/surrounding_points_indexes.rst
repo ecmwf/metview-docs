@@ -3,9 +3,10 @@ surrounding_points_indexes
 
 .. py:function:: surrounding_points_indexes(fs, lats, lons, [mode])
 .. py:function:: surrounding_points_indexes(fs, location, [mode])
+   :noindex:
 
    Returns the indexes of the gridpoints surrounding the given location (or locations) in ``fs``.
-  
+   
    :param fs: input fieldset
    :type fs: :class:`Fieldset`
    :param lats: target latitude(s)
@@ -17,6 +18,7 @@ surrounding_points_indexes
    :param str mode: specifies the way missing values are handled. The only allowed value is "all".
    :rtype: ndarray
   
+
    ``fs`` must be a gridded field. 
 
    The location(s) can be specified in the following ways:
@@ -28,5 +30,9 @@ surrounding_points_indexes
    
    If any of the surrounding points are **missing**, :func:`surrounding_points_indexes` will return nan. To prevent this, and to return all the points regardless, option ``mode`` has to be set to "all".
    
+   .. note::
 
-.. mv-minigallery:: surroundin_point_indexes
+      See also :func:`nearest_gridpoint`, :func:`nearest_gridpoint_info` and :func:`interpolate`.
+
+
+.. mv-minigallery:: surrounding_points_indexes

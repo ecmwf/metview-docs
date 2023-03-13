@@ -63,7 +63,11 @@ ml_to_hl
 
          # interpolate the t field onto a list of height levels above sea level
          hlevs = [1000, 2000, 3000, 4000, 5000]
-         th = mv.ml_to_hl (t, z, None, hlevs, "sea", "linear")
+         th_sea = mv.ml_to_hl (t, z, None, hlevs, "sea", "linear")
 
+
+         # interpolate the t field onto another list of height levels above ground
+         hlevs = [100, 200, 300, 400, 500]
+         th_ground = mv.ml_to_hl (t, z, zs, hlevs, "ground", "linear")
 
 .. mv-minigallery:: ml_to_hl
