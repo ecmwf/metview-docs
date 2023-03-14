@@ -1,6 +1,6 @@
 # These are the requirements for readthedoc
 ipykernel
-nbsphinx
+nbsphinx<=0.8.12
 pyyaml-include
 pyyaml
 docutils<=0.16.0
