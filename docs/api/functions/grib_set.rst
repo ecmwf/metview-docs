@@ -28,7 +28,6 @@ grib_set
              "stepType", "avg",      # str
              "startStep", 0 ,        # int
              "endStep", 31,          # int
-             "unitOfTimeRange", "D", # str
              "longitudeOfLastGridPointInDegrees", 100.5])  #  float
 
       .. code-block:: python

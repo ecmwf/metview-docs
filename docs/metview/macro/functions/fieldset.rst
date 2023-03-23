@@ -562,7 +562,6 @@ Fieldset Macro functions
                   "stepType", "avg",      # string
                   "startStep", 0 ,        # integer
                   "endStep", 31,          # integer
-                  "unitOfTimeRange", "D", # string
                   "longitudeOfLastGridPointInDegrees", 100.5]) #  double
 
    .. code-block:: python
