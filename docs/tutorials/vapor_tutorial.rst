@@ -248,7 +248,7 @@ Now save your :ref:`VAPOR Prepare <vapor_prepare_icon>` icon icon then right cli
 
 To visualise the VAPOR data generated please follow the instructions in the next chapter.
 
-.. _vapor_prepare_visualisation:
+.. _vapor_tutorial_visualisation:
 
 Visualisation
 *************

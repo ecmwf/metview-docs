@@ -404,7 +404,7 @@ Now open folder 'wind' inside your 'odb_tutorial' folder.
 Create a new ODB Visualiser icon and rename it 'wind_plot'. 
 Open its editor and set **ODB Plot Type** to 'Geo Vectors' to indicate that we want to plot vectors on a map.
 Then, change the icon to perform the query specified above for the 'CCMA.obs' icon located in this folder. 
-This can be done in a similar fashion to our :ref:`symbol plotting <_odb_tutorial_symbol_plotting>` example. 
+This can be done in a similar fashion to our :ref:`symbol plotting <odb_tutorial_symbol_plotting>` example. 
 The main difference is that this time we plot wind data, so we need to work with the u and v wind components instead of scalar data values.
 
 .. image:: /_static/odb_tutorial/worddav6922589a22109bb3914c939037f43d09.png
@@ -753,7 +753,7 @@ To change the automatically generated ODB title you need to simply drag an alrea
 Plotting With Macro
 *******************
 
-In this example we will write the macro equivalent of the :ref:`symbol plotting <_odb_tutorial_symbol_plotting>` exercise we solved : we would like to retrieve and plot the brightness temperature for channel 5 for our 'AMSUA.odb' database. 
+In this example we will write the macro equivalent of the :ref:`symbol plotting <odb_tutorial_symbol_plotting>` exercise we solved : we would like to retrieve and plot the brightness temperature for channel 5 for our 'AMSUA.odb' database. 
 We will work in folder 'tb' again.
 
 Basics
@@ -850,7 +850,7 @@ To achieve these goals we need to use the :ref:`ODB Filter <odb_filter_icon>` ic
 The Exercise
 ============
 
-As a demonstration of the :ref:`ODB Filter <odb_filter_icon>` icon, we will compute and plot the analysis increments in observation space for the brightness temperature. Like in the :ref:`symbol plotting <_odb_tutorial_symbol_plotting>` exercise we will work again with channel 5 from our 'AMSUA.odb' database. Because our database does not contain the analysis increment we will compute it as the difference of the analysis departure and the first guess departure. 
+As a demonstration of the :ref:`ODB Filter <odb_filter_icon>` icon, we will compute and plot the analysis increments in observation space for the brightness temperature. Like in the :ref:`symbol plotting <odb_tutorial_symbol_plotting>` exercise we will work again with channel 5 from our 'AMSUA.odb' database. Because our database does not contain the analysis increment we will compute it as the difference of the analysis departure and the first guess departure. 
 First, we will write and perform the query needed for the exercise via the :ref:`ODB Filter <odb_filter_icon>` icon, then we will write a macro to do the computations and plot the final result.
 
 The ODB Filter Icon
@@ -1170,7 +1170,7 @@ It means that you can examine, visualise and manipulate the data it holds.
 
 * To examine: just right-click **examine** to look at its content.
 
-* To visualise: you need to use an ODB Visualiser icon (see :ref:`here <_odb_tutorial_symbol_plotting>`). 
+* To visualise: you need to use an ODB Visualiser icon (see :ref:`here <odb_tutorial_symbol_plotting>`). 
   There is one, called 'plot_hirs', already prepared for you in the folder. 
   It is to plot the observation values for channel 5 on a map. 
   Just edit this icon and drop your MARS Retrieval icon into the ODB Data field. Save the icon (**Apply**) then right-click and **visualise** to generate the plot.

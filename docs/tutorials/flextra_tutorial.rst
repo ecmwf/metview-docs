@@ -805,7 +805,7 @@ Basics
 
 The implementation of FLEXTRA-related operations in Metview macro follow the same principles as in the interactive mode. In macro we work with the macro command equivalents of the FLEXTRA icons we have seen so far:
 
-  * *FLEXTRA File* icon: its corresponding macro commands are :ref:`read() <read_fn>`` and :func:`write`.
+  * *FLEXTRA File* icon: its corresponding macro commands are :ref:`read() <read_fn>` and :func:`write`.
   * *FLEXTRA Run* icon: its corresponding macro command is :func:`flextra_run`.
   * *FLEXTRA Visualiser* icon: its corresponding macro command is :func:`flextra_visualiser`.
   
