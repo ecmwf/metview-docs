@@ -3,9 +3,7 @@
 Convert Macros to Python
 ==========================
 
-.. note::
-
-    The Macro to Python converter is available from Metview version 5.19.0
+    The Macro to Python converter is available from Metview version 5.20.0
 
 How to use the converter?
 --------------------------
