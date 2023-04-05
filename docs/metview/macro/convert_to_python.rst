@@ -1,7 +1,11 @@
+:nosearch:
+
 .. _macro_to_python:
 
 Convert Macros to Python
 ==========================
+
+.. note::
 
     The Macro to Python converter is available from Metview version 5.20.0
 

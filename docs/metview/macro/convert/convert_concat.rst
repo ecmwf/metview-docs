@@ -1,5 +1,11 @@
+:nosearch:
+
 Adjust concatenations
 =============================
+
+.. note::
+   
+    The Macro to Python converter is available from Metview version 5.20.0
 
 In Macro the generic **concatenation** operator is **& (ampersand)**, which can be used for strings, lists, fieldsets and many other built-in types in the same way. Conversion of these operator calls to Python would require run-time information, which the converter does not posses since it does not actually runs the Macro. To overcome this difficulty the converter adds a local function called ``_concat`` to the top of the generated Python script and all the calls to & are replaced by calling ``_concat``. You would see something like this: 
 

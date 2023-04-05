@@ -1,5 +1,11 @@
+:nosearch:
+
 Adjust newpage() calls
 =========================
+
+.. note::
+   
+    The Macro to Python converter is available from Metview version 5.20.0
 
 We can use :func:`newpage` to add a new page to a Postscript or PDF output. In Macro we can call it multiple times for a given :ref:`graphical output <toc_plot_output>`. However, in Python it behaves differently and can only be called as an argument of :func:`plot`. The converter is not able ensure this behaviour, instead a warning is placed to the top of the generated Python script and the adjustment has to be made manually. 
 
