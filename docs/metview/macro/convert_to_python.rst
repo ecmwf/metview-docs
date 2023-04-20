@@ -1,5 +1,3 @@
-:nosearch:
-
 .. _macro_to_python:
 
 Convert Macros to Python

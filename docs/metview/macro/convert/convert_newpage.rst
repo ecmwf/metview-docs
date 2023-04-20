@@ -1,5 +1,3 @@
-:nosearch:
-
 Adjust newpage() calls
 =========================
 

@@ -1,5 +1,3 @@
-:nosearch:
-
 Inline C and Fortran code
 =============================
 

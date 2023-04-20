@@ -1,6 +1,4 @@
 
-:nosearch:
-
 Adjust plot() calls
 =============================
 
