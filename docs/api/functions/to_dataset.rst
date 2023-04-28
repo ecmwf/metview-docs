@@ -1,11 +1,11 @@
 to_dataset
 ***************
 
-.. py:function:: to_dataset()
-.. py:function:: Fieldset.to_dataset()
+.. py:function:: to_dataset(**kwargs)
+.. py:function:: Fieldset.to_dataset(**kwargs)
    :noindex:
    
-   Converts a :class:`Fieldset` into an xarray Dataset.
+   Converts a :class:`Fieldset` into an xarray Dataset. Any kwargs are passed to cfgrib.
 
    :rtype: xarray dataset
 
@@ -60,6 +60,16 @@ to_dataset
         grib = mv.read('temperature_on_pl.grib')
         x = grib.to_dataset() # x is now an xarray dataset
         fs = mv.mean(x*2) # *2 is done by xarray, mean() is done by Metview
+
+
+    An example demonstrating the use of keyword arguments understood by cfgrib:
+
+    .. code-block:: python
+
+        import metview as mv
+
+        grib = mv.read('data.grib')
+        x = grib.to_dataset(squeeze=False, read_keys=["experimentVersionNumber"])
 
 
 .. mv-minigallery:: to_dataset
