@@ -23,7 +23,7 @@ and then resume the build. This variable will also need to be set
 before starting Metview.
 
 On OpenSuSE 12 & 13 systems, a better solution is to go into Yast >
-Network Settings > Hostname/DNS  : the option Assign Hostname to
+Network Settings > Hostname/DNS : the option Assign Hostname to
 Loopback IP should be checked.
 
 Q: Problems linking with Intel tools
