@@ -11,3 +11,4 @@ A dataset is a collection of **data files** (GRIB and CSV) and a set of **predef
    overview
    structure
    create
+   plotting
