@@ -29,7 +29,11 @@ Version 5.19.1
 
 **Fixes:**
 
--  
+- uPlot: fixed an issue when zooming in the Geography Tool crashed
+- uPlot: fixed an issue when cursor data showed the latitude/longitude coordinates in the wrong order for data layers
+- :func:`nearest_gripoints`: fixed an issue when did not get any valid results for GRIB data on a reduced Gaussian grid on a subarea crossing the Greenwich meridian
+- :func:`longitudes`: fixed an issue when inaccurate values returned for GRIB data on a reduced Gaussian grid on a subarea 
+- :func:`valid_date` and :func:`base_date`: fixed memory leak
 
 
 Version 5.19.0
