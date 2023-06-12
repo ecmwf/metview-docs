@@ -19,10 +19,9 @@ import xarray as xr
 
 # This example demonstrates how to visualise gridded XY
 # data stored in an ASCII format with contouring. Metview
-# can only generate a plot like this when the data
-# is in NetCDF format. We will convert the input data
+# can only generate a plot like this for NetCDF data,
+# so to achieve this goal we will convert the input data
 # stored in a CSV file into NetCDF using pandas and xarray.
-
 
 # get CSV file, contains probabilities per latitude band and timestep
 # rows: latitudes, columns: forecast steps
