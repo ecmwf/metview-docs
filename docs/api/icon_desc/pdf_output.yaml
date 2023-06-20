@@ -3,6 +3,11 @@ summary: Defines a PDF plot output driver.
 oneliner: Defines a PDF plot output driver.
 params:
 - _include: !include include/output.yaml 
+- output_font_scale:
+    default: 1.0
+    desc: Use this to scale all font sizes in the plot, e.g. 2.0 will double the sizes
+    ptype: number
+    values: ''
 - output_cairo_transparent_background:
     default: 'off'
     desc: Defines the background to be transparent.
