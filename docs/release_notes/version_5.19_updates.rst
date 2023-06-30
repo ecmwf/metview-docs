@@ -3,6 +3,32 @@
 Version 5.19 Updates
 ////////////////////
 
+Version 5.19.2
+==============
+
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2023-07-xx
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2023.07.0.0 (Atos HPC)
+
+-  **At ECMWF:**
+
+   -  Installed **2023-07-xx**
+
+   -  Built
+      with **Magics** `4.14.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.31.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.30.1+released>`__
+
+   -  Built with **ODC** version **1.4.6**
+
+
+**Fixes:**
+
+- UI: fixed an issue that could cause the :ref:`Process Monitor <process_monitor_section>` to crash
+- :func:`mhovmoellerview`: improved error message when failing to find matching LNSP fields to ML to PL conversion
+- :func:`read`: fixed a small memory leak
+
+
 
 Version 5.19.1
 ==============
