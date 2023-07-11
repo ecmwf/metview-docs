@@ -6,7 +6,7 @@ Version 5.19 Updates
 Version 5.19.2
 ==============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2023-07-11
+* Externally `released <https://confluence.ecmwf.int//display/METV/Releases>`__\  on 2023-07-11
 * Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2023.07.0.0 (Atos HPC)
 
 -  **At ECMWF:**
@@ -17,7 +17,7 @@ Version 5.19.2
       with **Magics** `4.14.1 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.31.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.30.1+released>`__
+      with **ecCodes** `2.31.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.31.0+released>`__
 
    -  Built with **ODC** version **1.4.6**
 
@@ -33,7 +33,7 @@ Version 5.19.2
 Version 5.19.1
 ==============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2023-05-17
+* Externally `released <https://confluence.ecmwf.int//display/METV/Releases>`__\  on 2023-05-17
 * Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2023.04.1.0 (Atos HPC)
 
 -  **At ECMWF:**
@@ -65,7 +65,7 @@ Version 5.19.1
 Version 5.19.0
 ==============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2023-04-04
+* Externally `released <https://confluence.ecmwf.int//display/METV/Releases>`__\  on 2023-04-04
 * Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2023.04.0.0 (Atos HPC)
 
 
