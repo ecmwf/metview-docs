@@ -23,7 +23,3 @@ Version 5.20.0
 
    -  Built with **ODC** version **1.4.6**
 
-
-**Macro to Python converter**
-
-A main new feature in this release is the :ref:`Macro to Python converter <macro_to_python>`. It can be launched from the icon context menu in the :ref:`user interface <mv_desktop_overview>` and from the File menu of the Macro editor. The converter is able to generate fully functional Python code in most of the cases but some code structures have to be adjusted manually. Details about the adjustment process can be found :ref:`here <macro_to_python_adjustments>`.
