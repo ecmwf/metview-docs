@@ -3,7 +3,7 @@ BUFR object
 
 .. py:class:: Bufr
 
-   Metview's Fieldset object represents BUFR data. As this format is very complicated to work with,
+   Metview's Bufr object represents BUFR data. As this format is very complicated to work with,
    its only method is :py:meth:`write`.
 
    Some Bufr objects can also be plotted directly if they conform to certain standards.

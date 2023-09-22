@@ -369,6 +369,16 @@ params:
         values are depending on build-time configuration.
     ptype: str
     values: av/co/grid_jpeg/so/simple/ieee/as_input
+- basic_angle:
+    default: decimal
+    desc: >-
+        Specifies how geographical values (e.g. bounding box and lat/lon increments) are encoded in the resulting GRIB file.
+        Considering the numeric limits of GRIB encodings, some values are not correctly representable as decimal numbers
+        (e.g. a longitude increment of one third of a degree, which has an infinitely repeating '3'). In these cases, it may be more
+        accurate to encode these numbers as fractions, e.g. 1/3. If this option is set to 'fraction', this conversion is taken
+        care of automatically when encoding the resulting GRIB, and you should still provide your output grid parameters as decimal numbers.
+    ptype: str
+    values: decimal/fraction/as_input
 - edition:
     default: as_input
     desc: Specifies the output GRIB edition (or format). Note that

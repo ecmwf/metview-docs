@@ -498,6 +498,8 @@ Once the search criteria are set click on the **Find** button to start searching
     :width: 250px
     
 
+.. _process_monitor_section:
+
 Process monitor
 -------------------
 

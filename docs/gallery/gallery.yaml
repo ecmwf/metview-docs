@@ -232,6 +232,7 @@ xy:
   - ens_plume
   - cdf_curve
   - windrose
+  - xy_gridded_ascii
   - grib_scatterplot
   - odb_scatterplot_binning
   - odb_wind_profiler
