@@ -1,5 +1,3 @@
-:nosearch:
-
 .. _macro_to_python:
 
 Convert Macros to Python
@@ -7,7 +5,7 @@ Convert Macros to Python
 
 .. note::
 
-    The Macro to Python converter is available from Metview version 5.20.0
+    The Macro to Python converter is available from Metview version 5.21.0
 
 How to use the converter?
 --------------------------
@@ -65,7 +63,9 @@ structures and data types and it does not have any run-time information, so the 
    convert/convert_date
    convert/convert_plot
    convert/convert_newpage
-   convert/convert_vector_slice4
+   convert/convert_vector_index4
+   convert/convert_read
+
 
 Unsupported features
 ----------------------

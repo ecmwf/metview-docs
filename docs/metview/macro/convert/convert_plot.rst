@@ -1,12 +1,10 @@
 
-:nosearch:
-
 Adjust plot() calls
 =============================
 
 .. note::
    
-    The Macro to Python converter is available from Metview version 5.20.0
+    The Macro to Python converter is available from Metview version 5.21.0
 
 In Macro we can call :func:`plot` multiple times for a given :ref:`graphical output <toc_plot_output>`. However, in Python it behaves differently and only the result of the last call is kept. The converter is not able to merge multiple :func:`plot` calls into a single one, instead a warning is placed to the top of the generated Python script and the adjustment has to be made manually. 
 

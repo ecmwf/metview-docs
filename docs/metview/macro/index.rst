@@ -21,3 +21,4 @@ The Metview Macro language provides an easy, powerful and comprehensive way for 
    data_types/index
    functions/index 
    macro_animated_gif
+   convert_to_python
