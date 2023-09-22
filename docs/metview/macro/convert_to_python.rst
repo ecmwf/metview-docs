@@ -10,7 +10,7 @@ Convert Macros to Python
 How to use the converter?
 --------------------------
 
-There are different ways to perform the conversion. 
+There are two different ways to perform the conversion. 
 
 Conversion from the icon context menu
 ++++++++++++++++++++++++++++++++++++++++
