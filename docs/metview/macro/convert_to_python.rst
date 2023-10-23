@@ -53,8 +53,8 @@ On success a popup dialog appears showing the path to the generated Python scrip
 How to adjust the results?
 -----------------------------------
 
-For most of the Macros you should expect to get a correctly formatted and fully functional Python script. However, the converter cannot handle certain code
-structures and data types and it does not have any run-time information, so the generated code may require further **adjustments**. If this happens a set of **warnings** will be added to the top of the Python script. Please check these warnings and **modify your script** accordingly. The following list gives you detailed advice on how to do it:
+For simple Macros you should expect to get a correctly formatted and fully functional Python script. However, the converter cannot handle certain code
+structures and data types and it does not have any run-time information, so the generated code most probably will require further **adjustments**. If this happens a set of **warnings** will be added to the top of the Python script and in certain cases next to the affected code lines. Please check these warnings and **modify your script** accordingly. The following list gives you detailed advice on how to do it:
 
 .. toctree::
    :maxdepth: 1
@@ -64,7 +64,8 @@ structures and data types and it does not have any run-time information, so the 
    convert/convert_plot
    convert/convert_newpage
    convert/convert_vector_index4
-   convert/convert_read
+   convert/convert_for
+
 
 
 Unsupported features
@@ -72,10 +73,15 @@ Unsupported features
 
 Some features are unsupported in Metview Python and it is not possible to generate a working Python code out of them:
 
-.. toctree::
-   :maxdepth: 1
-   
-   convert/convert_inline
+.. list-table:: 
+   :header-rows: 1
+ 
+   * - Feature
+     - Comment
+   * - Inline C/Fortran
+     - Macro supports embedded C and Fortran code via the **inline** keyword. In Metview Python this is **unsupported**. The converter simply puts the C or Fortran code inside a triple quoted string resulting in a correctly formatted but non-functional Python script.
+   * - :func:`matrix`
+     - This method does not exists in Metview Python. You need to use 2D numpy arrays to convert your code.    
 
 Testing the generated code
 -----------------------------
