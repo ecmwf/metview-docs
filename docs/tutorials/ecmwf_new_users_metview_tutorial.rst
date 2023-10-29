@@ -10,7 +10,7 @@ ECMWF New Users Metview Tutorial
 Preparation
 ***********
 
-First start Metview; at ECMWF, you will need to load the ecmwf-toolbox module::
+First start Metview; at ECMWF, you will need to load the `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`_ module::
 
   module load ecmwf-toolbox
 
@@ -27,15 +27,18 @@ You should see the main Metview desktop which looks something like Figure 1.
 
 In Metview, most operations can be performed via icons. All icons are available via the Create New Icon context menu of the Metview desktop.
 
-You will create some icons yourself, but some are supplied for you - please download the following file and save it in your ``$HOME/metview`` directory:
+You will create some icons yourself, but some are supplied for you.
+
+If at ECMWF then you can copy it like this from the command line::
+
+  cp /perm/cgi/tutorials/metview_intro.tar.gz $HOME/metview/
+
+Alternatively, you can download the following file and save it in your ``$HOME/metview`` directory:
 
 .. list-table::
 
   * - `metview_intro.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/new_users/metview_intro.tar.gz>`_
 
-Alternatively, if at ECMWF then you can copy it like this from the command line::
-
-  cp /perm/cgi/tutorials/metview_intro.tar.gz $HOME/metview/
 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **Extract/here** to extract the files. 
 You should now (after a few seconds) see a *metview_intro* folder which contains the icons we will work with (double-click on it to enter it). 
