@@ -373,94 +373,13 @@ The observation differences don't stand out well against the strongly coloured f
     Figure 12 - temperature forecast field with obs-forecast differences overlaid
 
 
-Exercise 3: ODB data
-********************
+Exercise 3: explore the Gallery
+*******************************
 
-This exercise introduces ODB data and some ways that Metview can use it. 
-To save time, we will mostly use pre-prepared icons. 
-**Enter the *ODB* folder to do these exercises**.
+Metview's documentation includes a large :ref:`gallery <gallery_index>` of examples that illustrate how to work with different data types,
+perform various computations and and produce many types of plots.
+Select one or two of these examples, copy their code into a new Python script inside Metview, inspect the code and run it.
+These examples all generate their plots as PDF files by calling the :func:`setoutput` function. You can instead generate
+an interactive on-screen plot by simply commenting out this line.
 
-Retrieving the ODB data
-=======================
 
-The *'ret_temp' MARS Retrieval* icon is already prepared for you to fetch Land TEMP ODB data from MARS from 3 days ago. Edit the icon to see which parameters are set. 
-The most important ones are these:
-
-.. list-table::
-
-  * - **Parameter**
-    - **Value**
-    - **Notes**
-
-  * - **Type**
-    - MFB
-    - Mondb feedback
-
-  * - **Reportype**
-    - 16022
-    - land TEMP
-
-  * - **Obsgroup**
-    - 17
-    - Conventional
-
-Close the icon editor and perform the data retrieval by choosing **execute** from the icon's context menu. 
-Right-click **examine** the icon to bring up Metview's ODB Examiner tool. 
-Here you can see the metadata (Columns tab) and the actual data values themselves (Data tab). 
-Close the ODB Examiner.
-
-Save a local copy of the ODB data to the current folder by right-clicking **Save result** on the *ret_temp* icon; save as 'temp.odb'. 
-A few seconds later an *ODB Database* icon (**Figure 12**) with the given name will appear at the bottom of your folder. 
-We will work with this to avoid repeating the retrieval.
-
-.. figure:: /_static/ecmwf_new_users_metview_tutorial/odb-icons.png
-
-    Figure 12 - ODB and ODB Visualiser icon
-
-Using the ODB Visualiser
-========================
-
-We will select and visualise the 500 hPa temperature values from our ODB using the '*vis_temp*' :ref:`ODB Visualiser <odb_visualiser_icon>` icon.
-
-Now edit the *vis_temp* icon.
-
-First, drop your *ODB Database* icon into the **ODB Data** field.
-
-Next, specify the where statement of the query in the **ODB Where** parameter as:
-  
-.. code-block:: SQL
-  
-  varno = 2 and vertco_reference_1=50000
-  
-Save these settings, then right-click **visualise** the '*vis_temp*' icon to generate the plot. 
-Then drag the the provided :ref:`Symbol Plotting <msymb_icon>`, :ref:`Coastlines <mcoast_icon>`, :ref:`Legend <mlegend_icon>` icon and :ref:`Text Plotting <mtext_icon>` icon icons into the plot for further customisation. Metview's plot window has many tools for inspecting data values, described in detail in the standalone tutorial "`Using ODB with Metview <https://confluence.ecmwf.int/display/METV/Using+ODB+with+Metview>`_". Do not close the plot window yet.
-
-Overlaying with GRIB data
-=========================
-
-The '*fc.grib*' GRIB icon contains 12 h global forecasts of temperature and wind at different vertical levels, valid for the date and time of our TEMP ODB data.
-
-To overlay the 500 hPa temperature forecast we need to filter the matching field from the GRIB file. 
-The '*t500_fc*' GRIB Filter icon is already already set up to perform this task. 
-Just drag '*t500_fc*' into the plot, then drag the '*t_cont*' :ref:`Contouring <mcont_icon>` icon icon into the plot as well to customise the contour lines (**Figure 13**).
-
-.. figure:: /_static/ecmwf_new_users_metview_tutorial/odb-t-overlay.png
-
-    Figure 13 - ODB and GRIB data overlai
-
-Further ODB work
-================
-
-If you have time, inspect and run the supplied macros:
-
-* '*diff.mv*' - computes and plots the difference between the ODB observation data and the GRIB model forecast
-* '*plot_wind.mv*' - extracts U and V wind components from the ODB data, converts to *geopoints* format and plots the result
-* '*plot_tephi.mv*' - computes and plots a tephigram for a given station ID
-
-The results can be seen in the images below:
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-diff.png
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-wind.png
-
-.. image:: /_static/ecmwf_new_users_metview_tutorial/odb-tephi.png
