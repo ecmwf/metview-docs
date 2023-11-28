@@ -97,11 +97,6 @@ Version 5.19.0
 
 - :func:`surrounding_points_indexes`: fixed issue when wrong results were generated when target longitude was less than 0 for reduced Gaussian grids in GRIB2 data
 
-
-.. **Macro to Python converter**
-
-.. A main new feature in this release is the :ref:`Macro to Python converter <macro_to_python>`. It can be launched from the icon context menu in the :ref:`user interface <mv_desktop_overview>` and from the File menu of the Macro editor. The converter is able to generate fully functional Python code in most of the cases but some code structures have to adjusted manually. Details about the adjustment process can be found :ref:`here <macro_to_python_adjustments>`.
-
 **User interface**
 
 - Macro Editor: improved vertical and horizontal space usage in help sidebar. The sidebar now stretches along the full vertical extent and its minimum horizontal extent is significantly reduced. As a further improvement the size of the lower and upper part of the parameter selector (available only for icon functions in the sidebar) can now be controlled with a vertical splitter.

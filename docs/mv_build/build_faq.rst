@@ -74,3 +74,17 @@ land-sea masks that are used only in specific cases when regridding data, so the
 not necessary in most cases and the download can be disabled by rebuilding with
 
    -DENABLE_MIR_DOWNLOAD_MASKS=OFF
+
+
+Q: I get this message at CMake time on Ubuntu: "Could not find RPC libraries. Consider installing rpcgen and libtirpc-devel"
+---------------------------------------------------------------------------------------------------------------------------------
+
+This error occurred when Metview was built from MetViewBundle on Ubuntu 22.04. Installing the missing packages with::
+
+   sudo apt install libtirpc libtirpc-dev rpcsvc-proto
+
+
+did not solve the problem. The solution was to find the location where libtirpc.so.3 was installed then set
+the ``RPC_PATH`` environment variable for the build. Supposing the library is in /lib/x86_64-linux-gnu we need to set::  
+
+   export RPC_PATH=/lib/x86_64-linux-gnu/
