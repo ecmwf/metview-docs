@@ -3,7 +3,7 @@ Adjust for() loops
 
 .. note::
    
-    The Macro to Python converter is available from Metview version 5.21.0
+    The Macro to Python converter is available from Metview version 5.22.0
 
 For loops in Macro are normally converted into Python using a **for** loop with **range()**:
 

@@ -3,7 +3,7 @@ Adjust vector slicing
 
 .. note::
    
-    The Macro to Python converter is available from Metview version 5.21.0
+    The Macro to Python converter is available from Metview version 5.22.0
 
 Vectors in Macro are automatically converted to numpy arrays in Python and slicing is correctly resolved, like this:
 

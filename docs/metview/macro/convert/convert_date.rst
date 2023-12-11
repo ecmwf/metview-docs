@@ -3,7 +3,7 @@ Adjust date and time
 
 .. note::
    
-    The Macro to Python converter is available from Metview version 5.21.0
+    The Macro to Python converter is available from Metview version 5.22.0
 
 Date/time literals and dates initialised from numbers in Macro are automatically converted to Python datetime objects:
 
