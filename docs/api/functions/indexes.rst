@@ -19,7 +19,7 @@ indexes
 
       .. code-block:: python
 
-             10 10 30 40
+             10 18 30 40
          f = 15 25 35 45
              8  4 20 11
 
