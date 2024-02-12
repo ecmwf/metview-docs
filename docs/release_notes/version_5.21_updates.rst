@@ -3,6 +3,32 @@
 Version 5.21 Updates
 ////////////////////
 
+Version 5.21.1
+==============
+
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2024-02-08
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2024.02.0.0 (Atos HPC)
+
+
+-  **At ECMWF:**
+
+   -  Installed **2024-02-07**
+
+   -  Built
+      with **Magics** `4.15.2 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.34.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.34.0+released>`__
+
+   -  Built with **ODC** version **1.5.0**
+
+
+**General**
+
+- MARS: updated definition files.
+- ORCA: at ECMWF, built with the atlas-orca plugin, enabling regridding from ORCA GRIB to other grids
+
+
 
 Version 5.21.0
 ==============
