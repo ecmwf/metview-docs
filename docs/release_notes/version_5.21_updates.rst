@@ -3,6 +3,31 @@
 Version 5.21 Updates
 ////////////////////
 
+Version 5.21.2
+==============
+
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2024-02-26
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2024.02.1.0 (Atos HPC)
+
+
+-  **At ECMWF:**
+
+   -  Installed **2024-02-26**
+
+   -  Built
+      with **Magics** `4.15.3 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.34.1 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.34.1+released>`__
+
+   -  Built with **ODC** version **1.5.0**
+
+
+**General**
+
+- GRIB: fixed issue where a GRIB message with a step of 60 minutes was not being handled properly.
+
+
 Version 5.21.1
 ==============
 
