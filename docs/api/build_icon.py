@@ -16,7 +16,7 @@ import re
 import sys
 
 import yaml
-from yamlinclude import YamlIncludeConstructor
+import yaml_include
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 LOG = logging.getLogger(__name__)
@@ -40,25 +40,13 @@ def log_generated(path):
     LOG.info("  {} [{}]".format(path, format_green("generated")))
 
 
-# yaml loader implementing "include"
-class Loader(yaml.SafeLoader):
-    def __init__(self, stream):
-        self._root = os.path.split(stream.name)[0]
-        super(Loader, self).__init__(stream)
-
-    def include(self, node):
-        filename = os.path.join(self._root, self.construct_scalar(node))
-        with open(filename, "r") as f:
-            return yaml.load(f, Loader)
-
-
-# registers the include directive to the yaml loader
-Loader.add_constructor("!include", Loader.include)
-
-# initialise yaml including
-YamlIncludeConstructor.add_to_loader_class(
-    loader_class=yaml.FullLoader, base_dir=DESC_DIR
+# Add the handling of "!include" directives to the YAML Loader
+yaml.add_constructor(
+    "!include",
+    yaml_include.Constructor(base_dir=DESC_DIR),
+    yaml.FullLoader,
 )
+
 
 ICON_HEADER_STANDARD = """
 {}
