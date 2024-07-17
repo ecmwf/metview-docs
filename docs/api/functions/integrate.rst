@@ -62,16 +62,32 @@ integrate
       * :math:`\Delta\phi_{i}` is the size of the grid cells in latitude
       * :math:`\Delta\lambda_{i}` is the size of the i-th grid cell in longitude.
    
-      :func:`integrate` then supposes that :math:`\Delta\phi_{i}` is constant and the weighted average over the area is computed as:
+      Assuming that :math:`\Delta\phi_{i}` is small enough using :math:`sin(x) \approx x` we can rewrite the formula as:
+
+      .. math::
+
+         A_{i} = R^{2} cos\phi_{i} \Delta\phi_{i} \Delta\lambda_{i}
+   
+
+      The next assumption is that :math:`\Delta\phi_{i}` is constant yielding the following formula for the average used by :func:`integrate`:
    
       .. math::
 
          \frac {\sum_{i}f_{i} A_{i}}{\sum_{i}A_{i}} = \frac {\sum_{i}f_{i}cos\phi_{i}\Delta\lambda_{i}}{\sum_{i}cos\phi_{i}\Delta\lambda_{i}}
 
-   The formula above is only used for reduced or regular **latitude-longitude and Gaussian grids**. For all other grid types :func:`integrate` simply returns the mathematical average of the values (just like :func:`average` does).
+      Please note that for **Gaussian grids** though :math:`\Delta\phi_{i}` is not constant this formula is still used in the computations.
+     
+   .. warning::
 
-   .. warning:: 
+      The formula above is only used for the following grids:
+      
+      -  regular and reduced latitude-longitude grids
+      -  regular and reduced Gaussian grids
+      
+      For all the other grid types :func:`integrate` simply returns the mathematical average of the values (just like :func:`average` does).
+
+   .. .. warning:: 
    
-      Please note that for **Gaussian grids** the formula can only be only regarded as an approximation since :math:`\Delta\phi_{i}` is not constant!
+   ..    Please note that for **Gaussian grids** the formula can only be only regarded as an approximation since :math:`\Delta\phi_{i}` is not constant!
 
 .. mv-minigallery:: integrate

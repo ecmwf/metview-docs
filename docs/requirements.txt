@@ -1,7 +1,7 @@
 # These are the requirements for readthedoc
 ipykernel
 nbsphinx<=0.8.12
-pyyaml-include
+pyyaml-include>=2.1.0
 pyyaml
 docutils<=0.16.0
 Pygments>=2.6.1
