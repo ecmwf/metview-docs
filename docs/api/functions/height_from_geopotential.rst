@@ -24,6 +24,6 @@ height_from_geopotential
     set to 3008 (geometric height).
 
     .. note::
-      See also :func:`geopotential_from_height`.
+      See also :func:`geopotential_from_height`, :func:`ml_to_hl`.
 
 .. mv-minigallery:: height_from_geopotential
