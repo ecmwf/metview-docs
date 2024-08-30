@@ -1,7 +1,7 @@
 - abs:
     category:
       fieldset: Absolute value
-    desc: Computes the absolute value
+    desc: Compute the absolute value
     group:
     - maths
     - grib_object
@@ -10,16 +10,16 @@
     type: script
 - absolute_vorticity:
     category:
-      fieldset: Computes the absolute vorticity from a relative vorticity fieldset
-    desc: Computes the absolute vorticity from a relative vorticity fieldset
+      fieldset: Compute the absolute vorticity from a relative vorticity fieldset
+    desc: Compute the absolute vorticity from a relative vorticity fieldset
     group:
     - wind
     - grib_object
     type: script
 - accumulate:
     category:
-      fieldset: Adds up the values in a given field
-    desc: Adds up the values per field in a fieldset
+      fieldset: Add up the values in a given field
+    desc: Add up the values per field in a fieldset
     group:
     - stats
     - grib_object
@@ -27,7 +27,7 @@
 - acos:
     category:
       fieldset: Arc cosine
-    desc: Computes the arc cosine
+    desc: Compute the arc cosine
     group:
     - maths
     - grib_object
@@ -36,14 +36,14 @@
     type: script
 - addmonths:
     category:
-      date: Adds months to a date
-    desc: Adds months to a date
+      date: Add months to a date
+    desc: Add months to a date
     group:
     - date
     type: script
 - annotationview:
     category: {}
-    desc: Creates an annotation view
+    desc: Create an annotation view
     group:
     - view
     title: Annotation View
@@ -51,7 +51,7 @@
 - append:
     category:
       io: 'Appends the given data to file'
-    desc: Appends the given data to file
+    desc: Append the given data to file
     group:
     - grib
     - geopoints
@@ -61,20 +61,20 @@
     type: script
 - arguments:
     category:
-      info: Returns the list of the calling arguments of the current function
-    desc: Returns the list of the calling arguments of the current function
+      info: Return the list of the calling arguments of the current function
+    desc: Return the list of the calling arguments of the current function
     exclude: true
     type: script
 - ascii:
     category:
-      string: Returns the corresponding ASCII character
-    desc: Returns the corresponding ASCII character
+      string: Return the corresponding ASCII character
+    desc: Return the corresponding ASCII character
     exclude: true
     type: script
 - asin:
     category:
-      fieldset: Computes the arc sine
-    desc: Computes the arc sine
+      fieldset: Compute the arc sine
+    desc: Compute the arc sine
     group:
     - maths
     - grib_object
@@ -84,7 +84,7 @@
 - atan:
     category:
       fieldset: Arc tangent
-    desc: Computes the arc tangent
+    desc: Compute the arc tangent
     group:
     - maths
     - grib_object
@@ -94,7 +94,7 @@
 - atan2:
     category:
       fieldset: Arc tangent of 2 variables
-    desc: Computes the arc tangent of 2 fieldset objects
+    desc: Compute the arc tangent of 2 fieldset objects
     group:
     - maths
     - grib_object
@@ -102,31 +102,31 @@
     type: script
 - attributes:
     category:
-      netcdf: Returns the attributes of the current NetCDF variable
-    desc: Returns the attributes of the current netcdf variable
+      netcdf: Return the attributes of the current NetCDF variable
+    desc: Return the attributes of the current netcdf variable
     group:
     - netcdf_object
     type: script
 - average:
     category:
       fieldset: Averages the values in a given field
-    desc: Computes the average per field in a fieldset
+    desc: Compute the average per field in a fieldset
     group:
     - stats
     - grib_object
     type: script
 - average_ew:
     category:
-      fieldset: Returns the zonal averages as a list (or list of lists) of numbers.
-    desc: Computes the zonal averages for each field in a fieldset
+      fieldset: Return the zonal averages as a list (or list of lists) of numbers.
+    desc: Compute the zonal averages for each field in a fieldset
     group:
     - stats
     - grib_object
     type: script
 - average_ns:
     category:
-      fieldset: Returns the meridional averages as a list (or list of lists) of numbers.
-    desc: Computes the meridional averages for each field in a fieldset
+      fieldset: Return the meridional averages as a list (or list of lists) of numbers.
+    desc: Compute the meridional averages for each field in a fieldset
     group:
     - stats
     - grib_object
@@ -140,40 +140,40 @@
     type: icon
 - base_date:
     category:
-      fieldset: Returns the base date(s) of a given fieldset
-    desc: Returns the base date(s) of a given fieldset
+      fieldset: Return the base date(s) of a given fieldset
+    desc: Return the base date(s) of a given fieldset
     group:
     - grib_access
     - grib_object
     type: script
 - bearing:
     category:
-      fieldset: Computes the bearings for all the gridpoints with respect to a reference
+      fieldset: Compute the bearings for all the gridpoints with respect to a reference
         point
-    desc: Computes the bearings with respect to a reference in a fieldset point
+    desc: Compute the bearings with respect to a reference in a fieldset point
     group:
     - geo
     - grib_object
     type: script
 - binning:
     category: {}
-    desc: Defines 2D binning for scatterplots
+    desc: Define 2D binning for scatterplots
     group:
     - plot
     type: icon
 - bitmap:
     category:
       fieldset: Apply bitmap of 2nd fieldset to 1st fieldset
-      vector: Converts numbers to missing values in a vector
-    desc: Converts numbers to missing values in a fieldset
+      vector: Convert numbers to missing values in a vector
+    desc: Convert numbers to missing values in a fieldset
     group:
     - mask
     - grib_object
     type: script
 - bounding_box:
     category:
-      fieldset: Returns the geographical bounding box for a fieldset
-    desc: Returns the geographical bounding box for a fieldset
+      fieldset: Return the geographical bounding box for a fieldset
+    desc: Return the geographical bounding box for a fieldset
     group:
     - geo
     - grib_object
@@ -181,7 +181,7 @@
     exclude: true
 - bufr_picker:
     category: {}
-    desc: Filters bufr data with complex structure
+    desc: Filter bufr data with complex structure
     group:
     - bufr
     - filter
@@ -189,7 +189,7 @@
     type: icon
 - cartesianview:
     category: {}
-    desc: Creates a Cartesian view
+    desc: Create a Cartesian view
     group:
     - view
     title: Cartesian View
@@ -203,7 +203,7 @@
     type: script
 - cleanfile:
     category: {}
-    desc: Removes unwanted header padding from GRIB and bufr files
+    desc: Remove unwanted header padding from GRIB and bufr files
     group:
     - filter
     - grib
@@ -212,9 +212,9 @@
     type: icon
 - columns:
     category:
-      geopoints: Returns a list of column names for a geopoints variable
-      odb: Returns the list of columns from the given ODB.
-    desc: Returns column names from a geopoints or odb
+      geopoints: Return a list of column names for a geopoints variable
+      odb: Return the list of columns from the given ODB.
+    desc: Return column names from a geopoints or odb
     group:
     - geopoints_access
     - geopoints_object
@@ -228,16 +228,16 @@
     type: icon
 - convolve:
     category:
-      fieldset: Performs spatial convolution on a fieldset
-    desc: Performs spatial convolution on a fieldset
+      fieldset: Perform spatial convolution on a fieldset
+    desc: Perform spatial convolution on a fieldset
     group:
     - geo
     - grib_object
     type: script
 - corr_a:
     category:
-      fieldset: Computes the area-weighted correlation for each field in a fieldset
-    desc: Computes the area-weighted correlation for each field in a fieldset
+      fieldset: Compute the area-weighted correlation for each field in a fieldset
+    desc: Compute the area-weighted correlation for each field in a fieldset
     group:
     - stats
     - grib_object
@@ -245,7 +245,7 @@
 - cos:
     category:
       fieldset: Cosine
-    desc: Computes the cosine
+    desc: Compute the cosine
     group:
     - maths
     - grib_object
@@ -254,44 +254,44 @@
     type: script
 - coslat:
     category:
-      fieldset: Generates a field with the cosine of the gridpoint latitudes
-    desc: Generates a field with the cosine of the latitudes in a fieldset
+      fieldset: Generate a field with the cosine of the gridpoint latitudes
+    desc: Generate a field with the cosine of the latitudes in a fieldset
     group:
     - geo
     - grib_object
     type: script
 - count:
     category:
-      fieldset: Returns the number of fields in a variable
-    desc: Returns the number of fields in a variable
+      fieldset: Return the number of fields in a variable
+    desc: Return the number of fields in a variable
     type: script
 - covar:
     category:
-      fieldset: Returns the covariance of all two fieldsets
-    desc: Returns the covariance of two fieldset objects
+      fieldset: Return the covariance of all two fieldsets
+    desc: Return the covariance of two fieldset objects
     group:
     - stats
     - grib_object
     type: script
 - covar_a:
     category:
-      fieldset: Computes the area-weighted covariance for each field in a fieldset
-    desc: Computes the area-weighted covariance for each field in a fieldset
+      fieldset: Compute the area-weighted covariance for each field in a fieldset
+    desc: Compute the area-weighted covariance for each field in a fieldset
     group:
     - stats
     - grib_object
     type: script
 - create_geo:
     category:
-      geopoints: Creates a new set of geopoints
-    desc: Creates a new set of geopoints
+      geopoints: Create a new set of geopoints
+    desc: Create a new set of geopoints
     group:
     - geopoints_access
     type: script
 - create_geo_set:
     category:
-      geopointset: Creates a new geopoints_set
-    desc: Creates a new geopoints set
+      geopointset: Create a new geopoints_set
+    desc: Create a new geopoints set
     group:
     - geopoints_access
     type: script
@@ -306,27 +306,27 @@
     type: icon
 - datainfo:
     category:
-      fieldset: Returns information on missing values in fieldsets
-    desc: Returns information on missing values in a fieldset
+      fieldset: Return information on missing values in fieldsets
+    desc: Return information on missing values in a fieldset
     group:
     - grib_object
     - grib_access
     type: script
 - dataset_to_fieldset:
-    desc: Converts an xarray dataset to a fieldset
+    desc: Convert an xarray dataset to a fieldset
     group:
     - grib_object
     type: script
 - date:
     category:
-      date: Creates a date from a number or a string
-    desc: Creates a date from a number or a string
+      date: Create a date from a number or a string
+    desc: Create a date from a number or a string
     exclude: true
     type: script
 - dates:
     category:
-      geopoints: Returns a list/vector of dates from the given geopointsa 
-    desc: Returns the dates from a geopoints
+      geopoints: Return a list/vector of dates from the given geopointsa 
+    desc: Return the dates from a geopoints
     group:
     - geopoints
     type: script
@@ -338,10 +338,10 @@
     type: script
 - db_info: 
     category:
-      geopoints: Returns a string of the database from the given geopoints.
+      geopoints: Return a string of the database from the given geopoints.
     data:
     - geopoints
-    desc: Returns the database description from a geopoints
+    desc: Return the database description from a geopoints
     group:
     - geopoints_access
     - geopoints_object
@@ -364,9 +364,9 @@
     type: script
 - describe:
     category:
-      fieldset: Prints summary of the contents of a fieldset
+      fieldset: Print summary of the contents of a fieldset
       info: Describes available function
-    desc: Prints summary of the contents of a fieldset
+    desc: Print summary of the contents of a fieldset
     group:
     - grib
     - grib_object
@@ -374,53 +374,53 @@
     type: script
 - dewpoint_from_relative_humidity:
     category:
-      fieldset: Computes the dewpoint for a given temperature and relative humidity
-    desc: Computes the dewpoint for a given temperature and relative humidity
+      fieldset: Compute the dewpoint for a given temperature and relative humidity
+    desc: Compute the dewpoint for a given temperature and relative humidity
     group:
     - thermo
     - grib
     type: script
 - dewpoint_from_specific_humidity:
     category:
-      fieldset: Computes the dewpoint for a given specific humidity and pressure
-    desc: Computes the dewpoint for a given specific humidity and pressure
+      fieldset: Compute the dewpoint for a given specific humidity and pressure
+    desc: Compute the dewpoint for a given specific humidity and pressure
     group:
     - thermo
     - grib
     type: script
 - dictionary:
     category:
-      info: Returns the list of all the documented functions
-    desc: Returns the list of all the documented functions
+      info: Return the list of all the documented functions
+    desc: Return the list of all the documented functions
     type: script
 - dimension_names:
     category:
-      netcdf: Returns a list of the netcdf's dimension names.
-    desc: Returns a list of the netcdf's dimension names.
+      netcdf: Return a list of the netcdf's dimension names.
+    desc: Return a list of the netcdf's dimension names.
     group:
     - netcdf_access
     - netcdf_object
     type: script
 - dimensions:
     category:
-      netcdf: Returns a list of the netcdf's dimensions.
-    desc: Returns a list of the netcdf's dimensions.
+      netcdf: Return a list of the netcdf's dimensions.
+    desc: Return a list of the netcdf's dimensions.
     group:
     - netcdf_access
     - netcdf_object
     type: script
 - direction:
     category:
-      fieldset: Computes meteorological wind direction using U and V wind components
-    desc: Computes the wind direction
+      fieldset: Compute meteorological wind direction using U and V wind components
+    desc: Compute the wind direction
     group:
     - wind
     - grib_object
     type: script
 - distance:
     category:
-      fieldset: Computes the distances of all the gridpoints from a point
-    desc: Computes the distances in a fieldset or geopoints to a reference point
+      fieldset: Compute the distances of all the gridpoints from a point
+    desc: Compute the distances in a fieldset or geopoints to a reference point
     group:
     - geo
     - grib_object
@@ -428,7 +428,7 @@
     type: script
 - div:
     category: {}
-    desc: Computes the integer part of a divison
+    desc: Compute the integer part of a divison
     group:
     - maths
     - grib_object
@@ -438,14 +438,14 @@
 - divergence:
     category:
       fieldset: Compute horizontal divergence of vector fields
-    desc: Computes the horizontal divergence of a vector fieldset
+    desc: Compute the horizontal divergence of a vector fieldset
     group:
     - calculus
     - grib_object
     type: script
 - divrot:
     category: {}
-    desc: Computes the rotational wind from a spectral vorticity fieldset
+    desc: Compute the rotational wind from a spectral vorticity fieldset
     family: divrot
     group:
     - wind
@@ -459,7 +459,7 @@
     type: icon
 - divwind:
     category: {}
-    desc: Computes the divergent wind from a spectral divergence fieldset
+    desc: Compute the divergent wind from a spectral divergence fieldset
     group:
     - wind
     - grib
@@ -479,7 +479,7 @@
     type: script
 - download:
     category: {}
-    desc: Downloads files from a given URL
+    desc: Download files from a given URL
     title: Download from URL
     type: icon
 - drawing_priority:
@@ -489,47 +489,47 @@
     type: icon
 - dtype:
     category:
-      vector: Returns a string describing the vector's internal storage type
-    desc: Returns a string describing the vector's internal storage type
+      vector: Return a string describing the vector's internal storage type
+    desc: Return a string describing the vector's internal storage type
     type: script
 - duplicate:
     category:
-      fieldset: Duplicates a GRIB field N times
-    desc: Duplicates a field N times
+      fieldset: Duplicate a GRIB field N times
+    desc: Duplicate a field N times
     group:
     - grib_access
     type: script
 - eccharts:
     category: {}
-    desc: Retrieves and plots ecCharts layers
+    desc: Retrieve and plots ecCharts layers
     group:
     - plot
     - grib
     type: icon
 - ecfs:
     category: {}
-    desc: Retrieves data from ECFS
+    desc: Retrieve data from ECFS
     group:
     - retrieve
     type: icon
     ecmwf: true
 - eps_output:
     category: {}
-    desc: Defines the EPS (Encapsulated PostScript) output format
+    desc: Define the EPS (Encapsulated PostScript) output format
     group:
     - output
     standard: false
     type: icon
 - epscairo_output:
     category: {}
-    desc: Defines the EPS output format using the Cairo driver
+    desc: Define the EPS output format using the Cairo driver
     group:
     - output
     standard: false
     type: icon
 - eqpott_m:
     category: {}
-    desc: Computes the equivalent potential temperature on model levels
+    desc: Compute the equivalent potential temperature on model levels
     group:
     - thermo
     - grib
@@ -538,7 +538,7 @@
     type: icon
 - eqpott_p:
     category: {}
-    desc: Computes the equivalent potential temperature on pressure levels
+    desc: Compute the equivalent potential temperature on pressure levels
     group:
     - thermo
     - grib
@@ -547,21 +547,21 @@
     type: icon
 - examine:
     category:
-      ui: Actives an interactive data examiner window on the given data
-    desc: Actives an interactive data examiner window on the given data
+      ui: Activate an interactive data examiner window on the given data
+    desc: Activate an interactive data examiner window on the given data
     group:
     - ui
     type: script
 - exist:
     category:
-      io: 'Determines whether the given file exists. Returns 1 or 0. args: (string)'
-    desc: 'Determines whether the given file exists. Returns 1 or 0. args: (string)'
+      io: 'Determine whether the given file exists. Returns 1 or 0. args: (string)'
+    desc: 'Determine whether the given file exists. Returns 1 or 0. args: (string)'
     exclude: true
     type: script
 - exp:
     category:
       fieldset: Exponential
-    desc: Computes the exponential
+    desc: Compute the exponential
     group:
     - maths
     - grib_object
@@ -570,20 +570,20 @@
     type: script
 - fail:
     category:
-      system: Prints all its arguments and stop in error
-    desc: Prints all its arguments and stop in error
+      system: Print all its arguments and stop in error
+    desc: Print all its arguments and stop in error
     exclude: true
     type: script
 - fetch:
     category:
-      system: 'Returns the item stored in the named cache (or nil). args: (string)'
-    desc: 'Returns the item stored in the named cache (or nil). args: (string)'
+      system: 'Return the item stored in the named cache (or nil). args: (string)'
+    desc: 'Return the item stored in the named cache (or nil). args: (string)'
     exclude: true
     type: script
 - file:
     category:
-      io: 'Returns a file handler for the specified filename'
-    desc: 'Returns a file handler for the specified filename'
+      io: 'Return a file handler for the specified filename'
+    desc: 'Return a file handler for the specified filename'
     group:
     - grib
     - geopoints
@@ -593,8 +593,8 @@
     type: script
 - filetype:
     category:
-      fieldset: 'Returns the type of the given file. args: (string)'
-    desc: 'Returns the type of the given file. args: (string)'
+      fieldset: 'Return the type of the given file. args: (string)'
+    desc: 'Return the type of the given file. args: (string)'
     type: script
 - fill_missing_values_ew:
     category:
@@ -608,15 +608,15 @@
     type: script
 - filter:
     category:
-      vector: Filters a vector according to the values of a second vector
-    desc: Filters a vector according to the values of a second vector
+      vector: Filter a vector according to the values of a second vector
+    desc: Filter a vector according to the values of a second vector
     exclude: true
     group:
     - filter
     type: script
 - find:
     category:
-      fieldset: Finds values in field
+      fieldset: Find values in field
       list: Find where an item occurs in a list
       vector: Find where a number occurs in a vector
     desc: Find locations of values in a fieldset
@@ -626,31 +626,31 @@
     type: script
 - first_derivative_x:
     category:
-      fieldset: Computes first West-East derivative of fields
-    desc: Computes first West-East derivative of a fieldset
+      fieldset: Compute first West-East derivative of fields
+    desc: Compute first West-East derivative of a fieldset
     group:
     - calculus
     - grib_object
     type: script
 - first_derivative_y:
     category:
-      fieldset: Computes first South-North derivative of fields
-    desc: Computes first South-North derivative of a fieldset
+      fieldset: Compute first South-North derivative of fields
+    desc: Compute first South-North derivative of a fieldset
     group:
     - calculus
     - grib_object
     type: script
 - flexpart_build_title:
     category:
-      plot: Generates title for plotting FLEXPART gridded output fields
-    desc: Generates title for plotting FLEXPART gridded output fields
+      plot: Generate title for plotting FLEXPART gridded output fields
+    desc: Generate title for plotting FLEXPART gridded output fields
     group:
     - flex
     type: script
 - flexpart_convert_trajectory:
     category:
-      flexpart: Converts raw FLEXPART trajectory output to CSV
-    desc: Converts raw FLEXPART trajectory output to CSV
+      flexpart: Convert raw FLEXPART trajectory output to CSV
+    desc: Convert raw FLEXPART trajectory output to CSV
     group:
     - flex
     type: script
@@ -663,82 +663,82 @@
     type: script
 - flexpart_prepare:
     category: {}
-    desc: Retrieves and prepares data for a FLEXPART simulation
+    desc: Retrieve and prepares data for a FLEXPART simulation
     group:
     - retrieve
     - flex
     type: icon
 - flexpart_release:
     category: {}
-    desc: Defines a FLEXPART release
+    desc: Define a FLEXPART release
     group:
     - flex
     type: icon
 - flexpart_run:
     category: {}
-    desc: Performs a FLEXPART simulation
+    desc: Perform a FLEXPART simulation
     group:
     - flex
     type: icon
 - flexpart_total_column:
     category:
-      flexpart: Computes the sum/vertical integral of fields in a FLEXPART output
+      flexpart: Compute the sum/vertical integral of fields in a FLEXPART output
         GRIB file.
-    desc: Computes the sum/vertical integral of fields in a FLEXPART output GRIB file.
+    desc: Compute the sum/vertical integral of fields in a FLEXPART output GRIB file.
     group:
     - flex
     type: script
 - flextra_group_get:
     category:
-      flextra: Returns a list of available meta data keys for the given table
-    desc: Returns data for a FLEXTRA result group
+      flextra: Return a list of available meta data keys for the given table
+    desc: Return data for a FLEXTRA result group
     group:
     - flex
     type: script
 - flextra_prepare:
     category: {}
-    desc: Retrieves and prepares data for a FLEXTRA simulation
+    desc: Retrieve and prepares data for a FLEXTRA simulation
     group:
     - retrieve
     type: icon
 - flextra_run:
     category: {}
-    desc: Performs a FLEXTRA simulation
+    desc: Perform a FLEXTRA simulation
     group:
     - flex
     type: icon
 - flextra_tr_get:
     category:
-      flextra: Returns a list of available meta data keys for the given table
-    desc: Returns data for an individual FLEXTRA trajectory
+      flextra: Return a list of available meta data keys for the given table
+    desc: Return data for an individual FLEXTRA trajectory
     group:
     - flex
     type: script
 - flextra_visualiser:
     category: {}
-    desc: Defines visualisation for FLEXTRA results
+    desc: Define visualisation for FLEXTRA results
     group:
     - flex
     type: icon
 - float:
     category:
-      fieldset: Converts int GRIB to float GRIB
-    desc: Converts int GRIB to float GRIB
+      fieldset: Convert int GRIB to float GRIB
+    desc: Convert int GRIB to float GRIB
     group:
     - grib_access
     - grib_object
     type: script
 - frequencies:
     category:
-      fieldset: Computes frequencies of a field
-    desc: Computes the frequencies of a fieldset
+      fieldset: Compute frequencies of a field
+    desc: Compute the frequencies of a fieldset
     group:
     - stats
     - grib_object
     type: script
 - geo_to_grib:
     category: {}
-    desc: Converts geopoints data to GRIB
+    desc: Convert geopoints data to GRIB
     group:
     - conversion
     - grib
@@ -747,32 +747,40 @@
     type: icon
 - geo_to_kml:
     category: {}
-    desc: Converts geopoints data to KML
+    desc: Convert geopoints data to KML
     group:
     - conversion
     - geopoints
     pix: GEO_TO_KML
     title: Geopoints To KML
     type: icon
+- geopotential_from_height:
+    category:
+      fieldset: Compute the geopotential from geometric height
+    desc: Compute the geopotential from geometric height
+    group:
+    - vertical
+    - grib
+    type: script
 - geosort:
     category:
-      geopoints: Sorts the geopoints North to South and West to East
-    desc: Sorts a geopoints North to South and West to East
+      geopoints: Sort the geopoints North to South and West to East
+    desc: Sort a geopoints North to South and West to East
     group:
     - geo
     - geopoints_object
     type: script
 - geostrophic_wind:
     category:
-      fieldset: Computes geostrophic wind on pressure levels
-    desc: Computes the geostrophic wind on pressure levels in a fieldset
+      fieldset: Compute geostrophic wind on pressure levels
+    desc: Compute the geostrophic wind on pressure levels in a fieldset
     group:
     - wind
     - grib_object
     type: script
 - geoview:
     category: {}
-    desc: Creates a map view
+    desc: Create a map view
     group:
     - view
     title: Geographical View
@@ -785,16 +793,16 @@
     type: script
 - gfind:
     category:
-      fieldset: Finds values in field and returns the result as geopoints
-    desc: Finds values in field and returns the result as geopoints
+      fieldset: Find values in field and returns the result as geopoints
+    desc: Find values in field and returns the result as geopoints
     group:
     - grib_access
     - grib_object
     type: script
 - global_attributes:
     category:
-      netcdf: Returns a definition variable holding the netcdf's global metadata.
-    desc: Returns the netcdf global metadata
+      netcdf: Return a definition variable holding the netcdf's global metadata.
+    desc: Return the netcdf global metadata
     group:
     - netcdf_object
     type: script
@@ -807,64 +815,64 @@
     type: icon
 - gradient:
     category:
-      fieldset: Computes horizontal gradient of fields
-    desc: Computes horizontal gradient of a fieldset
+      fieldset: Compute horizontal gradient of fields
+    desc: Compute horizontal gradient of a fieldset
     group:
     - calculus
     - grib_object
     type: script
 - grib_get:
     category:
-      fieldset: Reads GRIB headers using ecCodes keys
-    desc: Reads GRIB headers using ecCodes keys
+      fieldset: Read GRIB headers using ecCodes keys
+    desc: Read GRIB headers using ecCodes keys
     group:
     - grib_access
     - grib_object
     type: script
 - grib_get_double:
     category:
-      fieldset: Reads GRIB headers using ecCodes keys
-    desc: Reads GRIB headers using ecCodes keys
+      fieldset: Read GRIB headers using ecCodes keys
+    desc: Read GRIB headers using ecCodes keys
     group:
     - grib_access
     - grib_object
     type: script
 - grib_get_double_array:
     category:
-      fieldset: Reads GRIB headers using ecCodes keys
-    desc: Reads GRIB headers using ecCodes keys
+      fieldset: Read GRIB headers using ecCodes keys
+    desc: Read GRIB headers using ecCodes keys
     group:
     - grib_access
     - grib_object
     type: script
 - grib_get_long:
     category:
-      fieldset: Reads GRIB headers using ecCodes keys
-    desc: Reads GRIB headers using ecCodes keys
+      fieldset: Read GRIB headers using ecCodes keys
+    desc: Read GRIB headers using ecCodes keys
     group:
     - grib_access
     - grib_object
     type: script
 - grib_get_long_array:
     category:
-      fieldset: Reads GRIB headers using ecCodes keys
-    desc: Reads GRIB headers using ecCodes keys
+      fieldset: Read GRIB headers using ecCodes keys
+    desc: Read GRIB headers using ecCodes keys
     group:
     - grib_access
     - grib_object
     type: script
 - grib_get_string:
     category:
-      fieldset: Reads GRIB headers using ecCodes keys
-    desc: Reads GRIB headers using ecCodes keys
+      fieldset: Read GRIB headers using ecCodes keys
+    desc: Read GRIB headers using ecCodes keys
     group:
     - grib_access
     - grib_object
     type: script
 - grib_indexes:
     category:
-      fieldset: Returns list of indexes into the fields of the Fieldset
-    desc: Returns list of indexes into the fields of the Fieldset
+      fieldset: Return list of indexes into the fields of the Fieldset
+    desc: Return list of indexes into the fields of the Fieldset
     group:
     - grib_access
     - grib_object
@@ -910,7 +918,7 @@
     type: script
 - grib_to_geo:
     category: {}
-    desc: Converts GRIB data into geopoints
+    desc: Convert GRIB data into geopoints
     group:
     - conversion
     - grib
@@ -921,7 +929,7 @@
     category: {}
     data:
     - fieldset
-    desc: Combines GRIB scalar fields into vector data
+    desc: Combine GRIB scalar fields into vector data
     group:
     - plot
     - grib
@@ -929,19 +937,27 @@
     type: icon
 - gribsetbits:
     category:
-      fieldset: Sets GRIB packing bit width
-    desc: Sets GRIB packing bit width
+      fieldset: Set GRIB packing bit width
+    desc: Set GRIB packing bit width
     group:
     - grib_access
     - grib_object
     type: script
 - grid_cell_area:
     category:
-      fieldset: Computes grid cell area for each gridpoints in a field
-    desc: Computes the grid cell area in a fieldset
+      fieldset: Compute grid cell area for each gridpoints in a field
+    desc: Compute the grid cell area in a fieldset
     group:
     - geo
     - grib_object
+    type: script
+- height_from_geopotential:
+    category:
+      fieldset: Compute the geometric height from geopotential
+    desc: Compute the geometric height from geopotential
+    group:
+    - vertical
+    - grib
     type: script
 - hour:
     category:
@@ -971,7 +987,7 @@
     type: icon
 - hovmoellerview:
     category: {}
-    desc: Defines a Hovmoeller diagram view
+    desc: Define a Hovmoeller diagram view
     exclude: true
     group:
     - view
@@ -984,9 +1000,9 @@
     type: script
 - indexes:
     category:
-      fieldset: Builds an output fieldset containing each gridpoint's indexed position
+      fieldset: Build an output fieldset containing each gridpoint's indexed position
         in the given vector
-    desc: Builds a fieldset containing each gridpoint's indexed position in the given
+    desc: Build a fieldset containing each gridpoint's indexed position in the given
       vector
     group:
     - grib_access
@@ -994,7 +1010,7 @@
     type: script
 - input_visualiser:
     category: {}
-    desc: Defines visualisation for array data
+    desc: Define visualisation for array data
     group:
     - plot
     pix: INPUTVISUALISER
@@ -1009,51 +1025,51 @@
     type: script
 - intbits:
     category:
-      geopoints: Returns ranges of bits in a geopoints variable
-      number: Returns value of a given range of bits in an integer
-    desc: Returns ranges of bits
+      geopoints: Return ranges of bits in a geopoints variable
+      number: Return value of a given range of bits in an integer
+    desc: Return ranges of bits
     group:
     - maths
     - geopoints_object
     type: script
 - integer:
     category:
-      fieldset: Converts float GRIB to int GRIB
-    desc: Converts float GRIB to int GRIB
+      fieldset: Convert float GRIB to int GRIB
+    desc: Convert float GRIB to int GRIB
     group:
     - grib_access
     - grib_object
     type: script
 - integral:
     category:
-      fieldset: Computes surface integral for fields
-    desc: Computes the surface integral of a fieldset
+      fieldset: Compute surface integral for fields
+    desc: Compute the surface integral of a fieldset
     group:
     - calculus
     - grib_object
     type: script
 - integrate:
     category:
-      fieldset: Computes the average weighted by the gridcell area for each field
+      fieldset: Compute the average weighted by the gridcell area for each field
         in fieldset
-    desc: Computes the average weighted by the gridcell area for each field in fieldset
+    desc: Compute the average weighted by the gridcell area for each field in fieldset
     group:
     - stats
     - grib_object
     type: script
 - interpolate:
     category:
-      fieldset: Interpolates fieldset values to the specified location
-    desc: Interpolates fieldset values to the specified location
+      fieldset: Interpolate fieldset values to the specified location
+    desc: Interpolate fieldset values to the specified location
     group:
     - geo
     - grib_object
     type: script
 - is_feature_available:
     category:
-      info: 'Returns 1 if the given feature is available, otherwise 0. Feature names:
+      info: 'Return 1 if the given feature is available, otherwise 0. Feature names:
         ''odb'''
-    desc: 'Returns 1 if the given feature is available, otherwise 0. Feature names:
+    desc: 'Return 1 if the given feature is available, otherwise 0. Feature names:
       ''odb'''
     type: script
 - juldate:
@@ -1070,7 +1086,7 @@
     type: script
 - kml_output:
     category: {}
-    desc: Defines the KML output format
+    desc: Define the KML output format
     group:
     - output
     mag: true
@@ -1078,17 +1094,17 @@
     type: icon
 - laplacian:
     category:
-      fieldset: Computes horizontal Laplacian of fields
-    desc: Computes the horizontal Laplacian of fieldset
+      fieldset: Compute horizontal Laplacian of fields
+    desc: Compute the horizontal Laplacian of fieldset
     group:
     - calculus
     - grib_object
     type: script
 - latitudes:
     category:
-      fieldset: Returns the grid point latitudes as a vector (or list of vectors)
-      geopoints: Returns a list/vector of latitudes from the given geopoints.
-    desc: Returns the latitudes of a fieldset or geopoints
+      fieldset: Return the grid point latitudes as a vector (or list of vectors)
+      geopoints: Return a list/vector of latitudes from the given geopoints.
+    desc: Return the latitudes of a fieldset or geopoints
     group:
     - geo
     - grib_object
@@ -1096,29 +1112,29 @@
     type: script
 - length:
     category:
-      string: Returns the length of a string.
-    desc: Returns the length of a string.
+      string: Return the length of a string.
+    desc: Return the length of a string.
     exclude: true
     type: script
 - levels:
     category:
-      geopoints: Returns a list/vector of heights from the given geopoints.
-    desc: Returns the levels from a geopoints
+      geopoints: Return a list/vector of heights from the given geopoints.
+    desc: Return the levels from a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - lifted_condensation_level:
     category:
-      thermo: Computes the Lifted Condensation Level (LCL) using the parcel method
-    desc: Computes the Lifted Condensation Level (LCL) using the parcel method
+      thermo: Compute the Lifted Condensation Level (LCL) using the parcel method
+    desc: Compute the Lifted Condensation Level (LCL) using the parcel method
     group:
     - thermo
     type: script
 - list:
     category:
-      list: Builds a list from its arguments
-    desc: Builds a list from its arguments
+      list: Build a list from its arguments
+    desc: Build a list from its arguments
     exclude: true
     type: script
 - load_dataset:
@@ -1129,7 +1145,7 @@
 - log:
     category:
       fieldset: Natural logarithm
-    desc: Computes the natural logarithm
+    desc: Compute the natural logarithm
     group:
     - maths
     - grib_object
@@ -1138,7 +1154,7 @@
 - log10:
     category:
       fieldset: Base 10 logarithm
-    desc: Computes the base 10 logarithm
+    desc: Compute the base 10 logarithm
     group:
     - maths
     - grib_object
@@ -1146,9 +1162,9 @@
     type: script
 - longitudes:
     category:
-      fieldset: Returns the grid point longitudes as a vector (or list of vectors)
-      geopoints: Returns a list/vector of longitudes from the given geopoints.
-    desc: Returns the longitudes from a fieldset or geopoints
+      fieldset: Return the grid point longitudes as a vector (or list of vectors)
+      geopoints: Return a list/vector of longitudes from the given geopoints.
+    desc: Return the longitudes from a fieldset or geopoints
     group:
     - geo
     - grib_object
@@ -1156,9 +1172,9 @@
     type: script
 - lookup:
     category:
-      fieldset: Builds an output fieldset using the values in the first as indices
+      fieldset: Build an output fieldset using the values in the first as indices
         into the second
-    desc: Builds an output fieldset using the values in the first as indices into
+    desc: Build an output fieldset using the values in the first as indices into
       the second
     group:
     - grib_access
@@ -1166,8 +1182,8 @@
     type: script
 - lowercase:
     category:
-      string: Sets to unique case of letters
-    desc: Sets to unique case of letters
+      string: Set to unique case of letters
+    desc: Set to unique case of letters
     exclude: true
     type: script
 - ls:
@@ -1186,7 +1202,7 @@
     type: icon
 - make_geoview:
     category: {}
-    desc: Generates a geoview with predefined settings
+    desc: Generate a geoview with predefined settings
     group:
     - view
     - jupyter
@@ -1198,23 +1214,23 @@
     type: icon
 - map_area_gallery:
     category: {}
-    desc: Generates map area gallery in Jupyter notebooks
+    desc: Generate map area gallery in Jupyter notebooks
     group:
     - view
     - jupyter
     type: script
 - map_style_gallery:
     category: {}
-    desc: Generates map style gallery in Jupyter notebooks
+    desc: Generate map style gallery in Jupyter notebooks
     group:
     - view
     - jupyter
     type: script
 - mask:
     category:
-      fieldset: Generates masks for fieldsets
-      geopoints: Generates masks for geopoints
-    desc: Generates masks for a fieldset or geopoints
+      fieldset: Generate masks for fieldsets
+      geopoints: Generate masks for geopoints
+    desc: Generate masks for a fieldset or geopoints
     group:
     - mask
     - grib_object
@@ -1222,7 +1238,7 @@
     type: script
 - maverageview:
     category: {}
-    desc: Creates an average view
+    desc: Create an average view
     group:
     - view
     - grib
@@ -1241,7 +1257,7 @@
     type: script
 - maxis:
     category: {}
-    desc: Defines the axis plotting styles
+    desc: Define the axis plotting styles
     group:
     - visdef
     mag: true
@@ -1264,7 +1280,7 @@
     type: icon
 - mcoast:
     category: {}
-    desc: Defines the map plotting style
+    desc: Define the map plotting style
     group:
     - visdef
     mag: true
@@ -1272,7 +1288,7 @@
     type: icon
 - mcont:
     category: {}
-    desc: Defines the contouring style
+    desc: Define the contouring style
     group:
     - visdef
     mag: true
@@ -1282,7 +1298,7 @@
     category: {}
     data:
     - fieldset
-    desc: Generates data for the cross section view
+    desc: Generate data for the cross section view
     group:
     - vertical
     - grib
@@ -1291,10 +1307,10 @@
     type: icon
 - mean:
     category:
-      fieldset: Returns the mean of all the fields
-      geopoints: Returns the sum or mean of the values in a geopoints variable
-      vector: Returns the sum or mean of the values in a vector variable
-    desc: Returns the mean of the values in a fieldset or geopoints
+      fieldset: Return the mean of all the fields
+      geopoints: Return the sum or mean of the values in a geopoints variable
+      vector: Return the sum or mean of the values in a vector variable
+    desc: Return the mean of the values in a fieldset or geopoints
     group:
     - stats
     - grib_object
@@ -1302,8 +1318,8 @@
     type: script
 - mean_ew:
     category:
-      fieldset: Generates a fieldset out of East-West means
-    desc: Generates a fieldset out of East-West means
+      fieldset: Generate a fieldset out of East-West means
+    desc: Generate a fieldset out of East-West means
     group:
     - stats
     - grib_object
@@ -1319,7 +1335,7 @@
     category:
       fieldset: Merge several fieldsets
       geopoints: Merges 2 sets of geopoints
-      vector: Appends a number to a vector
+      vector: Append a number to a vector
     desc: Merges 2 sets of fieldset or geopoints
     group:
     - grib_object
@@ -1334,7 +1350,7 @@
     type: icon
 - met3d_prepare:
     category: {}
-    desc: Retrieves and prepare GRIB data for Met3D
+    desc: Retrieve and prepare GRIB data for Met3D
     group:
     - retrieve
     - met3d
@@ -1342,31 +1358,31 @@
     type: icon
 - metadata:
     category:
-      geopoints: Returns a metadata definition from the given geopoints.
+      geopoints: Return a metadata definition from the given geopoints.
     data:
     - geopoints
-    desc: Returns metadata from a geopoints
+    desc: Return metadata from a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - metadata_keys:
     category:
-      table: Returns a list of available meta data keys for the given table
-    desc: Returns a list of available meta data keys for the given table
+      table: Return a list of available meta data keys for the given table
+    desc: Return a list of available meta data keys for the given table
     group:
     - table
     type: script
 - metadata_value:
     category:
-      table: Returns the value of then given meta data key for a table
-    desc: Returns the value of then given meta data key for a table
+      table: Return the value of then given meta data key for a table
+    desc: Return the value of then given meta data key for a table
     group:
     - table
     type: script
 - meteogram:
     category: {}
-    desc: Generates a meteogram
+    desc: Generate a meteogram
     group:
     - plot
     pix: MET_PLUS
@@ -1374,7 +1390,7 @@
     ecmwf: true
 - mgraph:
     category: {}
-    desc: Defines the graph plotting style
+    desc: Define the graph plotting style
     group:
     - visdef
     mag: true
@@ -1382,7 +1398,7 @@
     type: icon
 - mhovmoeller_area:
     category: {}
-    desc: Generates data for the Hovmoeller area mode
+    desc: Generate data for the Hovmoeller area mode
     family: hovm_data
     group:
     - vertical
@@ -1391,7 +1407,7 @@
     type: icon
 - mhovmoeller_expand:
     category: {}
-    desc: Generates data for the Hovmoeller expand mode
+    desc: Generate data for the Hovmoeller expand mode
     family: hovm_data
     group:
     - vertical
@@ -1400,7 +1416,7 @@
     type: icon
 - mhovmoeller_line:
     category: {}
-    desc: Generates data for the Hovmoeller line mode
+    desc: Generate data for the Hovmoeller line mode
     family: hovm_data
     group:
     - vertical
@@ -1409,7 +1425,7 @@
     type: icon
 - mhovmoeller_vertical:
     category: {}
-    desc: Generates data for the Hovmoeller vertical mode
+    desc: Generate data for the Hovmoeller vertical mode
     family: hovm_data
     group:
     - vertical
@@ -1418,7 +1434,7 @@
     type: icon
 - mhovmoellerview:
     category: {}
-    desc: Creates a Hovmoeller diagram view
+    desc: Create a Hovmoeller diagram view
     group:
     - view
     pix: MHOVMOELLERVIEW
@@ -1457,23 +1473,23 @@
     type: script
 - mixing_ratio:
     category:
-      thermo: Computes the mixing ratio from specific humidity
-    desc: Computes the mixing ratio from specific humidity
+      thermo: Compute the mixing ratio from specific humidity
+    desc: Compute the mixing ratio from specific humidity
     group:
     - thermo
     - grib
     type: script
 - ml_to_hl:
     category:
-      fieldset: Interpolates model level fields to height levels
-    desc: Interpolates a model level fieldset to height levels
+      fieldset: Interpolate model level fields to height levels
+    desc: Interpolate a model level fieldset to height levels
     group:
     - vertical
     - grib_object
     type: script
 - mlegend:
     category: {}
-    desc: Defines the legend plotting style
+    desc: Define the legend plotting style
     group:
     - visdef
     mag: true
@@ -1481,7 +1497,7 @@
     type: icon
 - mobs:
     category: {}
-    desc: Defines the BUFR observation plotting style
+    desc: Define the BUFR observation plotting style
     group:
     - visdef
     mag: true
@@ -1489,7 +1505,7 @@
     type: icon
 - mod:
     category: {}
-    desc: Computes the integer remainder of a divison
+    desc: Compute the integer remainder of a divison
     group:
     - maths
     - grib_object
@@ -1504,7 +1520,7 @@
     type: script
 - msymb:
     category: {}
-    desc: Defines the symbol plotting style
+    desc: Define the symbol plotting style
     group:
     - visdef
     mag: true
@@ -1512,7 +1528,7 @@
     type: icon
 - mtaylor:
     category: {}
-    desc: Defines the Taylor diagram style
+    desc: Define the Taylor diagram style
     group:
     - visdef
     mag: true
@@ -1520,7 +1536,7 @@
     type: icon
 - mtext:
     category: {}
-    desc: Defines the title plotting style
+    desc: Define the title plotting style
     group:
     - visdef
     mag: true
@@ -1528,14 +1544,14 @@
     type: icon
 - mthermo:
     category: {}
-    desc: Defines the thermodynamical data plotting style
+    desc: Define the thermodynamical data plotting style
     group:
     - visdef
     title: Thermo Plotting
     type: icon
 - mthermogrid:
     category: {}
-    desc: Defines the thermodynamical diagram style
+    desc: Define the thermodynamical diagram style
     group:
     - visdef
     mag: true
@@ -1543,7 +1559,7 @@
     type: icon
 - mvert_prof:
     category: {}
-    desc: Generates data for the vertical profile view
+    desc: Generate data for the vertical profile view
     group:
     - vertical
     - grib
@@ -1552,7 +1568,7 @@
     type: icon
 - mvertprofview:
     category: {}
-    desc: Creates a vertical profile view
+    desc: Create a vertical profile view
     group:
     - view
     pix: MVPROFILEVIEW
@@ -1560,52 +1576,52 @@
     type: icon
 - mvl_geocircle:
     category:
-      plot: Returns a curve marking the circle with the given radius around the given
+      plot: Return a curve marking the circle with the given radius around the given
         centre
-    desc: Returns a curve for a circle/quadrants defined on the surface of the Earth
+    desc: Return a curve for a circle/quadrants defined on the surface of the Earth
     group:
     - plot
     type: script
 - mvl_geoline:
     category:
-      plot: Returns a line marking a line of interest
-    desc: Returns a curve for a line sampled in lat-lon coordinates
+      plot: Return a line marking a line of interest
+    desc: Return a curve for a line sampled in lat-lon coordinates
     group:
     - plot
     type: script
 - mvl_geopolyline:
     category:
-      fieldset: Returns a plot object for a polyline sampled in lat-lon coordinates
-    desc: Returns a curve with a polyline sampled in lat-lon coordinates
+      fieldset: Return a plot object for a polyline sampled in lat-lon coordinates
+    desc: Return a curve with a polyline sampled in lat-lon coordinates
     group:
     - plot
     type: script
 - mvl_geopotential_on_ml:
     category:
-      fieldset: Computes geopotential on model levels
-    desc: Computes the geopotential on model levels for a fieldset
+      fieldset: Compute geopotential on model levels
+    desc: Compute the geopotential on model levels for a fieldset
     group:
     - vertical
     - grib_object
     type: script
 - mvl_ml2hPa:
     category:
-      fieldset: Interpolates a fieldset on model levels to pressure levels (in hPa)
-    desc: Interpolates a fieldset on model levels to pressure levels (in hPa)
+      fieldset: Interpolate a fieldset on model levels to pressure levels (in hPa)
+    desc: Interpolate a fieldset on model levels to pressure levels (in hPa)
     group:
     - vertical
     - grib_object
     type: script
 - mvl_regular_layout:
     category:
-      plot: Generates a regular grid of frames/subframes
-    desc: Generates a regular grid of frames/subframes
+      plot: Generate a regular grid of frames/subframes
+    desc: Generate a regular grid of frames/subframes
     group:
     - layout
     type: script
 - mwind:
     category: {}
-    desc: Defines the wind plotting style
+    desc: Define the wind plotting style
     group:
     - visdef
     mag: true
@@ -1613,14 +1629,14 @@
     type: icon
 - mxn_layout:
     category:
-      plot: Generates a regular grid of plot pages
-    desc: Generates a regular grid of plot pages
+      plot: Generate a regular grid of plot pages
+    desc: Generate a regular grid of plot pages
     group:
     - layout
     type: script
 - mxs_average:
     category: {}
-    desc: Generates data for the average view
+    desc: Generate data for the average view
     group:
     - vertical
     - grib
@@ -1629,7 +1645,7 @@
     type: icon
 - mxsectview:
     category: {}
-    desc: Creates a cross section view
+    desc: Create a cross section view
     group:
     - view
     pix: MXSECTIONVIEW
@@ -1637,24 +1653,24 @@
     type: icon
 - name:
     category:
-      system: 'Returns the path/name of the macro being executed. args: none'
-      table: Returns the name of the given table column.
-    desc: Returns the name of the given table column.
+      system: 'Return the path/name of the macro being executed. args: none'
+      table: Return the name of the given table column.
+    desc: Return the name of the given table column.
     group:
     - table
     type: script
 - nearest_gridpoint:
     category:
-      fieldset: Returns the nearest grid point value from a field
-    desc: Returns the nearest grid point value from a fieldsets
+      fieldset: Return the nearest grid point value from a field
+    desc: Return the nearest grid point value from a fieldsets
     group:
     - geo
     - grib_object
     type: script
 - nearest_gridpoint_info:
     category:
-      fieldset: Returns the nearest grid point value from a field
-    desc: Returns the nearest grid point value from a fieldset
+      fieldset: Return the nearest grid point value from a field
+    desc: Return the nearest grid point value from a fieldset
     group:
     - geo
     - grib_object
@@ -1662,7 +1678,7 @@
 - netcdf_auto_rescale_values_to_fit_packed_type:
     category:
       netcdf: 'Sets the behaviour of netcdf value handling: 1=on, 0=off'
-    desc: Sets the behaviour of netcdf value handling
+    desc: Set the behaviour of netcdf value handling
     group:
     - netcdf_access
     - netcdf_object
@@ -1670,7 +1686,7 @@
 - netcdf_auto_scale_values:
     category:
       netcdf: 'Sets the behaviour of netcdf value handling: 1=on, 0=off'
-    desc: Sets the behaviour of netcdf value handling
+    desc: Set the behaviour of netcdf value handling
     group:
     - netcdf_access
     - netcdf_object
@@ -1678,7 +1694,7 @@
 - netcdf_auto_translate_times:
     category:
       netcdf: 'Sets the behaviour of netcdf value handling: 1=on, 0=off'
-    desc: Sets the behaviour of netcdf value handling
+    desc: Set the behaviour of netcdf value handling
     group:
     - netcdf_access
     - netcdf_object
@@ -1686,14 +1702,14 @@
 - netcdf_preserve_missing_values:
     category:
       netcdf: 'Sets the behaviour of netcdf value handling: 1=on, 0=off'
-    desc: Sets the behaviour of netcdf value handling
+    desc: Set the behaviour of netcdf value handling
     group:
     - netcdf_access
     - netcdf_object
     type: script
 - netcdf_visualiser:
     category: {}
-    desc: Defines visualisation for netcdf data
+    desc: Define visualisation for netcdf data
     group:
     - plot
     - netcdf
@@ -1715,27 +1731,27 @@
 - nobitmap:
     category:
       fieldset: Clear bitmap of 1st fieldset assigning value instead
-      vector: Converts missing values to numbers in a vector
-    desc: Converts missing values to numbers in a fieldset
+      vector: Convert missing values to numbers in a vector
+    desc: Convert missing values to numbers in a fieldset
     group:
     - mask
     - grib_object
     type: script
 - now:
     category:
-      date: Returns the current date and time
-    desc: Returns the current date and time
+      date: Return the current date and time
+    desc: Return the current date and time
     exclude: true
     type: script
 - number:
     category:
-      number: Returns the number represented by the string
-    desc: Returns the number represented by the string
+      number: Return the number represented by the string
+    desc: Return the number represented by the string
     exclude: true
     type: script
 - obsfilter:
     category: {}
-    desc: Filters bufr data
+    desc: Filter bufr data
     group:
     - filter
     - bufr
@@ -1743,7 +1759,7 @@
     type: icon
 - odb_filter:
     category: {}
-    desc: Filters odb data
+    desc: Filter odb data
     group:
     - filter
     - odb
@@ -1751,7 +1767,7 @@
     type: icon
 - odb_visualiser:
     category: {}
-    desc: Defines visualisation for odb data
+    desc: Define visualisation for odb data
     group:
     - plot
     - odb
@@ -1800,14 +1816,14 @@
     type: icon
 - pdf_output:
     category: {}
-    desc: Defines the PDF output format
+    desc: Define the PDF output format
     group:
     - output
     standard: false
     type: icon
 - percentile:
     category: {}
-    desc: Computes a set of percentiles in a fieldset
+    desc: Compute a set of percentiles in a fieldset
     group:
     - stats
     - grib
@@ -1819,7 +1835,7 @@
     type: icon
 - plot:
     category: {}
-    desc: Generates a plot
+    desc: Generate a plot
     group:
     - plot
     type: script
@@ -1837,14 +1853,14 @@
     type: script
 - plot_page:
     category: {}
-    desc: Creates a page in a plot layout
+    desc: Create a page in a plot layout
     group:
     - layout
     pix: DISPLAYWINDOW
     type: icon
 - plot_subpage:
     category: {}
-    desc: Creates a subpage in a plot layout
+    desc: Create a subpage in a plot layout
     group:
     - layout
     pix: DISPLAYWINDOW
@@ -1852,8 +1868,8 @@
     exclude: true
 - plot_superpage:
     category:
-      plot: Returns a super_page for plotting
-    desc: Creates a top level plot layout
+      plot: Return a super_page for plotting
+    desc: Create a top level plot layout
     group:
     - layout
     pix: DISPLAYWINDOW
@@ -1861,15 +1877,15 @@
     type: icon
 - pl_to_pl:
     category:
-      fieldset: Interpolates pressure level fields to pressure levels
-    desc: Interpolates pressure level fields to pressure levels
+      fieldset: Interpolate pressure level fields to pressure levels
+    desc: Interpolate pressure level fields to pressure levels
     group:
     - vertical
     - grib_object
     type: script
 - png_output:
     category: {}
-    desc: Defines the PNG output format
+    desc: Define the PNG output format
     group:
     - output
     mag: true
@@ -1877,30 +1893,30 @@
     type: icon
 - polar_vector:
     category:
-      geopoints: Combines two 1-parameter geopoints variables into polar vector style
-    desc: Combines two 1-parameter geopoints variables into polar vector style
+      geopoints: Combine two 1-parameter geopoints variables into polar vector style
+    desc: Combine two 1-parameter geopoints variables into polar vector style
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - poly_mask:
     category:
-      fieldset: Generates polygon masks for fieldsets
-    desc: Generates polygon masks for a fieldset
+      fieldset: Generate polygon masks for fieldsets
+    desc: Generate polygon masks for a fieldset
     group:
     - mask
     - grib_object
     type: script
 - potential_temperature:
     category:
-      thermo: computes the potential temperature for a given temperature and pressure
-    desc: Computes the potential temperature for a given temperature and pressure
+      thermo: Compute the potential temperature for a given temperature and pressure
+    desc: Compute the potential temperature for a given temperature and pressure
     group:
     - thermo
     type: script
 - pott_m:
     category: {}
-    desc: Computes the potential temperature on model levels
+    desc: Compute the potential temperature on model levels
     group:
     - thermo
     - grib
@@ -1909,7 +1925,7 @@
     type: icon
 - pott_p:
     category: {}
-    desc: Computes the potential temperature on pressure levels
+    desc: Compute the potential temperature on pressure levels
     group:
     - thermo
     - grib
@@ -1918,34 +1934,34 @@
     type: icon
 - precision:
     category:
-      number: Sets the printing precision for floating point values.
-    desc: Sets the printing precision for floating point values.
+      number: Set the printing precision for floating point values.
+    desc: Set the printing precision for floating point values.
     exclude: true
     type: script
 - pressure:
     category:
-      fieldset: Computes the pressure of a model level fieldset
-    desc: Computes the pressure on model levels in a fieldset (deprecated)
+      fieldset: Compute the pressure of a model level fieldset
+    desc: Compute the pressure on model levels in a fieldset (deprecated)
     group:
     - vertical
     - grib_object
     type: script
 - pressure_derivative:
     category:
-      fieldset: Computes the vertical pressure derivative
-    desc: Computes the verical pressure derivative
+      fieldset: Compute the vertical pressure derivative
+    desc: Compute the verical pressure derivative
     group:
     - vertical
     - grib_object
     type: script
 - print:
     category:
-      io: Prints all its arguments
-    desc: Prints all its arguments
+      io: Print all its arguments
+    desc: Print all its arguments
     type: script
 - ps_output:
     category: {}
-    desc: Defines the PostScript output format
+    desc: Define the PostScript output format
     group:
     - output
     mag: true
@@ -1953,7 +1969,7 @@
     type: icon
 - pscairo_output:
     category: {}
-    desc: Defines the PostScript output format using the Cairo driver
+    desc: Define the PostScript output format using the Cairo driver
     group:
     - output
     standard: false
@@ -1970,13 +1986,13 @@
     type: icon
 - purge_mem:
     category:
-      fieldset: Releases unused memory
-    desc: Releases unused memory
+      fieldset: Release unused memory
+    desc: Release unused memory
     type: script
 - putenv:
     category:
-      unix: Sets the value of an environment variable.
-    desc: Sets the value of an environment variable.
+      unix: Set the value of an environment variable.
+    desc: Set the value of an environment variable.
     exclude: true
     type: script
 - pwind:
@@ -1986,15 +2002,15 @@
     type: icon
 - q_vector:
     category:
-      fieldset: Computes the Q-vector
-    desc: Computes the Q-vector
+      fieldset: Compute the Q-vector
+    desc: Compute the Q-vector
     group:
     - vertical
     - grib
     type: script
 - read:
     category: {}
-    desc: Filters and interpolates fieldset data
+    desc: Filter and interpolates fieldset data
     group:
     - filter
     - grib
@@ -2006,8 +2022,8 @@
 #     type: null
 - read:
     category:
-      io: 'Reads the given file and returns a variable of the appropriate type'
-    desc: 'Reads the given file and returns a variable of the appropriate type'
+      io: 'Read the given file and returns a variable of the appropriate type'
+    desc: 'Read the given file and returns a variable of the appropriate type'
     group:
     - grib
     - geopoints
@@ -2022,15 +2038,15 @@
     type: icon
 - read_request:
     category:
-      fieldset: 'Reads the given request file and returns a list of dictionaries.
+      fieldset: 'Read the given request file and returns a list of dictionaries.
         args: (string)'
-    desc: 'Reads the given request file and returns a list of dictionaries. args:
+    desc: 'Read the given request file and returns a list of dictionaries. args:
       (string)'
     type: script
 - read_table:
     category:
-      table: Reads a table file with parameters for parsing it.
-    desc: Reads a table file with parameters for parsing it.
+      table: Read a table file with parameters for parsing it.
+    desc: Read a table file with parameters for parsing it.
     group:
     - table
     pix: TABLEREADER
@@ -2051,16 +2067,16 @@
     type: icon
 - relative_humidity_from_dewpoint:
     category:
-      thermo: Computes the relative humidity for a given temperature and dewpoint
-    desc: Computes the relative humidity for a given temperature and dewpoint
+      thermo: Compute the relative humidity for a given temperature and dewpoint
+    desc: Compute the relative humidity for a given temperature and dewpoint
     group:
     - thermo
     - grib
     type: script
 - relative_humidity_from_specific_humidity:
     category:
-      thermo: Computes the relative humidity from specific humidity
-    desc: Computes the relative humidity from specific humidity
+      thermo: Compute the relative humidity from specific humidity
+    desc: Compute the relative humidity from specific humidity
     group:
     - thermo
     - grib
@@ -2068,7 +2084,7 @@
 - relhum:
     category: {}
     data: null
-    desc: Computes the relative humidity from specific humidity
+    desc: Compute the relative humidity from specific humidity
     group:
     - thermo
     - grib
@@ -2076,15 +2092,15 @@
     type: icon
 - remove_duplicates:
     category:
-      geopoints: Removes geopoint duplicates
-    desc: Removes duplicates from a geopoints
+      geopoints: Remove geopoint duplicates
+    desc: Remove duplicates from a geopoints
     group:
     - geopoints_access
     - geopoint_object
     type: script
 - remove_missing_latlons:
     category:
-      geopoints: Copies a set of geopoints, removing missing lat/lons
+      geopoints: Copy a set of geopoints, removing missing lat/lons
     desc: Removing missing lat/lons form a geopoints
     group:
     - mask
@@ -2093,8 +2109,8 @@
     type: script
 - remove_missing_values:
     category:
-      geopoints: Copies a set of geopoints, removing missing values
-    desc: Removes missing values from a geopoints
+      geopoints: Copy a set of geopoints, removing missing values
+    desc: Remove missing values from a geopoints
     group:
     - mask
     - geopoints_access
@@ -2109,7 +2125,7 @@
     type: icon
 - retrieve:
     category: {}
-    desc: Retrieves data from MARS
+    desc: Retrieve data from MARS
     group:
     - retrieve
     - grib
@@ -2133,24 +2149,24 @@
     type: icon
 - rmask:
     category:
-      fieldset: Generates masks based on a radius around a point for fieldsets
-    desc: Generates masks based on a radius around a point for fieldsets
+      fieldset: Generate masks based on a radius around a point for fieldsets
+    desc: Generate masks based on a radius around a point for fieldsets
     group:
     - mask
     - grib_object
     type: script
 - rms:
     category:
-      fieldset: Computes the pointwise root mean square for fieldsets
-    desc: Computes he pointwise root mean square for fieldsets
+      fieldset: Compute the pointwise root mean square for fieldsets
+    desc: Compute he pointwise root mean square for fieldsets
     group:
     - stats
     - grib_object
     type: script
 - rms_a:
     category:
-      fieldset: Computes the area-weighted root mean square for fieldsets
-    desc: Computes the area-weighted root mean square for fieldsets
+      fieldset: Compute the area-weighted root mean square for fieldsets
+    desc: Compute the area-weighted root mean square for fieldsets
     group:
     - stats
     - grib_object
@@ -2163,14 +2179,14 @@
     type: script
 - rttov_run:
     category: {}
-    desc: Runs the RTTOV model
+    desc: Run the RTTOV model
     group:
     - rttov
     type: icon
     ecmwf: true
 - rttov_visualiser:
     category: {}
-    desc: Defines visualisation for RTTOV model output
+    desc: Define visualisation for RTTOV model output
     group:
     - plot
     - rttov
@@ -2178,35 +2194,35 @@
     ecmwf: true
 - runmode:
     category:
-      system: Returns a string describing the current run mode
-    desc: Returns a string describing the current run mode
+      system: Return a string describing the current run mode
+    desc: Return a string describing the current run mode
     type: script
 - saturation_mixing_ratio:
     category:
-      thermo: Computes the saturation mixing ratio for a given temperature and pressure
-    desc: Computes the saturation mixing ratio for a given temperature and pressure
+      thermo: Compute the saturation mixing ratio for a given temperature and pressure
+    desc: Compute the saturation mixing ratio for a given temperature and pressure
     group:
     - thermo
     - grib
     type: script
 - saturation_vapour_pressure:
     category:
-      thermo: Computes the saturation vapour pressure for a given temperature
-    desc: Computes the saturation vapour pressure for a given temperature
+      thermo: Compute the saturation vapour pressure for a given temperature
+    desc: Compute the saturation vapour pressure for a given temperature
     group:
     - thermo
     - grib
     type: script
 - scm_run:
     category: {}
-    desc: Runs the Single Column Model
+    desc: Run the Single Column Model
     group:
     - scm
     type: icon
     ecmwf: true
 - scm_visualiser:
     category: {}
-    desc: Defines visualisation for SCM output
+    desc: Define visualisation for SCM output
     group:
     - scm
     - plot
@@ -2227,24 +2243,24 @@
     type: script
 - second_derivative_x:
     category:
-      fieldset: Computes second West-East derivative of fields
-    desc: Computes the second West-East derivative of a fieldset
+      fieldset: Compute second West-East derivative of fields
+    desc: Compute the second West-East derivative of a fieldset
     group:
     - calculus
     - grib_object
     type: script
 - second_derivative_y:
     category:
-      fieldset: Computes second South-North derivative of fields
-    desc: Computes the econd South-North derivative of a fieldset
+      fieldset: Compute second South-North derivative of fields
+    desc: Compute the econd South-North derivative of a fieldset
     group:
     - calculus
     - grib_object
     type: script 
 - select:
     category: 
-      fieldset: Filters fieldset data
-    desc: Filters fieldset data by ecCodes keys with metadata indexing
+      fieldset: Filter fieldset data
+    desc: Filter fieldset data by ecCodes keys with metadata indexing
     group:
     - filter
     - grib
@@ -2252,7 +2268,7 @@
     type: script
 - seqpott_m:
     category: {}
-    desc: Computes the saturation equivalent potential temperature on model levels
+    desc: Compute the saturation equivalent potential temperature on model levels
     group:
     - thermo
     - grib
@@ -2261,7 +2277,7 @@
     type: icon
 - seqpott_p:
     category: {}
-    desc: Computes the saturation equivalent potential temperature on pressure levels
+    desc: Compute the saturation equivalent potential temperature on pressure levels
     group:
     - thermo
     - grib
@@ -2270,16 +2286,16 @@
     type: icon
 - set_dates:
     category:
-      geopoints: Sets the date column in the geopoints variable.
-    desc: Sets the date column in the geopoints variable.
+      geopoints: Set the date column in the geopoints variable.
+    desc: Set the date column in the geopoints variable.
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - set_latitudes:
     category:
-      geopoints: Sets the latitude column in the geopoints variable.
-    desc: Sets the latitudes in a fieldset or geopoints
+      geopoints: Set the latitude column in the geopoints variable.
+    desc: Set the latitudes in a fieldset or geopoints
     group:
     - geopoints_access
     - grib_object
@@ -2287,18 +2303,18 @@
     type: script
 - set_levels:
     category:
-      geopoints: Sets the levels in a geopoints
+      geopoints: Set the levels in a geopoints
     data:
     - geopoints
-    desc: Sets the level column in a geopoints
+    desc: Set the level column in a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - set_longitudes:
     category:
-      geopoints: Sets the longitude column in the geopoints variable.
-    desc: Sets the longitudes in a fieldset or geopoints
+      geopoints: Set the longitude column in the geopoints variable.
+    desc: Set the longitudes in a fieldset or geopoints
     group:
     - geopoints_access
     - grib_object
@@ -2306,41 +2322,41 @@
     type: script
 - set_metadata:
     category:
-      geopoints: Sets a geopoints metadata from a definition
-    desc: Sets a geopoints metadata from a definition
+      geopoints: Set a geopoints metadata from a definition
+    desc: Set a geopoints metadata from a definition
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - set_stnids:
     category:
-      geopoints: Sets the stnid column in the geopoints variable.
-    desc: Sets the stnid column in a geopoints
+      geopoints: Set the stnid column in the geopoints variable.
+    desc: Set the stnid column in a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - set_times:
     category:
-      geopoints: Sets the time column in the geopoints variable.
-    desc: Sets the time column in a geopoints
+      geopoints: Set the time column in the geopoints variable.
+    desc: Set the time column in a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - set_value2s:
     category:
-      geopoints: Sets the value2 column in the geopoints variable.
-    desc: Sets the value2 column in a geopoints
+      geopoints: Set the value2 column in the geopoints variable.
+    desc: Set the value2 column in a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - set_values:
     category:
-      fieldset: Sets the grid point values from a vector (or list of vectors).
-      geopoints: Sets the value column in the geopoints variable.
-    desc: Sets the values in a fieldset or geopoints
+      fieldset: Set the grid point values from a vector (or list of vectors).
+      geopoints: Set the value column in the geopoints variable.
+    desc: Set the values in a fieldset or geopoints
     group:
     - geopoints_access
     - geopoints_object
@@ -2348,15 +2364,15 @@
     type: script
 - setcurrent:
     category:
-      netcdf: Sets the variable number on which netcdf functions will operate.
-    desc: Sets the variable on which netcdf functions will operate
+      netcdf: Set the variable number on which netcdf functions will operate.
+    desc: Set the variable on which netcdf functions will operate
     group:
     - netcdf_object
     type: script
 - sgn:
     category:
       fieldset: Signum
-    desc: Computes the sign
+    desc: Compute the sign
     group:
     - maths
     - geopoints_object
@@ -2380,7 +2396,7 @@
 - sin:
     category:
       fieldset: Sine
-    desc: Computes the sine
+    desc: Compute the sine
     group:
     - maths
     - geopoints_object
@@ -2389,8 +2405,8 @@
     type: script
 - sinlat:
     category:
-      fieldset: Generates a field with the sine of the gridpoint latitudes
-    desc: Generates a field with the cosine of the latitudes in a fieldset
+      fieldset: Generate a field with the sine of the gridpoint latitudes
+    desc: Generate a field with the cosine of the latitudes in a fieldset
     group:
     - geo
     - grib_object
@@ -2403,55 +2419,55 @@
     type: script
 - smooth_gaussian:
     category:
-      fieldset: Performs spatial smoothing on a fieldset
-    desc: Performs spatial smoothing on a fieldset
+      fieldset: Perform spatial smoothing on a fieldset
+    desc: Perform spatial smoothing on a fieldset
     group:
     - geo
     - grib_object
     type: script
 - smooth_n_points:
     category:
-      fieldset: Performs spatial smoothing on a fieldset
-    desc: Performs spatial smoothing on a fieldset
+      fieldset: Perform spatial smoothing on a fieldset
+    desc: Perform spatial smoothing on a fieldset
     group:
     - geo
     - grib_object
     type: script
 - solar_zenith_angle:
     category:
-      fieldset: Computes the solar zenith angle for a fieldset
-    desc: Computes the solar zenith angle for a fieldset
+      fieldset: Compute the solar zenith angle for a fieldset
+    desc: Compute the solar zenith angle for a fieldset
     group:
     - geo
     - grib_object
     type: script
 - sort:
     category:
-      fieldset: Sorts a fieldset
-      list: Sorts a list or indices (sort/sort_indices/sort_and_indices)
-      vector: Sorts a vector according to an operator '<' (default) or '>'
-    desc: Sorts a fieldset
+      fieldset: Sort a fieldset
+      list: Sort a list or indices (sort/sort_indices/sort_and_indices)
+      vector: Sort a vector according to an operator '<' (default) or '>'
+    desc: Sort a fieldset
     group:
     - grib_access
     - grib_object
     type: script
 - sort_and_indices:
     category:
-      list: Sorts a list or indices (sort/sort_indices/sort_and_indices)
-    desc: Sorts a list or indices (sort/sort_indices/sort_and_indices)
+      list: Sort a list or indices (sort/sort_indices/sort_and_indices)
+    desc: Sort a list or indices (sort/sort_indices/sort_and_indices)
     exclude: true
     type: script
 - sort_indices:
     category:
-      list: Sorts a list or indices (sort/sort_indices/sort_and_indices)
-      vector: Sorts a vector according to an operator '<' (default) or '>'
-    desc: Sorts a vector according to an operator '<' (default) or '>'
+      list: Sort a list or indices (sort/sort_indices/sort_and_indices)
+      vector: Sort a vector according to an operator '<' (default) or '>'
+    desc: Sort a vector according to an operator '<' (default) or '>'
     exclude: true
     type: script
 - specific_humidity_from_dewpoint:
     category:
-      fieldset: Computes the specific humidity for a given dewpoint and pressure
-    desc: Computes the specific humidity for a given dewpoint and pressure
+      fieldset: Compute the specific humidity for a given dewpoint and pressure
+    desc: Compute the specific humidity for a given dewpoint and pressure
     group:
     - thermo
     - grib
@@ -2464,7 +2480,7 @@
     type: icon
 - spec_graph:
     category: {}
-    desc: Defines visualisation for spectrum of GRIB data
+    desc: Define visualisation for spectrum of GRIB data
     group:
     - grib
     pix: SPECTRA
@@ -2472,8 +2488,8 @@
     type: icon
 - speed:
     category:
-      fieldset: Computes the wind speed from u and v component
-    desc: Computes the wind speed from a u and v component fieldset
+      fieldset: Compute the wind speed from u and v component
+    desc: Compute the wind speed from a u and v component fieldset
     group:
     - wind
     - grib
@@ -2481,7 +2497,7 @@
 - sqrt:
     category:
       fieldset: Square root
-    desc: Computes the square root
+    desc: Compute the square root
     group:
     - maths
     - grib_object
@@ -2490,8 +2506,8 @@
     type: script
 - static_stability:
     category:
-      fieldset: Computes the static stability
-    desc: Computes the static stability
+      fieldset: Compute the static stability
+    desc: Compute the static stability
     group:
     - vertical
     - grib
@@ -2502,68 +2518,68 @@
     type: icon
 - stdev:
     category:
-      fieldset: Returns the standard deviation of all the fields of a variable
-    desc: Returns the standard deviation of all the fields in a fieldset
+      fieldset: Return the standard deviation of all the fields of a variable
+    desc: Return the standard deviation of all the fields in a fieldset
     group:
     - stats
     - grib_object
     type: script
 - stdev_a:
     category:
-      fieldset: Computes the area-weighted standard deviation for each field in a
+      fieldset: Compute the area-weighted standard deviation for each field in a
         fieldset
-    desc: Computes the area-weighted standard deviation for each field in a fieldset
+    desc: Compute the area-weighted standard deviation for each field in a fieldset
     group:
     - stats
     - grib_object
     type: script
 - stnids:
     category:
-      geopoints: Returns a list/vector of station ids from the given geopoints.
-    desc: Returns thes tation ids from a geopoints
+      geopoints: Return a list/vector of station ids from the given geopoints.
+    desc: Return thes tation ids from a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - stop:
     category:
-      system: Prints all its arguments and stop the macro
-    desc: Prints all its arguments and stop the macro
+      system: Print all its arguments and stop the macro
+    desc: Print all its arguments and stop the macro
     exclude: true
     type: script
 - stopwatch_laptime:
     category:
-      timing: Provides stopwatch timings
-    desc: Provides stopwatch timings
+      timing: Provide stopwatch timings
+    desc: Provide stopwatch timings
     exclude: true
     type: script
 - stopwatch_reset:
     category:
-      timing: Provides stopwatch timings
-    desc: Provides stopwatch timings
+      timing: Provide stopwatch timings
+    desc: Provide stopwatch timings
     exclude: true
     type: script
 - stopwatch_start:
     category:
-      timing: Provides stopwatch timings
-    desc: Provides stopwatch timings
+      timing: Provide stopwatch timings
+    desc: Provide stopwatch timings
     exclude: true
     type: script
 - stopwatch_stop:
     category:
-      timing: Provides stopwatch timings
-    desc: Provides stopwatch timings
+      timing: Provide stopwatch timings
+    desc: Provide stopwatch timings
     exclude: true
     type: script
 - store:
     category:
-      system: 'Saves the data in a cache under the given name. args: (string, any)'
-    desc: 'Saves the data in a cache under the given name. args: (string, any)'
+      system: 'Save the data in a cache under the given name. args: (string, any)'
+    desc: 'Save the data in a cache under the given name. args: (string, any)'
     exclude: store
     type: script
 - streamfn:
     category: {}
-    desc: Computes the stream function from a spectral vorticity fieldset
+    desc: Compute the stream function from a spectral vorticity fieldset
     family: velpot
     group:
     - wind
@@ -2581,8 +2597,8 @@
     type: script
 - stvl:
     category:
-      geopoints: Retrieves point data from the STVL database (ECMWF only)
-    desc: Retrieves point data from the STVL database (ECMWF only)
+      geopoints: Retrieve point data from the STVL database (ECMWF only)
+    desc: Retrieve point data from the STVL database (ECMWF only)
     group:
     - retrieve
     type: icon   
@@ -2590,9 +2606,9 @@
     skip_icon_link: true 
 - subsample:
     category:
-      geopoints: Filters from the first geopoints variable points that exist in the
+      geopoints: Filter from the first geopoints variable points that exist in the
         second
-    desc: Filters the points of the first geopoints that exist in the second one
+    desc: Filter the points of the first geopoints that exist in the second one
     group:
     - geo
     - geopoints_access
@@ -2600,16 +2616,16 @@
     type: script
 - substring:
     category:
-      string: Returns a substring.
-    desc: Returns a substring.
+      string: Return a substring.
+    desc: Return a substring.
     exclude: true
     type: script
 - sum:
     category:
-      fieldset: Returns a field sum of all the fields of a variable
-      geopoints: Returns the sum or mean of the values in a geopoints variable
-      vector: Returns the sum or mean of the values in a vector variable
-    desc: Computes the sum of the values in a fieldset or geopoints
+      fieldset: Return a field sum of all the fields of a variable
+      geopoints: Return the sum or mean of the values in a geopoints variable
+      vector: Return the sum or mean of the values in a vector variable
+    desc: Compute the sum of the values in a fieldset or geopoints
     group:
     - stats
     - grib_object
@@ -2617,15 +2633,15 @@
     type: script
 - surrounding_points_indexes:
     category:
-      fieldset: Returns the indexes of the four surrounding grid points
-    desc: Returns the indexes of the four surrounding grid points in a fieldset
+      fieldset: Return the indexes of the four surrounding grid points
+    desc: Return the indexes of the four surrounding grid points in a fieldset
     group:
     - geo
     - grib_object
     type: script
 - svg_output:
     category: {}
-    desc: Defines the SVG output format
+    desc: Define the SVG output format
     group:
     - output
     mag: true
@@ -2638,7 +2654,7 @@
     type: icon
 - table_visualiser:
     category: {}
-    desc: Defines visualisation for CSV data
+    desc: Define visualisation for CSV data
     group:
     - plot
     pix: TABLEVISUALISER
@@ -2646,7 +2662,7 @@
 - tan:
     category:
       fieldset: Tangent
-    desc: Computes the tangent
+    desc: Compute the tangent
     group:
     - maths
     - grib_object
@@ -2655,22 +2671,22 @@
     type: script
 - tanlat:
     category:
-      fieldset: Generates a field with the tangent of the gridpoint latitudes
-    desc: Generates a field with the tangent of the latitudes in a fieldset
+      fieldset: Generate a field with the tangent of the gridpoint latitudes
+    desc: Generate a field with the tangent of the latitudes in a fieldset
     group:
     - geo
     - grib_object
     type: script
 - temperature_from_potential_temperature:
     category:
-      thermo: Computes the temperature from potential tempearture and pressure
-    desc: Computes the temperature from potential tempearture and pressure
+      thermo: Compute the temperature from potential tempearture and pressure
+    desc: Compute the temperature from potential tempearture and pressure
     group:
     - thermo
     type: script
 - thermo_bufr:
     category: {}
-    desc: Generates thermodynamical profile from bufr
+    desc: Generate thermodynamical profile from bufr
     group:
     - thermo
     - bufr
@@ -2693,7 +2709,7 @@
     type: script
 - thermo_grib:
     category: {}
-    desc: Generates thermodynamical profile from GRIB
+    desc: Generate thermodynamical profile from GRIB
     group:
     - thermo
     - grib
@@ -2707,38 +2723,38 @@
     type: icon
 - thermo_parcel_area:
     category:
-      plot: Returns a set of coloured areas from a thermo parcel path
-    desc: Returns a set of coloured areas from a thermo parcel path
+      plot: Return a set of coloured areas from a thermo parcel path
+    desc: Return a set of coloured areas from a thermo parcel path
     group:
     - thermo
     - plot
     type: script
 - thermo_parcel_path:
     category:
-      thermo: computes the path of an ascending thermodynamic parcel
-    desc: Computes the path of an ascending thermodynamic parcel
+      thermo: Compute the path of an ascending thermodynamic parcel
+    desc: Compute the path of an ascending thermodynamic parcel
     group:
     - thermo
     type: script
 - thermoview:
     category: {}
-    desc: Creates a thermodynamical diagram view
+    desc: Create a thermodynamical diagram view
     group:
     - view
     title: Thermo View
     type: icon
 - thickness:
     category:
-      fieldset: Creates fields of pressure or thickness (input in lat/lon only).
-    desc: Computes the pressure thickness on model levels in a fieldset (deprecated)
+      fieldset: Create fields of pressure or thickness (input in lat/lon only).
+    desc: Compute the pressure thickness on model levels in a fieldset (deprecated)
     group:
     - vertical
     - grib_object
     type: script
 - times:
     category:
-      geopoints: Returns a list/vector of times from the given geopoints.
-    desc: Returns the times from a geopoints
+      geopoints: Return a list/vector of times from the given geopoints.
+    desc: Return the times from a geopoints
     group:
     - geopoints_access
     - geopoints_object
@@ -2750,13 +2766,13 @@
     exclude: true
     type: script
 - to_dataframe:
-    desc: Converts a geopoints or odb to a Pandas dataframe
+    desc: Convert a geopoints or odb to a Pandas dataframe
     group:
     - geopoints_object
     - odb_object
     type: script
 - to_dataset:
-    desc: Converts a fieldset to an xarray dataset
+    desc: Convert a fieldset to an xarray dataset
     group:
     - grib_object
     type: script
@@ -2767,48 +2783,48 @@
     type: icon
 - tolist:
     category:
-      vector: Converts a vector into a list of numbers
-    desc: Converts a vector into a list of numbers
+      vector: Convert a vector into a list of numbers
+    desc: Convert a vector into a list of numbers
     exclude: true
     type: script
 - type:
     category:
-      info: Returns the type of an expression
-    desc: Returns the type of an expression
+      info: Return the type of an expression
+    desc: Return the type of an expression
     type: script
 - ui.any:
     category: {}
-    desc: Defines a value input widget to be used in dialog()
+    desc: Define a value input widget to be used in dialog()
     group:
     - widget
     type: script
 - ui.colour:
     category: {}
-    desc: Defines a colour selector widget to be used in dialog()
+    desc: Define a colour selector widget to be used in dialog()
     group:
     - widget
     type: script
 - ui.dialog:
     category: {}
-    desc: Builds a popup editor and reads back user input
+    desc: Build a popup editor and reads back user input
     group:
     - widget
     type: script
 - ui.icon:
     category: {}
-    desc: Defines an icon drop area widget to be used in dialog()
+    desc: Define an icon drop area widget to be used in dialog()
     group:
     - widget
     type: script
 - ui.option_menu:
     category: {}
-    desc: Defines an combobox widget to be used in dialog()
+    desc: Define an combobox widget to be used in dialog()
     group:
     - widget
     type: script
 - ui.slider:
     category: {}
-    desc: Defines a slider widget to be used in dialog()
+    desc: Define a slider widget to be used in dialog()
     group:
     - widget
     type: script
@@ -2834,23 +2850,23 @@
     type: script
 - unipressure:
     category:
-      fieldset: Creates fields of pressure or thickness (accepts several grid types)
-    desc: Computes the pressure on model levels in a fieldset
+      fieldset: Create fields of pressure or thickness (accepts several grid types)
+    desc: Compute the pressure on model levels in a fieldset
     group:
     - vertical
     - grib_object
     type: script
 - unique:
     category:
-      list: Returns a list with all the unique items in the input list
-      vector: Returns a vector with all the unique items in the input vector
-    desc: Returns a vector with all the unique items in the input vector
+      list: Return a list with all the unique items in the input list
+      vector: Return a vector with all the unique items in the input vector
+    desc: Return a vector with all the unique items in the input vector
     exclude: true
     type: script
 - unithickness:
     category:
-      fieldset: Creates fields of pressure or thickness (accepts several grid types)
-    desc: Computes the pressure thickness of model levels in a fieldset
+      fieldset: Create fields of pressure or thickness (accepts several grid types)
+    desc: Compute the pressure thickness of model levels in a fieldset
     group:
     - vertical
     - grib_object
@@ -2858,20 +2874,20 @@
 - univertint:
     category:
       fieldset: Universal vertical integration, also for sparse vertical data
-    desc: Performs a vertical integration for a fieldset
+    desc: Perform a vertical integration for a fieldset
     group:
     - vertical
     - grib_object
     type: script
 - uppercase:
     category:
-      string: Sets to unique case of letters
-    desc: Sets to unique case of letters
+      string: Set to unique case of letters
+    desc: Set to unique case of letters
     exclude: true
     type: script
 - uvwind:
     category: {}
-    desc: Computes u/v from a spectral vorticty and divegence fieldset
+    desc: Compute u/v from a spectral vorticty and divegence fieldset
     family: divrot
     group:
     - wind
@@ -2886,44 +2902,44 @@
     type: icon
 - valid_date:
     category:
-      fieldset: Returns the valid date(s) of a given fieldset
-    desc: Returns the valid date(s) of a given fieldset
+      fieldset: Return the valid date(s) of a given fieldset
+    desc: Return the valid date(s) of a given fieldset
     group:
     - grib_access
     - grib_object
     type: script
 - value:
     category:
-      netcdf: Returns the n:th value from the current netcdf variable.
-    desc: Returns a value from the current netcdf variable
+      netcdf: Return the n:th value from the current netcdf variable.
+    desc: Return a value from the current netcdf variable
     group:
     - netcdf_access
     - netcdf_object
     type: script
 - value2s:
     category:
-      geopoints: Returns a list/vector of 2nd values from the given geopoints.
-    desc: Returns the 2nd values column from a geopoints
+      geopoints: Return a list/vector of 2nd values from the given geopoints.
+    desc: Return the 2nd values column from a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - value_columns:
     category:
-      geopoints: Returns a list of column names for a geopoints variable
-    desc: Returns a list of value column names for a geopoints
+      geopoints: Return a list of column names for a geopoints variable
+    desc: Return a list of value column names for a geopoints
     group:
     - geopoints_access
     - geopoints_object
     type: script
 - values:
     category:
-      fieldset: Returns the grid point values as a vector (or list of vectors).
-      geopoints: Returns a list/vector of values from the given geopoints.
-      netcdf: Returns a list containing all the values for the current netcdf variable.
-      odb: Returns a list of values from the given ODB column.
-      table: Returns a list of values from the given table column.
-    desc: Returns the values from a data object
+      fieldset: Return the grid point values as a vector (or list of vectors).
+      geopoints: Return a list/vector of values from the given geopoints.
+      netcdf: Return a list containing all the values for the current netcdf variable.
+      odb: Return a list of values from the given ODB column.
+      table: Return a list of values from the given table column.
+    desc: Return the values from a data object
     group:
     - grib_access
     - grib_object
@@ -2945,52 +2961,52 @@
     type: icon
 - vapour_pressure:
     category:
-      thermo: Computes the vapour pressure for a given specific humidity and pressure
-    desc: Computes the vapour pressure for a given specific humidity and pressure
+      thermo: Compute the vapour pressure for a given specific humidity and pressure
+    desc: Compute the vapour pressure for a given specific humidity and pressure
     group:
     - thermo
     - grib
     type: script
 - var:
     category:
-      fieldset: Returns the variance of all the fields of a variable
-    desc: Returns the variance of all the fields in a fieldset
+      fieldset: Return the variance of all the fields of a variable
+    desc: Return the variance of all the fields in a fieldset
     group:
     - stats
     - grib_object
     type: script
 - var_a:
     category:
-      fieldset: Computes the area-weighted variance for each field in a fieldset
-    desc: Computes the area-weighted variance for each field in a fieldset
+      fieldset: Compute the area-weighted variance for each field in a fieldset
+    desc: Compute the area-weighted variance for each field in a fieldset
     group:
     - stats
     - grib_object
     type: script
 - variables:
     category:
-      netcdf: Returns a list of the names of the given netcdf file's variables.
-    desc: Returns the names of the variables in a netcdf
+      netcdf: Return a list of the names of the given netcdf file's variables.
+    desc: Return the names of the variables in a netcdf
     group:
     - netcdf_access
     - netcdf_object
     type: script
 - vector:
     category:
-      list: Builds a new vector either with 'n' zero elements or populated from a
+      list: Build a new vector either with 'n' zero elements or populated from a
         list
-    desc: Builds a new vector either with 'n' zero elements or populated from a list
+    desc: Build a new vector either with 'n' zero elements or populated from a list
     exclude: true
     type: script
 - vector_set_default_type:
     category:
-      vector: Sets the default internal storage type for all subsequent vectors
-    desc: Sets the default internal storage type for all subsequent vectors
+      vector: Set the default internal storage type for all subsequent vectors
+    desc: Set the default internal storage type for all subsequent vectors
     exclude: true
     type: script
 - velpot:
     category: {}
-    desc: Computes the velocity potential from a spectral divergence fieldset
+    desc: Compute the velocity potential from a spectral divergence fieldset
     family: velpot
     group:
     - wind
@@ -3000,12 +3016,12 @@
     type: icon
 - version_info:
     category:
-      info: Returns version information about Metview
-    desc: Returns version information about Metview
+      info: Return version information about Metview
+    desc: Return version information about Metview
     type: script
 - vert_prof:
     category: {}
-    desc: Generates data for the vertical profile view
+    desc: Generate data for the vertical profile view
     exclude: true
     group:
     - vertical
@@ -3013,8 +3029,8 @@
     type: icon
 - vertint:
     category:
-      fieldset: Performs vertical integration
-    desc: Performs a vertical integration for a fieldset (deprecated)
+      fieldset: Perform vertical integration
+    desc: Perform a vertical integration for a fieldset (deprecated)
     group:
     - vertical
     - grib_object
@@ -3028,32 +3044,32 @@
     type: icon
 - virtual_temperature:
     category:
-      thermo: computes the virtual temperature for a given temperature and specific humidity
-    desc: Computes the virtual temperature for a given temperature and specific humidity
+      thermo: Compute the virtual temperature for a given temperature and specific humidity
+    desc: Compute the virtual temperature for a given temperature and specific humidity
     group:
     - thermo
     type: script
 - vorticity:
     category:
       fieldset: Compute relative vorticity of vector fields
-    desc: Computes the relative vorticity of a vector fieldset
+    desc: Compute the relative vorticity of a vector fieldset
     group:
     - calculus
     - grib_object
     type: script
 - w_from_omega:
     category:
-      fieldset: Computes the vertical velocity in m/s from pressure velocity
-    desc: Computes the vertical velocity in m/s from pressure velocity
+      fieldset: Compute the vertical velocity in m/s from pressure velocity
+    desc: Compute the vertical velocity in m/s from pressure velocity
     group:
     - vertical
     - grib
     type: script
 - waitmode:
     category:
-      system: Causes Macro to always wait(1)/not wait(0) for functions to complete
+      system: Cause Macro to always wait(1)/not wait(0) for functions to complete
         before continuing.
-    desc: Causes Macro to always wait(1)/not wait(0) for functions to complete before
+    desc: Cause Macro to always wait(1)/not wait(0) for functions to complete before
       continuing.
     type: script
 - wmsclient:
@@ -3230,14 +3246,14 @@
 - xs_build_curve:
     category:
       plot: returns a curve for the given cross section data
-    desc: Returns a curve for the given cross section data
+    desc: Return a curve for the given cross section data
     group:
     - plot
     type: script
 - xs_build_orog:
     category:
       plot: returns an orography area curve for the given cross section data
-    desc: Returns an orography area curve for the given cross section data
+    desc: Return an orography area curve for the given cross section data
     group:
     - plot
     type: script
@@ -3251,27 +3267,27 @@
 - xy_area:
     category:
       plot: returns an xy area plot object with a given colour
-    desc: Returns an xy area plot object with a given colour
+    desc: Return an xy area plot object with a given colour
     group:
     - plot
     type: script
 - xy_curve:
     category:
       plot: returns a curve with a given colour, style and thickness
-    desc: Returns a curve with a given colour, style and thickness
+    desc: Return a curve with a given colour, style and thickness
     group:
     - plot
     type: script
 - xy_from_polar:
-    desc: Computes the x and y components from polar components
+    desc: Compute the x and y components from polar components
     group:
     - wind
     - grib
     type: script
 - xy_vector:
     category:
-      geopoints: Combines two 1-parameter geopoints variables into u/v vector style
-    desc: Combines two 1-parameter geopoints variables into u/v vector style
+      geopoints: Combine two 1-parameter geopoints variables into u/v vector style
+    desc: Combine two 1-parameter geopoints variables into u/v vector style
     group:
     - geopoints_access
     - geopoints_object
