@@ -1,7 +1,7 @@
 ml_to_hl
 ============
 
-.. py:function:: ml_to_hl(fs, z, zs, h, ref_level="sea", method="linear", fs_surf=None, height="geometric")
+.. py:function:: ml_to_hl(fs, z, zs, h, ref_level, method, [fs_surf, [height]])
 
    Interpolate ``fs`` on model levels (i.e. on hybrid or eta levels used by the IFS) onto height levels (in m) above sea or ground level. 
    
@@ -19,7 +19,7 @@ ml_to_hl
    :type fs_surf: number or :class:`Fieldset`
    :param height: specify the height computation method. The possible values are as follows:
 
-      - "geometric": the height is the geometric height and computed from the geopotential with :func:`height_from_geopotential`. This is the **default**.
+      - "geometric": the height is the geometric height and computed from the geopotential with :func:`geometric_height_from_geopotential`. This is the **default**.
       - "geopotential": the height is the geopotential height 
       *New in Metview version 5.23.0*. In earlier versions the geopotential height was used in the computations.
    :type height: str
@@ -37,7 +37,7 @@ ml_to_hl
       Geopotential is not archived operationally on model levels in MARS at ECMWF. You can compute it with :func:`mvl_geopotential_on_ml`. 
       
    .. warning::
-      From *Metview version 5.23.0* the geometric height is used in the computations **by default**. In the previous versions the geopotential height was used. Use ``height="geopotential"`` to revert to the old behaviour. ``height`` is a new parameter introduced in *Metview version 5.23.0*.
+      From *Metview version 5.23.0* the geometric height is used in the computations **by default**. In the previous versions the geopotential height was used. To revert to the old behaviour specify ``"geopotential"`` as the ``height`` argument (introduced in *Metview version 5.23.0*).
 
    :Example:
    

@@ -1,7 +1,7 @@
-height_from_geopotential
-========================
+geometric_height_from_geopotential
+==================================
 
-.. py:function:: height_from_geopotential(z)
+.. py:function:: geometric_height_from_geopotential(z)
 
    Compute the geometric height from geopotential.
    
@@ -24,6 +24,6 @@ height_from_geopotential
     set to 3008 (geometric height).
 
     .. note::
-      See also :func:`geopotential_from_height`, :func:`ml_to_hl`.
+      See also :func:`geopotential_from_geometric_height`, :func:`ml_to_hl`.
 
-.. mv-minigallery:: height_from_geopotential
+.. mv-minigallery:: geometric_height_from_geopotential
