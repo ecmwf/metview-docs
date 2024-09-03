@@ -1875,6 +1875,14 @@
     pix: DISPLAYWINDOW
     title: Display Window
     type: icon
+- pl_to_hl:
+    category:
+      fieldset: Interpolate pressure level fields to height levels
+    desc: Interpolate a pressure level fieldset to height levels
+    group:
+    - vertical
+    - grib_object
+    type: script
 - pl_to_pl:
     category:
       fieldset: Interpolate pressure level fields to pressure levels
