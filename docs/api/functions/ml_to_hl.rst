@@ -39,6 +39,9 @@ ml_to_hl
    .. warning::
       From *Metview version 5.23.0* the geometric height is used in the computations **by default**. In the previous versions the geopotential height was used. To revert to the old behaviour specify ``"geopotential"`` as the ``height`` argument (introduced in *Metview version 5.23.0*).
 
+   .. note::
+       See also :func:`mvl_ml2hPa`, :func:`pl_to_hl`.
+
    :Example:
    
       This code illustrates how to use :func:`ml_to_hl` together with :func:`mvl_geopotential_on_ml` with data retrieved from MARS:

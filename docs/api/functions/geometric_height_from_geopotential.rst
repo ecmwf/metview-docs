@@ -3,6 +3,8 @@ geometric_height_from_geopotential
 
 .. py:function:: geometric_height_from_geopotential(z)
 
+   *New in Metview version 5.23.0*
+
    Compute the geometric height from geopotential.
    
    :param z: geopotential (m2/s2)
@@ -20,7 +22,7 @@ geometric_height_from_geopotential
     * R is the radius of the Earth (6378388 m)
     * g is the gravitational acceleration (9.81 m/s\ :sup:`2`)
 
-    When a :class:`Fieldset` returned the ecCodes paramId of the resulting fields is
+    When a :class:`Fieldset` returned the ecCodes paramIds of the resulting fields are
     set to 3008 (geometric height).
 
     .. note::

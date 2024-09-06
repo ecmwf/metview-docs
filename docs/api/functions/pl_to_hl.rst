@@ -3,6 +3,8 @@ pl_to_hl
 
 .. py:function:: pl_to_hl(fs, z, zs, h, ref_level, method)
 
+   *New in Metview version 5.23.0*
+
    Interpolate ``fs`` on pressure levels onto height levels (in m) above sea or ground level. 
    
    :param fs: fieldset to be interpolated. There is no restriction on the order or range of pressure levels in ``fs``.
@@ -20,6 +22,9 @@ pl_to_hl
    The input data (``fs``) must contain one field per pressure level only. It means that e.g. data containing multiple timesteps cannot be used as an input.
 
    At gridpoints where the interpolation is not possible a missing value is returned. It happens where the target height level is below the bottom-most pressure level in ``fs``. It also happens where the target height is above the top-most pressure level in ``fs``.
+
+   .. note::
+       See also :func:`mvl_ml2hPa`, :func:`pl_to_hl`.
 
    :Example:
    

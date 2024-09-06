@@ -20,6 +20,6 @@ absolute_vorticity
     * :math:`\phi` is the latitude
     * :math:`\Omega` is the Earth's angular velocity (1/s).
 
-   The ecCodes paramId of the resulting fields is set to 3041 (absolute vorticity).
+   The ecCodes paramIds of the resulting fields are set to 3041 (absolute vorticity).
 
 .. mv-minigallery:: absolute_vorticity

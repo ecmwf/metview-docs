@@ -102,6 +102,7 @@ map-computations:
   - sst_mean_with_missing_value
   - vertical_integral
   - gaussian_smoothing
+  - pl_to_hl_map
 map-vector:
   title: Vector data on map
   anchor: _gallery_group_map_vector
@@ -163,6 +164,7 @@ cross-sections:
   - cross_section_orog
   - cross_section_orog_and_blh
   - cross_section_height_ml_orog
+  - cross_section_height_pl_orog
   - cross_section_wind3d_height_ml_orog
   - cross_section_wind3d_height_ml_with_valleys
   - cross_section_via_pole

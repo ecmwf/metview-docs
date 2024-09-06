@@ -43,7 +43,7 @@ vorticity
    * :math:`\phi` is the latitude
    * :math:`\lambda` is the longitude
 
-   If the input fields are horizontal wind components the ecCodes paramId of the resulting field is set to 138 (relative vorticity).
+   If the input fields are horizontal wind components the ecCodes paramIds of the resulting field are set to 138 (relative vorticity).
 
    .. note::
       See also :func:`divergence`, :func:`shear_deformation` and :func:`stretch_deformation`.
