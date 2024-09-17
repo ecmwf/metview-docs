@@ -48,6 +48,6 @@ Version 5.23.0
 **Fixes**  
 
 - Fixed issue when dropping a second icon into the plot window caused a crash
-- Fixed issue when the tree view was not generated when the underlying dump process wrote anything to stderr
+- Fixed issue when the tree view in the BUFR Examiner was not generated when the underlying dump process wrote anything to stderr
 - Fixed issue when the ``vertical_coordinate_param`` option in the Cross section did not work for fields containing string values for the "mars.param" ecCodes key
 - Fixed issue when :func:`thermo_parcel_path` did not work with array(Python)/vector(Macro) input data
