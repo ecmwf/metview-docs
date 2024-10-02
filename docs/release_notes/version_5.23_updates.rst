@@ -6,21 +6,21 @@ Version 5.23 Updates
 Version 5.23.0
 ==============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2024-xx-xx
-* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2024-xx-xx (Atos HPC)
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2024-10-02
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2024.09.0.0 (Atos HPC)
 
 
 -  **At ECMWF:**
 
-   -  Installed **2024-xx-xx**
+   -  Installed **2024-09-23**
 
    -  Built
       with **Magics** `4.15.4 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.35.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.35.0+released>`__
+      with **ecCodes** `2.38.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.38.0+released>`__
 
-   -  Built with **ODC** version **1.5.0**
+   -  Built with **ODC** version **1.5.2**
 
 
 **Vertical interpolation**

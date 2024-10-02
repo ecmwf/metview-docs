@@ -7,7 +7,7 @@ Version 5.22.0
 ==============
 
 * Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2024-04-11
-* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2024-04-11 (Atos HPC)
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2024.04.0.0 (Atos HPC)
 
 
 -  **At ECMWF:**
