@@ -3,6 +3,32 @@
 Version 5.23 Updates
 ////////////////////
 
+Version 5.23.1
+==============
+
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2024-11-23
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2024.11.0.0 (Atos HPC)
+
+
+-  **At ECMWF:**
+
+   -  Installed **2024-11-21**
+
+   -  Built
+      with **Magics** `4.15.5 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.39.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.38.0+released>`__
+
+   -  Built with **ODC** version **1.5.2**
+
+
+**Fixes**
+
+- Fixed excessive memory usage when loading large geopointset files
+- Fixed issue where the :func:`base_date` function could fail to extract the time from a GRIB message
+
+
 Version 5.23.0
 ==============
 
