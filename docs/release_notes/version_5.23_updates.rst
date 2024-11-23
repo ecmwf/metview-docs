@@ -18,7 +18,7 @@ Version 5.23.1
       with **Magics** `4.15.5 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.39.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.38.0+released>`__
+      with **ecCodes** `2.39.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.39.0+released>`__
 
    -  Built with **ODC** version **1.5.2**
 
