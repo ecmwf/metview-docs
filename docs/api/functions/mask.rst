@@ -35,7 +35,7 @@ mask
 
          # Define basic rectangles
          a = [50,-120,10,-30]
-         b = [20,20,50,10]
+         b = [20,20,10,50]
          c = [50,50,40,100]
          d = [35,-60,-40,100]
 
@@ -43,10 +43,10 @@ mask
          f = mv.read(path_to_your_grib_file)
 
          # First compute the union of a,c and d
-         m = mv.mask(f,a) or mv.mask(f,d) or mv.mask(f,c)
+         m = mv.mask(f,a) | mv.mask(f,d) | mv.mask(f,c)
 
          # Then remove b
-         m = m and not mv.mask(f,b)
+         m = m & ~mv.mask(f,b)
 
    .. note::
       
