@@ -5,7 +5,7 @@ lookup
 
    Build an output fieldset using the values in ``indexer`` as indices for a look-up in ``values``.
 
-   :param index: indexer fieldset
+   :param indexer: indexer fieldset
    :type fs: :class:`Fieldset`
    :param values: values to choose from
    :type values: :class:`Fieldset` or 1D-ndarray
@@ -16,8 +16,8 @@ lookup
       * let us suppose a grid value in the i-th ``indexer`` field is N (for float values the integer part is taken)
       * what happens depends on the type of ``values``:
 
-         * if ``values`` is a :class:`Fieldset` the value at the same gridpoint in the (N-1)-th field in ``values`` is written into the i-th output field at the given gridpoint (here field indexing starts at 0)
-         * if ``values`` is an ndarray the value at the (N-1)-th position in the ``values`` array is written into the i-th output field at the given gridpoint
+         * if ``values`` is a :class:`Fieldset` the value at the same gridpoint in the N-th field in ``values`` is written into the i-th output field at the given gridpoint (field indexing starts at 0)
+         * if ``values`` is an ndarray the value at the N-th position in the ``values`` array is written into the i-th output field at the given gridpoint
    
    The output will have has as many fields as there are in ``indexer``.
 
