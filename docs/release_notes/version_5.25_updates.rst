@@ -3,6 +3,32 @@
 Version 5.25 Updates
 ////////////////////
 
+Version 5.25.1
+==============
+
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2025-06-xx
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2025.06.0.0 (Atos HPC)
+
+
+-  **At ECMWF:**
+
+   -  Installed **2025-06-xx**
+
+   -  Built
+      with **Magics** `4.16.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.42.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.42.0+released>`__
+
+   -  Built with **ODC** version **1.6.0**
+
+
+**Fixes**
+
+- STVL: allow the use of a list in the `sources` parameter
+- Fixed issue when configuring with CMake version 4.0
+- Reverted change in results in regridding U/V data to align with results from current ECMWF production systems
+
 Version 5.25.0
 ==============
 
