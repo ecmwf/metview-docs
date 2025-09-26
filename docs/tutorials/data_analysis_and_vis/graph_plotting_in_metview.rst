@@ -10,7 +10,7 @@ Graph Plotting in Metview
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `graph.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/graph.tar.gz>`_
+  * - ZIP Archive `graph.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/data_and_vis/graph.tar.gz>`_
     - Sep 16, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Overview

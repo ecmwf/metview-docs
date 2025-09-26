@@ -19,7 +19,7 @@ The icons you will work with are already prepared for you - please download the 
 
 .. list-table::
 
-  * - `flexpart_tutorial.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/flexpart_tutorial.tar.gz>`_
+  * - `flexpart_tutorial.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/flexpart_tutorial.tar.gz>`_
 
 and save it in your ``$HOME/metview`` directory. 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **execute** to extract the files.

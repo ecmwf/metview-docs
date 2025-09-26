@@ -10,10 +10,10 @@ Data Part 1
   * - **File**
     - **Modified**
 
-  * - ZIP Archive `data_1.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/data_1.tar.gz>`_
+  * - ZIP Archive `data_1.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/data_and_vis/data_1.tar.gz>`_
     - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
-  * - File `ztuv.grb <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/ztuv.grb>`_
+  * - File `ztuv.grb <https://sites.ecmwf.int/repository/metview/test-data/tutorial/data_and_vis/ztuv.grb>`_
     - Sep 08, 2016 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Getting Data into Metview

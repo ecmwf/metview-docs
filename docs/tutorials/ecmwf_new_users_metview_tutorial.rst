@@ -37,7 +37,7 @@ Alternatively, you can download the following file and save it in your ``$HOME/m
 
 .. list-table::
 
-  * - `metview_intro.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/new_users/metview_intro.tar.gz>`_
+  * - `metview_intro.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/new_users/metview_intro.tar.gz>`_
 
 
 You should see it appear on your main Metview desktop, from where you can right-click on it, then choose **Extract/here** to extract the files. 

@@ -10,7 +10,7 @@ Exploring Metview
   * - **File**
     - **Modified**
 
-  * - File `explore.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/explore.tar.gz>`_
+  * - File `explore.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/data_and_vis/explore.tar.gz>`_
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Overview

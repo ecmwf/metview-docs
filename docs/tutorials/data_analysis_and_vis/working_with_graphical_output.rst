@@ -10,7 +10,7 @@ Working with graphical output
   * - **File**
     - **Modified**
 
-  * - File `graphics_formats.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/graphics_formats.tar.gz>`_
+  * - File `graphics_formats.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/data_and_vis/graphics_formats.tar.gz>`_
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Overview

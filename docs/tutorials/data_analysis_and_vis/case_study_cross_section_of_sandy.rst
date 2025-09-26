@@ -10,7 +10,7 @@ Case Study: Cross Section of Sandy
   * - **File**
     - **Modified**
 
-  * - File `sandy_cross_section.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/sandy_cross_section.tar.gz>`_
+  * - File `sandy_cross_section.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/data_and_vis/sandy_cross_section.tar.gz>`_
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 Case Description

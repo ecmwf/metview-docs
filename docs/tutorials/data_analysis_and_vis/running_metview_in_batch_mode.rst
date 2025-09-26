@@ -10,7 +10,7 @@ Running Metview in Batch Mode
   * - **File**
     - **Modified**
 
-  * - File `batch.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/data_and_vis/batch.tar.gz>`_ 
+  * - File `batch.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/data_and_vis/batch.tar.gz>`_ 
     - Mar 19, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_ 
 
 Overview

@@ -26,13 +26,13 @@ Download the icons for this session from the link below. Create a sub-directory 
   * - **File**
     - **Modified**
 
-  * - `a quick tour.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/quick_tour/a%20quick%20tour.tar.gz>`_
+  * - `a quick tour.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/quick_tour/a%20quick%20tour.tar.gz>`_
     - Mar 13, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
-  * - `t1000.grb <https://get.ecmwf.int/repository/test-data/metview/tutorial/quick_tour/t1000.grb>`_
+  * - `t1000.grb <https://sites.ecmwf.int/repository/metview/test-data/tutorial/quick_tour/t1000.grb>`_
     - Mar 16, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
-  * - `z500.grb <https://get.ecmwf.int/repository/test-data/metview/tutorial/quick_tour/z500.grb>`_
+  * - `z500.grb <https://sites.ecmwf.int/repository/metview/test-data/tutorial/quick_tour/z500.grb>`_
     - Mar 16, 2015 by `Iain Russell <https://confluence.ecmwf.int/display/~cgi>`_
 
 

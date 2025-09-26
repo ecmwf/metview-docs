@@ -20,7 +20,7 @@ You will create some icons yourself, but some are supplied for you - please down
 
 .. list-table:: 
   
-  * - `vapor_tutorial.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/vapor_tutorial.tar.gz>`_
+  * - `vapor_tutorial.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/vapor_tutorial.tar.gz>`_
 
 Alternatively, if at ECMWF then you can copy it like this from the command line::
   

@@ -23,7 +23,7 @@ You will create some icons yourself, but some are supplied for you - please down
 
 .. list-table:: 
 
-  * - `odb_tutorial.tar.gz <https://get.ecmwf.int/repository/test-data/metview/tutorial/odb_tutorial.tar.gz>`_
+  * - `odb_tutorial.tar.gz <https://sites.ecmwf.int/repository/metview/test-data/tutorial/odb_tutorial.tar.gz>`_
 
 Alternatively, you can copy it like this from the command line::
 
