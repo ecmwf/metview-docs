@@ -16,9 +16,8 @@ pressure_derivative
    The result is the vertical pressure derivative in */Pa units. The following rules are applied when ``f`` is a :class:`Fieldset`:
 
    * if ``f`` is a pressure level :class:`Fieldset` no ``p`` is needed
-   * if ``f`` is defined on ECMWF model levels (hybrid/eta) ``p`` must be either a single LNSP (logarithm of surface pressure, identified by paramId=152) field or a :class:`Fieldset` defining the pressure on the same levels as ``f`` (see :func:`pressure`)
-   * for other level types ``p`` must be a :class:`Fieldset` defining the pressure on the same levels as ``f``.
-
+   * other vertical levels types are not supported for a :class:`Fieldset`
+   
    In the computations, first the values are sorted by pressure, then a non-uniform central difference scheme (one-sided difference at the bottom and top) is used to estimate the derivatives. The results are then re-sorted to appear in the same order as in ``f``. This allows for the following type of computations:
 
    .. code-block:: python
