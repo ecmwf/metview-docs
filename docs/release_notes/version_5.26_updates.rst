@@ -1,12 +1,37 @@
-.. _version_5.23_updates:
+.. _version_5.26_updates:
 
 Version 5.26 Updates
 ////////////////////
 
+Version 5.26.2
+==============
+
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2026-01-16
+* Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2026.01.0.0 (Atos HPC)
+
+
+-  **At ECMWF:**
+
+   -  Installed **2026-01-16**
+
+   -  Built
+      with **Magics** `4.16.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
+
+   -  Built
+      with **ecCodes** `2.45.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.45.0+released>`__
+
+   -  Built with **ODC** version **1.6.0**
+
+
+**Fixes**
+
+- :func:`read`: fixed issue where GRIB unsuccessful filtering returned empty fieldset instead of nil/None; it now returns nil (Macro) or None (Python)
+
+
 Version 5.26.1
 ==============
 
-* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2025-10-xx
+* Externally `released <https://software.ecmwf.int/wiki/display/METV/Releases>`__\  on 2025-10-14
 * Installed as part of `ecmwf-toolbox <https://confluence.ecmwf.int/display/UDOC/HPC2020%3A+ECMWF+software+and+libraries>`__\ /2025.10.1.0 (Atos HPC)
 
 
@@ -18,7 +43,7 @@ Version 5.26.1
       with **Magics** `4.16.0 <https://confluence.ecmwf.int/display/MAGP/Latest+News>`__
 
    -  Built
-      with **ecCodes** `2.44.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.42.0+released>`__
+      with **ecCodes** `2.44.0 <https://confluence.ecmwf.int/display/ECC/ecCodes+version+2.44.0+released>`__
 
    -  Built with **ODC** version **1.6.0**
 
